@@ -721,3 +721,8 @@ Candidate reconstruction is a separate cached validation cost, not another
 native inference run. Keep its cost separate from shared-host native/scoring
 timings, and do not interpret an inactive panel's unchanged score as evidence
 that the large-copy branch generalizes.
+
+A separately frozen repaired reader may pass `--reader-source-root "$READER"`
+when reading an older execution plan. The reader verifies that every scientific
+Python module and benchmark helper except the reader itself is byte-identical
+to the producer checkout; the producer's input and source checks remain intact.

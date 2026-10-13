@@ -1,0 +1,22 @@
+{
+  "correction": "Compare canonical JSON ownership; add integer-class regression and require identical scientific helpers when using a separately frozen repaired reader.",
+  "defaults_promoted": false,
+  "diagnosis": "Native validate_ownership classes are integer-keyed; JSON serialization converts keys to strings. Comparing the reconstructed native dict to parsed JSON fails although species/gene ownership is unchanged.",
+  "error": "Independent component activation or ownership differs from producer",
+  "goal_completed": false,
+  "observed_exec_session": 47633,
+  "observed_exit_code": 1,
+  "partial_readback_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/large_copy_components_independent_r1_v1_20261013/OrthoBench",
+  "producer": {
+    "bytes": 154569,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/large_copy_components_r1_v1_20261013/OrthoBench/results.json",
+    "sha256": "6834007ce2986341748ffadc64a652e30163bc3568ae91fd3a83b39a48fcce44"
+  },
+  "reader": {
+    "bytes": 6608,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/benchmark_tools/readback_large_copy_components.py",
+    "sha256": "126f00890f33a552260c35ecc48ab7d55855eca5664bc5bda6bf1cce10eb7893"
+  },
+  "scientific_inference_changed": false,
+  "status": "independent_reader_failed_metadata_serialization_comparison_no_scores_admitted"
+}

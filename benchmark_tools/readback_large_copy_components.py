@@ -13,13 +13,31 @@ from benchmark_tools.report_hillclimb import EXPECTED_GENES, endpoint_vector, re
 from benchmark_tools.run_membership_hillclimb import write_json
 
 
-def readback(plan_path, output):
+def reader_equivalence(previous, current):
+    old = {p.relative_to(previous) for p in (previous / "orthohmm").rglob("*.py")}
+    new = {p.relative_to(current) for p in (current / "orthohmm").rglob("*.py")}
+    old |= {p.relative_to(previous) for p in (previous / "benchmark_tools").glob("*.py") if p.name != Path(__file__).name}
+    new |= {p.relative_to(current) for p in (current / "benchmark_tools").glob("*.py") if p.name != Path(__file__).name}
+    if old != new:
+        raise ValueError("Independent reader changed scientific source inventory")
+    checked = []
+    for relative in sorted(old):
+        a, b = record(previous / relative), record(current / relative)
+        if a["sha256"] != b["sha256"]:
+            raise ValueError("Independent reader changed scientific helper: " + str(relative))
+        checked.extend((a, b))
+    return checked
+
+
+def readback(plan_path, output, reader_source=None):
     if output.exists():
         raise ValueError("Require an untouched independent readback namespace")
     plan = json.loads(plan_path.read_text())
     source, root, repo = (Path(plan[k]) for k in ("source_root", "output", "repo"))
-    if Path(__file__).resolve() != source / "benchmark_tools/readback_large_copy_components.py":
+    reader_source = source if reader_source is None else reader_source
+    if Path(__file__).resolve() != reader_source / "benchmark_tools/readback_large_copy_components.py":
         raise ValueError("Use explicitly bound frozen independent reader source")
+    reader_sources = reader_equivalence(source, reader_source) if source != reader_source else []
     producer_path = root / "results.json"
     producer_record = record(producer_path)
     producer = json.loads(producer_path.read_text())
@@ -32,11 +50,13 @@ def readback(plan_path, output):
     scheduler = runner.terminal_job(accounting, producer["job_id"])
     if scheduler["State"] != "COMPLETED":
         raise ValueError("Successful component producer has no successful terminal scheduler record")
-    checked = [record(plan_path), producer_record]
+    checked = [record(plan_path), producer_record, *reader_sources, record(Path(__file__))]
     runner.verify(plan, checked)
     output.mkdir(parents=True)
     rows, diagnostics = runner.construct(plan, output)
-    if diagnostics["component_counts"] != producer["component_counts"] or diagnostics["ownership"] != producer["ownership"]:
+    # JSON object keys are strings even when native species classes are integers.
+    ownership = json.loads(json.dumps(diagnostics["ownership"]))
+    if diagnostics["component_counts"] != producer["component_counts"] or ownership != producer["ownership"]:
         raise ValueError("Independent component activation or ownership differs from producer")
     for label in ("control", "components500"):
         previous, rebuilt = producer["structural_controls"][label], rows[label]
@@ -84,6 +104,7 @@ def readback(plan_path, output):
         "coverage": coverage, "products": native["products"], "native_summary": native["summary"],
         "component_counts": diagnostics["component_counts"], "execution_kind": producer["execution_kind"],
         "scheduler": scheduler, "execution_plan": record(plan_path), "producer": producer_record,
+        "reader_source_root": str(reader_source), "reader": record(Path(__file__)),
         "checked": checked, "resources": {k: producer[k] for k in ("native_execution",) if k in producer},
         "scope": "Independent cached candidate reconstruction and raw-score readback; not repeated native inference or fresh pipeline timing.",
         "defaults_promoted": False, "goal_completed": False}
@@ -95,6 +116,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--execution-plan", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--reader-source-root", type=Path)
     args = parser.parse_args()
-    result = readback(args.execution_plan.resolve(), args.output.resolve())
+    result = readback(args.execution_plan.resolve(), args.output.resolve(),
+                      args.reader_source_root.resolve() if args.reader_source_root else None)
     print(json.dumps({"status": result["status"], "scores": result["scores"]}))

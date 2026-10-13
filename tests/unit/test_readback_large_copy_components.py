@@ -11,7 +11,8 @@ def completed(tmp_path, monkeypatch, dataset="OrthoBench"):
     path, calls = worker_fixture(tmp_path, monkeypatch, dataset)
     construct = runner.construct
     monkeypatch.setattr(runner, "construct", lambda *a: (construct(*a)[0], {
-        "component_counts": {}, "ownership": {"genes": runner.EXPECTED_GENES[dataset]}}))
+        "component_counts": {}, "ownership": {"genes": runner.EXPECTED_GENES[dataset],
+                                               "classes": {0: "A.faa", 1: "B.faa"}}}))
     monkeypatch.setenv("SLURM_JOB_ID", "999")
     producer = runner.run(path)
     assert producer["status"] == "independent_content_readback_verified"
@@ -73,3 +74,27 @@ def test_reader_rejects_changed_component_reconstruction(tmp_path, monkeypatch):
         "component_counts": {"families": 1}, "ownership": {"genes": runner.EXPECTED_GENES["OrthoBench"]}}))
     with pytest.raises(ValueError, match="activation or ownership"):
         reader.readback(path, tmp_path / "independent")
+
+
+@pytest.mark.parametrize("mutation", ["reader_only", "core", "helper", "inventory"])
+def test_repaired_reader_requires_identical_scientific_helpers(tmp_path, mutation):
+    old, new = tmp_path / "old", tmp_path / "new"
+    files = {"orthohmm/refinement.py": "unchanged\n", "benchmark_tools/run_large_copy_components.py": "unchanged\n",
+             "benchmark_tools/readback_large_copy_components.py": "old reader\n"}
+    for root in (old, new):
+        for relative, content in files.items():
+            path = root / relative
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(content)
+    (new / "benchmark_tools/readback_large_copy_components.py").write_text("repaired reader\n")
+    if mutation == "core":
+        (new / "orthohmm/refinement.py").write_text("changed\n")
+    elif mutation == "helper":
+        (new / "benchmark_tools/run_large_copy_components.py").write_text("changed\n")
+    elif mutation == "inventory":
+        (new / "orthohmm/added.py").write_text("new\n")
+    if mutation == "reader_only":
+        assert len(reader.reader_equivalence(old, new)) == 4
+    else:
+        with pytest.raises(ValueError, match="scientific"):
+            reader.reader_equivalence(old, new)

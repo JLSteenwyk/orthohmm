@@ -1,0 +1,24 @@
+{
+  "defaults_promoted": false,
+  "dependency": "afterany:24213",
+  "environment_override": {
+    "PYTHONFAULTHANDLER": "1"
+  },
+  "execution_plan": {
+    "bytes": 108586182,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/large_copy_components_r1_v2_20261013/QfO/execution_plan.json",
+    "sha256": "4b4b0733f4a99c4f4df522d37379626dd5ad143059be6351782deb4af0e9b907"
+  },
+  "failure": {
+    "bytes": 2311,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/large_copy_component_qfo_signal11_receipt_20261013.json",
+    "sha256": "c33e1356d0138e1cc84484f673fb524844df1515e5fafecaf1b816314994021a"
+  },
+  "goal_completed": false,
+  "job_id": "24214",
+  "observed_scheduler": "JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n24214|RUNNING|0:0|00:05:18|bizon|16\n24214.batch|RUNNING|0:0|00:05:18|bizon|16\n",
+  "scientific_parameters_changed": false,
+  "scope": "New namespace; prior failed preparation preserved. No successful native inference duplicated. Fault handling registers a crash reporter without changing inference settings.",
+  "source_revision": "9e2584495ce78cf475cb41eefb4fcaab4fbd66e6",
+  "status": "one_same_parameter_faulthandler_attempt_started_after_signal11_failure"
+}

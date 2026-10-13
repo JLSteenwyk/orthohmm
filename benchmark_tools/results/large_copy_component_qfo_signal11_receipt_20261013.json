@@ -1,0 +1,37 @@
+{
+  "accuracy_admitted": false,
+  "defaults_promoted": false,
+  "execution_plan": {
+    "bytes": 108586182,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/large_copy_components_r1_v1_20261013/QfO/execution_plan.json",
+    "sha256": "5bf5807a03408973e36825e903181c4de37d74149f3af0d0eb5ffab9762ad0d0"
+  },
+  "goal_completed": false,
+  "job_id": "24211",
+  "matches_admitted_control_seed": true,
+  "new_native_inference": false,
+  "next_action": "One fresh-namespace bounded same-parameter attempt with Python faulthandler enabled to capture a repeated native crash; preserve this attempt, do not overwrite outputs or alter scientific parameters.",
+  "partial_control_seed": {
+    "bytes": 23875927,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/large_copy_components_r1_v1_20261013/QfO/control/refined_seed.txt",
+    "sha256": "d21bf01bae3bf2392818cc23babbc6fc1af0d6a0d1f144831ce05dfa9ec85e77"
+  },
+  "scheduler": "JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n24211|FAILED|0:11|00:01:22|bizon|16\n24211.batch|CANCELLED|0:11|00:01:22|bizon|16\n",
+  "stage_localization": "Full control seed exists and matches golden bytes; control trace/candidate and component arm were not written. Crash occurred during or immediately after regenerated-refinement write/readback, before native inference. Stack location is not proven.",
+  "status": "authoritatively_terminal_signal11_preparation_failure",
+  "stderr": {
+    "bytes": 0,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/large_copy_components_r1_v1_20261013/QfO/job_24211.err",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "bytes": 0,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/large_copy_components_r1_v1_20261013/QfO/job_24211.out",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "unchanged_stale_running_producer": {
+    "bytes": 64154,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/large_copy_components_r1_v1_20261013/QfO/results.json",
+    "sha256": "4cc170ae9efa281eddce1a17345f826866b62f09a34cd6a6c20edaf556d6ec47"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "cases": [
+    {
+      "allocation": {
+        "cpus": 16,
+        "memory_gib": 64,
+        "wall_limit_hours": 72
+      },
+      "dataset": "QfO",
+      "execution_plan": {
+        "bytes": 108586182,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/large_copy_components_r1_v1_20261013/QfO/execution_plan.json",
+        "sha256": "5bf5807a03408973e36825e903181c4de37d74149f3af0d0eb5ffab9762ad0d0"
+      },
+      "job_id": "24211",
+      "launcher": {
+        "bytes": 445,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/benchmark_tools/run_large_copy_components.slurm",
+        "sha256": "5eb01b47a8b3665226bd1b35149f5dc32ac7e91bdfa0e7b70884c5e7c60d860b"
+      },
+      "scheduler": "JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n24211|FAILED|0:11|00:01:22|bizon|16\n24211.batch|CANCELLED|0:11|00:01:22|bizon|16\n",
+      "source_revision": "9e2584495ce78cf475cb41eefb4fcaab4fbd66e6"
+    },
+    {
+      "allocation": {
+        "cpus": 16,
+        "memory_gib": 64,
+        "wall_limit_hours": 72
+      },
+      "dataset": "OrthoBench",
+      "execution_plan": {
+        "bytes": 37881870,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/large_copy_components_r1_v1_20261013/OrthoBench/execution_plan.json",
+        "sha256": "f96a7482ba6afe64fa2e8637437dcf0ff160df626e336cb243682b9b46bda820"
+      },
+      "job_id": "24212",
+      "launcher": {
+        "bytes": 445,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/benchmark_tools/run_large_copy_components.slurm",
+        "sha256": "5eb01b47a8b3665226bd1b35149f5dc32ac7e91bdfa0e7b70884c5e7c60d860b"
+      },
+      "scheduler": "JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n24212|COMPLETED|0:0|00:01:16|bizon|16\n24212.batch|COMPLETED|0:0|00:01:16|bizon|16\n",
+      "source_revision": "9e2584495ce78cf475cb41eefb4fcaab4fbd66e6"
+    },
+    {
+      "allocation": {
+        "cpus": 16,
+        "memory_gib": 64,
+        "wall_limit_hours": 72
+      },
+      "dataset": "ThreeKingdoms",
+      "execution_plan": {
+        "bytes": 96067763,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/large_copy_components_r1_v1_20261013/ThreeKingdoms/execution_plan.json",
+        "sha256": "691fe96a758d43e08ce05f8a39221dbf035747e6e44ed5b202a8141e69cb3740"
+      },
+      "job_id": "24213",
+      "launcher": {
+        "bytes": 445,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/benchmark_tools/run_large_copy_components.slurm",
+        "sha256": "5eb01b47a8b3665226bd1b35149f5dc32ac7e91bdfa0e7b70884c5e7c60d860b"
+      },
+      "scheduler": "JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n24213|COMPLETED|0:0|00:02:14|bizon|16\n24213.batch|COMPLETED|0:0|00:02:14|bizon|16\n",
+      "source_revision": "9e2584495ce78cf475cb41eefb4fcaab4fbd66e6"
+    }
+  ],
+  "comparison": {
+    "bytes": 536571,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v8_20261013/summary.json",
+    "sha256": "be8a896a0274d82b2ae5705ace178af9cb42b8566bc2bb1b216118ab0a061f0c"
+  },
+  "defaults_promoted": false,
+  "dependencies": {
+    "24212": "afterany:24211",
+    "24213": "afterany:24212"
+  },
+  "goal_completed": false,
+  "scope": "Cached HMM graph component round; QfO failed during preparation before native phylogeny. Narrow panels require exact inactive-input reuse. No default promotion or new inferred QfO scores.",
+  "status": "three_frozen_component_attempts_submitted_with_sequential_dependencies"
+}
