@@ -1,0 +1,17 @@
+{
+  "schema": "fresh_qfo_downstream_native_crash_recovery_v1",
+  "status": "prespecified_before_recovery_execution",
+  "failure_evidence": "benchmark_tools/results/full_qfo_native_failure_20261014.json",
+  "purpose": "Recover the uncompleted native phylogeny and scoring of the original fresh QfO control100 without repeating its completed initial HMM search, graph, profile expansion, candidate construction or compatible raw gene-tree inference.",
+  "failure": "Parent task 24190_1 failed after 21:20:51; production child exit -11, no complete native pairs/summary. Scoring-only recovery 24204 correctly refused this different failure. Preserve both failed reports and original artifacts. Cause of the native crash is unknown.",
+  "scientific_source": "Use the original immutable 2ccc411520d9e63678178a50207ba1fca87bfbb3 source and its replay_phylogeny.py helper, original complete 78-proteome input and candidate/membership files. No scientific code changes, alternate rooting/support rules, source/library upgrades or benchmark labels in inference.",
+  "mechanism": "Run native phylogeny alone in a clean separate process, seeding a new output namespace from the original completed raw-tree/alignment/checkpoint artifacts. Preserve inferred species tree mode, MAFFT/FastTree identities, species_overlap, positive_paralogy, min_variance and high_confidence_pair retention. Enable PYTHONFAULTHANDLER=1 for diagnostic traceback if the crash recurs.",
+  "gates": "Authenticate terminal parent status, failed child exit, source/runtime/input/scorer/tool hashes, accepted checkpoint integrity, candidate gene universe and membership constraints. Validate recovered native gene/pair/confidence/root-group/species-tree products independently; require every reconciled family to reuse a compatible original raw-tree checkpoint. Recheck original input/cache hashes after execution. Recompute all six corrected QfO endpoints with independent native score readback.",
+  "timing": "Retain parent failed full-pipeline timing separately from incremental cached phylogeny/scoring recovery. Do not relabel recovery as a fresh uninterrupted full pipeline or reconstruct missing initial/profile resource counts from historical runs.",
+  "resources": {"host": "local shared Threadripper", "cpus": 32, "memory_gib": 128, "wall_limit": "2-00:00:00", "concurrency": 1},
+  "followup": "After recovered control content and scores pass, separately continue the unrun original cap400 arm from its original frozen scientific source and settings. Never launch duplicate valid initial-search inference, overwrite the failed parent, or promote defaults from recovery alone.",
+  "limitations": "Recovery remains development-exposed, shared-host and cache-reusing. Inconclusive crash cause and missing uninterrupted resource data are documented limitations, not scientific success or automatic blockers to useful recovery.",
+  "git": "Commit and push the plan before execution; freeze tested recovery orchestration and retain launch, completion or failure evidence at subsequent commits.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}
