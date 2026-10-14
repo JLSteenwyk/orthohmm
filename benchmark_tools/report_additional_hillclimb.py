@@ -311,10 +311,126 @@ def singleton_policy_cell(repo, root, plan, report, row):
     return cell
 
 
+def singleton_followup_plan(repo, root, report):
+    from benchmark_tools.run_singleton_tie_followup import REVISION, scoring_id, selected_case
+    check(report["execution_plan"])
+    plan = json.loads(Path(report["execution_plan"]["path"]).read_text())
+    check(plan["prepared_inputs"])
+    prepared = json.loads(Path(plan["prepared_inputs"]["path"]).read_text())
+    case = selected_case(prepared, plan["dataset"])
+    if (Path(plan["repo"]).resolve() != repo or Path(plan["output"]).resolve() != root
+            or plan["case"] != case or plan["scientific_source"] != prepared["scientific_source"]
+            or plan["scientific_revision"] != REVISION or report["source_revision"] != REVISION
+            or plan["driver_revision"] != report["driver_revision"] or plan["cpu"] != 16
+            or plan["runtime"] != prepared["runtime"] or plan["tool_path"] != prepared["tool_path"]
+            or plan["scoring_id"] != scoring_id(root)):
+        raise ValueError("Singleton follow-up changes the fixed scientific plan")
+    captures = {item["original"]["path"]: item for item in plan["frozen_reporting_evidence"]}
+    if len(captures) != len(plan["frozen_reporting_evidence"]):
+        raise ValueError("Duplicate frozen reporting evidence")
+    inventory = {pin["path"]: (pin["bytes"], pin["sha256"]) for pin in plan["inputs"]}
+    if len(inventory) != len(plan["inputs"]):
+        raise ValueError("Duplicate singleton follow-up verification records")
+    for required in [prepared["preparer_source"], *prepared["inputs"]]:
+        captured = captures.get(required["path"])
+        pin = required
+        if captured:
+            original, frozen = captured["original"], captured["frozen"]
+            path = Path(required["path"])
+            if (original != required or path.parent != repo / "benchmark_tools" or path.suffix != ".py"
+                    or Path(frozen["path"]) != Path(plan["driver_root"]) / "evidence/benchmark_tools" / path.name
+                    or (original["bytes"], original["sha256"]) != (frozen["bytes"], frozen["sha256"])):
+                raise ValueError("Invalid frozen reporting evidence substitution")
+            pin = frozen
+        if inventory.get(pin["path"]) != (pin["bytes"], pin["sha256"]):
+            raise ValueError("Singleton follow-up verification inventory is incomplete")
+    pins = [report["execution_plan"], plan["prepared_inputs"], *plan["inputs"], *plan["driver_sources"],
+            *plan["runtime"]["files"]]
+    for pin in pins:
+        check(pin)
+    if runtime() != plan["runtime"]:
+        raise ValueError("Scientific runtime differs from the singleton follow-up")
+    return plan, pins
+
+
+def singleton_followup_cell(repo, root, plan, report, row):
+    from benchmark_tools.run_canonical_downstream import commands
+    from benchmark_tools.run_membership_hillclimb import compare_golden
+    from benchmark_tools.run_singleton_tie_followup import UNIVERSES
+    dataset, policy = row.get("dataset"), row.get("label")
+    if (dataset != plan["dataset"] or dataset not in UNIVERSES or policy not in ("first_hit", "defer_ambiguous")
+            or row.get("status") != "native_and_score_independently_verified"):
+        raise ValueError("Require verified singleton follow-up arm")
+    case, folder = plan["case"], root / policy
+    graph, command = commands(Path(plan["scientific_source"]), plan, case["case"], folder,
+                              Path(case["checkpoint"]), case["checkpoint_sha"])
+    graph.extend(["--singleton-tie-policy", policy])
+    preflight_path = folder / "preflight.json"
+    if json.loads(preflight_path.read_text()) != {"graph": graph, "native": command}:
+        raise ValueError("Singleton follow-up preflight commands differ")
+    for key, expected in (("graph_execution", graph), ("native_execution", command)):
+        if row[key]["returncode"] != 0 or row[key]["command"] != expected:
+            raise ValueError("Singleton follow-up actual execution differs")
+    graph_path = folder / "graph_metrics.json"
+    parameters = json.loads(graph_path.read_text())["parameters"]
+    expected = {"singleton_tie_policy": policy, "cpm_resolution": .1, "leiden_seed": 4,
+                "profile_iterations": 1, "profile_min_species": 1, "matrix": "BLOSUM62"}
+    if any(parameters.get(key) != value for key, value in expected.items()):
+        raise ValueError("Actual singleton follow-up graph settings differ")
+    native = replay_native(row, {"command": command})
+    if (native["genes"], native["species"]) != UNIVERSES[dataset]:
+        raise ValueError("Singleton follow-up gene universe differs")
+    scoring_folder, participant, extra = folder, None, []
+    if dataset == "QfO":
+        if policy == "first_hit":
+            scoring_folder = repo / "benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014"
+            pin = row["control_scoring_reuse"]
+            check(pin)
+            recovery_path = scoring_folder / "execution_plan.json"
+            recovery_pin = record(recovery_path)
+            if (Path(pin["path"]).resolve() != scoring_folder / "results.json"
+                    or pin not in plan["inputs"] or recovery_pin not in plan["inputs"]):
+                raise ValueError("Reused QfO assessment is not bound to the follow-up")
+            recovery = json.loads(recovery_path.read_text())
+            participant = "ohmm_hillclimb_r1_" + recovery["scoring_id"]
+            extra = [pin, recovery_pin]
+        else:
+            participant = "ohmm_hillclimb_r1_" + plan["scoring_id"]
+    scores, details, pins = readback_scores(repo, dataset, row, native, scoring_folder, participant)
+    vector = endpoint_vector(dataset, scores)
+    if policy == "first_hit":
+        compare_golden(Path(native["phylogeny"]), case["golden"])
+        if vector != case["control"]["scores"]:
+            raise ValueError("Independent singleton follow-up control scores differ")
+        for key in ("candidate_partition", "membership_constraints"):
+            a, b = row["candidate"][key], case["candidate"][key]
+            check(a)
+            check(b)
+            if (a["bytes"], a["sha256"]) != (b["bytes"], b["sha256"]):
+                raise ValueError("Singleton follow-up candidate control differs")
+    checked = [record(preflight_path), record(graph_path), *native["checked"], *pins, *extra]
+    for pin in checked:
+        check(pin)
+    cell = {"dataset": dataset, "status": "independent_content_readback_verified", "scores": vector,
+            "details": details, "products": native["products"], "checked": checked,
+            "coverage": {key: native[key] for key in ("genes", "species", "groups", "pairs")},
+            "source_revision": plan["scientific_revision"], "driver_revision": plan["driver_revision"],
+            "singleton_tie_policy": policy,
+            "resources": {key: row[key] for key in ("graph_execution", "native_execution")},
+            "scope": "Matched cached canonical accepted-hit downstream contrast. QfO control assessment reused after native equivalence; variant FAS unseeded. Not fresh search or isolated timing."}
+    if policy == "defer_ambiguous":
+        controls = [arm for arm in report["arms"] if arm.get("label") == "first_hit"]
+        if len(controls) != 1:
+            raise ValueError("Ambiguous singleton follow-up matched control")
+        cell["matched_control"] = singleton_followup_cell(repo, root, plan, report, controls[0])
+    return cell
+
+
 def build(repo, parent_path, output, continuation_root=None, shared_root=None, canonical_recovery_root=None,
-          singleton_root=None, shared_qfo_root=None):
+          singleton_root=None, shared_qfo_root=None, singleton_qfo_root=None, singleton_tk_root=None):
     if output.exists() or all(root is None for root in (
-            continuation_root, shared_root, canonical_recovery_root, singleton_root, shared_qfo_root)):
+            continuation_root, shared_root, canonical_recovery_root, singleton_root, shared_qfo_root,
+            singleton_qfo_root, singleton_tk_root)):
         raise ValueError("Require a fresh output and at least one producer namespace")
     parent = json.loads(parent_path.read_text())
     check(parent["score_table"])
@@ -325,7 +441,8 @@ def build(repo, parent_path, output, continuation_root=None, shared_root=None, c
     observations = []
     for kind, root in (("continuation", continuation_root), ("shared_hit", shared_root),
                        ("canonical_recovery", canonical_recovery_root), ("singleton_policy", singleton_root),
-                       ("shared_qfo", shared_qfo_root)):
+                       ("shared_qfo", shared_qfo_root), ("singleton_qfo", singleton_qfo_root),
+                       ("singleton_tk", singleton_tk_root)):
         if root is None:
             continue
         path = root / "results.json"
@@ -334,21 +451,26 @@ def build(repo, parent_path, output, continuation_root=None, shared_root=None, c
             continue
         report, capture = (recovery_capture(path, captures) if kind == "canonical_recovery"
                            else snapshot(path, captures, kind + ".json"))
-        plan, pins = check_plan(repo, root, report)
+        followup = kind in ("singleton_qfo", "singleton_tk")
+        plan, pins = (singleton_followup_plan(repo, root, report) if followup else check_plan(repo, root, report))
         observations.append({"kind": kind, "producer_status": report["status"], "snapshot": capture["snapshot"]})
-        if kind == "singleton_policy":
+        if kind == "singleton_policy" or followup:
+            dataset = "QfO" if kind == "singleton_qfo" else "ThreeKingdoms" if kind == "singleton_tk" else "OrthoBench"
             labels = [row.get("label") for row in report.get("arms", [])]
-            if len(set(labels)) != len(labels) or any(label not in ("first_hit", "defer_ambiguous") for label in labels):
+            if (len(set(labels)) != len(labels) or any(label not in ("first_hit", "defer_ambiguous") for label in labels)
+                    or any(row.get("dataset") != dataset for row in report.get("arms", []))
+                    or (followup and plan["dataset"] != dataset)):
                 raise ValueError("Wrong or duplicate singleton-policy arm inventory")
             rows = [row for row in report["arms"] if row["label"] == "defer_ambiguous"]
-            cell = {"dataset": "OrthoBench", "status": "not_yet_reported_execution_state_not_inferred", "scores": {},
+            cell = {"dataset": dataset, "status": "not_yet_reported_execution_state_not_inferred", "scores": {},
                     "source_snapshot": capture["snapshot"], "producer_job_id": report["job_id"]}
             if rows:
                 row = rows[0]
                 cell.update(status=row["status"], producer_status=row["status"])
                 cell.update({k: row[k] for k in ("error", "error_type") if k in row})
                 if row["status"] == "native_and_score_independently_verified":
-                    cell.update(singleton_policy_cell(repo, root, plan, report, row))
+                    cell.update(singleton_followup_cell(repo, root, plan, report, row) if followup
+                                else singleton_policy_cell(repo, root, plan, report, row))
             upsert_cell(methods, "singleton_tie:defer_ambiguous", "OrthoHMM ambiguous singleton deferral (experimental)", cell)
             for pin in pins:
                 check(pin)
@@ -422,7 +544,7 @@ def build(repo, parent_path, output, continuation_root=None, shared_root=None, c
         "report_additional_hillclimb.py", "report_current_hillclimb.py", "report_hillclimb.py",
         "recover_full_qfo_search.py", "run_full_search_hillclimb.py", "run_membership_hillclimb.py",
         "run_shared_hit_pipeline.py", "recover_canonical_qfo_scoring.py", "run_canonical_downstream.py",
-        "run_singleton_tie_orthobench.py", "continue_shared_qfo.py")]
+        "run_singleton_tie_orthobench.py", "continue_shared_qfo.py", "run_singleton_tie_followup.py")]
     result.update(status="incremental_separate_trial_readback_no_default_promotion", parent_readback=record(parent_path),
                   reporter_source=record(__file__), methods=methods, score_table=record(output / "scores.tsv"),
                   additional_trial_observations=observations, defaults_promoted=False, goal_completed=False)
@@ -448,7 +570,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ("repo", "parent", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
-    for name in ("continuation-root", "shared-root", "canonical-recovery-root", "singleton-root", "shared-qfo-root"):
+    for name in ("continuation-root", "shared-root", "canonical-recovery-root", "singleton-root", "shared-qfo-root",
+                 "singleton-qfo-root", "singleton-three-kingdoms-root"):
         parser.add_argument("--" + name, type=Path)
     args = parser.parse_args()
     result = build(args.repo.resolve(), args.parent.resolve(), args.output.resolve(),
@@ -456,5 +579,7 @@ if __name__ == "__main__":
                    args.shared_root.resolve() if args.shared_root else None,
                    args.canonical_recovery_root.resolve() if args.canonical_recovery_root else None,
                    args.singleton_root.resolve() if args.singleton_root else None,
-                   args.shared_qfo_root.resolve() if args.shared_qfo_root else None)
+                   args.shared_qfo_root.resolve() if args.shared_qfo_root else None,
+                   args.singleton_qfo_root.resolve() if args.singleton_qfo_root else None,
+                   args.singleton_three_kingdoms_root.resolve() if args.singleton_three_kingdoms_root else None)
     print(result["status"], len(result["methods"]))
