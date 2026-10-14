@@ -1,0 +1,10 @@
+{
+  "cause": "Plain frozen copy has no .git entry; Git discovers the mutable ancestor checkout. Native source/input manifests matched the frozen files before this overly strict metadata gate.",
+  "defaults_promoted": false,
+  "failed_gate": "harness_git_commit_equals_plan_source_revision",
+  "goal_completed": false,
+  "observed_harness_revision": "11d6bce84bf04fbc4bc247567e934f9d43f43a69",
+  "planned_revision": "4ce513c4e53625b2cbcd68a429481c77e510a5c8",
+  "producer_control_status": "fresh_native_and_scores_verified",
+  "status": "reporter_assertion_failed_not_a_native_inference_failure"
+}

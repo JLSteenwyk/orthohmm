@@ -218,3 +218,27 @@ def test_unpinned_canonical_control_is_rejected(tmp_path, monkeypatch):
     plan["inputs"] = []
     with pytest.raises(ValueError, match="bound to the frozen trial plan"):
         reporter.shared_cell(tmp_path, tmp_path, plan, report, row)
+
+
+def test_plain_frozen_copy_git_label_cannot_override_matching_source_hashes(tmp_path, monkeypatch):
+    plan, report, row, native = shared_fixture(tmp_path, monkeypatch)
+    native["metrics"]["harness"]["git_commit"] = "newer_ancestor_checkout"
+    cell = reporter.shared_cell(tmp_path, tmp_path, plan, report, row)
+    assert cell["source_revision"] == "revision"
+    assert cell["harness_git_metadata"]["git_commit"] == "newer_ancestor_checkout"
+
+
+def test_plain_copy_different_git_label_does_not_excuse_changed_source_hashes(tmp_path, monkeypatch):
+    plan, report, row, native = shared_fixture(tmp_path, monkeypatch)
+    native["metrics"]["harness"]["git_commit"] = "newer_ancestor_checkout"
+    native["metrics"]["harness"]["source_manifest"][0]["sha256"] = "changed_source"
+    with pytest.raises(ValueError, match="source/input manifests"):
+        reporter.shared_cell(tmp_path, tmp_path, plan, report, row)
+
+
+def test_real_frozen_worktree_revision_mismatch_is_still_rejected(tmp_path, monkeypatch):
+    plan, report, row, native = shared_fixture(tmp_path, monkeypatch)
+    (tmp_path / "source/.git").write_text("gitdir: /fixture\n")
+    native["metrics"]["harness"]["git_commit"] = "wrong_worktree_revision"
+    with pytest.raises(ValueError, match="frozen worktree revision"):
+        reporter.shared_cell(tmp_path, tmp_path, plan, report, row)

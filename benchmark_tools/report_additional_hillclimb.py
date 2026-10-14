@@ -76,9 +76,12 @@ def shared_cell(repo, root, plan, report, row):
     if metadata.get("search_result_order") != "canonical" or metadata.get("search_min_total_hits") != 1:
         raise ValueError("Actual native shared-hit mechanism differs from the plan")
     harness = native["metrics"]["harness"]
-    if harness.get("git_commit") != plan["source_revision"] or harness.get("exit_code") != 0:
-        raise ValueError("Shared-hit native harness source or exit differs")
     source = Path(plan["source_root"])
+    if harness.get("exit_code") != 0:
+        raise ValueError("Shared-hit native harness exit differs")
+    # Git in a plain frozen copy discovers the mutable ancestor checkout.
+    if (source / ".git").exists() and harness.get("git_commit") != plan["source_revision"]:
+        raise ValueError("Shared-hit frozen worktree revision differs")
     expected_sources = [record(p) for p in sorted((source / "orthohmm").rglob("*.py"))]
     expected_sources.append(record(source / "benchmark_tools/benchmark_production.py"))
     actual_sources = {r["path"]: (r["bytes"], r["sha256"]) for r in harness["source_manifest"]}
@@ -118,6 +121,9 @@ def shared_cell(repo, root, plan, report, row):
     cell = fresh_cell(repo, dataset, row, native, folder, "ohmm_hillclimb_r1_sharedhit_" + nonce,
                       plan["source_revision"])
     cell["matched_control"] = {"report": control_path, "cell": control_cell}
+    cell["harness_git_metadata"] = {
+        "git_commit": harness.get("git_commit"), "git_dirty": harness.get("git_dirty"),
+        "scope": "Contextual Git metadata; frozen source identity is verified by source manifests and execution-plan pins."}
     cell["execution_kind"] = "fresh_canonical_initial_shared_hit1_cap100"
     return cell
 
