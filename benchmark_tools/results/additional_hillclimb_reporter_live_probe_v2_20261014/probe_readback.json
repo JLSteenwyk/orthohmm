@@ -1,0 +1,72 @@
+{
+  "all_score_vectors_unchanged": true,
+  "configurations": 25,
+  "current_reporter_files": [
+    {
+      "bytes": 13091,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/report_additional_hillclimb.py",
+      "sha256": "c644f6f9dba75985ce72adf80c2e4b63dc961240cba65a6aca313394f89c52b4"
+    },
+    {
+      "bytes": 9268,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/report_current_hillclimb.py",
+      "sha256": "b0209ff96f88ca0a01ce6fda79583b7d9c564241ba86d6fd6c996f9f012f154a"
+    },
+    {
+      "bytes": 27033,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/report_hillclimb.py",
+      "sha256": "1f9f93d2adde242e6e4132ef9b1cc25bc58572409652bbc5badd64c395be6b97"
+    },
+    {
+      "bytes": 19766,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/recover_full_qfo_search.py",
+      "sha256": "cd4c06039869b94cb8f38ddff49710b82c2720634a1c2652b2d68914e4f9aed5"
+    },
+    {
+      "bytes": 19025,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_full_search_hillclimb.py",
+      "sha256": "8c39fc7540d103a8e748533213a1deb941988ae70629f5f6880aaab2e83f9c74"
+    },
+    {
+      "bytes": 23273,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_membership_hillclimb.py",
+      "sha256": "1e96bcadd1e3feed68ef39534735227e84134d07d9858d409d7d98f1dabba966"
+    },
+    {
+      "bytes": 12398,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_shared_hit_pipeline.py",
+      "sha256": "8de682541bbd24e50e536906c03aba59f8921d579bc40f262191a4b69fdd4535"
+    }
+  ],
+  "defaults_promoted": false,
+  "goal_completed": false,
+  "observations": [
+    {
+      "kind": "continuation",
+      "producer_status": "fresh_original_cap400_running",
+      "snapshot": {
+        "bytes": 96445,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/additional_hillclimb_reporter_live_probe_v2_20261014/snapshots/continuation.json",
+        "sha256": "ee9bd7e35a3cc5111c87bb5caf8192b59fbcb94f6640c8cacdb75e50199cdc62"
+      }
+    },
+    {
+      "kind": "shared_hit",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/shared_hit_pipeline_r1_v1_20261014/results.json",
+      "status": "report_missing_execution_state_not_inferred"
+    }
+  ],
+  "parent": {
+    "bytes": 3321770,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v14_20261014/summary.json",
+    "sha256": "c4af627cba311ce75bc146d06c3532f752448abcd3ec5e9ea272ebf7035e7bf1"
+  },
+  "report": {
+    "bytes": 3325138,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/additional_hillclimb_reporter_live_probe_v2_20261014/summary.json",
+    "sha256": "c1dc906076f6950dac93c9fad3611f09afa77b3a102053bd0dafe23e7121da4a"
+  },
+  "score_table_byte_identical": true,
+  "status": "live_pending_report_probe_preserves_all_admitted_scores",
+  "unfinished_scores_admitted": false
+}
