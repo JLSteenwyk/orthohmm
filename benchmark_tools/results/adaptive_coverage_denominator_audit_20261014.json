@@ -1,0 +1,76 @@
+{
+  "defaults_promoted": false,
+  "fixed_cap_panels_affected": false,
+  "goal_completed": false,
+  "plan": {
+    "bytes": 1612,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hillclimb_adaptive_coverage_denominator_audit_20261014.json",
+    "sha256": "bf03177124d29cb43011521f716319d45a9c2b78ec06bd11bc21e08353c8a8d0"
+  },
+  "reader": {
+    "bytes": 4201,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_adaptive_coverage_denominator.py",
+    "sha256": "74df02e030f89d913e7af4bf8eab54d0bebede0a6aa315da3d33578d07cf5acc"
+  },
+  "rows": [
+    {
+      "actual_probe_calls": 500,
+      "cap_would_change": false,
+      "explicit_stub_successes": 400,
+      "legacy_cap": 60,
+      "legacy_reported_coverage": 0.8,
+      "nominal_sample_size": 500,
+      "observed_fraction": 0.8,
+      "observed_fraction_cap": 60,
+      "queries": 500,
+      "reported_coverage_exceeds_one": false,
+      "stride": 1
+    },
+    {
+      "actual_probe_calls": 512,
+      "cap_would_change": false,
+      "explicit_stub_successes": 512,
+      "legacy_cap": 20,
+      "legacy_reported_coverage": 1.024,
+      "nominal_sample_size": 500,
+      "observed_fraction": 1.0,
+      "observed_fraction_cap": 20,
+      "queries": 512,
+      "reported_coverage_exceeds_one": true,
+      "stride": 1
+    },
+    {
+      "actual_probe_calls": 750,
+      "cap_would_change": true,
+      "explicit_stub_successes": 600,
+      "legacy_cap": 20,
+      "legacy_reported_coverage": 1.2,
+      "nominal_sample_size": 500,
+      "observed_fraction": 0.8,
+      "observed_fraction_cap": 60,
+      "queries": 750,
+      "reported_coverage_exceeds_one": true,
+      "stride": 1
+    },
+    {
+      "actual_probe_calls": 512,
+      "cap_would_change": false,
+      "explicit_stub_successes": 410,
+      "legacy_cap": 20,
+      "legacy_reported_coverage": 0.82,
+      "nominal_sample_size": 500,
+      "observed_fraction": 0.80078125,
+      "observed_fraction_cap": 20,
+      "queries": 1024,
+      "reported_coverage_exceeds_one": false,
+      "stride": 2
+    }
+  ],
+  "scope": "Explicit synthetic/stubbed branch arithmetic only; no biological match outcomes, HMM scoring, benchmark rescoring or source/default modification.",
+  "source": {
+    "bytes": 21351,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/orthohmm/search/engine.py",
+    "sha256": "0382696556ead1896929ecadf02af9f54cc55484b5430f7e949313388933927f"
+  },
+  "status": "adaptive_probe_denominator_inflation_reproduced_without_source_changes"
+}
