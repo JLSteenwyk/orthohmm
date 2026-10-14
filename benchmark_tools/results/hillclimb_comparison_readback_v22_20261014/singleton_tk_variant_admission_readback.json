@@ -1,0 +1,43 @@
+{
+  "control_f1": 0.872133159469203,
+  "coverage": {
+    "genes": 443217,
+    "groups": 152373,
+    "pairs": 1245991,
+    "species": 12
+  },
+  "defaults_promoted": false,
+  "earlier_singleton_endpoints_unchanged": true,
+  "f1_delta": 0.0003459448939592269,
+  "false_negative_pair_delta": -4,
+  "false_positive_pair_delta": 0,
+  "goal_completed": false,
+  "interpretation": "Four additional true-positive BUSCO-reference pairs and four fewer false negatives, with no reference-pair false positives. This tiny supplementary gain accompanies a 0.004471105890636373 OrthoBench F1 decline. Six QfO endpoints remain unavailable for this policy; no broad improvement, equivalence or default promotion is established.",
+  "parent": {
+    "bytes": 4513678,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v21_20261014/summary.json",
+    "sha256": "6d1e6ab394840140517597aeaeddfae891435862158fb82a2c876127f5ddc88f"
+  },
+  "producer_snapshot": {
+    "bytes": 170141,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v22_20261014/snapshots/singleton_tk.json",
+    "sha256": "1e6c4fff2a22505b5c66296dfea23c4bec9f6ceb3bb3395da6eb5be4e5f3bf5d"
+  },
+  "reference_gene_coverage": 1.0,
+  "scheduler_accounting": "24251|COMPLETED|0:0\n",
+  "score_table": {
+    "bytes": 4358,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v22_20261014/scores.tsv",
+    "sha256": "acd25007cc2e2acb141986e53bf6c86f0df1840cc99f49fc60d588f137921e6e"
+  },
+  "status": "singleton_tie_three_kingdoms_variant_independent_admission_verified",
+  "summary": {
+    "bytes": 4551030,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v22_20261014/summary.json",
+    "sha256": "559efd657ddaa0ddd96a48deb841bbf703f4b8b16acd4635db31b4961e28aa3b"
+  },
+  "table_cells_match_summary": true,
+  "true_positive_pair_delta": 4,
+  "unrelated_score_vectors_unchanged": 26,
+  "variant_f1": 0.8724791043631622
+}

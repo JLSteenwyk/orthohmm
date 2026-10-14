@@ -1,0 +1,351 @@
+{
+  "accuracy_evaluated": false,
+  "baseline": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_three_kingdoms_r1_v1_20261014/first_hit/native/orthohmm_phylogeny",
+  "candidate": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_three_kingdoms_r1_v1_20261014/defer_ambiguous/native/orthohmm_phylogeny",
+  "checked": [
+    {
+      "bytes": 12278496,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_three_kingdoms_r1_v1_20261014/first_hit/native/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "698115881666fbd5797b5d184eb6aab113112ff88193b24eccb4cab3dd4abbe7"
+    },
+    {
+      "bytes": 55308042,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_three_kingdoms_r1_v1_20261014/first_hit/native/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+      "sha256": "d57fd4018ad665178952424b1756f57e0230dd21b7e5b562d37a46ac74d73b95"
+    },
+    {
+      "bytes": 566,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_three_kingdoms_r1_v1_20261014/first_hit/native/orthohmm_phylogeny/reconciliation_summary.json",
+      "sha256": "a454c283848ca3e2435a319a99d2cf9329e4fe5a4c83c9b7700cc338b2496454"
+    },
+    {
+      "bytes": 12267621,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_three_kingdoms_r1_v1_20261014/defer_ambiguous/native/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "c53fda0239f1e4d1e03a21cd4de4820eb7bd60fcac5b6ae74c24ec83831de709"
+    },
+    {
+      "bytes": 54979627,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_three_kingdoms_r1_v1_20261014/defer_ambiguous/native/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+      "sha256": "40d64c2814920fe19b2b15d5f758936dcc92961729e2070f322a3ea9878f78dd"
+    },
+    {
+      "bytes": 577,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_three_kingdoms_r1_v1_20261014/defer_ambiguous/native/orthohmm_phylogeny/reconciliation_summary.json",
+      "sha256": "70e3c49e156d3c313da3b05d059f2c45cff3866ed719e74263262a78868e385c"
+    },
+    {
+      "bytes": 7227,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_native_contrast_r1_v1_20261014/benchmark_tools/compare_native_membership.py",
+      "sha256": "609f10838c4a4d6a0b65b4e9b39a9f07842e48e31de421bfdfc7de4e857351f5"
+    },
+    {
+      "bytes": 8335,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_native_contrast_r1_v1_20261014/benchmark_tools/score_ygob_groups.py",
+      "sha256": "b18e86dafa7370b75386890d1c8acedf721b8d026a2cd150c0565645698eb51a"
+    },
+    {
+      "bytes": 363,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_three_kingdoms_r1_v1_20261014/first_hit/native/orthohmm_phylogeny/species_tree.rooted.nwk",
+      "sha256": "a39e922782be77f40538f23a02975b9f4c4c39445a865054b02208027a99597f"
+    },
+    {
+      "bytes": 363,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_three_kingdoms_r1_v1_20261014/defer_ambiguous/native/orthohmm_phylogeny/species_tree.rooted.nwk",
+      "sha256": "a39e922782be77f40538f23a02975b9f4c4c39445a865054b02208027a99597f"
+    }
+  ],
+  "defaults_promoted": false,
+  "genes": 443217,
+  "goal_completed": false,
+  "pair_membership": {
+    "added_records": 48808,
+    "affected_genes": 28147,
+    "baseline_duplicate_rows": 0,
+    "baseline_records": 1253269,
+    "baseline_unique_pairs": 1253269,
+    "candidate_duplicate_rows": 0,
+    "candidate_records": 1245991,
+    "candidate_unique_pairs": 1245991,
+    "common_records": 1197183,
+    "removed_records": 56086,
+    "semantic_multisets_equal": false
+  },
+  "pair_samples": {
+    "added": [
+      {
+        "count": 1,
+        "pair": [
+          [
+            "AT1G01190.1",
+            "Arab"
+          ],
+          [
+            "Os08t0547300-01",
+            "Oryz"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "AT1G01190.1",
+            "Arab"
+          ],
+          [
+            "Os09t0528700-00",
+            "Oryz"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "AT1G01190.1",
+            "Arab"
+          ],
+          [
+            "Zm00001d006193_P001",
+            "Zeam"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "AT1G01190.1",
+            "Arab"
+          ],
+          [
+            "Zm00001d032042_P001",
+            "Zeam"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "AT1G01190.1",
+            "Arab"
+          ],
+          [
+            "Zm00001d053202_P001",
+            "Zeam"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "AT1G01190.2",
+            "Arab"
+          ],
+          [
+            "Os08t0547300-01",
+            "Oryz"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "AT1G01190.2",
+            "Arab"
+          ],
+          [
+            "Os09t0528700-00",
+            "Oryz"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "AT1G01190.2",
+            "Arab"
+          ],
+          [
+            "Zm00001d006193_P001",
+            "Zeam"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "AT1G01190.2",
+            "Arab"
+          ],
+          [
+            "Zm00001d032042_P001",
+            "Zeam"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "AT1G01190.2",
+            "Arab"
+          ],
+          [
+            "Zm00001d053202_P001",
+            "Zeam"
+          ]
+        ]
+      }
+    ],
+    "removed": [
+      {
+        "count": 1,
+        "pair": [
+          [
+            "AT1G01190.1",
+            "Arab"
+          ],
+          [
+            "Os03t0134500-00",
+            "Oryz"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "AT1G01190.1",
+            "Arab"
+          ],
+          [
+            "Zm00001d027537_P001",
+            "Zeam"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "AT1G01190.2",
+            "Arab"
+          ],
+          [
+            "Os03t0134500-00",
+            "Oryz"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "AT1G01190.2",
+            "Arab"
+          ],
+          [
+            "Zm00001d027537_P001",
+            "Zeam"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "AT1G01490.1",
+            "Arab"
+          ],
+          [
+            "YJL148W",
+            "Scer"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "AT1G01490.2",
+            "Arab"
+          ],
+          [
+            "YJL148W",
+            "Scer"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "AT1G01490.3",
+            "Arab"
+          ],
+          [
+            "YJL148W",
+            "Scer"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "AT1G01490.4",
+            "Arab"
+          ],
+          [
+            "YJL148W",
+            "Scer"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "AT1G01540.1",
+            "Arab"
+          ],
+          [
+            "EFJ22711",
+            "Sela"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "AT1G01540.1",
+            "Arab"
+          ],
+          [
+            "Zm00001d027446_P001",
+            "Zeam"
+          ]
+        ]
+      }
+    ]
+  },
+  "root_membership": {
+    "added_records": 6001,
+    "baseline_records": 152748,
+    "candidate_records": 152373,
+    "common_records": 146372,
+    "genes_in_changed_groups": 42700,
+    "removed_records": 6376,
+    "semantic_multisets_equal": false
+  },
+  "scope": "Ignores row order and arbitrary root/family IDs; preserves gene identity, pair species ownership and multiplicity. Confidence values and tree-event annotations are not compared. No claim of biological correctness or a uniquely identified causal stage.",
+  "species_tree_same_bytes": true,
+  "status": "native_membership_and_pair_multiset_contrast_completed"
+}
