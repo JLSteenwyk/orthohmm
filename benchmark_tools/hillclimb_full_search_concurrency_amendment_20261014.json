@@ -1,0 +1,12 @@
+{
+  "schema": "full_search_runtime_concurrency_amendment_v1",
+  "status": "prespecified_before_releasing_queued_three_kingdoms_task",
+  "reason": "Three Kingdoms task 24190_2 is pending solely on JobArrayTaskLimit while QfO task 24190_1 remains live. The scheduler reports 128 allocated and 64 idle CPUs out of 192 on bizon; Linux MemAvailable is about 754 GiB. Starting the existing task can advance outstanding supplementary evaluation without duplicating inference or waiting for the complete QfO cap panel.",
+  "change": "Update only owned Slurm array 24190 ArrayTaskThrottle from 1 to 2. Do not stop/requeue/restart any task, change unrelated array 23002, submit duplicate dataset inference, or modify frozen experiment/source/input/scoring files.",
+  "unchanged": "Each full-search task retains its existing 32 CPU, 128 GiB, four workers/eight threads per worker, CPU-only configuration and 240-hour limit. Both fixed candidate-cap arms, source revision, seeds, aligner/tree-builder binaries and scoring conventions remain as originally frozen. Only dataset-level scheduling changes.",
+  "resource_gate": "Immediately before the update, revalidate QfO RUNNING, Three Kingdoms PENDING on JobArrayTaskLimit, the current array throttle, at least 32 schedulable idle CPUs on bizon, and at least 192 GiB Linux available memory. Keep maximum simultaneous owned full-search tasks at two. The completed small boundary-search/readback jobs add no ongoing allocation.",
+  "timing_limitation": "QfO is already running when this scheduling amendment is made, and its later stages and cap400 arm may overlap Three Kingdoms. Wall/CPU/RSS observations remain shared-host descriptive measurements, not isolated or equivalently uncontended speed comparisons. Record before/after scheduler state and UTC change time, retain host activity snapshots, and explicitly join this amendment to later timing interpretation. Do not describe the distortion as necessarily slight or use it to claim an isolated algorithmic speed advantage.",
+  "accuracy_scope": "No algorithm/parameter/reference changes. Preserve both completed and failed configurations and validate outputs normally; this amendment does not admit new scores.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}
