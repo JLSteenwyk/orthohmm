@@ -1,0 +1,112 @@
+{
+  "comparison": {
+    "bytes": 575887,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v11_20261013/summary.json",
+    "sha256": "44cfdda018f0fd8d7c8db37e88dfd5f76b92a0caef705a8086164bf00085e5e5"
+  },
+  "defaults_promoted": false,
+  "deltas_vs_orthofinder_full": {
+    "OrthoBench: OrthoBench F1": 0.013695935145123794,
+    "QfO: EC": 0.026626079999999996,
+    "QfO: FAS": 0.0767627205764595,
+    "QfO: GO": 0.01246031000000003,
+    "QfO: SwissTrees F": -0.013459464209026106,
+    "QfO: TreeFam-A F": -0.10463750405323302,
+    "QfO: VGNC F": -0.039019584648321226,
+    "ThreeKingdoms: Three Kingdoms F1": -0.11644848862544555
+  },
+  "goal_completed": false,
+  "independent_admission": {
+    "bytes": 452490,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/component_recovery_admission_r1_v1_20261013/report.json",
+    "sha256": "f5e34972aa05e5b0aed71311078927ed8aa9294a796a11cc31bb2c6382b78e10"
+  },
+  "native_pair_count_change": 1017780,
+  "next_action": "Diagnose retained functional scored-pair changes and confidence classes before choosing a label-independent HMM/candidate/tree hypothesis. Do not tune reference exclusions or relax the screening rule to hide this regression.",
+  "precision_recall_and_eligible_relation_counts": {
+    "EC": {
+      "assessed_relations": 130343,
+      "similarity": 0.96275629
+    },
+    "FAS": {
+      "assessed_relations": 6977340.0,
+      "similarity": 0.7681848538235971
+    },
+    "GO": {
+      "assessed_relations": 105070,
+      "similarity": 0.48200828
+    },
+    "SwissTrees F": {
+      "precision": 0.95539779,
+      "recall": 0.74147801
+    },
+    "TreeFam-A F": {
+      "precision": 0.92893183,
+      "recall": 0.54540027
+    },
+    "VGNC F": {
+      "precision": 0.9956906431944254,
+      "recall": 0.9074538313695998
+    }
+  },
+  "screen": {
+    "comparisons": {
+      "components500": {
+        "complete_eight_endpoint_contrast": true,
+        "deltas_from_matched_control": {
+          "OrthoBench: OrthoBench F1": 0.0,
+          "QfO: EC": -0.002894210000000008,
+          "QfO: FAS": 0.0051733085204449525,
+          "QfO: GO": -0.008340999999999987,
+          "QfO: SwissTrees F": 0.0014405835144730705,
+          "QfO: TreeFam-A F": 0.07241655068599828,
+          "QfO: VGNC F": 0.04783664929631548,
+          "ThreeKingdoms: Three Kingdoms F1": 0.0
+        },
+        "passes_point_estimate_screen": false
+      },
+      "control": {
+        "complete_eight_endpoint_contrast": true,
+        "deltas_from_matched_control": {
+          "OrthoBench: OrthoBench F1": 0.0,
+          "QfO: EC": 0.0,
+          "QfO: FAS": 0.0,
+          "QfO: GO": 0.0,
+          "QfO: SwissTrees F": 0.0,
+          "QfO: TreeFam-A F": 0.0,
+          "QfO: VGNC F": 0.0,
+          "ThreeKingdoms: Three Kingdoms F1": 0.0
+        },
+        "passes_point_estimate_screen": false
+      }
+    },
+    "control": "control",
+    "pareto": {
+      "dominated_by": {
+        "components500": [],
+        "control": []
+      },
+      "endpoints": [
+        "OrthoBench: OrthoBench F1",
+        "QfO: VGNC F",
+        "QfO: SwissTrees F",
+        "QfO: TreeFam-A F",
+        "QfO: EC",
+        "QfO: GO",
+        "QfO: FAS",
+        "ThreeKingdoms: Three Kingdoms F1"
+      ],
+      "excluded_incomplete": {},
+      "nondominated_complete_labels": [
+        "components500",
+        "control"
+      ],
+      "scope": "Development point-estimate dominance only; not uncertainty-aware superiority or independent validation."
+    },
+    "scope": "Development point-estimate screening only, not default promotion, statistical equivalence or independent confirmation."
+  },
+  "screen_failures": {
+    "QfO: GO": -0.008340999999999987
+  },
+  "status": "complete_admitted_component_vector_rejected_for_default_advancement"
+}

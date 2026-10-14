@@ -1,0 +1,97 @@
+{
+  "cases": [
+    {
+      "candidate_pairs": 2494,
+      "cap": 100,
+      "query": "UP000001312_665079.fasta",
+      "ratios": {
+        "boundary_over_compiled_full_process_cpu_s": 0.9296124581135488,
+        "boundary_over_compiled_full_wall_s": 0.925559977026094,
+        "boundary_over_original_full_process_cpu_s": 0.9214079891024023,
+        "boundary_over_original_full_wall_s": 0.9119679648428772
+      },
+      "target": "UP000002485_284812.fasta"
+    },
+    {
+      "candidate_pairs": 8390,
+      "cap": 400,
+      "query": "UP000001312_665079.fasta",
+      "ratios": {
+        "boundary_over_compiled_full_process_cpu_s": 0.9222391116465918,
+        "boundary_over_compiled_full_wall_s": 0.9224557084680377,
+        "boundary_over_original_full_process_cpu_s": 0.9225068993718595,
+        "boundary_over_original_full_wall_s": 0.9203683068288617
+      },
+      "target": "UP000002485_284812.fasta"
+    },
+    {
+      "candidate_pairs": 2884,
+      "cap": 100,
+      "query": "UP000002485_284812.fasta",
+      "ratios": {
+        "boundary_over_compiled_full_process_cpu_s": 0.9341659082874669,
+        "boundary_over_compiled_full_wall_s": 0.9192626955049799,
+        "boundary_over_original_full_process_cpu_s": 0.9418266897578158,
+        "boundary_over_original_full_wall_s": 0.9376267152543265
+      },
+      "target": "UP000001570_224308.fasta"
+    },
+    {
+      "candidate_pairs": 9752,
+      "cap": 400,
+      "query": "UP000002485_284812.fasta",
+      "ratios": {
+        "boundary_over_compiled_full_process_cpu_s": 0.9314638477945323,
+        "boundary_over_compiled_full_wall_s": 0.9273378619927197,
+        "boundary_over_original_full_process_cpu_s": 0.9341319711883342,
+        "boundary_over_original_full_wall_s": 0.9333158084810675
+      },
+      "target": "UP000001570_224308.fasta"
+    },
+    {
+      "candidate_pairs": 2862,
+      "cap": 100,
+      "query": "UP000001570_224308.fasta",
+      "ratios": {
+        "boundary_over_compiled_full_process_cpu_s": 0.9282642932881944,
+        "boundary_over_compiled_full_wall_s": 0.9164961851549389,
+        "boundary_over_original_full_process_cpu_s": 0.929691482789933,
+        "boundary_over_original_full_wall_s": 0.919275869768118
+      },
+      "target": "UP000001312_665079.fasta"
+    },
+    {
+      "candidate_pairs": 10101,
+      "cap": 400,
+      "query": "UP000001570_224308.fasta",
+      "ratios": {
+        "boundary_over_compiled_full_process_cpu_s": 0.934129136822045,
+        "boundary_over_compiled_full_wall_s": 0.9505286362897569,
+        "boundary_over_original_full_process_cpu_s": 0.9369790746846623,
+        "boundary_over_original_full_wall_s": 0.9544445485714698
+      },
+      "target": "UP000001312_665079.fasta"
+    }
+  ],
+  "defaults_promoted": false,
+  "goal_completed": false,
+  "raw_report": {
+    "bytes": 187501,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/viterbi_boundary_clear_r1_v2_20261013/report.json",
+    "sha256": "bcaabd2d2aafeee3ad883588bf5940fee2a56a84cc9a424f45d7b10a073d42db"
+  },
+  "reader": {
+    "bytes": 8513,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_viterbi_boundary_clear.py",
+    "sha256": "586c5e1aacae83cb314c7578021c558829751c6170e487cfac68efd1f248c190"
+  },
+  "scheduler": {
+    "AllocCPUS": "4",
+    "ExitCode": "0:0",
+    "JobID": "24225",
+    "State": "COMPLETED"
+  },
+  "scope": "Exact matched-k4 kernel replay and timing arithmetic; no eight-endpoint accuracy or isolated full-pipeline speed claim.",
+  "source_revision": "c9e7fbf7b8f56635c61d5833718c079d1263d078",
+  "status": "terminal_boundary_clear_batches_scores_and_timings_independently_verified"
+}

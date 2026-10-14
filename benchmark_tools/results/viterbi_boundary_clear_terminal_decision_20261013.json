@@ -1,0 +1,53 @@
+{
+  "accuracy_scores_added": false,
+  "all_paired_median_wall_and_cpu_ratios_below_one": true,
+  "batch_shapes_per_series": 6,
+  "default_compile_flag_changed": false,
+  "defaults_promoted": false,
+  "exact_scores_and_input_arrays_reconstructed": true,
+  "goal_completed": false,
+  "independent_readbacks": [
+    {
+      "bytes": 3703,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/viterbi_boundary_clear_independent_r1_v1_20261013/report.json",
+      "sha256": "1f39067552fb870d92e98431a4a9c93eacaa028393e6f62bd1c94ecee88cac34"
+    },
+    {
+      "bytes": 3702,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/viterbi_boundary_clear_independent_r1_v2_20261013/report.json",
+      "sha256": "cc943e25daeed69ae4d11d2751d749049236d47f1a891e89e3faa8a63c3f494d"
+    }
+  ],
+  "jobs": [
+    "24224",
+    "24225"
+  ],
+  "live_libraries_overwritten": false,
+  "matched_k": 4,
+  "original_full_cpu_ratio_range": [
+    0.9214079891024023,
+    0.9418266897578158
+  ],
+  "original_full_wall_ratio_range": [
+    0.9115574213831424,
+    0.9544445485714698
+  ],
+  "raw_captures": [
+    {
+      "bytes": 58296,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/viterbi_boundary_clear_raw_capture_r1_20261013.json",
+      "sha256": "3366ed8d09c1512dc73c2a72d6404bb7935f63abb63ac5e37f0137d8247b82d5"
+    },
+    {
+      "bytes": 58248,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/viterbi_boundary_clear_raw_capture_r2_20261013.json",
+      "sha256": "1038ad573f47c8df90da19fcfbb5b5cfcd4a9357eb28533ec3855e063ced4f93"
+    }
+  ],
+  "scope": "Shared-host kernel microbenchmarks, not isolated speedup, full-pipeline time, biological validation or a new eight-endpoint accuracy vector. Original frozen library compilation ancestry may differ; new full-clear and boundary-only builds use identical flags except the explicit opt-in definition.",
+  "selection": "Advance to broader output-preserving validation, not default promotion. Every matched batch shape has directionally lower paired median wall and CPU cost in both bounded series, with independently reconstructed arrays and exact integer scores.",
+  "series": 2,
+  "source_revision": "c9e7fbf7b8f56635c61d5833718c079d1263d078",
+  "status": "replicated_exact_kernel_gain_eligible_for_broader_output_validation_only",
+  "timed_runs_per_case": 18
+}
