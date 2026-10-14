@@ -173,6 +173,70 @@ def canonical_recovery_cell(repo, plan, report, root):
             "scope": "Original failed scoring attempt retained. Cached downstream inference plus separate scoring recovery is not fresh full-pipeline timing; FAS is unseeded."}
 
 
+def shared_qfo_cell(repo, root, plan, report):
+    from benchmark_tools.continue_shared_qfo import REVISION, original_skip, relocated_case, terminal_dependencies
+    if (report.get("status") != "original_shared_qfo_native_and_all_six_scores_verified"
+            or plan["scientific_revision"] != REVISION or plan["cpu"] != 16
+            or plan["dependency_jobs"] != ["24242", "24246"]):
+        raise ValueError("Require successful original-science QfO sensitivity continuation")
+    terminal_dependencies(report["dependency_accounting"])
+    check(plan["parent_plan"])
+    parent = json.loads(Path(plan["parent_plan"]["path"]).read_text())
+    if (Path(plan["parent_plan"]["path"]).resolve() != Path(plan["parent_root"]) / "execution_plan.json"
+            or plan["parent_plan"] not in plan["inputs"]
+            or parent["source_root"] != plan["scientific_source"]
+            or relocated_case(parent, root) != plan["case"]):
+        raise ValueError("Continuation changes the original scientific case or source")
+    check(report["original_skip"])
+    if Path(report["original_skip"]["path"]).resolve() != root / "original_skip_snapshot.json":
+        raise ValueError("Original skipped attempt belongs to another continuation")
+    archived = json.loads(Path(report["original_skip"]["path"]).read_text())
+    skipped = original_skip(archived, parent, plan["parent_plan"])
+    identifier = "sh_" + hashlib.sha256(str(root).encode()).hexdigest()[:12]
+    if (plan["scoring_id"] != identifier or report["execution"]["returncode"] != 0
+            or report["execution"]["command"] != plan["case"]["command"]):
+        raise ValueError("Continuation actual command or scoring namespace differs")
+    recovery_root = Path(plan["recovery_root"])
+    control_pin = report["control"]["report"]
+    check(control_pin)
+    if Path(control_pin["path"]).resolve() != recovery_root / "results.json":
+        raise ValueError("Recovered control belongs to another producer")
+    recovery = json.loads(Path(control_pin["path"]).read_text())
+    recovery_plan, recovery_pins = check_plan(repo, recovery_root, recovery)
+    if recovery.get("job_id") != "24246" or recovery["execution_plan"] not in plan["inputs"]:
+        raise ValueError("Recovered control differs from the planned dependency")
+    control = canonical_recovery_cell(repo, recovery_plan, recovery, recovery_root)
+    for key in ("scores", "products", "coverage", "source_revision"):
+        if report["control"]["cell"][key] != control[key]:
+            raise ValueError("Independent recovered control content differs")
+    native = shared_native(plan["case"], parent)
+    if (native["genes"], native["species"]) != (984137, 78) or (
+            native["genes"], native["species"]) != (control["coverage"]["genes"], control["coverage"]["species"]):
+        raise ValueError("QfO sensitivity continuation gene universe differs")
+    folder = Path(plan["case"]["output"])
+    phylo = folder / "output/orthohmm_phylogeny"
+    native.update(phylogeny=str(phylo), prediction=str(folder / "output/orthohmm_working_res/orthohmm_edges_clustered.txt"),
+                  checked=[*native["products"].values(), record(folder / "metrics.json"),
+                           record(phylo / "provenance_manifest.json"), record(phylo / "reconciliation_summary.json"),
+                           *[record(p) for p in sorted((folder / "output/orthohmm_working_res/high_sensitivity_checkpoint").iterdir())]])
+    cell = fresh_cell(repo, "QfO", report, native, root / "scoring",
+                      "ohmm_hillclimb_r1_" + identifier, REVISION)
+    checked = [plan["parent_plan"], report["original_skip"], control_pin, *recovery_pins,
+               *control["checked"], *report["checked"]]
+    for pin in checked:
+        check(pin)
+    compact = [plan["parent_plan"], report["original_skip"], control_pin,
+               recovery["execution_plan"], *control["checked"]]
+    cell["checked"].extend(list({pin["path"]: pin for pin in compact}.values()))
+    cell["verification_record_count"] = len({pin["path"] for pin in checked})
+    cell["verification_scope"] = "Full producer and recovery inventories rehashed; retained in pinned producer snapshots rather than duplicated in the score table."
+    cell["matched_control"] = {"report": control_pin, "cell": control}
+    cell["original_unrun_attempt"] = {**skipped, "scores": {}, "source_snapshot": report["original_skip"],
+                                    "producer_job_id": archived["job_id"]}
+    cell["execution_kind"] = "fresh_original_canonical_shared_hit1_cap100_continuation"
+    return cell
+
+
 def recovery_capture(path, captures):
     identity = record(path)
     report = json.loads(path.read_text())
@@ -247,8 +311,10 @@ def singleton_policy_cell(repo, root, plan, report, row):
     return cell
 
 
-def build(repo, parent_path, output, continuation_root=None, shared_root=None, canonical_recovery_root=None, singleton_root=None):
-    if output.exists() or all(root is None for root in (continuation_root, shared_root, canonical_recovery_root, singleton_root)):
+def build(repo, parent_path, output, continuation_root=None, shared_root=None, canonical_recovery_root=None,
+          singleton_root=None, shared_qfo_root=None):
+    if output.exists() or all(root is None for root in (
+            continuation_root, shared_root, canonical_recovery_root, singleton_root, shared_qfo_root)):
         raise ValueError("Require a fresh output and at least one producer namespace")
     parent = json.loads(parent_path.read_text())
     check(parent["score_table"])
@@ -258,7 +324,8 @@ def build(repo, parent_path, output, continuation_root=None, shared_root=None, c
     captures.mkdir()
     observations = []
     for kind, root in (("continuation", continuation_root), ("shared_hit", shared_root),
-                       ("canonical_recovery", canonical_recovery_root), ("singleton_policy", singleton_root)):
+                       ("canonical_recovery", canonical_recovery_root), ("singleton_policy", singleton_root),
+                       ("shared_qfo", shared_qfo_root)):
         if root is None:
             continue
         path = root / "results.json"
@@ -313,7 +380,7 @@ def build(repo, parent_path, output, continuation_root=None, shared_root=None, c
             if runtime() != plan["runtime"]:
                 raise ValueError("Scientific runtime changed during recovery admission")
             continue
-        rows = [("QfO", report)] if kind == "continuation" else [(row["dataset"], row) for row in report["arms"]]
+        rows = [("QfO", report)] if kind in ("continuation", "shared_qfo") else [(row["dataset"], row) for row in report["arms"]]
         if any(dataset not in DATASETS for dataset, _ in rows) or len({dataset for dataset, _ in rows}) != len(rows):
             raise ValueError("Wrong or duplicate producer dataset inventory")
         for dataset, row in rows:
@@ -322,13 +389,17 @@ def build(repo, parent_path, output, continuation_root=None, shared_root=None, c
                     "scores": {}, "source_snapshot": capture["snapshot"], "producer_job_id": report["job_id"]}
             cell.update({k: row[k] for k in ("error", "error_type") if k in row})
             success = ("original_cap400_native_and_all_six_scores_verified" if kind == "continuation"
+                       else "original_shared_qfo_native_and_all_six_scores_verified" if kind == "shared_qfo"
                        else "independent_content_and_score_readback_verified")
             if row["status"] == success:
                 cell.update(continuation_cell(repo, plan, row) if kind == "continuation"
+                            else shared_qfo_cell(repo, root, plan, report) if kind == "shared_qfo"
                             else shared_cell(repo, root, plan, report, row))
-                if kind == "shared_hit":
+                if kind in ("shared_hit", "shared_qfo"):
                     control = {**cell["matched_control"]["cell"], "dataset": dataset}
                     upsert_cell(methods, "canonical_collection:canonical", "OrthoHMM canonical collection (experimental)", control)
+                if kind == "shared_qfo":
+                    upsert_cell(methods, key, key, cell["original_unrun_attempt"])
             upsert_cell(methods, key, key, cell)
         for pin in pins:
             check(pin)
@@ -351,7 +422,7 @@ def build(repo, parent_path, output, continuation_root=None, shared_root=None, c
         "report_additional_hillclimb.py", "report_current_hillclimb.py", "report_hillclimb.py",
         "recover_full_qfo_search.py", "run_full_search_hillclimb.py", "run_membership_hillclimb.py",
         "run_shared_hit_pipeline.py", "recover_canonical_qfo_scoring.py", "run_canonical_downstream.py",
-        "run_singleton_tie_orthobench.py")]
+        "run_singleton_tie_orthobench.py", "continue_shared_qfo.py")]
     result.update(status="incremental_separate_trial_readback_no_default_promotion", parent_readback=record(parent_path),
                   reporter_source=record(__file__), methods=methods, score_table=record(output / "scores.tsv"),
                   additional_trial_observations=observations, defaults_promoted=False, goal_completed=False)
@@ -377,12 +448,13 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ("repo", "parent", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
-    for name in ("continuation-root", "shared-root", "canonical-recovery-root", "singleton-root"):
+    for name in ("continuation-root", "shared-root", "canonical-recovery-root", "singleton-root", "shared-qfo-root"):
         parser.add_argument("--" + name, type=Path)
     args = parser.parse_args()
     result = build(args.repo.resolve(), args.parent.resolve(), args.output.resolve(),
                    args.continuation_root.resolve() if args.continuation_root else None,
                    args.shared_root.resolve() if args.shared_root else None,
                    args.canonical_recovery_root.resolve() if args.canonical_recovery_root else None,
-                   args.singleton_root.resolve() if args.singleton_root else None)
+                   args.singleton_root.resolve() if args.singleton_root else None,
+                   args.shared_qfo_root.resolve() if args.shared_qfo_root else None)
     print(result["status"], len(result["methods"]))
