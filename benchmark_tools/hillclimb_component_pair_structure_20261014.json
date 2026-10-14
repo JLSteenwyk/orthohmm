@@ -1,0 +1,12 @@
+{
+  "schema": "component_functional_pair_structure_localization_v1",
+  "status": "prespecified_before_structural_pair_localization",
+  "motivation": "Added GO-eligible pairs have similarly lower mean conservation in native high and medium evidence strata. Identify whether these relations arise within retained HMM-supported seed components or across satellite-expanded seed boundaries before choosing another accuracy mechanism.",
+  "inputs": "Admitted matched control and component native results; original checkpoint gene order; original broad graph partition; reproduced control and component refined seeds; final component candidate partition; executed large-copy trace; immutable HMM-derived graph arrays; retained GO/EC raw eligible pair scores.",
+  "operation": "Describe shared, added and removed GO/EC-eligible pairs by original-family co-membership, component-seed co-membership, bounded-retention activation, expanded-candidate co-membership and direct HMM-derived graph support (absent, positive below 1.5, at least 1.5). Reproduce admitted raw counts and means. Use chunked, read-only NumPy .npy access and checked integer indexing; preserve both gene universe and source order.",
+  "resources": {"cpus": 1, "memory_gib": 16, "wall_limit_minutes": 30, "host": "local shared Threadripper"},
+  "selection": "Use structure to distinguish candidate-boundary from reconciliation hypotheses. Do not change inference, filter pairs by reference annotation, choose score cutoffs from GO/EC values or claim that functional conservation proves orthology.",
+  "limitations": ["This is development-exposed descriptive localization, not independent confirmation or causal attribution.", "Direct HMM-derived graph support is homology evidence, not proof of orthology.", "No native inference, rescoring, default promotion or uncertainty estimation."],
+  "defaults_promoted": false,
+  "goal_completed": false
+}
