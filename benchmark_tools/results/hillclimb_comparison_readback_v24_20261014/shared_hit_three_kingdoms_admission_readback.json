@@ -1,0 +1,89 @@
+{
+  "all_27_table_rows_agree_with_summary": true,
+  "count_formula_f1_absolute_tolerance": 1e-15,
+  "defaults_promoted": false,
+  "development_screen_passed": false,
+  "earlier_orthobench_score_unchanged": true,
+  "f1_delta": -0.011889767484085656,
+  "false_positive_pairs_both": 0,
+  "goal_completed": false,
+  "interpretation": "Supplementary BUSCO-pair recall regression with full gene coverage. Combined with the OrthoBench decline, no broad-default promotion. Await the fixed QfO continuation for complete endpoint reporting, not post hoc retuning.",
+  "limitations": [
+    "Three Kingdoms is supplementary and development-exposed.",
+    "Missing original QfO score is not zero and is not imputed.",
+    "The 0.005 screen is a heuristic, not equivalence or noninferiority.",
+    "Shared-host inference timings are confounded and differ in scope from cached control timings."
+  ],
+  "matched_control_pair_counts": {
+    "f_score": 0.872133159469203,
+    "false_negative_gene_pairs": 1667,
+    "false_positive_gene_pairs": 0,
+    "precision": 1.0,
+    "predicted_orthogroups": 152748,
+    "recall": 0.7732589771490751,
+    "reference_gene_coverage": 1.0,
+    "reference_genes": 2035,
+    "reference_genes_in_prediction": 2035,
+    "reference_orthogroups": 255,
+    "true_positive_gene_pairs": 5685
+  },
+  "matched_control_scores": {
+    "ThreeKingdoms: Three Kingdoms F1": 0.872133159469203
+  },
+  "method_key": "shared_hit:shared_hit1",
+  "other_26_score_vectors_unchanged": true,
+  "parent": {
+    "bytes": 4641978,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v23_20261014/summary.json",
+    "sha256": "f059b4fbbd6b1b339f385dea4d3e7c868c6d6153bbfad9a377227dc0c81f3677"
+  },
+  "producer_snapshot": {
+    "bytes": 356792,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v24_20261014/snapshots/shared_hit.json",
+    "sha256": "6e758b7f45988ccf474122e037ae870f5ae6b93ad575d584c986165529a59080"
+  },
+  "qfo_original_skip_preserved_without_scores": true,
+  "reference_gene_coverage_both": 1.0,
+  "reporter_tests": {
+    "bytes": 10198,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v24_20261014/reporter_tests.xml",
+    "sha256": "6ebea18a7bc83c7047e151d975fe56fdc07827c8359d5b097752f490d378847b"
+  },
+  "reporter_tests_passed": 67,
+  "scheduler": "24242            FAILED      1:0   08:13:25",
+  "score_table": {
+    "bytes": 4453,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v24_20261014/scores.tsv",
+    "sha256": "fa7a7bd2a64540ad4c3b10a4a0aa92e112952a81435c69ffbbef190a3a67f286"
+  },
+  "status": "shared_hit_three_kingdoms_score_independently_admitted_and_crosschecked",
+  "summary": {
+    "bytes": 4674659,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v24_20261014/summary.json",
+    "sha256": "8e2e262840cf394ed54433f9904e127eaca1ac7413e4f4ecd50abbc34bb99e75"
+  },
+  "terminal_job_scope": "Failed overall because the original QfO arm was explicitly skipped; completed OrthoBench and Three Kingdoms native/scoring arms remain independently valid. Original skip preserved; separate QfO continuation 24247 runs after this terminal job.",
+  "true_positive_pair_delta": -136,
+  "variant_coverage": {
+    "genes": 443217,
+    "groups": 155688,
+    "pairs": 1209364,
+    "species": 12
+  },
+  "variant_pair_counts": {
+    "f_score": 0.8602433919851173,
+    "false_negative_gene_pairs": 1803,
+    "false_positive_gene_pairs": 0,
+    "precision": 1.0,
+    "predicted_orthogroups": 155688,
+    "recall": 0.7547606093579978,
+    "reference_gene_coverage": 1.0,
+    "reference_genes": 2035,
+    "reference_genes_in_prediction": 2035,
+    "reference_orthogroups": 255,
+    "true_positive_gene_pairs": 5549
+  },
+  "variant_scores": {
+    "ThreeKingdoms: Three Kingdoms F1": 0.8602433919851173
+  }
+}
