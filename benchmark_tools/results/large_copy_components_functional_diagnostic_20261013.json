@@ -1,0 +1,304 @@
+{
+  "comparisons": {
+    "EC": {
+      "confidence_buckets": [
+        {
+          "category": "added",
+          "confidence": "high",
+          "score_sum_millionths": 5588289656,
+          "scored_relations": 5796,
+          "serialized_mean": 0.9641631566597654
+        },
+        {
+          "category": "added",
+          "confidence": "medium",
+          "score_sum_millionths": 8954999327,
+          "scored_relations": 9756,
+          "serialized_mean": 0.9178966099835999
+        },
+        {
+          "category": "removed",
+          "confidence": "high",
+          "score_sum_millionths": 396465510,
+          "scored_relations": 430,
+          "serialized_mean": 0.9220128139534883
+        },
+        {
+          "category": "removed",
+          "confidence": "medium",
+          "score_sum_millionths": 2083588072,
+          "scored_relations": 2239,
+          "serialized_mean": 0.9305886878070567
+        },
+        {
+          "category": "shared",
+          "confidence": "high->high",
+          "score_sum_millionths": 37392469135,
+          "scored_relations": 38544,
+          "serialized_mean": 0.9701242511156082
+        },
+        {
+          "category": "shared",
+          "confidence": "high->medium",
+          "score_sum_millionths": 1853429550,
+          "scored_relations": 1877,
+          "serialized_mean": 0.9874424880127863
+        },
+        {
+          "category": "shared",
+          "confidence": "medium->high",
+          "score_sum_millionths": 1790363054,
+          "scored_relations": 1860,
+          "serialized_mean": 0.9625607817204301
+        },
+        {
+          "category": "shared",
+          "confidence": "medium->medium",
+          "score_sum_millionths": 69908992718,
+          "scored_relations": 72510,
+          "serialized_mean": 0.9641289852158322
+        }
+      ],
+      "overlap": {
+        "left_mean": 0.9656505026306827,
+        "left_only_pairs": 2669,
+        "left_pairs": 117460,
+        "left_score_sum_millionths": 113425308039,
+        "maximum_shared_absolute_difference_millionths": 0,
+        "original_mean_difference": 0.0028942100794908665,
+        "original_mean_difference_components": {
+          "left_only": 0.021114026749531757,
+          "negative_right_only": -0.11157706192891065,
+          "shared_with_original_denominators": 0.0933572452588699
+        },
+        "right_mean": 0.9627562925511919,
+        "right_only_pairs": 15552,
+        "right_pairs": 130343,
+        "right_score_sum_millionths": 125488543440,
+        "shared_conditional_mean_difference": 0.0,
+        "shared_left_sum_millionths": 110945254457,
+        "shared_pairs": 114791,
+        "shared_pairs_with_different_serialized_scores": 0,
+        "shared_right_sum_millionths": 110945254457
+      }
+    },
+    "GO": {
+      "confidence_buckets": [
+        {
+          "category": "added",
+          "confidence": "high",
+          "score_sum_millionths": 4842491037,
+          "scored_relations": 10752,
+          "serialized_mean": 0.4503804907924107
+        },
+        {
+          "category": "added",
+          "confidence": "medium",
+          "score_sum_millionths": 5364298339,
+          "scored_relations": 11866,
+          "serialized_mean": 0.4520730101972021
+        },
+        {
+          "category": "removed",
+          "confidence": "high",
+          "score_sum_millionths": 178926168,
+          "scored_relations": 388,
+          "serialized_mean": 0.46114991752577317
+        },
+        {
+          "category": "removed",
+          "confidence": "medium",
+          "score_sum_millionths": 676055811,
+          "scored_relations": 1371,
+          "serialized_mean": 0.4931114595185996
+        },
+        {
+          "category": "shared",
+          "confidence": "high->high",
+          "score_sum_millionths": 21320626417,
+          "scored_relations": 43906,
+          "serialized_mean": 0.48559710328884437
+        },
+        {
+          "category": "shared",
+          "confidence": "high->medium",
+          "score_sum_millionths": 323922596,
+          "scored_relations": 618,
+          "serialized_mean": 0.5241465954692557
+        },
+        {
+          "category": "shared",
+          "confidence": "medium->high",
+          "score_sum_millionths": 572555378,
+          "scored_relations": 1202,
+          "serialized_mean": 0.47633558901830286
+        },
+        {
+          "category": "shared",
+          "confidence": "medium->medium",
+          "score_sum_millionths": 18220716431,
+          "scored_relations": 36726,
+          "serialized_mean": 0.4961258081740456
+        }
+      ],
+      "overlap": {
+        "left_mean": 0.4903492750472029,
+        "left_only_pairs": 1759,
+        "left_pairs": 84211,
+        "left_score_sum_millionths": 41292802801,
+        "maximum_shared_absolute_difference_millionths": 0,
+        "original_mean_difference": 0.008340992968588645,
+        "original_mean_difference_components": {
+          "left_only": 0.010152853890821864,
+          "negative_right_only": -0.09714275602931378,
+          "shared_with_original_denominators": 0.09533089510708054
+        },
+        "right_mean": 0.48200828207861424,
+        "right_only_pairs": 22618,
+        "right_pairs": 105070,
+        "right_score_sum_millionths": 50644610198,
+        "shared_conditional_mean_difference": 0.0,
+        "shared_left_sum_millionths": 40437820822,
+        "shared_pairs": 82452,
+        "shared_pairs_with_different_serialized_scores": 0,
+        "shared_right_sum_millionths": 40437820822
+      }
+    }
+  },
+  "defaults_promoted": false,
+  "evidence": [
+    {
+      "bytes": 568008,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v10_20261013/summary.json",
+      "sha256": "2966a19a30403390e8bbf37fe06c1dfa38b3061bbc2e8497778f25f032d9cc95"
+    },
+    {
+      "bytes": 452490,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/component_recovery_admission_r1_v1_20261013/report.json",
+      "sha256": "f5e34972aa05e5b0aed71311078927ed8aa9294a796a11cc31bb2c6382b78e10"
+    },
+    {
+      "bytes": 1865,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hillclimb_component_functional_diagnostic_20261013.json",
+      "sha256": "d23512b3abb688b408f2c11241d36db64b524969e506d88fbb412a86932847fd"
+    },
+    {
+      "bytes": 790051,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_qfo_inferred_r1_v2_20261013/control/qfo_scoring/results/GO/GO_ohmm-hillclimb-r1-di-c787d3572ccc6375-0_274aeedaf291_raw.txt.gz",
+      "sha256": "d059f28384919517db1672e1e6b29087e2757d0fb75dab5355558100b939de51"
+    },
+    {
+      "bytes": 970777,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/component_scoring_recovery_r1_v1_20261013/qfo_scoring/results/GO/GO_ohmm-hillclimb-r1-cprf4c7820e97_31c64f75e657_raw.txt.gz",
+      "sha256": "48ce66011c683da237c695b2d5f960408d828e8787f174a8faf42713afc33291"
+    },
+    {
+      "bytes": 642060,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_qfo_inferred_r1_v2_20261013/control/qfo_scoring/results/EC/EC_ohmm-hillclimb-r1-di-c787d3572ccc6375-0_6cb9cf028a8e_raw.txt.gz",
+      "sha256": "a6c5d54658b5fd2ea8b1a410dc4594aca619a2b7c7db50d8e56ecd51b987aac0"
+    },
+    {
+      "bytes": 711481,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/component_scoring_recovery_r1_v1_20261013/qfo_scoring/results/EC/EC_ohmm-hillclimb-r1-cprf4c7820e97_b1dbc9a637c3_raw.txt.gz",
+      "sha256": "b19793434a9d1df96b937d27bc21288f7a8d44606f1d9997d1967125ed054844"
+    },
+    {
+      "bytes": 531490969,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_qfo_inferred_r1_v2_20261013/control/output/orthohmm_phylogeny/orthohmm_pairwise_orthologs_confidence.tsv",
+      "sha256": "cc12a5d23172c340df5ad158552a7a2a80caadb608cd378aa1e4a1f3bf02182d"
+    },
+    {
+      "bytes": 622407099,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/large_copy_components_r1_v2_20261013/QfO/components500/output/orthohmm_phylogeny/orthohmm_pairwise_orthologs_confidence.tsv",
+      "sha256": "7587dd344cabbcd8cb346148c23e5cc39ab060e89defccee781b47137b7ab674"
+    }
+  ],
+  "goal_completed": false,
+  "native_confidence_counts": [
+    {
+      "high": 2987859,
+      "medium": 2971701
+    },
+    {
+      "high": 3573341,
+      "medium": 3403999
+    }
+  ],
+  "native_inference_rerun": false,
+  "new_scoring": false,
+  "raw_summaries": [
+    {
+      "admitted_mean": 0.49034928,
+      "cell": "control",
+      "metric": "GO",
+      "pairs": 84211,
+      "raw": {
+        "bytes": 790051,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_qfo_inferred_r1_v2_20261013/control/qfo_scoring/results/GO/GO_ohmm-hillclimb-r1-di-c787d3572ccc6375-0_274aeedaf291_raw.txt.gz",
+        "sha256": "d059f28384919517db1672e1e6b29087e2757d0fb75dab5355558100b939de51"
+      },
+      "raw_mean": 0.4903492750472029
+    },
+    {
+      "admitted_mean": 0.48200828,
+      "cell": "components500",
+      "metric": "GO",
+      "pairs": 105070,
+      "raw": {
+        "bytes": 970777,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/component_scoring_recovery_r1_v1_20261013/qfo_scoring/results/GO/GO_ohmm-hillclimb-r1-cprf4c7820e97_31c64f75e657_raw.txt.gz",
+        "sha256": "48ce66011c683da237c695b2d5f960408d828e8787f174a8faf42713afc33291"
+      },
+      "raw_mean": 0.48200828207861424
+    },
+    {
+      "admitted_mean": 0.9656505,
+      "cell": "control",
+      "metric": "EC",
+      "pairs": 117460,
+      "raw": {
+        "bytes": 642060,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_qfo_inferred_r1_v2_20261013/control/qfo_scoring/results/EC/EC_ohmm-hillclimb-r1-di-c787d3572ccc6375-0_6cb9cf028a8e_raw.txt.gz",
+        "sha256": "a6c5d54658b5fd2ea8b1a410dc4594aca619a2b7c7db50d8e56ecd51b987aac0"
+      },
+      "raw_mean": 0.9656505026306827
+    },
+    {
+      "admitted_mean": 0.96275629,
+      "cell": "components500",
+      "metric": "EC",
+      "pairs": 130343,
+      "raw": {
+        "bytes": 711481,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/component_scoring_recovery_r1_v1_20261013/qfo_scoring/results/EC/EC_ohmm-hillclimb-r1-cprf4c7820e97_b1dbc9a637c3_raw.txt.gz",
+        "sha256": "b19793434a9d1df96b937d27bc21288f7a8d44606f1d9997d1967125ed054844"
+      },
+      "raw_mean": 0.9627562925511919
+    }
+  ],
+  "scope": "Serialized eligible annotated pair composition and native evidence labels; arithmetic only, not causal attribution, orthology truth, calibrated confidence or uncertainty.",
+  "sources": [
+    {
+      "bytes": 4290,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/compare_qfo_scored_pairs.py",
+      "sha256": "c86184be5a06238d520ff892ffe2b85ca32e2014d432c6051a01bbe48cb37bbc"
+    },
+    {
+      "bytes": 6776,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/diagnose_hillclimb_pair_confidence.py",
+      "sha256": "ba21901d4c2ad4f9ba1c596508f6b3c3609bce3ffcebe14e273fc9e259620a30"
+    },
+    {
+      "bytes": 23273,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_membership_hillclimb.py",
+      "sha256": "1e96bcadd1e3feed68ef39534735227e84134d07d9858d409d7d98f1dabba966"
+    },
+    {
+      "bytes": 7448,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    }
+  ],
+  "status": "admitted_component_functional_pair_changes_descriptively_localized",
+  "uncertainty_admitted": false
+}
