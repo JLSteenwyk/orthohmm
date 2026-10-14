@@ -2,6 +2,7 @@ from copy import deepcopy
 import pytest
 
 from benchmark_tools.report_current_hillclimb import upsert_cell
+from benchmark_tools.run_membership_hillclimb import PRODUCTS
 
 
 def test_adds_verified_endpoint_without_changing_unrelated_methods():
@@ -36,3 +37,39 @@ def test_conflicting_verified_scores_are_not_silently_replaced():
     methods = [{"key": "k", "label": "k", "scores": good["scores"].copy(), "cells": [good]}]
     with pytest.raises(ValueError, match="Conflicting"):
         upsert_cell(methods, "k", "k", {**good, "scores": {"a": .8}})
+
+
+def native_cell():
+    return {"dataset": "OrthoBench", "status": "independent_content_readback_verified",
+            "scores": {"OrthoBench: OrthoBench F1": .7410607351873405},
+            "products": {name: {"path": "/old/" + name, "bytes": 10, "sha256": "same"} for name in PRODUCTS}}
+
+
+@pytest.mark.parametrize("name", PRODUCTS)
+def test_equal_scores_cannot_hide_changed_native_predictions(name):
+    good = native_cell()
+    methods = [{"key": "k", "label": "k", "scores": good["scores"].copy(), "cells": [good]}]
+    before = deepcopy(methods)
+    changed = deepcopy(good)
+    changed["products"][name]["sha256"] = "different"
+    with pytest.raises(ValueError, match="despite equal scores"):
+        upsert_cell(methods, "k", "k", changed)
+    assert methods == before
+
+
+def test_equal_scores_cannot_drop_existing_product_provenance():
+    good = native_cell()
+    methods = [{"key": "k", "label": "k", "scores": good["scores"].copy(), "cells": [good]}]
+    changed = {name: value for name, value in good.items() if name != "products"}
+    with pytest.raises(ValueError, match="missing native products"):
+        upsert_cell(methods, "k", "k", changed)
+
+
+def test_identical_native_products_can_move_to_another_verified_namespace():
+    good = native_cell()
+    methods = [{"key": "k", "label": "k", "scores": good["scores"].copy(), "cells": [good]}]
+    equivalent = deepcopy(good)
+    for pin in equivalent["products"].values():
+        pin["path"] = pin["path"].replace("/old/", "/new/")
+    upsert_cell(methods, "k", "k", equivalent)
+    assert methods[0]["cells"] == [equivalent]

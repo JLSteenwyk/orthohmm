@@ -12,7 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from benchmark_tools.metric_frontier import ENDPOINTS
 from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 from benchmark_tools.report_hillclimb import audit_cell, endpoint_vector, readback_scores, replay_native, screen, snapshot
-from benchmark_tools.run_membership_hillclimb import DATASETS, write_json
+from benchmark_tools.run_membership_hillclimb import DATASETS, PRODUCTS, write_json
 
 
 def upsert_cell(methods, key, label, cell):
@@ -29,6 +29,14 @@ def upsert_cell(methods, key, label, cell):
         return
     if any(row["scores"] != cell["scores"] for row in verified):
         raise ValueError("Conflicting scores for an already verified configuration")
+    for previous in verified:
+        if "products" not in previous:
+            continue
+        for name in PRODUCTS:
+            old = previous["products"].get(name)
+            new = cell.get("products", {}).get(name)
+            if old is None or new is None or (old["bytes"], old["sha256"]) != (new["bytes"], new["sha256"]):
+                raise ValueError("Conflicting or missing native products despite equal scores: " + name)
     method["cells"] = [row for row in method["cells"] if row["dataset"] != cell["dataset"]]
     method["cells"].append(cell)
     if cell["status"] == "independent_content_readback_verified":
