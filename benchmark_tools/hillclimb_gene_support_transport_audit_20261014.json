@@ -1,0 +1,11 @@
+{
+  "schema": "gene_tree_support_transport_audit_v1",
+  "status": "prespecified_before_native_tree_sample_audit",
+  "motivation": "The production minimum-duplication/loss root routine moves a numeric support label to a different bipartition in a five-taxon reproducer. Most added functional relations arise within retained component seeds, so support-based within-family hypotheses require an audit of support transport first.",
+  "operation": "Compare numeric support labels by root-independent leaf bipartition in 32 saved raw/rooted gene-tree pairs from the admitted component run, selected by filename hash only. Require identical leaf universes and unrooted topology; report lost, newly assigned, conflicting or changed support values without choosing a cutoff or rerunning rooting/inference.",
+  "sample": "Hash order SHA256('20261014:' + family_id), then family_id, among saved raw trees with an existing rooted counterpart. No GO/EC, orthology-reference labels, support values or observed errors determine selection.",
+  "resources": {"cpus": 1, "memory_gib": 16, "wall_limit_minutes": 20, "host": "local shared Threadripper"},
+  "interpretation": "A support-position mismatch is a correctness risk for future support-aware rules, not proof that current species_overlap/positive_paralogy scores are invalid. Those rules do not use numeric support to accept speciation pairs. No benchmark replacement or retrospective score correction follows from this audit alone.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}
