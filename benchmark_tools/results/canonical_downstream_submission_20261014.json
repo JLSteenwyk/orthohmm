@@ -1,0 +1,46 @@
+{
+  "arms": [
+    "arrival",
+    "canonical"
+  ],
+  "control_gate": "Exact candidate/membership and native root-group/pair/confidence/species-tree control products required before interpreting the corresponding canonical arm.",
+  "datasets": [
+    "OrthoBench",
+    "QfO",
+    "ThreeKingdoms"
+  ],
+  "defaults_promoted": false,
+  "execution_plan": {
+    "bytes": 82552082,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/execution_plan.json",
+    "sha256": "61383df3f765ff0fcef17672fc0c68fd229075d3eb5f160e6abc1976d6d7d0cd"
+  },
+  "frozen_source": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_downstream_r1_v1_20261014",
+  "goal_completed": false,
+  "input_pin_count": 258261,
+  "job_id": "24240",
+  "new_accuracy_scores": false,
+  "previous_turn_classification": "No goal-execution progress: continuation prompt drafted only. This turn revalidated live jobs, verified repeated native probes, committed tested runner, and submitted a concrete eight-endpoint experiment.",
+  "primary_jobs_untouched": [
+    "24190_1",
+    "24190_2",
+    "24204"
+  ],
+  "scheduler_receipt": "JobId=24240 JobName=ohmm-canonical-downstream\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=RUNNING Reason=None Dependency=(null)\n   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:37 TimeLimit=7-00:00:00 TimeMin=N/A\n   SubmitTime=2026-10-14T00:23:46 EligibleTime=2026-10-14T00:23:46\n   AccrueTime=2026-10-14T00:23:46\n   StartTime=2026-10-14T00:23:46 EndTime=2026-10-21T00:23:46 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-14T00:23:46 Scheduler=Main\n   Partition=gpu AllocNode:Sid=bizon-link:2932521\n   ReqNodeList=bizon ExcNodeList=(null)\n   NodeList=bizon\n   BatchHost=bizon\n   NumNodes=1 NumCPUs=16 NumTasks=1 CPUs/Task=16 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=16,mem=64G,node=1,billing=16\n   AllocTRES=cpu=16,mem=64G,node=1,billing=16\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=16 MinMemoryNode=64G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_downstream_r1_v1_20261014/benchmark_tools/run_canonical_downstream.slurm\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014_24240.log\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014_24240.log\n   TresPerTask=cpu=16\n   \n\n",
+  "scope": "Incremental accepted-hit replay and selective tree-cache reuse, not fresh initial-search or isolated full-pipeline timing. Record shared-host activity and per-stage wall/CPU/RSS descriptively.",
+  "source_pin_count": 1175,
+  "source_revision": "402d32323f7166c6135f4c81b849b0abfc97e55c",
+  "status": "submitted_frozen_complete_downstream_comparison",
+  "tests": [
+    {
+      "bytes": 7683,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/canonical_downstream_working_tests_v2_20261014.xml",
+      "sha256": "7de7c95491e3586e28225ab5bdd0c7deac681963b1d56d8d54a762f0d4b87766"
+    },
+    {
+      "bytes": 7683,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/canonical_downstream_frozen_tests_20261014.xml",
+      "sha256": "c7d9de2d7f32beef50bd7e427b794308fde2f2352c7c92fa72b0d04d54b66cf1"
+    }
+  ]
+}
