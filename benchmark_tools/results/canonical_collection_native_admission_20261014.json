@@ -1,0 +1,858 @@
+{
+  "accepted_hits": 112,
+  "checked": [
+    {
+      "bytes": 838335,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/execution_plan.json",
+      "sha256": "2b9cdb799330d7a89e95bb437ea9910b638094394aa0cc693ef32ea0fbff54eb"
+    },
+    {
+      "bytes": 8046794,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001312_665079.fasta",
+      "sha256": "4f6ad7ab273f0ddb20fe0b8fa1a5bd38cd1d634fa8b2dd0362f59554e1005581"
+    },
+    {
+      "bytes": 3267394,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002485_284812.fasta",
+      "sha256": "d81a6419e51b3d082eb1a445ab6b62148082cc91226c9709149159606dc1ed34"
+    },
+    {
+      "bytes": 1765604,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001570_224308.fasta",
+      "sha256": "69b7b24b9a37ce6057ca6c6e12fd4a74ebb525c0fdb46f3eafe4e711a3fa2350"
+    },
+    {
+      "bytes": 58856,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/full_search_hillclimb_r1_v3_20261012/orthohmm/search/csrc/hmm_viterbi.so",
+      "sha256": "f21d902852d727d6270b65ba900db52e7216cd874ee2d2b89fa72b6f16dcd5c0"
+    },
+    {
+      "bytes": 58856,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_collection_r1_v1_20261014/orthohmm/search/csrc/hmm_viterbi.so",
+      "sha256": "f21d902852d727d6270b65ba900db52e7216cd874ee2d2b89fa72b6f16dcd5c0"
+    },
+    {
+      "bytes": 20632,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/full_search_hillclimb_r1_v3_20261012/orthohmm/search/csrc/kmer_prefilter.so",
+      "sha256": "348b1c715e2e305dae7e889bae1d2498e609e48ce5d50cd668db71b548c60b88"
+    },
+    {
+      "bytes": 20632,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_collection_r1_v1_20261014/orthohmm/search/csrc/kmer_prefilter.so",
+      "sha256": "348b1c715e2e305dae7e889bae1d2498e609e48ce5d50cd668db71b548c60b88"
+    },
+    {
+      "bytes": 20784,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/full_search_hillclimb_r1_v3_20261012/orthohmm/search/csrc/pair_align.so",
+      "sha256": "81c26c6ce92b1da37285824ea1b8dcea007a7fc18a11ee5fa3d150628fa800c7"
+    },
+    {
+      "bytes": 20784,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_collection_r1_v1_20261014/orthohmm/search/csrc/pair_align.so",
+      "sha256": "81c26c6ce92b1da37285824ea1b8dcea007a7fc18a11ee5fa3d150628fa800c7"
+    },
+    {
+      "bytes": 35751,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_collection_r1_v1_20261014/orthohmm/orthohmm.py",
+      "sha256": "bb3d812a2329e4cc4857e9adcec4547f39c7a5d68bf9d06985501e7a8208a2bc"
+    },
+    {
+      "bytes": 15006,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_collection_r1_v1_20261014/orthohmm/accuracy.py",
+      "sha256": "8edb2321a9d513d8b2a58c6f1180f01d58ec38912787dfd12c6bc1ad3807f782"
+    },
+    {
+      "bytes": 7480,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_collection_r1_v1_20261014/benchmark_tools/validate_canonical_collection.py",
+      "sha256": "f3c364d73fb3b5752551b98f24f32d32f58e4860c8a217f81981be2db49068d2"
+    },
+    {
+      "bytes": 1510,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_collection_r1_v1_20261014/benchmark_tools/hillclimb_canonical_collection_native_probe_20261014.json",
+      "sha256": "d0fc908881d092a3837b1675dd3ed7823b891e9a83bf6057f96ac5c12a46440c"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_collection_r1_v1_20261014/orthohmm/search/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_collection_r1_v1_20261014/orthohmm/search/_experimental/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 8599,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_collection_r1_v1_20261014/orthohmm/search/_experimental/viterbi_cuda_numba.py",
+      "sha256": "be998cf737f5c468417a84cc42d6f9c288133b6da09989ba1630d2c7d07fbdd2"
+    },
+    {
+      "bytes": 21351,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_collection_r1_v1_20261014/orthohmm/search/engine.py",
+      "sha256": "0382696556ead1896929ecadf02af9f54cc55484b5430f7e949313388933927f"
+    },
+    {
+      "bytes": 2211,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_collection_r1_v1_20261014/orthohmm/search/evalue.py",
+      "sha256": "3730b937654e97138521a301e9b28fbf4f446ac3952414b6c2834eb718d25397"
+    },
+    {
+      "bytes": 28063,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_collection_r1_v1_20261014/orthohmm/search/matrices.py",
+      "sha256": "e5aaa051973b5cdb763b7eddec2c4a87c900d22db11037898b243d53e12fc6f9"
+    },
+    {
+      "bytes": 9551,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_collection_r1_v1_20261014/orthohmm/search/msa_center_star.py",
+      "sha256": "47e0a8fcf49b2a9e01d613695a238dc2cd9d53f3a1680d69b4cf565ab4cc6036"
+    },
+    {
+      "bytes": 6838,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_collection_r1_v1_20261014/orthohmm/search/msa_profile.py",
+      "sha256": "ede0eacf73a211fcd485fff833f453b98dfea541a3952438696dbae412997aad"
+    },
+    {
+      "bytes": 23588,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_collection_r1_v1_20261014/orthohmm/search/prefilter.py",
+      "sha256": "f4e4a5639ffa268739ce13a55057c51fe7eb66dc8f36feb3980cce09a8622325"
+    },
+    {
+      "bytes": 5409,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_collection_r1_v1_20261014/orthohmm/search/profile.py",
+      "sha256": "271490863df46ff67c6f7d2bf9dcb490dd43315ac3d250636b3adf98150b953a"
+    },
+    {
+      "bytes": 25189,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_collection_r1_v1_20261014/orthohmm/search/profile_expansion.py",
+      "sha256": "cb899e34f3b634a37a10296688141fc65933085ce49a2b6bcafa01125d9a4598"
+    },
+    {
+      "bytes": 4509,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_collection_r1_v1_20261014/orthohmm/search/sequences.py",
+      "sha256": "e083679cb9ea780664943355d260f398a96d93a2db336bb615af1032766f5980"
+    },
+    {
+      "bytes": 5324,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_collection_r1_v1_20261014/orthohmm/search/species_prune.py",
+      "sha256": "d729b9aa8ddf311c52e1d46c51d89dc5a6ef5d64ccd979deca90b7d980905b9e"
+    },
+    {
+      "bytes": 18435,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_collection_r1_v1_20261014/orthohmm/search/viterbi.py",
+      "sha256": "5b39251aba481d854c74b74d0d8b52f921906042470ee3d96c803423a931bddb"
+    },
+    {
+      "bytes": 4420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_collection_r1_v1_20261014/orthohmm/search/viterbi_cuda_ctypes.py",
+      "sha256": "fba688e77941c92c5e4080ef5de3dc23e4dfee6c5c2dad5d7ccdf876f81f9d20"
+    },
+    {
+      "bytes": 17157264,
+      "path": "/home/bizon/anaconda3/bin/python3.10",
+      "sha256": "ddd8126d3a409c6ad46c718225d853214d0c9dba3657123514172951fa79058b"
+    },
+    {
+      "bytes": 22147,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/__init__.py",
+      "sha256": "6ae17b070c0f70a8e3cad89a510a256942e5a1f37ea5feb120cec167ed2a6236"
+    },
+    {
+      "bytes": 8609,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numba/__init__.py",
+      "sha256": "eda36e2eb85c8042b5d759df4428431417f96c2d7b099a44bf68af79512f5b7a"
+    },
+    {
+      "bytes": 461,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/llvmlite/__init__.py",
+      "sha256": "fd4c05b036b6c225f1d562f1d17515d9692b3d9a50c235d3478b0f48d4369c33"
+    },
+    {
+      "bytes": 5399,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/Bio/__init__.py",
+      "sha256": "ab472bf3c4a19d6231003a749ddd02a1c7a0aae99efb8fcdc50e372d3321c9bd"
+    }
+  ],
+  "checkpoint_manifest_sha256": "0237dbf038c1499fc0e97f91c1db884fe5c819c58e6de842ed2f643197b5cd01",
+  "checkpoint_summary": {
+    "gene_names_lexically_sorted": true,
+    "genes": 23846,
+    "hits": 112,
+    "maximum_score": 3.3132757267690205,
+    "minimum_score": 0.13363993904341956,
+    "nonpositive_scores": 0,
+    "self_hits": 0,
+    "species": 3
+  },
+  "defaults_promoted": false,
+  "frozen_tests": {
+    "bytes": 19973,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/canonical_collection_frozen_tests_20261014.xml",
+    "sha256": "d0ed795470d0130dc630c473dbaf4f565f089aff55b76d98b15c62e35a67136c"
+  },
+  "goal_completed": false,
+  "limitations": [
+    "Sampled-query/full-target collector validation, not complete-proteome inference or a biological accuracy gain.",
+    "Fresh repeat uses the same implementation, not an independent search algorithm.",
+    "Independent collector-row arithmetic and numeric checkpoint audit do not validate biological predictions."
+  ],
+  "next_action": "Prespecify matched arrival/canonical complete downstream HMM profile, refinement, candidate-family, phylogeny and scoring replay across all eight endpoints.",
+  "reports": [
+    {
+      "bytes": 29859,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_collection_r1_v1_20261014/report.json",
+      "sha256": "c71fb7268e9e76b2205f6d6ed29503cb581911adb5ae5cb094e30e66c435fa36"
+    },
+    {
+      "bytes": 29859,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_collection_r1_v2_20261014/report.json",
+      "sha256": "07faab66a600f0555d19239210272c466d2af8cd62eecfaf2b844b9ddaec5f2a"
+    }
+  ],
+  "searches": [
+    {
+      "query": "UP000001312_665079.fasta",
+      "query_ids": [
+        "tr|A7E662|A7E662_SCLS1",
+        "tr|A7E7J7|A7E7J7_SCLS1",
+        "tr|A7E8H0|A7E8H0_SCLS1",
+        "tr|A7E8M4|A7E8M4_SCLS1",
+        "tr|A7EDD9|A7EDD9_SCLS1",
+        "tr|A7EF45|A7EF45_SCLS1",
+        "tr|A7EF87|A7EF87_SCLS1",
+        "tr|A7EFI8|A7EFI8_SCLS1",
+        "tr|A7EFT0|A7EFT0_SCLS1",
+        "tr|A7EG90|A7EG90_SCLS1",
+        "tr|A7EGL9|A7EGL9_SCLS1",
+        "tr|A7EIN2|A7EIN2_SCLS1",
+        "tr|A7EIU8|A7EIU8_SCLS1",
+        "tr|A7EL15|A7EL15_SCLS1",
+        "tr|A7ELI1|A7ELI1_SCLS1",
+        "tr|A7ELT8|A7ELT8_SCLS1",
+        "tr|A7EPE1|A7EPE1_SCLS1",
+        "tr|A7EQZ6|A7EQZ6_SCLS1",
+        "tr|A7ERN5|A7ERN5_SCLS1",
+        "tr|A7ERY5|A7ERY5_SCLS1",
+        "tr|A7EWQ8|A7EWQ8_SCLS1",
+        "tr|A7EX98|A7EX98_SCLS1",
+        "tr|A7EY66|A7EY66_SCLS1",
+        "tr|A7EZC7|A7EZC7_SCLS1",
+        "tr|A7F0A1|A7F0A1_SCLS1",
+        "tr|A7F115|A7F115_SCLS1",
+        "tr|A7F561|A7F561_SCLS1",
+        "tr|A7F594|A7F594_SCLS1",
+        "tr|A7F5B2|A7F5B2_SCLS1",
+        "tr|A7F6P9|A7F6P9_SCLS1",
+        "tr|A7F8R9|A7F8R9_SCLS1",
+        "tr|A7F958|A7F958_SCLS1"
+      ],
+      "query_indices": [
+        827,
+        1311,
+        1634,
+        1688,
+        3350,
+        3955,
+        3997,
+        4098,
+        4190,
+        4349,
+        4478,
+        5191,
+        5257,
+        6022,
+        6188,
+        6295,
+        7197,
+        7750,
+        7989,
+        8086,
+        9753,
+        9941,
+        10255,
+        10666,
+        10990,
+        11253,
+        12690,
+        12723,
+        12740,
+        13225,
+        13941,
+        14080
+      ],
+      "result": {
+        "arrays": {
+          "evalues": {
+            "dtype": "float64",
+            "sha256": "ba7583c055633e9eb63e70eaa617c005e89b6a2e53168c8760610219c07bd8ed",
+            "shape": [
+              2494
+            ]
+          },
+          "query_indices": {
+            "dtype": "int32",
+            "sha256": "17ed6c488ec94ee06c07ee7e69b1b028fe1170fed2c309654ccbcd23c16e5f8d",
+            "shape": [
+              2494
+            ]
+          },
+          "scores": {
+            "dtype": "float64",
+            "sha256": "e4b889387d70058ab8c070c23e4302868048c9b226a786a3697ce1c85a7afb9c",
+            "shape": [
+              2494
+            ]
+          },
+          "target_indices": {
+            "dtype": "int32",
+            "sha256": "8f1b2bd76667857f7c90fa091cb61ebcb3e6c4bdd7966a1c9c1095379dbc0639",
+            "shape": [
+              2494
+            ]
+          }
+        },
+        "candidate_count": 2494,
+        "query_species": "UP000001312_665079.fasta",
+        "target_species": "UP000002485_284812.fasta"
+      },
+      "target": "UP000002485_284812.fasta"
+    },
+    {
+      "query": "UP000001312_665079.fasta",
+      "query_ids": [
+        "tr|A7E662|A7E662_SCLS1",
+        "tr|A7E7J7|A7E7J7_SCLS1",
+        "tr|A7E8H0|A7E8H0_SCLS1",
+        "tr|A7E8M4|A7E8M4_SCLS1",
+        "tr|A7EDD9|A7EDD9_SCLS1",
+        "tr|A7EF45|A7EF45_SCLS1",
+        "tr|A7EF87|A7EF87_SCLS1",
+        "tr|A7EFI8|A7EFI8_SCLS1",
+        "tr|A7EFT0|A7EFT0_SCLS1",
+        "tr|A7EG90|A7EG90_SCLS1",
+        "tr|A7EGL9|A7EGL9_SCLS1",
+        "tr|A7EIN2|A7EIN2_SCLS1",
+        "tr|A7EIU8|A7EIU8_SCLS1",
+        "tr|A7EL15|A7EL15_SCLS1",
+        "tr|A7ELI1|A7ELI1_SCLS1",
+        "tr|A7ELT8|A7ELT8_SCLS1",
+        "tr|A7EPE1|A7EPE1_SCLS1",
+        "tr|A7EQZ6|A7EQZ6_SCLS1",
+        "tr|A7ERN5|A7ERN5_SCLS1",
+        "tr|A7ERY5|A7ERY5_SCLS1",
+        "tr|A7EWQ8|A7EWQ8_SCLS1",
+        "tr|A7EX98|A7EX98_SCLS1",
+        "tr|A7EY66|A7EY66_SCLS1",
+        "tr|A7EZC7|A7EZC7_SCLS1",
+        "tr|A7F0A1|A7F0A1_SCLS1",
+        "tr|A7F115|A7F115_SCLS1",
+        "tr|A7F561|A7F561_SCLS1",
+        "tr|A7F594|A7F594_SCLS1",
+        "tr|A7F5B2|A7F5B2_SCLS1",
+        "tr|A7F6P9|A7F6P9_SCLS1",
+        "tr|A7F8R9|A7F8R9_SCLS1",
+        "tr|A7F958|A7F958_SCLS1"
+      ],
+      "query_indices": [
+        827,
+        1311,
+        1634,
+        1688,
+        3350,
+        3955,
+        3997,
+        4098,
+        4190,
+        4349,
+        4478,
+        5191,
+        5257,
+        6022,
+        6188,
+        6295,
+        7197,
+        7750,
+        7989,
+        8086,
+        9753,
+        9941,
+        10255,
+        10666,
+        10990,
+        11253,
+        12690,
+        12723,
+        12740,
+        13225,
+        13941,
+        14080
+      ],
+      "result": {
+        "arrays": {
+          "evalues": {
+            "dtype": "float64",
+            "sha256": "b01cd3f21ba38aa17e1b5ae60d50675c65f3666f866b547b374769e31aac9609",
+            "shape": [
+              2211
+            ]
+          },
+          "query_indices": {
+            "dtype": "int32",
+            "sha256": "7f89fbe676bfbcde69ef9b10bd08336fa1faf22f366623da1614a11da951bd8c",
+            "shape": [
+              2211
+            ]
+          },
+          "scores": {
+            "dtype": "float64",
+            "sha256": "cd3ac5d3a421628ec79659c08973b7ecbb249024b31981c5ffc6497a4d6c7ec7",
+            "shape": [
+              2211
+            ]
+          },
+          "target_indices": {
+            "dtype": "int32",
+            "sha256": "e27e8fa24d9e7b1cc87d2a7b6c6467d851becf52febfae31232467311f913bad",
+            "shape": [
+              2211
+            ]
+          }
+        },
+        "candidate_count": 2211,
+        "query_species": "UP000001312_665079.fasta",
+        "target_species": "UP000001570_224308.fasta"
+      },
+      "target": "UP000001570_224308.fasta"
+    },
+    {
+      "query": "UP000002485_284812.fasta",
+      "query_ids": [
+        "sp|O13934|ATG15_SCHPO",
+        "sp|O14063|IMA1_SCHPO",
+        "sp|O14230|FPPS_SCHPO",
+        "sp|O14343|KLP5_SCHPO",
+        "sp|O42897|RPN3_SCHPO",
+        "sp|O42923|CIP1_SCHPO",
+        "sp|O42948|YBPD_SCHPO",
+        "sp|O43080|NAA38_SCHPO",
+        "sp|O74393|MAK5_SCHPO",
+        "sp|O74875|YJ83_SCHPO",
+        "sp|O74941|PEX1_SCHPO",
+        "sp|O74975|PCY1_SCHPO",
+        "sp|O74984|HSP15_SCHPO",
+        "sp|O94361|YHOE_SCHPO",
+        "sp|O94373|ATPF_SCHPO",
+        "sp|O94406|PRP18_SCHPO",
+        "sp|P0CT41|TF212_SCHPO",
+        "sp|P30655|PSB5_SCHPO",
+        "sp|P50520|VPS34_SCHPO",
+        "sp|P78833|YHZ8_SCHPO",
+        "sp|P79011|T2EB_SCHPO",
+        "sp|Q07538|PRP4_SCHPO",
+        "sp|Q09177|RPAC2_SCHPO",
+        "sp|Q09921|YAKA_SCHPO",
+        "sp|Q96WU9|YJO6_SCHPO",
+        "sp|Q9C1X1|PWP2_SCHPO",
+        "sp|Q9P785|YNY5_SCHPO",
+        "sp|Q9US03|KLP2_SCHPO",
+        "sp|Q9UT17|YFYB_SCHPO",
+        "sp|Q9UT74|LYS4_SCHPO",
+        "sp|Q9Y7M1|PXP1_SCHPO",
+        "sp|Q9Y7Y4|COX10_SCHPO"
+      ],
+      "query_indices": [
+        435,
+        551,
+        701,
+        797,
+        928,
+        952,
+        975,
+        1080,
+        1455,
+        1751,
+        1802,
+        1834,
+        1841,
+        1974,
+        1983,
+        2014,
+        2375,
+        2525,
+        2700,
+        2764,
+        2797,
+        2957,
+        2976,
+        3233,
+        3776,
+        3864,
+        4150,
+        4430,
+        4642,
+        4692,
+        5008,
+        5089
+      ],
+      "result": {
+        "arrays": {
+          "evalues": {
+            "dtype": "float64",
+            "sha256": "7d936e251fbd4ebda2076133bcc0cb736ead0c0f6a763729a42417bdaa7dd1b5",
+            "shape": [
+              3200
+            ]
+          },
+          "query_indices": {
+            "dtype": "int32",
+            "sha256": "9e3a5e69cc4f83bfb8b2b86e739192169003223291b72f80959ad1ddd06713b0",
+            "shape": [
+              3200
+            ]
+          },
+          "scores": {
+            "dtype": "float64",
+            "sha256": "705c1505892f19453bcbf5f548885b5b843b71d0f0d663d7828af17c1d6c8c11",
+            "shape": [
+              3200
+            ]
+          },
+          "target_indices": {
+            "dtype": "int32",
+            "sha256": "b0f8d7592380f52a61915be31fb9a708dd02be9b2f896cf33c15e9f92141a765",
+            "shape": [
+              3200
+            ]
+          }
+        },
+        "candidate_count": 3200,
+        "query_species": "UP000002485_284812.fasta",
+        "target_species": "UP000001312_665079.fasta"
+      },
+      "target": "UP000001312_665079.fasta"
+    },
+    {
+      "query": "UP000002485_284812.fasta",
+      "query_ids": [
+        "sp|O13934|ATG15_SCHPO",
+        "sp|O14063|IMA1_SCHPO",
+        "sp|O14230|FPPS_SCHPO",
+        "sp|O14343|KLP5_SCHPO",
+        "sp|O42897|RPN3_SCHPO",
+        "sp|O42923|CIP1_SCHPO",
+        "sp|O42948|YBPD_SCHPO",
+        "sp|O43080|NAA38_SCHPO",
+        "sp|O74393|MAK5_SCHPO",
+        "sp|O74875|YJ83_SCHPO",
+        "sp|O74941|PEX1_SCHPO",
+        "sp|O74975|PCY1_SCHPO",
+        "sp|O74984|HSP15_SCHPO",
+        "sp|O94361|YHOE_SCHPO",
+        "sp|O94373|ATPF_SCHPO",
+        "sp|O94406|PRP18_SCHPO",
+        "sp|P0CT41|TF212_SCHPO",
+        "sp|P30655|PSB5_SCHPO",
+        "sp|P50520|VPS34_SCHPO",
+        "sp|P78833|YHZ8_SCHPO",
+        "sp|P79011|T2EB_SCHPO",
+        "sp|Q07538|PRP4_SCHPO",
+        "sp|Q09177|RPAC2_SCHPO",
+        "sp|Q09921|YAKA_SCHPO",
+        "sp|Q96WU9|YJO6_SCHPO",
+        "sp|Q9C1X1|PWP2_SCHPO",
+        "sp|Q9P785|YNY5_SCHPO",
+        "sp|Q9US03|KLP2_SCHPO",
+        "sp|Q9UT17|YFYB_SCHPO",
+        "sp|Q9UT74|LYS4_SCHPO",
+        "sp|Q9Y7M1|PXP1_SCHPO",
+        "sp|Q9Y7Y4|COX10_SCHPO"
+      ],
+      "query_indices": [
+        435,
+        551,
+        701,
+        797,
+        928,
+        952,
+        975,
+        1080,
+        1455,
+        1751,
+        1802,
+        1834,
+        1841,
+        1974,
+        1983,
+        2014,
+        2375,
+        2525,
+        2700,
+        2764,
+        2797,
+        2957,
+        2976,
+        3233,
+        3776,
+        3864,
+        4150,
+        4430,
+        4642,
+        4692,
+        5008,
+        5089
+      ],
+      "result": {
+        "arrays": {
+          "evalues": {
+            "dtype": "float64",
+            "sha256": "024fdf620030e0eeaf9e9178c79e9653cc12a0e7b6766414edcf762f8eda8bb2",
+            "shape": [
+              2884
+            ]
+          },
+          "query_indices": {
+            "dtype": "int32",
+            "sha256": "ba8e0a4873271d7bd142505ddb451bce5737c19ff515eb21c0a9b6205481bc9e",
+            "shape": [
+              2884
+            ]
+          },
+          "scores": {
+            "dtype": "float64",
+            "sha256": "116c0894147298ed54686591beaaac14a2a9cfef1f45dbe41d59c64a03b293ad",
+            "shape": [
+              2884
+            ]
+          },
+          "target_indices": {
+            "dtype": "int32",
+            "sha256": "db195d4efc8dc3d8004b9677b0823231b354dbe8489294ad01e33c0bca544d9d",
+            "shape": [
+              2884
+            ]
+          }
+        },
+        "candidate_count": 2884,
+        "query_species": "UP000002485_284812.fasta",
+        "target_species": "UP000001570_224308.fasta"
+      },
+      "target": "UP000001570_224308.fasta"
+    },
+    {
+      "query": "UP000001570_224308.fasta",
+      "query_ids": [
+        "tr|A0A2K4Z9N6|A0A2K4Z9N6_BACSU",
+        "sp|C0H3Q9|YUZK_BACSU",
+        "sp|C0H3W0|YDZP_BACSU",
+        "sp|O05510|SCRK_BACSU",
+        "sp|O06491|GATA_BACSU",
+        "sp|O31546|DUS2_BACSU",
+        "sp|O31625|SPVIF_BACSU",
+        "sp|O31782|PKSN_BACSU",
+        "sp|O31838|YOZI_BACSU",
+        "sp|O32091|PNCA_BACSU",
+        "sp|O32436|MED_BACSU",
+        "sp|O34392|YTRE_BACSU",
+        "sp|O34737|FLAV_BACSU",
+        "sp|O34850|YOTN_BACSU",
+        "sp|O34867|YLQH_BACSU",
+        "sp|P13801|SP2G_BACSU",
+        "sp|P15874|GRPE_BACSU",
+        "sp|P18185|CARY_BACSU",
+        "sp|P40950|YUXN_BACSU",
+        "sp|P42252|TATCD_BACSU",
+        "sp|P45740|THIC_BACSU",
+        "sp|P45913|YQAP_BACSU",
+        "sp|P46352|XERD_BACSU",
+        "sp|P54430|YRKC_BACSU",
+        "sp|P54493|GLUP_BACSU",
+        "sp|P54525|YQII_BACSU",
+        "sp|P55069|CITM_BACSU",
+        "sp|P68729|ARGB_BACSU",
+        "sp|P94381|YCGF_BACSU",
+        "sp|Q01620|JAG_BACSU",
+        "sp|Q05873|SYV_BACSU",
+        "sp|Q59HN8|RAPH_BACSU"
+      ],
+      "query_indices": [
+        61,
+        72,
+        105,
+        310,
+        346,
+        685,
+        754,
+        885,
+        937,
+        1163,
+        1348,
+        1422,
+        1682,
+        1769,
+        1783,
+        2069,
+        2085,
+        2127,
+        2877,
+        2932,
+        3035,
+        3074,
+        3144,
+        3343,
+        3404,
+        3436,
+        3540,
+        3575,
+        3735,
+        4056,
+        4090,
+        4195
+      ],
+      "result": {
+        "arrays": {
+          "evalues": {
+            "dtype": "float64",
+            "sha256": "32dc1974b587f30e8e2b093317286a8b4762650fc84f108fc811701d5a3fc624",
+            "shape": [
+              2862
+            ]
+          },
+          "query_indices": {
+            "dtype": "int32",
+            "sha256": "123ac789f2e4aee9af9bfedc71523027ffda2e6e1f4503bb0c1e46796f733d2b",
+            "shape": [
+              2862
+            ]
+          },
+          "scores": {
+            "dtype": "float64",
+            "sha256": "d8a90a6a4743f02cce2d19e404516c51fa960b6a0a6f8b6f82275fedce77283c",
+            "shape": [
+              2862
+            ]
+          },
+          "target_indices": {
+            "dtype": "int32",
+            "sha256": "bac7aa23bd38bfbd321928a8d1e540bc9e7ff0297a4d72ac75684fa377271686",
+            "shape": [
+              2862
+            ]
+          }
+        },
+        "candidate_count": 2862,
+        "query_species": "UP000001570_224308.fasta",
+        "target_species": "UP000001312_665079.fasta"
+      },
+      "target": "UP000001312_665079.fasta"
+    },
+    {
+      "query": "UP000001570_224308.fasta",
+      "query_ids": [
+        "tr|A0A2K4Z9N6|A0A2K4Z9N6_BACSU",
+        "sp|C0H3Q9|YUZK_BACSU",
+        "sp|C0H3W0|YDZP_BACSU",
+        "sp|O05510|SCRK_BACSU",
+        "sp|O06491|GATA_BACSU",
+        "sp|O31546|DUS2_BACSU",
+        "sp|O31625|SPVIF_BACSU",
+        "sp|O31782|PKSN_BACSU",
+        "sp|O31838|YOZI_BACSU",
+        "sp|O32091|PNCA_BACSU",
+        "sp|O32436|MED_BACSU",
+        "sp|O34392|YTRE_BACSU",
+        "sp|O34737|FLAV_BACSU",
+        "sp|O34850|YOTN_BACSU",
+        "sp|O34867|YLQH_BACSU",
+        "sp|P13801|SP2G_BACSU",
+        "sp|P15874|GRPE_BACSU",
+        "sp|P18185|CARY_BACSU",
+        "sp|P40950|YUXN_BACSU",
+        "sp|P42252|TATCD_BACSU",
+        "sp|P45740|THIC_BACSU",
+        "sp|P45913|YQAP_BACSU",
+        "sp|P46352|XERD_BACSU",
+        "sp|P54430|YRKC_BACSU",
+        "sp|P54493|GLUP_BACSU",
+        "sp|P54525|YQII_BACSU",
+        "sp|P55069|CITM_BACSU",
+        "sp|P68729|ARGB_BACSU",
+        "sp|P94381|YCGF_BACSU",
+        "sp|Q01620|JAG_BACSU",
+        "sp|Q05873|SYV_BACSU",
+        "sp|Q59HN8|RAPH_BACSU"
+      ],
+      "query_indices": [
+        61,
+        72,
+        105,
+        310,
+        346,
+        685,
+        754,
+        885,
+        937,
+        1163,
+        1348,
+        1422,
+        1682,
+        1769,
+        1783,
+        2069,
+        2085,
+        2127,
+        2877,
+        2932,
+        3035,
+        3074,
+        3144,
+        3343,
+        3404,
+        3436,
+        3540,
+        3575,
+        3735,
+        4056,
+        4090,
+        4195
+      ],
+      "result": {
+        "arrays": {
+          "evalues": {
+            "dtype": "float64",
+            "sha256": "893abb596b6ef83c4d8fbe34e635ceee119415cadb8aba4651f8a4b8f64da815",
+            "shape": [
+              2735
+            ]
+          },
+          "query_indices": {
+            "dtype": "int32",
+            "sha256": "a1e8f7e04a03a1015fce17e0af60fedc881046c8a4e8e489c85c12502dbb473f",
+            "shape": [
+              2735
+            ]
+          },
+          "scores": {
+            "dtype": "float64",
+            "sha256": "57c1e45ae9613604c39d7e1832cef1816f93faebaae043e7669e77c97edbf3e8",
+            "shape": [
+              2735
+            ]
+          },
+          "target_indices": {
+            "dtype": "int32",
+            "sha256": "e06d073ddbb9a043c4c385bedba6a24f0baba447ae0b75c9b5b77ce7f02d3cde",
+            "shape": [
+              2735
+            ]
+          }
+        },
+        "candidate_count": 2735,
+        "query_species": "UP000001570_224308.fasta",
+        "target_species": "UP000002485_284812.fasta"
+      },
+      "target": "UP000002485_284812.fasta"
+    }
+  ],
+  "slurm_receipt": "24238|COMPLETED|0:0|00:00:07\n24239|COMPLETED|0:0|00:00:04\n",
+  "source_revision": "b705245ee0366a7827348a5153e8281897c34029",
+  "status": "two_fresh_native_collector_probes_verified"
+}
