@@ -1,0 +1,853 @@
+{
+  "arms": [
+    {
+      "candidate": {
+        "candidate_expansion": true,
+        "candidate_partition": {
+          "bytes": 23875927,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/candidate/orthohmm_working_res/orthohmm_edges_clustered.txt",
+          "sha256": "07c2a0538270996f963e3c7144e02c10ee8673838d2555935e968b68de1da6c1"
+        },
+        "expansion": {
+          "candidate_checkpoint": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/candidate/orthohmm_working_res/phylogeny_candidate_superfamilies.txt",
+          "candidate_families": 351389,
+          "directed_relations": 40903686,
+          "iterations": 2,
+          "membership_policy": "high_confidence_pair",
+          "merge_trace_sidecar": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/candidate/orthohmm_working_res/phylogeny_candidate_merges.json",
+          "merges": 40291,
+          "parameters": {
+            "iteration_margin_increment": 0.5,
+            "max_component_genes": 500,
+            "max_iterations": 2,
+            "max_satellite_genes": 12,
+            "max_satellite_to_anchor_ratio": 0.75,
+            "max_satellites_per_anchor": 4,
+            "max_species_overlap_fraction": 1.0,
+            "min_avg_score": 0.0,
+            "min_coverage": 0.5,
+            "min_margin": 1.5,
+            "min_max_score": 0.0,
+            "min_norm": 0.03
+          },
+          "profile": "satellite_v2",
+          "seed_families": 391680,
+          "seed_sidecar": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/candidate/orthohmm_working_res/phylogeny_candidate_seeds.tsv"
+        },
+        "membership_constraints": {
+          "bytes": 76513538,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/candidate/orthohmm_working_res/phylogeny_candidate_merges.json",
+          "sha256": "6f70071fc15ba330c1107e21253a6ae2e4f21ae6416972b3e14a0fff8aad62ca"
+        },
+        "seed_partition": {
+          "bytes": 23875927,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/graph/orthogroups_profiles_refined.txt",
+          "sha256": "3675396bcbe51840a96b0a33c7355a303750ccc311d04d76bf6792a551d360e0"
+        }
+      },
+      "checked": [
+        {
+          "bytes": 5996,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/graph_metrics.json",
+          "sha256": "5e79a0bf74d72ad644a02ecfe81f2640e00e68c252d916689ba4e5ff5ad99d19"
+        },
+        {
+          "bytes": 34482213,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/native/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+          "sha256": "a3233ad15bf3ac7acd6ebe9680eae27279a9bccaa3af060df13f542dec8d101f"
+        },
+        {
+          "bytes": 495189914,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/native/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+          "sha256": "83ff64afcc8ee292ad6bddb7b2e25903d9dfcec7d9475f1d7651dfcf6c4893e7"
+        },
+        {
+          "bytes": 530834841,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/native/orthohmm_phylogeny/orthohmm_pairwise_orthologs_confidence.tsv",
+          "sha256": "040175131852c37a5e7990ba3e76f4774af765d76efcaf407d9424f7248a8ff6"
+        },
+        {
+          "bytes": 18631,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/native/orthohmm_phylogeny/provenance_manifest.json",
+          "sha256": "f64c6b0cdfddcae083d04de893a65dc5465cc48da6f79776b62f9d50a44fa1a2"
+        },
+        {
+          "bytes": 557,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/native/orthohmm_phylogeny/reconciliation_summary.json",
+          "sha256": "e63a21fbb3057e20a9152f4cc8d3a73f34d6b166d200e424d2411a35c771dcb1"
+        },
+        {
+          "bytes": 3583,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/native/orthohmm_phylogeny/species_tree.rooted.nwk",
+          "sha256": "86282f0278af26980ed30d281a64d4a83a59c3b95bd450404b2dae17c2a8f4fe"
+        },
+        {
+          "bytes": 888794,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000008183_243274.fasta",
+          "sha256": "663bb2a7f2ec5f8f8095a49ac65238ba49bdda1971b4b0e783451f7d6f57dccc"
+        },
+        {
+          "bytes": 22935217,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000600_5888.fasta",
+          "sha256": "2c6e376eaef0557f11773edbe0638976100072cf8f4cbb42abc162e4b99bf6ad"
+        },
+        {
+          "bytes": 1691650,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000577_243231.fasta",
+          "sha256": "a7c5f82fe20d610984457ad01800538bafd2f96ff26a76c1d36bb8178512d22c"
+        },
+        {
+          "bytes": 10589689,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001940_6239.fasta",
+          "sha256": "679b2b181f22999dca02862c5cf62119a0b33ca35bd77996d271d91a7e725231"
+        },
+        {
+          "bytes": 5172817,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000561_237631.fasta",
+          "sha256": "f23613a13bc78e1c7d673b96d65fbdd73bbd47c9153e4ea2323ef6d7f0b9fa8c"
+        },
+        {
+          "bytes": 3951698,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002311_559292.fasta",
+          "sha256": "9ff39b833b1bf5b90224e720a728a6e66bd9bf8afce0b6f60c7d725cf85660e3"
+        },
+        {
+          "bytes": 4900628,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001450_36329.fasta",
+          "sha256": "32e3b2ca68ffaa00151033a887a630f06d367b04979c1bafef95a9fee2f83ad8"
+        },
+        {
+          "bytes": 14992908,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000006548_3702.fasta",
+          "sha256": "7bd8ea7a2bc7610ba8b126af20b908bc5e2b26ec7a3ee4f2c307cdbe47ae4f69"
+        },
+        {
+          "bytes": 1938145,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001584_83332.fasta",
+          "sha256": "1dcacf3edfced65336343ee5214fbdb5f34a43ced3bed962a511a215fa679b7c"
+        },
+        {
+          "bytes": 2151697,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002487_188937.fasta",
+          "sha256": "7b1edc42faf925b5bf6da8c20fcf499e7f2ed911745b7db1972a0dfccc05c73f"
+        },
+        {
+          "bytes": 16930435,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001038_8090.fasta",
+          "sha256": "f00b596e5e4f8fbbaa635ddea50d380c1c4e2a08646ab502c682bfe05a352fe0"
+        },
+        {
+          "bytes": 251571,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000807_243273.fasta",
+          "sha256": "43f6d3e78d43964a2f82bc3b26687a2828fa0305b17bdaa40e29eff5e472b44a"
+        },
+        {
+          "bytes": 947254,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000718_289376.fasta",
+          "sha256": "1cfa8c64373a2bac386b33370a77b5302fb9a4088395d1ddcbe740c6d4b7455d"
+        },
+        {
+          "bytes": 8249868,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000007062_7165.fasta",
+          "sha256": "666f1a0fd6072d3c135a3c5aab4ab429faf18e5dc36bdca629c03039d0d40e95"
+        },
+        {
+          "bytes": 17560041,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000437_7955.fasta",
+          "sha256": "bb03b87acd02d80cf7a314c574403aa44f55eaec5f001378c55a7ecd933e9824"
+        },
+        {
+          "bytes": 15134839,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000009136_9913.fasta",
+          "sha256": "f3f42d4a7aaf83f078cac49ab79247fb0e4227e20895fe57a57160cf67662fc6"
+        },
+        {
+          "bytes": 13689269,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002494_10116.fasta",
+          "sha256": "cb66110798a35c366c1ed98a10754f7cd1caea00a6716a361803c0fbef468828"
+        },
+        {
+          "bytes": 1796739,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001408_189518.fasta",
+          "sha256": "2fb96698804ba40fa25be324b14097ddf2612ce3bdf9c4bec6af090820348a2d"
+        },
+        {
+          "bytes": 5476187,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000007241_684364.fasta",
+          "sha256": "7f2e663ee8619918a7a23691e98746ae75468d99b198a91c90c40c820dc5344b"
+        },
+        {
+          "bytes": 4943601,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002149_214684.fasta",
+          "sha256": "87f832dd796637bc504e3368cc948c029bd32541f53bd2296ee6a66db91d540a"
+        },
+        {
+          "bytes": 3885862,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001973_100226.fasta",
+          "sha256": "5c3ed14a93dac866cae612c46765d6e96117faf366994a53a902c4dafc65f2bc"
+        },
+        {
+          "bytes": 17711164,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001554_7739.fasta",
+          "sha256": "a5e0d52fa4c13e6adb86f520e28154e90a63ffbc8491d083441cb3cf077c437f"
+        },
+        {
+          "bytes": 691112,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001686_374847.fasta",
+          "sha256": "b2a9d42b66367a40ed37bc119c782e8f036e5beef35c5bd30f2cb1ec3dde9371"
+        },
+        {
+          "bytes": 828608,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000007719_515635.fasta",
+          "sha256": "2dedcacc25ecc95085bc08aa3deb6045f5c2e0d2f8b377e6ae79d9ccb95f84ab"
+        },
+        {
+          "bytes": 3954181,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000559_237561.fasta",
+          "sha256": "29903baf6bcd940665d4245b28d2518f4257419ef12169c6875317e5bc3ead1d"
+        },
+        {
+          "bytes": 12920167,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000018468_7918.fasta",
+          "sha256": "6e1072b578631bdda17632ac5cf2cfe9efaecb47373a39d4032923349310e875"
+        },
+        {
+          "bytes": 14325720,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000589_10090.fasta",
+          "sha256": "f6e080958003abfa54718f9465127a8225661fab1ad0738cc9301ad0d0a5c49f"
+        },
+        {
+          "bytes": 22894987,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001542_5722.fasta",
+          "sha256": "9107d40ff24d6739a43906e3d1d5e9b7dda58e13b8255598c13ef5417b538d27"
+        },
+        {
+          "bytes": 6747907,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001805_367110.fasta",
+          "sha256": "4a314661cc7f55cebea98b3875538142c93f182464f2636bd4a5c03ec8b94983"
+        },
+        {
+          "bytes": 8696553,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002195_44689.fasta",
+          "sha256": "27127a8da8f620f4f0ba7ed29f2b58cb3fb6f8792d4e9b2144215567d3a409ac"
+        },
+        {
+          "bytes": 1605070,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001425_1111708.fasta",
+          "sha256": "654bdc865925d6fc2c3f2929db5e64945705b013645ea2e869e2c6eb827899fe"
+        },
+        {
+          "bytes": 1888168,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000625_83333.fasta",
+          "sha256": "d2703103c23f29528dd676f99fc4877918893440bb20f1d99af9f076998719cb"
+        },
+        {
+          "bytes": 681404,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000798_224324.fasta",
+          "sha256": "f675127545b691945a425c5ca99cbcff0530c11e9ac59acc5053ed58d962bebd"
+        },
+        {
+          "bytes": 893349,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000805_243232.fasta",
+          "sha256": "03fb0b065db8f55c54253a097ad17053985029e1fe2416da493f7989e90376a9"
+        },
+        {
+          "bytes": 11832587,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001593_45351.fasta",
+          "sha256": "d89487a9192abd3dfaa70b9b3957d181dd4f9b7a2985af68ca4867c46d9498a2"
+        },
+        {
+          "bytes": 1621284,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002524_243230.fasta",
+          "sha256": "9890cd413fbd3d939be31da532152aa4fd13d4a0711c953d943be90ee0ee5cd7"
+        },
+        {
+          "bytes": 13831073,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000005640_9606.fasta",
+          "sha256": "3793b9bfcc956a278494734bb775a010513f5764d8047fcdb283d2aeaa7fefb8"
+        },
+        {
+          "bytes": 4076786,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002526_224911.fasta",
+          "sha256": "0ad121003ad2c94fae40263d56f8afb103dca9f9420da6e1b0aff43646136b2c"
+        },
+        {
+          "bytes": 11829084,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000015101_6412.fasta",
+          "sha256": "b525ceb0b3973c17bdb9f100e23908faa897730a360c54d57ccba7767b2997a5"
+        },
+        {
+          "bytes": 3408710,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001025_243090.fasta",
+          "sha256": "33f51ff55213e0cb89758f6992c6f1117d7fdf19ae583623441c730b775f767a"
+        },
+        {
+          "bytes": 3267394,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002485_284812.fasta",
+          "sha256": "d81a6419e51b3d082eb1a445ab6b62148082cc91226c9709149159606dc1ed34"
+        },
+        {
+          "bytes": 2010766,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000557_251221.fasta",
+          "sha256": "c647be279e92435bf7d4dbfd66217c2979e128e56da3a3835adf91eb49df0a1b"
+        },
+        {
+          "bytes": 5159827,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001548_184922.fasta",
+          "sha256": "3fee04dc24bcd0b388e54f0452afcc32ba0c8507fc64535072d4eaf518f5a9b6"
+        },
+        {
+          "bytes": 14515060,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002280_13616.fasta",
+          "sha256": "36dfce6fdfaf16605430d6029c1e60c76318268b4ef02dcbb8dcb7bf87b03413"
+        },
+        {
+          "bytes": 14493737,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001519_9595.fasta",
+          "sha256": "43f3f3a5282aaa0fc88761995bcf495420988692eb487a996f9273611475a7c3"
+        },
+        {
+          "bytes": 8137668,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000008144_7719.fasta",
+          "sha256": "8ae1739170a42861452f20ae445fa36b8778b2caa2308c64072b78fa1038714f"
+        },
+        {
+          "bytes": 3017721,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002438_208964.fasta",
+          "sha256": "0b16b29c4bafd2e02cdf2a80c1e2eac350088d7182886a2d08a5a0dba4e22694"
+        },
+        {
+          "bytes": 6731535,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002530_330879.fasta",
+          "sha256": "449cb49b9e78e085d21e2d84c0fd5dc4ce9a7684fda774b173e732b76eedee81"
+        },
+        {
+          "bytes": 15834974,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000006727_3218.fasta",
+          "sha256": "1e033648a1b892a50ab36b368650adb3deda9dfd7cd11021222415f2cda6c666"
+        },
+        {
+          "bytes": 4227407,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001300_284591.fasta",
+          "sha256": "af6ab878a823813f1c289e7bed5473ec1e04eb671843e74bc7c339e0895dd667"
+        },
+        {
+          "bytes": 7707976,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001449_35128.fasta",
+          "sha256": "d434bcb16231f6f18289897fb2395d787ba17ea4f3c33251953ca011c97675f6"
+        },
+        {
+          "bytes": 9169683,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000008783_418459.fasta",
+          "sha256": "a70399a1a601ce3922264d46faa1664f645b4926c85b6ffa45d67042368140ee"
+        },
+        {
+          "bytes": 6097084,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000542_5664.fasta",
+          "sha256": "beaf76923a8f070d4d8fc682a5fd036375e8ece4452c279a95c562497c8d67e3"
+        },
+        {
+          "bytes": 735425,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000792_436308.fasta",
+          "sha256": "71bc4301d1e1cfac3f22ccebaa1d42ab37bcb5f70251581483ba2192f5be19ae"
+        },
+        {
+          "bytes": 9603190,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000005238_164328.fasta",
+          "sha256": "afc8998d21f105bef3c0b32f3b88900009d84c2a0743d6669542588a5adab882"
+        },
+        {
+          "bytes": 431542,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000431_272561.fasta",
+          "sha256": "aca397ad48dccf87b3abb81be206624f188a5138e3b05e63d8dc00e6c137df4c"
+        },
+        {
+          "bytes": 8736835,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001555_6945.fasta",
+          "sha256": "c4a2dee9e41b11d5c83e599b6985ddfceb77e58d649230d9dfed42817cd88f3d"
+        },
+        {
+          "bytes": 14659832,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002254_9615.fasta",
+          "sha256": "d8488bf283de653efcff2e5de6d413b116e1ba4a2eb89298bd31205e72fef682"
+        },
+        {
+          "bytes": 747971,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000429_85962.fasta",
+          "sha256": "0ec2729c2f8bf8d30a19dd57ba1475b9d18d500a5ec76a132bcf8ae236c66707"
+        },
+        {
+          "bytes": 9426972,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001055_321614.fasta",
+          "sha256": "270150ee0b6379b82f11e30268c2387851532e8929a2f3d36c48555729e9d7a3"
+        },
+        {
+          "bytes": 1765604,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001570_224308.fasta",
+          "sha256": "69b7b24b9a37ce6057ca6c6e12fd4a74ebb525c0fdb46f3eafe4e711a3fa2350"
+        },
+        {
+          "bytes": 20264591,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000007305_4577.fasta",
+          "sha256": "50dc9b32d342d62df8d1f12e2313b1e31fdc3d5df2579e30c6ce67a205a08f69"
+        },
+        {
+          "bytes": 8046794,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001312_665079.fasta",
+          "sha256": "4f6ad7ab273f0ddb20fe0b8fa1a5bd38cd1d634fa8b2dd0362f59554e1005581"
+        },
+        {
+          "bytes": 9783004,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000007266_7070.fasta",
+          "sha256": "beeb87f418e54e060f0fb666e25dfc70290913ac330c24dc733f0c6082db2cbc"
+        },
+        {
+          "bytes": 1403822,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001974_273057.fasta",
+          "sha256": "36d83a02febc6c60e6b34ecde9ba04f87d0c3fb34b519ad6f766a02a7f97e68d"
+        },
+        {
+          "bytes": 2754487,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001414_226186.fasta",
+          "sha256": "785e96ffb85082a7705a9b75a2f53590e1d1ebfd57bdfdf010702580d8d2a7fd"
+        },
+        {
+          "bytes": 2035360,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002008_324602.fasta",
+          "sha256": "efc93b616d84a056880930738b33bba444274b6ce74f11ee62dd58b24c518cca"
+        },
+        {
+          "bytes": 14937257,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002277_9598.fasta",
+          "sha256": "62a7143e309037360c8ddef25c16d7006e802b555a5ffca1f97b96036871e973"
+        },
+        {
+          "bytes": 12363309,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000539_9031.fasta",
+          "sha256": "ed643bb510ba24ec152766ff3aaea8caf9e55046d78c4482f0a0d66c8bbb959b"
+        },
+        {
+          "bytes": 12267534,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000008143_8364.fasta",
+          "sha256": "72c13750f727da24cacca375a87ff4a8214b5d2046eeb632a4f8c129b5b0452c"
+        },
+        {
+          "bytes": 6818528,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000001357_81824.fasta",
+          "sha256": "b97cb3eb5edb17a2e6c75d10b07532d19d699d2c4724d79c1171a9f5cbcce7d8"
+        },
+        {
+          "bytes": 866515,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000425_122586.fasta",
+          "sha256": "44e65ab28a7953f479bcb76200fab2c8387cff6e858db2e5722aa8df1707bd17"
+        },
+        {
+          "bytes": 1032140,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000002521_190304.fasta",
+          "sha256": "7bf98ba1b998df6cb176cce4620ba53d196463c86b31836c1a695773e33b8681"
+        },
+        {
+          "bytes": 15884352,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000006906_3055.fasta",
+          "sha256": "ff283d887791065dc5e57304329b206eec528b77b9e34f99bd6d57d5e45deeb3"
+        },
+        {
+          "bytes": 19168339,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000059680_39947.fasta",
+          "sha256": "1bbd0d5781a1b9c56db31a57860d2cb0efa715a34af1f3bffe651055ee7ecff7"
+        },
+        {
+          "bytes": 9194699,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000803_7227.fasta",
+          "sha256": "d1fb760ceb1448993f0fc6b4db10dd700b9d85a0ad7927cee82c2c3034b702e0"
+        },
+        {
+          "bytes": 1103434,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000536_69014.fasta",
+          "sha256": "b26340fef2e61ac14d10dd1052211179f90d349c499ded050917771e2d810ba8"
+        },
+        {
+          "bytes": 1120386,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918/UP000000554_64091.fasta",
+          "sha256": "46f30b935c0501b9a9f3780ddf0dfdf3719a649ad9a77899b26f4b896a2287d2"
+        },
+        {
+          "bytes": 23875927,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/candidate/orthohmm_working_res/orthohmm_edges_clustered.txt",
+          "sha256": "07c2a0538270996f963e3c7144e02c10ee8673838d2555935e968b68de1da6c1"
+        },
+        {
+          "bytes": 23875927,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/native/orthohmm_working_res/orthohmm_edges_clustered.txt",
+          "sha256": "7ac9c58f37f19c08034401335dc64a4523db7d7bf218ddfc3f784691b090b812"
+        },
+        {
+          "bytes": 684,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/qfo_scoring/results/VGNC/VGNC.json",
+          "sha256": "29ab58217d8165204fc8d1834f1c0ca91482777311814fc3507b4e4b4db0f1d1"
+        },
+        {
+          "bytes": 661,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/qfo_scoring/results/SwissTrees/SwissTrees.json",
+          "sha256": "d5d3a655ed63a9b547d4277f94dadd34f976aab1fdbe864bc93938e54a3a5b6b"
+        },
+        {
+          "bytes": 661,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/qfo_scoring/results/TreeFam-A/TreeFam-A.json",
+          "sha256": "76f922dd8b1818f7b48e02fd77c638593cae21324dc922572ebdd57aa14c8dad"
+        },
+        {
+          "bytes": 651,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/qfo_scoring/results/EC/EC.json",
+          "sha256": "2bf576e3d8828a2fb28f084647605e0d74fb7d61929b0fdb0462ab7f31a72c8b"
+        },
+        {
+          "bytes": 650,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/qfo_scoring/results/GO/GO.json",
+          "sha256": "5315caaaeb3365cfde7e9bd3f06d8d9c403d1eda011d339a7d5e5ea0747d261e"
+        },
+        {
+          "bytes": 663,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/qfo_scoring/results/FAS/FAS.json",
+          "sha256": "ab4ac7d6e814cfa75f46905a7694f6b15906599b19d2b6cc0ed44d09fadedf34"
+        },
+        {
+          "bytes": 18479,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/qfo_scoring/assessment_out/Assessment_datasets.json",
+          "sha256": "c467dd8a86d1534d9630e4e91b5e34b673357037fe69016f4fd463101d447721"
+        },
+        {
+          "bytes": 318907,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/ReconciledTrees_SwissTrees.drw",
+          "sha256": "40528e3537ba57e345c443c8024f99dc3940a66e2d102703754b41bb29858ecd"
+        },
+        {
+          "bytes": 684,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/qfo_scoring/results/VGNC/VGNC.json",
+          "sha256": "29ab58217d8165204fc8d1834f1c0ca91482777311814fc3507b4e4b4db0f1d1"
+        },
+        {
+          "bytes": 274,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/VGNC.json",
+          "sha256": "fa94b75446a592a3d52174ecf01a843f313f4be526fdad853eea3fa75dfadd0d"
+        },
+        {
+          "bytes": 661,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/qfo_scoring/results/SwissTrees/SwissTrees.json",
+          "sha256": "d5d3a655ed63a9b547d4277f94dadd34f976aab1fdbe864bc93938e54a3a5b6b"
+        },
+        {
+          "bytes": 286,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/SwissTrees.json",
+          "sha256": "79f1a55aa5e1c951c306cb56ed38f03f16b8b10409f41f28aeb6dabe416c1a4b"
+        },
+        {
+          "bytes": 661,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/qfo_scoring/results/TreeFam-A/TreeFam-A.json",
+          "sha256": "76f922dd8b1818f7b48e02fd77c638593cae21324dc922572ebdd57aa14c8dad"
+        },
+        {
+          "bytes": 284,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/TreeFam-A.json",
+          "sha256": "42bdfa2f53ac7c8921a41ec0f91936f7431097dcc54322b2eaef987d4799e595"
+        },
+        {
+          "bytes": 651,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/qfo_scoring/results/EC/EC.json",
+          "sha256": "2bf576e3d8828a2fb28f084647605e0d74fb7d61929b0fdb0462ab7f31a72c8b"
+        },
+        {
+          "bytes": 289,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/EC.json",
+          "sha256": "19f785029be53ad831c7c42b14f53e1d07c98cbd4f1418fd1746dc7cc9a0c44a"
+        },
+        {
+          "bytes": 650,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/qfo_scoring/results/GO/GO.json",
+          "sha256": "5315caaaeb3365cfde7e9bd3f06d8d9c403d1eda011d339a7d5e5ea0747d261e"
+        },
+        {
+          "bytes": 289,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/GO.json",
+          "sha256": "f8ac402370bc597e785e6ea3eeb3a2e177be16d2611b17c83031469980363e46"
+        },
+        {
+          "bytes": 663,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/qfo_scoring/results/FAS/FAS.json",
+          "sha256": "ab4ac7d6e814cfa75f46905a7694f6b15906599b19d2b6cc0ed44d09fadedf34"
+        },
+        {
+          "bytes": 281,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data/FAS.json",
+          "sha256": "65e097459d7be1cb318981d1f721ff9bf22880e8d8948e2793625e8ac76b7663"
+        }
+      ],
+      "control_scoring_reuse": {
+        "bytes": 165173207,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/results.json",
+        "sha256": "a0868cd292420b8b9ac1b0daf29151c8f67bd767d6a4e541f48e19bcf35890b2"
+      },
+      "conversion": {
+        "removed_mapping_pairs": 0,
+        "retained_pairs": 5953050,
+        "total_pairs": 5953050,
+        "written_pairs": 5953050
+      },
+      "coverage": {
+        "all_candidate_genes_preserved": true,
+        "candidate_genes": 984137,
+        "prediction_genes": 984137
+      },
+      "dataset": "QfO",
+      "details": {
+        "EC": {
+          "assessed_relations": 118067,
+          "similarity": 0.96538176
+        },
+        "FAS": {
+          "assessed_relations": 5953050.0,
+          "similarity": 0.7637247098243404
+        },
+        "GO": {
+          "assessed_relations": 84021,
+          "similarity": 0.49023637
+        },
+        "SwissTrees F": {
+          "precision": 0.95464765,
+          "recall": 0.73625484
+        },
+        "TreeFam-A F": {
+          "precision": 0.95933142,
+          "recall": 0.45340559
+        },
+        "VGNC F": {
+          "precision": 0.9993396993092238,
+          "recall": 0.8220523105205984
+        }
+      },
+      "golden_matches": {
+        "orthohmm_pairwise_orthologs.tsv": true,
+        "orthohmm_pairwise_orthologs_confidence.tsv": true,
+        "orthohmm_root_hogs.tsv": true,
+        "species_tree.rooted.nwk": true
+      },
+      "graph_execution": {
+        "command": [
+          "/home/bizon/anaconda3/bin/python",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/singleton_tie_orthobench_r1_v1_20261014/benchmark_tools/replay_high_sensitivity.py",
+          "--accuracy-checkpoint",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/QfO/canonical/ordered/orthohmm_working_res/high_sensitivity_checkpoint",
+          "--checkpoint-sha256",
+          "87fb7c8109eb71a8c135279a739fb894ae3403b356bff98cbda230ff72abd19c",
+          "--output-directory",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/graph",
+          "--json",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/graph_metrics.json",
+          "--fasta-directory",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918",
+          "--cpu",
+          "16",
+          "--matrix",
+          "BLOSUM62",
+          "--cpm-resolution",
+          "0.1",
+          "--leiden-seed",
+          "4",
+          "--profile-iterations",
+          "1",
+          "--profile-min-species",
+          "1",
+          "--singleton-tie-policy",
+          "first_hit"
+        ],
+        "log": {
+          "bytes": 273,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/graph.log",
+          "sha256": "4d4f618ec6cab9e5c71b4f988ca8c142c5d14a4058f94fbbed8d0f69f14c3b6c"
+        },
+        "resources": {
+          "elapsed_seconds": 3883.0,
+          "exit_status": 0,
+          "max_process_rss_kib": 8285200,
+          "semantics": {
+            "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+            "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+            "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+            "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+          },
+          "system_seconds": 76.61,
+          "user_seconds": 37647.69
+        },
+        "returncode": 0,
+        "time": {
+          "bytes": 1792,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/graph.time.txt",
+          "sha256": "5ed29c63dbfe5050b500e800e39b9f24f41ad909bf46ba879a5fca9f62a09627"
+        }
+      },
+      "label": "first_hit",
+      "metric_files": [
+        {
+          "bytes": 684,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/qfo_scoring/results/VGNC/VGNC.json",
+          "sha256": "29ab58217d8165204fc8d1834f1c0ca91482777311814fc3507b4e4b4db0f1d1"
+        },
+        {
+          "bytes": 661,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/qfo_scoring/results/SwissTrees/SwissTrees.json",
+          "sha256": "d5d3a655ed63a9b547d4277f94dadd34f976aab1fdbe864bc93938e54a3a5b6b"
+        },
+        {
+          "bytes": 661,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/qfo_scoring/results/TreeFam-A/TreeFam-A.json",
+          "sha256": "76f922dd8b1818f7b48e02fd77c638593cae21324dc922572ebdd57aa14c8dad"
+        },
+        {
+          "bytes": 651,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/qfo_scoring/results/EC/EC.json",
+          "sha256": "2bf576e3d8828a2fb28f084647605e0d74fb7d61929b0fdb0462ab7f31a72c8b"
+        },
+        {
+          "bytes": 650,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/qfo_scoring/results/GO/GO.json",
+          "sha256": "5315caaaeb3365cfde7e9bd3f06d8d9c403d1eda011d339a7d5e5ea0747d261e"
+        },
+        {
+          "bytes": 663,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/qfo_scoring/results/FAS/FAS.json",
+          "sha256": "ab4ac7d6e814cfa75f46905a7694f6b15906599b19d2b6cc0ed44d09fadedf34"
+        }
+      ],
+      "metric_vector": {
+        "QfO: EC": 0.96538176,
+        "QfO: FAS": 0.7637247098243404,
+        "QfO: GO": 0.49023637,
+        "QfO: SwissTrees F": 0.831347705694284,
+        "QfO: TreeFam-A F": 0.6157780611844207,
+        "QfO: VGNC F": 0.9020677639723076
+      },
+      "native_execution": {
+        "command": [
+          "/home/bizon/anaconda3/bin/python",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/singleton_tie_orthobench_r1_v1_20261014/benchmark_tools/replay_phylogeny.py",
+          "--fasta-directory",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918",
+          "--candidate-clusters",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/candidate/orthohmm_working_res/orthohmm_edges_clustered.txt",
+          "--membership-constraints",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/candidate/orthohmm_working_res/phylogeny_candidate_merges.json",
+          "--output-directory",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/native",
+          "--json",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/native_metrics.json",
+          "--cpu",
+          "16",
+          "--species-tree-mode",
+          "infer",
+          "--aligner",
+          "mafft",
+          "--tree-builder",
+          "FastTree",
+          "--root-rule",
+          "species_overlap",
+          "--pair-rule",
+          "positive_paralogy",
+          "--species-tree-rooting",
+          "min_variance",
+          "--gene-tree-support-mode",
+          "legacy",
+          "--satellite-membership-rule",
+          "high_confidence_pair",
+          "--checkpoint-source",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/QfO/canonical/native"
+        ],
+        "log": {
+          "bytes": 168,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/native.log",
+          "sha256": "da3353797ba94555ff6d4ee7588d0eaa7789ee1f938db25a73b57712b57db30a"
+        },
+        "resources": {
+          "elapsed_seconds": 420.93,
+          "exit_status": 0,
+          "max_process_rss_kib": 7751652,
+          "semantics": {
+            "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+            "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+            "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+            "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+          },
+          "system_seconds": 61.39,
+          "user_seconds": 403.9
+        },
+        "returncode": 0,
+        "time": {
+          "bytes": 2166,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/native.time.txt",
+          "sha256": "d79b8f3c458a985e9da1d85e4332e03d4da90bf6c912ffae4c83bfc0ca1c068a"
+        }
+      },
+      "native_summary": {
+        "bypassed_families": 327094,
+        "candidate_families": 351389,
+        "checkpoint_hits": 24295,
+        "duplications": 231027,
+        "ortholog_pairs": 5953050,
+        "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/native/orthohmm_phylogeny",
+        "reconciled_families": 24295,
+        "remapped_checkpoint_hits": 0,
+        "root_hogs": 365733,
+        "schema_version": 1,
+        "speciations": 252464,
+        "species_tree_checkpoint_hit": true,
+        "species_tree_families": 25,
+        "uncertain_events": 77793
+      },
+      "outputs": [
+        {
+          "bytes": 34482213,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/native/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+          "sha256": "a3233ad15bf3ac7acd6ebe9680eae27279a9bccaa3af060df13f542dec8d101f"
+        },
+        {
+          "bytes": 495189914,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/native/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+          "sha256": "83ff64afcc8ee292ad6bddb7b2e25903d9dfcec7d9475f1d7651dfcf6c4893e7"
+        },
+        {
+          "bytes": 530834841,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/native/orthohmm_phylogeny/orthohmm_pairwise_orthologs_confidence.tsv",
+          "sha256": "040175131852c37a5e7990ba3e76f4774af765d76efcaf407d9424f7248a8ff6"
+        }
+      ],
+      "scores": {
+        "EC": 0.96538176,
+        "FAS": 0.7637247098243404,
+        "GO": 0.49023637,
+        "SwissTrees F": 0.831347705694284,
+        "TreeFam-A F": 0.6157780611844207,
+        "VGNC F": 0.9020677639723076
+      },
+      "status": "native_and_score_independently_verified"
+    },
+    {
+      "dataset": "QfO",
+      "label": "defer_ambiguous",
+      "scores": {},
+      "status": "graph_running"
+    }
+  ],
+  "dataset": "QfO",
+  "defaults_promoted": false,
+  "driver_revision": "e9a6400289a4410f426341cc5423977d8c45d30d",
+  "execution_plan": {
+    "bytes": 66975526,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/execution_plan.json",
+    "sha256": "4e5b2263d9ceeb3366b79d91290c24e177193429158c880974cd88e609b4553a"
+  },
+  "goal_completed": false,
+  "host_before": "    PID %CPU COMMAND\n      1  0.1 systemd\n      2  0.0 kthreadd\n      3  0.0 pool_workqueue_release\n      4  0.0 kworker/R-rcu_g\n      5  0.0 kworker/R-rcu_p\n      6  0.0 kworker/R-slub_\n      7  0.0 kworker/R-netns\n     10  0.0 kworker/0:0H-events_highpri\n     12  0.0 kworker/R-mm_pe\n     13  0.0 rcu_tasks_kthread\n     14  0.0 rcu_tasks_rude_kthread\n     15  0.0 rcu_tasks_trace_kthread\n     16  0.0 ksoftirqd/0\n     17  0.3 rcu_preempt\n     18  0.0 migration/0\n     19  0.0 idle_inject/0\n     20  0.0 cpuhp/0\n     21  0.0 cpuhp/1\n     22  0.0 idle_inject/1\n     23  0.0 migration/1\n     24  0.0 ksoftirqd/1\n     26  0.0 kworker/1:0H-events_highpri\n     27  0.0 cpuhp/2\n     28  0.0 idle_inject/2\n     29  0.0 migration/2\n     30  0.0 ksoftirqd/2\n     32  0.0 kworker/2:0H-events_highpri\n     33  0.0 cpuhp/3\n     34  0.0 idle_inject/3\n     35  0.0 migration/3\n     36  0.0 ksoftirqd/3\n     38  0.0 kworker/3:0H-events_highpri\n     39  0.0 cpuhp/4\n     40  0.0 idle_inject/4\n     41  0.0 migration/4\n     42  0.0 ksoftirqd/4\n     44  0.0 kworker/4:0H-events_highpri\n     45  0.0 cpuhp/5\n     46  0.0 idle_inject/5\n     47  0.0 migration/5\n     48  0.0 ksoftirqd/5\n     50  0.0 kworker/5:0H-events_highpri\n     51  0.0 cpuhp/6\n     52  0.0 idle_inject/6\n     53  0.0 migration/6\n     54  0.0 ksoftirqd/6\n     56  0.0 kworker/6:0H-events_highpri\n     57  0.0 cpuhp/7\n     58  0.0 idle_inject/7\n     59  0.0 migration/7\n     60  0.0 ksoftirqd/7\n     62  0.0 kworker/7:0H-events_highpri\n     63  0.0 cpuhp/8\n     64  0.0 idle_inject/8\n     65  0.0 migration/8\n     66  0.0 ksoftirqd/8\n     68  0.0 kworker/8:0H-events_highpri\n     69  0.0 cpuhp/9\n     70  0.0 idle_inject/9\n     71  0.0 migration/9\n     72  0.0 ksoftirqd/9\n     74  0.0 kworker/9:0H-events_highpri\n     75  0.0 cpuhp/10\n     76  0.0 idle_inject/10\n     77  0.0 migration/10\n     78  0.0 ksoftirqd/10\n     80  0.0 kworker/10:0H-events_highpri\n     81  0.0 cpuhp/11\n     82  0.0 idle_inject/11\n     83  0.0 migration/11\n     84  0.0 ksoftirqd/11\n     86  0.0 kworker/11:0H-events_highpri\n     87  0.0 cpuhp/12\n     88  0.0 idle_inject/12\n     89  0.0 migration/12\n     90  0.0 ksoftirqd/12\n     92  0.0 kworker/12:0H-events_highpri\n     93  0.0 cpuhp/13\n     94  0.0 idle_inject/13\n     95  0.0 migration/13\n     96  0.0 ksoftirqd/13\n     98  0.0 kworker/13:0H-events_highpri\n     99  0.0 cpuhp/14\n    100  0.0 idle_inject/14\n    101  0.0 migration/14\n    102  0.0 ksoftirqd/14\n    104  0.0 kworker/14:0H-events_highpri\n    105  0.0 cpuhp/15\n    106  0.0 idle_inject/15\n    107  0.0 migration/15\n    108  0.0 ksoftirqd/15\n    110  0.0 kworker/15:0H-events_highpri\n    111  0.0 cpuhp/16\n    112  0.0 idle_inject/16\n    113  0.0 migration/16\n    114  0.0 ksoftirqd/16\n    116  0.0 kworker/16:0H-events_highpri\n    117  0.0 cpuhp/17\n    118  0.0 idle_inject/17\n    119  0.0 migration/17\n    120  0.0 ksoftirqd/17\n    122  0.0 kworker/17:0H-events_highpri\n    123  0.0 cpuhp/18\n    124  0.0 idle_inject/18\n    125  0.0 migration/18\n    126  0.0 ksoftirqd/18\n    128  0.0 kworker/18:0H-events_highpri\n    129  0.0 cpuhp/19\n    130  0.0 idle_inject/19\n    131  0.0 migration/19\n    132  0.0 ksoftirqd/19\n    134  0.0 kworker/19:0H-events_highpri\n    135  0.0 cpuhp/20\n    136  0.0 idle_inject/20\n    137  0.0 migration/20\n    138  0.0 ksoftirqd/20\n    140  0.0 kworker/20:0H-kblockd\n    141  0.0 cpuhp/21\n    142  0.0 idle_inject/21\n    143  0.0 migration/21\n    144  0.0 ksoftirqd/21\n    146  0.0 kworker/21:0H-events_highpri\n    147  0.0 cpuhp/22\n    148  0.0 idle_inject/22\n    149  0.0 migration/22\n    150  0.0 ksoftirqd/22\n    152  0.0 kworker/22:0H-events_highpri\n    153  0.0 cpuhp/23\n    154  0.0 idle_inject/23\n    155  0.0 migration/23\n    156  0.0 ksoftirqd/23\n    158  0.0 kworker/23:0H-events_highpri\n    159  0.0 cpuhp/24\n    160  0.0 idle_inject/24\n    161  0.0 migration/24\n    162  0.0 ksoftirqd/24\n    164  0.0 kworker/24:0H-events_highpri\n    165  0.0 cpuhp/25\n    166  0.0 idle_inject/25\n    167  0.0 migration/25\n    168  0.0 ksoftirqd/25\n    170  0.0 kworker/25:0H-events_highpri\n    171  0.0 cpuhp/26\n    172  0.0 idle_inject/26\n    173  0.0 migration/26\n    174  0.0 ksoftirqd/26\n    176  0.0 kworker/26:0H-events_highpri\n    177  0.0 cpuhp/27\n    178  0.0 idle_inject/27\n    179  0.0 migration/27\n    180  0.0 ksoftirqd/27\n    182  0.0 kworker/27:0H-kblockd\n    183  0.0 cpuhp/28\n    184  0.0 idle_inject/28\n    185  0.0 migration/28\n    186  0.0 ksoftirqd/28\n    188  0.0 kworker/28:0H-kblockd\n    189  0.0 cpuhp/29\n    190  0.0 idle_inject/29\n    191  0.0 migration/29\n    192  0.0 ksoftirqd/29\n    194  0.0 kworker/29:0H-events_highpri\n    195  0.0 cpuhp/30\n    196  0.0 idle_inject/30\n    197  0.0 migration/30\n    198  0.0 ksoftirqd/30\n    200  0.0 kworker/30:0H-kblockd\n    201  0.0 cpuhp/31\n    202  0.0 idle_inject/31\n    203  0.0 migration/31\n    204  0.0 ksoftirqd/31\n    206  0.0 kworker/31:0H-events_highpri\n    207  0.0 cpuhp/32\n    208  0.0 idle_inject/32\n    209  0.0 migration/32\n    210  0.0 ksoftirqd/32\n    212  0.0 kworker/32:0H-events_highpri\n    213  0.0 cpuhp/33\n    214  0.0 idle_inject/33\n    215  0.0 migration/33\n    216  0.0 ksoftirqd/33\n    218  0.0 kworker/33:0H-events_highpri\n    219  0.0 cpuhp/34\n    220  0.0 idle_inject/34\n    221  0.0 migration/34\n    222  0.0 ksoftirqd/34\n    224  0.0 kworker/34:0H-events_highpri\n    225  0.0 cpuhp/35\n    226  0.0 idle_inject/35\n    227  0.0 migration/35\n    228  0.0 ksoftirqd/35\n    230  0.0 kworker/35:0H-events_highpri\n    231  0.0 cpuhp/36\n    232  0.0 idle_inject/36\n    233  0.0 migration/36\n    234  0.0 ksoftirqd/36\n    236  0.0 kworker/36:0H-events_highpri\n    237  0.0 cpuhp/37\n    238  0.0 idle_inject/37\n    239  0.0 migration/37\n    240  0.0 ksoftirqd/37\n    242  0.0 kworker/37:0H-events_highpri\n    243  0.0 cpuhp/38\n    244  0.0 idle_inject/38\n    245  0.0 migration/38\n    246  0.0 ksoftirqd/38\n    248  0.0 kworker/38:0H-events_highpri\n    249  0.0 cpuhp/39\n    250  0.0 idle_inject/39\n    251  0.0 migration/39\n    252  0.0 ksoftirqd/39\n    254  0.0 kworker/39:0H-events_highpri\n    255  0.0 cpuhp/40\n    256  0.0 idle_inject/40\n    257  0.0 migration/40\n    258  0.0 ksoftirqd/40\n    260  0.0 kworker/40:0H-events_highpri\n    261  0.0 cpuhp/41\n    262  0.0 idle_inject/41\n    263  0.0 migration/41\n    264  0.0 ksoftirqd/41\n    266  0.0 kworker/41:0H-events_highpri\n    267  0.0 cpuhp/42\n    268  0.0 idle_inject/42\n    269  0.0 migration/42\n    270  0.0 ksoftirqd/42\n    272  0.0 kworker/42:0H-kblockd\n    273  0.0 cpuhp/43\n    274  0.0 idle_inject/43\n    275  0.0 migration/43\n    276  0.0 ksoftirqd/43\n    278  0.0 kworker/43:0H-events_highpri\n    279  0.0 cpuhp/44\n    280  0.0 idle_inject/44\n    281  0.0 migration/44\n    282  0.0 ksoftirqd/44\n    284  0.0 kworker/44:0H-events_highpri\n    285  0.0 cpuhp/45\n    286  0.0 idle_inject/45\n    287  0.0 migration/45\n    288  0.0 ksoftirqd/45\n    290  0.0 kworker/45:0H-events_highpri\n    291  0.0 cpuhp/46\n    292  0.0 idle_inject/46\n    293  0.0 migration/46\n    294  0.0 ksoftirqd/46\n    296  0.0 kworker/46:0H-events_highpri\n    297  0.0 cpuhp/47\n    298  0.0 idle_inject/47\n    299  0.0 migration/47\n    300  0.0 ksoftirqd/47\n    302  0.0 kworker/47:0H-events_highpri\n    303  0.0 cpuhp/48\n    304  0.0 idle_inject/48\n    305  0.0 migration/48\n    306  0.0 ksoftirqd/48\n    308  0.0 kworker/48:0H-kblockd\n    309  0.0 cpuhp/49\n    310  0.0 idle_inject/49\n    311  0.0 migration/49\n    312  0.0 ksoftirqd/49\n    314  0.0 kworker/49:0H-events_highpri\n    315  0.0 cpuhp/50\n    316  0.0 idle_inject/50\n    317  0.0 migration/50\n    318  0.0 ksoftirqd/50\n    320  0.0 kworker/50:0H-events_highpri\n    321  0.0 cpuhp/51\n    322  0.0 idle_inject/51\n    323  0.0 migration/51\n    324  0.0 ksoftirqd/51\n    326  0.0 kworker/51:0H-kblockd\n    327  0.0 cpuhp/52\n    328  0.0 idle_inject/52\n    329  0.0 migration/52\n    330  0.0 ksoftirqd/52\n    332  0.0 kworker/52:0H-kblockd\n    333  0.0 cpuhp/53\n    334  0.0 idle_inject/53\n    335  0.0 migration/53\n    336  0.0 ksoftirqd/53\n    338  0.0 kworker/53:0H-kblockd\n    339  0.0 cpuhp/54\n    340  0.0 idle_inject/54\n    341  0.0 migration/54\n    342  0.0 ksoftirqd/54\n    344  0.0 kworker/54:0H-kblockd\n    345  0.0 cpuhp/55\n    346  0.0 idle_inject/55\n    347  0.0 migration/55\n    348  0.0 ksoftirqd/55\n    350  0.0 kworker/55:0H-events_highpri\n    351  0.0 cpuhp/56\n    352  0.0 idle_inject/56\n    353  0.0 migration/56\n    354  0.0 ksoftirqd/56\n    356  0.0 kworker/56:0H-events_highpri\n    357  0.0 cpuhp/57\n    358  0.0 idle_inject/57\n    359  0.0 migration/57\n    360  0.0 ksoftirqd/57\n    362  0.0 kworker/57:0H-events_highpri\n    363  0.0 cpuhp/58\n    364  0.0 idle_inject/58\n    365  0.0 migration/58\n    366  0.0 ksoftirqd/58\n    368  0.0 kworker/58:0H-events_highpri\n    369  0.0 cpuhp/59\n    370  0.0 idle_inject/59\n    371  0.0 migration/59\n    372  0.0 ksoftirqd/59\n    374  0.0 kworker/59:0H-events_highpri\n    375  0.0 cpuhp/60\n    376  0.0 idle_inject/60\n    377  0.0 migration/60\n    378  0.0 ksoftirqd/60\n    380  0.0 kworker/60:0H-events_highpri\n    381  0.0 cpuhp/61\n    382  0.0 idle_inject/61\n    383  0.0 migration/61\n    384  0.0 ksoftirqd/61\n    386  0.0 kworker/61:0H-events_highpri\n    387  0.0 cpuhp/62\n    388  0.0 idle_inject/62\n    389  0.0 migration/62\n    390  0.0 ksoftirqd/62\n    392  0.0 kworker/62:0H-events_highpri\n    393  0.0 cpuhp/63\n    394  0.0 idle_inject/63\n    395  0.0 migration/63\n    396  0.0 ksoftirqd/63\n    398  0.0 kworker/63:0H-events_highpri\n    399  0.0 cpuhp/64\n    400  0.0 idle_inject/64\n    401  0.0 migration/64\n    402  0.0 ksoftirqd/64\n    404  0.0 kworker/64:0H-events_highpri\n    405  0.0 cpuhp/65\n    406  0.0 idle_inject/65\n    407  0.0 migration/65\n    408  0.0 ksoftirqd/65\n    410  0.0 kworker/65:0H-events_highpri\n    411  0.0 cpuhp/66\n    412  0.0 idle_inject/66\n    413  0.0 migration/66\n    414  0.0 ksoftirqd/66\n    416  0.0 kworker/66:0H-kblockd\n    417  0.0 cpuhp/67\n    418  0.0 idle_inject/67\n    419  0.0 migration/67\n    420  0.0 ksoftirqd/67\n    422  0.0 kworker/67:0H-events_highpri\n    423  0.0 cpuhp/68\n    424  0.0 idle_inject/68\n    425  0.0 migration/68\n    426  0.0 ksoftirqd/68\n    428  0.0 kworker/68:0H-events_highpri\n    429  0.0 cpuhp/69\n    430  0.0 idle_inject/69\n    431  0.0 migration/69\n    432  0.0 ksoftirqd/69\n    434  0.0 kworker/69:0H-events_highpri\n    435  0.0 cpuhp/70\n    436  0.0 idle_inject/70\n    437  0.0 migration/70\n    438  0.0 ksoftirqd/70\n    440  0.0 kworker/70:0H-events_highpri\n    441  0.0 cpuhp/71\n    442  0.0 idle_inject/71\n    443  0.0 migration/71\n    444  0.0 ksoftirqd/71\n    446  0.0 kworker/71:0H-events_highpri\n    447  0.0 cpuhp/72\n    448  0.0 idle_inject/72\n    449  0.0 migration/72\n    450  0.0 ksoftirqd/72\n    452  0.0 kworker/72:0H-events_highpri\n    453  0.0 cpuhp/73\n    454  0.0 idle_inject/73\n    455  0.0 migration/73\n    456  0.0 ksoftirqd/73\n    458  0.0 kworker/73:0H-events_highpri\n    459  0.0 cpuhp/74\n    460  0.0 idle_inject/74\n    461  0.0 migration/74\n    462  0.0 ksoftirqd/74\n    464  0.0 kworker/74:0H-events_highpri\n    465  0.0 cpuhp/75\n    466  0.0 idle_inject/75\n    467  0.0 migration/75\n    468  0.0 ksoftirqd/75\n    470  0.0 kworker/75:0H-events_highpri\n    471  0.0 cpuhp/76\n    472  0.0 idle_inject/76\n    473  0.0 migration/76\n    474  0.0 ksoftirqd/76\n    476  0.0 kworker/76:0H-events_highpri\n    477  0.0 cpuhp/77\n    478  0.0 idle_inject/77\n    479  0.0 migration/77\n    480  0.0 ksoftirqd/77\n    482  0.0 kworker/77:0H-events_highpri\n    483  0.0 cpuhp/78\n    484  0.0 idle_inject/78\n    485  0.0 migration/78\n    486  0.0 ksoftirqd/78\n    488  0.0 kworker/78:0H-kblockd\n    489  0.0 cpuhp/79\n    490  0.0 idle_inject/79\n    491  0.0 migration/79\n    492  0.0 ksoftirqd/79\n    494  0.0 kworker/79:0H-events_highpri\n    495  0.0 cpuhp/80\n    496  0.0 idle_inject/80\n    497  0.0 migration/80\n    498  0.0 ksoftirqd/80\n    500  0.0 kworker/80:0H-events_highpri\n    501  0.0 cpuhp/81\n    502  0.0 idle_inject/81\n    503  0.0 migration/81\n    504  0.0 ksoftirqd/81\n    506  0.0 kworker/81:0H-events_highpri\n    507  0.0 cpuhp/82\n    508  0.0 idle_inject/82\n    509  0.0 migration/82\n    510  0.0 ksoftirqd/82\n    512  0.0 kworker/82:0H-events_highpri\n    513  0.0 cpuhp/83\n    514  0.0 idle_inject/83\n    515  0.0 migration/83\n    516  0.0 ksoftirqd/83\n    518  0.0 kworker/83:0H-events_highpri\n    519  0.0 cpuhp/84\n    520  0.0 idle_inject/84\n    521  0.0 migration/84\n    522  0.0 ksoftirqd/84\n    524  0.0 kworker/84:0H-kblockd\n    525  0.0 cpuhp/85\n    526  0.0 idle_inject/85\n    527  0.0 migration/85\n    528  0.0 ksoftirqd/85\n    530  0.0 kworker/85:0H-events_highpri\n    531  0.0 cpuhp/86\n    532  0.0 idle_inject/86\n    533  0.0 migration/86\n    534  0.0 ksoftirqd/86\n    536  0.0 kworker/86:0H-events_highpri\n    537  0.0 cpuhp/87\n    538  0.0 idle_inject/87\n    539  0.0 migration/87\n    540  0.0 ksoftirqd/87\n    542  0.0 kworker/87:0H-events_highpri\n    543  0.0 cpuhp/88\n    544  0.0 idle_inject/88\n    545  0.0 migration/88\n    546  0.0 ksoftirqd/88\n    548  0.0 kworker/88:0H-events_highpri\n    549  0.0 cpuhp/89\n    550  0.0 idle_inject/89\n    551  0.0 migration/89\n    552  0.0 ksoftirqd/89\n    554  0.0 kworker/89:0H-events_highpri\n    555  0.0 cpuhp/90\n    556  0.0 idle_inject/90\n    557  0.0 migration/90\n    558  0.0 ksoftirqd/90\n    560  0.0 kworker/90:0H-events_highpri\n    561  0.0 cpuhp/91\n    562  0.0 idle_inject/91\n    563  0.0 migration/91\n    564  0.0 ksoftirqd/91\n    566  0.0 kworker/91:0H-events_highpri\n    567  0.0 cpuhp/92\n    568  0.0 idle_inject/92\n    569  0.0 migration/92\n    570  0.0 ksoftirqd/92\n    572  0.0 kworker/92:0H-events_highpri\n    573  0.0 cpuhp/93\n    574  0.0 idle_inject/93\n    575  0.0 migration/93\n    576  0.0 ksoftirqd/93\n    578  0.0 kworker/93:0H-events_highpri\n    579  0.0 cpuhp/94\n    580  0.0 idle_inject/94\n    581  0.0 migration/94\n    582  0.0 ksoftirqd/94\n    584  0.0 kworker/94:0H-events_highpri\n    585  0.0 cpuhp/95\n    586  0.0 idle_inject/95\n    587  0.0 migration/95\n    588  0.0 ksoftirqd/95\n    590  0.0 kworker/95:0H-events_highpri\n    591  0.0 cpuhp/96\n    592  0.0 idle_inject/96\n    593  0.0 migration/96\n    594  0.0 ksoftirqd/96\n    596  0.0 kworker/96:0H-events_highpri\n    597  0.0 cpuhp/97\n    598  0.0 idle_inject/97\n    599  0.0 migration/97\n    600  0.0 ksoftirqd/97\n    602  0.0 kworker/97:0H-events_highpri\n    603  0.0 cpuhp/98\n    604  0.0 idle_inject/98\n    605  0.0 migration/98\n    606  0.0 ksoftirqd/98\n    608  0.0 kworker/98:0H-events_highpri\n    609  0.0 cpuhp/99\n    610  0.0 idle_inject/99\n    611  0.0 migration/99\n    612  0.0 ksoftirqd/99\n    614  0.0 kworker/99:0H-events_highpri\n    615  0.0 cpuhp/100\n    616  0.0 idle_inject/100\n    617  0.0 migration/100\n    618  0.0 ksoftirqd/100\n    620  0.0 kworker/100:0H-events_highpri\n    621  0.0 cpuhp/101\n    622  0.0 idle_inject/101\n    623  0.0 migration/101\n    624  0.0 ksoftirqd/101\n    626  0.0 kworker/101:0H-events_highpri\n    627  0.0 cpuhp/102\n    628  0.0 idle_inject/102\n    629  0.0 migration/102\n    630  0.0 ksoftirqd/102\n    632  0.0 kworker/102:0H-events_highpri\n    633  0.0 cpuhp/103\n    634  0.0 idle_inject/103\n    635  0.0 migration/103\n    636  0.0 ksoftirqd/103\n    638  0.0 kworker/103:0H-events_highpri\n    639  0.0 cpuhp/104\n    640  0.0 idle_inject/104\n    641  0.0 migration/104\n    642  0.0 ksoftirqd/104\n    644  0.0 kworker/104:0H-events_highpri\n    645  0.0 cpuhp/105\n    646  0.0 idle_inject/105\n    647  0.0 migration/105\n    648  0.0 ksoftirqd/105\n    650  0.0 kworker/105:0H-events_highpri\n    651  0.0 cpuhp/106\n    652  0.0 idle_inject/106\n    653  0.0 migration/106\n    654  0.0 ksoftirqd/106\n    656  0.0 kworker/106:0H-events_highpri\n    657  0.0 cpuhp/107\n    658  0.0 idle_inject/107\n    659  0.0 migration/107\n    660  0.0 ksoftirqd/107\n    662  0.0 kworker/107:0H-events_highpri\n    663  0.0 cpuhp/108\n    664  0.0 idle_inject/108\n    665  0.0 migration/108\n    666  0.0 ksoftirqd/108\n    668  0.0 kworker/108:0H-events_highpri\n    669  0.0 cpuhp/109\n    670  0.0 idle_inject/109\n    671  0.0 migration/109\n    672  0.0 ksoftirqd/109\n    674  0.0 kworker/109:0H-events_highpri\n    675  0.0 cpuhp/110\n    676  0.0 idle_inject/110\n    677  0.0 migration/110\n    678  0.0 ksoftirqd/110\n    680  0.0 kworker/110:0H-events_highpri\n    681  0.0 cpuhp/111\n    682  0.0 idle_inject/111\n    683  0.0 migration/111\n    684  0.0 ksoftirqd/111\n    686  0.0 kworker/111:0H-events_highpri\n    687  0.0 cpuhp/112\n    688  0.0 idle_inject/112\n    689  0.0 migration/112\n    690  0.0 ksoftirqd/112\n    692  0.0 kworker/112:0H-events_highpri\n    693  0.0 cpuhp/113\n    694  0.0 idle_inject/113\n    695  0.0 migration/113\n    696  0.0 ksoftirqd/113\n    698  0.0 kworker/113:0H-events_highpri\n    699  0.0 cpuhp/114\n    700  0.0 idle_inject/114\n    701  0.0 migration/114\n    702  0.0 ksoftirqd/114\n    704  0.0 kworker/114:0H-events_highpri\n    705  0.0 cpuhp/115\n    706  0.0 idle_inject/115\n    707  0.0 migration/115\n    708  0.0 ksoftirqd/115\n    710  0.0 kworker/115:0H-events_highpri\n    711  0.0 cpuhp/116\n    712  0.0 idle_inject/116\n    713  0.0 migration/116\n    714  0.0 ksoftirqd/116\n    716  0.0 kworker/116:0H-events_highpri\n    717  0.0 cpuhp/117\n    718  0.0 idle_inject/117\n    719  0.0 migration/117\n    720  0.0 ksoftirqd/117\n    722  0.0 kworker/117:0H-events_highpri\n    723  0.0 cpuhp/118\n    724  0.0 idle_inject/118\n    725  0.0 migration/118\n    726  0.0 ksoftirqd/118\n    728  0.0 kworker/118:0H-events_highpri\n    729  0.0 cpuhp/119\n    730  0.0 idle_inject/119\n    731  0.0 migration/119\n    732  0.0 ksoftirqd/119\n    734  0.0 kworker/119:0H-events_highpri\n    735  0.0 cpuhp/120\n    736  0.0 idle_inject/120\n    737  0.0 migration/120\n    738  0.0 ksoftirqd/120\n    740  0.0 kworker/120:0H-events_highpri\n    741  0.0 cpuhp/121\n    742  0.0 idle_inject/121\n    743  0.0 migration/121\n    744  0.0 ksoftirqd/121\n    746  0.0 kworker/121:0H-events_highpri\n    747  0.0 cpuhp/122\n    748  0.0 idle_inject/122\n    749  0.0 migration/122\n    750  0.0 ksoftirqd/122\n    752  0.0 kworker/122:0H-events_highpri\n    753  0.0 cpuhp/123\n    754  0.0 idle_inject/123\n    755  0.0 migration/123\n    756  0.0 ksoftirqd/123\n    758  0.0 kworker/123:0H-events_highpri\n    759  0.0 cpuhp/124\n    760  0.0 idle_inject/124\n    761  0.0 migration/124\n    762  0.0 ksoftirqd/124\n    764  0.0 kworker/124:0H-events_highpri\n    765  0.0 cpuhp/125\n    766  0.0 idle_inject/125\n    767  0.0 migration/125\n    768  0.0 ksoftirqd/125\n    770  0.0 kworker/125:0H-events_highpri\n    771  0.0 cpuhp/126\n    772  0.0 idle_inject/126\n    773  0.0 migration/126\n    774  0.0 ksoftirqd/126\n    776  0.0 kworker/126:0H-events_highpri\n    777  0.0 cpuhp/127\n    778  0.0 idle_inject/127\n    779  0.0 migration/127\n    780  0.0 ksoftirqd/127\n    782  0.0 kworker/127:0H-events_highpri\n    783  0.0 cpuhp/128\n    784  0.0 idle_inject/128\n    785  0.0 migration/128\n    786  0.0 ksoftirqd/128\n    788  0.0 kworker/128:0H-events_highpri\n    789  0.0 cpuhp/129\n    790  0.0 idle_inject/129\n    791  0.0 migration/129\n    792  0.0 ksoftirqd/129\n    794  0.0 kworker/129:0H-events_highpri\n    795  0.0 cpuhp/130\n    796  0.0 idle_inject/130\n    797  0.0 migration/130\n    798  0.0 ksoftirqd/130\n    800  0.0 kworker/130:0H-events_highpri\n    801  0.0 cpuhp/131\n    802  0.0 idle_inject/131\n    803  0.0 migration/131\n    804  0.0 ksoftirqd/131\n    806  0.0 kworker/131:0H-events_highpri\n    807  0.0 cpuhp/132\n    808  0.0 idle_inject/132\n    809  0.0 migration/132\n    810  0.0 ksoftirqd/132\n    812  0.0 kworker/132:0H-events_highpri\n    813  0.0 cpuhp/133\n    814  0.0 idle_inject/133\n    815  0.0 migration/133\n    816  0.0 ksoftirqd/133\n    818  0.0 kworker/133:0H-events_highpri\n    819  0.0 cpuhp/134\n    820  0.0 idle_inject/134\n    821  0.0 migration/134\n    822  0.0 ksoftirqd/134\n    824  0.0 kworker/134:0H-events_highpri\n    825  0.0 cpuhp/135\n    826  0.0 idle_inject/135\n    827  0.0 migration/135\n    828  0.0 ksoftirqd/135\n    830  0.0 kworker/135:0H-events_highpri\n    831  0.0 cpuhp/136\n    832  0.0 idle_inject/136\n    833  0.0 migration/136\n    834  0.0 ksoftirqd/136\n    836  0.0 kworker/136:0H-events_highpri\n    837  0.0 cpuhp/137\n    838  0.0 idle_inject/137\n    839  0.0 migration/137\n    840  0.0 ksoftirqd/137\n    842  0.0 kworker/137:0H-events_highpri\n    843  0.0 cpuhp/138\n    844  0.0 idle_inject/138\n    845  0.0 migration/138\n    846  0.0 ksoftirqd/138\n    848  0.0 kworker/138:0H-events_highpri\n    849  0.0 cpuhp/139\n    850  0.0 idle_inject/139\n    851  0.0 migration/139\n    852  0.0 ksoftirqd/139\n    854  0.0 kworker/139:0H-events_highpri\n    855  0.0 cpuhp/140\n    856  0.0 idle_inject/140\n    857  0.0 migration/140\n    858  0.0 ksoftirqd/140\n    860  0.0 kworker/140:0H-events_highpri\n    861  0.0 cpuhp/141\n    862  0.0 idle_inject/141\n    863  0.0 migration/141\n    864  0.0 ksoftirqd/141\n    866  0.0 kworker/141:0H-events_highpri\n    867  0.0 cpuhp/142\n    868  0.0 idle_inject/142\n    869  0.0 migration/142\n    870  0.0 ksoftirqd/142\n    872  0.0 kworker/142:0H-events_highpri\n    873  0.0 cpuhp/143\n    874  0.0 idle_inject/143\n    875  0.0 migration/143\n    876  0.0 ksoftirqd/143\n    878  0.0 kworker/143:0H-events_highpri\n    879  0.0 cpuhp/144\n    880  0.0 idle_inject/144\n    881  0.0 migration/144\n    882  0.0 ksoftirqd/144\n    884  0.0 kworker/144:0H-events_highpri\n    885  0.0 cpuhp/145\n    886  0.0 idle_inject/145\n    887  0.0 migration/145\n    888  0.0 ksoftirqd/145\n    890  0.0 kworker/145:0H-events_highpri\n    891  0.0 cpuhp/146\n    892  0.0 idle_inject/146\n    893  0.0 migration/146\n    894  0.0 ksoftirqd/146\n    896  0.0 kworker/146:0H-events_highpri\n    897  0.0 cpuhp/147\n    898  0.0 idle_inject/147\n    899  0.0 migration/147\n    900  0.0 ksoftirqd/147\n    902  0.0 kworker/147:0H-events_highpri\n    903  0.0 cpuhp/148\n    904  0.0 idle_inject/148\n    905  0.0 migration/148\n    906  0.0 ksoftirqd/148\n    908  0.0 kworker/148:0H-kblockd\n    909  0.0 cpuhp/149\n    910  0.0 idle_inject/149\n    911  0.0 migration/149\n    912  0.0 ksoftirqd/149\n    914  0.0 kworker/149:0H-events_highpri\n    915  0.0 cpuhp/150\n    916  0.0 idle_inject/150\n    917  0.0 migration/150\n    918  0.0 ksoftirqd/150\n    920  0.0 kworker/150:0H-events_highpri\n    921  0.0 cpuhp/151\n    922  0.0 idle_inject/151\n    923  0.0 migration/151\n    924  0.0 ksoftirqd/151\n    926  0.0 kworker/151:0H-events_highpri\n    927  0.0 cpuhp/152\n    928  0.0 idle_inject/152\n    929  0.0 migration/152\n    930  0.0 ksoftirqd/152\n    932  0.0 kworker/152:0H-events_highpri\n    933  0.0 cpuhp/153\n    934  0.0 idle_inject/153\n    935  0.0 migration/153\n    936  0.0 ksoftirqd/153\n    938  0.0 kworker/153:0H-events_highpri\n    939  0.0 cpuhp/154\n    940  0.0 idle_inject/154\n    941  0.0 migration/154\n    942  0.0 ksoftirqd/154\n    944  0.0 kworker/154:0H-events_highpri\n    945  0.0 cpuhp/155\n    946  0.0 idle_inject/155\n    947  0.0 migration/155\n    948  0.0 ksoftirqd/155\n    950  0.0 kworker/155:0H-events_highpri\n    951  0.0 cpuhp/156\n    952  0.0 idle_inject/156\n    953  0.0 migration/156\n    954  0.0 ksoftirqd/156\n    956  0.0 kworker/156:0H-events_highpri\n    957  0.0 cpuhp/157\n    958  0.0 idle_inject/157\n    959  0.0 migration/157\n    960  0.0 ksoftirqd/157\n    962  0.0 kworker/157:0H-events_highpri\n    963  0.0 cpuhp/158\n    964  0.0 idle_inject/158\n    965  0.0 migration/158\n    966  0.0 ksoftirqd/158\n    968  0.0 kworker/158:0H-events_highpri\n    969  0.0 cpuhp/159\n    970  0.0 idle_inject/159\n    971  0.0 migration/159\n    972  0.0 ksoftirqd/159\n    974  0.0 kworker/159:0H-events_highpri\n    975  0.0 cpuhp/160\n    976  0.0 idle_inject/160\n    977  0.0 migration/160\n    978  0.0 ksoftirqd/160\n    980  0.0 kworker/160:0H-events_highpri\n    981  0.0 cpuhp/161\n    982  0.0 idle_inject/161\n    983  0.0 migration/161\n    984  0.0 ksoftirqd/161\n    986  0.0 kworker/161:0H-events_highpri\n    987  0.0 cpuhp/162\n    988  0.0 idle_inject/162\n    989  0.0 migration/162\n    990  0.0 ksoftirqd/162\n    992  0.0 kworker/162:0H-events_highpri\n    993  0.0 cpuhp/163\n    994  0.0 idle_inject/163\n    995  0.0 migration/163\n    996  0.0 ksoftirqd/163\n    998  0.0 kworker/163:0H-events_highpri\n    999  0.0 cpuhp/164\n   1000  0.0 idle_inject/164\n   1001  0.0 migration/164\n   1002  0.0 ksoftirqd/164\n   1004  0.0 kworker/164:0H-events_highpri\n   1005  0.0 cpuhp/165\n   1006  0.0 idle_inject/165\n   1007  0.0 migration/165\n   1008  0.0 ksoftirqd/165\n   1010  0.0 kworker/165:0H-events_highpri\n   1011  0.0 cpuhp/166\n   1012  0.0 idle_inject/166\n   1013  0.0 migration/166\n   1014  0.0 ksoftirqd/166\n   1016  0.0 kworker/166:0H-events_highpri\n   1017  0.0 cpuhp/167\n   1018  0.0 idle_inject/167\n   1019  0.0 migration/167\n   1020  0.0 ksoftirqd/167\n   1022  0.0 kworker/167:0H-events_highpri\n   1023  0.0 cpuhp/168\n   1024  0.0 idle_inject/168\n   1025  0.0 migration/168\n   1026  0.0 ksoftirqd/168\n   1028  0.0 kworker/168:0H-events_highpri\n   1029  0.0 cpuhp/169\n   1030  0.0 idle_inject/169\n   1031  0.0 migration/169\n   1032  0.0 ksoftirqd/169\n   1034  0.0 kworker/169:0H-events_highpri\n   1035  0.0 cpuhp/170\n   1036  0.0 idle_inject/170\n   1037  0.0 migration/170\n   1038  0.0 ksoftirqd/170\n   1040  0.0 kworker/170:0H-events_highpri\n   1041  0.0 cpuhp/171\n   1042  0.0 idle_inject/171\n   1043  0.0 migration/171\n   1044  0.0 ksoftirqd/171\n   1046  0.0 kworker/171:0H-events_highpri\n   1047  0.0 cpuhp/172\n   1048  0.0 idle_inject/172\n   1049  0.0 migration/172\n   1050  0.0 ksoftirqd/172\n   1052  0.0 kworker/172:0H-events_highpri\n   1053  0.0 cpuhp/173\n   1054  0.0 idle_inject/173\n   1055  0.0 migration/173\n   1056  0.0 ksoftirqd/173\n   1058  0.0 kworker/173:0H-events_highpri\n   1059  0.0 cpuhp/174\n   1060  0.0 idle_inject/174\n   1061  0.0 migration/174\n   1062  0.0 ksoftirqd/174\n   1064  0.0 kworker/174:0H-events_highpri\n   1065  0.0 cpuhp/175\n   1066  0.0 idle_inject/175\n   1067  0.0 migration/175\n   1068  0.0 ksoftirqd/175\n   1070  0.0 kworker/175:0H-events_highpri\n   1071  0.0 cpuhp/176\n   1072  0.0 idle_inject/176\n   1073  0.0 migration/176\n   1074  0.0 ksoftirqd/176\n   1076  0.0 kworker/176:0H-events_highpri\n   1077  0.0 cpuhp/177\n   1078  0.0 idle_inject/177\n   1079  0.0 migration/177\n   1080  0.0 ksoftirqd/177\n   1082  0.0 kworker/177:0H-events_highpri\n   1083  0.0 cpuhp/178\n   1084  0.0 idle_inject/178\n   1085  0.0 migration/178\n   1086  0.0 ksoftirqd/178\n   1088  0.0 kworker/178:0H-events_highpri\n   1089  0.0 cpuhp/179\n   1090  0.0 idle_inject/179\n   1091  0.0 migration/179\n   1092  0.0 ksoftirqd/179\n   1094  0.0 kworker/179:0H-events_highpri\n   1095  0.0 cpuhp/180\n   1096  0.0 idle_inject/180\n   1097  0.0 migration/180\n   1098  0.0 ksoftirqd/180\n   1100  0.0 kworker/180:0H-events_highpri\n   1101  0.0 cpuhp/181\n   1102  0.0 idle_inject/181\n   1103  0.0 migration/181\n   1104  0.0 ksoftirqd/181\n   1106  0.0 kworker/181:0H-events_highpri\n   1107  0.0 cpuhp/182\n   1108  0.0 idle_inject/182\n   1109  0.0 migration/182\n   1110  0.0 ksoftirqd/182\n   1112  0.0 kworker/182:0H-events_highpri\n   1113  0.0 cpuhp/183\n   1114  0.0 idle_inject/183\n   1115  0.0 migration/183\n   1116  0.0 ksoftirqd/183\n   1118  0.0 kworker/183:0H-events_highpri\n   1119  0.0 cpuhp/184\n   1120  0.0 idle_inject/184\n   1121  0.0 migration/184\n   1122  0.0 ksoftirqd/184\n   1124  0.0 kworker/184:0H-events_highpri\n   1125  0.0 cpuhp/185\n   1126  0.0 idle_inject/185\n   1127  0.0 migration/185\n   1128  0.0 ksoftirqd/185\n   1130  0.0 kworker/185:0H-events_highpri\n   1131  0.0 cpuhp/186\n   1132  0.0 idle_inject/186\n   1133  0.0 migration/186\n   1134  0.0 ksoftirqd/186\n   1136  0.0 kworker/186:0H-events_highpri\n   1137  0.0 cpuhp/187\n   1138  0.0 idle_inject/187\n   1139  0.0 migration/187\n   1140  0.0 ksoftirqd/187\n   1142  0.0 kworker/187:0H-events_highpri\n   1143  0.0 cpuhp/188\n   1144  0.0 idle_inject/188\n   1145  0.0 migration/188\n   1146  0.0 ksoftirqd/188\n   1148  0.0 kworker/188:0H-events_highpri\n   1149  0.0 cpuhp/189\n   1150  0.0 idle_inject/189\n   1151  0.0 migration/189\n   1152  0.0 ksoftirqd/189\n   1154  0.0 kworker/189:0H-events_highpri\n   1155  0.0 cpuhp/190\n   1156  0.0 idle_inject/190\n   1157  0.0 migration/190\n   1158  0.0 ksoftirqd/190\n   1160  0.0 kworker/190:0H-events_highpri\n   1161  0.0 cpuhp/191\n   1162  0.0 idle_inject/191\n   1163  0.0 migration/191\n   1164  0.0 ksoftirqd/191\n   1166  0.0 kworker/191:0H-events_highpri\n   1179  0.0 kdevtmpfs\n   1180  0.0 kworker/R-inet_\n   1182  0.0 kauditd\n   1187  0.0 khungtaskd\n   1189  0.0 oom_reaper\n   1190  0.0 kworker/R-write\n   1191  1.1 kcompactd0\n   1192  0.0 ksmd\n   1193  0.0 khugepaged\n   1194  0.0 kworker/R-kinte\n   1195  0.0 kworker/R-kbloc\n   1196  0.0 kworker/R-blkcg\n   1197  0.0 irq/9-acpi\n   1198  0.0 kworker/R-tpm_d\n   1199  0.0 kworker/R-ata_s\n   1200  0.0 kworker/R-md\n   1201  0.0 kworker/R-md_bi\n   1202  0.0 kworker/R-edac-\n   1204  0.0 kworker/R-devfr\n   1205  0.0 watchdogd\n   1207  0.0 kworker/1:1H-kblockd\n   1208  0.1 kswapd0\n   1209  0.0 ecryptfs-kthread\n   1210  0.0 kworker/R-kthro\n   1211  0.0 irq/55-pciehp\n   1212  0.0 irq/57-pciehp\n   1401  0.0 kworker/R-acpi_\n   1405  0.0 kworker/R-mld\n   1406  0.0 kworker/166:1H-kblockd\n   1407  0.0 kworker/R-ipv6_\n   1414  0.0 kworker/R-kstrp\n   1416  0.0 kworker/u397:0-hci1\n   1417  0.0 kworker/u398:0\n   1418  0.0 kworker/u399:0\n   1419  0.0 kworker/u400:0\n   1420  0.0 kworker/u401:0\n   1421  0.0 kworker/u402:0\n   1422  0.0 kworker/u403:0\n   1423  0.0 kworker/u404:0\n   1424  0.0 kworker/u405:0\n   1425  0.0 kworker/u406:0\n   1426  0.0 kworker/u407:0\n   1427  0.0 kworker/u408:0\n   1428  0.0 kworker/u409:0\n   1434  0.0 kworker/R-crypt\n   1446  0.0 kworker/R-charg\n   1472  0.0 kworker/49:1H-kblockd\n   1476  0.0 kworker/159:1H-kblockd\n   1477  0.0 kworker/111:1H-kblockd\n   1494  0.0 kworker/3:1H-kblockd\n   1495  0.0 kworker/40:1H-kblockd\n   1561  0.0 kworker/158:1H-kblockd\n   1562  0.0 kworker/156:1H-kblockd\n   1563  0.0 kworker/59:1H-kblockd\n   1564  0.0 kworker/157:1H-kblockd\n   1565  0.0 kworker/144:1H-kblockd\n   1566  0.0 kworker/152:1H-kblockd\n   1567  0.0 kworker/154:1H-kblockd\n   1568  0.0 kworker/191:1H-kblockd\n   1569  0.0 kworker/60:1H-kblockd\n   1570  0.0 kworker/175:1H-kblockd\n   1571  0.0 kworker/126:1H-kblockd\n   1572  0.0 kworker/61:1H-kblockd\n   1573  0.0 kworker/33:1H-kblockd\n   1574  0.0 kworker/160:1H-kblockd\n   1575  0.0 kworker/2:1H-kblockd\n   1576  0.0 kworker/135:1H-kblockd\n   1577  0.0 kworker/103:1H-kblockd\n   1578  0.0 kworker/58:1H-kblockd\n   1579  0.0 kworker/24:1H-kblockd\n   1580  0.0 kworker/127:1H-kblockd\n   1581  0.0 kworker/99:1H-kblockd\n   1582  0.0 kworker/155:1H-kblockd\n   1583  0.0 kworker/97:1H-kblockd\n   1584  0.0 kworker/5:1H-kblockd\n   1585  0.0 kworker/16:1H-kblockd\n   1586  0.0 kworker/63:1H-kblockd\n   1587  0.0 kworker/6:1H-kblockd\n   1588  0.0 kworker/32:1H-kblockd\n   1589  0.0 kworker/17:1H-kblockd\n   1590  0.0 kworker/101:1H-kblockd\n   1591  0.0 kworker/98:1H-kblockd\n   1592  0.0 kworker/25:1H-kblockd\n   1593  0.0 kworker/100:1H-kblockd\n   1594  0.0 kworker/102:1H-kblockd\n   1595  0.0 kworker/88:1H-kblockd\n   1596  0.0 kworker/34:1H-kblockd\n   1597  0.0 kworker/96:1H-kblockd\n   1599  0.0 kworker/4:1H-kblockd\n   1601  0.0 kworker/R-nvme-\n   1602  0.0 kworker/R-nvme-\n   1603  0.0 kworker/R-nvme-\n   1604  0.0 kworker/R-nvme-\n   1605  0.0 kworker/R-atlan\n   1606  0.0 scsi_eh_0\n   1607  0.0 kworker/R-scsi_\n   1608  0.0 scsi_eh_1\n   1609  0.0 kworker/R-scsi_\n   1613  0.0 scsi_eh_2\n   1614  0.0 kworker/R-scsi_\n   1615  0.0 scsi_eh_3\n   1616  0.0 kworker/R-scsi_\n   1617  0.0 scsi_eh_4\n   1618  0.0 kworker/R-scsi_\n   1619  0.0 scsi_eh_5\n   1620  0.0 kworker/R-scsi_\n   1621  0.0 scsi_eh_6\n   1622  0.0 kworker/R-scsi_\n   1624  0.0 scsi_eh_7\n   1625  0.0 kworker/R-scsi_\n   1642  0.0 kworker/72:1H-kblockd\n   1643  0.0 kworker/183:1H-kblockd\n   1644  0.0 kworker/89:1H-kblockd\n   1645  0.0 kworker/0:1H-kblockd\n   1646  0.0 kworker/90:1H-kblockd\n   1647  0.0 kworker/57:1H-kblockd\n   1648  0.0 kworker/56:1H-kblockd\n   1649  0.0 kworker/145:1H-kblockd\n   1650  0.0 kworker/146:1H-kblockd\n   1651  0.0 kworker/80:1H-kblockd\n   1652  0.0 kworker/147:1H-kblockd\n   1653  0.0 kworker/119:1H-kblockd\n   1654  0.0 kworker/8:1H-kblockd\n   1655  0.0 kworker/9:1H-kblockd\n   1656  0.0 kworker/174:1H-kblockd\n   1657  0.0 kworker/18:1H-kblockd\n   1658  0.0 kworker/161:1H-kblockd\n   1659  0.0 kworker/162:1H-kblockd\n   1660  0.0 kworker/10:1H-kblockd\n   1662  0.0 kworker/19:1H-kblockd\n   1665  0.0 kworker/47:1H-kblockd\n   1691  0.0 kworker/41:1H-kblockd\n   1698  0.0 kworker/35:1H-kblockd\n   1711  0.0 kworker/28:1H-kblockd\n   1713  0.0 kworker/26:1H-kblockd\n   1714  0.0 kworker/36:1H-kblockd\n   1715  0.0 kworker/20:1H\n   1716  0.0 kworker/37:1H-kblockd\n   1717  0.0 kworker/44:1H-kblockd\n   1718  0.0 kworker/136:1H-kblockd\n   1719  0.0 kworker/130:1H-kblockd\n   1720  0.0 kworker/81:1H-kblockd\n   1721  0.0 kworker/38:1H-kblockd\n   1722  0.0 kworker/91:1H-kblockd\n   1723  0.0 kworker/43:1H-kblockd\n   1746  0.0 kworker/131:1H-kblockd\n   1749  0.0 kworker/31:1H-kblockd\n   1752  0.0 kworker/64:1H-kblockd\n   1758  0.0 kworker/104:1H-kblockd\n   1759  0.0 kworker/R-raid5\n   1762  0.0 kworker/79:1H-kblockd\n   1765  0.0 kworker/95:1H-kblockd\n   1770  0.0 kworker/137:1H-kblockd\n   1777  3.6 plymouthd\n   1790  0.0 kworker/153:1H-kblockd\n   1995  0.0 jbd2/nvme2n1p3-8\n   1996  0.0 kworker/R-ext4-\n   2052  0.0 kworker/13:1H-kblockd\n   2059  0.0 kworker/179:1H-kblockd\n   2061  0.0 kworker/190:1H-kblockd\n   2067  0.0 systemd-journal\n   2069  0.0 kworker/73:1H-kblockd\n   2071  0.0 kworker/180:1H-kblockd\n   2076  0.0 kworker/132:1H-kblockd\n   2082  0.0 kworker/15:1H-kblockd\n   2084  0.0 kworker/184:1H-kblockd\n   2097  0.0 kworker/124:1H-kblockd\n   2105  0.0 kworker/R-rpcio\n   2106  0.0 kworker/R-xprti\n   2111  0.0 kworker/21:1H-kblockd\n   2117  0.0 kworker/148:1H-kblockd\n   2118  0.0 kworker/185:1H-kblockd\n   2119  0.0 systemd-udevd\n   2120  0.0 kworker/50:1H-kblockd\n   2139  0.0 kworker/48:1H-kblockd\n   2152  0.0 psimon\n   2167  0.0 kworker/11:1H-kblockd\n   2172  0.0 kworker/12:1H-kblockd\n   2174  0.0 kworker/14:1H-kblockd\n   2175  0.0 kworker/106:1H-kblockd\n   2181  0.0 kworker/105:1H-kblockd\n   2182  0.0 kworker/42:1H-kblockd\n   2183  0.0 kworker/78:1H-kblockd\n   2184  0.0 kworker/84:1H-kblockd\n   2185  0.0 kworker/66:1H-kblockd\n   2186  0.0 kworker/30:1H-kblockd\n   2187  0.0 kworker/54:1H-kblockd\n   2189  0.0 kworker/163:1H-kblockd\n   2192  0.0 kworker/107:1H-kblockd\n   2194  0.0 kworker/108:1H-kblockd\n   2196  0.0 kworker/51:1H-kblockd\n   2197  0.0 kworker/68:1H-kblockd\n   2198  0.0 kworker/149:1H-kblockd\n   2199  0.0 kworker/133:1H-kblockd\n   2201  0.0 kworker/109:1H-kblockd\n   2202  0.0 kworker/52:1H-kblockd\n   2203  0.0 kworker/53:1H-kblockd\n   2208  0.0 kworker/120:1H-kblockd\n   2236  0.0 kworker/65:1H-kblockd\n   2238  0.0 kworker/186:1H-kblockd\n   2244  0.0 kworker/87:1H-kblockd\n   2260  0.0 kworker/45:1H-kblockd\n   2307  0.0 kworker/27:1H-kblockd\n   2309  0.0 kworker/110:1H-kblockd\n   2310  0.0 kworker/70:1H-kblockd\n   2315  0.0 kworker/82:1H-kblockd\n   2359  0.0 kworker/170:1H-kblockd\n   2366  0.0 kworker/134:1H-kblockd\n   2368  0.0 kworker/76:1H-kblockd\n   2370  0.0 kworker/92:1H-kblockd\n   2375  0.0 kworker/173:1H-kblockd\n   2380  0.0 kworker/115:1H-kblockd\n   2384  0.0 kworker/176:1H-kblockd\n   2387  0.0 kworker/62:1H-kblockd\n   2393  0.0 kworker/93:1H-kblockd\n   2395  0.0 kworker/181:1H-kblockd\n   2399  0.0 kworker/150:1H-kblockd\n   2401  0.0 kworker/177:1H-kblockd\n   2404  0.0 kworker/178:1H-kblockd\n   2405  0.0 kworker/151:1H-kblockd\n   2406  0.0 kworker/55:1H-kblockd\n   2407  0.0 kworker/143:1H-kblockd\n   2408  0.0 kworker/69:1H-kblockd\n   2409  0.0 kworker/118:1H-kblockd\n   2410  0.0 kworker/182:1H-kblockd\n   2413  0.0 kworker/75:1H-kblockd\n   2414  0.0 kworker/67:1H-kblockd\n   2427  0.0 kworker/189:1H-kblockd\n   2429  0.0 kworker/187:1H-kblockd\n   2444  0.0 kworker/164:1H-kblockd\n   2452  0.0 kworker/141:1H-kblockd\n   2456  0.0 kworker/167:1H-kblockd\n   2460  0.0 kworker/7:1H-kblockd\n   2467  0.0 kworker/71:1H-kblockd\n   2468  0.0 kworker/46:1H-kblockd\n   2469  0.0 kworker/165:1H-kblockd\n   2472  0.0 kworker/22:1H-kblockd\n   2474  0.0 kworker/171:1H-kblockd\n   2477  0.0 kworker/112:1H-kblockd\n   2478  0.0 kworker/117:1H-kblockd\n   2479  0.0 kworker/114:1H-kblockd\n   2481  0.0 kworker/113:1H-kblockd\n   2483  0.0 kworker/23:1H-kblockd\n   2485  0.0 kworker/138:1H-kblockd\n   2486  0.0 kworker/116:1H-kblockd\n   2487  0.0 kworker/140:1H-kblockd\n   2488  0.0 kworker/139:1H-kblockd\n   2489  0.0 kworker/142:1H-kblockd\n   2503  0.0 kworker/122:1H-kblockd\n   2507  0.0 kworker/121:1H-kblockd\n   2512  0.0 kworker/74:1H-kblockd\n   2514  0.0 kworker/94:1H-kblockd\n   2528  0.0 kworker/29:1H-kblockd\n   2541  0.0 kworker/39:1H-kblockd\n   2546  0.0 jbd2/nvme1n1p1-8\n   2548  0.0 kworker/R-ext4-\n   2554  0.0 kworker/188:1H-kblockd\n   2555  0.0 kworker/128:1H-kblockd\n   2557  0.0 kworker/125:1H-kblockd\n   2560  0.0 kworker/83:1H-kblockd\n   2561  0.0 kworker/85:1H-kblockd\n   2576  0.0 kworker/R-cfg80\n   2586  0.0 kworker/123:1H-kblockd\n   2587  0.0 nv_queue\n   2588  0.0 nv_queue\n   2589  0.0 nv_open_q\n   2602  0.0 kworker/169:1H-kblockd\n   2603  0.0 jbd2/sda-8\n   2610  0.0 kworker/77:1H-kblockd\n   2611  0.0 kworker/168:1H-kblockd\n   2612  0.0 kworker/129:1H-kblockd\n   2621  0.0 kworker/u397:1-hci1\n   2630  0.0 kworker/R-ext4-\n   2634  0.0 nv_open_q\n   2636  0.0 kworker/172:1H-kblockd\n   2650  0.0 kworker/86:1H-kblockd\n   2811  0.0 nvidia-modeset/kthread_q\n   2812  0.0 nvidia-modeset/deferred_close_kthread_q\n   2820  0.0 irq/359-nvidia\n   2821  0.0 nvidia\n   2822  0.0 nv_queue\n   2847  0.0 jbd2/nvme0n1p1-8\n   2848  0.0 kworker/R-ext4-\n   2849  0.0 irq/360-nvidia\n   2850  0.0 nvidia\n   2851  0.0 nv_queue\n   3078  0.0 rpcbind\n   3079  0.0 systemd-oomd\n   3080  0.2 systemd-resolve\n   3081  0.0 systemd-timesyn\n   3083  0.0 auditd\n   3096  0.0 blkmapd\n   3098  0.0 nfsdcld\n   3202  0.0 accounts-daemon\n   3204  0.0 avahi-daemon\n   3205  0.0 bluetoothd\n   3206  0.0 dbus-daemon\n   3211  0.0 fsidd\n   3213  0.0 gnome-remote-de\n   3222  0.0 polkitd\n   3228  0.0 power-profiles-\n   3246  0.0 switcheroo-cont\n   3252  0.0 systemd-logind\n   3254  0.0 systemd-machine\n   3257  0.0 udisksd\n   3259  0.0 virtlockd\n   3260  0.0 virtlogd\n   3293  0.0 avahi-daemon\n   3305  0.0 NetworkManager\n   3309  0.0 wpa_supplicant\n   3355  0.0 rsyslogd\n   3440  0.0 ModemManager\n   3443  0.0 boltd\n   3892  0.0 RTW_CMD_THREAD\n   3898  0.0 node\n   3907  0.0 bash\n   3921  0.7 tailscaled\n   3924  0.0 unattended-upgr\n   3927  0.1 containerd\n   3949  0.0 sshd\n   3962  0.0 colord\n   4145  0.0 UVM global queue\n   4149  0.0 UVM deferred release queue\n   4152  0.0 UVM Tools Event Queue\n   4171  0.0 mariadbd\n   4585  0.0 dockerd\n   4593  0.0 rpc.idmapd\n   4596  0.0 rpc.statd\n   4599  0.0 rpc.mountd\n   4605  0.0 munged\n   4629  0.0 cron\n   4632  0.1 slurmctld\n   4633  0.0 lockd\n   4650  0.0 slurmscriptd\n   4662  0.0 kerneloops\n   4686  0.0 slurmdbd\n   4692  0.0 slurmstepd\n   4708  0.0 plymouth\n   4715  0.0 kerneloops\n   4717  0.0 systemd\n   4740  0.0 kworker/R-ipmi-\n   4748  0.0 (sd-pam)\n   4749  0.0 slurmd\n   4799  0.0 nfsd\n   4800  0.0 nfsd\n   4801  0.0 nfsd\n   4802  0.0 nfsd\n   4803  0.0 nfsd\n   4804  0.0 nfsd\n   4805  0.0 nfsd\n   4806  0.0 nfsd\n   4860  0.0 gdm3\n   4883  0.0 gdm-session-wor\n   4893  0.0 systemd\n   4894  0.0 irq/86-eno1\n   4899  0.0 kworker/R-dio/n\n   4900  0.0 (sd-pam)\n   4909  0.0 pipewire\n   4910  0.0 pipewire\n   4911  0.0 wireplumber\n   4912  0.0 pipewire-pulse\n   4917  0.0 dbus-daemon\n   4919  0.0 irq/342-enp72s0\n   4929  0.0 rtkit-daemon\n   4938  0.0 dnsmasq\n   4939  0.0 dnsmasq\n   4966  0.0 pipewire\n   4967  0.0 pipewire\n   4969  0.0 wireplumber\n   4970  0.0 gdm-x-session\n   4971  0.0 pipewire-pulse\n   4973  0.0 Xorg\n   4979  0.0 dbus-daemon\n   5028  0.0 xdg-document-po\n   5033  0.0 xdg-permission-\n   5040  0.0 fusermount3\n   5235  0.0 dbus-run-sessio\n   5236  0.0 dbus-daemon\n   5241  0.0 gnome-session-b\n   5261  0.0 at-spi-bus-laun\n   5267  0.0 dbus-daemon\n   5320  0.2 gnome-shell\n   5375  0.0 krfcommd\n   5380  0.0 nvidia-drm/timeline-a\n   5426  0.0 mutter-x11-fram\n   5439  0.0 at-spi2-registr\n   5465  0.0 xdg-permission-\n   5482  0.0 gjs\n   5492  0.0 gsd-sharing\n   5493  0.0 gsd-wacom\n   5495  0.0 ibus-daemon\n   5496  0.0 gsd-color\n   5499  0.0 upowerd\n   5502  0.0 gsd-keyboard\n   5510  0.0 gsd-print-notif\n   5518  0.0 gsd-rfkill\n   5524  0.0 gsd-smartcard\n   5531  0.0 gsd-datetime\n   5539  0.0 gsd-media-keys\n   5544  0.0 gsd-screensaver\n   5547  0.0 gsd-sound\n   5555  0.0 gsd-a11y-settin\n   5560  0.0 gsd-housekeepin\n   5566  0.0 gsd-power\n   5572  0.0 ibus-dconf\n   5592  0.0 ibus-x11\n   5598  0.0 ibus-portal\n   5626  0.0 gsd-printer\n   5688  0.0 ibus-engine-sim\n   5721  0.0 dconf-service\n   5725  0.0 gjs\n   6463  0.0 kworker/R-tls-s\n   6588  1.4 tmux: server\n   6589  0.0 bash\n   6891  0.0 xdg-document-po\n   6895  0.0 xdg-permission-\n   6902  0.0 fusermount3\n   7124  0.0 gnome-keyring-d\n   7125  0.0 gnome-keyring-d\n   7459  0.0 bash\n  13962  0.0 RepeatModeler\n  13965  0.0 Refiner\n  14099  0.0 sh\n  14102 99.9 rmblastn\n  17605  0.0 codex\n  18609  0.0 bash\n  19839  0.0 bash\n  26497  0.0 kworker/113:0-mm_percpu_wq\n  38220  0.0 kworker/0:0-events\n  45149  0.0 kworker/131:1-mm_percpu_wq\n  63242  0.0 kworker/115:1-mm_percpu_wq\n  66508  0.0 kworker/19:0\n  67956  0.0 kworker/17:1\n 100645  0.2 codex\n 124576  0.0 kworker/168:2\n 168717  0.0 kworker/171:1-events\n 196029  0.0 kworker/88:1-mm_percpu_wq\n 198604  0.0 kworker/188:1-mm_percpu_wq\n 198750  0.0 kworker/u396:0-writeback\n 202884  0.0 kworker/u391:3-events_unbound\n 203767  0.0 kworker/189:1-mm_percpu_wq\n 205035  0.0 kworker/127:0-mm_percpu_wq\n 230164  0.0 bash\n 230165  0.0 bash\n 230166  0.0 conda\n 230167  0.0 conda\n 230168  0.0 bash\n 230169  0.0 bash\n 230191 96.6 python\n 230192 94.0 python\n 231323  0.0 vidmem lazy free\n 231324  0.0 UVM GPU1 BH\n 231325  0.0 UVM GPU1 KC\n 231329  0.0 vidmem lazy free\n 231330  0.0 UVM GPU2 BH\n 231331  0.0 UVM GPU2 KC\n 234145  0.0 kworker/u391:0-events_unbound\n 245525  0.0 kworker/0:2-cgroup_destroy\n 247785  0.0 sh\n 247786 99.9 rmblastn\n 248390  0.0 kworker/122:0-cgroup_destroy\n 249537  0.0 kworker/94:1-mm_percpu_wq\n 250439  0.0 kworker/53:0-cgroup_destroy\n 252085  0.0 kworker/u386:4-flush-259:6\n 252166  0.0 kworker/u396:3-events_unbound\n 252616  0.0 kworker/191:0-mm_percpu_wq\n 252930  0.0 kworker/190:0\n 253749  0.0 RepeatModeler\n 253752  0.0 Refiner\n 253849  0.0 sh\n 253850 99.9 rmblastn\n 254624  0.0 kworker/186:0\n 254657  0.0 kworker/89:0\n 254766  0.0 kworker/95:2-mm_percpu_wq\n 256064  0.0 kworker/184:1-mm_percpu_wq\n 256161  0.0 kworker/187:1-mm_percpu_wq\n 256584  0.0 kworker/188:2\n 256987  0.0 kworker/92:1-mm_percpu_wq\n 257186  0.0 kworker/25:0-cgroup_destroy\n 257246  0.0 kworker/93:2-mm_percpu_wq\n 257646  0.0 kworker/88:2-mm_percpu_wq\n 258262  0.0 kworker/185:0-mm_percpu_wq\n 258418  0.0 kworker/90:0\n 258537  0.0 kworker/91:0\n 258899  0.0 kworker/u396:1-events_unbound\n 263071  0.0 kworker/189:2-cgroup_destroy\n 266366  0.0 kworker/u387:1-flush-259:6\n 268401  0.0 kworker/174:0-mm_percpu_wq\n 269229  0.0 kworker/5:2-mm_percpu_wq\n 270821  0.0 kworker/134:2\n 270822  0.0 kworker/u388:2-flush-259:6\n 270951  0.0 kworker/44:1-mm_percpu_wq\n 271277  0.0 kworker/138:1-events\n 273882  0.0 kworker/141:1\n 274240  0.0 kworker/46:0-cgroup_destroy\n 274843  0.0 kworker/45:2\n 274982  0.0 kworker/142:2-mm_percpu_wq\n 276750  0.0 kworker/140:2\n 279533  0.0 kworker/32:0-events\n 279599  0.0 kworker/u391:1-events_unbound\n 303627  0.0 kworker/176:0\n 305872  0.0 kworker/4:0-cgroup_destroy\n 307447  0.0 kworker/135:0\n 310624  0.0 kworker/46:2-mm_percpu_wq\n 311054  0.0 slurmstepd\n 311057  0.0 bash\n 311059  0.0 python\n 311115  0.0 RepeatModeler\n 316598  0.0 kworker/102:0-cgroup_destroy\n 316761  0.0 kworker/36:1-events\n 317483  0.0 kworker/6:1-mm_percpu_wq\n 325641  0.0 RepeatModeler\n 325643  0.2 Refiner\n 325819  0.0 kworker/0:1-mm_percpu_wq\n 327125  0.0 kworker/14:0-mm_percpu_wq\n 328072  0.0 kworker/99:0-cgroup_destroy\n 328090  0.0 kworker/96:2\n 328692  0.0 kworker/79:2-mm_percpu_wq\n 332115  0.0 kworker/9:1-mm_percpu_wq\n 337332  0.0 kworker/8:0-mm_percpu_wq\n 344907  0.0 kworker/u390:3-flush-259:1\n 368962  0.6 codex\n 372387  0.0 kworker/47:0-mm_percpu_wq\n 379982  0.0 slurmstepd\n 379985  0.0 bash\n 379987  0.0 python\n 380003  0.0 RepeatModeler\n 381776  0.0 kworker/112:1-cgroup_destroy\n 383821  0.0 sh\n 383823 99.9 rmblastn\n 384081  0.0 kworker/12:1-mm_percpu_wq\n 384607  0.0 kworker/10:1-mm_percpu_wq\n 385106  0.0 kworker/108:2-mm_percpu_wq\n 386119  0.0 kworker/136:1-mm_percpu_wq\n 386316  0.0 kworker/106:1-mm_percpu_wq\n 386530  0.0 kworker/13:0\n 387330  0.0 kworker/41:0-mm_percpu_wq\n 388481  0.3 codex\n 389325  0.0 kworker/103:0-cgroup_destroy\n 389644  0.0 kworker/11:0-mm_percpu_wq\n 389724  0.0 kworker/104:0-cgroup_destroy\n 389999  0.0 kworker/109:1\n 390340  0.0 kworker/111:0-mm_percpu_wq\n 390704  0.0 python\n 390860  0.0 kworker/u395:2-events_unbound\n 391364  0.0 kworker/15:0-mm_percpu_wq\n 391483  0.0 kworker/9:2\n 391932  0.0 sh\n 391933  794 rmblastn\n 392039  0.0 kworker/u385:2-iou_exit\n 392141  0.0 kworker/u384:1-ext4-rsv-conversion\n 392287  0.0 kworker/u386:1-iou_exit\n 392312  0.0 kworker/50:1-mm_percpu_wq\n 392879  0.0 kworker/72:2-events\n 393607  0.0 kworker/110:1-cgroup_destroy\n 394175  0.0 kworker/107:2-mm_percpu_wq\n 394185  0.0 kworker/97:2-mm_percpu_wq\n 394486  0.0 kworker/7:1-cgroup_destroy\n 395130  0.0 kworker/2:1\n 395467  0.0 slurmstepd\n 395480  0.0 bash\n 395485  0.0 python\n 395595  0.0 kworker/49:1-mm_percpu_wq\n 395979  0.0 kworker/31:1-events\n 396192  0.0 kworker/u390:0-flush-259:6\n 396439  0.0 kworker/84:2-cgroup_destroy\n 397052  0.4 RepeatModeler\n 397387  0.0 kworker/145:0-mm_percpu_wq\n 397614  0.0 psimon\n 398447  0.0 kworker/3:0\n 398626  0.0 kworker/179:1-cgroup_destroy\n 398771  0.0 kworker/147:2-mm_percpu_wq\n 400043  0.0 kworker/121:0\n 400885  0.0 kworker/183:1-mm_percpu_wq\n 401013  0.0 kworker/177:2-mm_percpu_wq\n 401310  0.0 kworker/u395:0-events_unbound\n 401311  0.0 kworker/80:0-cgroup_destroy\n 401545  0.0 kworker/182:0-cgroup_destroy\n 402299  0.0 kworker/138:0-mm_percpu_wq\n 402331  0.0 kworker/146:0-mm_percpu_wq\n 402440  0.0 kworker/43:0-cgroup_destroy\n 402466  0.0 kworker/148:0-mm_percpu_wq\n 402667  0.0 kworker/150:2\n 402676  0.0 kworker/48:1-mm_percpu_wq\n 402767  0.0 kworker/78:2-mm_percpu_wq\n 402785  0.0 kworker/100:0-cgroup_destroy\n 403057  0.0 kworker/u384:0-ext4-rsv-conversion\n 404831  0.0 kworker/180:0-mm_percpu_wq\n 404956  0.0 sh\n 404957  776 rmblastn\n 409952  0.6 claude\n 416517  0.0 python\n 416519 62.2 python\n 418348  0.0 kworker/45:1-mm_percpu_wq\n 425506  0.0 kworker/117:2-mm_percpu_wq\n 428556  0.0 kworker/u394:0\n 428558  0.0 kworker/101:2-cgroup_destroy\n 431458  0.0 kworker/90:1-mm_percpu_wq\n 431798  0.0 kworker/57:2\n 432981  0.0 kworker/94:0-mm_percpu_wq\n 433016  0.0 kworker/181:1\n 440663  0.0 kworker/102:2\n 443679  0.0 kworker/51:1-mm_percpu_wq\n 444000  0.0 kworker/u390:2-flush-259:6\n 446536  0.0 kworker/1:0-cgroup_destroy\n 447810  0.0 kworker/124:2\n 449506  0.0 kworker/98:1-cgroup_destroy\n 450025  0.0 kworker/41:1-cgroup_destroy\n 457894  0.0 kworker/87:0\n 462925  0.0 kworker/u386:0-flush-259:6\n 463997  0.0 kworker/u385:0-events_unbound\n 466491  0.0 kworker/28:2\n 467254  0.0 kworker/24:2\n 469010  0.0 kworker/86:0-mm_percpu_wq\n 469427  0.0 kworker/120:0-mm_percpu_wq\n 471472  0.0 kworker/139:0-cgroup_destroy\n 472873  0.0 kworker/141:2-mm_percpu_wq\n 474277  0.0 claude.exe\n 474289  1.0 claude.exe\n 474883  0.0 claude.exe\n 475875  0.0 kworker/42:0-cgroup_destroy\n 478955  0.0 kworker/137:1-cgroup_destroy\n 479847  0.0 kworker/31:2-events\n 485465  0.0 kworker/82:2-cgroup_destroy\n 485851  0.0 kworker/143:2-mm_percpu_wq\n 485965  0.0 kworker/83:0-mm_percpu_wq\n 486765  0.0 kworker/169:2-events\n 490847  0.0 sh\n 490848  793 rmblastn\n 491629  0.0 kworker/8:2\n 491891  0.0 kworker/81:2-cgroup_destroy\n 493045  0.0 kworker/34:2\n 493721  0.0 kworker/40:1-events\n 493884  0.0 kworker/183:0-events\n 496951  0.0 kworker/122:2-mm_percpu_wq\n 498163  0.0 kworker/178:1-cgroup_destroy\n 499684  0.0 kworker/105:0\n 500295  0.0 kworker/172:1-mm_percpu_wq\n 502082  0.0 kworker/43:2-events\n 502083  0.0 kworker/173:2-mm_percpu_wq\n 510499  0.0 node\n 510526  0.0 codex\n 510866  0.0 kworker/175:0\n 514631  0.0 kworker/142:0-mm_percpu_wq\n 514936  0.0 kworker/155:1-cgroup_destroy\n 516061  0.0 kworker/u387:0-writeback\n 517740  0.0 kworker/79:0\n 519434  0.0 kworker/18:0\n 519537  0.0 kworker/85:0\n 522983  0.0 kworker/144:2\n 525558  0.0 kworker/146:2-mm_percpu_wq\n 525879  0.0 kworker/76:0-mm_percpu_wq\n 527240  0.0 kworker/49:0\n 529988  0.0 kworker/u395:3-events_unbound\n 531544  0.0 kworker/184:0-mm_percpu_wq\n 531792  0.0 kworker/160:1-mm_percpu_wq\n 532552  0.0 sh\n 532554  789 rmblastn\n 534127  0.0 kworker/u391:2-events_unbound\n 537004  0.0 kworker/139:2-cgroup_destroy\n 544528  0.0 kworker/174:1\n 545158  0.0 kworker/31:0-mm_percpu_wq\n 546313  0.0 kworker/64:0-events\n 546374  0.0 kworker/u385:1-events_power_efficient\n 546375  0.0 kworker/u385:3\n 548684  0.0 kworker/106:0\n 549183  0.0 kworker/77:1-mm_percpu_wq\n 550681  0.0 kworker/107:1-cgroup_destroy\n 551708  0.0 mafft\n 556251  0.0 kworker/48:2\n 556273  0.0 kworker/145:1-mm_percpu_wq\n 559114  0.0 kworker/29:0\n 559398  0.0 kworker/137:2-cgroup_destroy\n 562383  0.0 kworker/138:2\n 562714 99.1 dvtditr\n 564244  0.0 slurmstepd\n 564249 36.3 python\n 573151  0.0 kworker/97:1-mm_percpu_wq\n 573915  0.0 time\n 573916  100 python\n 575274  0.0 kworker/u390:1-events_power_efficient\n 576025  0.0 sh\n 576028  793 rmblastn\n 577510  0.0 kworker/103:2-cgroup_destroy\n 579231  0.0 sleep\n 579484  0.0 kworker/u390:4-events_unbound\n 579608  0.0 kworker/136:2-mm_percpu_wq\n 580643  0.0 mafft\n 581294  0.0 slurmstepd\n 581297 99.9 python\n 582059 99.6 dvtditr\n 582125  0.0 kworker/6:2\n 585504  0.1 mafft\n 585735  0.0 kworker/98:0\n 585783 99.7 tbfast\n 586277  0.0 kworker/39:1-cgroup_destroy\n 587208  0.0 sh\n 587212  800 rmblastn\n 587364  0.3 mafft\n 587575 99.9 tbfast\n 587643  0.0 kworker/99:2-cgroup_destroy\n 587787  0.2 mafft\n 587865  0.0 kworker/21:2-mm_percpu_wq\n 588166  0.2 mafft\n 588367  100 tbfast\n 589595  0.0 kworker/u384:2\n 589700  0.4 mafft\n 589872 99.7 tbfast\n 589956  100 FastTree\n 590017  0.5 mafft\n 590232  100 tbfast\n 590387  0.6 mafft\n 590490  0.0 kworker/20:2-events\n 590508  101 tbfast\n 590832  1.1 mafft\n 590937  1.3 mafft\n 591097  104 tbfast\n 591213  2.0 mafft\n 591426  107 tbfast\n 591465  108 dvtditr\n 591468  1.6 sh\n 591469  108 dvtditr\n 591470  835 rmblastn\n 591486  115 FastTree\n 591491 25.0 mafft\n 591538 1300 ps\n 591571  0.0 FastTree\n 620955  0.0 slurmstepd\n 620958  0.0 bash\n 620960  0.0 python\n 621259  0.0 RepeatModeler\n 624499  0.0 kworker/73:1-mm_percpu_wq\n 660921  0.0 kworker/40:2-events\n 661822  0.0 kworker/120:2-mm_percpu_wq\n 667859  0.0 kworker/35:1-mm_percpu_wq\n 669142  0.0 kworker/14:2-mm_percpu_wq\n 679879  0.0 kworker/110:0-mm_percpu_wq\n 681126  0.0 python\n 690574  0.0 kworker/24:0-mm_percpu_wq\n 690761  0.0 kworker/27:0-mm_percpu_wq\n 694756  0.0 kworker/12:2-events\n 695404  0.0 kworker/15:1-events\n 697132  0.0 kworker/116:0-mm_percpu_wq\n 712410  0.0 kworker/162:1-mm_percpu_wq\n 714894  0.0 kworker/123:0-mm_percpu_wq\n 724914  0.0 kworker/13:2-mm_percpu_wq\n 725606  0.0 kworker/98:2-events\n 726387  0.0 kworker/118:2-mm_percpu_wq\n 726389  0.0 kworker/22:0-mm_percpu_wq\n 729764  0.0 kworker/133:0-cgroup_destroy\n 730444  0.0 kworker/185:2-mm_percpu_wq\n 741647  0.0 kworker/57:0-mm_percpu_wq\n 742326  0.0 kworker/109:2-mm_percpu_wq\n 742902  0.0 kworker/47:2-cgroup_destroy\n 745423  0.0 kworker/131:0\n 752859  0.0 kworker/83:2-events\n 753448  0.0 kworker/71:2-mm_percpu_wq\n 754489  0.0 slurmstepd\n 754501  0.0 bash\n 754504  0.0 python\n 755388  0.0 RepeatModeler\n 763651  0.0 kworker/119:0-mm_percpu_wq\n 763787  0.0 kworker/60:1-mm_percpu_wq\n 764081  0.0 kworker/4:2-events\n 769691  0.0 kworker/81:0-events\n 778396  0.0 kworker/152:0-mm_percpu_wq\n 795276  0.0 kworker/167:0-mm_percpu_wq\n 795325  0.0 kworker/67:1-mm_percpu_wq\n 816772  0.0 kworker/174:2-ipv6_addrconf\n 817470  0.0 kworker/126:2\n 818618  0.0 kworker/44:0-events\n 824292  0.0 kworker/87:2-mm_percpu_wq\n 825532  0.0 kworker/96:0-events\n 833849  0.0 kworker/19:1-mm_percpu_wq\n 850537  0.0 kworker/33:0-cgroup_destroy\n 850821  0.0 kworker/128:2-cgroup_destroy\n 851297  0.0 kworker/129:0-cgroup_destroy\n 851321  0.0 kworker/102:1-mm_percpu_wq\n 853800  0.0 kworker/32:2\n 855635  0.4 codex\n 857296  0.0 kworker/170:0-mm_percpu_wq\n 859291  0.0 kworker/75:0\n 860364  0.0 kworker/140:1-mm_percpu_wq\n 864346  0.0 kworker/55:0-cgroup_destroy\n 869456  0.0 kworker/113:2\n 870631  0.0 kworker/172:2-mm_percpu_wq\n 870780  0.0 kworker/61:2\n 876750  0.0 kworker/6:0-events\n 877372  0.0 kworker/u393:1-events_unbound\n 878943  0.0 kworker/37:1-mm_percpu_wq\n 878962  0.0 kworker/38:2\n 882889  0.0 kworker/127:1-events\n 884730  0.0 kworker/u394:3-writeback\n 887444  0.0 kworker/58:2-mm_percpu_wq\n 892937  0.0 kworker/130:0\n 941286  1.0 codex\n 956368  0.0 kworker/105:1-events\n 957427  0.0 kworker/62:2-mm_percpu_wq\n 966893  0.0 kworker/23:0-mm_percpu_wq\n 985563  0.0 kworker/59:0-mm_percpu_wq\n 994422  0.0 kworker/50:2-events\n 998823  0.0 kworker/155:0-mm_percpu_wq\n1033135  0.0 kworker/63:1-rcu_par_gp\n1033480  0.0 kworker/156:1-mm_percpu_wq\n1117260  0.0 python\n1165327  0.0 kworker/153:2-mm_percpu_wq\n1196110  0.0 bash\n1214290  0.0 kworker/29:2-mm_percpu_wq\n1220239  0.0 kworker/125:0-events\n1262642  0.0 python\n1262649  0.0 python\n1263487  0.0 node\n1263498  0.2 codex\n1287393  0.0 node\n1287407  4.0 codex\n1290125  0.0 node\n1290136  1.5 codex\n1337230  0.0 gnome-keyring-d\n1354321  0.0 kworker/18:1-mm_percpu_wq\n1432583  0.0 kworker/132:1-cgroup_destroy\n1440548  0.0 kworker/124:1-mm_percpu_wq\n1449918  0.0 kworker/126:1-mm_percpu_wq\n1461454  0.0 kworker/56:1-mm_percpu_wq\n1471322  0.0 kworker/33:1-mm_percpu_wq\n1471686  0.0 kworker/36:0-cgroup_destroy\n1477937  0.0 kworker/35:2-cgroup_destroy\n1514264  0.0 kworker/54:0-events\n1515819  0.0 kworker/147:0-mm_percpu_wq\n1516905  0.0 kworker/191:2-mm_percpu_wq\n1519599  0.0 python\n1519604  0.0 python\n1519607  0.0 python\n1529120  0.0 kworker/u389:1-flush-259:6\n1538777  0.0 kworker/115:0-mm_percpu_wq\n1550684  0.0 kworker/151:2-mm_percpu_wq\n1560402  0.0 kworker/91:2-events\n1560570  0.0 kworker/187:2-mm_percpu_wq\n1561117  0.0 kworker/93:1-mm_percpu_wq\n1562178  0.4 codex\n1563057  0.0 kworker/149:1-mm_percpu_wq\n1563104  0.0 kworker/1:1-events_freezable\n1569133  0.0 kworker/97:0-events\n1569461  0.0 kworker/99:1-events\n1572599  0.0 kworker/148:2-events\n1572645  0.0 kworker/48:0-mm_percpu_wq\n1572981  0.0 kworker/55:1-events\n1573024  0.0 kworker/173:0-mm_percpu_wq\n1573056  0.0 kworker/92:2-mm_percpu_wq\n1573104  0.0 kworker/168:0-mm_percpu_wq\n1573455  0.0 kworker/52:0-mm_percpu_wq\n1574311  0.0 kworker/175:1-mm_percpu_wq\n1575014  0.0 kworker/75:1-mm_percpu_wq\n1575355  0.0 kworker/89:1-mm_percpu_wq\n1576055  0.0 kworker/100:2-mm_percpu_wq\n1576796  0.0 kworker/186:1-mm_percpu_wq\n1577716  0.0 kworker/9:0-mm_percpu_wq\n1577903  0.0 kworker/170:1-mm_percpu_wq\n1577906  0.0 kworker/104:1-events\n1578050  0.0 kworker/74:0-mm_percpu_wq\n1582145  0.0 kworker/2:2-events\n1582501  0.0 kworker/3:1-events\n1582759  0.0 kworker/53:2-events\n1582836  0.0 kworker/101:0-mm_percpu_wq\n1585062  0.0 kworker/51:0-events\n1588330  0.0 kworker/139:1-events\n1608762  0.0 kworker/116:2-mm_percpu_wq\n1613102  0.0 kworker/16:2-events\n1613401  0.0 kworker/21:1-mm_percpu_wq\n1616990  0.0 kworker/22:2-mm_percpu_wq\n1617063  0.0 kworker/119:2-mm_percpu_wq\n1617207  0.0 kworker/10:2-mm_percpu_wq\n1617864  0.0 kworker/118:0-mm_percpu_wq\n1619292  0.0 kworker/20:0-mm_percpu_wq\n1619373  0.0 kworker/23:2-mm_percpu_wq\n1702265  0.0 claude.exe\n1703957  0.0 claude.exe\n1703964  0.0 claude.exe\n1728910  0.0 kworker/150:0-mm_percpu_wq\n1730912  0.0 kworker/54:1\n1753644  0.0 kworker/171:0-mm_percpu_wq\n1770457  0.0 kworker/58:0-cgroup_destroy\n1771398  0.0 kworker/156:2-cgroup_destroy\n1772451  0.0 kworker/157:2-cgroup_destroy\n1772931  0.0 kworker/56:2-cgroup_destroy\n1796568  0.0 kworker/8:1-events\n1860674  0.1 codex\n1865305  0.0 sshd\n1865479  0.0 sshd\n1865480  0.0 bash\n1865580  0.0 tmux: client\n1865643  0.0 sshd\n1865689  0.0 sshd\n1865690  0.0 bash\n1865783  0.0 tmux: client\n1872579  0.0 sshd\n1872632  0.0 sshd\n1872633  0.0 bash\n1872668  0.0 tmux: client\n1872859  0.0 sshd\n1872905  0.0 sshd\n1872906  0.0 bash\n1872956  0.0 tmux: client\n1873067  0.0 sshd\n1873161  0.0 sshd\n1873172  0.0 bash\n1873386  0.0 tmux: client\n1873547  0.0 sshd\n1873593  0.0 sshd\n1873594  0.0 bash\n1873689  0.0 tmux: client\n1874001  0.0 sshd\n1874044  0.0 sshd\n1874045  0.0 bash\n1874200  0.0 tmux: client\n1875861  0.6 claude\n1879309  0.0 kworker/25:1-mm_percpu_wq\n1881653  0.0 node\n1881664  0.0 codex\n1884497  0.0 kworker/111:2-events\n1987588  0.0 slurmstepd\n1987592  0.0 bash\n1987594  0.0 python\n1987694  0.0 RepeatModeler\n1998012  0.0 kworker/114:0\n2016781  0.0 slurmstepd\n2016784  0.0 bash\n2016786  0.0 python\n2016790  0.0 RepeatModeler\n2026214  0.0 kworker/u394:1-events_unbound\n2038850  0.0 kworker/43:1-events\n2061028  0.0 kworker/26:0-events\n2142513  0.0 kworker/R-ib-co\n2142514  0.0 kworker/R-ib-co\n2142515  0.0 kworker/R-ib_mc\n2142516  0.0 kworker/R-ib_nl\n2160879  0.0 kworker/41:2-mm_percpu_wq\n2324573  0.0 bash\n2392300  0.0 snapd\n2404449  0.0 kworker/7:2-events\n2472987  0.0 bash\n2473441  740 iqtree3\n2496379  0.0 kworker/5:1-mm_percpu_wq\n2503812  0.0 cupsd\n2503846  0.0 cups-browsed\n2508719  0.0 kworker/107:0-events\n2516929  0.0 fwupd\n2637238  0.0 kworker/68:0-mm_percpu_wq\n2639926  0.0 kworker/157:0-mm_percpu_wq\n2660551  0.0 at-spi-bus-laun\n2694445  0.0 kworker/26:2\n2756379  0.0 bash\n2766742  0.0 kworker/121:1-mm_percpu_wq\n2796570  0.0 kworker/61:1-mm_percpu_wq\n2814720  1.2 codex\n2815698  0.0 kworker/149:2-cgroup_destroy\n2817465  0.0 codex-code-mode\n2848968  0.0 kworker/165:1-mm_percpu_wq\n2863257  0.0 kworker/158:1-events\n2891758  777 iqtree3\n2944449  0.0 kworker/154:1-mm_percpu_wq\n2964780  0.0 RepeatModeler\n2964783  0.0 Refiner\n2964864  0.0 sh\n2964865 99.9 rmblastn\n3020571  0.0 kworker/95:1-mm_percpu_wq\n3025417  0.0 kworker/166:1-mm_percpu_wq\n3025976  0.0 kworker/152:2-cgroup_destroy\n3028823  0.0 kworker/158:2-cgroup_destroy\n3048476  0.0 kworker/76:2-mm_percpu_wq\n3086112  0.1 codex\n3089258  0.0 kworker/159:1-cgroup_destroy\n3091967  0.0 kworker/151:1\n3099283  0.0 kworker/153:1-cgroup_destroy\n3099672  0.0 kworker/63:0-events\n3104370  0.0 kworker/180:1-mm_percpu_wq\n3106089  0.0 kworker/85:2-events\n3152016  0.0 kworker/17:0-mm_percpu_wq\n3153944  0.0 slurmstepd\n3153947  0.0 bash\n3153949  0.0 python\n3154284  1.6 RepeatModeler\n3161045  0.0 kworker/72:1-mm_percpu_wq\n3161590  0.0 slurmstepd\n3161593  0.9 python\n3162689  0.0 kworker/169:1-mm_percpu_wq\n3163729  0.0 kworker/74:1-mm_percpu_wq\n3163965  0.0 kworker/52:1\n3164235  0.0 time\n3164236  0.0 python\n3164244 52.2 python\n3165526  0.0 kworker/49:2-events\n3166613  0.0 kworker/161:1-mm_percpu_wq\n3183264  0.0 kworker/86:1-mm_percpu_wq\n3185153  0.0 kworker/u393:0-writeback\n3186375  0.0 kworker/70:1-rcu_par_gp\n3186591  0.0 kworker/163:0-mm_percpu_wq\n3186674  0.0 kworker/60:2\n3187866  0.0 kworker/65:0-mm_percpu_wq\n3190571  0.0 kworker/69:2-mm_percpu_wq\n3196231  0.0 kworker/66:0-mm_percpu_wq\n3196346  0.0 kworker/143:1\n3197235  0.0 kworker/159:0-mm_percpu_wq\n3199393  0.0 kworker/162:0-cgroup_destroy\n3200949  0.0 kworker/73:2\n3203128  0.0 kworker/78:0-mm_percpu_wq\n3203269  0.0 kworker/76:1-mm_percpu_wq\n3207496  0.0 kworker/178:0-mm_percpu_wq\n3208564  0.0 kworker/166:2\n3217254  0.0 kworker/164:0-mm_percpu_wq\n3223447  0.0 kworker/160:2-cgroup_destroy\n3231698  0.0 kworker/181:0-events\n3237821  0.0 kworker/177:1-events\n3237837  0.0 kworker/80:1-mm_percpu_wq\n3242122  0.0 kworker/176:1-mm_percpu_wq\n3253897  0.0 kworker/179:0-mm_percpu_wq\n3257234  0.0 kworker/106:2-events\n3259055  0.0 kworker/70:2-events\n3259124  0.0 kworker/64:1-cgroup_destroy\n3259433  0.0 kworker/165:0-cgroup_destroy\n3259513  0.0 kworker/69:0-cgroup_destroy\n3261937  0.0 kworker/59:2-cgroup_destroy\n3263014  0.0 kworker/62:1-cgroup_destroy\n3265367  0.0 kworker/167:1-mm_percpu_wq\n3269368  0.0 kworker/71:0-mm_percpu_wq\n3271272  0.0 kworker/161:2-mm_percpu_wq\n3272966  0.0 kworker/28:1-events\n3275048  0.0 kworker/66:2-rcu_par_gp\n3275125  0.0 kworker/67:0-cgroup_destroy\n3275506  0.0 kworker/163:2\n3275676  0.0 kworker/164:1\n3276030  0.0 kworker/68:1-cgroup_destroy\n3276064  0.0 slurmstepd\n3276067  0.2 python\n3276180  0.0 kworker/65:1-mm_percpu_wq\n3277048  0.0 time\n3277049  0.0 python\n3277050  0.9 python\n3277053  776 python\n3277054  777 python\n3277055  776 python\n3277056  775 python\n3285034  0.0 kworker/77:2\n3323451  0.0 kworker/137:0-events\n3324081  0.0 kworker/11:1-mm_percpu_wq\n3328915  0.0 slurmstepd\n3328918  0.0 bash\n3328920  0.0 python\n3328931  0.0 RepeatModeler\n3392030  0.0 kworker/125:2\n3431281  0.0 RepeatModeler\n3431284  0.1 Refiner\n3465663  0.0 kworker/145:2-events\n3465665  0.0 kworker/146:1-mm_percpu_wq\n3486134  0.0 kworker/u392:2-events_unbound\n3529477  0.0 kworker/103:1-mm_percpu_wq\n3536124  0.0 slurmstepd\n3536127  0.0 bash\n3536129  0.0 python\n3536239  0.0 RepeatModeler\n3591461  0.0 kworker/u395:1-writeback\n3606344  0.0 kworker/123:2\n3634206  0.0 slurmstepd\n3634221  0.0 bash\n3634227  0.0 python\n3634515  0.5 RepeatModeler\n3649522  0.0 kworker/u388:0-events_unbound\n3659842  0.0 kworker/84:1-mm_percpu_wq\n3668007  0.0 kworker/30:1-mm_percpu_wq\n3683703  0.0 kworker/108:1-events\n3692418  0.0 slurmstepd\n3692421  0.0 bash\n3692423  0.0 python\n3692461  0.0 RepeatModeler\n3704905  0.0 bash\n3808508  0.0 kworker/u385:5-events_unbound\n3829570  0.0 kworker/190:2-mm_percpu_wq\n3840222  0.0 kworker/117:0-cgroup_destroy\n3842716  0.0 kworker/u389:0-events_unbound\n3857096  0.0 kworker/u392:1-writeback\n3902909  0.0 kworker/82:0-mm_percpu_wq\n3953554  0.0 kworker/16:1-mm_percpu_wq\n3957595  0.0 kworker/38:0-mm_percpu_wq\n3964345  0.0 kworker/129:1-events\n3964521  0.0 kworker/133:1-events\n3965583  0.0 kworker/128:1-mm_percpu_wq\n3977108  0.0 kworker/42:2-events\n3979151  0.0 kworker/30:0\n3979897  0.0 kworker/112:2-mm_percpu_wq\n3986228  0.0 kworker/39:0-mm_percpu_wq\n3986239  0.0 kworker/132:0-mm_percpu_wq\n3986269  0.0 kworker/130:1-mm_percpu_wq\n3986991  0.0 kworker/134:0-events\n3987981  0.0 kworker/135:2-mm_percpu_wq\n3990654  0.0 kworker/u388:1-events_unbound\n3994266  0.0 kworker/37:2-mm_percpu_wq\n3998872  0.0 kworker/34:0-events\n4005287  0.1 codex\n4007576  0.0 kworker/154:0-cgroup_destroy\n4022563  0.0 kworker/27:2-cgroup_destroy\n4030259  0.0 kworker/144:1-mm_percpu_wq\n4085965  0.0 kworker/114:2-mm_percpu_wq\n4169185  0.0 kworker/182:2-mm_percpu_wq\n",
+  "job_id": "24252",
+  "scope": "Matched cached downstream singleton-policy contrast; not fresh HMM search or isolated timing.",
+  "source_revision": "1225e3f9b504ee68e90632bf4efdc92e8232703a",
+  "status": "running"
+}
