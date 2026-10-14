@@ -1,0 +1,37 @@
+{
+  "defaults_promoted": false,
+  "functional_comparison": {
+    "bytes": 12070,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/large_copy_components_functional_diagnostic_20261013.json",
+    "sha256": "4369e2bf50539a40140aff684e7b61180add053dd70d03a9ac46f663dada6db3"
+  },
+  "goal_completed": false,
+  "independent_replay": {
+    "bytes": 43030,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/component_pair_structure_independent_r1_v1_20261014.json",
+    "sha256": "3f6d2dc82ed0749d9065b5ae04fabfa61695e3dfc9afd3d6780765485501a17a"
+  },
+  "interpretation": "Most added GO/EC relations are within retained component seeds, and more than half have strong direct HMM-derived graph support. Satellite-only changes or direct-support-only filtering are not justified as comprehensive remedies. Prioritize within-family reconciliation evidence after validating support transport.",
+  "native_inference_rerun": false,
+  "new_scoring": false,
+  "raw_report": {
+    "bytes": 43033,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/component_pair_structure_r1_v1_20261014.json",
+    "sha256": "1db6c71ea9688f78f37313b4904234e66f33bb7bd614420573c8249413f876a1"
+  },
+  "scheduler": "JobID|State|ExitCode|Elapsed|AllocCPUS\n24226|COMPLETED|0:0|00:00:17|1\n",
+  "status": "structural_pair_features_reproduced_and_functional_totals_verified",
+  "totals": {
+    "EC": {
+      "added": 15552,
+      "direct_strong_support": 8358,
+      "within_component_seed": 14700
+    },
+    "GO": {
+      "added": 22618,
+      "direct_strong_support": 11659,
+      "within_component_seed": 20264
+    }
+  },
+  "uncertainty_admitted": false
+}

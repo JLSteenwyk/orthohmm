@@ -1,0 +1,35 @@
+{
+  "allocation": {
+    "cpus": 1,
+    "memory_gib": 16,
+    "wall_limit_minutes": 30
+  },
+  "defaults_promoted": false,
+  "frozen_tests": {
+    "bytes": 5406,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/component_pair_structure_frozen_tests_20261014.xml",
+    "sha256": "3bc74acf5f76d01f708214d22a49ea5e4d3a84ac3beb598d47c8d54d012daead"
+  },
+  "goal_completed": false,
+  "helper": {
+    "bytes": 12395,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/component_pair_structure_r1_v1_20261014/benchmark_tools/diagnose_component_pair_structure.py",
+    "sha256": "8eee2fd18267e680fb3ba283361ae06662b23a473e5f896b88556d7acb45bc48"
+  },
+  "job_id": "24226",
+  "launcher": {
+    "bytes": 461,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/component_pair_structure_r1_v1_20261014/benchmark_tools/diagnose_component_pair_structure.slurm",
+    "sha256": "2c6bab7e29100f7fc371be0f22e4b2312157e63c903909759f682e3caf27cfeb"
+  },
+  "protocol": {
+    "bytes": 1908,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/component_pair_structure_r1_v1_20261014/benchmark_tools/hillclimb_component_pair_structure_20261014.json",
+    "sha256": "a106249a0986c0438446b15cc1f469aec3080ed9dab2b801ed998f620f8d446d"
+  },
+  "scope": "Read-only matched control/component GO and EC pair structure, not new inference, rescoring, uncertainty or biological confirmation.",
+  "source_revision": "07fa4184",
+  "source_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/component_pair_structure_r1_v1_20261014",
+  "status": "frozen_structural_pair_diagnostic_submitted",
+  "tests_passed": 33
+}

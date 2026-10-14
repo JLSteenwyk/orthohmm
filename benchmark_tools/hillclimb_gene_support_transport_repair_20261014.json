@@ -1,0 +1,13 @@
+{
+  "schema": "opt_in_gene_support_transport_repair_v1",
+  "status": "prespecified_before_repair_implementation",
+  "motivation": "Production minimum-duplication/loss rooting moves numeric node support to a different leaf bipartition in a reproducible five-taxon case. Checkpoint-bound saved raw/rooted trees show changed support maps in 24 of 32 hash-selected active families, without leaf or unrooted topology changes. Repair transport before proposing support-aware within-component splitting.",
+  "mechanism": "Explicit opt-in gene-tree support mapping mode, with legacy behavior remaining the default. Capture valid numeric branch support by canonical root-independent bipartition before rerooting; restore it to the corresponding branches afterward and avoid leaving numeric labels on unrelated splits. Preserve nonnumeric node identifiers. Do not change root choice, topology, branch lengths, HMM scores, candidate memberships or pair-event rules.",
+  "edge_cases": ["Normalize support comparisons consistently with the existing zero-to-one/percentage reader.", "Retain missing or invalid support as unavailable rather than inventing values.", "Conflicting numeric labels for the same original split must be reported/rejected, not silently averaged or maximized.", "Handle the two child branches created by rooting on a supported edge consistently.", "Keep explicitly rooted input semantics and legacy default behavior documented and tested."],
+  "integration": "Wire the opt-in through PhylogenyConfig, CLI/replay configuration, recorded provenance and any affected checkpoint-validity keys. Use the existing rooting APIs rather than changing the rooting algorithm. Preserve frozen prior experiments and do not mutate live jobs.",
+  "validation": "Add regression tests for the production reproducer, internal and pendant root placement, missing/invalid/nonnumeric labels, duplicate/conflicting split values, percentages and polytomies. Verify leaf-universe/topology/branch-length preservation and default CLI/API compatibility. Audit repaired support maps against the same checkpoint-bound native tree sample.",
+  "benchmark_gate": "First establish transport correctness and unchanged current species_overlap/positive_paralogy results in bounded replay; only then prespecify and evaluate a separate support-aware pair/splitting mechanism on all required endpoints. Do not call transport alone an accuracy gain or substitute it for the outstanding fresh-HMM cap panel.",
+  "resources": {"cpus": 4, "memory_gib": 16, "wall_limit_hours": 1, "host": "local shared Threadripper"},
+  "defaults_promoted": false,
+  "goal_completed": false
+}
