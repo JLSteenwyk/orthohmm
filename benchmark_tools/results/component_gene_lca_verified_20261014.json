@@ -1,0 +1,708 @@
+{
+  "defaults_promoted": false,
+  "families": 9856,
+  "goal_completed": false,
+  "independent_readback": {
+    "bytes": 49252,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/component_gene_lca_readback_r1_v1_20261014.json",
+    "sha256": "bcc443e12f5b27d2cca895b2042897cbd55473dd631a9ec8793d77c5ba59f448"
+  },
+  "interpretation": [
+    "22540 of 22618 added GO relations (99.65%) are in reconciled families; bypassed single-copy families are not the main explanation for this tradeoff.",
+    "Added GO conditional similarity is lower in the corrected LCA support >=0.9 bin (0.4390; 9737 relations) than in the <0.5 bin (0.4636; 3132 relations). This is descriptive, not causal or calibrated orthology truth.",
+    "Both uncertain/mapping-conflict and speciation classes contribute added lower-GO relations. A simple support cutoff or medium-confidence exclusion is not justified as a general remedy.",
+    "Support-aware methods remain possible, but require a distinct label-independent hypothesis and a complete eight-endpoint experiment rather than selecting reference-annotation exclusions."
+  ],
+  "native_bypass_families": 1607,
+  "new_accuracy_scores": false,
+  "next_action": "Keep fresh HMM cap evaluations running. Broaden exact-output validation of the promising boundary-clear kernel through complete species-pair search outputs; defer arbitrary support-only accuracy filtering and diagnose additional sequence/domain or rooting mechanisms only with a separate prespecified rationale.",
+  "primary": {
+    "bytes": 9491481,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/component_gene_lca_r1_v1_20261014.json",
+    "sha256": "a83a06bcee86d2caee373ad84b27c4ad85f8d615d0878002bde3412c5273b79a"
+  },
+  "readback_tests": [
+    {
+      "bytes": 4389,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/component_gene_lca_readback_tests_20261014.xml",
+      "sha256": "51dd586dfd88b28f307aebb26b604f3cb7763f093afadb4c75137e77142dfe90"
+    },
+    {
+      "bytes": 4389,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/component_gene_lca_readback_frozen_tests_20261014.xml",
+      "sha256": "f26f66309c75bc02e0abc7fdb38eca0240d2481bb08b164f6374668b9b35ff07"
+    }
+  ],
+  "reconciled_families": 8249,
+  "scheduler": "JobID|State|ExitCode\n24229|COMPLETED|0:0\n24230|COMPLETED|0:0\n",
+  "status": "corrected_gene_lca_diagnostic_independently_verified",
+  "summaries": [
+    {
+      "category": "added",
+      "feature": "family_route",
+      "metric": "GO",
+      "score_sum_millionths": 38075238,
+      "scored_relations": 78,
+      "serialized_mean": 0.48814407692307693,
+      "value": "native_bypass"
+    },
+    {
+      "category": "added",
+      "feature": "family_route",
+      "metric": "GO",
+      "score_sum_millionths": 10168714138,
+      "scored_relations": 22540,
+      "serialized_mean": 0.4511408224489796,
+      "value": "reconciled"
+    },
+    {
+      "category": "added",
+      "feature": "lca_pair_event",
+      "metric": "GO",
+      "score_sum_millionths": 38075238,
+      "scored_relations": 78,
+      "serialized_mean": 0.48814407692307693,
+      "value": "unavailable"
+    },
+    {
+      "category": "added",
+      "feature": "lca_pair_event",
+      "metric": "GO",
+      "score_sum_millionths": 5364298339,
+      "scored_relations": 11866,
+      "serialized_mean": 0.4520730101972021,
+      "value": "uncertain"
+    },
+    {
+      "category": "added",
+      "feature": "lca_pair_event",
+      "metric": "GO",
+      "score_sum_millionths": 4804415799,
+      "scored_relations": 10674,
+      "serialized_mean": 0.45010453428892633,
+      "value": "speciation"
+    },
+    {
+      "category": "added",
+      "feature": "corrected_lca_support_bin",
+      "metric": "GO",
+      "score_sum_millionths": 860473676,
+      "scored_relations": 1946,
+      "serialized_mean": 0.44217557862281603,
+      "value": "unavailable"
+    },
+    {
+      "category": "added",
+      "feature": "corrected_lca_support_bin",
+      "metric": "GO",
+      "score_sum_millionths": 913683426,
+      "scored_relations": 1959,
+      "serialized_mean": 0.4664029739663093,
+      "value": "0_5_to_0_7"
+    },
+    {
+      "category": "added",
+      "feature": "corrected_lca_support_bin",
+      "metric": "GO",
+      "score_sum_millionths": 2705648295,
+      "scored_relations": 5844,
+      "serialized_mean": 0.4629788321355236,
+      "value": "0_7_to_0_9"
+    },
+    {
+      "category": "added",
+      "feature": "corrected_lca_support_bin",
+      "metric": "GO",
+      "score_sum_millionths": 4274854383,
+      "scored_relations": 9737,
+      "serialized_mean": 0.43903197935709154,
+      "value": "at_least_0_9"
+    },
+    {
+      "category": "added",
+      "feature": "corrected_lca_support_bin",
+      "metric": "GO",
+      "score_sum_millionths": 1452129596,
+      "scored_relations": 3132,
+      "serialized_mean": 0.4636429106002554,
+      "value": "below_0_5"
+    },
+    {
+      "category": "added",
+      "feature": "lca_is_root",
+      "metric": "GO",
+      "score_sum_millionths": 9654204080,
+      "scored_relations": 21319,
+      "serialized_mean": 0.4528450715324358,
+      "value": false
+    },
+    {
+      "category": "added",
+      "feature": "lca_is_root",
+      "metric": "GO",
+      "score_sum_millionths": 552585296,
+      "scored_relations": 1299,
+      "serialized_mean": 0.4253928375673595,
+      "value": true
+    },
+    {
+      "category": "shared",
+      "feature": "family_route",
+      "metric": "GO",
+      "score_sum_millionths": 1667276628,
+      "scored_relations": 3134,
+      "serialized_mean": 0.5319963714103382,
+      "value": "native_bypass"
+    },
+    {
+      "category": "shared",
+      "feature": "family_route",
+      "metric": "GO",
+      "score_sum_millionths": 38770544194,
+      "scored_relations": 79318,
+      "serialized_mean": 0.4887988122998563,
+      "value": "reconciled"
+    },
+    {
+      "category": "shared",
+      "feature": "lca_pair_event",
+      "metric": "GO",
+      "score_sum_millionths": 1667276628,
+      "scored_relations": 3134,
+      "serialized_mean": 0.5319963714103382,
+      "value": "unavailable"
+    },
+    {
+      "category": "shared",
+      "feature": "lca_pair_event",
+      "metric": "GO",
+      "score_sum_millionths": 18544639027,
+      "scored_relations": 37344,
+      "serialized_mean": 0.49658951978898885,
+      "value": "uncertain"
+    },
+    {
+      "category": "shared",
+      "feature": "lca_pair_event",
+      "metric": "GO",
+      "score_sum_millionths": 20225905167,
+      "scored_relations": 41974,
+      "serialized_mean": 0.48186746955258014,
+      "value": "speciation"
+    },
+    {
+      "category": "shared",
+      "feature": "corrected_lca_support_bin",
+      "metric": "GO",
+      "score_sum_millionths": 6483287865,
+      "scored_relations": 13183,
+      "serialized_mean": 0.4917915394826671,
+      "value": "unavailable"
+    },
+    {
+      "category": "shared",
+      "feature": "corrected_lca_support_bin",
+      "metric": "GO",
+      "score_sum_millionths": 3024071966,
+      "scored_relations": 6125,
+      "serialized_mean": 0.4937260352653061,
+      "value": "0_5_to_0_7"
+    },
+    {
+      "category": "shared",
+      "feature": "corrected_lca_support_bin",
+      "metric": "GO",
+      "score_sum_millionths": 9083734328,
+      "scored_relations": 18086,
+      "serialized_mean": 0.5022522574366913,
+      "value": "0_7_to_0_9"
+    },
+    {
+      "category": "shared",
+      "feature": "corrected_lca_support_bin",
+      "metric": "GO",
+      "score_sum_millionths": 17049749421,
+      "scored_relations": 35444,
+      "serialized_mean": 0.4810334448989956,
+      "value": "at_least_0_9"
+    },
+    {
+      "category": "shared",
+      "feature": "corrected_lca_support_bin",
+      "metric": "GO",
+      "score_sum_millionths": 4796977242,
+      "scored_relations": 9614,
+      "serialized_mean": 0.49895748304555854,
+      "value": "below_0_5"
+    },
+    {
+      "category": "shared",
+      "feature": "lca_is_root",
+      "metric": "GO",
+      "score_sum_millionths": 37380114187,
+      "scored_relations": 75957,
+      "serialized_mean": 0.4921220451966244,
+      "value": false
+    },
+    {
+      "category": "shared",
+      "feature": "lca_is_root",
+      "metric": "GO",
+      "score_sum_millionths": 3057706635,
+      "scored_relations": 6495,
+      "serialized_mean": 0.4707785427251732,
+      "value": true
+    },
+    {
+      "category": "removed",
+      "feature": "family_route",
+      "metric": "GO",
+      "score_sum_millionths": 93176303,
+      "scored_relations": 208,
+      "serialized_mean": 0.4479629951923077,
+      "value": "cross_candidate"
+    },
+    {
+      "category": "removed",
+      "feature": "family_route",
+      "metric": "GO",
+      "score_sum_millionths": 761805676,
+      "scored_relations": 1551,
+      "serialized_mean": 0.49117064861379756,
+      "value": "reconciled"
+    },
+    {
+      "category": "removed",
+      "feature": "lca_pair_event",
+      "metric": "GO",
+      "score_sum_millionths": 93176303,
+      "scored_relations": 208,
+      "serialized_mean": 0.4479629951923077,
+      "value": "unavailable"
+    },
+    {
+      "category": "removed",
+      "feature": "lca_pair_event",
+      "metric": "GO",
+      "score_sum_millionths": 724147975,
+      "scored_relations": 1470,
+      "serialized_mean": 0.4926176700680272,
+      "value": "duplication"
+    },
+    {
+      "category": "removed",
+      "feature": "lca_pair_event",
+      "metric": "GO",
+      "score_sum_millionths": 37004122,
+      "scored_relations": 77,
+      "serialized_mean": 0.480573012987013,
+      "value": "uncertain"
+    },
+    {
+      "category": "removed",
+      "feature": "lca_pair_event",
+      "metric": "GO",
+      "score_sum_millionths": 653579,
+      "scored_relations": 4,
+      "serialized_mean": 0.16339475,
+      "value": "speciation"
+    },
+    {
+      "category": "removed",
+      "feature": "corrected_lca_support_bin",
+      "metric": "GO",
+      "score_sum_millionths": 229937947,
+      "scored_relations": 476,
+      "serialized_mean": 0.48306291386554623,
+      "value": "unavailable"
+    },
+    {
+      "category": "removed",
+      "feature": "corrected_lca_support_bin",
+      "metric": "GO",
+      "score_sum_millionths": 277676157,
+      "scored_relations": 568,
+      "serialized_mean": 0.48886647359154933,
+      "value": "at_least_0_9"
+    },
+    {
+      "category": "removed",
+      "feature": "corrected_lca_support_bin",
+      "metric": "GO",
+      "score_sum_millionths": 48998893,
+      "scored_relations": 110,
+      "serialized_mean": 0.4454444818181818,
+      "value": "0_5_to_0_7"
+    },
+    {
+      "category": "removed",
+      "feature": "corrected_lca_support_bin",
+      "metric": "GO",
+      "score_sum_millionths": 228522088,
+      "scored_relations": 457,
+      "serialized_mean": 0.5000483326039387,
+      "value": "0_7_to_0_9"
+    },
+    {
+      "category": "removed",
+      "feature": "corrected_lca_support_bin",
+      "metric": "GO",
+      "score_sum_millionths": 69846894,
+      "scored_relations": 148,
+      "serialized_mean": 0.471938472972973,
+      "value": "below_0_5"
+    },
+    {
+      "category": "removed",
+      "feature": "lca_is_root",
+      "metric": "GO",
+      "score_sum_millionths": 823492541,
+      "scored_relations": 1698,
+      "serialized_mean": 0.48497793934040045,
+      "value": false
+    },
+    {
+      "category": "removed",
+      "feature": "lca_is_root",
+      "metric": "GO",
+      "score_sum_millionths": 31489438,
+      "scored_relations": 61,
+      "serialized_mean": 0.5162202950819672,
+      "value": true
+    },
+    {
+      "category": "added",
+      "feature": "family_route",
+      "metric": "EC",
+      "score_sum_millionths": 57000000,
+      "scored_relations": 57,
+      "serialized_mean": 1.0,
+      "value": "native_bypass"
+    },
+    {
+      "category": "added",
+      "feature": "family_route",
+      "metric": "EC",
+      "score_sum_millionths": 14486288983,
+      "scored_relations": 15495,
+      "serialized_mean": 0.9349008701516618,
+      "value": "reconciled"
+    },
+    {
+      "category": "added",
+      "feature": "lca_pair_event",
+      "metric": "EC",
+      "score_sum_millionths": 57000000,
+      "scored_relations": 57,
+      "serialized_mean": 1.0,
+      "value": "unavailable"
+    },
+    {
+      "category": "added",
+      "feature": "lca_pair_event",
+      "metric": "EC",
+      "score_sum_millionths": 8954999327,
+      "scored_relations": 9756,
+      "serialized_mean": 0.9178966099835999,
+      "value": "uncertain"
+    },
+    {
+      "category": "added",
+      "feature": "lca_pair_event",
+      "metric": "EC",
+      "score_sum_millionths": 5531289656,
+      "scored_relations": 5739,
+      "serialized_mean": 0.9638072235581111,
+      "value": "speciation"
+    },
+    {
+      "category": "added",
+      "feature": "corrected_lca_support_bin",
+      "metric": "EC",
+      "score_sum_millionths": 906675970,
+      "scored_relations": 976,
+      "serialized_mean": 0.928971280737705,
+      "value": "unavailable"
+    },
+    {
+      "category": "added",
+      "feature": "corrected_lca_support_bin",
+      "metric": "EC",
+      "score_sum_millionths": 932777017,
+      "scored_relations": 992,
+      "serialized_mean": 0.9402994122983871,
+      "value": "0_5_to_0_7"
+    },
+    {
+      "category": "added",
+      "feature": "corrected_lca_support_bin",
+      "metric": "EC",
+      "score_sum_millionths": 4569669465,
+      "scored_relations": 5030,
+      "serialized_mean": 0.9084829950298211,
+      "value": "0_7_to_0_9"
+    },
+    {
+      "category": "added",
+      "feature": "corrected_lca_support_bin",
+      "metric": "EC",
+      "score_sum_millionths": 6552033258,
+      "scored_relations": 6862,
+      "serialized_mean": 0.9548285132614399,
+      "value": "at_least_0_9"
+    },
+    {
+      "category": "added",
+      "feature": "corrected_lca_support_bin",
+      "metric": "EC",
+      "score_sum_millionths": 1582133273,
+      "scored_relations": 1692,
+      "serialized_mean": 0.9350669462174941,
+      "value": "below_0_5"
+    },
+    {
+      "category": "added",
+      "feature": "lca_is_root",
+      "metric": "EC",
+      "score_sum_millionths": 13998448011,
+      "scored_relations": 14950,
+      "serialized_mean": 0.9363510375250836,
+      "value": false
+    },
+    {
+      "category": "added",
+      "feature": "lca_is_root",
+      "metric": "EC",
+      "score_sum_millionths": 544840972,
+      "scored_relations": 602,
+      "serialized_mean": 0.9050514485049833,
+      "value": true
+    },
+    {
+      "category": "shared",
+      "feature": "family_route",
+      "metric": "EC",
+      "score_sum_millionths": 6378728149,
+      "scored_relations": 6474,
+      "serialized_mean": 0.9852839278653074,
+      "value": "native_bypass"
+    },
+    {
+      "category": "shared",
+      "feature": "family_route",
+      "metric": "EC",
+      "score_sum_millionths": 104566526308,
+      "scored_relations": 108317,
+      "serialized_mean": 0.9653750224618481,
+      "value": "reconciled"
+    },
+    {
+      "category": "shared",
+      "feature": "lca_pair_event",
+      "metric": "EC",
+      "score_sum_millionths": 6378728149,
+      "scored_relations": 6474,
+      "serialized_mean": 0.9852839278653074,
+      "value": "unavailable"
+    },
+    {
+      "category": "shared",
+      "feature": "lca_pair_event",
+      "metric": "EC",
+      "score_sum_millionths": 71762422268,
+      "scored_relations": 74387,
+      "serialized_mean": 0.964717252584457,
+      "value": "uncertain"
+    },
+    {
+      "category": "shared",
+      "feature": "lca_pair_event",
+      "metric": "EC",
+      "score_sum_millionths": 32804104040,
+      "scored_relations": 33930,
+      "serialized_mean": 0.9668170951959918,
+      "value": "speciation"
+    },
+    {
+      "category": "shared",
+      "feature": "corrected_lca_support_bin",
+      "metric": "EC",
+      "score_sum_millionths": 17350152825,
+      "scored_relations": 18177,
+      "serialized_mean": 0.954511350882984,
+      "value": "unavailable"
+    },
+    {
+      "category": "shared",
+      "feature": "corrected_lca_support_bin",
+      "metric": "EC",
+      "score_sum_millionths": 9197948913,
+      "scored_relations": 9500,
+      "serialized_mean": 0.968205148736842,
+      "value": "0_5_to_0_7"
+    },
+    {
+      "category": "shared",
+      "feature": "corrected_lca_support_bin",
+      "metric": "EC",
+      "score_sum_millionths": 28635873504,
+      "scored_relations": 29907,
+      "serialized_mean": 0.9574973586116963,
+      "value": "0_7_to_0_9"
+    },
+    {
+      "category": "shared",
+      "feature": "corrected_lca_support_bin",
+      "metric": "EC",
+      "score_sum_millionths": 39983493708,
+      "scored_relations": 40893,
+      "serialized_mean": 0.9777588757978137,
+      "value": "at_least_0_9"
+    },
+    {
+      "category": "shared",
+      "feature": "corrected_lca_support_bin",
+      "metric": "EC",
+      "score_sum_millionths": 15777785507,
+      "scored_relations": 16314,
+      "serialized_mean": 0.9671316358342528,
+      "value": "below_0_5"
+    },
+    {
+      "category": "shared",
+      "feature": "lca_is_root",
+      "metric": "EC",
+      "score_sum_millionths": 104409666186,
+      "scored_relations": 107716,
+      "serialized_mean": 0.9693050817520146,
+      "value": false
+    },
+    {
+      "category": "shared",
+      "feature": "lca_is_root",
+      "metric": "EC",
+      "score_sum_millionths": 6535588271,
+      "scored_relations": 7075,
+      "serialized_mean": 0.9237580595053003,
+      "value": true
+    },
+    {
+      "category": "removed",
+      "feature": "family_route",
+      "metric": "EC",
+      "score_sum_millionths": 78535654,
+      "scored_relations": 103,
+      "serialized_mean": 0.762482077669903,
+      "value": "cross_candidate"
+    },
+    {
+      "category": "removed",
+      "feature": "family_route",
+      "metric": "EC",
+      "score_sum_millionths": 2401517928,
+      "scored_relations": 2566,
+      "serialized_mean": 0.9358994263445051,
+      "value": "reconciled"
+    },
+    {
+      "category": "removed",
+      "feature": "lca_pair_event",
+      "metric": "EC",
+      "score_sum_millionths": 78535654,
+      "scored_relations": 103,
+      "serialized_mean": 0.762482077669903,
+      "value": "unavailable"
+    },
+    {
+      "category": "removed",
+      "feature": "lca_pair_event",
+      "metric": "EC",
+      "score_sum_millionths": 2368648426,
+      "scored_relations": 2525,
+      "serialized_mean": 0.9380785845544555,
+      "value": "duplication"
+    },
+    {
+      "category": "removed",
+      "feature": "lca_pair_event",
+      "metric": "EC",
+      "score_sum_millionths": 30869502,
+      "scored_relations": 39,
+      "serialized_mean": 0.7915256923076922,
+      "value": "uncertain"
+    },
+    {
+      "category": "removed",
+      "feature": "lca_pair_event",
+      "metric": "EC",
+      "score_sum_millionths": 2000000,
+      "scored_relations": 2,
+      "serialized_mean": 1.0,
+      "value": "speciation"
+    },
+    {
+      "category": "removed",
+      "feature": "corrected_lca_support_bin",
+      "metric": "EC",
+      "score_sum_millionths": 704522355,
+      "scored_relations": 765,
+      "serialized_mean": 0.9209442549019609,
+      "value": "unavailable"
+    },
+    {
+      "category": "removed",
+      "feature": "corrected_lca_support_bin",
+      "metric": "EC",
+      "score_sum_millionths": 581904135,
+      "scored_relations": 661,
+      "serialized_mean": 0.880339084720121,
+      "value": "at_least_0_9"
+    },
+    {
+      "category": "removed",
+      "feature": "corrected_lca_support_bin",
+      "metric": "EC",
+      "score_sum_millionths": 359384206,
+      "scored_relations": 370,
+      "serialized_mean": 0.9713086648648649,
+      "value": "0_5_to_0_7"
+    },
+    {
+      "category": "removed",
+      "feature": "corrected_lca_support_bin",
+      "metric": "EC",
+      "score_sum_millionths": 645296751,
+      "scored_relations": 675,
+      "serialized_mean": 0.9559951866666666,
+      "value": "0_7_to_0_9"
+    },
+    {
+      "category": "removed",
+      "feature": "corrected_lca_support_bin",
+      "metric": "EC",
+      "score_sum_millionths": 188946135,
+      "scored_relations": 198,
+      "serialized_mean": 0.9542734090909091,
+      "value": "below_0_5"
+    },
+    {
+      "category": "removed",
+      "feature": "lca_is_root",
+      "metric": "EC",
+      "score_sum_millionths": 2414108876,
+      "scored_relations": 2602,
+      "serialized_mean": 0.9277897294388932,
+      "value": false
+    },
+    {
+      "category": "removed",
+      "feature": "lca_is_root",
+      "metric": "EC",
+      "score_sum_millionths": 65944706,
+      "scored_relations": 67,
+      "serialized_mean": 0.9842493432835822,
+      "value": true
+    }
+  ],
+  "watched_pairs": 218489
+}
