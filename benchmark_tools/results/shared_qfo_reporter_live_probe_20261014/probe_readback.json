@@ -1,0 +1,28 @@
+{
+  "defaults_promoted": false,
+  "goal_completed": false,
+  "inherited_score_vectors_unchanged": 25,
+  "method_rows": 27,
+  "new_cells_have_no_scores": true,
+  "parent": {
+    "bytes": 4178281,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v19_20261014/summary.json",
+    "sha256": "2aaaa674135cff759a2db84dc6ce0b2568990e8eb030407509f691aa23e01786"
+  },
+  "queued_report_absence_not_interpreted_as_stopped": true,
+  "reporter_revision": "a29836ae2757e1cef2c4383b5aa42bc52e28c1e5",
+  "scheduler_observation": "             JOBID                             NAME      STATE         TIME   CPUS NODELIST(REASON)\n             24247         ohmm-shared-qfo-continue    PENDING         0:00     16 (Dependency)\n             24250            ohmm-singleton-tie-ob    RUNNING        38:41     16 bizon\n             24242                  ohmm-shared-hit    RUNNING      2:18:39     16 bizon\n             24245         ohmm-qfo-cap400-continue    RUNNING      5:49:04     32 bizon\n",
+  "scope": "Reporting integration probe only, not a new admitted accuracy table. Frozen scientific runs remain unchanged.",
+  "score_table": {
+    "bytes": 4311,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/shared_qfo_reporter_live_probe_20261014/scores.tsv",
+    "sha256": "0f1d11c22a491d2d8a5ac239e0d4f7c3eab38244fc3d2dc65fb7d7e2c3bb0db4"
+  },
+  "status": "live_reporter_integration_readback_verified_no_new_accuracy_scores",
+  "summary": {
+    "bytes": 4183602,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/shared_qfo_reporter_live_probe_20261014/summary.json",
+    "sha256": "32317578230524c7a4b9dfec83c1174e254b7505862aa656c666c89fb902b1a5"
+  },
+  "table_cells_match_summary": true
+}

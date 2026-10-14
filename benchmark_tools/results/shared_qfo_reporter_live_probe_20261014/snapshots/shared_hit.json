@@ -1,0 +1,1629 @@
+{
+  "arms": [
+    {
+      "control": {
+        "checked": [
+          {
+            "bytes": 6301075,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/canonical/native/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+            "sha256": "5e35c1de220d0d4dca2ff64f255a55ad4d1740abbcbadbf746f91cba57f9622b"
+          },
+          {
+            "bytes": 100248192,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/canonical/native/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+            "sha256": "bfbe3f2707a4a30cd1a7ad404dd9fbf6b3973e98eeeeea8411c8935277e9fb72"
+          },
+          {
+            "bytes": 105315256,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/canonical/native/orthohmm_phylogeny/orthohmm_pairwise_orthologs_confidence.tsv",
+            "sha256": "376575f788070dcc1b5cb2f5be4b6ae752656ce8a418e67c6efd3bb3c881e2d6"
+          },
+          {
+            "bytes": 9800,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/canonical/native/orthohmm_phylogeny/provenance_manifest.json",
+            "sha256": "bcff0e03adf9040bb027601a80823406340a222212071335bb71b08ba2eec8a6"
+          },
+          {
+            "bytes": 565,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/canonical/native/orthohmm_phylogeny/reconciliation_summary.json",
+            "sha256": "efe45c935cbb3114aa94f385e9800580b8865475260a35b86667dfc085f2814d"
+          },
+          {
+            "bytes": 717,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/canonical/native/orthohmm_phylogeny/species_tree.rooted.nwk",
+            "sha256": "61ba4deadbc1f1e357b892bad11ac6b605e0495393816f077badaeb35b183878"
+          },
+          {
+            "bytes": 12782304,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+            "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+          },
+          {
+            "bytes": 11930628,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Monodelphis_domestica.ASM229v1.pep.all.fa",
+            "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+          },
+          {
+            "bytes": 5797677,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Ciona_intestinalis.KH.pep.all.fa",
+            "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 8784620,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12880578,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Mus_musculus.GRCm38.pep.all.fa",
+            "sha256": "3b6e0a68688294135324824e1879de86c1715a9f3c655406f6ec8fcfdd75db1a"
+          },
+          {
+            "bytes": 17020497,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Danio_rerio.GRCz11.pep.all.fa",
+            "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+          },
+          {
+            "bytes": 11973324,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Canis_familiaris.CanFam3.1.pep.all.fa",
+            "sha256": "0d87161a9990b9d8b0d56b4e71dfbe74c6016b0dda3352247b35d85501c33b33"
+          },
+          {
+            "bytes": 10463972,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+            "sha256": "1f6ebacc342da127e4ab9c1a9cf7b627e8169df3cbc0d971d57655d974c8d9b2"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          },
+          {
+            "bytes": 13576811,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Homo_sapiens.GRCh38.pep.all.fa",
+            "sha256": "bff5d1f0f259c801dc607045e4c13bfc759098f17d536b307c13a89a523569ac"
+          },
+          {
+            "bytes": 4567716,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/canonical/candidate/orthohmm_working_res/orthohmm_edges_clustered.txt",
+            "sha256": "44f201dbc7e4eccf06d9401e5ce1b20fdf6ad523e15ee6007fe1c58f3941842d"
+          },
+          {
+            "bytes": 4567716,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/canonical/native/orthohmm_working_res/orthohmm_edges_clustered.txt",
+            "sha256": "370ee7f42f64784dcb981d994ea6b15fa61994187037fb703145c492a6321ba0"
+          },
+          {
+            "bytes": 10917,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/benchmark.py",
+            "sha256": "81eb1e660c17819549b07eea8a54b4fb42a89180cafeb4569d92195d282f5e6f"
+          },
+          {
+            "bytes": 273,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG001.txt",
+            "sha256": "83429b3e93256557d7b22e5262702de391bb81c5d94c3d1d409103e87e46cb30"
+          },
+          {
+            "bytes": 346,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG002.txt",
+            "sha256": "cc41b273ef98fb394b52b2167f9f7277c5914c4baf481afcbe96dee0319b4a61"
+          },
+          {
+            "bytes": 935,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG003.txt",
+            "sha256": "0eab9b709426d7b3303d621215c1fe6bb5c9ad2032697c053ae062bf12086224"
+          },
+          {
+            "bytes": 223,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG004.txt",
+            "sha256": "8ad2db4e9a3ced09fe52ffff2c1aa90986de760f5df22266c301099b0061fbc2"
+          },
+          {
+            "bytes": 628,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG005.txt",
+            "sha256": "21d3c8f98e4e6402cc9e90d649aa5acc0b269082a550c2b6b2637b2e26d1d505"
+          },
+          {
+            "bytes": 886,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG006.txt",
+            "sha256": "2a4b44023011b5e7b88ae8f6089ab43d0a4d5d9857d8ee1e0db4b132ce42fb8c"
+          },
+          {
+            "bytes": 1065,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG007.txt",
+            "sha256": "f55ee153b25f544784d13319ab2cf5eacb564e90ae9161dadc818a55a7d2eabc"
+          },
+          {
+            "bytes": 251,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG008.txt",
+            "sha256": "34b3bfdb70a847d36fa2afb1230271ce7bec67cab42bab3f88b659c7fe994626"
+          },
+          {
+            "bytes": 422,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG009.txt",
+            "sha256": "77a03d9e055790dd789d12032e54ef15fb2f7c61834d695685176d5e0b6a6c21"
+          },
+          {
+            "bytes": 57,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG010.txt",
+            "sha256": "cffa508146453c480a0959a9e2ed08617804d519c937be9094385ec4c5795ff5"
+          },
+          {
+            "bytes": 1743,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG011.txt",
+            "sha256": "1f32f081e3f1ef11a507164620b5e6d05b76e6e8f0fabc86bb4e4f0de3789047"
+          },
+          {
+            "bytes": 846,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG012.txt",
+            "sha256": "697b92f069841e7b9ec967db9e045e331b58403acc1dcf177a92be24ec262ddd"
+          },
+          {
+            "bytes": 339,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG013.txt",
+            "sha256": "ccd3d5e217b5485620465f27e71b0477c895f4bc6f8349b8f94e1021165a0bd1"
+          },
+          {
+            "bytes": 781,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG014.txt",
+            "sha256": "b9d2746e3d4485239f992db90fb3ac69d0e0114f9a47ebfd947a5ff190f5fca3"
+          },
+          {
+            "bytes": 551,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG015.txt",
+            "sha256": "042d77fb136b840e4e46f089c1923ba077226d860e14829bd684f09863040504"
+          },
+          {
+            "bytes": 462,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG016.txt",
+            "sha256": "b88255bb9a44d76fe001d10395edadfa4055a451352d6d7870a5cf82cfe0e191"
+          },
+          {
+            "bytes": 545,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG017.txt",
+            "sha256": "873750215ea94753e998895d4f3fc344a75720cada7bf372bb3d6318bed81813"
+          },
+          {
+            "bytes": 219,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG018.txt",
+            "sha256": "29a622397ed97572bf0483f0095eb4efbc2073b0439d260a16c10c202b92b09a"
+          },
+          {
+            "bytes": 235,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG019.txt",
+            "sha256": "e685d81377adc9ba9df0f2c8ab387799698c70c824a7f9e6ffaac5d116dd4006"
+          },
+          {
+            "bytes": 514,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG020.txt",
+            "sha256": "fe3bd2f9b42f1d4229a57b8384dc94ba101da00b5e817bf91960c874461fd5dd"
+          },
+          {
+            "bytes": 2323,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG021.txt",
+            "sha256": "8e5b2c8a45af7d108d9e63282b6544b518ddeaf68b033ed3b3f65de71f85c211"
+          },
+          {
+            "bytes": 647,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG022.txt",
+            "sha256": "0b19a8ec969fac32886200de47c4641a0d269df81d603d12807fbc2eb6a2c606"
+          },
+          {
+            "bytes": 1275,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG023.txt",
+            "sha256": "6a1b29994c981d6d6c1ffd3ceb2e3f66c0bcbb9aef1acfe52561c85ea67c40be"
+          },
+          {
+            "bytes": 945,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG024.txt",
+            "sha256": "127afacdd0443f0f2106706f51dfeebbdca3010d8891a7f4072d18793c3caa83"
+          },
+          {
+            "bytes": 237,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG025.txt",
+            "sha256": "f7b773801fde7b29ececec18eab286caa4fed334ff5a4513776e2f0beff8e186"
+          },
+          {
+            "bytes": 789,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG026.txt",
+            "sha256": "e5d3ec13969b8c881106427b6aa7ebd5bfd1d8570faf750da181c7b076272a58"
+          },
+          {
+            "bytes": 367,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG027.txt",
+            "sha256": "96219227d0d623ab6e866b0f8479defb2765dff6fadd1614389f088db8e7728d"
+          },
+          {
+            "bytes": 443,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG028.txt",
+            "sha256": "c9c1011e5cd7985abf5090097a341c162c53384a9267d00a54e51dea02b1a851"
+          },
+          {
+            "bytes": 237,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG029.txt",
+            "sha256": "7dc2b1ba66646679201360b40df5f593393944e8c96e8578eaa2aefa9f1af05f"
+          },
+          {
+            "bytes": 232,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG030.txt",
+            "sha256": "f54fb4593b909faee8b179c7214167f68a0a62596b901b61ab77c5c8ffb9107b"
+          },
+          {
+            "bytes": 587,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG031.txt",
+            "sha256": "5bfc570a11355d5855bf421ce855e68e8ab87ad69893993243ae4a0d8356dce9"
+          },
+          {
+            "bytes": 240,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG032.txt",
+            "sha256": "d383a06984f78e2d6a25356ca8ae9b3fce2864082a9deb08fc26db3fa67dbbc2"
+          },
+          {
+            "bytes": 561,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG033.txt",
+            "sha256": "3d59ba23ebde8498d2597e4c386f49ad36bbdbf5a502ac146b871485931e4668"
+          },
+          {
+            "bytes": 393,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG034.txt",
+            "sha256": "37d37458c70f2b002f3a6da00f200e2acf07f5788e01f09afe34038b1a4f781a"
+          },
+          {
+            "bytes": 599,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG035.txt",
+            "sha256": "938760f99423516db71efa3744b9876ea6b4a015a337f30dbc437b80bb169cd9"
+          },
+          {
+            "bytes": 853,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG036.txt",
+            "sha256": "8fe4b897a7cf9d0d45b247064eb4cf306e98dba2875becf9b40bba602db6fa89"
+          },
+          {
+            "bytes": 630,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG037.txt",
+            "sha256": "81607943a81f43af7fa27b1ca4c426c4285dd0b5008b7755e100feffc8294008"
+          },
+          {
+            "bytes": 168,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG038.txt",
+            "sha256": "4e196096b0a785d18edd335c2c5fce33cfe647132bd6dbea1c6162631f569180"
+          },
+          {
+            "bytes": 372,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG039.txt",
+            "sha256": "fd884b568fc7a38bbf72d37858c318385be126688535ed2e7c3a3e4467f0fb78"
+          },
+          {
+            "bytes": 235,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG040.txt",
+            "sha256": "dd543547410ce8d8e19869ff271dadca05cc04c6bb4e7e8c2b6615192420554b"
+          },
+          {
+            "bytes": 309,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG041.txt",
+            "sha256": "56f003823b1313a6e719286591201a9cc156ee62717dd91129872f385d124553"
+          },
+          {
+            "bytes": 199,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG042.txt",
+            "sha256": "a285ba294591e98fb6932e5321ebe25714503419cc49559e717cbc94f42c7f7a"
+          },
+          {
+            "bytes": 311,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG043.txt",
+            "sha256": "5ea47e0533f6475d8ba7a88738929be897d89aa1736d05bc2b77fc7d5eb28505"
+          },
+          {
+            "bytes": 251,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG044.txt",
+            "sha256": "1b3c6818c8fcfc4595a85773f1080bd2b8b64239c70f3d62a878c86e6ccd82b5"
+          },
+          {
+            "bytes": 233,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG045.txt",
+            "sha256": "a15febeab6c95f24711bf5e6ce74e3f0af6d627342727836f98e3838a359ba9a"
+          },
+          {
+            "bytes": 596,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG046.txt",
+            "sha256": "d144bd70880389693b80ecd78446bf1f6a5095001e221d16f90a6f4523cc636d"
+          },
+          {
+            "bytes": 663,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG047.txt",
+            "sha256": "bb42a9c8b8a551c1824deb190ebde19d5c4bd18f6c77d660815f7a4e77cfe484"
+          },
+          {
+            "bytes": 745,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG048.txt",
+            "sha256": "042ec2230f0266557b989b9a7e18e2a97196b7a8cbfdc3fef436634c1b5353ba"
+          },
+          {
+            "bytes": 184,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG049.txt",
+            "sha256": "650593062675fe03672ead1bb2c99ea019033087d6d2affc99db93ea840223c6"
+          },
+          {
+            "bytes": 248,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG050.txt",
+            "sha256": "b8709f35070f357fcdbde427cf421c53f02de6b2de79ccaa2033afb013c1e002"
+          },
+          {
+            "bytes": 311,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG051.txt",
+            "sha256": "7ed92e4910292450ecb63193946105125f017d28b256a8796df83d79a5f101ee"
+          },
+          {
+            "bytes": 282,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG052.txt",
+            "sha256": "cfab4664d45c49c68ac8285e2205d79d5c7737f7b1f56268a892b440015d2478"
+          },
+          {
+            "bytes": 237,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG053.txt",
+            "sha256": "79aeb065ecb4ef38326288187e3c478e73abace5e6ae09ff1c99c2f669602290"
+          },
+          {
+            "bytes": 801,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG054.txt",
+            "sha256": "7f136708ffb2ea5ef3185ed4ab3fc9f199caa3d56c81fd2f57589df819aee2ef"
+          },
+          {
+            "bytes": 539,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG055.txt",
+            "sha256": "38611031e58d4c818f900044b091b9fdb5e377a147a1322a653cba557cb29298"
+          },
+          {
+            "bytes": 161,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG056.txt",
+            "sha256": "947e4834280633318c0e236d7b9ee95406cf5b610333001ff5ac888e227c082a"
+          },
+          {
+            "bytes": 292,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG057.txt",
+            "sha256": "15b85f9f0575b69408ce48b9da07cdc2539f4df9bcb65c99c52fd346716f55bd"
+          },
+          {
+            "bytes": 929,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG058.txt",
+            "sha256": "5697a188e1f95be9ba1cb8d07fc510c449eb680b0e9c64ede9e75d891fe444fd"
+          },
+          {
+            "bytes": 187,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG059.txt",
+            "sha256": "232e7260d7ebe987757520539390d71862d9632b68729c35621f2260a82ae9c7"
+          },
+          {
+            "bytes": 1263,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG060.txt",
+            "sha256": "8d86da3230a2c31ce57a1d3e1042f8b4c9b40e9853fb8ef17869432848e6e377"
+          },
+          {
+            "bytes": 561,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG061.txt",
+            "sha256": "87476a60757a7e8fc8286ab2b325df5cb020a8e4b35b61fc4166bb0834a59c60"
+          },
+          {
+            "bytes": 199,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG062.txt",
+            "sha256": "6960f0a5a9768a53684f6a181fc80c6971850edc0716b268f5cc69e19abc9368"
+          },
+          {
+            "bytes": 386,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG063.txt",
+            "sha256": "350a327be6b22ca3cfa0721d75188f34835be03368549a83061368a714114bf3"
+          },
+          {
+            "bytes": 264,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG064.txt",
+            "sha256": "98d3b3b091217279227b5924293bb6c6fa740b3658415c3793a8a643511c504a"
+          },
+          {
+            "bytes": 180,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG065.txt",
+            "sha256": "b6255142e05c38a987eb06562ff1ee6491aeb766c2419833b84f6784cd8e7149"
+          },
+          {
+            "bytes": 252,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG066.txt",
+            "sha256": "f5ab9dc90a1385c3df885483670bc43f147d06d17b1b95f643575f379d0c1f0b"
+          },
+          {
+            "bytes": 235,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG067.txt",
+            "sha256": "25122b591f8f1bea20e25940669f02e693a2aba9e2b370e3bd6738cc1279dd53"
+          },
+          {
+            "bytes": 590,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG068.txt",
+            "sha256": "1d096936b040969a593ee687c5121d0bb73d94101300ded9225898059d34d312"
+          },
+          {
+            "bytes": 570,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG069.txt",
+            "sha256": "0d218d0bcd422e20b11bef77627de30d84b64f28517d6cd03707ca09507980c5"
+          },
+          {
+            "bytes": 235,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG070.txt",
+            "sha256": "8c47b04182dc619071875562f04d867a1b59c97e0635a4e262af72d85dfd8205"
+          },
+          {
+            "bytes": 634,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/low_certainty_assignments/RefOG014.txt",
+            "sha256": "a87aaf9fe3bfc232917281b04067df6e3c0e8763c94f92c1e2bcc9b3340b356f"
+          },
+          {
+            "bytes": 114,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/low_certainty_assignments/RefOG015.txt",
+            "sha256": "41442c430b5df21ec603bb1ced67c6a8d2e14d98ce8a0455c736e934d23a70b7"
+          },
+          {
+            "bytes": 19,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/low_certainty_assignments/RefOG017.txt",
+            "sha256": "19776a360524415e26460bbe175127f6de4a7799689284144418d332612427cc"
+          },
+          {
+            "bytes": 222,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/low_certainty_assignments/RefOG021.txt",
+            "sha256": "1275adc8cba1bedf703fe609887d151755782b1b8471412f359a7e77f3c94cff"
+          },
+          {
+            "bytes": 223,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/low_certainty_assignments/RefOG022.txt",
+            "sha256": "16e1defcd20306c5dda282de8973e2660c04c1a426959660a117f77ad40978de"
+          },
+          {
+            "bytes": 41,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/low_certainty_assignments/RefOG026.txt",
+            "sha256": "8871272a0bd896726d23a47268ff16fafc1939e7462893178715c642fe4f1b79"
+          },
+          {
+            "bytes": 36,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/low_certainty_assignments/RefOG028.txt",
+            "sha256": "ad8b09582aa70094d6cb1dd391624a769d25144136a7aedd2c95dac6e3d1c063"
+          },
+          {
+            "bytes": 32,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/low_certainty_assignments/RefOG056.txt",
+            "sha256": "bc85f7791a2a632e7d032c8346dc52191ca5268317f5f877575ca80b2db5c042"
+          },
+          {
+            "bytes": 17,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/low_certainty_assignments/RefOG064.txt",
+            "sha256": "2841f2f3bb202f9f14b191a330113469c3fb437362dd2a59bfc528efcea32ad1"
+          },
+          {
+            "bytes": 12,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/low_certainty_assignments/RefOG065.txt",
+            "sha256": "cfffe0f056153cbca566178e780897bff1b83b4bcae006225c06bec709c7f6c5"
+          },
+          {
+            "bytes": 87,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/low_certainty_assignments/RefOG068.txt",
+            "sha256": "9ae30ca1f0c514be32941daaf8eeec910d2766dfabfa96492ccec077eb705a71"
+          },
+          {
+            "bytes": 10917,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/benchmark.py",
+            "sha256": "81eb1e660c17819549b07eea8a54b4fb42a89180cafeb4569d92195d282f5e6f"
+          },
+          {
+            "bytes": 273,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG001.txt",
+            "sha256": "83429b3e93256557d7b22e5262702de391bb81c5d94c3d1d409103e87e46cb30"
+          },
+          {
+            "bytes": 346,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG002.txt",
+            "sha256": "cc41b273ef98fb394b52b2167f9f7277c5914c4baf481afcbe96dee0319b4a61"
+          },
+          {
+            "bytes": 935,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG003.txt",
+            "sha256": "0eab9b709426d7b3303d621215c1fe6bb5c9ad2032697c053ae062bf12086224"
+          },
+          {
+            "bytes": 223,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG004.txt",
+            "sha256": "8ad2db4e9a3ced09fe52ffff2c1aa90986de760f5df22266c301099b0061fbc2"
+          },
+          {
+            "bytes": 628,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG005.txt",
+            "sha256": "21d3c8f98e4e6402cc9e90d649aa5acc0b269082a550c2b6b2637b2e26d1d505"
+          },
+          {
+            "bytes": 886,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG006.txt",
+            "sha256": "2a4b44023011b5e7b88ae8f6089ab43d0a4d5d9857d8ee1e0db4b132ce42fb8c"
+          },
+          {
+            "bytes": 1065,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG007.txt",
+            "sha256": "f55ee153b25f544784d13319ab2cf5eacb564e90ae9161dadc818a55a7d2eabc"
+          },
+          {
+            "bytes": 251,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG008.txt",
+            "sha256": "34b3bfdb70a847d36fa2afb1230271ce7bec67cab42bab3f88b659c7fe994626"
+          },
+          {
+            "bytes": 422,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG009.txt",
+            "sha256": "77a03d9e055790dd789d12032e54ef15fb2f7c61834d695685176d5e0b6a6c21"
+          },
+          {
+            "bytes": 57,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG010.txt",
+            "sha256": "cffa508146453c480a0959a9e2ed08617804d519c937be9094385ec4c5795ff5"
+          },
+          {
+            "bytes": 1743,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG011.txt",
+            "sha256": "1f32f081e3f1ef11a507164620b5e6d05b76e6e8f0fabc86bb4e4f0de3789047"
+          },
+          {
+            "bytes": 846,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG012.txt",
+            "sha256": "697b92f069841e7b9ec967db9e045e331b58403acc1dcf177a92be24ec262ddd"
+          },
+          {
+            "bytes": 339,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG013.txt",
+            "sha256": "ccd3d5e217b5485620465f27e71b0477c895f4bc6f8349b8f94e1021165a0bd1"
+          },
+          {
+            "bytes": 781,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG014.txt",
+            "sha256": "b9d2746e3d4485239f992db90fb3ac69d0e0114f9a47ebfd947a5ff190f5fca3"
+          },
+          {
+            "bytes": 551,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG015.txt",
+            "sha256": "042d77fb136b840e4e46f089c1923ba077226d860e14829bd684f09863040504"
+          },
+          {
+            "bytes": 462,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG016.txt",
+            "sha256": "b88255bb9a44d76fe001d10395edadfa4055a451352d6d7870a5cf82cfe0e191"
+          },
+          {
+            "bytes": 545,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG017.txt",
+            "sha256": "873750215ea94753e998895d4f3fc344a75720cada7bf372bb3d6318bed81813"
+          },
+          {
+            "bytes": 219,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG018.txt",
+            "sha256": "29a622397ed97572bf0483f0095eb4efbc2073b0439d260a16c10c202b92b09a"
+          },
+          {
+            "bytes": 235,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG019.txt",
+            "sha256": "e685d81377adc9ba9df0f2c8ab387799698c70c824a7f9e6ffaac5d116dd4006"
+          },
+          {
+            "bytes": 514,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG020.txt",
+            "sha256": "fe3bd2f9b42f1d4229a57b8384dc94ba101da00b5e817bf91960c874461fd5dd"
+          },
+          {
+            "bytes": 2323,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG021.txt",
+            "sha256": "8e5b2c8a45af7d108d9e63282b6544b518ddeaf68b033ed3b3f65de71f85c211"
+          },
+          {
+            "bytes": 647,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG022.txt",
+            "sha256": "0b19a8ec969fac32886200de47c4641a0d269df81d603d12807fbc2eb6a2c606"
+          },
+          {
+            "bytes": 1275,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG023.txt",
+            "sha256": "6a1b29994c981d6d6c1ffd3ceb2e3f66c0bcbb9aef1acfe52561c85ea67c40be"
+          },
+          {
+            "bytes": 945,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG024.txt",
+            "sha256": "127afacdd0443f0f2106706f51dfeebbdca3010d8891a7f4072d18793c3caa83"
+          },
+          {
+            "bytes": 237,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG025.txt",
+            "sha256": "f7b773801fde7b29ececec18eab286caa4fed334ff5a4513776e2f0beff8e186"
+          },
+          {
+            "bytes": 789,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG026.txt",
+            "sha256": "e5d3ec13969b8c881106427b6aa7ebd5bfd1d8570faf750da181c7b076272a58"
+          },
+          {
+            "bytes": 367,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG027.txt",
+            "sha256": "96219227d0d623ab6e866b0f8479defb2765dff6fadd1614389f088db8e7728d"
+          },
+          {
+            "bytes": 443,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG028.txt",
+            "sha256": "c9c1011e5cd7985abf5090097a341c162c53384a9267d00a54e51dea02b1a851"
+          },
+          {
+            "bytes": 237,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG029.txt",
+            "sha256": "7dc2b1ba66646679201360b40df5f593393944e8c96e8578eaa2aefa9f1af05f"
+          },
+          {
+            "bytes": 232,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG030.txt",
+            "sha256": "f54fb4593b909faee8b179c7214167f68a0a62596b901b61ab77c5c8ffb9107b"
+          },
+          {
+            "bytes": 587,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG031.txt",
+            "sha256": "5bfc570a11355d5855bf421ce855e68e8ab87ad69893993243ae4a0d8356dce9"
+          },
+          {
+            "bytes": 240,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG032.txt",
+            "sha256": "d383a06984f78e2d6a25356ca8ae9b3fce2864082a9deb08fc26db3fa67dbbc2"
+          },
+          {
+            "bytes": 561,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG033.txt",
+            "sha256": "3d59ba23ebde8498d2597e4c386f49ad36bbdbf5a502ac146b871485931e4668"
+          },
+          {
+            "bytes": 393,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG034.txt",
+            "sha256": "37d37458c70f2b002f3a6da00f200e2acf07f5788e01f09afe34038b1a4f781a"
+          },
+          {
+            "bytes": 599,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG035.txt",
+            "sha256": "938760f99423516db71efa3744b9876ea6b4a015a337f30dbc437b80bb169cd9"
+          },
+          {
+            "bytes": 853,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG036.txt",
+            "sha256": "8fe4b897a7cf9d0d45b247064eb4cf306e98dba2875becf9b40bba602db6fa89"
+          },
+          {
+            "bytes": 630,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG037.txt",
+            "sha256": "81607943a81f43af7fa27b1ca4c426c4285dd0b5008b7755e100feffc8294008"
+          },
+          {
+            "bytes": 168,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG038.txt",
+            "sha256": "4e196096b0a785d18edd335c2c5fce33cfe647132bd6dbea1c6162631f569180"
+          },
+          {
+            "bytes": 372,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG039.txt",
+            "sha256": "fd884b568fc7a38bbf72d37858c318385be126688535ed2e7c3a3e4467f0fb78"
+          },
+          {
+            "bytes": 235,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG040.txt",
+            "sha256": "dd543547410ce8d8e19869ff271dadca05cc04c6bb4e7e8c2b6615192420554b"
+          },
+          {
+            "bytes": 309,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG041.txt",
+            "sha256": "56f003823b1313a6e719286591201a9cc156ee62717dd91129872f385d124553"
+          },
+          {
+            "bytes": 199,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG042.txt",
+            "sha256": "a285ba294591e98fb6932e5321ebe25714503419cc49559e717cbc94f42c7f7a"
+          },
+          {
+            "bytes": 311,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG043.txt",
+            "sha256": "5ea47e0533f6475d8ba7a88738929be897d89aa1736d05bc2b77fc7d5eb28505"
+          },
+          {
+            "bytes": 251,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG044.txt",
+            "sha256": "1b3c6818c8fcfc4595a85773f1080bd2b8b64239c70f3d62a878c86e6ccd82b5"
+          },
+          {
+            "bytes": 233,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG045.txt",
+            "sha256": "a15febeab6c95f24711bf5e6ce74e3f0af6d627342727836f98e3838a359ba9a"
+          },
+          {
+            "bytes": 596,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG046.txt",
+            "sha256": "d144bd70880389693b80ecd78446bf1f6a5095001e221d16f90a6f4523cc636d"
+          },
+          {
+            "bytes": 663,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG047.txt",
+            "sha256": "bb42a9c8b8a551c1824deb190ebde19d5c4bd18f6c77d660815f7a4e77cfe484"
+          },
+          {
+            "bytes": 745,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG048.txt",
+            "sha256": "042ec2230f0266557b989b9a7e18e2a97196b7a8cbfdc3fef436634c1b5353ba"
+          },
+          {
+            "bytes": 184,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG049.txt",
+            "sha256": "650593062675fe03672ead1bb2c99ea019033087d6d2affc99db93ea840223c6"
+          },
+          {
+            "bytes": 248,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG050.txt",
+            "sha256": "b8709f35070f357fcdbde427cf421c53f02de6b2de79ccaa2033afb013c1e002"
+          },
+          {
+            "bytes": 311,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG051.txt",
+            "sha256": "7ed92e4910292450ecb63193946105125f017d28b256a8796df83d79a5f101ee"
+          },
+          {
+            "bytes": 282,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG052.txt",
+            "sha256": "cfab4664d45c49c68ac8285e2205d79d5c7737f7b1f56268a892b440015d2478"
+          },
+          {
+            "bytes": 237,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG053.txt",
+            "sha256": "79aeb065ecb4ef38326288187e3c478e73abace5e6ae09ff1c99c2f669602290"
+          },
+          {
+            "bytes": 801,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG054.txt",
+            "sha256": "7f136708ffb2ea5ef3185ed4ab3fc9f199caa3d56c81fd2f57589df819aee2ef"
+          },
+          {
+            "bytes": 539,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG055.txt",
+            "sha256": "38611031e58d4c818f900044b091b9fdb5e377a147a1322a653cba557cb29298"
+          },
+          {
+            "bytes": 161,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG056.txt",
+            "sha256": "947e4834280633318c0e236d7b9ee95406cf5b610333001ff5ac888e227c082a"
+          },
+          {
+            "bytes": 292,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG057.txt",
+            "sha256": "15b85f9f0575b69408ce48b9da07cdc2539f4df9bcb65c99c52fd346716f55bd"
+          },
+          {
+            "bytes": 929,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG058.txt",
+            "sha256": "5697a188e1f95be9ba1cb8d07fc510c449eb680b0e9c64ede9e75d891fe444fd"
+          },
+          {
+            "bytes": 187,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG059.txt",
+            "sha256": "232e7260d7ebe987757520539390d71862d9632b68729c35621f2260a82ae9c7"
+          },
+          {
+            "bytes": 1263,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG060.txt",
+            "sha256": "8d86da3230a2c31ce57a1d3e1042f8b4c9b40e9853fb8ef17869432848e6e377"
+          },
+          {
+            "bytes": 561,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG061.txt",
+            "sha256": "87476a60757a7e8fc8286ab2b325df5cb020a8e4b35b61fc4166bb0834a59c60"
+          },
+          {
+            "bytes": 199,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG062.txt",
+            "sha256": "6960f0a5a9768a53684f6a181fc80c6971850edc0716b268f5cc69e19abc9368"
+          },
+          {
+            "bytes": 386,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG063.txt",
+            "sha256": "350a327be6b22ca3cfa0721d75188f34835be03368549a83061368a714114bf3"
+          },
+          {
+            "bytes": 264,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG064.txt",
+            "sha256": "98d3b3b091217279227b5924293bb6c6fa740b3658415c3793a8a643511c504a"
+          },
+          {
+            "bytes": 180,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG065.txt",
+            "sha256": "b6255142e05c38a987eb06562ff1ee6491aeb766c2419833b84f6784cd8e7149"
+          },
+          {
+            "bytes": 252,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG066.txt",
+            "sha256": "f5ab9dc90a1385c3df885483670bc43f147d06d17b1b95f643575f379d0c1f0b"
+          },
+          {
+            "bytes": 235,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG067.txt",
+            "sha256": "25122b591f8f1bea20e25940669f02e693a2aba9e2b370e3bd6738cc1279dd53"
+          },
+          {
+            "bytes": 590,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG068.txt",
+            "sha256": "1d096936b040969a593ee687c5121d0bb73d94101300ded9225898059d34d312"
+          },
+          {
+            "bytes": 570,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG069.txt",
+            "sha256": "0d218d0bcd422e20b11bef77627de30d84b64f28517d6cd03707ca09507980c5"
+          },
+          {
+            "bytes": 235,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG070.txt",
+            "sha256": "8c47b04182dc619071875562f04d867a1b59c97e0635a4e262af72d85dfd8205"
+          },
+          {
+            "bytes": 634,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/low_certainty_assignments/RefOG014.txt",
+            "sha256": "a87aaf9fe3bfc232917281b04067df6e3c0e8763c94f92c1e2bcc9b3340b356f"
+          },
+          {
+            "bytes": 114,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/low_certainty_assignments/RefOG015.txt",
+            "sha256": "41442c430b5df21ec603bb1ced67c6a8d2e14d98ce8a0455c736e934d23a70b7"
+          },
+          {
+            "bytes": 19,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/low_certainty_assignments/RefOG017.txt",
+            "sha256": "19776a360524415e26460bbe175127f6de4a7799689284144418d332612427cc"
+          },
+          {
+            "bytes": 222,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/low_certainty_assignments/RefOG021.txt",
+            "sha256": "1275adc8cba1bedf703fe609887d151755782b1b8471412f359a7e77f3c94cff"
+          },
+          {
+            "bytes": 223,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/low_certainty_assignments/RefOG022.txt",
+            "sha256": "16e1defcd20306c5dda282de8973e2660c04c1a426959660a117f77ad40978de"
+          },
+          {
+            "bytes": 41,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/low_certainty_assignments/RefOG026.txt",
+            "sha256": "8871272a0bd896726d23a47268ff16fafc1939e7462893178715c642fe4f1b79"
+          },
+          {
+            "bytes": 36,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/low_certainty_assignments/RefOG028.txt",
+            "sha256": "ad8b09582aa70094d6cb1dd391624a769d25144136a7aedd2c95dac6e3d1c063"
+          },
+          {
+            "bytes": 32,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/low_certainty_assignments/RefOG056.txt",
+            "sha256": "bc85f7791a2a632e7d032c8346dc52191ca5268317f5f877575ca80b2db5c042"
+          },
+          {
+            "bytes": 17,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/low_certainty_assignments/RefOG064.txt",
+            "sha256": "2841f2f3bb202f9f14b191a330113469c3fb437362dd2a59bfc528efcea32ad1"
+          },
+          {
+            "bytes": 12,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/low_certainty_assignments/RefOG065.txt",
+            "sha256": "cfffe0f056153cbca566178e780897bff1b83b4bcae006225c06bec709c7f6c5"
+          },
+          {
+            "bytes": 87,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/low_certainty_assignments/RefOG068.txt",
+            "sha256": "9ae30ca1f0c514be32941daaf8eeec910d2766dfabfa96492ccec077eb705a71"
+          },
+          {
+            "bytes": 3212,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/canonical/preflight.json",
+            "sha256": "d245265536050647091ba68a30fc8a2e232692a74946f1bf73e3b2fed2663f59"
+          }
+        ],
+        "details": {
+          "family_details": {
+            "exact_refogs": 15,
+            "f_score": 74.10607351873405,
+            "precision": 81.77045380181866,
+            "recall": 67.75533630827974,
+            "refog_records": [
+              {
+                "exact": false,
+                "false_negative": 14.0,
+                "false_positive": 0.0,
+                "genes": 15,
+                "refog": "RefOG001.txt",
+                "splits": 2,
+                "true_positive": 91.0
+              },
+              {
+                "exact": false,
+                "false_negative": 150.0,
+                "false_positive": 38.0,
+                "genes": 19,
+                "refog": "RefOG002.txt",
+                "splits": 11,
+                "true_positive": 21.0
+              },
+              {
+                "exact": false,
+                "false_negative": 97.0,
+                "false_positive": 96.0,
+                "genes": 50,
+                "refog": "RefOG003.txt",
+                "splits": 3,
+                "true_positive": 1128.0
+              },
+              {
+                "exact": false,
+                "false_negative": 11.0,
+                "false_positive": 1.0,
+                "genes": 12,
+                "refog": "RefOG004.txt",
+                "splits": 2,
+                "true_positive": 55.0
+              },
+              {
+                "exact": false,
+                "false_negative": 93.0,
+                "false_positive": 33.0,
+                "genes": 34,
+                "refog": "RefOG005.txt",
+                "splits": 2,
+                "true_positive": 468.0
+              },
+              {
+                "exact": false,
+                "false_negative": 224.0,
+                "false_positive": 15.0,
+                "genes": 48,
+                "refog": "RefOG006.txt",
+                "splits": 5,
+                "true_positive": 904.0
+              },
+              {
+                "exact": false,
+                "false_negative": 748.0,
+                "false_positive": 171.0,
+                "genes": 57,
+                "refog": "RefOG007.txt",
+                "splits": 7,
+                "true_positive": 848.0
+              },
+              {
+                "exact": false,
+                "false_negative": 25.0,
+                "false_positive": 4.0,
+                "genes": 14,
+                "refog": "RefOG008.txt",
+                "splits": 3,
+                "true_positive": 66.0
+              },
+              {
+                "exact": false,
+                "false_negative": 99.0,
+                "false_positive": 55.0,
+                "genes": 23,
+                "refog": "RefOG009.txt",
+                "splits": 5,
+                "true_positive": 154.0
+              },
+              {
+                "exact": true,
+                "false_negative": 0.0,
+                "false_positive": 0.0,
+                "genes": 3,
+                "refog": "RefOG010.txt",
+                "splits": 1,
+                "true_positive": 3.0
+              },
+              {
+                "exact": false,
+                "false_negative": 3336.0,
+                "false_positive": 171.0,
+                "genes": 94,
+                "refog": "RefOG011.txt",
+                "splits": 9,
+                "true_positive": 1035.0
+              },
+              {
+                "exact": false,
+                "false_negative": 173.0,
+                "false_positive": 54.0,
+                "genes": 46,
+                "refog": "RefOG012.txt",
+                "splits": 4,
+                "true_positive": 862.0
+              },
+              {
+                "exact": false,
+                "false_negative": 345.0,
+                "false_positive": 35.0,
+                "genes": 27,
+                "refog": "RefOG013.txt",
+                "splits": 22,
+                "true_positive": 6.0
+              },
+              {
+                "exact": false,
+                "false_negative": 238.0,
+                "false_positive": 6.0,
+                "genes": 24,
+                "refog": "RefOG014.txt",
+                "splits": 11,
+                "true_positive": 38.0
+              },
+              {
+                "exact": true,
+                "false_negative": 0.0,
+                "false_positive": 0.0,
+                "genes": 23,
+                "refog": "RefOG015.txt",
+                "splits": 1,
+                "true_positive": 253.0
+              },
+              {
+                "exact": false,
+                "false_negative": 47.0,
+                "false_positive": 20.0,
+                "genes": 25,
+                "refog": "RefOG016.txt",
+                "splits": 3,
+                "true_positive": 253.0
+              },
+              {
+                "exact": false,
+                "false_negative": 28.0,
+                "false_positive": 0.0,
+                "genes": 29,
+                "refog": "RefOG017.txt",
+                "splits": 2,
+                "true_positive": 378.0
+              },
+              {
+                "exact": true,
+                "false_negative": 0.0,
+                "false_positive": 0.0,
+                "genes": 12,
+                "refog": "RefOG018.txt",
+                "splits": 1,
+                "true_positive": 66.0
+              },
+              {
+                "exact": true,
+                "false_negative": 0.0,
+                "false_positive": 0.0,
+                "genes": 13,
+                "refog": "RefOG019.txt",
+                "splits": 1,
+                "true_positive": 78.0
+              },
+              {
+                "exact": false,
+                "false_negative": 78.0,
+                "false_positive": 797.0,
+                "genes": 28,
+                "refog": "RefOG020.txt",
+                "splits": 4,
+                "true_positive": 300.0
+              },
+              {
+                "exact": false,
+                "false_negative": 5625.0,
+                "false_positive": 1730.0,
+                "genes": 125,
+                "refog": "RefOG021.txt",
+                "splits": 15,
+                "true_positive": 2125.0
+              },
+              {
+                "exact": false,
+                "false_negative": 22.0,
+                "false_positive": 73.0,
+                "genes": 23,
+                "refog": "RefOG022.txt",
+                "splits": 2,
+                "true_positive": 231.0
+              },
+              {
+                "exact": false,
+                "false_negative": 1968.0,
+                "false_positive": 172.0,
+                "genes": 69,
+                "refog": "RefOG023.txt",
+                "splits": 10,
+                "true_positive": 378.0
+              },
+              {
+                "exact": false,
+                "false_negative": 0.0,
+                "false_positive": 663.0,
+                "genes": 51,
+                "refog": "RefOG024.txt",
+                "splits": 1,
+                "true_positive": 1275.0
+              },
+              {
+                "exact": true,
+                "false_negative": 0.0,
+                "false_positive": 0.0,
+                "genes": 13,
+                "refog": "RefOG025.txt",
+                "splits": 1,
+                "true_positive": 78.0
+              },
+              {
+                "exact": true,
+                "false_negative": 0.0,
+                "false_positive": 0.0,
+                "genes": 40,
+                "refog": "RefOG026.txt",
+                "splits": 1,
+                "true_positive": 780.0
+              },
+              {
+                "exact": false,
+                "false_negative": 69.0,
+                "false_positive": 95.0,
+                "genes": 20,
+                "refog": "RefOG027.txt",
+                "splits": 4,
+                "true_positive": 121.0
+              },
+              {
+                "exact": false,
+                "false_negative": 176.0,
+                "false_positive": 0.0,
+                "genes": 24,
+                "refog": "RefOG028.txt",
+                "splits": 5,
+                "true_positive": 100.0
+              },
+              {
+                "exact": false,
+                "false_negative": 23.0,
+                "false_positive": 0.0,
+                "genes": 13,
+                "refog": "RefOG029.txt",
+                "splits": 3,
+                "true_positive": 55.0
+              },
+              {
+                "exact": true,
+                "false_negative": 0.0,
+                "false_positive": 0.0,
+                "genes": 13,
+                "refog": "RefOG030.txt",
+                "splits": 1,
+                "true_positive": 78.0
+              },
+              {
+                "exact": false,
+                "false_negative": 31.0,
+                "false_positive": 0.0,
+                "genes": 32,
+                "refog": "RefOG031.txt",
+                "splits": 2,
+                "true_positive": 465.0
+              },
+              {
+                "exact": false,
+                "false_negative": 0.0,
+                "false_positive": 14.0,
+                "genes": 14,
+                "refog": "RefOG032.txt",
+                "splits": 1,
+                "true_positive": 91.0
+              },
+              {
+                "exact": false,
+                "false_negative": 57.0,
+                "false_positive": 60.0,
+                "genes": 30,
+                "refog": "RefOG033.txt",
+                "splits": 3,
+                "true_positive": 378.0
+              },
+              {
+                "exact": true,
+                "false_negative": 0.0,
+                "false_positive": 0.0,
+                "genes": 21,
+                "refog": "RefOG034.txt",
+                "splits": 1,
+                "true_positive": 210.0
+              },
+              {
+                "exact": false,
+                "false_negative": 170.0,
+                "false_positive": 489.0,
+                "genes": 32,
+                "refog": "RefOG035.txt",
+                "splits": 6,
+                "true_positive": 326.0
+              },
+              {
+                "exact": false,
+                "false_negative": 45.0,
+                "false_positive": 360.0,
+                "genes": 46,
+                "refog": "RefOG036.txt",
+                "splits": 2,
+                "true_positive": 990.0
+              },
+              {
+                "exact": false,
+                "false_negative": 96.0,
+                "false_positive": 67.0,
+                "genes": 34,
+                "refog": "RefOG037.txt",
+                "splits": 4,
+                "true_positive": 465.0
+              },
+              {
+                "exact": true,
+                "false_negative": 0.0,
+                "false_positive": 0.0,
+                "genes": 9,
+                "refog": "RefOG038.txt",
+                "splits": 1,
+                "true_positive": 36.0
+              },
+              {
+                "exact": false,
+                "false_negative": 70.0,
+                "false_positive": 57.0,
+                "genes": 20,
+                "refog": "RefOG039.txt",
+                "splits": 5,
+                "true_positive": 120.0
+              },
+              {
+                "exact": false,
+                "false_negative": 23.0,
+                "false_positive": 0.0,
+                "genes": 13,
+                "refog": "RefOG040.txt",
+                "splits": 3,
+                "true_positive": 55.0
+              },
+              {
+                "exact": true,
+                "false_negative": 0.0,
+                "false_positive": 0.0,
+                "genes": 17,
+                "refog": "RefOG041.txt",
+                "splits": 1,
+                "true_positive": 136.0
+              },
+              {
+                "exact": false,
+                "false_negative": 26.0,
+                "false_positive": 0.0,
+                "genes": 11,
+                "refog": "RefOG042.txt",
+                "splits": 3,
+                "true_positive": 29.0
+              },
+              {
+                "exact": true,
+                "false_negative": 0.0,
+                "false_positive": 0.0,
+                "genes": 17,
+                "refog": "RefOG043.txt",
+                "splits": 1,
+                "true_positive": 136.0
+              },
+              {
+                "exact": false,
+                "false_negative": 13.0,
+                "false_positive": 104.0,
+                "genes": 14,
+                "refog": "RefOG044.txt",
+                "splits": 2,
+                "true_positive": 78.0
+              },
+              {
+                "exact": false,
+                "false_negative": 23.0,
+                "false_positive": 0.0,
+                "genes": 13,
+                "refog": "RefOG045.txt",
+                "splits": 3,
+                "true_positive": 55.0
+              },
+              {
+                "exact": true,
+                "false_negative": 0.0,
+                "false_positive": 0.0,
+                "genes": 32,
+                "refog": "RefOG046.txt",
+                "splits": 1,
+                "true_positive": 496.0
+              },
+              {
+                "exact": false,
+                "false_negative": 128.0,
+                "false_positive": 0.0,
+                "genes": 36,
+                "refog": "RefOG047.txt",
+                "splits": 2,
+                "true_positive": 502.0
+              },
+              {
+                "exact": false,
+                "false_negative": 113.0,
+                "false_positive": 65.0,
+                "genes": 40,
+                "refog": "RefOG048.txt",
+                "splits": 3,
+                "true_positive": 667.0
+              },
+              {
+                "exact": false,
+                "false_negative": 16.0,
+                "false_positive": 0.0,
+                "genes": 10,
+                "refog": "RefOG049.txt",
+                "splits": 2,
+                "true_positive": 29.0
+              },
+              {
+                "exact": false,
+                "false_negative": 25.0,
+                "false_positive": 0.0,
+                "genes": 14,
+                "refog": "RefOG050.txt",
+                "splits": 3,
+                "true_positive": 66.0
+              },
+              {
+                "exact": false,
+                "false_negative": 16.0,
+                "false_positive": 0.0,
+                "genes": 17,
+                "refog": "RefOG051.txt",
+                "splits": 2,
+                "true_positive": 120.0
+              },
+              {
+                "exact": false,
+                "false_negative": 14.0,
+                "false_positive": 14.0,
+                "genes": 15,
+                "refog": "RefOG052.txt",
+                "splits": 2,
+                "true_positive": 91.0
+              },
+              {
+                "exact": false,
+                "false_negative": 33.0,
+                "false_positive": 11.0,
+                "genes": 13,
+                "refog": "RefOG053.txt",
+                "splits": 4,
+                "true_positive": 45.0
+              },
+              {
+                "exact": false,
+                "false_negative": 498.0,
+                "false_positive": 9.0,
+                "genes": 44,
+                "refog": "RefOG054.txt",
+                "splits": 8,
+                "true_positive": 448.0
+              },
+              {
+                "exact": false,
+                "false_negative": 55.0,
+                "false_positive": 17.0,
+                "genes": 29,
+                "refog": "RefOG055.txt",
+                "splits": 3,
+                "true_positive": 351.0
+              },
+              {
+                "exact": true,
+                "false_negative": 0.0,
+                "false_positive": 0.0,
+                "genes": 7,
+                "refog": "RefOG056.txt",
+                "splits": 1,
+                "true_positive": 21.0
+              },
+              {
+                "exact": false,
+                "false_negative": 29.0,
+                "false_positive": 0.0,
+                "genes": 16,
+                "refog": "RefOG057.txt",
+                "splits": 3,
+                "true_positive": 91.0
+              },
+              {
+                "exact": false,
+                "false_negative": 1097.0,
+                "false_positive": 241.0,
+                "genes": 50,
+                "refog": "RefOG058.txt",
+                "splits": 14,
+                "true_positive": 128.0
+              },
+              {
+                "exact": true,
+                "false_negative": 0.0,
+                "false_positive": 0.0,
+                "genes": 10,
+                "refog": "RefOG059.txt",
+                "splits": 1,
+                "true_positive": 45.0
+              },
+              {
+                "exact": false,
+                "false_negative": 262.0,
+                "false_positive": 0.0,
+                "genes": 68,
+                "refog": "RefOG060.txt",
+                "splits": 5,
+                "true_positive": 2016.0
+              },
+              {
+                "exact": false,
+                "false_negative": 221.0,
+                "false_positive": 40.0,
+                "genes": 30,
+                "refog": "RefOG061.txt",
+                "splits": 3,
+                "true_positive": 214.0
+              },
+              {
+                "exact": true,
+                "false_negative": 0.0,
+                "false_positive": 0.0,
+                "genes": 11,
+                "refog": "RefOG062.txt",
+                "splits": 1,
+                "true_positive": 55.0
+              },
+              {
+                "exact": false,
+                "false_negative": 39.0,
+                "false_positive": 6.0,
+                "genes": 21,
+                "refog": "RefOG063.txt",
+                "splits": 3,
+                "true_positive": 171.0
+              },
+              {
+                "exact": false,
+                "false_negative": 46.0,
+                "false_positive": 56.0,
+                "genes": 14,
+                "refog": "RefOG064.txt",
+                "splits": 5,
+                "true_positive": 45.0
+              },
+              {
+                "exact": false,
+                "false_negative": 17.0,
+                "false_positive": 0.0,
+                "genes": 10,
+                "refog": "RefOG065.txt",
+                "splits": 3,
+                "true_positive": 28.0
+              },
+              {
+                "exact": false,
+                "false_negative": 13.0,
+                "false_positive": 0.0,
+                "genes": 14,
+                "refog": "RefOG066.txt",
+                "splits": 2,
+                "true_positive": 78.0
+              },
+              {
+                "exact": false,
+                "false_negative": 12.0,
+                "false_positive": 0.0,
+                "genes": 13,
+                "refog": "RefOG067.txt",
+                "splits": 2,
+                "true_positive": 66.0
+              },
+              {
+                "exact": false,
+                "false_negative": 26.0,
+                "false_positive": 0.0,
+                "genes": 27,
+                "refog": "RefOG068.txt",
+                "splits": 2,
+                "true_positive": 325.0
+              },
+              {
+                "exact": false,
+                "false_negative": 267.0,
+                "false_positive": 14.0,
+                "genes": 31,
+                "refog": "RefOG069.txt",
+                "splits": 4,
+                "true_positive": 198.0
+              },
+              {
+                "exact": false,
+                "false_negative": 12.0,
+                "false_positive": 36.0,
+                "genes": 13,
+                "refog": "RefOG070.txt",
+                "splits": 2,
+                "true_positive": 66.0
+              }
+            ],
+            "refogs": 70,
+            "weighted_false_negative": 305.5181884790494,
+            "weighted_false_positive": 143.12060832971704,
+            "weighted_true_positive": 641.9818115209503
+          },
+          "precision": 0.8177045380181867,
+          "recall": 0.6775533630827973
+        },
+        "initial_min_total_hits": 4,
+        "initial_threshold_provenance": "Frozen control initial-search engine uses its unchanged default 4; not a retroactively recorded metadata field.",
+        "native_summary": {
+          "bypassed_families": 45764,
+          "candidate_families": 54445,
+          "checkpoint_hits": 8679,
+          "duplications": 59379,
+          "ortholog_pairs": 966439,
+          "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/canonical/native/orthohmm_phylogeny",
+          "reconciled_families": 8681,
+          "remapped_checkpoint_hits": 0,
+          "root_hogs": 59770,
+          "schema_version": 1,
+          "speciations": 104016,
+          "species_tree_checkpoint_hit": true,
+          "species_tree_families": 200,
+          "uncertain_events": 13034
+        },
+        "scores": {
+          "OrthoBench F1": 0.7410607351873405
+        },
+        "source_revision": "402d32323f7166c6135f4c81b849b0abfc97e55c"
+      },
+      "cpu_backend_probe": {
+        "passed": true,
+        "stdout": ""
+      },
+      "dataset": "OrthoBench",
+      "label": "shared_hit1",
+      "scores": {},
+      "status": "fresh_native_running"
+    }
+  ],
+  "control_accounting": "24240|FAILED|1:0\n",
+  "control_report": {
+    "bytes": 403831,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/results.json",
+    "sha256": "4094edabe97de658603a9346178f0952a67957346fb73ecd4de6bc463b5fbe48"
+  },
+  "defaults_promoted": false,
+  "execution_plan": {
+    "bytes": 82694933,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/shared_hit_pipeline_r1_v1_20261014/execution_plan.json",
+    "sha256": "9d07a4945a35667adc658a8394f1ca6f5588f005a30fb52868de35d4cba713ba"
+  },
+  "goal_completed": false,
+  "host_before": "    PID %CPU COMMAND\n      1  0.1 systemd\n      2  0.0 kthreadd\n      3  0.0 pool_workqueue_release\n      4  0.0 kworker/R-rcu_g\n      5  0.0 kworker/R-rcu_p\n      6  0.0 kworker/R-slub_\n      7  0.0 kworker/R-netns\n     10  0.0 kworker/0:0H-events_highpri\n     12  0.0 kworker/R-mm_pe\n     13  0.0 rcu_tasks_kthread\n     14  0.0 rcu_tasks_rude_kthread\n     15  0.0 rcu_tasks_trace_kthread\n     16  0.0 ksoftirqd/0\n     17  0.3 rcu_preempt\n     18  0.0 migration/0\n     19  0.0 idle_inject/0\n     20  0.0 cpuhp/0\n     21  0.0 cpuhp/1\n     22  0.0 idle_inject/1\n     23  0.0 migration/1\n     24  0.0 ksoftirqd/1\n     26  0.0 kworker/1:0H-events_highpri\n     27  0.0 cpuhp/2\n     28  0.0 idle_inject/2\n     29  0.0 migration/2\n     30  0.0 ksoftirqd/2\n     32  0.0 kworker/2:0H-events_highpri\n     33  0.0 cpuhp/3\n     34  0.0 idle_inject/3\n     35  0.0 migration/3\n     36  0.0 ksoftirqd/3\n     38  0.0 kworker/3:0H-events_highpri\n     39  0.0 cpuhp/4\n     40  0.0 idle_inject/4\n     41  0.0 migration/4\n     42  0.0 ksoftirqd/4\n     44  0.0 kworker/4:0H-events_highpri\n     45  0.0 cpuhp/5\n     46  0.0 idle_inject/5\n     47  0.0 migration/5\n     48  0.0 ksoftirqd/5\n     50  0.0 kworker/5:0H-events_highpri\n     51  0.0 cpuhp/6\n     52  0.0 idle_inject/6\n     53  0.0 migration/6\n     54  0.0 ksoftirqd/6\n     56  0.0 kworker/6:0H-events_highpri\n     57  0.0 cpuhp/7\n     58  0.0 idle_inject/7\n     59  0.0 migration/7\n     60  0.0 ksoftirqd/7\n     62  0.0 kworker/7:0H-events_highpri\n     63  0.0 cpuhp/8\n     64  0.0 idle_inject/8\n     65  0.0 migration/8\n     66  0.0 ksoftirqd/8\n     68  0.0 kworker/8:0H-events_highpri\n     69  0.0 cpuhp/9\n     70  0.0 idle_inject/9\n     71  0.0 migration/9\n     72  0.0 ksoftirqd/9\n     74  0.0 kworker/9:0H-events_highpri\n     75  0.0 cpuhp/10\n     76  0.0 idle_inject/10\n     77  0.0 migration/10\n     78  0.0 ksoftirqd/10\n     80  0.0 kworker/10:0H-events_highpri\n     81  0.0 cpuhp/11\n     82  0.0 idle_inject/11\n     83  0.0 migration/11\n     84  0.0 ksoftirqd/11\n     86  0.0 kworker/11:0H-events_highpri\n     87  0.0 cpuhp/12\n     88  0.0 idle_inject/12\n     89  0.0 migration/12\n     90  0.0 ksoftirqd/12\n     92  0.0 kworker/12:0H-events_highpri\n     93  0.0 cpuhp/13\n     94  0.0 idle_inject/13\n     95  0.0 migration/13\n     96  0.0 ksoftirqd/13\n     98  0.0 kworker/13:0H-events_highpri\n     99  0.0 cpuhp/14\n    100  0.0 idle_inject/14\n    101  0.0 migration/14\n    102  0.0 ksoftirqd/14\n    104  0.0 kworker/14:0H-events_highpri\n    105  0.0 cpuhp/15\n    106  0.0 idle_inject/15\n    107  0.0 migration/15\n    108  0.0 ksoftirqd/15\n    110  0.0 kworker/15:0H-events_highpri\n    111  0.0 cpuhp/16\n    112  0.0 idle_inject/16\n    113  0.0 migration/16\n    114  0.0 ksoftirqd/16\n    116  0.0 kworker/16:0H-events_highpri\n    117  0.0 cpuhp/17\n    118  0.0 idle_inject/17\n    119  0.0 migration/17\n    120  0.0 ksoftirqd/17\n    122  0.0 kworker/17:0H-events_highpri\n    123  0.0 cpuhp/18\n    124  0.0 idle_inject/18\n    125  0.0 migration/18\n    126  0.0 ksoftirqd/18\n    128  0.0 kworker/18:0H-events_highpri\n    129  0.0 cpuhp/19\n    130  0.0 idle_inject/19\n    131  0.0 migration/19\n    132  0.0 ksoftirqd/19\n    134  0.0 kworker/19:0H-events_highpri\n    135  0.0 cpuhp/20\n    136  0.0 idle_inject/20\n    137  0.0 migration/20\n    138  0.0 ksoftirqd/20\n    140  0.0 kworker/20:0H-kblockd\n    141  0.0 cpuhp/21\n    142  0.0 idle_inject/21\n    143  0.0 migration/21\n    144  0.0 ksoftirqd/21\n    146  0.0 kworker/21:0H-events_highpri\n    147  0.0 cpuhp/22\n    148  0.0 idle_inject/22\n    149  0.0 migration/22\n    150  0.0 ksoftirqd/22\n    152  0.0 kworker/22:0H-events_highpri\n    153  0.0 cpuhp/23\n    154  0.0 idle_inject/23\n    155  0.0 migration/23\n    156  0.0 ksoftirqd/23\n    158  0.0 kworker/23:0H-events_highpri\n    159  0.0 cpuhp/24\n    160  0.0 idle_inject/24\n    161  0.0 migration/24\n    162  0.0 ksoftirqd/24\n    164  0.0 kworker/24:0H-events_highpri\n    165  0.0 cpuhp/25\n    166  0.0 idle_inject/25\n    167  0.0 migration/25\n    168  0.0 ksoftirqd/25\n    170  0.0 kworker/25:0H-events_highpri\n    171  0.0 cpuhp/26\n    172  0.0 idle_inject/26\n    173  0.0 migration/26\n    174  0.0 ksoftirqd/26\n    176  0.0 kworker/26:0H-events_highpri\n    177  0.0 cpuhp/27\n    178  0.0 idle_inject/27\n    179  0.0 migration/27\n    180  0.0 ksoftirqd/27\n    182  0.0 kworker/27:0H-kblockd\n    183  0.0 cpuhp/28\n    184  0.0 idle_inject/28\n    185  0.0 migration/28\n    186  0.0 ksoftirqd/28\n    188  0.0 kworker/28:0H-kblockd\n    189  0.0 cpuhp/29\n    190  0.0 idle_inject/29\n    191  0.0 migration/29\n    192  0.0 ksoftirqd/29\n    194  0.0 kworker/29:0H-events_highpri\n    195  0.0 cpuhp/30\n    196  0.0 idle_inject/30\n    197  0.0 migration/30\n    198  0.0 ksoftirqd/30\n    200  0.0 kworker/30:0H-kblockd\n    201  0.0 cpuhp/31\n    202  0.0 idle_inject/31\n    203  0.0 migration/31\n    204  0.0 ksoftirqd/31\n    206  0.0 kworker/31:0H-events_highpri\n    207  0.0 cpuhp/32\n    208  0.0 idle_inject/32\n    209  0.0 migration/32\n    210  0.0 ksoftirqd/32\n    212  0.0 kworker/32:0H-events_highpri\n    213  0.0 cpuhp/33\n    214  0.0 idle_inject/33\n    215  0.0 migration/33\n    216  0.0 ksoftirqd/33\n    218  0.0 kworker/33:0H-events_highpri\n    219  0.0 cpuhp/34\n    220  0.0 idle_inject/34\n    221  0.0 migration/34\n    222  0.0 ksoftirqd/34\n    224  0.0 kworker/34:0H-events_highpri\n    225  0.0 cpuhp/35\n    226  0.0 idle_inject/35\n    227  0.0 migration/35\n    228  0.0 ksoftirqd/35\n    230  0.0 kworker/35:0H-events_highpri\n    231  0.0 cpuhp/36\n    232  0.0 idle_inject/36\n    233  0.0 migration/36\n    234  0.0 ksoftirqd/36\n    236  0.0 kworker/36:0H-events_highpri\n    237  0.0 cpuhp/37\n    238  0.0 idle_inject/37\n    239  0.0 migration/37\n    240  0.0 ksoftirqd/37\n    242  0.0 kworker/37:0H-events_highpri\n    243  0.0 cpuhp/38\n    244  0.0 idle_inject/38\n    245  0.0 migration/38\n    246  0.0 ksoftirqd/38\n    248  0.0 kworker/38:0H-events_highpri\n    249  0.0 cpuhp/39\n    250  0.0 idle_inject/39\n    251  0.0 migration/39\n    252  0.0 ksoftirqd/39\n    254  0.0 kworker/39:0H-events_highpri\n    255  0.0 cpuhp/40\n    256  0.0 idle_inject/40\n    257  0.0 migration/40\n    258  0.0 ksoftirqd/40\n    260  0.0 kworker/40:0H-events_highpri\n    261  0.0 cpuhp/41\n    262  0.0 idle_inject/41\n    263  0.0 migration/41\n    264  0.0 ksoftirqd/41\n    266  0.0 kworker/41:0H-events_highpri\n    267  0.0 cpuhp/42\n    268  0.0 idle_inject/42\n    269  0.0 migration/42\n    270  0.0 ksoftirqd/42\n    272  0.0 kworker/42:0H-kblockd\n    273  0.0 cpuhp/43\n    274  0.0 idle_inject/43\n    275  0.0 migration/43\n    276  0.0 ksoftirqd/43\n    278  0.0 kworker/43:0H-events_highpri\n    279  0.0 cpuhp/44\n    280  0.0 idle_inject/44\n    281  0.0 migration/44\n    282  0.0 ksoftirqd/44\n    284  0.0 kworker/44:0H-events_highpri\n    285  0.0 cpuhp/45\n    286  0.0 idle_inject/45\n    287  0.0 migration/45\n    288  0.0 ksoftirqd/45\n    290  0.0 kworker/45:0H-events_highpri\n    291  0.0 cpuhp/46\n    292  0.0 idle_inject/46\n    293  0.0 migration/46\n    294  0.0 ksoftirqd/46\n    296  0.0 kworker/46:0H-events_highpri\n    297  0.0 cpuhp/47\n    298  0.0 idle_inject/47\n    299  0.0 migration/47\n    300  0.0 ksoftirqd/47\n    302  0.0 kworker/47:0H-events_highpri\n    303  0.0 cpuhp/48\n    304  0.0 idle_inject/48\n    305  0.0 migration/48\n    306  0.0 ksoftirqd/48\n    308  0.0 kworker/48:0H-kblockd\n    309  0.0 cpuhp/49\n    310  0.0 idle_inject/49\n    311  0.0 migration/49\n    312  0.0 ksoftirqd/49\n    314  0.0 kworker/49:0H-events_highpri\n    315  0.0 cpuhp/50\n    316  0.0 idle_inject/50\n    317  0.0 migration/50\n    318  0.0 ksoftirqd/50\n    320  0.0 kworker/50:0H-events_highpri\n    321  0.0 cpuhp/51\n    322  0.0 idle_inject/51\n    323  0.0 migration/51\n    324  0.0 ksoftirqd/51\n    326  0.0 kworker/51:0H-kblockd\n    327  0.0 cpuhp/52\n    328  0.0 idle_inject/52\n    329  0.0 migration/52\n    330  0.0 ksoftirqd/52\n    332  0.0 kworker/52:0H-kblockd\n    333  0.0 cpuhp/53\n    334  0.0 idle_inject/53\n    335  0.0 migration/53\n    336  0.0 ksoftirqd/53\n    338  0.0 kworker/53:0H-kblockd\n    339  0.0 cpuhp/54\n    340  0.0 idle_inject/54\n    341  0.0 migration/54\n    342  0.0 ksoftirqd/54\n    344  0.0 kworker/54:0H-kblockd\n    345  0.0 cpuhp/55\n    346  0.0 idle_inject/55\n    347  0.0 migration/55\n    348  0.0 ksoftirqd/55\n    350  0.0 kworker/55:0H-events_highpri\n    351  0.0 cpuhp/56\n    352  0.0 idle_inject/56\n    353  0.0 migration/56\n    354  0.0 ksoftirqd/56\n    356  0.0 kworker/56:0H-events_highpri\n    357  0.0 cpuhp/57\n    358  0.0 idle_inject/57\n    359  0.0 migration/57\n    360  0.0 ksoftirqd/57\n    362  0.0 kworker/57:0H-events_highpri\n    363  0.0 cpuhp/58\n    364  0.0 idle_inject/58\n    365  0.0 migration/58\n    366  0.0 ksoftirqd/58\n    368  0.0 kworker/58:0H-events_highpri\n    369  0.0 cpuhp/59\n    370  0.0 idle_inject/59\n    371  0.0 migration/59\n    372  0.0 ksoftirqd/59\n    374  0.0 kworker/59:0H-events_highpri\n    375  0.0 cpuhp/60\n    376  0.0 idle_inject/60\n    377  0.0 migration/60\n    378  0.0 ksoftirqd/60\n    380  0.0 kworker/60:0H-events_highpri\n    381  0.0 cpuhp/61\n    382  0.0 idle_inject/61\n    383  0.0 migration/61\n    384  0.0 ksoftirqd/61\n    386  0.0 kworker/61:0H-events_highpri\n    387  0.0 cpuhp/62\n    388  0.0 idle_inject/62\n    389  0.0 migration/62\n    390  0.0 ksoftirqd/62\n    392  0.0 kworker/62:0H-events_highpri\n    393  0.0 cpuhp/63\n    394  0.0 idle_inject/63\n    395  0.0 migration/63\n    396  0.0 ksoftirqd/63\n    398  0.0 kworker/63:0H-events_highpri\n    399  0.0 cpuhp/64\n    400  0.0 idle_inject/64\n    401  0.0 migration/64\n    402  0.0 ksoftirqd/64\n    404  0.0 kworker/64:0H-events_highpri\n    405  0.0 cpuhp/65\n    406  0.0 idle_inject/65\n    407  0.0 migration/65\n    408  0.0 ksoftirqd/65\n    410  0.0 kworker/65:0H-events_highpri\n    411  0.0 cpuhp/66\n    412  0.0 idle_inject/66\n    413  0.0 migration/66\n    414  0.0 ksoftirqd/66\n    416  0.0 kworker/66:0H-kblockd\n    417  0.0 cpuhp/67\n    418  0.0 idle_inject/67\n    419  0.0 migration/67\n    420  0.0 ksoftirqd/67\n    422  0.0 kworker/67:0H-events_highpri\n    423  0.0 cpuhp/68\n    424  0.0 idle_inject/68\n    425  0.0 migration/68\n    426  0.0 ksoftirqd/68\n    428  0.0 kworker/68:0H-events_highpri\n    429  0.0 cpuhp/69\n    430  0.0 idle_inject/69\n    431  0.0 migration/69\n    432  0.0 ksoftirqd/69\n    434  0.0 kworker/69:0H-events_highpri\n    435  0.0 cpuhp/70\n    436  0.0 idle_inject/70\n    437  0.0 migration/70\n    438  0.0 ksoftirqd/70\n    440  0.0 kworker/70:0H-events_highpri\n    441  0.0 cpuhp/71\n    442  0.0 idle_inject/71\n    443  0.0 migration/71\n    444  0.0 ksoftirqd/71\n    446  0.0 kworker/71:0H-events_highpri\n    447  0.0 cpuhp/72\n    448  0.0 idle_inject/72\n    449  0.0 migration/72\n    450  0.0 ksoftirqd/72\n    452  0.0 kworker/72:0H-events_highpri\n    453  0.0 cpuhp/73\n    454  0.0 idle_inject/73\n    455  0.0 migration/73\n    456  0.0 ksoftirqd/73\n    458  0.0 kworker/73:0H-events_highpri\n    459  0.0 cpuhp/74\n    460  0.0 idle_inject/74\n    461  0.0 migration/74\n    462  0.0 ksoftirqd/74\n    464  0.0 kworker/74:0H-events_highpri\n    465  0.0 cpuhp/75\n    466  0.0 idle_inject/75\n    467  0.0 migration/75\n    468  0.0 ksoftirqd/75\n    470  0.0 kworker/75:0H-events_highpri\n    471  0.0 cpuhp/76\n    472  0.0 idle_inject/76\n    473  0.0 migration/76\n    474  0.0 ksoftirqd/76\n    476  0.0 kworker/76:0H-events_highpri\n    477  0.0 cpuhp/77\n    478  0.0 idle_inject/77\n    479  0.0 migration/77\n    480  0.0 ksoftirqd/77\n    482  0.0 kworker/77:0H-events_highpri\n    483  0.0 cpuhp/78\n    484  0.0 idle_inject/78\n    485  0.0 migration/78\n    486  0.0 ksoftirqd/78\n    488  0.0 kworker/78:0H-kblockd\n    489  0.0 cpuhp/79\n    490  0.0 idle_inject/79\n    491  0.0 migration/79\n    492  0.0 ksoftirqd/79\n    494  0.0 kworker/79:0H-events_highpri\n    495  0.0 cpuhp/80\n    496  0.0 idle_inject/80\n    497  0.0 migration/80\n    498  0.0 ksoftirqd/80\n    500  0.0 kworker/80:0H-events_highpri\n    501  0.0 cpuhp/81\n    502  0.0 idle_inject/81\n    503  0.0 migration/81\n    504  0.0 ksoftirqd/81\n    506  0.0 kworker/81:0H-events_highpri\n    507  0.0 cpuhp/82\n    508  0.0 idle_inject/82\n    509  0.0 migration/82\n    510  0.0 ksoftirqd/82\n    512  0.0 kworker/82:0H-events_highpri\n    513  0.0 cpuhp/83\n    514  0.0 idle_inject/83\n    515  0.0 migration/83\n    516  0.0 ksoftirqd/83\n    518  0.0 kworker/83:0H-events_highpri\n    519  0.0 cpuhp/84\n    520  0.0 idle_inject/84\n    521  0.0 migration/84\n    522  0.0 ksoftirqd/84\n    524  0.0 kworker/84:0H-kblockd\n    525  0.0 cpuhp/85\n    526  0.0 idle_inject/85\n    527  0.0 migration/85\n    528  0.0 ksoftirqd/85\n    530  0.0 kworker/85:0H-events_highpri\n    531  0.0 cpuhp/86\n    532  0.0 idle_inject/86\n    533  0.0 migration/86\n    534  0.0 ksoftirqd/86\n    536  0.0 kworker/86:0H-events_highpri\n    537  0.0 cpuhp/87\n    538  0.0 idle_inject/87\n    539  0.0 migration/87\n    540  0.0 ksoftirqd/87\n    542  0.0 kworker/87:0H-events_highpri\n    543  0.0 cpuhp/88\n    544  0.0 idle_inject/88\n    545  0.0 migration/88\n    546  0.0 ksoftirqd/88\n    548  0.0 kworker/88:0H-events_highpri\n    549  0.0 cpuhp/89\n    550  0.0 idle_inject/89\n    551  0.0 migration/89\n    552  0.0 ksoftirqd/89\n    554  0.0 kworker/89:0H-events_highpri\n    555  0.0 cpuhp/90\n    556  0.0 idle_inject/90\n    557  0.0 migration/90\n    558  0.0 ksoftirqd/90\n    560  0.0 kworker/90:0H-events_highpri\n    561  0.0 cpuhp/91\n    562  0.0 idle_inject/91\n    563  0.0 migration/91\n    564  0.0 ksoftirqd/91\n    566  0.0 kworker/91:0H-events_highpri\n    567  0.0 cpuhp/92\n    568  0.0 idle_inject/92\n    569  0.0 migration/92\n    570  0.0 ksoftirqd/92\n    572  0.0 kworker/92:0H-events_highpri\n    573  0.0 cpuhp/93\n    574  0.0 idle_inject/93\n    575  0.0 migration/93\n    576  0.0 ksoftirqd/93\n    578  0.0 kworker/93:0H-events_highpri\n    579  0.0 cpuhp/94\n    580  0.0 idle_inject/94\n    581  0.0 migration/94\n    582  0.0 ksoftirqd/94\n    584  0.0 kworker/94:0H-events_highpri\n    585  0.0 cpuhp/95\n    586  0.0 idle_inject/95\n    587  0.0 migration/95\n    588  0.0 ksoftirqd/95\n    590  0.0 kworker/95:0H-events_highpri\n    591  0.0 cpuhp/96\n    592  0.0 idle_inject/96\n    593  0.0 migration/96\n    594  0.0 ksoftirqd/96\n    596  0.0 kworker/96:0H-events_highpri\n    597  0.0 cpuhp/97\n    598  0.0 idle_inject/97\n    599  0.0 migration/97\n    600  0.0 ksoftirqd/97\n    602  0.0 kworker/97:0H-events_highpri\n    603  0.0 cpuhp/98\n    604  0.0 idle_inject/98\n    605  0.0 migration/98\n    606  0.0 ksoftirqd/98\n    608  0.0 kworker/98:0H-events_highpri\n    609  0.0 cpuhp/99\n    610  0.0 idle_inject/99\n    611  0.0 migration/99\n    612  0.0 ksoftirqd/99\n    614  0.0 kworker/99:0H-events_highpri\n    615  0.0 cpuhp/100\n    616  0.0 idle_inject/100\n    617  0.0 migration/100\n    618  0.0 ksoftirqd/100\n    620  0.0 kworker/100:0H-events_highpri\n    621  0.0 cpuhp/101\n    622  0.0 idle_inject/101\n    623  0.0 migration/101\n    624  0.0 ksoftirqd/101\n    626  0.0 kworker/101:0H-events_highpri\n    627  0.0 cpuhp/102\n    628  0.0 idle_inject/102\n    629  0.0 migration/102\n    630  0.0 ksoftirqd/102\n    632  0.0 kworker/102:0H-events_highpri\n    633  0.0 cpuhp/103\n    634  0.0 idle_inject/103\n    635  0.0 migration/103\n    636  0.0 ksoftirqd/103\n    638  0.0 kworker/103:0H-events_highpri\n    639  0.0 cpuhp/104\n    640  0.0 idle_inject/104\n    641  0.0 migration/104\n    642  0.0 ksoftirqd/104\n    644  0.0 kworker/104:0H-events_highpri\n    645  0.0 cpuhp/105\n    646  0.0 idle_inject/105\n    647  0.0 migration/105\n    648  0.0 ksoftirqd/105\n    650  0.0 kworker/105:0H-events_highpri\n    651  0.0 cpuhp/106\n    652  0.0 idle_inject/106\n    653  0.0 migration/106\n    654  0.0 ksoftirqd/106\n    656  0.0 kworker/106:0H-events_highpri\n    657  0.0 cpuhp/107\n    658  0.0 idle_inject/107\n    659  0.0 migration/107\n    660  0.0 ksoftirqd/107\n    662  0.0 kworker/107:0H-events_highpri\n    663  0.0 cpuhp/108\n    664  0.0 idle_inject/108\n    665  0.0 migration/108\n    666  0.0 ksoftirqd/108\n    668  0.0 kworker/108:0H-events_highpri\n    669  0.0 cpuhp/109\n    670  0.0 idle_inject/109\n    671  0.0 migration/109\n    672  0.0 ksoftirqd/109\n    674  0.0 kworker/109:0H-events_highpri\n    675  0.0 cpuhp/110\n    676  0.0 idle_inject/110\n    677  0.0 migration/110\n    678  0.0 ksoftirqd/110\n    680  0.0 kworker/110:0H-events_highpri\n    681  0.0 cpuhp/111\n    682  0.0 idle_inject/111\n    683  0.0 migration/111\n    684  0.0 ksoftirqd/111\n    686  0.0 kworker/111:0H-events_highpri\n    687  0.0 cpuhp/112\n    688  0.0 idle_inject/112\n    689  0.0 migration/112\n    690  0.0 ksoftirqd/112\n    692  0.0 kworker/112:0H-events_highpri\n    693  0.0 cpuhp/113\n    694  0.0 idle_inject/113\n    695  0.0 migration/113\n    696  0.0 ksoftirqd/113\n    698  0.0 kworker/113:0H-events_highpri\n    699  0.0 cpuhp/114\n    700  0.0 idle_inject/114\n    701  0.0 migration/114\n    702  0.0 ksoftirqd/114\n    704  0.0 kworker/114:0H-events_highpri\n    705  0.0 cpuhp/115\n    706  0.0 idle_inject/115\n    707  0.0 migration/115\n    708  0.0 ksoftirqd/115\n    710  0.0 kworker/115:0H-events_highpri\n    711  0.0 cpuhp/116\n    712  0.0 idle_inject/116\n    713  0.0 migration/116\n    714  0.0 ksoftirqd/116\n    716  0.0 kworker/116:0H-events_highpri\n    717  0.0 cpuhp/117\n    718  0.0 idle_inject/117\n    719  0.0 migration/117\n    720  0.0 ksoftirqd/117\n    722  0.0 kworker/117:0H-events_highpri\n    723  0.0 cpuhp/118\n    724  0.0 idle_inject/118\n    725  0.0 migration/118\n    726  0.0 ksoftirqd/118\n    728  0.0 kworker/118:0H-events_highpri\n    729  0.0 cpuhp/119\n    730  0.0 idle_inject/119\n    731  0.0 migration/119\n    732  0.0 ksoftirqd/119\n    734  0.0 kworker/119:0H-events_highpri\n    735  0.0 cpuhp/120\n    736  0.0 idle_inject/120\n    737  0.0 migration/120\n    738  0.0 ksoftirqd/120\n    740  0.0 kworker/120:0H-events_highpri\n    741  0.0 cpuhp/121\n    742  0.0 idle_inject/121\n    743  0.0 migration/121\n    744  0.0 ksoftirqd/121\n    746  0.0 kworker/121:0H-events_highpri\n    747  0.0 cpuhp/122\n    748  0.0 idle_inject/122\n    749  0.0 migration/122\n    750  0.0 ksoftirqd/122\n    752  0.0 kworker/122:0H-events_highpri\n    753  0.0 cpuhp/123\n    754  0.0 idle_inject/123\n    755  0.0 migration/123\n    756  0.0 ksoftirqd/123\n    758  0.0 kworker/123:0H-events_highpri\n    759  0.0 cpuhp/124\n    760  0.0 idle_inject/124\n    761  0.0 migration/124\n    762  0.0 ksoftirqd/124\n    764  0.0 kworker/124:0H-events_highpri\n    765  0.0 cpuhp/125\n    766  0.0 idle_inject/125\n    767  0.0 migration/125\n    768  0.0 ksoftirqd/125\n    770  0.0 kworker/125:0H-events_highpri\n    771  0.0 cpuhp/126\n    772  0.0 idle_inject/126\n    773  0.0 migration/126\n    774  0.0 ksoftirqd/126\n    776  0.0 kworker/126:0H-events_highpri\n    777  0.0 cpuhp/127\n    778  0.0 idle_inject/127\n    779  0.0 migration/127\n    780  0.0 ksoftirqd/127\n    782  0.0 kworker/127:0H-events_highpri\n    783  0.0 cpuhp/128\n    784  0.0 idle_inject/128\n    785  0.0 migration/128\n    786  0.0 ksoftirqd/128\n    788  0.0 kworker/128:0H-events_highpri\n    789  0.0 cpuhp/129\n    790  0.0 idle_inject/129\n    791  0.0 migration/129\n    792  0.0 ksoftirqd/129\n    794  0.0 kworker/129:0H-events_highpri\n    795  0.0 cpuhp/130\n    796  0.0 idle_inject/130\n    797  0.0 migration/130\n    798  0.0 ksoftirqd/130\n    800  0.0 kworker/130:0H-events_highpri\n    801  0.0 cpuhp/131\n    802  0.0 idle_inject/131\n    803  0.0 migration/131\n    804  0.0 ksoftirqd/131\n    806  0.0 kworker/131:0H-events_highpri\n    807  0.0 cpuhp/132\n    808  0.0 idle_inject/132\n    809  0.0 migration/132\n    810  0.0 ksoftirqd/132\n    812  0.0 kworker/132:0H-events_highpri\n    813  0.0 cpuhp/133\n    814  0.0 idle_inject/133\n    815  0.0 migration/133\n    816  0.0 ksoftirqd/133\n    818  0.0 kworker/133:0H-events_highpri\n    819  0.0 cpuhp/134\n    820  0.0 idle_inject/134\n    821  0.0 migration/134\n    822  0.0 ksoftirqd/134\n    824  0.0 kworker/134:0H-events_highpri\n    825  0.0 cpuhp/135\n    826  0.0 idle_inject/135\n    827  0.0 migration/135\n    828  0.0 ksoftirqd/135\n    830  0.0 kworker/135:0H-events_highpri\n    831  0.0 cpuhp/136\n    832  0.0 idle_inject/136\n    833  0.0 migration/136\n    834  0.0 ksoftirqd/136\n    836  0.0 kworker/136:0H-events_highpri\n    837  0.0 cpuhp/137\n    838  0.0 idle_inject/137\n    839  0.0 migration/137\n    840  0.0 ksoftirqd/137\n    842  0.0 kworker/137:0H-events_highpri\n    843  0.0 cpuhp/138\n    844  0.0 idle_inject/138\n    845  0.0 migration/138\n    846  0.0 ksoftirqd/138\n    848  0.0 kworker/138:0H-events_highpri\n    849  0.0 cpuhp/139\n    850  0.0 idle_inject/139\n    851  0.0 migration/139\n    852  0.0 ksoftirqd/139\n    854  0.0 kworker/139:0H-events_highpri\n    855  0.0 cpuhp/140\n    856  0.0 idle_inject/140\n    857  0.0 migration/140\n    858  0.0 ksoftirqd/140\n    860  0.0 kworker/140:0H-events_highpri\n    861  0.0 cpuhp/141\n    862  0.0 idle_inject/141\n    863  0.0 migration/141\n    864  0.0 ksoftirqd/141\n    866  0.0 kworker/141:0H-events_highpri\n    867  0.0 cpuhp/142\n    868  0.0 idle_inject/142\n    869  0.0 migration/142\n    870  0.0 ksoftirqd/142\n    872  0.0 kworker/142:0H-events_highpri\n    873  0.0 cpuhp/143\n    874  0.0 idle_inject/143\n    875  0.0 migration/143\n    876  0.0 ksoftirqd/143\n    878  0.0 kworker/143:0H-events_highpri\n    879  0.0 cpuhp/144\n    880  0.0 idle_inject/144\n    881  0.0 migration/144\n    882  0.0 ksoftirqd/144\n    884  0.0 kworker/144:0H-events_highpri\n    885  0.0 cpuhp/145\n    886  0.0 idle_inject/145\n    887  0.0 migration/145\n    888  0.0 ksoftirqd/145\n    890  0.0 kworker/145:0H-events_highpri\n    891  0.0 cpuhp/146\n    892  0.0 idle_inject/146\n    893  0.0 migration/146\n    894  0.0 ksoftirqd/146\n    896  0.0 kworker/146:0H-events_highpri\n    897  0.0 cpuhp/147\n    898  0.0 idle_inject/147\n    899  0.0 migration/147\n    900  0.0 ksoftirqd/147\n    902  0.0 kworker/147:0H-events_highpri\n    903  0.0 cpuhp/148\n    904  0.0 idle_inject/148\n    905  0.0 migration/148\n    906  0.0 ksoftirqd/148\n    908  0.0 kworker/148:0H-kblockd\n    909  0.0 cpuhp/149\n    910  0.0 idle_inject/149\n    911  0.0 migration/149\n    912  0.0 ksoftirqd/149\n    914  0.0 kworker/149:0H-events_highpri\n    915  0.0 cpuhp/150\n    916  0.0 idle_inject/150\n    917  0.0 migration/150\n    918  0.0 ksoftirqd/150\n    920  0.0 kworker/150:0H-events_highpri\n    921  0.0 cpuhp/151\n    922  0.0 idle_inject/151\n    923  0.0 migration/151\n    924  0.0 ksoftirqd/151\n    926  0.0 kworker/151:0H-events_highpri\n    927  0.0 cpuhp/152\n    928  0.0 idle_inject/152\n    929  0.0 migration/152\n    930  0.0 ksoftirqd/152\n    932  0.0 kworker/152:0H-events_highpri\n    933  0.0 cpuhp/153\n    934  0.0 idle_inject/153\n    935  0.0 migration/153\n    936  0.0 ksoftirqd/153\n    938  0.0 kworker/153:0H-events_highpri\n    939  0.0 cpuhp/154\n    940  0.0 idle_inject/154\n    941  0.0 migration/154\n    942  0.0 ksoftirqd/154\n    944  0.0 kworker/154:0H-events_highpri\n    945  0.0 cpuhp/155\n    946  0.0 idle_inject/155\n    947  0.0 migration/155\n    948  0.0 ksoftirqd/155\n    950  0.0 kworker/155:0H-events_highpri\n    951  0.0 cpuhp/156\n    952  0.0 idle_inject/156\n    953  0.0 migration/156\n    954  0.0 ksoftirqd/156\n    956  0.0 kworker/156:0H-events_highpri\n    957  0.0 cpuhp/157\n    958  0.0 idle_inject/157\n    959  0.0 migration/157\n    960  0.0 ksoftirqd/157\n    962  0.0 kworker/157:0H-events_highpri\n    963  0.0 cpuhp/158\n    964  0.0 idle_inject/158\n    965  0.0 migration/158\n    966  0.0 ksoftirqd/158\n    968  0.0 kworker/158:0H-events_highpri\n    969  0.0 cpuhp/159\n    970  0.0 idle_inject/159\n    971  0.0 migration/159\n    972  0.0 ksoftirqd/159\n    974  0.0 kworker/159:0H-events_highpri\n    975  0.0 cpuhp/160\n    976  0.0 idle_inject/160\n    977  0.0 migration/160\n    978  0.0 ksoftirqd/160\n    980  0.0 kworker/160:0H-events_highpri\n    981  0.0 cpuhp/161\n    982  0.0 idle_inject/161\n    983  0.0 migration/161\n    984  0.0 ksoftirqd/161\n    986  0.0 kworker/161:0H-events_highpri\n    987  0.0 cpuhp/162\n    988  0.0 idle_inject/162\n    989  0.0 migration/162\n    990  0.0 ksoftirqd/162\n    992  0.0 kworker/162:0H-events_highpri\n    993  0.0 cpuhp/163\n    994  0.0 idle_inject/163\n    995  0.0 migration/163\n    996  0.0 ksoftirqd/163\n    998  0.0 kworker/163:0H-events_highpri\n    999  0.0 cpuhp/164\n   1000  0.0 idle_inject/164\n   1001  0.0 migration/164\n   1002  0.0 ksoftirqd/164\n   1004  0.0 kworker/164:0H-events_highpri\n   1005  0.0 cpuhp/165\n   1006  0.0 idle_inject/165\n   1007  0.0 migration/165\n   1008  0.0 ksoftirqd/165\n   1010  0.0 kworker/165:0H-events_highpri\n   1011  0.0 cpuhp/166\n   1012  0.0 idle_inject/166\n   1013  0.0 migration/166\n   1014  0.0 ksoftirqd/166\n   1016  0.0 kworker/166:0H-events_highpri\n   1017  0.0 cpuhp/167\n   1018  0.0 idle_inject/167\n   1019  0.0 migration/167\n   1020  0.0 ksoftirqd/167\n   1022  0.0 kworker/167:0H-events_highpri\n   1023  0.0 cpuhp/168\n   1024  0.0 idle_inject/168\n   1025  0.0 migration/168\n   1026  0.0 ksoftirqd/168\n   1028  0.0 kworker/168:0H-events_highpri\n   1029  0.0 cpuhp/169\n   1030  0.0 idle_inject/169\n   1031  0.0 migration/169\n   1032  0.0 ksoftirqd/169\n   1034  0.0 kworker/169:0H-events_highpri\n   1035  0.0 cpuhp/170\n   1036  0.0 idle_inject/170\n   1037  0.0 migration/170\n   1038  0.0 ksoftirqd/170\n   1040  0.0 kworker/170:0H-events_highpri\n   1041  0.0 cpuhp/171\n   1042  0.0 idle_inject/171\n   1043  0.0 migration/171\n   1044  0.0 ksoftirqd/171\n   1046  0.0 kworker/171:0H-events_highpri\n   1047  0.0 cpuhp/172\n   1048  0.0 idle_inject/172\n   1049  0.0 migration/172\n   1050  0.0 ksoftirqd/172\n   1052  0.0 kworker/172:0H-events_highpri\n   1053  0.0 cpuhp/173\n   1054  0.0 idle_inject/173\n   1055  0.0 migration/173\n   1056  0.0 ksoftirqd/173\n   1058  0.0 kworker/173:0H-events_highpri\n   1059  0.0 cpuhp/174\n   1060  0.0 idle_inject/174\n   1061  0.0 migration/174\n   1062  0.0 ksoftirqd/174\n   1064  0.0 kworker/174:0H-events_highpri\n   1065  0.0 cpuhp/175\n   1066  0.0 idle_inject/175\n   1067  0.0 migration/175\n   1068  0.0 ksoftirqd/175\n   1070  0.0 kworker/175:0H-events_highpri\n   1071  0.0 cpuhp/176\n   1072  0.0 idle_inject/176\n   1073  0.0 migration/176\n   1074  0.0 ksoftirqd/176\n   1076  0.0 kworker/176:0H-events_highpri\n   1077  0.0 cpuhp/177\n   1078  0.0 idle_inject/177\n   1079  0.0 migration/177\n   1080  0.0 ksoftirqd/177\n   1082  0.0 kworker/177:0H-events_highpri\n   1083  0.0 cpuhp/178\n   1084  0.0 idle_inject/178\n   1085  0.0 migration/178\n   1086  0.0 ksoftirqd/178\n   1088  0.0 kworker/178:0H-events_highpri\n   1089  0.0 cpuhp/179\n   1090  0.0 idle_inject/179\n   1091  0.0 migration/179\n   1092  0.0 ksoftirqd/179\n   1094  0.0 kworker/179:0H-events_highpri\n   1095  0.0 cpuhp/180\n   1096  0.0 idle_inject/180\n   1097  0.0 migration/180\n   1098  0.0 ksoftirqd/180\n   1100  0.0 kworker/180:0H-events_highpri\n   1101  0.0 cpuhp/181\n   1102  0.0 idle_inject/181\n   1103  0.0 migration/181\n   1104  0.0 ksoftirqd/181\n   1106  0.0 kworker/181:0H-events_highpri\n   1107  0.0 cpuhp/182\n   1108  0.0 idle_inject/182\n   1109  0.0 migration/182\n   1110  0.0 ksoftirqd/182\n   1112  0.0 kworker/182:0H-events_highpri\n   1113  0.0 cpuhp/183\n   1114  0.0 idle_inject/183\n   1115  0.0 migration/183\n   1116  0.0 ksoftirqd/183\n   1118  0.0 kworker/183:0H-events_highpri\n   1119  0.0 cpuhp/184\n   1120  0.0 idle_inject/184\n   1121  0.0 migration/184\n   1122  0.0 ksoftirqd/184\n   1124  0.0 kworker/184:0H-events_highpri\n   1125  0.0 cpuhp/185\n   1126  0.0 idle_inject/185\n   1127  0.0 migration/185\n   1128  0.0 ksoftirqd/185\n   1130  0.0 kworker/185:0H-events_highpri\n   1131  0.0 cpuhp/186\n   1132  0.0 idle_inject/186\n   1133  0.0 migration/186\n   1134  0.0 ksoftirqd/186\n   1136  0.0 kworker/186:0H-events_highpri\n   1137  0.0 cpuhp/187\n   1138  0.0 idle_inject/187\n   1139  0.0 migration/187\n   1140  0.0 ksoftirqd/187\n   1142  0.0 kworker/187:0H-events_highpri\n   1143  0.0 cpuhp/188\n   1144  0.0 idle_inject/188\n   1145  0.0 migration/188\n   1146  0.0 ksoftirqd/188\n   1148  0.0 kworker/188:0H-events_highpri\n   1149  0.0 cpuhp/189\n   1150  0.0 idle_inject/189\n   1151  0.0 migration/189\n   1152  0.0 ksoftirqd/189\n   1154  0.0 kworker/189:0H-events_highpri\n   1155  0.0 cpuhp/190\n   1156  0.0 idle_inject/190\n   1157  0.0 migration/190\n   1158  0.0 ksoftirqd/190\n   1160  0.0 kworker/190:0H-events_highpri\n   1161  0.0 cpuhp/191\n   1162  0.0 idle_inject/191\n   1163  0.0 migration/191\n   1164  0.0 ksoftirqd/191\n   1166  0.0 kworker/191:0H-events_highpri\n   1179  0.0 kdevtmpfs\n   1180  0.0 kworker/R-inet_\n   1182  0.0 kauditd\n   1187  0.0 khungtaskd\n   1189  0.0 oom_reaper\n   1190  0.0 kworker/R-write\n   1191  1.1 kcompactd0\n   1192  0.0 ksmd\n   1193  0.0 khugepaged\n   1194  0.0 kworker/R-kinte\n   1195  0.0 kworker/R-kbloc\n   1196  0.0 kworker/R-blkcg\n   1197  0.0 irq/9-acpi\n   1198  0.0 kworker/R-tpm_d\n   1199  0.0 kworker/R-ata_s\n   1200  0.0 kworker/R-md\n   1201  0.0 kworker/R-md_bi\n   1202  0.0 kworker/R-edac-\n   1204  0.0 kworker/R-devfr\n   1205  0.0 watchdogd\n   1207  0.0 kworker/1:1H-kblockd\n   1208  0.1 kswapd0\n   1209  0.0 ecryptfs-kthread\n   1210  0.0 kworker/R-kthro\n   1211  0.0 irq/55-pciehp\n   1212  0.0 irq/57-pciehp\n   1401  0.0 kworker/R-acpi_\n   1405  0.0 kworker/R-mld\n   1406  0.0 kworker/166:1H-kblockd\n   1407  0.0 kworker/R-ipv6_\n   1414  0.0 kworker/R-kstrp\n   1416  0.0 kworker/u397:0-hci1\n   1417  0.0 kworker/u398:0\n   1418  0.0 kworker/u399:0\n   1419  0.0 kworker/u400:0\n   1420  0.0 kworker/u401:0\n   1421  0.0 kworker/u402:0\n   1422  0.0 kworker/u403:0\n   1423  0.0 kworker/u404:0\n   1424  0.0 kworker/u405:0\n   1425  0.0 kworker/u406:0\n   1426  0.0 kworker/u407:0\n   1427  0.0 kworker/u408:0\n   1428  0.0 kworker/u409:0\n   1434  0.0 kworker/R-crypt\n   1446  0.0 kworker/R-charg\n   1472  0.0 kworker/49:1H-kblockd\n   1476  0.0 kworker/159:1H-kblockd\n   1477  0.0 kworker/111:1H-kblockd\n   1494  0.0 kworker/3:1H-kblockd\n   1495  0.0 kworker/40:1H-kblockd\n   1561  0.0 kworker/158:1H-kblockd\n   1562  0.0 kworker/156:1H-kblockd\n   1563  0.0 kworker/59:1H-kblockd\n   1564  0.0 kworker/157:1H-kblockd\n   1565  0.0 kworker/144:1H-kblockd\n   1566  0.0 kworker/152:1H-kblockd\n   1567  0.0 kworker/154:1H-kblockd\n   1568  0.0 kworker/191:1H-kblockd\n   1569  0.0 kworker/60:1H-kblockd\n   1570  0.0 kworker/175:1H-kblockd\n   1571  0.0 kworker/126:1H-kblockd\n   1572  0.0 kworker/61:1H-kblockd\n   1573  0.0 kworker/33:1H-kblockd\n   1574  0.0 kworker/160:1H-kblockd\n   1575  0.0 kworker/2:1H-kblockd\n   1576  0.0 kworker/135:1H-kblockd\n   1577  0.0 kworker/103:1H-kblockd\n   1578  0.0 kworker/58:1H-kblockd\n   1579  0.0 kworker/24:1H-kblockd\n   1580  0.0 kworker/127:1H-kblockd\n   1581  0.0 kworker/99:1H-kblockd\n   1582  0.0 kworker/155:1H-kblockd\n   1583  0.0 kworker/97:1H-kblockd\n   1584  0.0 kworker/5:1H-kblockd\n   1585  0.0 kworker/16:1H-kblockd\n   1586  0.0 kworker/63:1H-kblockd\n   1587  0.0 kworker/6:1H-kblockd\n   1588  0.0 kworker/32:1H-kblockd\n   1589  0.0 kworker/17:1H-kblockd\n   1590  0.0 kworker/101:1H-kblockd\n   1591  0.0 kworker/98:1H-kblockd\n   1592  0.0 kworker/25:1H-kblockd\n   1593  0.0 kworker/100:1H-kblockd\n   1594  0.0 kworker/102:1H-kblockd\n   1595  0.0 kworker/88:1H-kblockd\n   1596  0.0 kworker/34:1H-kblockd\n   1597  0.0 kworker/96:1H-kblockd\n   1599  0.0 kworker/4:1H-kblockd\n   1601  0.0 kworker/R-nvme-\n   1602  0.0 kworker/R-nvme-\n   1603  0.0 kworker/R-nvme-\n   1604  0.0 kworker/R-nvme-\n   1605  0.0 kworker/R-atlan\n   1606  0.0 scsi_eh_0\n   1607  0.0 kworker/R-scsi_\n   1608  0.0 scsi_eh_1\n   1609  0.0 kworker/R-scsi_\n   1613  0.0 scsi_eh_2\n   1614  0.0 kworker/R-scsi_\n   1615  0.0 scsi_eh_3\n   1616  0.0 kworker/R-scsi_\n   1617  0.0 scsi_eh_4\n   1618  0.0 kworker/R-scsi_\n   1619  0.0 scsi_eh_5\n   1620  0.0 kworker/R-scsi_\n   1621  0.0 scsi_eh_6\n   1622  0.0 kworker/R-scsi_\n   1624  0.0 scsi_eh_7\n   1625  0.0 kworker/R-scsi_\n   1642  0.0 kworker/72:1H-kblockd\n   1643  0.0 kworker/183:1H-kblockd\n   1644  0.0 kworker/89:1H-kblockd\n   1645  0.0 kworker/0:1H-kblockd\n   1646  0.0 kworker/90:1H-kblockd\n   1647  0.0 kworker/57:1H-kblockd\n   1648  0.0 kworker/56:1H-kblockd\n   1649  0.0 kworker/145:1H-kblockd\n   1650  0.0 kworker/146:1H-kblockd\n   1651  0.0 kworker/80:1H-kblockd\n   1652  0.0 kworker/147:1H-kblockd\n   1653  0.0 kworker/119:1H-kblockd\n   1654  0.0 kworker/8:1H-kblockd\n   1655  0.0 kworker/9:1H-kblockd\n   1656  0.0 kworker/174:1H-kblockd\n   1657  0.0 kworker/18:1H-kblockd\n   1658  0.0 kworker/161:1H-kblockd\n   1659  0.0 kworker/162:1H-kblockd\n   1660  0.0 kworker/10:1H-kblockd\n   1662  0.0 kworker/19:1H-kblockd\n   1665  0.0 kworker/47:1H-kblockd\n   1691  0.0 kworker/41:1H-kblockd\n   1698  0.0 kworker/35:1H-kblockd\n   1711  0.0 kworker/28:1H-kblockd\n   1713  0.0 kworker/26:1H-kblockd\n   1714  0.0 kworker/36:1H-kblockd\n   1715  0.0 kworker/20:1H\n   1716  0.0 kworker/37:1H-kblockd\n   1717  0.0 kworker/44:1H-kblockd\n   1718  0.0 kworker/136:1H-kblockd\n   1719  0.0 kworker/130:1H-kblockd\n   1720  0.0 kworker/81:1H-kblockd\n   1721  0.0 kworker/38:1H-kblockd\n   1722  0.0 kworker/91:1H-kblockd\n   1723  0.0 kworker/43:1H-kblockd\n   1746  0.0 kworker/131:1H-kblockd\n   1749  0.0 kworker/31:1H-kblockd\n   1752  0.0 kworker/64:1H-kblockd\n   1758  0.0 kworker/104:1H-kblockd\n   1759  0.0 kworker/R-raid5\n   1762  0.0 kworker/79:1H-kblockd\n   1765  0.0 kworker/95:1H-kblockd\n   1770  0.0 kworker/137:1H-kblockd\n   1777  3.6 plymouthd\n   1790  0.0 kworker/153:1H-kblockd\n   1995  0.0 jbd2/nvme2n1p3-8\n   1996  0.0 kworker/R-ext4-\n   2052  0.0 kworker/13:1H-kblockd\n   2059  0.0 kworker/179:1H-kblockd\n   2061  0.0 kworker/190:1H-kblockd\n   2067  0.0 systemd-journal\n   2069  0.0 kworker/73:1H-kblockd\n   2071  0.0 kworker/180:1H-kblockd\n   2076  0.0 kworker/132:1H-kblockd\n   2082  0.0 kworker/15:1H-kblockd\n   2084  0.0 kworker/184:1H-kblockd\n   2097  0.0 kworker/124:1H-kblockd\n   2105  0.0 kworker/R-rpcio\n   2106  0.0 kworker/R-xprti\n   2111  0.0 kworker/21:1H-kblockd\n   2117  0.0 kworker/148:1H-kblockd\n   2118  0.0 kworker/185:1H-kblockd\n   2119  0.0 systemd-udevd\n   2120  0.0 kworker/50:1H-kblockd\n   2139  0.0 kworker/48:1H-kblockd\n   2152  0.0 psimon\n   2167  0.0 kworker/11:1H-kblockd\n   2172  0.0 kworker/12:1H-kblockd\n   2174  0.0 kworker/14:1H-kblockd\n   2175  0.0 kworker/106:1H-kblockd\n   2181  0.0 kworker/105:1H-kblockd\n   2182  0.0 kworker/42:1H-kblockd\n   2183  0.0 kworker/78:1H-kblockd\n   2184  0.0 kworker/84:1H-kblockd\n   2185  0.0 kworker/66:1H-kblockd\n   2186  0.0 kworker/30:1H-kblockd\n   2187  0.0 kworker/54:1H-kblockd\n   2189  0.0 kworker/163:1H-kblockd\n   2192  0.0 kworker/107:1H-kblockd\n   2194  0.0 kworker/108:1H-kblockd\n   2196  0.0 kworker/51:1H-kblockd\n   2197  0.0 kworker/68:1H-kblockd\n   2198  0.0 kworker/149:1H-kblockd\n   2199  0.0 kworker/133:1H-kblockd\n   2201  0.0 kworker/109:1H-kblockd\n   2202  0.0 kworker/52:1H-kblockd\n   2203  0.0 kworker/53:1H-kblockd\n   2208  0.0 kworker/120:1H-kblockd\n   2236  0.0 kworker/65:1H-kblockd\n   2238  0.0 kworker/186:1H-kblockd\n   2244  0.0 kworker/87:1H-kblockd\n   2260  0.0 kworker/45:1H-kblockd\n   2307  0.0 kworker/27:1H-kblockd\n   2309  0.0 kworker/110:1H-kblockd\n   2310  0.0 kworker/70:1H-kblockd\n   2315  0.0 kworker/82:1H-kblockd\n   2359  0.0 kworker/170:1H-kblockd\n   2366  0.0 kworker/134:1H-kblockd\n   2368  0.0 kworker/76:1H-kblockd\n   2370  0.0 kworker/92:1H-kblockd\n   2375  0.0 kworker/173:1H-kblockd\n   2380  0.0 kworker/115:1H-kblockd\n   2384  0.0 kworker/176:1H-kblockd\n   2387  0.0 kworker/62:1H-kblockd\n   2393  0.0 kworker/93:1H-kblockd\n   2395  0.0 kworker/181:1H-kblockd\n   2399  0.0 kworker/150:1H-kblockd\n   2401  0.0 kworker/177:1H-kblockd\n   2404  0.0 kworker/178:1H-kblockd\n   2405  0.0 kworker/151:1H-kblockd\n   2406  0.0 kworker/55:1H-kblockd\n   2407  0.0 kworker/143:1H-kblockd\n   2408  0.0 kworker/69:1H-kblockd\n   2409  0.0 kworker/118:1H-kblockd\n   2410  0.0 kworker/182:1H-kblockd\n   2413  0.0 kworker/75:1H-kblockd\n   2414  0.0 kworker/67:1H-kblockd\n   2427  0.0 kworker/189:1H-kblockd\n   2429  0.0 kworker/187:1H-kblockd\n   2444  0.0 kworker/164:1H-kblockd\n   2452  0.0 kworker/141:1H-kblockd\n   2456  0.0 kworker/167:1H-kblockd\n   2460  0.0 kworker/7:1H-kblockd\n   2467  0.0 kworker/71:1H-kblockd\n   2468  0.0 kworker/46:1H-kblockd\n   2469  0.0 kworker/165:1H-kblockd\n   2472  0.0 kworker/22:1H-kblockd\n   2474  0.0 kworker/171:1H-kblockd\n   2477  0.0 kworker/112:1H-kblockd\n   2478  0.0 kworker/117:1H-kblockd\n   2479  0.0 kworker/114:1H-kblockd\n   2481  0.0 kworker/113:1H-kblockd\n   2483  0.0 kworker/23:1H-kblockd\n   2485  0.0 kworker/138:1H-kblockd\n   2486  0.0 kworker/116:1H-kblockd\n   2487  0.0 kworker/140:1H-kblockd\n   2488  0.0 kworker/139:1H-kblockd\n   2489  0.0 kworker/142:1H-kblockd\n   2503  0.0 kworker/122:1H-kblockd\n   2507  0.0 kworker/121:1H-kblockd\n   2512  0.0 kworker/74:1H-kblockd\n   2514  0.0 kworker/94:1H-kblockd\n   2528  0.0 kworker/29:1H-kblockd\n   2541  0.0 kworker/39:1H-kblockd\n   2546  0.0 jbd2/nvme1n1p1-8\n   2548  0.0 kworker/R-ext4-\n   2554  0.0 kworker/188:1H-kblockd\n   2555  0.0 kworker/128:1H-kblockd\n   2557  0.0 kworker/125:1H-kblockd\n   2560  0.0 kworker/83:1H-kblockd\n   2561  0.0 kworker/85:1H-kblockd\n   2576  0.0 kworker/R-cfg80\n   2586  0.0 kworker/123:1H-kblockd\n   2587  0.0 nv_queue\n   2588  0.0 nv_queue\n   2589  0.0 nv_open_q\n   2602  0.0 kworker/169:1H-kblockd\n   2603  0.0 jbd2/sda-8\n   2610  0.0 kworker/77:1H-kblockd\n   2611  0.0 kworker/168:1H-kblockd\n   2612  0.0 kworker/129:1H-kblockd\n   2621  0.0 kworker/u397:1-hci1\n   2630  0.0 kworker/R-ext4-\n   2634  0.0 nv_open_q\n   2636  0.0 kworker/172:1H-kblockd\n   2650  0.0 kworker/86:1H-kblockd\n   2811  0.0 nvidia-modeset/kthread_q\n   2812  0.0 nvidia-modeset/deferred_close_kthread_q\n   2820  0.0 irq/359-nvidia\n   2821  0.0 nvidia\n   2822  0.0 nv_queue\n   2847  0.0 jbd2/nvme0n1p1-8\n   2848  0.0 kworker/R-ext4-\n   2849  0.0 irq/360-nvidia\n   2850  0.0 nvidia\n   2851  0.0 nv_queue\n   3078  0.0 rpcbind\n   3079  0.0 systemd-oomd\n   3080  0.2 systemd-resolve\n   3081  0.0 systemd-timesyn\n   3083  0.0 auditd\n   3096  0.0 blkmapd\n   3098  0.0 nfsdcld\n   3202  0.0 accounts-daemon\n   3204  0.0 avahi-daemon\n   3205  0.0 bluetoothd\n   3206  0.0 dbus-daemon\n   3211  0.0 fsidd\n   3213  0.0 gnome-remote-de\n   3222  0.0 polkitd\n   3228  0.0 power-profiles-\n   3246  0.0 switcheroo-cont\n   3252  0.0 systemd-logind\n   3254  0.0 systemd-machine\n   3257  0.0 udisksd\n   3259  0.0 virtlockd\n   3260  0.0 virtlogd\n   3293  0.0 avahi-daemon\n   3305  0.0 NetworkManager\n   3309  0.0 wpa_supplicant\n   3355  0.0 rsyslogd\n   3440  0.0 ModemManager\n   3443  0.0 boltd\n   3892  0.0 RTW_CMD_THREAD\n   3898  0.0 node\n   3907  0.0 bash\n   3921  0.7 tailscaled\n   3924  0.0 unattended-upgr\n   3927  0.1 containerd\n   3949  0.0 sshd\n   3962  0.0 colord\n   4145  0.0 UVM global queue\n   4149  0.0 UVM deferred release queue\n   4152  0.0 UVM Tools Event Queue\n   4171  0.0 mariadbd\n   4585  0.0 dockerd\n   4593  0.0 rpc.idmapd\n   4596  0.0 rpc.statd\n   4599  0.0 rpc.mountd\n   4605  0.0 munged\n   4629  0.0 cron\n   4632  0.1 slurmctld\n   4633  0.0 lockd\n   4650  0.0 slurmscriptd\n   4662  0.0 kerneloops\n   4686  0.0 slurmdbd\n   4692  0.0 slurmstepd\n   4708  0.0 plymouth\n   4715  0.0 kerneloops\n   4717  0.0 systemd\n   4740  0.0 kworker/R-ipmi-\n   4748  0.0 (sd-pam)\n   4749  0.0 slurmd\n   4799  0.0 nfsd\n   4800  0.0 nfsd\n   4801  0.0 nfsd\n   4802  0.0 nfsd\n   4803  0.0 nfsd\n   4804  0.0 nfsd\n   4805  0.0 nfsd\n   4806  0.0 nfsd\n   4860  0.0 gdm3\n   4883  0.0 gdm-session-wor\n   4893  0.0 systemd\n   4894  0.0 irq/86-eno1\n   4899  0.0 kworker/R-dio/n\n   4900  0.0 (sd-pam)\n   4909  0.0 pipewire\n   4910  0.0 pipewire\n   4911  0.0 wireplumber\n   4912  0.0 pipewire-pulse\n   4917  0.0 dbus-daemon\n   4919  0.0 irq/342-enp72s0\n   4929  0.0 rtkit-daemon\n   4938  0.0 dnsmasq\n   4939  0.0 dnsmasq\n   4966  0.0 pipewire\n   4967  0.0 pipewire\n   4969  0.0 wireplumber\n   4970  0.0 gdm-x-session\n   4971  0.0 pipewire-pulse\n   4973  0.0 Xorg\n   4979  0.0 dbus-daemon\n   5028  0.0 xdg-document-po\n   5033  0.0 xdg-permission-\n   5040  0.0 fusermount3\n   5235  0.0 dbus-run-sessio\n   5236  0.0 dbus-daemon\n   5241  0.0 gnome-session-b\n   5261  0.0 at-spi-bus-laun\n   5267  0.0 dbus-daemon\n   5320  0.2 gnome-shell\n   5375  0.0 krfcommd\n   5380  0.0 nvidia-drm/timeline-a\n   5426  0.0 mutter-x11-fram\n   5439  0.0 at-spi2-registr\n   5465  0.0 xdg-permission-\n   5482  0.0 gjs\n   5492  0.0 gsd-sharing\n   5493  0.0 gsd-wacom\n   5495  0.0 ibus-daemon\n   5496  0.0 gsd-color\n   5499  0.0 upowerd\n   5502  0.0 gsd-keyboard\n   5510  0.0 gsd-print-notif\n   5518  0.0 gsd-rfkill\n   5524  0.0 gsd-smartcard\n   5531  0.0 gsd-datetime\n   5539  0.0 gsd-media-keys\n   5544  0.0 gsd-screensaver\n   5547  0.0 gsd-sound\n   5555  0.0 gsd-a11y-settin\n   5560  0.0 gsd-housekeepin\n   5566  0.0 gsd-power\n   5572  0.0 ibus-dconf\n   5592  0.0 ibus-x11\n   5598  0.0 ibus-portal\n   5626  0.0 gsd-printer\n   5688  0.0 ibus-engine-sim\n   5721  0.0 dconf-service\n   5725  0.0 gjs\n   6463  0.0 kworker/R-tls-s\n   6588  1.4 tmux: server\n   6589  0.0 bash\n   6891  0.0 xdg-document-po\n   6895  0.0 xdg-permission-\n   6902  0.0 fusermount3\n   7124  0.0 gnome-keyring-d\n   7125  0.0 gnome-keyring-d\n   7459  0.0 bash\n  13962  0.0 RepeatModeler\n  13965  0.0 Refiner\n  14099  0.0 sh\n  14102 99.9 rmblastn\n  17605  0.0 codex\n  18609  0.0 bash\n  19839  0.0 bash\n  26497  0.0 kworker/113:0-mm_percpu_wq\n  38220  0.0 kworker/0:0-events\n  45149  0.0 kworker/131:1-mm_percpu_wq\n  63242  0.0 kworker/115:1-mm_percpu_wq\n  66508  0.0 kworker/19:0\n  67956  0.0 kworker/17:1\n 100645  0.2 codex\n 168717  0.0 kworker/171:1-mm_percpu_wq\n 196029  0.0 kworker/88:1-events\n 270821  0.0 kworker/134:2\n 279533  0.0 kworker/32:0-events\n 307447  0.0 kworker/135:0\n 310624  0.0 kworker/46:2-mm_percpu_wq\n 311054  0.0 slurmstepd\n 311057  0.0 bash\n 311059  0.0 python\n 311115  0.0 RepeatModeler\n 316761  0.0 kworker/36:1-events\n 325641  0.0 RepeatModeler\n 325643  0.1 Refiner\n 328692  0.0 kworker/79:2-mm_percpu_wq\n 333638  0.0 time\n 333639  0.0 python\n 333640  0.6 python\n 333643  763 python\n 333644  762 python\n 334096  0.0 kworker/179:1-cgroup_destroy\n 361726  0.0 slurmstepd\n 361840  0.1 python\n 368962  0.6 codex\n 372387  0.0 kworker/47:0-mm_percpu_wq\n 378844  0.0 kworker/u385:4-events_unbound\n 379982  0.0 slurmstepd\n 379985  0.0 bash\n 379987  0.0 python\n 380003  0.0 RepeatModeler\n 381776  0.0 kworker/112:1-cgroup_destroy\n 388481  0.3 codex\n 389509  0.0 kworker/12:1\n 392096  0.0 kworker/108:2\n 392879  0.0 kworker/72:2-events\n 393720  0.0 kworker/111:0\n 395467  0.0 slurmstepd\n 395480  0.0 bash\n 395485  0.0 python\n 397052  0.4 RepeatModeler\n 397614  0.0 psimon\n 402767  0.0 kworker/78:2-mm_percpu_wq\n 409952  0.6 claude\n 416517  0.0 python\n 416519 62.2 python\n 418348  0.0 kworker/45:1-events\n 425506  0.0 kworker/117:2-mm_percpu_wq\n 431458  0.0 kworker/90:1-mm_percpu_wq\n 431798  0.0 kworker/57:2\n 432981  0.0 kworker/94:0-events\n 447810  0.0 kworker/124:2\n 456858  0.0 kworker/95:2-rcu_gp\n 472873  0.0 kworker/141:2-mm_percpu_wq\n 474277  0.0 claude.exe\n 474289  1.0 claude.exe\n 474883  0.0 claude.exe\n 485851  0.0 kworker/143:2-mm_percpu_wq\n 486765  0.0 kworker/169:2-events\n 493045  0.0 kworker/34:2\n 493884  0.0 kworker/183:0-cgroup_destroy\n 496951  0.0 kworker/122:2-mm_percpu_wq\n 510499  0.0 node\n 510526  0.0 codex\n 511030  0.0 kworker/73:0\n 514631  0.0 kworker/142:0-mm_percpu_wq\n 514936  0.0 kworker/155:1-cgroup_destroy\n 516061  0.0 kworker/u387:0-flush-259:6\n 519434  0.0 kworker/18:0\n 520800  0.0 kworker/u390:3-flush-259:1\n 521804  0.0 kworker/u393:3-events_unbound\n 531544  0.0 kworker/184:0-mm_percpu_wq\n 531792  0.0 kworker/160:1-mm_percpu_wq\n 546313  0.0 kworker/64:0-events\n 549183  0.0 kworker/77:1-events\n 559114  0.0 kworker/29:0\n 578913  0.0 kworker/184:2\n 579608  0.0 kworker/136:2-events\n 585247  0.0 kworker/u390:1-flush-259:1\n 586277  0.0 kworker/39:1-cgroup_destroy\n 587865  0.0 kworker/21:2-mm_percpu_wq\n 590490  0.0 kworker/20:2-mm_percpu_wq\n 605765  0.0 kworker/42:0-events\n 620955  0.0 slurmstepd\n 620958  0.0 bash\n 620960  0.0 python\n 621259  0.0 RepeatModeler\n 624499  0.0 kworker/73:1-mm_percpu_wq\n 660921  0.0 kworker/40:2-events\n 661822  0.0 kworker/120:2-mm_percpu_wq\n 667859  0.0 kworker/35:1-mm_percpu_wq\n 669142  0.0 kworker/14:2-mm_percpu_wq\n 679879  0.0 kworker/110:0-mm_percpu_wq\n 681126  0.0 python\n 685011  0.0 kworker/120:0-mm_percpu_wq\n 687636  0.0 kworker/122:1\n 690574  0.0 kworker/24:0-mm_percpu_wq\n 690761  0.0 kworker/27:0-mm_percpu_wq\n 691505  0.0 kworker/7:1-events\n 694756  0.0 kworker/12:2-events\n 695404  0.0 kworker/15:1-mm_percpu_wq\n 697132  0.0 kworker/116:0-mm_percpu_wq\n 711670  0.0 kworker/189:0-mm_percpu_wq\n 712410  0.0 kworker/162:1-mm_percpu_wq\n 712575  0.0 kworker/45:0-cgroup_destroy\n 714894  0.0 kworker/123:0-events\n 724914  0.0 kworker/13:2-mm_percpu_wq\n 725606  0.0 kworker/98:2-events\n 726387  0.0 kworker/118:2-mm_percpu_wq\n 726389  0.0 kworker/22:0-mm_percpu_wq\n 729764  0.0 kworker/133:0-cgroup_destroy\n 730444  0.0 kworker/185:2-mm_percpu_wq\n 741647  0.0 kworker/57:0-mm_percpu_wq\n 742326  0.0 kworker/109:2-mm_percpu_wq\n 742634  0.0 kworker/u391:0-events_unbound\n 742902  0.0 kworker/47:2-cgroup_destroy\n 745423  0.0 kworker/131:0\n 752859  0.0 kworker/83:2-mm_percpu_wq\n 753448  0.0 kworker/71:2-mm_percpu_wq\n 754489  0.0 slurmstepd\n 754501  0.0 bash\n 754504  0.0 python\n 755388  0.0 RepeatModeler\n 762703  0.0 kworker/8:2-mm_percpu_wq\n 763651  0.0 kworker/119:0-mm_percpu_wq\n 763787  0.0 kworker/60:1-mm_percpu_wq\n 764081  0.0 kworker/4:2-events\n 769691  0.0 kworker/81:0-mm_percpu_wq\n 778396  0.0 kworker/152:0-mm_percpu_wq\n 795276  0.0 kworker/167:0-mm_percpu_wq\n 795325  0.0 kworker/67:1-mm_percpu_wq\n 815827  0.0 kworker/u389:2-flush-259:6\n 816772  0.0 kworker/174:2-events\n 817470  0.0 kworker/126:2\n 818618  0.0 kworker/44:0-mm_percpu_wq\n 824292  0.0 kworker/87:2+events\n 825532  0.0 kworker/96:0-events\n 833849  0.0 kworker/19:1-mm_percpu_wq\n 836412  0.0 kworker/143:0-mm_percpu_wq\n 850537  0.0 kworker/33:0-cgroup_destroy\n 850821  0.0 kworker/128:2-cgroup_destroy\n 851297  0.0 kworker/129:0-cgroup_destroy\n 851321  0.0 kworker/102:1-mm_percpu_wq\n 852477  0.0 kworker/u395:2-flush-259:6\n 853800  0.0 kworker/32:2\n 854088  0.0 kworker/177:2-mm_percpu_wq\n 854241  0.0 kworker/182:0-mm_percpu_wq\n 855371  0.0 kworker/86:2-cgroup_destroy\n 855603  0.0 sh\n 855604  797 rmblastn\n 855635  0.4 codex\n 856678  0.0 kworker/85:1-cgroup_destroy\n 856769  0.0 kworker/84:0\n 856869  0.0 kworker/u395:3-writeback\n 857262  0.0 kworker/83:0-mm_percpu_wq\n 857296  0.0 kworker/170:0-mm_percpu_wq\n 857700  0.0 kworker/176:2-mm_percpu_wq\n 859025  0.0 kworker/74:2-mm_percpu_wq\n 859291  0.0 kworker/75:0\n 860364  0.0 kworker/140:1-mm_percpu_wq\n 864346  0.0 kworker/55:0-cgroup_destroy\n 864518  0.0 kworker/150:1-cgroup_destroy\n 864757  0.0 kworker/50:0\n 864864  0.0 kworker/53:0-mm_percpu_wq\n 865113  0.0 kworker/148:0-mm_percpu_wq\n 865698  0.0 kworker/31:1-events\n 865879  0.0 kworker/51:1-mm_percpu_wq\n 866779  0.0 kworker/147:2-mm_percpu_wq\n 866879  0.0 kworker/102:0-mm_percpu_wq\n 869456  0.0 kworker/113:2\n 870330  0.0 kworker/100:1-mm_percpu_wq\n 870631  0.0 kworker/172:2-mm_percpu_wq\n 870780  0.0 kworker/61:2\n 875121  0.0 kworker/u396:3-writeback\n 876750  0.0 kworker/6:0-events\n 877372  0.0 kworker/u393:1-events_unbound\n 877377  0.0 kworker/u392:3-events_unbound\n 877541  0.0 kworker/91:1\n 878447  0.0 kworker/142:1\n 878943  0.0 kworker/37:1-mm_percpu_wq\n 878962  0.0 kworker/38:2\n 880412  0.0 kworker/46:0-cgroup_destroy\n 882114  0.0 kworker/82:1-cgroup_destroy\n 882722  0.0 kworker/80:2\n 882889  0.0 kworker/127:1-mm_percpu_wq\n 883122  0.0 kworker/180:2-mm_percpu_wq\n 884231  0.2 kworker/u395:1-events_unbound\n 884729  0.0 kworker/79:0\n 884730  0.0 kworker/u394:3-writeback\n 884866  0.0 kworker/174:0\n 884944  0.0 kworker/77:2-mm_percpu_wq\n 885125  0.0 kworker/175:2-mm_percpu_wq\n 887444  0.0 kworker/58:2-mm_percpu_wq\n 887830  0.0 kworker/76:1-mm_percpu_wq\n 892937  0.0 kworker/130:0\n 941286  1.0 codex\n 956368  0.0 kworker/105:1-mm_percpu_wq\n 957427  0.0 kworker/62:2-mm_percpu_wq\n 966872  0.0 kworker/90:0\n 966893  0.0 kworker/23:0-mm_percpu_wq\n 972336  0.0 kworker/u385:1-events_power_efficient\n 985563  0.0 kworker/59:0-mm_percpu_wq\n 990227  0.0 kworker/96:1-mm_percpu_wq\n 994422  0.0 kworker/50:2-mm_percpu_wq\n 998823  0.0 kworker/155:0-mm_percpu_wq\n1016490  0.0 kworker/u394:0-events_unbound\n1033135  0.0 kworker/63:1-rcu_par_gp\n1033480  0.0 kworker/156:1-events\n1063244  0.0 kworker/178:2-cgroup_destroy\n1082279  0.0 kworker/81:2-mm_percpu_wq\n1087877  0.0 kworker/87:1-mm_percpu_wq\n1090450  0.0 kworker/181:1\n1094679  0.0 kworker/183:2\n1117260  0.0 python\n1165327  0.0 kworker/153:2-mm_percpu_wq\n1167441  0.0 kworker/140:2-cgroup_destroy\n1196110  0.0 bash\n1214290  0.0 kworker/29:2-mm_percpu_wq\n1220239  0.0 kworker/125:0-mm_percpu_wq\n1233319  0.0 kworker/u387:3-writeback\n1262642  0.0 python\n1262649  0.0 python\n1263487  0.0 node\n1263498  0.2 codex\n1287393  0.0 node\n1287407  4.0 codex\n1290125  0.0 node\n1290136  1.4 codex\n1294517  0.0 kworker/43:2-mm_percpu_wq\n1295748  0.0 kworker/138:1-cgroup_destroy\n1326576  0.0 kworker/u386:0-writeback\n1337230  0.0 gnome-keyring-d\n1354321  0.0 kworker/18:1-mm_percpu_wq\n1366328  0.0 kworker/26:1-cgroup_destroy\n1366674  0.0 kworker/121:2\n1374714  0.0 kworker/48:2\n1400505  0.0 kworker/u396:0-iou_exit\n1411739  0.2 kworker/u384:1-ext4-rsv-conversion\n1432583  0.0 kworker/132:1-cgroup_destroy\n1440548  0.0 kworker/124:1-mm_percpu_wq\n1449918  0.0 kworker/126:1-mm_percpu_wq\n1461454  0.0 kworker/56:1-mm_percpu_wq\n1471322  0.0 kworker/33:1-mm_percpu_wq\n1471686  0.0 kworker/36:0-cgroup_destroy\n1477937  0.0 kworker/35:2-cgroup_destroy\n1501778  0.0 slurmstepd\n1501781  0.0 bash\n1501783  0.0 python\n1501801  0.1 RepeatModeler\n1512334  0.0 kworker/146:1-events\n1514264  0.0 kworker/54:0-events\n1515819  0.0 kworker/147:0-events\n1516905  0.0 kworker/191:2-mm_percpu_wq\n1519599  0.0 python\n1519604  0.0 python\n1519607  0.0 python\n1529120  0.0 kworker/u389:1-events_unbound\n1538777  0.0 kworker/115:0-mm_percpu_wq\n1539672  0.0 sh\n1539678 99.9 rmblastn\n1548627  0.0 kworker/28:2\n1550684  0.0 kworker/151:2-mm_percpu_wq\n1556106  0.0 kworker/99:0-cgroup_destroy\n1556119  0.0 kworker/44:1-mm_percpu_wq\n1556302  0.0 kworker/141:0\n1560402  0.0 kworker/91:2-mm_percpu_wq\n1560570  0.0 kworker/187:2-mm_percpu_wq\n1561117  0.0 kworker/93:1-mm_percpu_wq\n1562178  0.4 codex\n1563057  0.0 kworker/149:1-events\n1563104  0.0 kworker/1:1-events_freezable\n1568297  0.0 kworker/u390:2-events_unbound\n1569133  0.0 kworker/97:0-events\n1569461  0.0 kworker/99:1-events\n1572599  0.0 kworker/148:2-mm_percpu_wq\n1572645  0.0 kworker/48:0-events\n1572981  0.0 kworker/55:1-events\n1573013  0.0 kworker/144:1-mm_percpu_wq\n1573024  0.0 kworker/173:0-events\n1573056  0.0 kworker/92:2-mm_percpu_wq\n1573104  0.0 kworker/168:0-events\n1573455  0.0 kworker/52:0-mm_percpu_wq\n1574311  0.0 kworker/175:1-mm_percpu_wq\n1574493  0.0 kworker/188:0-mm_percpu_wq\n1575014  0.0 kworker/75:1-events\n1575289  0.0 kworker/49:0-events\n1575355  0.0 kworker/89:1-mm_percpu_wq\n1576055  0.0 kworker/100:2-mm_percpu_wq\n1576796  0.0 kworker/186:1-mm_percpu_wq\n1577716  0.0 kworker/9:0-events\n1577903  0.0 kworker/170:1-mm_percpu_wq\n1577906  0.0 kworker/104:1-events\n1578050  0.0 kworker/74:0-mm_percpu_wq\n1582145  0.0 kworker/2:2-events\n1582501  0.0 kworker/3:1-events\n1582759  0.0 kworker/53:2-events\n1582836  0.0 kworker/101:0-events\n1585062  0.0 kworker/51:0-mm_percpu_wq\n1588330  0.0 kworker/139:1-events\n1608762  0.0 kworker/116:2-mm_percpu_wq\n1613102  0.0 kworker/16:2-events\n1613401  0.0 kworker/21:1-mm_percpu_wq\n1616990  0.0 kworker/22:2-mm_percpu_wq\n1617063  0.0 kworker/119:2-mm_percpu_wq\n1617207  0.0 kworker/10:2-mm_percpu_wq\n1617864  0.0 kworker/118:0-mm_percpu_wq\n1619292  0.0 kworker/20:0-mm_percpu_wq\n1619373  0.0 kworker/23:2-mm_percpu_wq\n1620638  0.0 kworker/104:2-mm_percpu_wq\n1624270  0.0 kworker/11:2-cgroup_destroy\n1660078  0.0 kworker/145:2-mm_percpu_wq\n1678779  0.0 kworker/145:0-mm_percpu_wq\n1693600  0.0 kworker/41:0-mm_percpu_wq\n1695490  0.0 kworker/27:2-mm_percpu_wq\n1699289  0.0 kworker/24:2\n1702265  0.0 claude.exe\n1703957  0.0 claude.exe\n1703964  0.0 claude.exe\n1728910  0.0 kworker/150:0-events\n1730912  0.0 kworker/54:1\n1743156  0.0 kworker/49:1-cgroup_destroy\n1744474  0.0 kworker/u388:1-events_unbound\n1744508  0.0 kworker/123:1-mm_percpu_wq\n1753644  0.0 kworker/171:0-mm_percpu_wq\n1753957  0.0 kworker/72:0-mm_percpu_wq\n1754073  0.0 kworker/173:2-mm_percpu_wq\n1754504  0.0 kworker/78:1-mm_percpu_wq\n1755299  0.0 kworker/40:1-cgroup_destroy\n1757576  0.0 kworker/u391:4-writeback\n1757731  0.0 kworker/172:1\n1757813  0.0 kworker/169:0-mm_percpu_wq\n1758333  0.0 kworker/168:1-mm_percpu_wq\n1770457  0.0 kworker/58:0-cgroup_destroy\n1771398  0.0 kworker/156:2-cgroup_destroy\n1772451  0.0 kworker/157:2-cgroup_destroy\n1772931  0.0 kworker/56:2-cgroup_destroy\n1794228  0.0 kworker/105:2-cgroup_destroy\n1796568  0.0 kworker/8:1-mm_percpu_wq\n1830063  0.0 kworker/109:1-mm_percpu_wq\n1830335  0.0 kworker/9:1-cgroup_destroy\n1855520  0.0 kworker/106:0\n1859846  0.0 kworker/110:2-mm_percpu_wq\n1860674  0.1 codex\n1865305  0.0 sshd\n1865479  0.0 sshd\n1865480  0.0 bash\n1865580  0.0 tmux: client\n1865643  0.0 sshd\n1865689  0.0 sshd\n1865690  0.0 bash\n1865783  0.0 tmux: client\n1872579  0.0 sshd\n1872632  0.0 sshd\n1872633  0.0 bash\n1872668  0.0 tmux: client\n1872859  0.0 sshd\n1872905  0.0 sshd\n1872906  0.0 bash\n1872956  0.0 tmux: client\n1873067  0.0 sshd\n1873161  0.0 sshd\n1873172  0.0 bash\n1873386  0.0 tmux: client\n1873547  0.0 sshd\n1873593  0.0 sshd\n1873594  0.0 bash\n1873689  0.0 tmux: client\n1874001  0.0 sshd\n1874044  0.0 sshd\n1874045  0.0 bash\n1874200  0.0 tmux: client\n1875861  0.6 claude\n1878114  0.0 kworker/15:0\n1879309  0.0 kworker/25:1-mm_percpu_wq\n1879733  0.0 kworker/89:2-cgroup_destroy\n1881653  0.0 node\n1881664  0.0 codex\n1884320  0.0 kworker/13:1\n1884497  0.0 kworker/111:2-events\n1944680  0.0 kworker/7:0-mm_percpu_wq\n1966137  0.0 kworker/u387:1\n1971907  0.0 kworker/2:1-events\n1975357  0.0 kworker/u388:4-events_unbound\n1987588  0.0 slurmstepd\n1987592  0.0 bash\n1987594  0.0 python\n1987694  0.0 RepeatModeler\n1998012  0.0 kworker/114:0\n2016781  0.0 slurmstepd\n2016784  0.0 bash\n2016786  0.0 python\n2016790  0.0 RepeatModeler\n2026214  0.0 kworker/u394:1-events_unbound\n2033009  0.0 kworker/u392:0-events_unbound\n2038850  0.0 kworker/43:1-mm_percpu_wq\n2040262  0.0 sh\n2040271  783 rmblastn\n2044846  0.0 kworker/31:2-mm_percpu_wq\n2061028  0.0 kworker/26:0-mm_percpu_wq\n2070171  0.0 kworker/11:0-cgroup_destroy\n2080249  0.0 kworker/4:1-cgroup_destroy\n2087260  0.0 kworker/42:1-mm_percpu_wq\n2090931  0.0 kworker/1:2-cgroup_destroy\n2101170  0.0 kworker/138:2-mm_percpu_wq\n2111734  0.0 kworker/107:2\n2140421  0.0 kworker/136:1-mm_percpu_wq\n2142513  0.0 kworker/R-ib-co\n2142514  0.0 kworker/R-ib-co\n2142515  0.0 kworker/R-ib_mc\n2142516  0.0 kworker/R-ib_nl\n2154161  0.0 kworker/40:0-cgroup_destroy\n2160879  0.0 kworker/41:2-events\n2193506  0.0 kworker/101:1\n2195207  0.0 kworker/96:2\n2204592  0.0 kworker/98:0-mm_percpu_wq\n2205364  0.0 kworker/103:2-cgroup_destroy\n2213684  0.0 kworker/6:1-mm_percpu_wq\n2219395  0.0 kworker/137:1-mm_percpu_wq\n2221092  0.0 kworker/10:1\n2233832  0.1 kworker/u390:4-flush-259:1\n2242407  0.0 kworker/u385:3-events_power_efficient\n2244922  0.0 kworker/5:0-mm_percpu_wq\n2245106  0.2 kworker/u384:2-ext4-rsv-conversion\n2257517  0.0 kworker/u386:3-events_unbound\n2262667  0.0 kworker/88:0\n2266350  0.0 kworker/u396:2-iou_exit\n2279217  0.0 kworker/0:2-events\n2324573  0.0 bash\n2360135  0.0 kworker/127:2-cgroup_destroy\n2390309  0.0 kworker/97:2-cgroup_destroy\n2392300  0.0 snapd\n2404449  0.0 kworker/7:2\n2426700  0.0 kworker/3:2\n2448002  0.0 python\n2472987  0.0 bash\n2473441  740 iqtree3\n2496379  0.0 kworker/5:1-mm_percpu_wq\n2503812  0.0 cupsd\n2503846  0.0 cups-browsed\n2508719  0.0 kworker/107:0-events\n2516929  0.0 fwupd\n2556653  0.0 kworker/139:2-cgroup_destroy\n2565150  0.0 kworker/31:0-mm_percpu_wq\n2590833  0.0 sh\n2590839  776 rmblastn\n2626018  0.0 kworker/25:2-cgroup_destroy\n2637238  0.0 kworker/68:0-mm_percpu_wq\n2639926  0.0 kworker/157:0-mm_percpu_wq\n2657819  0.0 kworker/u391:1-flush-259:6\n2660551  0.0 at-spi-bus-laun\n2664133  0.0 kworker/27:1\n2670644  0.0 kworker/123:2-events\n2679821  0.0 kworker/120:1\n2694445  0.0 kworker/26:2\n2720312  0.0 kworker/82:2-cgroup_destroy\n2750601  0.0 kworker/178:1-mm_percpu_wq\n2756379  0.0 bash\n2766742  0.0 kworker/121:1-mm_percpu_wq\n2796570  0.0 kworker/61:1-mm_percpu_wq\n2812451  0.0 kworker/u391:3-flush-259:6\n2814720  1.2 codex\n2815698  0.0 kworker/149:2-cgroup_destroy\n2817465  0.0 codex-code-mode\n2823282  0.0 kworker/4:0-cgroup_destroy\n2837178  0.0 kworker/102:2\n2848968  0.0 kworker/165:1-mm_percpu_wq\n2863257  0.0 kworker/158:1-mm_percpu_wq\n2879437  0.0 bash\n2879438  0.0 bash\n2879448  0.0 conda\n2879450  0.0 conda\n2880462  0.0 bash\n2880463  0.0 bash\n2883125  107 python\n2883131 99.1 python\n2891758  777 iqtree3\n2896400  0.0 vidmem lazy free\n2896544  0.0 UVM GPU1 BH\n2896545  0.0 UVM GPU1 KC\n2896680  0.0 vidmem lazy free\n2896873  0.0 UVM GPU2 BH\n2896874  0.0 UVM GPU2 KC\n2944449  0.0 kworker/154:1-mm_percpu_wq\n2957599  0.0 kworker/138:0-mm_percpu_wq\n2964780  0.0 RepeatModeler\n2964783  0.0 Refiner\n2964864  0.0 sh\n2964865 99.9 rmblastn\n2977693  0.0 kworker/43:0-cgroup_destroy\n2990809  0.0 kworker/137:2-cgroup_destroy\n3009752  0.0 kworker/186:2-cgroup_destroy\n3020571  0.0 kworker/95:1-events\n3025417  0.0 kworker/166:1-mm_percpu_wq\n3025976  0.0 kworker/152:2-cgroup_destroy\n3028823  0.0 kworker/158:2-cgroup_destroy\n3033558  0.0 kworker/86:0\n3036278  0.0 kworker/188:2-cgroup_destroy\n3036331  0.0 kworker/94:1-mm_percpu_wq\n3048476  0.0 kworker/76:2-events\n3086112  0.1 codex\n3089258  0.0 kworker/159:1-cgroup_destroy\n3090562  0.0 kworker/42:2-mm_percpu_wq\n3090706  0.0 kworker/52:2-cgroup_destroy\n3091299  0.0 kworker/144:2\n3091522  0.0 kworker/146:2-cgroup_destroy\n3091967  0.0 kworker/151:1\n3096717  0.0 kworker/185:0\n3099283  0.0 kworker/153:1-cgroup_destroy\n3099481  0.0 kworker/154:2-cgroup_destroy\n3099672  0.0 kworker/63:0-mm_percpu_wq\n3104370  0.0 kworker/180:1-mm_percpu_wq\n3106089  0.0 kworker/85:2-mm_percpu_wq\n3118379  0.5 kworker/u384:0-atlantic\n3152016  0.0 kworker/17:0-mm_percpu_wq\n3153944  0.0 slurmstepd\n3153947  0.0 bash\n3153949  0.0 python\n3154284  1.8 RepeatModeler\n3158539  0.0 kworker/44:2\n3158752  0.0 kworker/u386:1-events_unbound\n3160027  0.0 sh\n3160028  797 rmblastn\n3160062  0.0 kworker/78:0-mm_percpu_wq\n3160169  0.0 kworker/87:0-cgroup_destroy\n3160353  0.0 kworker/u395:0-events_unbound\n3160433  0.0 kworker/177:0-cgroup_destroy\n3160509  0.0 kworker/83:1\n3160627  0.0 kworker/81:1-mm_percpu_wq\n3160746  0.0 slurmstepd\n3160750 99.9 python\n3160787  0.0 kworker/175:0-mm_percpu_wq\n3160819  0.0 kworker/u390:0-events_unbound\n3161044  0.0 kworker/85:0-cgroup_destroy\n3161045  0.0 kworker/72:1\n3161169  0.0 sleep\n3161439  0.0 sh\n3161440  800 rmblastn\n3161590  0.0 slurmstepd\n3161593 99.9 python\n3162064  0.1 python\n3162066  100 python\n3162160  0.0 sh\n3162161  690 rmblastn\n3162243  0.0 kworker/179:2-cgroup_destroy\n3162404  0.0 kworker/98:1-mm_percpu_wq\n3162640  0.4 sh\n3162641  808 rmblastn\n3162679  0.0 sh\n3162680  835 rmblastn\n3162689  0.0 kworker/169:1\n3162713 70.0 ffmpeg\n3162714  0.0 kworker/168:2\n3162757  0.0 ps\n3166613  0.0 kworker/161:1-events\n3183264  0.0 kworker/86:1-events\n3185153  0.0 kworker/u393:0-writeback\n3186375  0.0 kworker/70:1-rcu_par_gp\n3186591  0.0 kworker/163:0-mm_percpu_wq\n3186674  0.0 kworker/60:2\n3187866  0.0 kworker/65:0-events\n3190571  0.0 kworker/69:2-mm_percpu_wq\n3196231  0.0 kworker/66:0-mm_percpu_wq\n3197235  0.0 kworker/159:0-mm_percpu_wq\n3199393  0.0 kworker/162:0-cgroup_destroy\n3207496  0.0 kworker/178:0-mm_percpu_wq\n3208564  0.0 kworker/166:2\n3217254  0.0 kworker/164:0-mm_percpu_wq\n3222333  0.0 kworker/92:0\n3223447  0.0 kworker/160:2-cgroup_destroy\n3231698  0.0 kworker/181:0-events\n3237821  0.0 kworker/177:1-events\n3237837  0.0 kworker/80:1-mm_percpu_wq\n3242122  0.0 kworker/176:1-events\n3253897  0.0 kworker/179:0-mm_percpu_wq\n3257234  0.0 kworker/106:2-mm_percpu_wq\n3259055  0.0 kworker/70:2-mm_percpu_wq\n3259124  0.0 kworker/64:1-cgroup_destroy\n3259433  0.0 kworker/165:0-cgroup_destroy\n3259513  0.0 kworker/69:0-cgroup_destroy\n3261937  0.0 kworker/59:2-cgroup_destroy\n3263014  0.0 kworker/62:1-cgroup_destroy\n3265367  0.0 kworker/167:1-mm_percpu_wq\n3269368  0.0 kworker/71:0-mm_percpu_wq\n3271272  0.0 kworker/161:2-mm_percpu_wq\n3272966  0.0 kworker/28:1-events\n3275048  0.0 kworker/66:2-rcu_par_gp\n3275125  0.0 kworker/67:0-cgroup_destroy\n3275506  0.0 kworker/163:2\n3275676  0.0 kworker/164:1\n3276030  0.0 kworker/68:1-cgroup_destroy\n3276064  0.0 slurmstepd\n3276067  0.4 python\n3276180  0.0 kworker/65:1-mm_percpu_wq\n3277048  0.0 time\n3277049  0.0 python\n3277050  0.9 python\n3277053  777 python\n3277054  778 python\n3277055  778 python\n3277056  776 python\n3309502  0.0 kworker/14:1\n3312024  0.0 kworker/187:0-mm_percpu_wq\n3323451  0.0 kworker/137:0-mm_percpu_wq\n3324081  0.0 kworker/11:1-events\n3328915  0.0 slurmstepd\n3328918  0.0 bash\n3328920  0.0 python\n3328931  0.0 RepeatModeler\n3386158  0.0 kworker/190:0\n3392030  0.0 kworker/125:2\n3431281  0.0 RepeatModeler\n3431284  0.0 Refiner\n3474194  0.0 kworker/u388:0-events_unbound\n3486134  0.0 kworker/u392:2-events_unbound\n3486448  0.0 kworker/189:2\n3529477  0.0 kworker/103:1-mm_percpu_wq\n3536124  0.0 slurmstepd\n3536127  0.0 bash\n3536129  0.0 python\n3536239  0.0 RepeatModeler\n3659842  0.0 kworker/84:1-events\n3668007  0.0 kworker/30:1-mm_percpu_wq\n3676711  0.0 kworker/93:0\n3683703  0.0 kworker/108:1-events\n3692418  0.0 slurmstepd\n3692421  0.0 bash\n3692423  0.0 python\n3692461  0.0 RepeatModeler\n3704905  0.0 bash\n3787588  0.0 kworker/191:1\n3829570  0.0 kworker/190:2-mm_percpu_wq\n3840222  0.0 kworker/117:0-cgroup_destroy\n3856453  0.0 kworker/41:1-mm_percpu_wq\n3902909  0.0 kworker/82:0-events\n3953554  0.0 kworker/16:1-mm_percpu_wq\n3957595  0.0 kworker/38:0-mm_percpu_wq\n3964345  0.0 kworker/129:1-mm_percpu_wq\n3964521  0.0 kworker/133:1-events\n3965583  0.0 kworker/128:1-events\n3979151  0.0 kworker/30:0\n3979897  0.0 kworker/112:2-mm_percpu_wq\n3986228  0.0 kworker/39:0-mm_percpu_wq\n3986239  0.0 kworker/132:0-events\n3986269  0.0 kworker/130:1-mm_percpu_wq\n3986991  0.0 kworker/134:0-events\n3987981  0.0 kworker/135:2-mm_percpu_wq\n3994266  0.0 kworker/37:2-mm_percpu_wq\n3998872  0.0 kworker/34:0-mm_percpu_wq\n4005287  0.1 codex\n4014180  0.0 sh\n4014181 99.9 rmblastn\n4085965  0.0 kworker/114:2-mm_percpu_wq\n4169185  0.0 kworker/182:2-mm_percpu_wq\n",
+  "job_id": "24242",
+  "scope": "Variant is fresh full-pipeline inference on a shared host; controls are accepted-hit/native-cache replays. Retain per-stage and whole-run wall/CPU/RSS descriptively and disclose competing workloads. Do not infer isolated speed advantage from these unmatched timing scopes.",
+  "source_revision": "7e7acaed3f3392197c0c498dc60ba63abb726810",
+  "status": "running"
+}
