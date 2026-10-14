@@ -1,0 +1,525 @@
+{
+  "defaults_promoted": false,
+  "goal_completed": false,
+  "historical_product_comparison": [
+    {
+      "artifact": "orthohmm_root_hogs.tsv",
+      "canonical": {
+        "bytes": 6301075,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/canonical/native/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+        "sha256": "5e35c1de220d0d4dca2ff64f255a55ad4d1740abbcbadbf746f91cba57f9622b"
+      },
+      "historical": {
+        "bytes": 6301075,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/cells/p1_c1_r1/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+        "sha256": "5e35c1de220d0d4dca2ff64f255a55ad4d1740abbcbadbf746f91cba57f9622b"
+      },
+      "same_bytes": true
+    },
+    {
+      "artifact": "orthohmm_pairwise_orthologs.tsv",
+      "canonical": {
+        "bytes": 100248192,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/canonical/native/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+        "sha256": "bfbe3f2707a4a30cd1a7ad404dd9fbf6b3973e98eeeeea8411c8935277e9fb72"
+      },
+      "historical": {
+        "bytes": 100248192,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/cells/p1_c1_r1/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+        "sha256": "bfbe3f2707a4a30cd1a7ad404dd9fbf6b3973e98eeeeea8411c8935277e9fb72"
+      },
+      "same_bytes": true
+    },
+    {
+      "artifact": "orthohmm_pairwise_orthologs_confidence.tsv",
+      "canonical": {
+        "bytes": 105315256,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/canonical/native/orthohmm_phylogeny/orthohmm_pairwise_orthologs_confidence.tsv",
+        "sha256": "376575f788070dcc1b5cb2f5be4b6ae752656ce8a418e67c6efd3bb3c881e2d6"
+      },
+      "historical": {
+        "bytes": 105315256,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/cells/p1_c1_r1/orthohmm_phylogeny/orthohmm_pairwise_orthologs_confidence.tsv",
+        "sha256": "376575f788070dcc1b5cb2f5be4b6ae752656ce8a418e67c6efd3bb3c881e2d6"
+      },
+      "same_bytes": true
+    },
+    {
+      "artifact": "species_tree.rooted.nwk",
+      "canonical": {
+        "bytes": 717,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/canonical/native/orthohmm_phylogeny/species_tree.rooted.nwk",
+        "sha256": "61ba4deadbc1f1e357b892bad11ac6b605e0495393816f077badaeb35b183878"
+      },
+      "historical": {
+        "bytes": 717,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/cells/p1_c1_r1/orthohmm_phylogeny/species_tree.rooted.nwk",
+        "sha256": "61ba4deadbc1f1e357b892bad11ac6b605e0495393816f077badaeb35b183878"
+      },
+      "same_bytes": true
+    }
+  ],
+  "inputs": [
+    {
+      "bytes": 6301075,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/arrival/native/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "c2981e6f041be76aef676bf9b1c8fc97e6f758f57dc8b1aea97c3f5ba970495d"
+    },
+    {
+      "bytes": 100248198,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/arrival/native/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+      "sha256": "4987854aa79ef4affe2c3c15997b4111885849ffa69b65ed1f3fce9ff05920d8"
+    },
+    {
+      "bytes": 105315262,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/arrival/native/orthohmm_phylogeny/orthohmm_pairwise_orthologs_confidence.tsv",
+      "sha256": "037bc38e2963451524cf58449ceaa8335ce6ba4e722af50ac50f1d1e96ddf00d"
+    },
+    {
+      "bytes": 6301075,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/canonical/native/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "5e35c1de220d0d4dca2ff64f255a55ad4d1740abbcbadbf746f91cba57f9622b"
+    },
+    {
+      "bytes": 100248192,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/canonical/native/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+      "sha256": "bfbe3f2707a4a30cd1a7ad404dd9fbf6b3973e98eeeeea8411c8935277e9fb72"
+    },
+    {
+      "bytes": 105315256,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/canonical/native/orthohmm_phylogeny/orthohmm_pairwise_orthologs_confidence.tsv",
+      "sha256": "376575f788070dcc1b5cb2f5be4b6ae752656ce8a418e67c6efd3bb3c881e2d6"
+    }
+  ],
+  "interpretation": "The controlled complete downstream order intervention changes the chimp/dog six-pair membership choice despite equal OrthoBench F1. Historical byte comparisons are observations, not proof that the earlier numeric-block initial singleton audit identified this mechanism or that canonical choices are biologically more correct.",
+  "rows": [
+    {
+      "added": [
+        {
+          "count": 1,
+          "record": [
+            "ENSCAFP00000036635",
+            "ENSCAFP00000038958",
+            "ENSCAFP00000047241",
+            "ENSDARP00000067948",
+            "ENSGALP00000065924",
+            "ENSMODP00000045399",
+            "ENSMODP00000046557",
+            "ENSMODP00000047271",
+            "ENSMODP00000048087",
+            "ENSMODP00000054239",
+            "ENSMODP00000054862",
+            "ENSMUSP00000076397",
+            "ENSP00000358151",
+            "ENSP00000477527",
+            "ENSP00000479284",
+            "ENSPTRP00000051821",
+            "ENSPTRP00000088185",
+            "ENSRNOP00000028779",
+            "ENSRNOP00000042464",
+            "ENSTNIP00000011624",
+            "FBpp0091127",
+            "WBGene00001915.1"
+          ]
+        },
+        {
+          "count": 1,
+          "record": [
+            "ENSPTRP00000070234"
+          ]
+        }
+      ],
+      "added_records": 2,
+      "arrival_records": 59770,
+      "artifact": "orthohmm_root_hogs.tsv",
+      "canonical_records": 59770,
+      "removed": [
+        {
+          "count": 1,
+          "record": [
+            "ENSCAFP00000038958",
+            "ENSCAFP00000047241",
+            "ENSDARP00000067948",
+            "ENSGALP00000065924",
+            "ENSMODP00000045399",
+            "ENSMODP00000046557",
+            "ENSMODP00000047271",
+            "ENSMODP00000048087",
+            "ENSMODP00000054239",
+            "ENSMODP00000054862",
+            "ENSMUSP00000076397",
+            "ENSP00000358151",
+            "ENSP00000477527",
+            "ENSP00000479284",
+            "ENSPTRP00000051821",
+            "ENSPTRP00000070234",
+            "ENSPTRP00000088185",
+            "ENSRNOP00000028779",
+            "ENSRNOP00000042464",
+            "ENSTNIP00000011624",
+            "FBpp0091127",
+            "WBGene00001915.1"
+          ]
+        },
+        {
+          "count": 1,
+          "record": [
+            "ENSCAFP00000036635"
+          ]
+        }
+      ],
+      "removed_records": 2,
+      "semantic_multisets_equal": false
+    },
+    {
+      "added": [
+        {
+          "count": 1,
+          "record": [
+            [
+              "ENSCAFP00000036635",
+              "Canis_familiaris.CanFam3.1.pep.all"
+            ],
+            [
+              "ENSDARP00000067948",
+              "Danio_rerio.GRCz11.pep.all"
+            ]
+          ]
+        },
+        {
+          "count": 1,
+          "record": [
+            [
+              "ENSCAFP00000036635",
+              "Canis_familiaris.CanFam3.1.pep.all"
+            ],
+            [
+              "ENSGALP00000065924",
+              "Gallus_gallus.GRCg6a.pep.all"
+            ]
+          ]
+        },
+        {
+          "count": 1,
+          "record": [
+            [
+              "ENSCAFP00000036635",
+              "Canis_familiaris.CanFam3.1.pep.all"
+            ],
+            [
+              "ENSRNOP00000028779",
+              "Rattus_norvegicus.Rnor_6.0.pep.all"
+            ]
+          ]
+        },
+        {
+          "count": 1,
+          "record": [
+            [
+              "ENSCAFP00000036635",
+              "Canis_familiaris.CanFam3.1.pep.all"
+            ],
+            [
+              "ENSTNIP00000011624",
+              "Tetraodon_nigroviridis.TETRAODON8.pep.all"
+            ]
+          ]
+        },
+        {
+          "count": 1,
+          "record": [
+            [
+              "ENSCAFP00000036635",
+              "Canis_familiaris.CanFam3.1.pep.all"
+            ],
+            [
+              "FBpp0091127",
+              "Drosophila_melanogaster.BDGP6.28.pep.all"
+            ]
+          ]
+        },
+        {
+          "count": 1,
+          "record": [
+            [
+              "ENSCAFP00000036635",
+              "Canis_familiaris.CanFam3.1.pep.all"
+            ],
+            [
+              "WBGene00001915.1",
+              "Caenorhabditis_elegans.WBcel235.pep.all"
+            ]
+          ]
+        }
+      ],
+      "added_records": 6,
+      "arrival_records": 966439,
+      "artifact": "orthohmm_pairwise_orthologs.tsv",
+      "canonical_records": 966439,
+      "removed": [
+        {
+          "count": 1,
+          "record": [
+            [
+              "ENSDARP00000067948",
+              "Danio_rerio.GRCz11.pep.all"
+            ],
+            [
+              "ENSPTRP00000070234",
+              "Pan_troglodytes.Pan_tro_3.0.pep.all"
+            ]
+          ]
+        },
+        {
+          "count": 1,
+          "record": [
+            [
+              "ENSGALP00000065924",
+              "Gallus_gallus.GRCg6a.pep.all"
+            ],
+            [
+              "ENSPTRP00000070234",
+              "Pan_troglodytes.Pan_tro_3.0.pep.all"
+            ]
+          ]
+        },
+        {
+          "count": 1,
+          "record": [
+            [
+              "ENSPTRP00000070234",
+              "Pan_troglodytes.Pan_tro_3.0.pep.all"
+            ],
+            [
+              "ENSRNOP00000028779",
+              "Rattus_norvegicus.Rnor_6.0.pep.all"
+            ]
+          ]
+        },
+        {
+          "count": 1,
+          "record": [
+            [
+              "ENSPTRP00000070234",
+              "Pan_troglodytes.Pan_tro_3.0.pep.all"
+            ],
+            [
+              "ENSTNIP00000011624",
+              "Tetraodon_nigroviridis.TETRAODON8.pep.all"
+            ]
+          ]
+        },
+        {
+          "count": 1,
+          "record": [
+            [
+              "ENSPTRP00000070234",
+              "Pan_troglodytes.Pan_tro_3.0.pep.all"
+            ],
+            [
+              "FBpp0091127",
+              "Drosophila_melanogaster.BDGP6.28.pep.all"
+            ]
+          ]
+        },
+        {
+          "count": 1,
+          "record": [
+            [
+              "ENSPTRP00000070234",
+              "Pan_troglodytes.Pan_tro_3.0.pep.all"
+            ],
+            [
+              "WBGene00001915.1",
+              "Caenorhabditis_elegans.WBcel235.pep.all"
+            ]
+          ]
+        }
+      ],
+      "removed_records": 6,
+      "semantic_multisets_equal": false
+    },
+    {
+      "added": [
+        {
+          "count": 1,
+          "record": [
+            [
+              "ENSCAFP00000036635",
+              "Canis_familiaris.CanFam3.1.pep.all"
+            ],
+            [
+              "ENSDARP00000067948",
+              "Danio_rerio.GRCz11.pep.all"
+            ],
+            "high"
+          ]
+        },
+        {
+          "count": 1,
+          "record": [
+            [
+              "ENSCAFP00000036635",
+              "Canis_familiaris.CanFam3.1.pep.all"
+            ],
+            [
+              "ENSGALP00000065924",
+              "Gallus_gallus.GRCg6a.pep.all"
+            ],
+            "high"
+          ]
+        },
+        {
+          "count": 1,
+          "record": [
+            [
+              "ENSCAFP00000036635",
+              "Canis_familiaris.CanFam3.1.pep.all"
+            ],
+            [
+              "ENSRNOP00000028779",
+              "Rattus_norvegicus.Rnor_6.0.pep.all"
+            ],
+            "high"
+          ]
+        },
+        {
+          "count": 1,
+          "record": [
+            [
+              "ENSCAFP00000036635",
+              "Canis_familiaris.CanFam3.1.pep.all"
+            ],
+            [
+              "ENSTNIP00000011624",
+              "Tetraodon_nigroviridis.TETRAODON8.pep.all"
+            ],
+            "medium"
+          ]
+        },
+        {
+          "count": 1,
+          "record": [
+            [
+              "ENSCAFP00000036635",
+              "Canis_familiaris.CanFam3.1.pep.all"
+            ],
+            [
+              "FBpp0091127",
+              "Drosophila_melanogaster.BDGP6.28.pep.all"
+            ],
+            "high"
+          ]
+        },
+        {
+          "count": 1,
+          "record": [
+            [
+              "ENSCAFP00000036635",
+              "Canis_familiaris.CanFam3.1.pep.all"
+            ],
+            [
+              "WBGene00001915.1",
+              "Caenorhabditis_elegans.WBcel235.pep.all"
+            ],
+            "high"
+          ]
+        }
+      ],
+      "added_records": 6,
+      "arrival_records": 966439,
+      "artifact": "orthohmm_pairwise_orthologs_confidence.tsv",
+      "canonical_records": 966439,
+      "removed": [
+        {
+          "count": 1,
+          "record": [
+            [
+              "ENSDARP00000067948",
+              "Danio_rerio.GRCz11.pep.all"
+            ],
+            [
+              "ENSPTRP00000070234",
+              "Pan_troglodytes.Pan_tro_3.0.pep.all"
+            ],
+            "high"
+          ]
+        },
+        {
+          "count": 1,
+          "record": [
+            [
+              "ENSGALP00000065924",
+              "Gallus_gallus.GRCg6a.pep.all"
+            ],
+            [
+              "ENSPTRP00000070234",
+              "Pan_troglodytes.Pan_tro_3.0.pep.all"
+            ],
+            "high"
+          ]
+        },
+        {
+          "count": 1,
+          "record": [
+            [
+              "ENSPTRP00000070234",
+              "Pan_troglodytes.Pan_tro_3.0.pep.all"
+            ],
+            [
+              "ENSRNOP00000028779",
+              "Rattus_norvegicus.Rnor_6.0.pep.all"
+            ],
+            "high"
+          ]
+        },
+        {
+          "count": 1,
+          "record": [
+            [
+              "ENSPTRP00000070234",
+              "Pan_troglodytes.Pan_tro_3.0.pep.all"
+            ],
+            [
+              "ENSTNIP00000011624",
+              "Tetraodon_nigroviridis.TETRAODON8.pep.all"
+            ],
+            "medium"
+          ]
+        },
+        {
+          "count": 1,
+          "record": [
+            [
+              "ENSPTRP00000070234",
+              "Pan_troglodytes.Pan_tro_3.0.pep.all"
+            ],
+            [
+              "FBpp0091127",
+              "Drosophila_melanogaster.BDGP6.28.pep.all"
+            ],
+            "high"
+          ]
+        },
+        {
+          "count": 1,
+          "record": [
+            [
+              "ENSPTRP00000070234",
+              "Pan_troglodytes.Pan_tro_3.0.pep.all"
+            ],
+            [
+              "WBGene00001915.1",
+              "Caenorhabditis_elegans.WBcel235.pep.all"
+            ],
+            "high"
+          ]
+        }
+      ],
+      "removed_records": 6,
+      "semantic_multisets_equal": false
+    }
+  ],
+  "scope": "Observed comparison of already admitted full native products. Ignores row order, RootHOG/source-family identifiers and within-group order; preserves gene/species pairs, confidence classes and multiplicity. No inference rerun, parameter selection, accuracy gain or default promotion.",
+  "status": "canonical_orthobench_semantic_multisets_compared"
+}
