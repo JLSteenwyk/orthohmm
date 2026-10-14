@@ -1,0 +1,81 @@
+{
+  "all_27_table_rows_agree_with_summary": true,
+  "defaults_promoted": false,
+  "deltas_from_matched_control": {
+    "OrthoBench: OrthoBench F1": -0.004471105890636373,
+    "QfO: EC": -0.00046442000000002093,
+    "QfO: FAS": -0.0003947907298520459,
+    "QfO: GO": -5.5360000000004295e-05,
+    "QfO: SwissTrees F": 4.2966181052706e-05,
+    "QfO: TreeFam-A F": 0.002993048688904376,
+    "QfO: VGNC F": -0.0008609544463130669,
+    "ThreeKingdoms: Three Kingdoms F1": 0.0003459448939592269
+  },
+  "development_screen_passed": true,
+  "earlier_orthobench_and_three_kingdoms_scores_unchanged": true,
+  "goal_completed": false,
+  "interpretation": "Mixed development tradeoff, not broad improvement, statistical equivalence, independent confirmation, or justification for default promotion.",
+  "limitations": [
+    "All reference datasets are development-exposed.",
+    "TreeFam is supporting evidence; Three Kingdoms is supplementary.",
+    "FAS is unseeded; its small change cannot be attributed uniquely to singleton policy.",
+    "Cached downstream shared-host resource receipts are not fresh full-pipeline or isolated speed comparisons.",
+    "The 0.005 decline screen is a heuristic, not equivalence or noninferiority."
+  ],
+  "matched_control_scores": {
+    "OrthoBench: OrthoBench F1": 0.7410607351873405,
+    "QfO: EC": 0.96538176,
+    "QfO: FAS": 0.7637247098243404,
+    "QfO: GO": 0.49023637,
+    "QfO: SwissTrees F": 0.831347705694284,
+    "QfO: TreeFam-A F": 0.6157780611844207,
+    "QfO: VGNC F": 0.9020677639723076,
+    "ThreeKingdoms: Three Kingdoms F1": 0.872133159469203
+  },
+  "method_key": "singleton_tie:defer_ambiguous",
+  "other_26_score_vectors_unchanged": true,
+  "parent": {
+    "bytes": 4551030,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v22_20261014/summary.json",
+    "sha256": "559efd657ddaa0ddd96a48deb841bbf703f4b8b16acd4635db31b4961e28aa3b"
+  },
+  "producer_snapshot": {
+    "bytes": 222761,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v23_20261014/snapshots/singleton_qfo.json",
+    "sha256": "ffc8092128fa647cdf989a0386ea2f7c03980ce734c6655ac91a7337b958190b"
+  },
+  "qfo_coverage": {
+    "genes": 984137,
+    "groups": 366508,
+    "pairs": 5949625,
+    "species": 78
+  },
+  "reporter_tests": {
+    "bytes": 4893,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v23_20261014/reporter_tests.xml",
+    "sha256": "541b5b9050890509ac33c54091646fbeb2681b0ddf8c34a0a6f2c704ed50cd0b"
+  },
+  "reporter_tests_passed": 30,
+  "scheduler": "24252         COMPLETED      0:0   03:47:23",
+  "score_table": {
+    "bytes": 4437,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v23_20261014/scores.tsv",
+    "sha256": "ebe4919c384c1a04b58db83b298f4d753a1570aec1fcdabd65bf5b9dbde01dad"
+  },
+  "status": "complete_eight_endpoint_singleton_variant_admission_crosschecked",
+  "summary": {
+    "bytes": 4641978,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v23_20261014/summary.json",
+    "sha256": "f059b4fbbd6b1b339f385dea4d3e7c868c6d6153bbfad9a377227dc0c81f3677"
+  },
+  "variant_scores": {
+    "OrthoBench: OrthoBench F1": 0.7365896292967041,
+    "QfO: EC": 0.96491734,
+    "QfO: FAS": 0.7633299190944883,
+    "QfO: GO": 0.49018101,
+    "QfO: SwissTrees F": 0.8313906718753367,
+    "QfO: TreeFam-A F": 0.6187711098733251,
+    "QfO: VGNC F": 0.9012068095259945,
+    "ThreeKingdoms: Three Kingdoms F1": 0.8724791043631622
+  }
+}
