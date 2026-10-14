@@ -1,0 +1,247 @@
+{
+  "accuracy_evaluated": false,
+  "baseline": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/arrival/native/orthohmm_phylogeny",
+  "candidate": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/canonical/native/orthohmm_phylogeny",
+  "checked": [
+    {
+      "bytes": 6301075,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/arrival/native/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "c2981e6f041be76aef676bf9b1c8fc97e6f758f57dc8b1aea97c3f5ba970495d"
+    },
+    {
+      "bytes": 100248198,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/arrival/native/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+      "sha256": "4987854aa79ef4affe2c3c15997b4111885849ffa69b65ed1f3fce9ff05920d8"
+    },
+    {
+      "bytes": 563,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/arrival/native/orthohmm_phylogeny/reconciliation_summary.json",
+      "sha256": "116914c69884ae2173dad77e45e6b2a09e961f0a1a8199bdd4fddf9d0bd5cb04"
+    },
+    {
+      "bytes": 6301075,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/canonical/native/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "5e35c1de220d0d4dca2ff64f255a55ad4d1740abbcbadbf746f91cba57f9622b"
+    },
+    {
+      "bytes": 100248192,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/canonical/native/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+      "sha256": "bfbe3f2707a4a30cd1a7ad404dd9fbf6b3973e98eeeeea8411c8935277e9fb72"
+    },
+    {
+      "bytes": 565,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/canonical/native/orthohmm_phylogeny/reconciliation_summary.json",
+      "sha256": "efe45c935cbb3114aa94f385e9800580b8865475260a35b86667dfc085f2814d"
+    },
+    {
+      "bytes": 7227,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_native_contrast_r1_v1_20261014/benchmark_tools/compare_native_membership.py",
+      "sha256": "609f10838c4a4d6a0b65b4e9b39a9f07842e48e31de421bfdfc7de4e857351f5"
+    },
+    {
+      "bytes": 8335,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_native_contrast_r1_v1_20261014/benchmark_tools/score_ygob_groups.py",
+      "sha256": "b18e86dafa7370b75386890d1c8acedf721b8d026a2cd150c0565645698eb51a"
+    },
+    {
+      "bytes": 717,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/arrival/native/orthohmm_phylogeny/species_tree.rooted.nwk",
+      "sha256": "61ba4deadbc1f1e357b892bad11ac6b605e0495393816f077badaeb35b183878"
+    },
+    {
+      "bytes": 717,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/canonical/native/orthohmm_phylogeny/species_tree.rooted.nwk",
+      "sha256": "61ba4deadbc1f1e357b892bad11ac6b605e0495393816f077badaeb35b183878"
+    }
+  ],
+  "defaults_promoted": false,
+  "genes": 251378,
+  "goal_completed": false,
+  "pair_membership": {
+    "added_records": 6,
+    "affected_genes": 8,
+    "baseline_duplicate_rows": 0,
+    "baseline_records": 966439,
+    "baseline_unique_pairs": 966439,
+    "candidate_duplicate_rows": 0,
+    "candidate_records": 966439,
+    "candidate_unique_pairs": 966439,
+    "common_records": 966433,
+    "removed_records": 6,
+    "semantic_multisets_equal": false
+  },
+  "pair_samples": {
+    "added": [
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSCAFP00000036635",
+            "Canis_familiaris.CanFam3.1.pep.all"
+          ],
+          [
+            "ENSDARP00000067948",
+            "Danio_rerio.GRCz11.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSCAFP00000036635",
+            "Canis_familiaris.CanFam3.1.pep.all"
+          ],
+          [
+            "ENSGALP00000065924",
+            "Gallus_gallus.GRCg6a.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSCAFP00000036635",
+            "Canis_familiaris.CanFam3.1.pep.all"
+          ],
+          [
+            "ENSRNOP00000028779",
+            "Rattus_norvegicus.Rnor_6.0.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSCAFP00000036635",
+            "Canis_familiaris.CanFam3.1.pep.all"
+          ],
+          [
+            "ENSTNIP00000011624",
+            "Tetraodon_nigroviridis.TETRAODON8.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSCAFP00000036635",
+            "Canis_familiaris.CanFam3.1.pep.all"
+          ],
+          [
+            "FBpp0091127",
+            "Drosophila_melanogaster.BDGP6.28.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSCAFP00000036635",
+            "Canis_familiaris.CanFam3.1.pep.all"
+          ],
+          [
+            "WBGene00001915.1",
+            "Caenorhabditis_elegans.WBcel235.pep.all"
+          ]
+        ]
+      }
+    ],
+    "removed": [
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSDARP00000067948",
+            "Danio_rerio.GRCz11.pep.all"
+          ],
+          [
+            "ENSPTRP00000070234",
+            "Pan_troglodytes.Pan_tro_3.0.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSGALP00000065924",
+            "Gallus_gallus.GRCg6a.pep.all"
+          ],
+          [
+            "ENSPTRP00000070234",
+            "Pan_troglodytes.Pan_tro_3.0.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSPTRP00000070234",
+            "Pan_troglodytes.Pan_tro_3.0.pep.all"
+          ],
+          [
+            "ENSRNOP00000028779",
+            "Rattus_norvegicus.Rnor_6.0.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSPTRP00000070234",
+            "Pan_troglodytes.Pan_tro_3.0.pep.all"
+          ],
+          [
+            "ENSTNIP00000011624",
+            "Tetraodon_nigroviridis.TETRAODON8.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSPTRP00000070234",
+            "Pan_troglodytes.Pan_tro_3.0.pep.all"
+          ],
+          [
+            "FBpp0091127",
+            "Drosophila_melanogaster.BDGP6.28.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSPTRP00000070234",
+            "Pan_troglodytes.Pan_tro_3.0.pep.all"
+          ],
+          [
+            "WBGene00001915.1",
+            "Caenorhabditis_elegans.WBcel235.pep.all"
+          ]
+        ]
+      }
+    ]
+  },
+  "root_membership": {
+    "added_records": 2,
+    "baseline_records": 59770,
+    "candidate_records": 59770,
+    "common_records": 59768,
+    "genes_in_changed_groups": 23,
+    "removed_records": 2,
+    "semantic_multisets_equal": false
+  },
+  "scope": "Ignores row order and arbitrary root/family IDs; preserves gene identity, pair species ownership and multiplicity. Confidence values and tree-event annotations are not compared. No claim of biological correctness or a uniquely identified causal stage.",
+  "species_tree_same_bytes": true,
+  "status": "native_membership_and_pair_multiset_contrast_completed"
+}
