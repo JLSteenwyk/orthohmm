@@ -1,0 +1,33 @@
+{
+  "allocated_cpus": 4,
+  "defaults_promoted": false,
+  "expected_report": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/component_gene_lca_r1_v1_20261014.json",
+  "frozen_executor": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/component_gene_lca_r1_v1_20261014",
+  "frozen_tests": {
+    "bytes": 10559,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/component_gene_lca_frozen_tests_20261014.xml",
+    "sha256": "6aa0d6ceb039f09ca7983dd5460cca6956c2dcd4b52e6b27cf4efd963256c6b8"
+  },
+  "goal_completed": false,
+  "job_id": "24229",
+  "log": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/component_gene_lca_r1_v1_20261014_24229.log",
+  "memory_gib": 16,
+  "new_accuracy_scores": false,
+  "observed_at_utc": "2026-10-14T01:34:01.872286+00:00",
+  "passed_per_suite": 66,
+  "plan": {
+    "bytes": 3270,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hillclimb_component_gene_lca_diagnostic_20261014.json",
+    "sha256": "11682387cb420d6106182f1f669bd04604758b91410347812409e76f2c29090d"
+  },
+  "scheduler_observation": "JobID|State|Elapsed|ExitCode\n24229|RUNNING|00:02:47|0:0\n",
+  "scope": "Submission record only. Scheduler/process handles must be revalidated on resume; this file is not proof of current liveness or diagnostic admission.",
+  "source_revision": "91013df6b54f79294952259f1a45602c8b3c379d",
+  "status": "submitted_with_frozen_tests_passed",
+  "wall_limit_hours": 1,
+  "working_tests": {
+    "bytes": 10559,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/component_gene_lca_working_tests_v2_20261014.xml",
+    "sha256": "35aa829f937a1914577fd3505d538118092291924ea9ae8fb47eaed8958aa650"
+  }
+}
