@@ -102,11 +102,14 @@ def parse_args(argv=None):
     )
     parser.add_argument("--gene-tree-support-mode", choices=("legacy", "bipartition"), default="legacy")
     parser.add_argument("--search-result-order", choices=("arrival","canonical"), default="arrival")
+    parser.add_argument("--singleton-tie-policy", choices=("first_hit", "defer_ambiguous"), default="first_hit")
     parser.add_argument("--native-kernel-trace", type=Path,
                         help="Benchmark-only fail-closed CPU multipair route observation")
     args = parser.parse_args(argv)
     if args.search_result_order!="arrival" and args.accuracy_profile!="high_sensitivity":
         parser.error("--search-result-order canonical requires --accuracy-profile high_sensitivity")
+    if args.singleton_tie_policy != "first_hit" and args.accuracy_profile != "high_sensitivity":
+        parser.error("--singleton-tie-policy defer_ambiguous requires --accuracy-profile high_sensitivity")
     if args.gene_tree_support_mode != "legacy" and args.phylogeny != "reconcile":
         parser.error("--gene-tree-support-mode bipartition requires --phylogeny reconcile")
     return args
@@ -165,6 +168,8 @@ def main(argv=None) -> int:
         command.extend(["--search_min_total_hits", str(args.search_min_total_hits)])
     if args.search_result_order!="arrival":
         command.extend(["--search_result_order",args.search_result_order])
+    if args.singleton_tie_policy != "first_hit":
+        command.extend(["--singleton_tie_policy", args.singleton_tie_policy])
     if not args.full_output:
         command.extend(["--stop", "infer"])
     if args.phylogeny == "reconcile":

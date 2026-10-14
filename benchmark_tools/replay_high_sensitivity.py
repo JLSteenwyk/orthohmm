@@ -119,6 +119,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--matrix", default="BLOSUM62")
     parser.add_argument("--cpu", type=int, default=os.cpu_count() or 1)
     parser.add_argument("--leiden-seed", type=int, default=4)
+    parser.add_argument("--singleton-tie-policy", choices=("first_hit", "defer_ambiguous"), default="first_hit")
     parser.add_argument(
         "--profile-iterations",
         type=int,
@@ -200,7 +201,8 @@ def main(argv=None) -> int:
     clustered_path = working / "orthohmm_edges_clustered.txt"
     initial_clusters = read_index_clusters(str(clustered_path), gene_names)
     singleton_edges = build_singleton_assignment_edges(
-        gene_names, initial_clusters, queries, targets, scores
+        gene_names, initial_clusters, queries, targets, scores,
+        **({"tie_policy": args.singleton_tie_policy} if args.singleton_tie_policy != "first_hit" else {}),
     )
     multipass_edges = combine_edges(rbnh_edges, singleton_edges)
     execute_leiden(
@@ -285,6 +287,7 @@ def main(argv=None) -> int:
                 queries,
                 targets,
                 scores,
+                **({"tie_policy": args.singleton_tie_policy} if args.singleton_tie_policy != "first_hit" else {}),
             )
             profile_edges = combine_edges(
                 profile_base_edges, final_singleton_edges
@@ -372,6 +375,7 @@ def main(argv=None) -> int:
             "profile_min_species": args.profile_min_species,
             "matrix": args.matrix,
             "leiden_seed": args.leiden_seed,
+            "singleton_tie_policy": args.singleton_tie_policy,
         },
         "counts": {
             "genes": len(gene_names),

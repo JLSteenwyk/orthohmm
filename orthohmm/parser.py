@@ -484,6 +484,9 @@ def create_parser() -> ArgumentParser:
     optional.add_argument(
         "--search_result_order", choices=["arrival","canonical"], default="arrival", help=SUPPRESS,
     )
+    optional.add_argument(
+        "--singleton_tie_policy", choices=["first_hit", "defer_ambiguous"], default="first_hit", help=SUPPRESS,
+    )
 
     optional.add_argument(
         "--gene_tree_support_mode",

@@ -18,6 +18,7 @@ from .accuracy import (
     resolve_search_candidate_cap,
     resolve_search_min_total_hits,
     validate_search_result_order,
+    validate_singleton_tie_policy,
     write_accuracy_checkpoint,
 )
 from .args_processing import process_args
@@ -461,6 +462,11 @@ def _execute(
             "and satellite_v2 candidates"
         )
     accuracy_config = resolve_accuracy_profile(accuracy_profile)
+    singleton_tie_policy = validate_singleton_tie_policy(kwargs.pop("singleton_tie_policy", "first_hit"))
+    if singleton_tie_policy != "first_hit" and (
+        accuracy_config.name != "high_sensitivity" or search_mode != "builtin" or start is not None
+    ):
+        raise ValueError("Singleton tie deferral requires fresh built-in high_sensitivity inference")
     search_result_order = validate_search_result_order(kwargs.pop("search_result_order","arrival"))
     if search_result_order!="arrival" and (
         accuracy_config.name!="high_sensitivity" or search_mode!="builtin" or start is not None
@@ -529,6 +535,7 @@ def _execute(
         search_max_candidates_per_query=search_candidate_cap,
         search_min_total_hits=search_min_total_hits,
         search_result_order=search_result_order,
+        singleton_tie_policy=singleton_tie_policy,
         leiden_seed=accuracy_config.leiden_seed,
         cpu_budget=cpu,
     )
@@ -767,6 +774,7 @@ def _execute(
                     edges.gene_names,
                     initial_clusters,
                     *accuracy_hits,
+                    **({"tie_policy": singleton_tie_policy} if singleton_tie_policy != "first_hit" else {}),
                 )
                 metrics.add_counts(
                     high_sensitivity_rbnh_edges=len(edges),
@@ -819,6 +827,7 @@ def _execute(
                 edges.gene_names,
                 profile_base_clusters,
                 *accuracy_hits,
+                **({"tie_policy": singleton_tie_policy} if singleton_tie_policy != "first_hit" else {}),
             )
             edges = combine_edges(
                 profile_base_edges,

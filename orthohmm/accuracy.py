@@ -33,6 +33,12 @@ def validate_search_result_order(order: str) -> str:
     return order
 
 
+def validate_singleton_tie_policy(policy: str) -> str:
+    if not isinstance(policy, str) or policy not in {"first_hit", "defer_ambiguous"}:
+        raise ValueError(f"Unsupported singleton tie policy: {policy!r}")
+    return policy
+
+
 @dataclass(frozen=True)
 class AccuracyProfile:
     """Parameters that change sequence-search sensitivity and graph inference."""
@@ -382,8 +388,11 @@ def build_singleton_assignment_edges(
     hit_queries,
     hit_targets,
     hit_scores,
+    *,
+    tie_policy: str = "first_hit",
 ) -> IndexedEdges:
-    """Attach each singleton to its best-supported non-singleton cluster."""
+    """Attach singletons, optionally deferring exact ties between anchor clusters."""
+    validate_singleton_tie_policy(tie_policy)
     n_genes = len(gene_names)
     cluster_by_gene = np.full(n_genes, -1, dtype=np.int32)
     singleton = np.ones(n_genes, dtype=bool)
@@ -423,6 +432,13 @@ def build_singleton_assignment_edges(
     best_clusters[winning_queries] = cluster_by_gene[
         targets[winning_rows[first]]
     ]
+    if tie_policy == "defer_ambiguous":
+        # Equally best genes in the same anchor cluster are not ambiguous.
+        winning_clusters = cluster_by_gene[targets[winning_rows]]
+        packed = queries[winning_rows].astype(np.int64) * len(clusters) + winning_clusters
+        distinct = np.unique(packed)
+        tied_queries, cluster_counts = np.unique(distinct // len(clusters), return_counts=True)
+        best_clusters[tied_queries[cluster_counts > 1]] = -1
 
     keep = eligible & (
         cluster_by_gene[targets] == best_clusters[queries]

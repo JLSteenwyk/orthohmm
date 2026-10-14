@@ -14,7 +14,7 @@ from .helpers import (
     SubstitutionMatrix,
 )
 from .files import fetch_fasta_files
-from .accuracy import resolve_accuracy_profile, resolve_search_candidate_cap, validate_search_result_order, resolve_search_min_total_hits
+from .accuracy import resolve_accuracy_profile, resolve_search_candidate_cap, validate_search_result_order, resolve_search_min_total_hits, validate_singleton_tie_policy
 from .refinement import PHYLOGENY_CANDIDATE_REFINEMENT_PROFILES
 from .phylogeny import (
     PhylogenyConfig,
@@ -124,6 +124,11 @@ def process_args(args) -> dict:
     accuracy_profile = getattr(args, "accuracy_profile", None) or "standard"
     search_cap_override = getattr(args, "search_max_candidates_per_query", None)
     try:
+        singleton_tie_policy = validate_singleton_tie_policy(getattr(args, "singleton_tie_policy", "first_hit"))
+        if singleton_tie_policy != "first_hit" and (
+            accuracy_profile != "high_sensitivity" or search_mode != "builtin" or args.start
+        ):
+            raise ValueError("Singleton tie deferral requires fresh built-in high_sensitivity inference")
         search_result_order = validate_search_result_order(getattr(args,"search_result_order","arrival"))
         if search_result_order!="arrival" and (
             accuracy_profile!="high_sensitivity" or search_mode!="builtin" or args.start
@@ -277,6 +282,7 @@ def process_args(args) -> dict:
         satellite_membership_rule=phylogeny_config.satellite_membership_rule,
         gene_tree_support_mode=phylogeny_config.gene_tree_support_mode,
         **({"search_result_order":search_result_order} if search_result_order!="arrival" else {}),
+        **({"singleton_tie_policy": singleton_tie_policy} if singleton_tie_policy != "first_hit" else {}),
         **({"search_min_total_hits": search_min_total_hits} if search_min_total_hits != 4 else {}),
         **({"search_max_candidates_per_query": search_cap_override}
            if search_cap_override is not None else {}),
