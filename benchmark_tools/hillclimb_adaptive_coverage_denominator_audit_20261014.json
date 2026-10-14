@@ -1,0 +1,11 @@
+{
+  "schema": "adaptive_candidate_coverage_denominator_audit_v1",
+  "status": "prespecified_before_reproducer_execution",
+  "hypothesis": "For some query counts above 500, the stride-based Phase A probe executes more than nominal sample_size queries but divides successes by sample_size. This can report coverage above one or select too small an adaptive candidate cap at a tier boundary.",
+  "verification": "Exercise the actual unchanged _adaptive_max_candidates function with a stubbed Phase A matcher and a valid synthetic encoded query layout. Prespecify (query_count, successful_probe_count) cases (500,400), (512,512), (750,600), (1024,410). Count actual function invocations; independently compute hits divided by observed probes and the unchanged 0.8/0.5/0.2 cap tiers. Record nominal versus observed denominators and any cap change. Do not score biological accuracy or modify source/default behavior.",
+  "scope": "Mathematical branch/denominator audit, not biological sequence validation, inferred species distance calibration or evidence of improved benchmark accuracy. Stubbed hits are explicit test inputs, not observed homologs.",
+  "benchmark_relevance": "The running primary cap panel and larger boundary-clear search validator use fixed caps 100/400, so adaptive estimation is inactive there. Preserve those runs. Any future adaptive-mode repair or redesign must be separately prespecified, opt-in and evaluated on all required endpoints before default promotion.",
+  "resources": {"cpus": 1, "memory_gib": 2, "wall_limit_minutes": 5},
+  "defaults_promoted": false,
+  "goal_completed": false
+}
