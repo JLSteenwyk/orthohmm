@@ -1,0 +1,351 @@
+{
+  "accuracy_evaluated": false,
+  "baseline": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/ThreeKingdoms/canonical/native/orthohmm_phylogeny",
+  "candidate": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/shared_hit_pipeline_r1_v1_20261014/ThreeKingdoms/shared_hit1/output/orthohmm_phylogeny",
+  "checked": [
+    {
+      "bytes": 12278496,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/ThreeKingdoms/canonical/native/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "698115881666fbd5797b5d184eb6aab113112ff88193b24eccb4cab3dd4abbe7"
+    },
+    {
+      "bytes": 55308042,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/ThreeKingdoms/canonical/native/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+      "sha256": "d57fd4018ad665178952424b1756f57e0230dd21b7e5b562d37a46ac74d73b95"
+    },
+    {
+      "bytes": 572,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/ThreeKingdoms/canonical/native/orthohmm_phylogeny/reconciliation_summary.json",
+      "sha256": "eaeb21138a8297b09780dc5933bf896fb631bc40d627a18405e6f352da92c910"
+    },
+    {
+      "bytes": 12363756,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/shared_hit_pipeline_r1_v1_20261014/ThreeKingdoms/shared_hit1/output/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "86b72cb154d2bb601a72c2cc65f1bc043f487811e7db880b9afd26a260130e08"
+    },
+    {
+      "bytes": 53384699,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/shared_hit_pipeline_r1_v1_20261014/ThreeKingdoms/shared_hit1/output/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+      "sha256": "c1c284e1d81d84481e42830fdce5c48c15f7340c8905a8a742fab58aa9e5c11f"
+    },
+    {
+      "bytes": 570,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/shared_hit_pipeline_r1_v1_20261014/ThreeKingdoms/shared_hit1/output/orthohmm_phylogeny/reconciliation_summary.json",
+      "sha256": "17ca3fa633f84bb1e47db9d0219bc94e9a66433031d9a0eea84b06a8f36b32f5"
+    },
+    {
+      "bytes": 7227,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_native_contrast_r1_v1_20261014/benchmark_tools/compare_native_membership.py",
+      "sha256": "609f10838c4a4d6a0b65b4e9b39a9f07842e48e31de421bfdfc7de4e857351f5"
+    },
+    {
+      "bytes": 8335,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_native_contrast_r1_v1_20261014/benchmark_tools/score_ygob_groups.py",
+      "sha256": "b18e86dafa7370b75386890d1c8acedf721b8d026a2cd150c0565645698eb51a"
+    },
+    {
+      "bytes": 363,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/ThreeKingdoms/canonical/native/orthohmm_phylogeny/species_tree.rooted.nwk",
+      "sha256": "a39e922782be77f40538f23a02975b9f4c4c39445a865054b02208027a99597f"
+    },
+    {
+      "bytes": 364,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/shared_hit_pipeline_r1_v1_20261014/ThreeKingdoms/shared_hit1/output/orthohmm_phylogeny/species_tree.rooted.nwk",
+      "sha256": "e2ec40951553c5a573feaea6faf6a3fee29270eab75f3031c0f946ac8a696eef"
+    }
+  ],
+  "defaults_promoted": false,
+  "genes": 443217,
+  "goal_completed": false,
+  "pair_membership": {
+    "added_records": 159312,
+    "affected_genes": 103898,
+    "baseline_duplicate_rows": 0,
+    "baseline_records": 1253269,
+    "baseline_unique_pairs": 1253269,
+    "candidate_duplicate_rows": 0,
+    "candidate_records": 1209364,
+    "candidate_unique_pairs": 1209364,
+    "common_records": 1050052,
+    "removed_records": 203217,
+    "semantic_multisets_equal": false
+  },
+  "pair_samples": {
+    "added": [
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ADH10384",
+            "Sela"
+          ],
+          [
+            "EAL93517",
+            "Asfu"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ADH10384",
+            "Sela"
+          ],
+          [
+            "EFI93648",
+            "Scom"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ADH10384",
+            "Sela"
+          ],
+          [
+            "YBL038W",
+            "Scer"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ADH10414",
+            "Sela"
+          ],
+          [
+            "ENSACAP00000021690.1",
+            "Anol"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ADH10414",
+            "Sela"
+          ],
+          [
+            "ENSDARP00000087876.3",
+            "Dani"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ADH10414",
+            "Sela"
+          ],
+          [
+            "sp|P03900|NU3M_XENLA",
+            "Xeno"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ADH10425",
+            "Sela"
+          ],
+          [
+            "ATCG00130.1",
+            "Arab"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ADH10425",
+            "Sela"
+          ],
+          [
+            "ZemaCp019",
+            "Zeam"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ADH10425",
+            "Sela"
+          ],
+          [
+            "Zm00001d000270_P010",
+            "Zeam"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ADH10425",
+            "Sela"
+          ],
+          [
+            "cds-CAA33992.1",
+            "Oryz"
+          ]
+        ]
+      }
+    ],
+    "removed": [
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ADH10380",
+            "Sela"
+          ],
+          [
+            "Os10t0214132-00",
+            "Oryz"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ADH10382",
+            "Sela"
+          ],
+          [
+            "Os07t0273150-00",
+            "Oryz"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ADH10384",
+            "Sela"
+          ],
+          [
+            "Aqu2.1.28098_001",
+            "Amph"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ADH10388",
+            "Sela"
+          ],
+          [
+            "EFJ02399",
+            "Scom"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ADH10393",
+            "Sela"
+          ],
+          [
+            "ATCG00710.1",
+            "Arab"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ADH10393",
+            "Sela"
+          ],
+          [
+            "ZemaCp051",
+            "Zeam"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ADH10393",
+            "Sela"
+          ],
+          [
+            "cds-CAA33976.1",
+            "Oryz"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ADH10396",
+            "Sela"
+          ],
+          [
+            "Zm00001d018163_P001",
+            "Zeam"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ADH10396",
+            "Sela"
+          ],
+          [
+            "Zm00001d020645_P001",
+            "Zeam"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ADH10397",
+            "Sela"
+          ],
+          [
+            "EAL92743",
+            "Asfu"
+          ]
+        ]
+      }
+    ]
+  },
+  "root_membership": {
+    "added_records": 26317,
+    "baseline_records": 152748,
+    "candidate_records": 155688,
+    "common_records": 129371,
+    "genes_in_changed_groups": 148072,
+    "removed_records": 23377,
+    "semantic_multisets_equal": false
+  },
+  "scope": "Ignores row order and arbitrary root/family IDs; preserves gene identity, pair species ownership and multiplicity. Confidence values and tree-event annotations are not compared. No claim of biological correctness or a uniquely identified causal stage.",
+  "species_tree_same_bytes": false,
+  "status": "native_membership_and_pair_multiset_contrast_completed"
+}

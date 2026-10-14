@@ -1,0 +1,34 @@
+{
+  "admitted_summary": {
+    "bytes": 4674659,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v24_20261014/summary.json",
+    "sha256": "8e2e262840cf394ed54433f9904e127eaca1ac7413e4f4ecd50abbc34bb99e75"
+  },
+  "contrast": {
+    "bytes": 8909,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/shared_hit_three_kingdoms_native_contrast_20261014.json",
+    "sha256": "97d5e4d0b9679f315b5b7a75ffb5645c540377585266a4b3bef366bc901dd45a"
+  },
+  "dataset": "ThreeKingdoms",
+  "defaults_promoted": false,
+  "focused_tests_passed": 17,
+  "full_gene_universe": 443217,
+  "goal_completed": false,
+  "method_key": "shared_hit:shared_hit1",
+  "native_products_match_admitted_hashes": true,
+  "pair_counts_match_admitted_coverage": true,
+  "root_group_counts_match_admitted_coverage": true,
+  "scope": "Post hoc descriptive native prediction turnover, not benchmark rescoring, label evaluation, uncertainty, or unique causal-stage diagnosis. Three Kingdoms is supplementary and development-exposed. No default promotion.",
+  "status": "shared_hit_three_kingdoms_native_contrast_bound_to_admitted_control_and_variant",
+  "test_command": "env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /home/bizon/anaconda3/bin/python -m pytest -q tests/unit/test_compare_native_membership.py",
+  "test_source": {
+    "bytes": 6244,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_compare_native_membership.py",
+    "sha256": "10d212d7b239d56c94ac45c4e9da07ab9fa8bc603d3b5172fde976743dc11798"
+  },
+  "tested_main_source": {
+    "bytes": 7227,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/compare_native_membership.py",
+    "sha256": "609f10838c4a4d6a0b65b4e9b39a9f07842e48e31de421bfdfc7de4e857351f5"
+  }
+}
