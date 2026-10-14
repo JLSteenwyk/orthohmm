@@ -1,0 +1,28 @@
+{
+  "darwin_path_validated_limit": 159,
+  "darwin_path_with_task_suffix_length": 144,
+  "defaults_promoted": false,
+  "dependency_jobs": [
+    "24242",
+    "24246"
+  ],
+  "execution_plan": {
+    "bytes": 83034065,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/shared_qfo_continuation_r1_v1_20261014/execution_plan.json",
+    "sha256": "99af28cec217bbf208ec98ccbad08b517a1d123a183ec3ff5629d49dc3e4467e"
+  },
+  "frozen_test_scope": "Initial suite: 125 passed, one legacy test rejected the nested code-checkout path. Actual scoring uses the explicitly pinned main repository and passed the real path guard. Separate scoped frozen test result retained.",
+  "gates": "Both own dependency jobs terminal; recovered control independently verified; original sensitivity QfO arm explicitly unrun with no native output. No duplicate inference.",
+  "goal_completed": false,
+  "job_id": "24247",
+  "new_case_output": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/shared_qfo_continuation_r1_v1_20261014/native",
+  "only_native_output_and_metrics_paths_changed": true,
+  "original_case_output": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/shared_hit_pipeline_r1_v1_20261014/QfO/shared_hit1",
+  "runner_revision": "ab936814c018d8ce550b44c02e4202e18011b390",
+  "scheduler": "JobId=24247 JobName=ohmm-shared-qfo-continue\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=PENDING Reason=Dependency Dependency=afterany:24242(unfulfilled),afterany:24246(unfulfilled)\n   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:00 TimeLimit=10-00:00:00 TimeMin=N/A\n   SubmitTime=2026-10-14T05:31:27 EligibleTime=Unknown\n   AccrueTime=Unknown\n   StartTime=Unknown EndTime=Unknown Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-14T05:31:27 Scheduler=Main\n   Partition=gpu AllocNode:Sid=bizon-link:1043502\n   ReqNodeList=bizon ExcNodeList=(null)\n   NodeList=\n   NumNodes=1 NumCPUs=16 NumTasks=1 CPUs/Task=16 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=16,mem=128G,node=1,billing=16\n   AllocTRES=(null)\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=16 MinMemoryNode=128G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/shared_qfo_continuation_r1_v1_20261014/benchmark_tools/continue_shared_qfo.slurm\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/shared_qfo_continuation_r1_v1_20261014/slurm-24247.err\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/shared_qfo_continuation_r1_v1_20261014/slurm-24247.out\n   TresPerTask=cpu=16\n   \n\n",
+  "scientific_revision": "7e7acaed3f3392197c0c498dc60ba63abb726810",
+  "scientific_source": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/shared_hit_pipeline_r1_v1_20261014",
+  "scope": "No inference has started for this queued job and no new scores or default changes are claimed. Fresh variant and cached recovered control have different timing scopes.",
+  "scoring_id": "sh_832fbd3567e7",
+  "status": "unchanged_science_qfo_sensitivity_continuation_submitted"
+}
