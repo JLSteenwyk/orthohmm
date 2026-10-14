@@ -435,6 +435,11 @@ def _execute(
     phylogeny_pair_rule = kwargs.pop("phylogeny_pair_rule", "lca")
     phylogeny_candidates = kwargs.pop("phylogeny_candidates", "seed")
     species_tree_rooting = kwargs.pop("species_tree_rooting", "midpoint")
+    gene_tree_support_mode = kwargs.pop("gene_tree_support_mode", "legacy")
+    from .phylogeny import validate_gene_tree_support_mode
+    validate_gene_tree_support_mode(gene_tree_support_mode)
+    if gene_tree_support_mode != "legacy" and phylogeny != "reconcile":
+        raise ValueError("Gene-tree support mapping requires phylogeny reconcile")
     satellite_membership_rule = kwargs.pop(
         "satellite_membership_rule", "high_confidence_pair"
     )
@@ -531,6 +536,7 @@ def _execute(
             phylogeny_pair_rule=phylogeny_pair_rule,
             phylogeny_candidates=phylogeny_candidates,
             species_tree_rooting=species_tree_rooting,
+            gene_tree_support_mode=gene_tree_support_mode,
             satellite_membership_rule=satellite_membership_rule,
         )
 
@@ -871,6 +877,7 @@ def _execute(
                     root_duplication_rule=phylogeny_root_rule,
                     pair_orthology_rule=phylogeny_pair_rule,
                     species_tree_rooting=species_tree_rooting,
+                    gene_tree_support_mode=gene_tree_support_mode,
                     satellite_membership_rule=satellite_membership_rule,
                 ),
                 cpu=cpu,

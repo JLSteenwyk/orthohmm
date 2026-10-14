@@ -27,6 +27,7 @@ class PhylogenyConfig:
     pair_orthology_rule: str = "lca"
     species_tree_rooting: str = "midpoint"
     satellite_membership_rule: str = "high_confidence_pair"
+    gene_tree_support_mode: str = "legacy"
 
 
 @dataclass(frozen=True)
@@ -138,13 +139,97 @@ def _species_node_labels(species_tree) -> dict[object, str]:
     return labels
 
 
+def validate_gene_tree_support_mode(mode: str) -> str:
+    if not isinstance(mode, str) or mode not in {"legacy", "bipartition"}:
+        raise PhylogenyConfigurationError(f"Unsupported gene-tree support mapping mode: {mode!r}")
+    return mode
+
+
+def _numeric_branch_support(label):
+    try:
+        value = float(label)
+    except (TypeError, ValueError):
+        return None
+    if 1.0 < value <= 100.0:
+        value /= 100.0
+    return value if 0.0 <= value <= 1.0 else None
+
+
+def _gene_tree_split_keys(tree):
+    descendants = {}
+    leaves = []
+    for node in tree.postorder_node_iter():
+        if node.is_leaf():
+            gene = str(node.taxon.label) if node.taxon is not None else ""
+            if not gene:
+                raise PhylogenyConfigurationError("Gene support mapping requires named leaves")
+            leaves.append(gene)
+            descendants[node] = frozenset((gene,))
+        else:
+            descendants[node] = frozenset().union(*(descendants[c] for c in node.child_node_iter()))
+    if len(set(leaves)) != len(leaves):
+        raise PhylogenyConfigurationError("Gene support mapping requires unique leaves")
+    universe = descendants[tree.seed_node]
+    keys = {}
+    for node, side in descendants.items():
+        if node.parent_node is not None:
+            other = universe - side
+            keys[node] = min((side, other), key=lambda block: (len(block), tuple(sorted(block))))
+    return universe, keys
+
+
+def capture_gene_branch_support(tree):
+    """Capture numeric internal branch support by root-independent split."""
+    universe, keys = _gene_tree_split_keys(tree)
+    supports = {}
+    for node, key in keys.items():
+        if node.is_leaf():
+            continue
+        value = _numeric_branch_support(node.label)
+        if value is None:
+            continue
+        if key in supports and supports[key] != value:
+            raise PhylogenyConfigurationError("Conflicting numeric supports for the same gene-tree split")
+        supports[key] = value
+    return universe, supports
+
+
+def restore_gene_branch_support(tree, snapshot):
+    """Restore only measured support; numeric labels cannot follow node identity."""
+    original_universe, supports = snapshot
+    universe, keys = _gene_tree_split_keys(tree)
+    if universe != original_universe:
+        raise PhylogenyConfigurationError("Rerooting changed the gene support leaf universe")
+    observed = set()
+    for node in tree.preorder_node_iter():
+        if node.label is not None:
+            try:
+                float(node.label)
+            except (TypeError, ValueError):
+                pass
+            else:
+                node.label = None
+        if not node.is_leaf() and node in keys and keys[node] in supports:
+            if node.label is not None:
+                raise PhylogenyConfigurationError("Numeric support would overwrite a nonnumeric node identifier")
+            node.label = str(supports[keys[node]])
+            observed.add(keys[node])
+    if observed != set(supports):
+        raise PhylogenyConfigurationError("Rerooting lost an original supported internal split")
+    return tree
+
+
 def root_gene_tree_min_duplication_loss(
     gene_tree,
     species_tree,
     gene_to_species: dict[str, str],
+    *,
+    gene_tree_support_mode: str = "legacy",
 ):
     """Root an unrooted gene tree by minimizing LCA duplications then losses."""
 
+    validate_gene_tree_support_mode(gene_tree_support_mode)
+    support_snapshot = capture_gene_branch_support(gene_tree) if gene_tree_support_mode == "bipartition" else None
     species_leaves = {
         str(node.taxon.label): node for node in species_tree.leaf_node_iter()
     }
@@ -261,6 +346,8 @@ def root_gene_tree_min_duplication_loss(
         update_bipartitions=False,
     )
     gene_tree.is_rooted = True
+    if support_snapshot is not None:
+        restore_gene_branch_support(gene_tree, support_snapshot)
     return gene_tree
 
 
@@ -441,16 +528,7 @@ def reconcile_gene_tree(
     mapping_conflict_by_node = {}
     branch_support_by_node = {}
     for node in gene_tree.postorder_node_iter():
-        branch_support = None
-        if not node.is_leaf() and node.label is not None:
-            try:
-                branch_support = float(node.label)
-                if 1.0 < branch_support <= 100.0:
-                    branch_support /= 100.0
-                if not 0.0 <= branch_support <= 1.0:
-                    branch_support = None
-            except (TypeError, ValueError):
-                branch_support = None
+        branch_support = _numeric_branch_support(node.label) if not node.is_leaf() else None
         if node.is_leaf():
             gene = leaf_gene[node]
             genes = (gene,)
@@ -762,6 +840,9 @@ def validate_phylogeny_config(
 ) -> PhylogenyConfig:
     """Validate enabled phylogeny settings without affecting off-mode runs."""
 
+    validate_gene_tree_support_mode(config.gene_tree_support_mode)
+    if config.gene_tree_support_mode != "legacy" and config.mode != "reconcile":
+        raise PhylogenyConfigurationError("Gene-tree support mapping requires phylogeny reconcile")
     if config.mode == "off":
         return config
     if config.mode != "reconcile":
@@ -820,4 +901,5 @@ def validate_phylogeny_config(
         pair_orthology_rule=config.pair_orthology_rule,
         species_tree_rooting=config.species_tree_rooting,
         satellite_membership_rule=config.satellite_membership_rule,
+        gene_tree_support_mode=config.gene_tree_support_mode,
     )

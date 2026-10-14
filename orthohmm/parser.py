@@ -132,6 +132,9 @@ def create_parser() -> ArgumentParser:
         --species_tree_rooting <policy>              internally inferred tree rooting policy
                                                     (default: midpoint)
 
+        --gene_tree_support_mode <mode>              gene-tree support transport: legacy or bipartition
+                                                    (default: legacy)
+
         -------------------------------------
         | Detailed explanation of arguments | 
         -------------------------------------
@@ -472,6 +475,14 @@ def create_parser() -> ArgumentParser:
         default="midpoint",
         help=SUPPRESS,
         metavar="species_tree_rooting",
+    )
+
+    optional.add_argument(
+        "--gene_tree_support_mode",
+        choices=["legacy", "bipartition"],
+        default="legacy",
+        help=SUPPRESS,
+        metavar="gene_tree_support_mode",
     )
 
     optional.add_argument(

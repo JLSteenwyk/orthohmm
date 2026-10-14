@@ -81,7 +81,8 @@ def test_membership_constraints_accept_empty_and_valid_trace(tmp_path):
 
 
 @pytest.mark.parametrize('policy', ['high_confidence_pair', 'high_confidence_path'])
-def test_main_passes_membership_to_production_stage(tmp_path, monkeypatch, policy):
+@pytest.mark.parametrize('support_mode', ['legacy', 'bipartition'])
+def test_main_passes_membership_to_production_stage(tmp_path, monkeypatch, policy, support_mode):
     candidates = tmp_path / "candidates.txt"
     candidates.write_text("a b\n")
     constraints = [{"source_genes": ["a"], "target_genes": ["b"]}]
@@ -104,10 +105,13 @@ def test_main_passes_membership_to_production_stage(tmp_path, monkeypatch, polic
             "--json", str(tmp_path / "metrics.json"),
             "--membership-constraints", str(trace),
             "--satellite-membership-rule", policy,
+            "--gene-tree-support-mode", support_mode,
         ])
     assert captured["membership_constraints"] == constraints
     assert captured['config'].satellite_membership_rule == policy
+    assert captured['config'].gene_tree_support_mode == support_mode
     metrics = json.loads((tmp_path / "metrics.json").read_text())
+    assert metrics["metadata"]["gene_tree_support_mode"] == support_mode
     assert metrics["metadata"]["membership_constraints"]["sha256"] == (
         replay_phylogeny.file_provenance(trace)["sha256"]
     )

@@ -99,7 +99,11 @@ def parse_args(argv=None):
         choices=("midpoint", "min_variance"),
         default="midpoint",
     )
-    return parser.parse_args(argv)
+    parser.add_argument("--gene-tree-support-mode", choices=("legacy", "bipartition"), default="legacy")
+    args = parser.parse_args(argv)
+    if args.gene_tree_support_mode != "legacy" and args.phylogeny != "reconcile":
+        parser.error("--gene-tree-support-mode bipartition requires --phylogeny reconcile")
+    return args
 
 
 def main(argv=None) -> int:
@@ -163,6 +167,8 @@ def main(argv=None) -> int:
         ])
         if args.species_tree is not None:
             command.extend(["--species_tree", str(args.species_tree.resolve())])
+        if args.gene_tree_support_mode != "legacy":
+            command.extend(["--gene_tree_support_mode", args.gene_tree_support_mode])
 
     log_path = output_directory / "benchmark.log"
     environment = os.environ.copy()

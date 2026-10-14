@@ -176,6 +176,7 @@ class TestArgsProcessing(object):
             "phylogeny_candidates",
             "species_tree_rooting",
             "satellite_membership_rule",
+            "gene_tree_support_mode",
         ]
         assert sorted(res.keys()) == sorted(expected_keys)
 
@@ -188,6 +189,7 @@ class TestArgsProcessing(object):
         assert res["phylogeny_pair_rule"] == "lca"
         assert res["phylogeny_candidates"] == "seed"
         assert res["species_tree_rooting"] == "midpoint"
+        assert res["gene_tree_support_mode"] == "legacy"
 
     @pytest.mark.parametrize("profile", ["satellite_v1", "satellite_v2"])
     def test_satellite_phylogeny_candidates_require_high_sensitivity(

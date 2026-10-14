@@ -21,12 +21,15 @@ from .phylogeny import (
     PhylogenyConfigurationError,
     ReconciliationResult,
     canonical_species_name,
+    capture_gene_branch_support,
     parse_gene_tree,
     parse_species_tree,
     reconcile_gene_tree,
+    restore_gene_branch_support,
     root_gene_tree_min_duplication_loss,
     root_tree_min_variance,
     validate_phylogeny_config,
+    validate_gene_tree_support_mode,
     _load_dendropy,
 )
 
@@ -473,7 +476,9 @@ def _root_external_gene_tree(
     species_tree=None,
     gene_species: dict[str, str] | None = None,
     unrooted_rooting: str = "midpoint",
+    gene_tree_support_mode: str = "legacy",
 ):
+    validate_gene_tree_support_mode(gene_tree_support_mode)
     explicitly_rooted = newick.lstrip().upper().startswith("[&R]")
     if explicitly_rooted:
         tree = parse_gene_tree(newick)
@@ -510,12 +515,17 @@ def _root_external_gene_tree(
                 tree,
                 species_tree,
                 gene_species,
+                gene_tree_support_mode=gene_tree_support_mode,
             )
-        elif unrooted_rooting == "min_variance":
-            tree = root_tree_min_variance(tree)
         else:
-            tree.reroot_at_midpoint(update_bipartitions=False)
-            tree.is_rooted = True
+            snapshot = capture_gene_branch_support(tree) if gene_tree_support_mode == "bipartition" else None
+            if unrooted_rooting == "min_variance":
+                tree = root_tree_min_variance(tree)
+            else:
+                tree.reroot_at_midpoint(update_bipartitions=False)
+                tree.is_rooted = True
+            if snapshot is not None:
+                restore_gene_branch_support(tree, snapshot)
     return tree
 
 
@@ -674,6 +684,7 @@ def _reconcile_family(
         token_to_gene,
         species_tree=species_tree,
         gene_species={gene: gene_species[gene] for gene in genes},
+        gene_tree_support_mode=config.gene_tree_support_mode,
     )
     rooted_newick = tree.as_string(
         schema="newick",
@@ -702,6 +713,7 @@ def _reconcile_family(
         "rooted_tree_sha256": _sha256_file(rooted_tree_path),
         "annotated_tree_sha256": _sha256_file(annotated_tree_path),
         "genes": list(genes),
+        "gene_tree_support_mode": config.gene_tree_support_mode,
     }
     _atomic_write(
         checkpoint_path,
@@ -1193,6 +1205,7 @@ def run_phylogeny_stage(
         "cpu_budget": int(cpu),
         "parallelism": "deterministic_family_order_external_tools_one_thread_each",
         "gene_tree_rooting": "explicit_root_or_min_duplication_loss",
+        "gene_tree_support_mode": config.gene_tree_support_mode,
         "root_duplication_rule": config.root_duplication_rule,
         "pair_orthology_rule": config.pair_orthology_rule,
         "species_tree_rooting": config.species_tree_rooting,

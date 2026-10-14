@@ -181,6 +181,7 @@ def process_args(args) -> dict:
             getattr(args, "satellite_membership_rule", "high_confidence_pair")
             or "high_confidence_pair"
         ),
+        gene_tree_support_mode=getattr(args, "gene_tree_support_mode", "legacy") or "legacy",
     )
     try:
         if refinement_profile.lower() in PHYLOGENY_CANDIDATE_REFINEMENT_PROFILES and (
@@ -255,6 +256,7 @@ def process_args(args) -> dict:
         phylogeny_candidates=phylogeny_candidates,
         species_tree_rooting=phylogeny_config.species_tree_rooting,
         satellite_membership_rule=phylogeny_config.satellite_membership_rule,
+        gene_tree_support_mode=phylogeny_config.gene_tree_support_mode,
         **({"search_max_candidates_per_query": search_cap_override}
            if search_cap_override is not None else {}),
     )

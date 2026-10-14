@@ -60,6 +60,7 @@ def build_parser() -> argparse.ArgumentParser:
         choices=("midpoint", "min_variance"),
         default="midpoint",
     )
+    parser.add_argument("--gene-tree-support-mode", choices=("legacy", "bipartition"), default="legacy")
     parser.add_argument("--official-benchmark", type=Path)
     parser.add_argument(
         "--satellite-membership-rule",
@@ -218,6 +219,7 @@ def main(argv=None) -> int:
         root_duplication_rule=args.root_rule,
         pair_orthology_rule=args.pair_rule,
         species_tree_rooting=args.species_tree_rooting,
+        gene_tree_support_mode=args.gene_tree_support_mode,
         satellite_membership_rule=args.satellite_membership_rule,
     )
     result_json = args.json.resolve()
@@ -229,6 +231,7 @@ def main(argv=None) -> int:
             root_duplication_rule=args.root_rule,
             pair_orthology_rule=args.pair_rule,
             species_tree_rooting=args.species_tree_rooting,
+            gene_tree_support_mode=args.gene_tree_support_mode,
             membership_constraints=membership_record,
             satellite_membership_rule=args.satellite_membership_rule,
         )
@@ -269,6 +272,7 @@ def main(argv=None) -> int:
             "root_duplication_rule": args.root_rule,
             "pair_orthology_rule": args.pair_rule,
             "species_tree_rooting": args.species_tree_rooting,
+            "gene_tree_support_mode": args.gene_tree_support_mode,
             "cpu": args.cpu,
             "satellite_membership_policy": (
                 "high_confidence_pair" if membership_constraints is not None
