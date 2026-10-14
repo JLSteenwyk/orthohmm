@@ -1,0 +1,44 @@
+{
+  "accuracy_evaluated": false,
+  "contrast": {
+    "added_records": 0,
+    "baseline_records": 308697,
+    "candidate_records": 308697,
+    "checked": [
+      {
+        "bytes": 23875927,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/QfO/arrival/graph/orthogroups_multipass.txt",
+        "sha256": "d7fe1219361cb2fb4242b0a71b2ee9269330f348d42b7393185112a76bc3b01f"
+      },
+      {
+        "bytes": 23875927,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_initial_graph_probe_r1_v1_20261014/arrival/clustered/orthohmm_working_res/orthohmm_edges_clustered.txt",
+        "sha256": "d7fe1219361cb2fb4242b0a71b2ee9269330f348d42b7393185112a76bc3b01f"
+      },
+      {
+        "bytes": 10140,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_historical_profile_ablation.py",
+        "sha256": "ffdafda2b55c9580eccc7497881f0e160450af6c9029e3540009bebba2081b31"
+      },
+      {
+        "bytes": 7227,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/compare_native_membership.py",
+        "sha256": "609f10838c4a4d6a0b65b4e9b39a9f07842e48e31de421bfdfc7de4e857351f5"
+      }
+    ],
+    "common_records": 308697,
+    "genes": 984137,
+    "genes_in_changed_groups": 0,
+    "removed_records": 0,
+    "semantic_multisets_equal": true
+  },
+  "defaults_promoted": false,
+  "execution_plan": {
+    "bytes": 363116,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_initial_graph_probe_r1_v1_20261014/execution_plan.json",
+    "sha256": "9969011748ef4ecb9f8a7654ccb4c1d9fd837c3a873b0939ef55afd81884a77f"
+  },
+  "goal_completed": false,
+  "scope": "Completed arrival reconstruction only; canonical reconstruction and final tie diagnosis remain pending.",
+  "status": "generated_arrival_multipass_membership_exactly_reproduces_original_while_paired_probe_live"
+}
