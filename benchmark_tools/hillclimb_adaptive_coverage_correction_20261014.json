@@ -1,0 +1,7 @@
+{
+  "finding": "The adaptive candidate probe loops over range(0,N,max(1,N//min(N,500))) but divides successful probes by min(N,500). For N=999 it probes 999 queries, so the reported fraction can reach 1.998 and cross the wrong cap thresholds.",
+  "correction": "Preserve the exact existing deterministic query positions and Phase-A probe. Divide by the actual number of sampled query indices. Handle an empty query collection without division by zero or building an unnecessary target index.",
+  "non_changes": "Do not alter thresholds 0.8/0.5/0.2, cap multipliers, alphabet, scoring, candidate ranking, or fixed-cap behavior. All active experiments use fixed positive caps and retain their frozen sources.",
+  "tests": "Boundary population sizes below/at/above 500, nonmultiples around 1000, empty/all/partial/no hits, exact threshold boundaries, unchanged sample positions/call counts, and fixed-cap bypass of adaptive probing.",
+  "scientific_scope": "Numerical correctness and general input-size robustness in adaptive mode. This is not evidence of improved benchmark accuracy or a reason to change published defaults. Retain original adaptive results as historical; any future adaptive benchmark requires its own frozen source and protocol."
+}
