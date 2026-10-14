@@ -83,6 +83,9 @@ def _adaptive_max_candidates(query_species, target_species, kmer_k, min_total_hi
     what fraction of queries share enough k-mers with the target database.
     Close species → high coverage → low mc. Distant → low coverage → high mc.
     """
+    N = query_species.num_sequences
+    if N == 0:
+        return base_mc * 10, 0.0
     from .prefilter import REDUCED_ALPHA, _remap_flat
     from numba import int32
 
@@ -107,12 +110,12 @@ def _adaptive_max_candidates(query_species, target_species, kmer_k, min_total_hi
     # Quick probe: count how many queries have >= min_total_hits k-mer matches
     # Use the Numba Phase A on a sample of queries for speed
     from .prefilter import _score_query_two_stage
-    N = query_species.num_sequences
     sample_size = min(N, 500)
     step = max(1, N // sample_size)
+    sample_indices = range(0, N, step)
 
     queries_with_cands = 0
-    for qi in range(0, N, step):
+    for qi in sample_indices:
         q_off = int(query_species.offsets[qi])
         q_len = int(query_species.lengths[qi])
         q_seq = query_flat[q_off:q_off + q_len]
@@ -125,7 +128,7 @@ def _adaptive_max_candidates(query_species, target_species, kmer_k, min_total_hi
         if len(cids) > 0:
             queries_with_cands += 1
 
-    coverage = queries_with_cands / sample_size
+    coverage = queries_with_cands / len(sample_indices)
 
     if coverage > 0.8:
         mc = base_mc            # close species (e.g., human-chimp)
