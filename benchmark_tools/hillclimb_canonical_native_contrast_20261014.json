@@ -5,6 +5,7 @@
   "candidate": "Completed canonical-order downstream native exports from job 24240. QfO native inference is complete despite the separately retained scoring-path failure.",
   "methods": "Compare full root-membership and unordered gene/species pair multisets, retaining multiplicity; verify expected gene universes and reconciliation counts; hash inputs before and after reading.",
   "positive_control": "Reproduce the independently retained OrthoBench two-root-group and six-pair replacement contrast before evaluating QfO.",
+  "stage_localization_amendment": "After observing the completed native pair contrast and exploratory intermediate cluster counts, independently compare all four retained graph partitions against the complete native gene universe. Identify the earliest retained stage with membership differences, without regenerating edges, HMM hits, profiles or trees.",
   "resources": "Single Python process; expected under 4 GiB RAM; no scientific inference or scoring rerun. Shared-host timing is not a benchmark result.",
   "selection": "Diagnostic only. Do not promote defaults or infer accuracy changes from pair counts, file hashes, or these contrasts.",
   "limitations": "The complete downstream order intervention spans clustering/profile expansion and phylogenetic handling. These output contrasts cannot uniquely identify a causal stage, and do not compare confidence/event annotations."

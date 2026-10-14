@@ -117,3 +117,26 @@ def test_unexpected_pair_columns_rejected(tmp_path):
     (a / "orthohmm_pairwise_orthologs.tsv").write_text("wrong\theader\n")
     with pytest.raises(ValueError, match="pair header"):
         compare(a, b)
+
+
+def test_partition_contrast_ignores_group_and_member_row_order(tmp_path):
+    a, b = tmp_path / "a", tmp_path / "b"
+    a.write_text("a b\nc\n")
+    b.write_text("c\nb a\n")
+    result = diagnostic.partition_contrast(a, b, {"a", "b", "c"})
+    assert result["semantic_multisets_equal"]
+    assert result["genes_in_changed_groups"] == 0
+    b.write_text("a c\nb\n")
+    result = diagnostic.partition_contrast(a, b, {"a", "b", "c"})
+    assert not result["semantic_multisets_equal"]
+    assert result["added_records"] == result["removed_records"] == 2
+    assert result["genes_in_changed_groups"] == 3
+
+
+@pytest.mark.parametrize("text", ["a b\n", "a b\nb c\n", "a b\nx\n", "a a b\nc\n"])
+def test_partition_contrast_checks_full_unique_gene_universe(tmp_path, text):
+    a, b = tmp_path / "a", tmp_path / "b"
+    a.write_text("a b\nc\n")
+    b.write_text(text)
+    with pytest.raises(ValueError):
+        diagnostic.partition_contrast(a, b, {"a", "b", "c"})

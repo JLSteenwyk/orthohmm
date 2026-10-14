@@ -11,6 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 from benchmark_tools.run_membership_hillclimb import write_json
 from benchmark_tools.score_ygob_groups import membership, read_predictions
+from benchmark_tools.audit_historical_profile_ablation import read_partition
 
 PAIR_COLUMNS = ["gene_a", "species_a", "gene_b", "species_b"]
 MASK = (1 << 32) - 1
@@ -46,6 +47,18 @@ def contrast(left, right):
     return {"baseline_records": sum(left.values()), "candidate_records": sum(right.values()),
             "common_records": common, "removed_records": sum(removed.values()),
             "added_records": sum(added.values()), "semantic_multisets_equal": not removed and not added}, removed, added
+
+
+def partition_contrast(baseline, candidate, universe):
+    pins = [record(baseline), record(candidate),
+            record(Path(__file__).with_name("audit_historical_profile_ablation.py")), record(Path(__file__))]
+    partitions = [Counter(tuple(sorted(group)) for group in read_partition(path, universe))
+                  for path in (baseline, candidate)]
+    result, removed, added = contrast(*partitions)
+    result["genes_in_changed_groups"] = len({gene for group in removed.keys() | added.keys() for gene in group})
+    for pin in pins:
+        check(pin)
+    return {**result, "genes": len(universe), "checked": pins}
 
 
 def compare(baseline, candidate, expected_genes=None):
