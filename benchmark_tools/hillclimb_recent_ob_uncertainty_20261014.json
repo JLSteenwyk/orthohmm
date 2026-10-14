@@ -1,0 +1,19 @@
+{
+  "purpose": "Assess family-resampling uncertainty in the two recently admitted OrthoBench declines without changing inference or selecting new parameters.",
+  "timing": "Declared after examining candidate point estimates, before generating this readout's bootstrap draws. Post hoc development diagnostic, not prospective registration or independent confirmation.",
+  "input": "Independently admitted OrthoBench family sufficient statistics in hillclimb_comparison_readback_v22_20261014/summary.json, bound to its native/scorer records.",
+  "candidates": ["shared_hit:shared_hit1", "singleton_tie:defer_ambiguous"],
+  "control": "Use their matched min4/first_hit canonical control only after all 70 RefOG records, including family names and sizes, are proven identical between the two retained controls. Equal aggregate F1 alone is insufficient.",
+  "algorithm": "Reuse benchmark_tools.bootstrap_orthobench.paired_bootstrap. Draw 70 RefOGs with replacement, sharing family multiplicities across all methods. Recompute weighted TP/FP/FN totals and F1/precision/recall in every draw; do not average family F1 or assume independent gene pairs.",
+  "replicates": 100000,
+  "seed": 20261014,
+  "alpha": 0.05,
+  "multiplicity_endpoints": 6,
+  "outputs": "JSON with point estimates, nominal paired percentile intervals and six-endpoint Bonferroni-tail intervals; TSV with signed candidate-minus-control changes in percentage points; native/scorer/source/runtime provenance.",
+  "verification": "Require one verified OrthoBench cell per candidate, unchanged table F1 and full gene universe, identical matched-control family records, reproduction of all retained point estimates from sufficient statistics, input hashes before/after, and deterministic replay of the same seed.",
+  "limits": "Intervals assume exchangeable reference families and do not correct for shared evolutionary histories, fused predictions, prior method selection, run-to-run variation, species sampling, or dataset shift. Adjustment covers only these six readout endpoints, not all historical searches. An interval containing zero does not establish equivalence; the 0.005 decline heuristic remains a development screen.",
+  "resources": {"cpu": 1, "memory_GiB": 1, "host": "bizon"},
+  "inference_changes": false,
+  "unopened_confirmation_labels_accessed": false,
+  "default_promotion": false
+}
