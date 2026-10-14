@@ -1,0 +1,16 @@
+{
+  "hypothesis": "The completed canonical QfO native arm can be scored unchanged using a shorter Darwin work namespace.",
+  "eligible_failure": "Darwin work path exceeds validated length limit",
+  "dataset": "QfO",
+  "label": "canonical",
+  "original_job": "24240",
+  "original_scientific_revision": "402d32323f7166c6135f4c81b849b0abfc97e55c",
+  "intervention": "Scoring namespace only. No HMM search, graph construction, profile expansion, or tree inference is repeated.",
+  "controls": "Revalidate the original execution plan, source/library/runtime pins, command, native outputs, and complete corrected gene universe before and after scoring.",
+  "endpoints": ["VGNC F", "SwissTrees F", "TreeFam-A F", "EC", "GO", "FAS"],
+  "resources": {"cpu": 8, "memory_GiB": 64, "time_hours": 24, "host": "bizon"},
+  "selection": "Accept only six finite endpoints with independent native-content scoring readback. No default promotion or new biological hypothesis.",
+  "history": "Preserve the original failed report and archive the selected failed row. Other original arms may remain live; their changing report is not an immutable input.",
+  "downstream": "Leave job 24242 and its frozen runner unchanged. If it skips QfO because the original control is failed, retain that skip and prepare a separate unchanged-science QfO-only sensitivity continuation after this recovery is verified.",
+  "limitations": "FAS sampling remains unseeded. Cached downstream inference and scoring-only recovery are not fresh full-pipeline timings. Shared-host contention is nonblocking."
+}
