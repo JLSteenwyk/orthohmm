@@ -1,0 +1,9 @@
+{
+  "defaults_promoted": false,
+  "error": "Local admission expected producer job_id 24190_2; the frozen producer records raw SLURM_JOB_ID 24190, which scheduler accounting maps to displayed task 24190_2. No native inference or score failure occurred.",
+  "error_type": "AssertionError",
+  "goal_completed": false,
+  "next_action": "Bind producer raw job ID 24190 and dataset ThreeKingdoms to authoritative scheduler task 24190_2; revalidate in a fresh admission namespace.",
+  "original_inference_and_scores_unchanged": true,
+  "status": "failed_local_admission_array_identifier_assumption"
+}
