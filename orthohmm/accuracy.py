@@ -96,6 +96,20 @@ def resolve_search_candidate_cap(profile: AccuracyProfile, override=None) -> int
     return value
 
 
+def resolve_search_min_total_hits(value=4) -> int:
+    """Validate the opt-in initial-search shared k-mer hit threshold."""
+    message = "search minimum total hits must be a positive int32 integer"
+    if isinstance(value, (bool, np.bool_)):
+        raise ValueError(message)
+    try:
+        result = operator.index(value)
+    except TypeError as exc:
+        raise ValueError(message) from exc
+    if not 1 <= result <= np.iinfo(np.int32).max:
+        raise ValueError(message)
+    return result
+
+
 def _sha256(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as handle:

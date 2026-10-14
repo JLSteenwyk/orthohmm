@@ -16,6 +16,7 @@ from .accuracy import (
     read_index_clusters,
     resolve_accuracy_profile,
     resolve_search_candidate_cap,
+    resolve_search_min_total_hits,
     validate_search_result_order,
     write_accuracy_checkpoint,
 )
@@ -497,6 +498,12 @@ def _execute(
     search_candidate_cap = resolve_search_candidate_cap(
         accuracy_config, search_cap_override
     )
+    search_min_total_hits = resolve_search_min_total_hits(kwargs.pop("search_min_total_hits", 4))
+    if search_min_total_hits != 4 and (
+        accuracy_config.name != "high_sensitivity" or search_mode != "builtin" or start is not None
+        or search_candidate_cap <= 0
+    ):
+        raise ValueError("Nondefault shared-hit thresholds require fresh built-in high_sensitivity and a fixed positive cap")
     if search_cap_override is not None and (
         search_mode != "builtin" or start is not None
     ):
@@ -520,6 +527,7 @@ def _execute(
         accuracy_profile=accuracy_config.name,
         search_kmer_k=accuracy_config.kmer_k,
         search_max_candidates_per_query=search_candidate_cap,
+        search_min_total_hits=search_min_total_hits,
         search_result_order=search_result_order,
         leiden_seed=accuracy_config.leiden_seed,
         cpu_budget=cpu,
@@ -629,6 +637,7 @@ def _execute(
                 max_candidates_per_query=search_candidate_cap,
                 evalue_threshold=evalue_threshold,
                 threads_per_worker=threads_per_worker,
+                **({"min_total_hits": search_min_total_hits} if search_min_total_hits != 4 else {}),
             )
         metrics.add_counts(
             search_candidates=sum(

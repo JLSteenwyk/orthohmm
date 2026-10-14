@@ -70,6 +70,7 @@ def parse_args(argv=None):
     )
     parser.add_argument("--full-output", action="store_true")
     parser.add_argument("--search-max-candidates-per-query", type=int, default=None)
+    parser.add_argument("--search-min-total-hits", type=int, default=4)
     parser.add_argument("--phylogeny", choices=("off", "reconcile"), default="off")
     parser.add_argument(
         "--species-tree-mode", choices=("supplied", "infer"), default="supplied"
@@ -160,6 +161,8 @@ def main(argv=None) -> int:
             "--search_max_candidates_per_query",
             str(args.search_max_candidates_per_query),
         ])
+    if args.search_min_total_hits != 4:
+        command.extend(["--search_min_total_hits", str(args.search_min_total_hits)])
     if args.search_result_order!="arrival":
         command.extend(["--search_result_order",args.search_result_order])
     if not args.full_output:

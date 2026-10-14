@@ -150,6 +150,9 @@ def validate_native(case, cpu):
     if metrics.get("status") != "complete" or metrics.get("harness", {}).get("exit_code") != 0:
         raise ValueError("Incomplete fresh production run")
     metadata = metrics["metadata"]
+    actual_min_hits = metadata.get("search_min_total_hits", 4)
+    if type(actual_min_hits) is not int or actual_min_hits != case.get("search_min_total_hits", 4):
+        raise ValueError("Actual shared-hit threshold differs from trial")
     expected = {"accuracy_profile": "high_sensitivity", "search_mode": "builtin", "clustering": "leiden",
         "cpm_resolution": .1, "substitution_matrix": "BLOSUM62", "evalue_threshold": 1e-4,
         "leiden_seed": 4, "cpu_budget": cpu, "search_kmer_k": 4,

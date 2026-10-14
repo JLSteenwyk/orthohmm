@@ -14,7 +14,7 @@ from .helpers import (
     SubstitutionMatrix,
 )
 from .files import fetch_fasta_files
-from .accuracy import resolve_accuracy_profile, resolve_search_candidate_cap, validate_search_result_order
+from .accuracy import resolve_accuracy_profile, resolve_search_candidate_cap, validate_search_result_order, resolve_search_min_total_hits
 from .refinement import PHYLOGENY_CANDIDATE_REFINEMENT_PROFILES
 from .phylogeny import (
     PhylogenyConfig,
@@ -144,6 +144,16 @@ def process_args(args) -> dict:
         except ValueError as exc:
             logger.warning(str(exc))
             sys.exit(1)
+    try:
+        search_min_total_hits = resolve_search_min_total_hits(getattr(args, "search_min_total_hits", 4))
+        if search_min_total_hits != 4 and (
+            accuracy_profile != "high_sensitivity" or search_mode != "builtin" or args.start
+            or resolve_search_candidate_cap(resolve_accuracy_profile(accuracy_profile), search_cap_override) <= 0
+        ):
+            raise ValueError("Nondefault shared-hit thresholds require fresh built-in high_sensitivity and a fixed positive cap")
+    except ValueError as exc:
+        logger.warning(str(exc))
+        sys.exit(1)
     if accuracy_profile == "high_sensitivity" and search_mode != "builtin":
         logger.warning("--accuracy_profile high_sensitivity requires --search_mode builtin.")
         sys.exit()
@@ -267,6 +277,7 @@ def process_args(args) -> dict:
         satellite_membership_rule=phylogeny_config.satellite_membership_rule,
         gene_tree_support_mode=phylogeny_config.gene_tree_support_mode,
         **({"search_result_order":search_result_order} if search_result_order!="arrival" else {}),
+        **({"search_min_total_hits": search_min_total_hits} if search_min_total_hits != 4 else {}),
         **({"search_max_candidates_per_query": search_cap_override}
            if search_cap_override is not None else {}),
     )

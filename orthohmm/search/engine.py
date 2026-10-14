@@ -424,9 +424,13 @@ def _filter_significant_indexed(
 
 def _search_pair_worker(args):
     """Worker function for one directed species comparison."""
+    from ..accuracy import resolve_search_min_total_hits
+    if len(args) not in (9, 10):
+        raise ValueError("Search worker requires nine default or ten opt-in arguments")
+    min_total_hits = resolve_search_min_total_hits(args[9] if len(args) == 10 else 4)
     (query_file, target_file, fasta_directory,
      matrix_name, band_width, kmer_k, max_candidates_per_query,
-     evalue_threshold, n_threads) = args
+     evalue_threshold, n_threads) = args[:9]
 
     os.environ["OMP_NUM_THREADS"] = str(n_threads)
     try:
@@ -449,6 +453,7 @@ def _search_pair_worker(args):
         kmer_k=kmer_k,
         max_candidates_per_query=max_candidates_per_query,
         n_threads=n_threads,
+        **({"min_total_hits": min_total_hits} if min_total_hits != 4 else {}),
     )
     species_ids = query_sp.ids if query_file == target_file else None
     return _filter_significant_indexed(r, evalue_threshold), species_ids
@@ -480,6 +485,7 @@ def execute_builtin_search(
     evalue_threshold: float = 1e-4,
     threads_per_worker: int = 8,
     max_candidates_per_query: int = 0,
+    min_total_hits: int = 4,
 ) -> IndexedSearchResults:
     """Replace execute_phmmer_search with built-in search engine.
 
@@ -498,6 +504,8 @@ def execute_builtin_search(
     -------
     dict mapping (query_file, target_file) -> SpeciesPairResults
     """
+    from ..accuracy import resolve_search_min_total_hits
+    min_total_hits = resolve_search_min_total_hits(min_total_hits)
     matrix_name = substitution_matrix.value
     file_pairs = list(itertools.product(files, repeat=2))
     total_tasks = len(file_pairs)
@@ -513,6 +521,7 @@ def execute_builtin_search(
     worker_args = [
         (query, target, fasta_directory, matrix_name, band_width, kmer_k,
          max_candidates_per_query, evalue_threshold, worker_threads)
+        + ((min_total_hits,) if min_total_hits != 4 else ())
         for query, target in file_pairs
     ]
 
