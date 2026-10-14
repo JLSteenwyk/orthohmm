@@ -1,0 +1,12 @@
+{
+  "schema": "admitted_component_functional_tradeoff_diagnostic_v1",
+  "status": "prespecified_before_pair_level_diagnostic",
+  "motivation": "The independently admitted component candidate improves VGNC and TreeFam F1, but GO similarity decreases by more than the existing 0.005 development screen. GO-assessed relations rise from 84211 to 105070. Diagnose pair-population and native confidence changes before another accuracy experiment.",
+  "inputs": "Admitted matched control and component own-tree products, their retained GO/EC raw six-decimal pair scores, and native confidence TSVs. Bind raw file counts and means to existing admissions and preserve all prior failures.",
+  "operation": "Use existing validated scored-pair parsers and descriptive overlap/confidence helpers to decompose GO and EC into shared, added and removed eligible pairs and native high/medium evidence classes. Require shared serialized annotation scores to be unchanged and totals to reproduce admitted metrics within their existing serialization tolerance.",
+  "resources": {"cpus": 1, "memory_gib": 16, "wall_limit_minutes": 30, "host": "local shared Threadripper"},
+  "selection": "Use localization to choose subsequent label-independent HMM/candidate/tree hypotheses. Do not filter predictions by benchmark annotations, revise official denominators, impute missing values or promote defaults based on this diagnostic.",
+  "limitations": ["Functional similarity is conditional on eligible annotated pairs, not orthology truth.", "Decomposition is arithmetic, not causal attribution or an independent-unit confidence interval.", "Native evidence labels are not calibrated probabilities or bootstrap support.", "All examined datasets remain development-exposed; no new scoring, native inference or uncertainty estimate."],
+  "defaults_promoted": false,
+  "goal_completed": false
+}
