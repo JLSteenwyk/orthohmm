@@ -6,6 +6,7 @@ import csv
 import hashlib
 import json
 from pathlib import Path
+import subprocess
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -154,15 +155,38 @@ def canonical_recovery_cell(repo, plan, report, root):
     pins.extend([plan["parent_snapshot"], plan["protocol"], *score_pins, *report["checked"]])
     for pin in pins:
         check(pin)
+    original_plan = parent["execution_plan"]
+    compact = [original_plan, plan["parent_snapshot"], plan["protocol"],
+               report["execution_plan"], record(root / "results.json"),
+               *native["checked"], *score_pins]
     return {"dataset": "QfO", "status": "independent_content_readback_verified",
             "scores": endpoint_vector("QfO", scores), "details": details,
-            "products": native["products"], "checked": pins,
+            "products": native["products"], "checked": list({p["path"]: p for p in compact}.values()),
+            "verification_record_count": len({p["path"] for p in pins}),
+            "verification_scope": "All original-plan and producer verification records rehashed during admission; complete inventories retained in the pinned execution plan and immutable producer report, not duplicated in the score table.",
             "coverage": {k: native[k] for k in ("genes", "species", "groups", "pairs")},
             "source_revision": REVISION, "original_failed_attempt": plan["parent_snapshot"],
             "resources": {"original_native_execution": plan["original_failed_row"]["native_execution"],
                           "scoring_recovery_wall_s": report["scoring_recovery_wall_s"]},
             "execution_kind": "scoring_only_recovery_of_completed_canonical_downstream",
             "scope": "Original failed scoring attempt retained. Cached downstream inference plus separate scoring recovery is not fresh full-pipeline timing; FAS is unseeded."}
+
+
+def recovery_capture(path, captures):
+    identity = record(path)
+    report = json.loads(path.read_text())
+    check(identity)
+    job = str(report.get("job_id", ""))
+    if report.get("status") == "canonical_qfo_scoring_recovered_independently_verified" and job.isdigit():
+        accounting = subprocess.check_output(["sacct", "-j", job, "-X", "-n", "-P",
+                                             "-o", "JobID,State%30,ExitCode"], text=True)
+        if accounting.strip() != job + "|COMPLETED|0:0":
+            raise ValueError("Compact recovery reference requires terminal successful producer")
+        reference = {"producer": identity, "scheduler_accounting": accounting,
+                     "scope": "External immutable terminal producer; full payload and verification inventory remain at this hash-pinned source path."}
+        write_json(captures / "canonical_recovery_reference.json", reference)
+        return report, {"snapshot": identity, "reference": record(captures / "canonical_recovery_reference.json")}
+    return snapshot(path, captures, "canonical_recovery.json")
 
 
 def build(repo, parent_path, output, continuation_root=None, shared_root=None, canonical_recovery_root=None):
@@ -183,7 +207,8 @@ def build(repo, parent_path, output, continuation_root=None, shared_root=None, c
         if not path.exists():
             observations.append({"kind": kind, "path": str(path), "status": "report_missing_execution_state_not_inferred"})
             continue
-        report, capture = snapshot(path, captures, kind + ".json")
+        report, capture = (recovery_capture(path, captures) if kind == "canonical_recovery"
+                           else snapshot(path, captures, kind + ".json"))
         plan, pins = check_plan(repo, root, report)
         observations.append({"kind": kind, "producer_status": report["status"], "snapshot": capture["snapshot"]})
         if kind == "canonical_recovery":

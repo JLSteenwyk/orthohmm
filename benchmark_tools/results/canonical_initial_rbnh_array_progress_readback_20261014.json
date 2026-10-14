@@ -1,0 +1,50 @@
+{
+  "accuracy_evaluated": false,
+  "arrays": {
+    "arrival": {
+      "sources": {
+        "bytes": 98222680,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_initial_graph_probe_r1_v1_20261014/arrival/rbnh/sources.npy",
+        "sha256": "a0e1f3dcce605b83c631e3b1967555f72669bef0a23425da55e1bafea915d7ee"
+      },
+      "targets": {
+        "bytes": 98222680,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_initial_graph_probe_r1_v1_20261014/arrival/rbnh/targets.npy",
+        "sha256": "3a05f0ed8a28124749c04745eeb57de145f85865b203c7ee41be04ada4a9bf58"
+      },
+      "weights": {
+        "bytes": 196445232,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_initial_graph_probe_r1_v1_20261014/arrival/rbnh/weights.npy",
+        "sha256": "5e9ac72c3bc1ef382ec023adfad552eed3cc355317e0192e93d4193a03cf93de"
+      }
+    },
+    "canonical": {
+      "sources": {
+        "bytes": 98222680,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_initial_graph_probe_r1_v1_20261014/canonical/rbnh/sources.npy",
+        "sha256": "a0e1f3dcce605b83c631e3b1967555f72669bef0a23425da55e1bafea915d7ee"
+      },
+      "targets": {
+        "bytes": 98222680,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_initial_graph_probe_r1_v1_20261014/canonical/rbnh/targets.npy",
+        "sha256": "3a05f0ed8a28124749c04745eeb57de145f85865b203c7ee41be04ada4a9bf58"
+      },
+      "weights": {
+        "bytes": 196445232,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_initial_graph_probe_r1_v1_20261014/canonical/rbnh/weights.npy",
+        "sha256": "5e9ac72c3bc1ef382ec023adfad552eed3cc355317e0192e93d4193a03cf93de"
+      }
+    }
+  },
+  "defaults_promoted": false,
+  "edges": 24555638,
+  "exact_sources_targets_weights_file_bytes_equal": true,
+  "execution_plan": {
+    "bytes": 363116,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_initial_graph_probe_r1_v1_20261014/execution_plan.json",
+    "sha256": "9969011748ef4ecb9f8a7654ccb4c1d9fd837c3a873b0939ef55afd81884a77f"
+  },
+  "goal_completed": false,
+  "scope": "Independent progress observation of completed RBNH array exports only. Does not establish final diagnostic success, initial clustering identity, singleton cause or benchmark improvement.",
+  "status": "written_rbnh_arrays_independently_equal_initial_partition_probe_still_live"
+}

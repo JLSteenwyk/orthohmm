@@ -138,6 +138,27 @@ def test_recovery_cannot_change_archived_failure(tmp_path, monkeypatch):
         reporter.build(tmp_path, parent, tmp_path / "out", canonical_recovery_root=root)
 
 
+def test_completed_recovery_references_terminal_payload_without_copying_inventory(tmp_path, monkeypatch):
+    path = tmp_path / "producer.json"
+    write_json(path, {"status": "canonical_qfo_scoring_recovered_independently_verified", "job_id": "24246",
+                      "checked": [{"path": "many-records", "bytes": 1, "sha256": "example"}]})
+    monkeypatch.setattr(reporter.subprocess, "check_output", lambda *args, **kwargs: "24246|COMPLETED|0:0\n")
+    report, capture = reporter.recovery_capture(path, tmp_path)
+    assert capture["snapshot"] == record(path)
+    assert report["checked"][0]["path"] == "many-records"
+    assert not (tmp_path / "canonical_recovery.json").exists()
+    assert json.loads((tmp_path / "canonical_recovery_reference.json").read_text())["producer"] == record(path)
+
+
+@pytest.mark.parametrize("accounting", ["24246|RUNNING|0:0\n", "24246|FAILED|1:0\n"])
+def test_live_or_failed_producer_cannot_be_referenced_as_immutable(tmp_path, monkeypatch, accounting):
+    path = tmp_path / "producer.json"
+    write_json(path, {"status": "canonical_qfo_scoring_recovered_independently_verified", "job_id": "24246"})
+    monkeypatch.setattr(reporter.subprocess, "check_output", lambda *args, **kwargs: accounting)
+    with pytest.raises(ValueError, match="terminal successful"):
+        reporter.recovery_capture(path, tmp_path)
+
+
 def test_shared_result_joins_only_its_verified_canonical_control(tmp_path, monkeypatch):
     root, parent, unrelated, failed = panel(tmp_path, monkeypatch)
     report = json.loads((root / "results.json").read_text())
