@@ -1,0 +1,185 @@
+{
+  "original": {
+    "bytes": 5905,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/boundary_clear_search_readback_r1_v1_20261014.json",
+    "sha256": "24d56341cd9bfba91a2dd75de0019b91a1509708c470073be4cc38d69c96361a"
+  },
+  "report": {
+    "all_paired_median_cpu_and_wall_ratios_below_one": true,
+    "candidate_records": 1175990,
+    "cases": [
+      {
+        "all_native_outputs_and_inputs_reconstructed": true,
+        "candidate_records": 40726,
+        "cap": 100,
+        "query": "UP000001312_665079.fasta",
+        "query_order": "fasta",
+        "ratios": {
+          "process_cpu_s": 0.9332809919614512,
+          "wall_s": 0.9334469285414068
+        },
+        "significant_hits": 289,
+        "target": "UP000002485_284812.fasta"
+      },
+      {
+        "all_native_outputs_and_inputs_reconstructed": true,
+        "candidate_records": 133369,
+        "cap": 400,
+        "query": "UP000001312_665079.fasta",
+        "query_order": "fasta",
+        "ratios": {
+          "process_cpu_s": 0.9252242392145198,
+          "wall_s": 0.925513841447494
+        },
+        "significant_hits": 432,
+        "target": "UP000002485_284812.fasta"
+      },
+      {
+        "all_native_outputs_and_inputs_reconstructed": true,
+        "candidate_records": 40726,
+        "cap": 100,
+        "query": "UP000001312_665079.fasta",
+        "query_order": "reversed",
+        "ratios": {
+          "process_cpu_s": 0.9304291508405096,
+          "wall_s": 0.9302774222382316
+        },
+        "significant_hits": 289,
+        "target": "UP000002485_284812.fasta"
+      },
+      {
+        "all_native_outputs_and_inputs_reconstructed": true,
+        "candidate_records": 133369,
+        "cap": 400,
+        "query": "UP000001312_665079.fasta",
+        "query_order": "reversed",
+        "ratios": {
+          "process_cpu_s": 0.9268778250429807,
+          "wall_s": 0.9281324468577593
+        },
+        "significant_hits": 432,
+        "target": "UP000002485_284812.fasta"
+      },
+      {
+        "all_native_outputs_and_inputs_reconstructed": true,
+        "candidate_records": 46409,
+        "cap": 100,
+        "query": "UP000002485_284812.fasta",
+        "query_order": "fasta",
+        "ratios": {
+          "process_cpu_s": 0.9411345211371315,
+          "wall_s": 0.9406922326338935
+        },
+        "significant_hits": 121,
+        "target": "UP000001570_224308.fasta"
+      },
+      {
+        "all_native_outputs_and_inputs_reconstructed": true,
+        "candidate_records": 150961,
+        "cap": 400,
+        "query": "UP000002485_284812.fasta",
+        "query_order": "fasta",
+        "ratios": {
+          "process_cpu_s": 0.9336290524570472,
+          "wall_s": 0.9345029146284516
+        },
+        "significant_hits": 246,
+        "target": "UP000001570_224308.fasta"
+      },
+      {
+        "all_native_outputs_and_inputs_reconstructed": true,
+        "candidate_records": 46409,
+        "cap": 100,
+        "query": "UP000002485_284812.fasta",
+        "query_order": "reversed",
+        "ratios": {
+          "process_cpu_s": 0.9448446603199903,
+          "wall_s": 0.9435827492463987
+        },
+        "significant_hits": 121,
+        "target": "UP000001570_224308.fasta"
+      },
+      {
+        "all_native_outputs_and_inputs_reconstructed": true,
+        "candidate_records": 150961,
+        "cap": 400,
+        "query": "UP000002485_284812.fasta",
+        "query_order": "reversed",
+        "ratios": {
+          "process_cpu_s": 0.9365277325475589,
+          "wall_s": 0.9411397648090838
+        },
+        "significant_hits": 246,
+        "target": "UP000001570_224308.fasta"
+      },
+      {
+        "all_native_outputs_and_inputs_reconstructed": true,
+        "candidate_records": 47824,
+        "cap": 100,
+        "query": "UP000001570_224308.fasta",
+        "query_order": "fasta",
+        "ratios": {
+          "process_cpu_s": 0.9464679840607584,
+          "wall_s": 0.9473703138205669
+        },
+        "significant_hits": 137,
+        "target": "UP000001312_665079.fasta"
+      },
+      {
+        "all_native_outputs_and_inputs_reconstructed": true,
+        "candidate_records": 168706,
+        "cap": 400,
+        "query": "UP000001570_224308.fasta",
+        "query_order": "fasta",
+        "ratios": {
+          "process_cpu_s": 0.9328430415926537,
+          "wall_s": 0.9321119433814966
+        },
+        "significant_hits": 236,
+        "target": "UP000001312_665079.fasta"
+      },
+      {
+        "all_native_outputs_and_inputs_reconstructed": true,
+        "candidate_records": 47824,
+        "cap": 100,
+        "query": "UP000001570_224308.fasta",
+        "query_order": "reversed",
+        "ratios": {
+          "process_cpu_s": 0.9454185606632035,
+          "wall_s": 0.9472027528093203
+        },
+        "significant_hits": 137,
+        "target": "UP000001312_665079.fasta"
+      },
+      {
+        "all_native_outputs_and_inputs_reconstructed": true,
+        "candidate_records": 168706,
+        "cap": 400,
+        "query": "UP000001570_224308.fasta",
+        "query_order": "reversed",
+        "ratios": {
+          "process_cpu_s": 0.9344558112054155,
+          "wall_s": 0.935523791654967
+        },
+        "significant_hits": 236,
+        "target": "UP000001312_665079.fasta"
+      }
+    ],
+    "defaults_promoted": false,
+    "goal_completed": false,
+    "producer": {
+      "bytes": 715386,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/boundary_clear_search_r1_v1_20261014/report.json",
+      "sha256": "4b070fcfd57a8ce1e464e0b0587bc1e2f561a81bcb832c2b3f0e910df3b3f9f6"
+    },
+    "reader": {
+      "bytes": 8906,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/boundary_clear_search_readback_r1_v1_20261014/benchmark_tools/readback_boundary_clear_search.py",
+      "sha256": "700012b737e9a360d9beb9cad12e38096502ad8b4af7158204d84e2a11aa3e97"
+    },
+    "scheduler": "JobID|State|ExitCode|AllocCPUS\n24232|COMPLETED|0:0|4\n",
+    "scope": "Fresh replay of both private libraries on every prespecified sampled search; independent raw-timing median calculation. Warm shared-host species-pair search costs, not cold-process/full-pipeline timings or biological accuracy. Candidate records sum case instances including overlapping caps and query orders, not unique predicted ortholog pairs.",
+    "source_revision": "9d1cd18d2fa680761f89d6e98f5f5cb4b782cc68",
+    "status": "all_boundary_clear_search_outputs_reconstructed_and_timings_verified"
+  }
+}

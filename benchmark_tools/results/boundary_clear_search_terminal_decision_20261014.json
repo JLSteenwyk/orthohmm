@@ -1,0 +1,76 @@
+{
+  "all_normalized_scores_evalues_indices_counts_and_integer_scores_preserved": true,
+  "candidate_case_records": 1175990,
+  "canonical_query_order_equivalence": true,
+  "default_compile_flag_changed": false,
+  "defaults_promoted": false,
+  "fresh_both_arm_replays": 24,
+  "goal_completed": false,
+  "independent_capture": {
+    "bytes": 6541,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/boundary_clear_search_independent_capture_20261014.json",
+    "sha256": "5cf5dbe24e1711fba24c2f98389bcffccb4b7e5ac01666e7f6988734349ea65c"
+  },
+  "limitations": [
+    "Warmed sampled species-pair searches on three development-exposed QfO proteomes, not complete orthology inference or independent biological validation.",
+    "Shared-host paired median cost reductions are descriptive, not isolated speed advantages or confidence intervals.",
+    "Candidate record counts include overlapping fixed caps and repeated query orders; they are not unique predicted ortholog pairs.",
+    "No new eight-endpoint biological score vector, default promotion or live library replacement."
+  ],
+  "live_libraries_overwritten": false,
+  "new_accuracy_scores": false,
+  "paired_median_cpu_ratio_range": [
+    0.9252242392145198,
+    0.9464679840607584
+  ],
+  "paired_median_wall_ratio_range": [
+    0.925513841447494,
+    0.9473703138205669
+  ],
+  "queries_per_species": 512,
+  "raw_capture": {
+    "bytes": 756916,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/boundary_clear_search_raw_capture_20261014.json",
+    "sha256": "8c7ce74e5ae908291166a1a6f530a6b2236b6646c49ca76f75219dfd7a98cc90"
+  },
+  "scheduler": "JobID|State|ExitCode\n24232|COMPLETED|0:0\n24234|COMPLETED|0:0\n",
+  "search_cases": 12,
+  "selected_species": 3,
+  "selection": "Advance to prespecified full native pipeline output-equivalence validation. Keep the existing full-clear default until broader native product/checkpoint validation is complete.",
+  "source_revision": "9d1cd18d2fa680761f89d6e98f5f5cb4b782cc68",
+  "status": "broader_complete_search_output_equivalence_and_lower_observed_cost_verified",
+  "tests": [
+    {
+      "passed": 174,
+      "report": {
+        "bytes": 25685,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/boundary_clear_search_working_tests_v2_20261014.xml",
+        "sha256": "f42d64df8682173517832d502cdd73ebea1d7b2a1dd59f4feb2b65f097b6535c"
+      }
+    },
+    {
+      "passed": 174,
+      "report": {
+        "bytes": 25685,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/boundary_clear_search_frozen_tests_20261014.xml",
+        "sha256": "0e86dfba526dc502a6ab4a813f3fabf1d50182fe2924e87d2117be31fd16aae4"
+      }
+    },
+    {
+      "passed": 21,
+      "report": {
+        "bytes": 3552,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/boundary_clear_search_reader_working_tests_20261014.xml",
+        "sha256": "402d60857b694c86f22d83cdbee6b85a63ecb36ad86666504f64b42edb855ebf"
+      }
+    },
+    {
+      "passed": 21,
+      "report": {
+        "bytes": 3552,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/boundary_clear_search_reader_frozen_tests_20261014.xml",
+        "sha256": "334e6e423286973d7a4d78ce72b8e7e52e70767e587bd0dcfb0268e8d2fd2d80"
+      }
+    }
+  ]
+}
