@@ -8,7 +8,8 @@ from benchmark_tools import benchmark_production
 @pytest.mark.parametrize("cap", [None, 0, 400])
 @pytest.mark.parametrize("support_mode", ["legacy", "bipartition"])
 @pytest.mark.parametrize("result_order", ["arrival", "canonical"])
-def test_main_passes_accuracy_profile_to_production_cli(tmp_path, monkeypatch, cap, support_mode, result_order):
+@pytest.mark.parametrize("native_guard", [False, True])
+def test_main_passes_accuracy_profile_to_production_cli(tmp_path, monkeypatch, cap, support_mode, result_order, native_guard):
     input_directory = tmp_path / "input"
     input_directory.mkdir()
     (input_directory / "species.faa").write_text(">gene\nACDE\n")
@@ -35,10 +36,16 @@ def test_main_passes_accuracy_profile_to_production_cli(tmp_path, monkeypatch, c
         "--phylogeny", "reconcile",
         "--gene-tree-support-mode", support_mode,
         "--search-result-order", result_order,
+        *(["--native-kernel-trace", str(tmp_path / "routes")] if native_guard else []),
         *([] if cap is None else ["--search-max-candidates-per-query", str(cap)]),
     ]) == 0
 
     command = captured["command"]
+    if native_guard:
+        assert command[1].endswith("benchmark_tools/strict_native_cli.py")
+        assert command[2:4] == ["--trace-directory", str(tmp_path / "routes")]
+    else:
+        assert command[1:3] == ["-m", "orthohmm"]
     profile_index = command.index("--accuracy_profile")
     assert command[profile_index + 1] == "high_sensitivity"
     if result_order=="arrival":

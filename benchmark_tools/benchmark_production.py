@@ -101,6 +101,8 @@ def parse_args(argv=None):
     )
     parser.add_argument("--gene-tree-support-mode", choices=("legacy", "bipartition"), default="legacy")
     parser.add_argument("--search-result-order", choices=("arrival","canonical"), default="arrival")
+    parser.add_argument("--native-kernel-trace", type=Path,
+                        help="Benchmark-only fail-closed CPU multipair route observation")
     args = parser.parse_args(argv)
     if args.search_result_order!="arrival" and args.accuracy_profile!="high_sensitivity":
         parser.error("--search-result-order canonical requires --accuracy-profile high_sensitivity")
@@ -150,6 +152,9 @@ def main(argv=None) -> int:
         "--metrics_json",
         str(result_json),
     ]
+    if args.native_kernel_trace is not None:
+        command[:3] = [sys.executable, str(repo_root / "benchmark_tools/strict_native_cli.py"),
+                       "--trace-directory", str(args.native_kernel_trace.resolve())]
     if args.search_max_candidates_per_query is not None:
         command.extend([
             "--search_max_candidates_per_query",
