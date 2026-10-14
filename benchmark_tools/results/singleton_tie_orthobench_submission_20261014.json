@@ -1,0 +1,25 @@
+{
+  "control_F1": 0.7410607351873405,
+  "defaults_promoted": false,
+  "execution_plan": {
+    "bytes": 15296147,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_orthobench_r1_v1_20261014/execution_plan.json",
+    "sha256": "e4ef34cefa8f522278dc58e067275286b91e42bf3a161a6dc4c0f47d0ae2b99a"
+  },
+  "frozen_runner_tests": {
+    "bytes": 18049,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/singleton_tie_orthobench_frozen_runner_tests_20261014.xml",
+    "sha256": "bd6e3f3168563f6653bb08c5080cb1b1572c2d26e7a714ac7b66dc43fc165766"
+  },
+  "goal_completed": false,
+  "job_id": "24250",
+  "policies": [
+    "first_hit",
+    "defer_ambiguous"
+  ],
+  "scheduler": "JobId=24250 JobName=ohmm-singleton-tie-ob\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=RUNNING Reason=None Dependency=(null)\n   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:02:12 TimeLimit=4-00:00:00 TimeMin=N/A\n   SubmitTime=2026-10-14T07:36:56 EligibleTime=2026-10-14T07:36:56\n   AccrueTime=2026-10-14T07:36:56\n   StartTime=2026-10-14T07:36:56 EndTime=2026-10-18T07:36:56 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-14T07:36:56 Scheduler=Main\n   Partition=gpu AllocNode:Sid=bizon-link:249485\n   ReqNodeList=bizon ExcNodeList=(null)\n   NodeList=bizon\n   BatchHost=bizon\n   NumNodes=1 NumCPUs=16 NumTasks=1 CPUs/Task=16 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=16,mem=64G,node=1,billing=16\n   AllocTRES=cpu=16,mem=64G,node=1,billing=16\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=16 MinMemoryNode=64G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/singleton_tie_orthobench_r1_v1_20261014/benchmark_tools/run_singleton_tie_orthobench.slurm\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_orthobench_r1_v1_20261014/slurm-24250.err\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_orthobench_r1_v1_20261014/slurm-24250.out\n   TresPerTask=cpu=16\n   \n\n",
+  "scope": "16-CPU/64-GiB matched cached-downstream OrthoBench pilot. Variant runs only after exact native control reproduction. No new benchmark score or automatic default promotion; full QfO/Three Kingdoms followup required for a surviving candidate.",
+  "source_input_runtime_pin_count": 46298,
+  "source_revision": "1225e3f9b504ee68e90632bf4efdc92e8232703a",
+  "status": "matched_singleton_tie_orthobench_pilot_submitted"
+}

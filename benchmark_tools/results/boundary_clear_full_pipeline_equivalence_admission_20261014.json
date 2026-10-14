@@ -1,0 +1,162 @@
+{
+  "arms": [
+    {
+      "biological_export_files_rehashed": 62377,
+      "coverage": {
+        "genes": 251378,
+        "groups": 59770,
+        "pairs": 966439,
+        "species": 12
+      },
+      "harness_git_commit_context_only": "11d6bce84bf04fbc4bc247567e934f9d43f43a69",
+      "kernel": {
+        "bytes": 58984,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/boundary_clear_pipeline_r1_v1_20261014/variants/full_clear/orthohmm/search/csrc/hmm_viterbi.so",
+        "sha256": "da2da6b7af77495584c1571e3b673fac5e17cc3862b2a2a86e3b9b6197dca8ab"
+      },
+      "label": "full_clear",
+      "native_products": {
+        "orthohmm_pairwise_orthologs.tsv": {
+          "bytes": 100248192,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/boundary_clear_pipeline_r1_v1_20261014/full_clear/output/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+          "sha256": "bfbe3f2707a4a30cd1a7ad404dd9fbf6b3973e98eeeeea8411c8935277e9fb72"
+        },
+        "orthohmm_pairwise_orthologs_confidence.tsv": {
+          "bytes": 105315256,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/boundary_clear_pipeline_r1_v1_20261014/full_clear/output/orthohmm_phylogeny/orthohmm_pairwise_orthologs_confidence.tsv",
+          "sha256": "376575f788070dcc1b5cb2f5be4b6ae752656ce8a418e67c6efd3bb3c881e2d6"
+        },
+        "orthohmm_root_hogs.tsv": {
+          "bytes": 6301075,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/boundary_clear_pipeline_r1_v1_20261014/full_clear/output/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+          "sha256": "5e35c1de220d0d4dca2ff64f255a55ad4d1740abbcbadbf746f91cba57f9622b"
+        },
+        "species_tree.rooted.nwk": {
+          "bytes": 717,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/boundary_clear_pipeline_r1_v1_20261014/full_clear/output/orthohmm_phylogeny/species_tree.rooted.nwk",
+          "sha256": "61ba4deadbc1f1e357b892bad11ac6b605e0495393816f077badaeb35b183878"
+        }
+      },
+      "resources": {
+        "elapsed_seconds": 11499.0,
+        "exit_status": 0,
+        "max_process_rss_kib": 6173568,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 3746.81,
+        "user_seconds": 170432.91
+      },
+      "route_totals": {
+        "initial_search": {
+          "calls": 144,
+          "scored_pairs": 298209630
+        },
+        "profile_scoring": {
+          "calls": 2,
+          "scored_pairs": 5221626
+        }
+      },
+      "scores": {
+        "OrthoBench F1": 0.7410607351873405
+      }
+    },
+    {
+      "biological_export_files_rehashed": 62377,
+      "coverage": {
+        "genes": 251378,
+        "groups": 59770,
+        "pairs": 966439,
+        "species": 12
+      },
+      "harness_git_commit_context_only": "600075f5838009228e114bcf769d2ef3cc3c4051",
+      "kernel": {
+        "bytes": 58984,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/boundary_clear_pipeline_r1_v1_20261014/variants/boundary_only/orthohmm/search/csrc/hmm_viterbi.so",
+        "sha256": "6700c7d9ba18204947a53a949edd2596dfd8db15cd71fd67ebe23aadc9576db7"
+      },
+      "label": "boundary_only",
+      "native_products": {
+        "orthohmm_pairwise_orthologs.tsv": {
+          "bytes": 100248192,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/boundary_clear_pipeline_r1_v1_20261014/boundary_only/output/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+          "sha256": "bfbe3f2707a4a30cd1a7ad404dd9fbf6b3973e98eeeeea8411c8935277e9fb72"
+        },
+        "orthohmm_pairwise_orthologs_confidence.tsv": {
+          "bytes": 105315256,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/boundary_clear_pipeline_r1_v1_20261014/boundary_only/output/orthohmm_phylogeny/orthohmm_pairwise_orthologs_confidence.tsv",
+          "sha256": "376575f788070dcc1b5cb2f5be4b6ae752656ce8a418e67c6efd3bb3c881e2d6"
+        },
+        "orthohmm_root_hogs.tsv": {
+          "bytes": 6301075,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/boundary_clear_pipeline_r1_v1_20261014/boundary_only/output/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+          "sha256": "5e35c1de220d0d4dca2ff64f255a55ad4d1740abbcbadbf746f91cba57f9622b"
+        },
+        "species_tree.rooted.nwk": {
+          "bytes": 717,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/boundary_clear_pipeline_r1_v1_20261014/boundary_only/output/orthohmm_phylogeny/species_tree.rooted.nwk",
+          "sha256": "61ba4deadbc1f1e357b892bad11ac6b605e0495393816f077badaeb35b183878"
+        }
+      },
+      "resources": {
+        "elapsed_seconds": 11208.0,
+        "exit_status": 0,
+        "max_process_rss_kib": 6185948,
+        "semantics": {
+          "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+          "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+          "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+          "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+        },
+        "system_seconds": 3731.31,
+        "user_seconds": 165906.01
+      },
+      "route_totals": {
+        "initial_search": {
+          "calls": 144,
+          "scored_pairs": 298209630
+        },
+        "profile_scoring": {
+          "calls": 2,
+          "scored_pairs": 5221626
+        }
+      },
+      "scores": {
+        "OrthoBench F1": 0.7410607351873405
+      }
+    }
+  ],
+  "defaults_promoted": false,
+  "descriptive_cost": {
+    "child_cpu_ratio_variant_over_control": 0.9739211889880177,
+    "scope": "One sequential shared-host full-pipeline pair, descriptive only; not isolated or counterbalanced speedup evidence.",
+    "wall_ratio_variant_over_control": 0.9746934516044874
+  },
+  "exact_product_comparison": {
+    "all_hashes_equal": true,
+    "files": 62377
+  },
+  "execution_plan": {
+    "bytes": 1150797,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/boundary_clear_pipeline_r1_v1_20261014/execution_plan.json",
+    "sha256": "ca6545294967b14c7b966bce8d6f925bdb32258651624efd93c537797aff7af0"
+  },
+  "goal_completed": false,
+  "limitations": [
+    "OrthoBench full-pipeline equivalence does not establish every dataset or all possible kernel inputs.",
+    "Harness Git labels in plain frozen copies are contextual; scientific identity is verified by source/input manifests and frozen plan pins.",
+    "No default/native-library promotion occurred."
+  ],
+  "producer": {
+    "bytes": 44990325,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/boundary_clear_pipeline_r1_v1_20261014/results.json",
+    "sha256": "7f9204168affc213fcc07435451a963d0612452d6b7766de1d392acba8e79463"
+  },
+  "scheduler_accounting": "24241|COMPLETED|0:0|06:19:36|16\n",
+  "scientific_revision": "4ce513c4e53625b2cbcd68a429481c77e510a5c8",
+  "status": "fresh_full_pipeline_boundary_clear_output_equivalence_independently_verified",
+  "verification_inventory_reference": "Full inventories remain hash-pinned in the terminal producer; all 62377 products in each arm and the complete source/input/runtime plan were independently rehashed."
+}
