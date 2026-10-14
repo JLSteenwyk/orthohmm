@@ -1,0 +1,42 @@
+{
+  "allocation_per_job": {
+    "cpus": 4,
+    "memory_gib": 16,
+    "wall_limit_minutes": 20
+  },
+  "defaults_promoted": false,
+  "frozen_tests": {
+    "bytes": 31082,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/viterbi_boundary_clear_frozen_tests_20261013.xml",
+    "sha256": "923f71c3d188d683d2a99afa3640b7ed9751ca5b3b74a6460a1d400239d18cdc"
+  },
+  "frozen_tests_passed": 201,
+  "frozen_tests_skipped": 4,
+  "goal_completed": false,
+  "helper": {
+    "bytes": 8987,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/viterbi_boundary_clear_r1_v1_20261013/benchmark_tools/benchmark_viterbi_boundary_clear.py",
+    "sha256": "44c7ccb67db349fe3ea82e207ffe8310c2831b5b2552ed78df695e06bddadb06"
+  },
+  "jobs": {
+    "initial": "24224",
+    "repeat": "24225"
+  },
+  "launcher": {
+    "bytes": 479,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/viterbi_boundary_clear_r1_v1_20261013/benchmark_tools/benchmark_viterbi_boundary_clear.slurm",
+    "sha256": "47cac1e508c25032cbdd1e63093819cd9ebf3a808da2aae602ad27dc5bd41012"
+  },
+  "live_libraries_overwritten": false,
+  "protocol": {
+    "bytes": 2714,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/viterbi_boundary_clear_r1_v1_20261013/benchmark_tools/hillclimb_viterbi_boundary_clear_20261013.json",
+    "sha256": "9b0f18fb93c075c32d119f5897eada9160c54855e0e5daa9416d8afd5a2548cd"
+  },
+  "scope": "Matched k4 kernel-only costs and exact scores; repeat uses the same immutable source in a new namespace. No native orthology inference or accuracy rescoring.",
+  "source_revision": "c9e7fbf7",
+  "source_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/viterbi_boundary_clear_r1_v1_20261013",
+  "status": "frozen_boundary_clear_initial_and_repeat_submitted",
+  "working_tests_passed": 204,
+  "working_tests_skipped": 1
+}
