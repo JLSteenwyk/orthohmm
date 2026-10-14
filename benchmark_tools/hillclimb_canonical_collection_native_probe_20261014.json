@@ -1,0 +1,11 @@
+{
+  "schema": "canonical_collection_native_search_probe_v1",
+  "status": "prespecified_before_native_probe",
+  "cohort": "Same three QfO proteomes selected by filename SHA256 as earlier search probes; 32 hash-selected queries from each against each of the other two complete proteomes, six directed searches. Retain real normalized HMM scores and E-values, remapping sampled query indices to the full per-species gene table without reordering result rows.",
+  "settings": {"k": 4, "candidate_cap": 100, "band_width": 64, "threads": 4, "phase_a_topk": 5000, "matrix": "BLOSUM62", "evalue_threshold": 0.0001},
+  "mechanism": "Compute each search once using private copies of the unchanged original CPU libraries. Assemble identical results in forward and reverse insertion order. Apply arrival and canonical collectors; verify hit multiset and an independent canonical row reconstruction. Write both canonical accepted-hit checkpoints and require exact content/hash equality and complete numeric audits.",
+  "resources": {"cpus": 4, "memory_gib": 16, "wall_limit_minutes": 20, "host": "local shared Threadripper"},
+  "scope": "Bounded real-search collector/checkpoint correctness only. Sampled queries against full targets, not a complete proteome analysis, independent biological validation, new orthology scores or evidence that canonical tie selection improves accuracy. Full downstream eight-endpoint replay remains a separate required experiment.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}
