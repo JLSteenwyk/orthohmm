@@ -1,0 +1,351 @@
+{
+  "accuracy_evaluated": false,
+  "baseline": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_orthobench_r1_v1_20261014/first_hit/native/orthohmm_phylogeny",
+  "candidate": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_orthobench_r1_v1_20261014/defer_ambiguous/native/orthohmm_phylogeny",
+  "checked": [
+    {
+      "bytes": 6301075,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_orthobench_r1_v1_20261014/first_hit/native/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "5e35c1de220d0d4dca2ff64f255a55ad4d1740abbcbadbf746f91cba57f9622b"
+    },
+    {
+      "bytes": 100248192,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_orthobench_r1_v1_20261014/first_hit/native/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+      "sha256": "bfbe3f2707a4a30cd1a7ad404dd9fbf6b3973e98eeeeea8411c8935277e9fb72"
+    },
+    {
+      "bytes": 558,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_orthobench_r1_v1_20261014/first_hit/native/orthohmm_phylogeny/reconciliation_summary.json",
+      "sha256": "e9068954d1b62a3b22ca1c55d1e8bf16f90b84210bb6b3c0e577e370918a3a73"
+    },
+    {
+      "bytes": 6300553,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_orthobench_r1_v1_20261014/defer_ambiguous/native/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "1826061d7fb1cc50227aa60a3ef833cf0d6a5f0ac22a94fd0e0bc5de218648eb"
+    },
+    {
+      "bytes": 100613599,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_orthobench_r1_v1_20261014/defer_ambiguous/native/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+      "sha256": "1ce66a74d07ac6e92d8b10c0e09f611eb8023e599c558b7095e37587c2aba627"
+    },
+    {
+      "bytes": 568,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_orthobench_r1_v1_20261014/defer_ambiguous/native/orthohmm_phylogeny/reconciliation_summary.json",
+      "sha256": "8df1ae343c2ef12beeb4cf29fcd4e22265ffe760ad6fd60256a3e6d1a08f493e"
+    },
+    {
+      "bytes": 7227,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_native_contrast_r1_v1_20261014/benchmark_tools/compare_native_membership.py",
+      "sha256": "609f10838c4a4d6a0b65b4e9b39a9f07842e48e31de421bfdfc7de4e857351f5"
+    },
+    {
+      "bytes": 8335,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_native_contrast_r1_v1_20261014/benchmark_tools/score_ygob_groups.py",
+      "sha256": "b18e86dafa7370b75386890d1c8acedf721b8d026a2cd150c0565645698eb51a"
+    },
+    {
+      "bytes": 717,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_orthobench_r1_v1_20261014/first_hit/native/orthohmm_phylogeny/species_tree.rooted.nwk",
+      "sha256": "61ba4deadbc1f1e357b892bad11ac6b605e0495393816f077badaeb35b183878"
+    },
+    {
+      "bytes": 717,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_orthobench_r1_v1_20261014/defer_ambiguous/native/orthohmm_phylogeny/species_tree.rooted.nwk",
+      "sha256": "61ba4deadbc1f1e357b892bad11ac6b605e0495393816f077badaeb35b183878"
+    }
+  ],
+  "defaults_promoted": false,
+  "genes": 251378,
+  "goal_completed": false,
+  "pair_membership": {
+    "added_records": 21542,
+    "affected_genes": 11747,
+    "baseline_duplicate_rows": 0,
+    "baseline_records": 966439,
+    "baseline_unique_pairs": 966439,
+    "candidate_duplicate_rows": 0,
+    "candidate_records": 970182,
+    "candidate_unique_pairs": 970182,
+    "common_records": 948640,
+    "removed_records": 17799,
+    "semantic_multisets_equal": false
+  },
+  "pair_samples": {
+    "added": [
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSCAFP00000000135",
+            "Canis_familiaris.CanFam3.1.pep.all"
+          ],
+          [
+            "WBGene00000433.1",
+            "Caenorhabditis_elegans.WBcel235.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSCAFP00000000267",
+            "Canis_familiaris.CanFam3.1.pep.all"
+          ],
+          [
+            "ENSDARP00000060798",
+            "Danio_rerio.GRCz11.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSCAFP00000000267",
+            "Canis_familiaris.CanFam3.1.pep.all"
+          ],
+          [
+            "ENSDARP00000091293",
+            "Danio_rerio.GRCz11.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSCAFP00000000267",
+            "Canis_familiaris.CanFam3.1.pep.all"
+          ],
+          [
+            "ENSDARP00000091296",
+            "Danio_rerio.GRCz11.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSCAFP00000000267",
+            "Canis_familiaris.CanFam3.1.pep.all"
+          ],
+          [
+            "ENSDARP00000098998",
+            "Danio_rerio.GRCz11.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSCAFP00000000267",
+            "Canis_familiaris.CanFam3.1.pep.all"
+          ],
+          [
+            "ENSDARP00000117509",
+            "Danio_rerio.GRCz11.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSCAFP00000000267",
+            "Canis_familiaris.CanFam3.1.pep.all"
+          ],
+          [
+            "ENSDARP00000153417",
+            "Danio_rerio.GRCz11.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSCAFP00000000267",
+            "Canis_familiaris.CanFam3.1.pep.all"
+          ],
+          [
+            "ENSDARP00000154267",
+            "Danio_rerio.GRCz11.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSCAFP00000000267",
+            "Canis_familiaris.CanFam3.1.pep.all"
+          ],
+          [
+            "ENSDARP00000154428",
+            "Danio_rerio.GRCz11.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSCAFP00000000267",
+            "Canis_familiaris.CanFam3.1.pep.all"
+          ],
+          [
+            "ENSDARP00000157526",
+            "Danio_rerio.GRCz11.pep.all"
+          ]
+        ]
+      }
+    ],
+    "removed": [
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSCAFP00000000020",
+            "Canis_familiaris.CanFam3.1.pep.all"
+          ],
+          [
+            "FBpp0099542",
+            "Drosophila_melanogaster.BDGP6.28.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSCAFP00000000020",
+            "Canis_familiaris.CanFam3.1.pep.all"
+          ],
+          [
+            "WBGene00010329.1",
+            "Caenorhabditis_elegans.WBcel235.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSCAFP00000000135",
+            "Canis_familiaris.CanFam3.1.pep.all"
+          ],
+          [
+            "FBpp0071485",
+            "Drosophila_melanogaster.BDGP6.28.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSCAFP00000000296",
+            "Canis_familiaris.CanFam3.1.pep.all"
+          ],
+          [
+            "WBGene00001962.1",
+            "Caenorhabditis_elegans.WBcel235.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSCAFP00000000410",
+            "Canis_familiaris.CanFam3.1.pep.all"
+          ],
+          [
+            "WBGene00003808.1",
+            "Caenorhabditis_elegans.WBcel235.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSCAFP00000000746",
+            "Canis_familiaris.CanFam3.1.pep.all"
+          ],
+          [
+            "ENSGALP00000066467",
+            "Gallus_gallus.GRCg6a.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSCAFP00000000978",
+            "Canis_familiaris.CanFam3.1.pep.all"
+          ],
+          [
+            "FBpp0080111",
+            "Drosophila_melanogaster.BDGP6.28.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSCAFP00000000978",
+            "Canis_familiaris.CanFam3.1.pep.all"
+          ],
+          [
+            "FBpp0083966",
+            "Drosophila_melanogaster.BDGP6.28.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSCAFP00000000978",
+            "Canis_familiaris.CanFam3.1.pep.all"
+          ],
+          [
+            "FBpp0083967",
+            "Drosophila_melanogaster.BDGP6.28.pep.all"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "ENSCAFP00000000978",
+            "Canis_familiaris.CanFam3.1.pep.all"
+          ],
+          [
+            "WBGene00004055.1",
+            "Caenorhabditis_elegans.WBcel235.pep.all"
+          ]
+        ]
+      }
+    ]
+  },
+  "root_membership": {
+    "added_records": 1832,
+    "baseline_records": 59770,
+    "candidate_records": 59752,
+    "common_records": 57920,
+    "genes_in_changed_groups": 15709,
+    "removed_records": 1850,
+    "semantic_multisets_equal": false
+  },
+  "scope": "Ignores row order and arbitrary root/family IDs; preserves gene identity, pair species ownership and multiplicity. Confidence values and tree-event annotations are not compared. No claim of biological correctness or a uniquely identified causal stage.",
+  "species_tree_same_bytes": true,
+  "status": "native_membership_and_pair_multiset_contrast_completed"
+}

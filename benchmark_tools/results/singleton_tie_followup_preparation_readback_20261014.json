@@ -1,0 +1,74 @@
+{
+  "cases": [
+    {
+      "checkpoint": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/QfO/canonical/ordered/orthohmm_working_res/high_sensitivity_checkpoint",
+      "checkpoint_sha": "87fb7c8109eb71a8c135279a739fb894ae3403b356bff98cbda230ff72abd19c",
+      "control_coverage": {
+        "genes": 984137,
+        "groups": 365733,
+        "pairs": 5953050,
+        "species": 78
+      },
+      "control_scores": {
+        "QfO: EC": 0.96538176,
+        "QfO: FAS": 0.7637247098243404,
+        "QfO: GO": 0.49023637,
+        "QfO: SwissTrees F": 0.831347705694284,
+        "QfO: TreeFam-A F": 0.6157780611844207,
+        "QfO: VGNC F": 0.9020677639723076
+      },
+      "dataset": "QfO",
+      "original_row_status_preserved": "failed"
+    },
+    {
+      "checkpoint": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/ThreeKingdoms/canonical/ordered/orthohmm_working_res/high_sensitivity_checkpoint",
+      "checkpoint_sha": "9d29ca705b4157cdc6fcb25344bfcb5387448494e05827db5c9528fcce4dfb06",
+      "control_coverage": {
+        "genes": 443217,
+        "groups": 152748,
+        "pairs": 1253269,
+        "species": 12
+      },
+      "control_scores": {
+        "ThreeKingdoms: Three Kingdoms F1": 0.872133159469203
+      },
+      "dataset": "ThreeKingdoms",
+      "original_row_status_preserved": "independent_content_readback_verified"
+    }
+  ],
+  "defaults_promoted": false,
+  "goal_completed": false,
+  "inference_or_scoring_submitted": false,
+  "pilot_gate": {
+    "control_f1": 0.7410607351873405,
+    "delta": -0.004471105890636373,
+    "eligible": true,
+    "scope": "Prespecified development screen, not equivalence or improvement.",
+    "variant_f1": 0.7365896292967041
+  },
+  "prepared_inputs": {
+    "bytes": 817841,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_followup_inputs_r1_v1_20261014/prepared_inputs.json",
+    "sha256": "0248797599a4cb3bfa51d8423d0fb57cce6d6f8ddd7afd779370d3b497339e18"
+  },
+  "preparer_source": {
+    "bytes": 8145,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plan_singleton_tie_followup.py",
+    "sha256": "eebce2f40a687b3edfca43fe7f66f288813f10bf7102478d6d60f407faddb0dc"
+  },
+  "protocol": {
+    "bytes": 4138,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hillclimb_singleton_tie_followup_20261014.json",
+    "sha256": "31f1925362e1b84c60ae6044e2dc5afe2ec0d9706e2751ccd620503b633b3354"
+  },
+  "readback": {
+    "bytes": 4347127,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v20_20261014/summary.json",
+    "sha256": "a238c51848b8fa603379679af64ccbeb1bc01752f8633033a0a2840567e350ee"
+  },
+  "scientific_revision": "1225e3f9b504ee68e90632bf4efdc92e8232703a",
+  "scientific_source": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/singleton_tie_orthobench_r1_v1_20261014",
+  "scope": "Fixed follow-up inputs prepared after independent OrthoBench admission. Original failed QfO scoring row retained; separate recovered control admitted. Execution runner/submission remains to be completed.",
+  "status": "singleton_tie_followup_inputs_independently_rehashed_not_submitted",
+  "verified_input_record_count": 1835
+}
