@@ -1,0 +1,23 @@
+{
+  "accuracy_evaluated": false,
+  "defaults_promoted": false,
+  "execution_plan": {
+    "bytes": 363116,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_initial_graph_probe_r1_v1_20261014/execution_plan.json",
+    "sha256": "9969011748ef4ecb9f8a7654ccb4c1d9fd837c3a873b0939ef55afd81884a77f"
+  },
+  "frozen_tests": {
+    "bytes": 5654,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/canonical_initial_graph_probe_frozen_tests_20261014.xml",
+    "sha256": "e7af675a065140274f1bbf24d1bd102ae3cded0e0f7b70a04b2cf55f5ce169a6"
+  },
+  "goal_completed": false,
+  "input_and_driver_pin_count": 1225,
+  "job_id": "24248",
+  "runner_revision": "9e3bb6f6686eb066b428acf286047b08c5038cc6",
+  "scheduler": "JobId=24248 JobName=ohmm-canonical-graph-probe\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=RUNNING Reason=None Dependency=(null)\n   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:01:20 TimeLimit=06:00:00 TimeMin=N/A\n   SubmitTime=2026-10-14T06:32:03 EligibleTime=2026-10-14T06:32:03\n   AccrueTime=2026-10-14T06:32:03\n   StartTime=2026-10-14T06:32:03 EndTime=2026-10-14T12:32:03 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-14T06:32:03 Scheduler=Backfill\n   Partition=gpu AllocNode:Sid=bizon-link:3476653\n   ReqNodeList=bizon ExcNodeList=(null)\n   NodeList=bizon\n   BatchHost=bizon\n   NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=1,mem=64G,node=1,billing=1\n   AllocTRES=cpu=1,mem=64G,node=1,billing=1\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=1 MinMemoryNode=64G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_initial_graph_probe_r1_v1_20261014/benchmark_tools/probe_canonical_initial_graph.slurm\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_initial_graph_probe_r1_v1_20261014/slurm-24248.err\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_initial_graph_probe_r1_v1_20261014/slurm-24248.out\n   TresPerTask=cpu=1\n   \n\n",
+  "scientific_revision": "402d32323f7166c6135f4c81b849b0abfc97e55c",
+  "scope": "One CPU/64 GiB/6-hour graph-only diagnostic. Original scientific source and native graph binaries pinned. No HMM search, profile expansion, phylogeny, or reference scoring repeated. A toy matched-graph tie flip is not assumed to explain actual QfO until its full reconstruction gates pass.",
+  "status": "graph_only_canonical_singleton_diagnostic_submitted",
+  "working_and_frozen_tests_passed": 40
+}
