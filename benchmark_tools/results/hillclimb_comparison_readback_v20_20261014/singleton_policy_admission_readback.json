@@ -1,0 +1,43 @@
+{
+  "control_f1": 0.7410607351873405,
+  "coverage": {
+    "genes": 251378,
+    "groups": 59752,
+    "pairs": 970182,
+    "species": 12
+  },
+  "defaults_promoted": false,
+  "f1_delta": -0.004471105890636373,
+  "goal_completed": false,
+  "inherited_score_vectors_unchanged": 25,
+  "interpretation": "OrthoBench regression, primarily lost recall. Passing the pre-existing follow-up decline screen does not imply improvement or equivalence. Other seven endpoints remain unavailable for this policy.",
+  "parent": {
+    "bytes": 4178281,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v19_20261014/summary.json",
+    "sha256": "2aaaa674135cff759a2db84dc6ce0b2568990e8eb030407509f691aa23e01786"
+  },
+  "passes_existing_development_screen": true,
+  "precision_delta": -0.0005501989942604535,
+  "producer": {
+    "bytes": 310190,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_orthobench_r1_v1_20261014/results.json",
+    "sha256": "89f0eaca0357ba4db0df3164bd1da65e6684aecabdd3ca95e94e0b34d81377b2"
+  },
+  "recall_delta": -0.007068078742263784,
+  "scheduler_accounting": "24250|COMPLETED|0:0\n",
+  "status": "singleton_tie_orthobench_independent_admission_verified",
+  "summary": {
+    "bytes": 4347127,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v20_20261014/summary.json",
+    "sha256": "a238c51848b8fa603379679af64ccbeb1bc01752f8633033a0a2840567e350ee"
+  },
+  "table": {
+    "bytes": 4274,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v20_20261014/scores.tsv",
+    "sha256": "b01b96acfc0c6904c82a952308f02be80c78bd7335135381bdf7513aabd288ec"
+  },
+  "table_cells_match_summary": true,
+  "variant_f1": 0.7365896292967041,
+  "variant_precision": 0.8171543390239262,
+  "variant_recall": 0.6704852843405336
+}
