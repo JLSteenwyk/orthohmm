@@ -25,7 +25,9 @@ def upsert_cell(methods, key, label, cell):
     if verified and cell["status"] != "independent_content_readback_verified":
         if len(verified) != 1:
             raise ValueError("Ambiguous existing verified cell")
-        method["cells"].append({**cell, "scope": "Later execution state does not erase earlier verified results."})
+        observation = {**cell, "scope": "Later execution state does not erase earlier verified results."}
+        if observation not in method["cells"]:
+            method["cells"].append(observation)
         return
     if any(row["scores"] != cell["scores"] for row in verified):
         raise ValueError("Conflicting scores for an already verified configuration")
@@ -37,8 +39,12 @@ def upsert_cell(methods, key, label, cell):
             new = cell.get("products", {}).get(name)
             if old is None or new is None or (old["bytes"], old["sha256"]) != (new["bytes"], new["sha256"]):
                 raise ValueError("Conflicting or missing native products despite equal scores: " + name)
-    method["cells"] = [row for row in method["cells"] if row["dataset"] != cell["dataset"]]
-    method["cells"].append(cell)
+    # A recovered result replaces transient progress, not the failed attempt.
+    method["cells"] = [row for row in method["cells"] if row["dataset"] != cell["dataset"]
+                       or row["status"] == "failed" or row["status"].startswith("not_run_")
+                       or "error" in row or "error_type" in row]
+    if cell not in method["cells"]:
+        method["cells"].append(cell)
     if cell["status"] == "independent_content_readback_verified":
         method["scores"].update(cell["scores"])
     method["complete_eight_endpoints"] = set(method["scores"]) == set(ENDPOINTS)
@@ -104,8 +110,10 @@ def build(repo, parent_path, full_root, canonical_root, output):
                     cell.update(canonical_cell(repo, canonical_root, row, report))
             upsert_cell(methods, "canonical_collection:" + label,
                         "OrthoHMM " + ("canonical collection (experimental)" if label == "canonical" else "arrival replay control"), cell)
+    refreshed_keys = {"full_search:control100", "full_search:cap400",
+                      "canonical_collection:arrival", "canonical_collection:canonical"}
     for old in parent["methods"]:
-        if not old["key"].startswith("full_search:"):
+        if old["key"] not in refreshed_keys:
             new = next(method for method in methods if method["key"] == old["key"])
             if old != new: raise ValueError("Unrelated method or scores changed")
     with (output / "scores.tsv").open("x", newline="") as stream:
