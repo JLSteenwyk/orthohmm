@@ -1,0 +1,110 @@
+{
+  "defaults_promoted": false,
+  "goal_completed": false,
+  "jobs": [
+    {
+      "cpu": 16,
+      "dataset": "ThreeKingdoms",
+      "driver_revision": "e9a6400289a4410f426341cc5423977d8c45d30d",
+      "driver_sources": [
+        {
+          "bytes": 17960,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/singleton_tie_followup_driver_r1_v1_20261014/benchmark_tools/run_singleton_tie_followup.py",
+          "sha256": "13bb369c975164f6d75fe7c72ac7d5649e96efeda62d085cb3fc243d78262a3d"
+        },
+        {
+          "bytes": 528,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/singleton_tie_followup_driver_r1_v1_20261014/benchmark_tools/run_singleton_tie_followup.slurm",
+          "sha256": "8356031e39325896eb21c57dd6b8d78ffeeea1d635c6504699753c84516fe7b3"
+        }
+      ],
+      "execution_plan": {
+        "bytes": 31244454,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_three_kingdoms_r1_v1_20261014/execution_plan.json",
+        "sha256": "32a8f99ff2729f4f40972573adac63536fc6f9af40a8e8565035bccc9eaa7a53"
+      },
+      "frozen_reporting_evidence_count": 13,
+      "job_id": "24251",
+      "pinned_input_records": 94191,
+      "profile_probe": {
+        "exit_code": 0,
+        "pair_align": {
+          "exists": true,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/singleton_tie_orthobench_r1_v1_20261014/orthohmm/search/csrc/pair_align.so",
+          "sha256": "81c26c6ce92b1da37285824ea1b8dcea007a7fc18a11ee5fa3d150628fa800c7"
+        },
+        "profile_length": 20,
+        "profile_source": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/singleton_tie_orthobench_r1_v1_20261014/orthohmm/search/msa_profile.py",
+        "profile_source_sha256": "ede0eacf73a211fcd485fff833f453b98dfea541a3952438696dbae412997aad",
+        "python": "/home/bizon/anaconda3/bin/python",
+        "root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/singleton_tie_orthobench_r1_v1_20261014",
+        "status": "passed",
+        "stderr": ""
+      },
+      "scoring_id": "sf_5c3587a575bc",
+      "source_revision": "1225e3f9b504ee68e90632bf4efdc92e8232703a",
+      "source_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/singleton_tie_orthobench_r1_v1_20261014"
+    },
+    {
+      "cpu": 16,
+      "dataset": "QfO",
+      "driver_revision": "e9a6400289a4410f426341cc5423977d8c45d30d",
+      "driver_sources": [
+        {
+          "bytes": 17960,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/singleton_tie_followup_driver_r1_v1_20261014/benchmark_tools/run_singleton_tie_followup.py",
+          "sha256": "13bb369c975164f6d75fe7c72ac7d5649e96efeda62d085cb3fc243d78262a3d"
+        },
+        {
+          "bytes": 528,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/singleton_tie_followup_driver_r1_v1_20261014/benchmark_tools/run_singleton_tie_followup.slurm",
+          "sha256": "8356031e39325896eb21c57dd6b8d78ffeeea1d635c6504699753c84516fe7b3"
+        }
+      ],
+      "execution_plan": {
+        "bytes": 66975526,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/execution_plan.json",
+        "sha256": "4e5b2263d9ceeb3366b79d91290c24e177193429158c880974cd88e609b4553a"
+      },
+      "frozen_reporting_evidence_count": 13,
+      "job_id": "24252",
+      "pinned_input_records": 206941,
+      "profile_probe": {
+        "exit_code": 0,
+        "pair_align": {
+          "exists": true,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/singleton_tie_orthobench_r1_v1_20261014/orthohmm/search/csrc/pair_align.so",
+          "sha256": "81c26c6ce92b1da37285824ea1b8dcea007a7fc18a11ee5fa3d150628fa800c7"
+        },
+        "profile_length": 20,
+        "profile_source": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/singleton_tie_orthobench_r1_v1_20261014/orthohmm/search/msa_profile.py",
+        "profile_source_sha256": "ede0eacf73a211fcd485fff833f453b98dfea541a3952438696dbae412997aad",
+        "python": "/home/bizon/anaconda3/bin/python",
+        "root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/singleton_tie_orthobench_r1_v1_20261014",
+        "status": "passed",
+        "stderr": ""
+      },
+      "scoring_id": "sf_9441110d51e3",
+      "source_revision": "1225e3f9b504ee68e90632bf4efdc92e8232703a",
+      "source_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/singleton_tie_orthobench_r1_v1_20261014"
+    }
+  ],
+  "pilot_admission": {
+    "bytes": 2004,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v20_20261014/singleton_policy_admission_readback.json",
+    "sha256": "30fa99a4b5bb07aa2495202689924ebdf9ef6b727cba8660f01667ffadf689cc"
+  },
+  "prepared_inputs": {
+    "bytes": 817841,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_followup_inputs_r1_v1_20261014/prepared_inputs.json",
+    "sha256": "0248797599a4cb3bfa51d8423d0fb57cce6d6f8ddd7afd779370d3b497339e18"
+  },
+  "protocol": {
+    "bytes": 4138,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hillclimb_singleton_tie_followup_20261014.json",
+    "sha256": "31f1925362e1b84c60ae6044e2dc5afe2ec0d9706e2751ccd620503b633b3354"
+  },
+  "scheduler_observation": "             JOBID                             NAME      STATE         TIME   CPUS NODELIST(REASON)\n             24252               ohmm-singleton-qfo    RUNNING         0:04     16 bizon\n             24251                ohmm-singleton-tk    RUNNING         1:07     16 bizon\n",
+  "scope": "Separate fixed two-arm downstream contrasts, 16 CPUs each, compatible retained canonical tree caches. QfO control FAS reused only after native equivalence. Later coverage/kernel changes excluded. Shared-host timing is descriptive.",
+  "status": "singleton_tie_qfo_and_three_kingdoms_followups_submitted"
+}
