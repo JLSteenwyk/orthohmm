@@ -1,0 +1,59 @@
+{
+  "accepted_checkpoint": {
+    "bytes": 806,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/QfO/control100/output/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+    "sha256": "46ada521d5c5423a1f438da5003b02c1632ca658e972f7e60e583bc0a8836397"
+  },
+  "candidate": {
+    "bytes": 23875927,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/QfO/control100/output/orthohmm_working_res/phylogeny_candidate_superfamilies.txt",
+    "sha256": "73b4838a6a61353c487499deb0b81bba8b2d48cc1ceb942a1cd3d2230a2afac5"
+  },
+  "candidate_constraints": {
+    "bytes": 76375327,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/QfO/control100/output/orthohmm_working_res/phylogeny_candidate_merges.json",
+    "sha256": "002489f320b306e761666820bf0c00c97ac317e065d6f925941e3ec875a61fc0"
+  },
+  "child_exit_code": -11,
+  "defaults_promoted": false,
+  "family_checkpoints": 24264,
+  "goal_completed": false,
+  "metrics": {
+    "bytes": 21766,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/QfO/control100/metrics.json",
+    "sha256": "80f43707b8e582325a22fb3fa05c848685ef26ec8f98a5ede93fc52a7c8dc4e1"
+  },
+  "native_pairs_complete": false,
+  "native_summary_complete": false,
+  "next_action": "Prespecify separate-process native phylogeny recovery from completed candidate and raw-tree checkpoints with PYTHONFAULTHANDLER enabled; do not repeat initial HMM search, graph or profile inference, mutate original artifacts, or claim a fresh uninterrupted full-pipeline timing.",
+  "original_control_status": "failed",
+  "original_variant_status": "not_run_failed_control",
+  "parent_report": {
+    "bytes": 2113,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/QfO/results.json",
+    "sha256": "b8251a34a1b0e01c1e0a4d9cc88251fdc18c587a33e60830edeb9707ca253d9d"
+  },
+  "raw_gene_trees": 24264,
+  "recovery_reports": [
+    {
+      "bytes": 1224408,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_qfo_scoring_recovery_r1_v1_20261013/execution_plan.json",
+      "sha256": "19f26a8b55972954b02a075aa112d1872a7ee329b15ef0aa9720fe5d8f5ac1d9"
+    },
+    {
+      "bytes": 707,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_qfo_scoring_recovery_r1_v1_20261013/results.json",
+      "sha256": "c3eb9b0fd88176693a109df34f6495c3e6681cee3c2e010024567f25711f0d75"
+    }
+  ],
+  "scheduler": "JobID|State|Elapsed|ExitCode\n24190_1|FAILED|21:20:51|1:0\n24204|FAILED|00:00:16|1:0\n",
+  "scope": "Process signal-11 crash observed during phylogeny; cause unknown. Existing scoring-only recovery correctly rejected incomplete native inference. Original failed status remains retained.",
+  "source_reverified": true,
+  "source_revision": "2ccc411520d9e63678178a50207ba1fca87bfbb3",
+  "species_tree": {
+    "bytes": 3582,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/QfO/control100/output/orthohmm_phylogeny/species_tree.rooted.nwk",
+    "sha256": "24198609aaaa7d9bd1c7f9a6ba7ee160e3450572be4c6869933681099afff26e"
+  },
+  "status": "fresh_qfo_native_crash_requires_downstream_recovery"
+}
