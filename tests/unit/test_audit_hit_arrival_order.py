@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from benchmark_tools.audit_hit_arrival_order import block_layout,block_permutation,toy_reproducer
+from benchmark_tools.audit_hit_arrival_order import block_layout,block_permutation,toy_reproducer,initial_partition
 
 
 def test_toy_confirms_unchanged_exact_tie_depends_on_input_order():
@@ -29,3 +29,11 @@ def test_block_layout_rejects_interleaved_species_pairs():
 def test_block_layout_rejects_empty_hits():
     with pytest.raises(ValueError,match="nonempty"):
         block_layout(np.array([0,1]),np.array([],dtype=int),np.array([],dtype=int))
+
+
+def test_initial_partition_creates_working_directory_for_small_graphs(tmp_path):
+    from orthohmm.accuracy import deduplicate_undirected_edges
+    edges = deduplicate_undirected_edges(["a","b","isolated"],[0],[1],[10.])
+    clusters = initial_partition(tmp_path,edges)
+    assert sorted(sorted(group) for group in clusters)==[[0,1],[2]]
+    assert (tmp_path/"orthohmm_working_res/orthohmm_edges_clustered.txt").is_file()

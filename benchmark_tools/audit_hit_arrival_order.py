@@ -76,6 +76,13 @@ def toy_reproducer():
     return {"original_assignment":first[0],"reversed_assignment":reverse[0],"same_input_hits":True}
 
 
+def initial_partition(output,edges):
+    working = output/"orthohmm_working_res"
+    working.mkdir(exist_ok=True)
+    execute_leiden(.1,str(output),edges=edges,include_isolates=True,seed=4)
+    return read_index_clusters(str(working/"orthohmm_edges_clustered.txt"),edges.gene_names)
+
+
 def run(repo,output):
     if output.exists() or os.environ.get("CUDA_VISIBLE_DEVICES")!="":
         raise ValueError("Require new CPU-only order audit namespace")
@@ -114,8 +121,7 @@ def run(repo,output):
     try:
         starts,ends,keys = block_layout(species,q,t)
         reference = build_rbnh_edges(names,species,q,t,scores)
-        execute_leiden(.1,str(output),edges=reference,include_isolates=True,seed=4)
-        clusters = read_index_clusters(str(output/"orthohmm_working_res/orthohmm_edges_clustered.txt"),names)
+        clusters = initial_partition(output,reference)
         original_assignments = None
         reference_identity = edge_identity(reference)
         for mode in ("arrival","canonical_blocks","reversed_blocks"):
