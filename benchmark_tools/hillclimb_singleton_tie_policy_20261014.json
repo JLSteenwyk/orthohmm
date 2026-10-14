@@ -1,0 +1,13 @@
+{
+  "hypothesis": "Deferring singleton attachment when equally best significant hits identify multiple anchor clusters can reduce arbitrary family bridging while later HMM profile expansion supplies independent membership evidence.",
+  "evidence": "The independently verified matched-graph QfO probe reproduced both original multipass partitions through two changed first-hit choices among 407 multi-cluster exact-tie queries. This is evidence of order sensitivity, not evidence that deferral improves accuracy.",
+  "control": "first_hit (unchanged legacy behavior)",
+  "variant": "defer_ambiguous",
+  "mechanism": "Count distinct clusters among exactly maximum-score eligible hits per singleton. Retain legacy assignment when that count is one, including multiple equally best genes within one cluster. Withhold assignment edges when more than one distinct cluster ties. Preserve every gene as an isolate or existing cluster member; do not claim later rescue is guaranteed.",
+  "scope": "Opt-in high-sensitivity graph behavior at both initial and post-profile singleton-attachment stages. Default first_hit behavior and all RBNH, scoring, clustering, profile and phylogenetic settings remain unchanged. No reference-specific rules or gene exceptions.",
+  "implementation_gates": "Test unchanged default bytes, fixed-partition input permutation invariance, tied genes within one cluster, cross-cluster ties, invalid policy/scope, complete gene universe, CLI/API propagation, and real native smoke behavior.",
+  "pilot": "First apply the policy to the retained fixed QfO initial partition and accepted hits; verify exact predicted removal of ambiguous-query edges and equality for all unambiguous assignments. No reference scores in this diagnostic.",
+  "benchmark_next": "After implementation and pilot verification, precommit a bounded all-endpoint comparison using matched canonical min4/cap100 controls. Start with OrthoBench, then corrected QfO and supplementary Three Kingdoms. Cached downstream replay is acceptable for this graph intervention, not for initial search-sensitivity conclusions or fresh timing claims.",
+  "selection": "Per-endpoint/Pareto reporting; existing 0.005 development decline screen is not equivalence. FAS unseeded. Defaults stay unchanged until reproducible broadly supported confirmation.",
+  "preservation": "Do not alter running frozen sources, native libraries, old reports or queued experiments. Defer interactions with min1/cap400 until their individual effects are measured. Commit and push implementation, tests and validated results."
+}
