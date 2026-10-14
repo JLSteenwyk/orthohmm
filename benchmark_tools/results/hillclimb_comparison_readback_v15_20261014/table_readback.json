@@ -1,0 +1,63 @@
+{
+  "all_table_cells_match_summary": true,
+  "checked": [
+    {
+      "bytes": 3321770,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v14_20261014/summary.json",
+      "sha256": "c4af627cba311ce75bc146d06c3532f752448abcd3ec5e9ea272ebf7035e7bf1"
+    },
+    {
+      "bytes": 3339662,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v15_20261014/summary.json",
+      "sha256": "671cfcfccffa5720b846a08d592e66516746ed11df4e5c6c6cdfb0704fba86c5"
+    },
+    {
+      "bytes": 4066,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v15_20261014/scores.tsv",
+      "sha256": "0b2a8c7177b78a739aa5fc2cb67303719e9bf28fdc08bc238ee586076c6f5317"
+    },
+    {
+      "bytes": 22120,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v15_20261014/three_kingdoms_arrival_admission.json",
+      "sha256": "ee60d4908c2d6a8407cb7a00d1cb374d8bf3a935105296a9983496230ca618d5"
+    },
+    {
+      "bytes": 9268,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/report_current_hillclimb.py",
+      "sha256": "b0209ff96f88ca0a01ce6fda79583b7d9c564241ba86d6fd6c996f9f012f154a"
+    },
+    {
+      "bytes": 27033,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/report_hillclimb.py",
+      "sha256": "1f9f93d2adde242e6e4132ef9b1cc25bc58572409652bbc5badd64c395be6b97"
+    },
+    {
+      "bytes": 18131,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/report_additional_hillclimb.py",
+      "sha256": "4a68323316f7c7f333b2164b347d19088349ea562fc21215d4040bba04bec144"
+    },
+    {
+      "bytes": 23273,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_membership_hillclimb.py",
+      "sha256": "1e96bcadd1e3feed68ef39534735227e84134d07d9858d409d7d98f1dabba966"
+    },
+    {
+      "bytes": 19025,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_full_search_hillclimb.py",
+      "sha256": "8c39fc7540d103a8e748533213a1deb941988ae70629f5f6880aaab2e83f9c74"
+    }
+  ],
+  "defaults_promoted": false,
+  "goal_completed": false,
+  "methods": 25,
+  "score_changes": [
+    [
+      "canonical_collection:arrival",
+      "ThreeKingdoms: Three Kingdoms F1",
+      null,
+      0.872133159469203
+    ]
+  ],
+  "status": "all_table_cells_read_back_only_verified_three_kingdoms_arrival_added",
+  "unrelated_methods_and_endpoint_values_unchanged": true
+}
