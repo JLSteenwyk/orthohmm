@@ -1,0 +1,13 @@
+{
+  "status": "prespecified_execution_continuation_of_original_cap_trial",
+  "parent_plan": "benchmark_tools/hillclimb_full_search_20261012.json",
+  "recovery_plan": "benchmark_tools/hillclimb_qfo_native_recovery_20261014.json",
+  "purpose": "Finish the originally planned, never-started fresh QfO cap400 arm after independently verified native/control-score recovery. This is not a new parameter hypothesis.",
+  "control_gate": "Require recovery job 24244 to be terminal COMPLETED 0:0 and its report to declare cached_native_control_and_all_six_scores_verified. Recheck native content and all raw score readback pins. Preserve the failed original control and failed scoring-only recovery unchanged.",
+  "scientific_source": "Original immutable 2ccc411520d9e63678178a50207ba1fca87bfbb3, original libraries, FASTAs, tools, runtime and settings. Fresh initial HMM search with cap400, initial min_total_hits=4, arrival collection, and the original inferred phylogeny pipeline. No shared-hit, canonical-order or boundary-clear changes.",
+  "execution": "Use a new output namespace and the original frozen native command with only output/metrics destinations changed. Enable PYTHONFAULTHANDLER=1. Run/scoring only after the control gate; never repeat successful initial inference or overwrite original reports. Retain any new failure for separate downstream recovery rather than silently restarting.",
+  "validation": "Use existing original-native source/input/harness and complete-gene/pair/confidence/checkpoint validators; independently read back all six QfO scores. Report deltas against recovered original control, not a different canonical configuration. Keep fresh variant costs separate from control's failed-full plus cached-recovery timings.",
+  "resources": {"host": "shared local Threadripper", "cpus": 32, "memory_gib": 128, "wall_limit": "10-00:00:00", "concurrency": 1},
+  "defaults_promoted": false,
+  "goal_completed": false
+}
