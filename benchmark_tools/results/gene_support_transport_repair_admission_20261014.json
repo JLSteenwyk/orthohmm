@@ -1,0 +1,53 @@
+{
+  "all_sampled_rooting_pairs_confidence_groups_unchanged": true,
+  "default": "legacy",
+  "defaults_promoted": false,
+  "families": 32,
+  "families_with_legacy_transport_errors": 24,
+  "goal_completed": false,
+  "independent_repeat": {
+    "bytes": 46865,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/gene_support_transport_independent_r1_v1_20261014.json",
+    "sha256": "67e6d6e79a060017c3093ce54cf645fcddc4fd8c31e6e744587c9082cbdd1923"
+  },
+  "limitations": [
+    "Same development-exposed sample; not independent biological validation.",
+    "Native sample replay precedes final satellite membership filtering. Mock full-stage integration verifies unchanged final native products; full real-dataset equivalence remains untested.",
+    "Invalid support remains unavailable; conflicting same-split values and collisions with nonnumeric node identifiers fail explicitly.",
+    "Repair is a prerequisite for support-aware methods, not an accuracy improvement or new score vector."
+  ],
+  "new_accuracy_scores": false,
+  "next_action": "Prespecify corrected gene-LCA evidence diagnostics for component functional pair changes, then choose one label-independent support-aware reconciliation hypothesis for an eight-endpoint experiment.",
+  "opt_in_cli": "--gene_tree_support_mode bipartition",
+  "primary": {
+    "bytes": 46868,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/gene_support_transport_r1_v1_20261014.json",
+    "sha256": "43f675b99b130afc173e063b6e9b02d766f9ed5c16c52f2772b0af67e5130b5b"
+  },
+  "raw_alignment_and_tree_cache_reused_in_integration_test": true,
+  "sampled_genes": 962,
+  "sampled_ortholog_pairs": 7970,
+  "scheduler": "JobID|State|ExitCode\n24228|COMPLETED|0:0\n",
+  "source_revision": "dc1413fcc59d354c7c109b642957602dc6ff5b70",
+  "status": "opt_in_support_repair_verified_on_prespecified_native_sample",
+  "supported_splits_restored": 841,
+  "tests": [
+    {
+      "passed": 139,
+      "report": {
+        "bytes": 19211,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/gene_support_transport_working_tests_v2_20261014.xml",
+        "sha256": "5d9a4d1e67f27370c437141ca79d124845061dd0a087dfc5f2793d3c51206fac"
+      }
+    },
+    {
+      "passed": 139,
+      "report": {
+        "bytes": 19211,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/gene_support_transport_frozen_tests_20261014.xml",
+        "sha256": "a654ff10d175094f867b562418e64cd0a537f25d1008eb06d4c754c1a445aac8"
+      }
+    }
+  ],
+  "validation_fixed_silent_mode_reset": true
+}
