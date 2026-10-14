@@ -1,0 +1,351 @@
+{
+  "accuracy_evaluated": false,
+  "baseline": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/native/orthohmm_phylogeny",
+  "candidate": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/defer_ambiguous/native/orthohmm_phylogeny",
+  "checked": [
+    {
+      "bytes": 34482213,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/native/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "a3233ad15bf3ac7acd6ebe9680eae27279a9bccaa3af060df13f542dec8d101f"
+    },
+    {
+      "bytes": 495189914,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/native/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+      "sha256": "83ff64afcc8ee292ad6bddb7b2e25903d9dfcec7d9475f1d7651dfcf6c4893e7"
+    },
+    {
+      "bytes": 557,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/native/orthohmm_phylogeny/reconciliation_summary.json",
+      "sha256": "e63a21fbb3057e20a9152f4cc8d3a73f34d6b166d200e424d2411a35c771dcb1"
+    },
+    {
+      "bytes": 34504688,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/defer_ambiguous/native/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "43e4dccc61963009024614c61bc87f0d47759654c4304c870606b187533cdd7e"
+    },
+    {
+      "bytes": 494946838,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/defer_ambiguous/native/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+      "sha256": "d6a749ab1daea434a6db0755c076efdc0b81d849326ddf773a19f8901264588e"
+    },
+    {
+      "bytes": 568,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/defer_ambiguous/native/orthohmm_phylogeny/reconciliation_summary.json",
+      "sha256": "06e6d905dd33bf8a1dccae7af7aa55b447cd3ff7d056202296e6292a6998003d"
+    },
+    {
+      "bytes": 7227,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_native_contrast_r1_v1_20261014/benchmark_tools/compare_native_membership.py",
+      "sha256": "609f10838c4a4d6a0b65b4e9b39a9f07842e48e31de421bfdfc7de4e857351f5"
+    },
+    {
+      "bytes": 8335,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_native_contrast_r1_v1_20261014/benchmark_tools/score_ygob_groups.py",
+      "sha256": "b18e86dafa7370b75386890d1c8acedf721b8d026a2cd150c0565645698eb51a"
+    },
+    {
+      "bytes": 3583,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/first_hit/native/orthohmm_phylogeny/species_tree.rooted.nwk",
+      "sha256": "86282f0278af26980ed30d281a64d4a83a59c3b95bd450404b2dae17c2a8f4fe"
+    },
+    {
+      "bytes": 3572,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_qfo_r1_v1_20261014/defer_ambiguous/native/orthohmm_phylogeny/species_tree.rooted.nwk",
+      "sha256": "77b3770a6792a07abb8b89415822d4996c151c0d34a3f0bf430ffd39e1eeb437"
+    }
+  ],
+  "defaults_promoted": false,
+  "genes": 984137,
+  "goal_completed": false,
+  "pair_membership": {
+    "added_records": 298346,
+    "affected_genes": 137462,
+    "baseline_duplicate_rows": 0,
+    "baseline_records": 5953050,
+    "baseline_unique_pairs": 5953050,
+    "candidate_duplicate_rows": 0,
+    "candidate_records": 5949625,
+    "candidate_unique_pairs": 5949625,
+    "common_records": 5651279,
+    "removed_records": 301771,
+    "semantic_multisets_equal": false
+  },
+  "pair_samples": {
+    "added": [
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A0B4J276|TVA25_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A087WRX6|A0A087WRX6_MOUSE",
+            "UP000000589_10090"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A0B4J277|TVA22_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A5F8G8D4|A0A5F8G8D4_MONDO",
+            "UP000002280_13616"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A0B4J2F2|SIK1B_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|F6SFP2|F6SFP2_CIOIN",
+            "UP000008144_7719"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A0K2S4Q6|CD3CH_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A0R4IEB0|A0A0R4IEB0_DANRE",
+            "UP000000437_7955"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A0K2S4Q6|CD3CH_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A3B3HCG6|A0A3B3HCG6_ORYLA",
+            "UP000001038_8090"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A0K2S4Q6|CD3CH_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A3B3I486|A0A3B3I486_ORYLA",
+            "UP000001038_8090"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A0K2S4Q6|CD3CH_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|W5MVQ9|W5MVQ9_LEPOC",
+            "UP000018468_7918"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A0K2S4Q6|CD3CH_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|W5MVS3|W5MVS3_LEPOC",
+            "UP000018468_7918"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A0P0VIP0|LRSK7_ORYSJ",
+            "UP000059680_39947"
+          ],
+          [
+            "tr|A0A1D6J4K7|A0A1D6J4K7_MAIZE",
+            "UP000007305_4577"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A0P0WY03|DAT12_ORYSJ",
+            "UP000059680_39947"
+          ],
+          [
+            "tr|A7F7I7|A7F7I7_SCLS1",
+            "UP000001312_665079"
+          ]
+        ]
+      }
+    ],
+    "removed": [
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A075B6T6|TVAL2_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "sp|P01739|TVA2_MOUSE",
+            "UP000000589_10090"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A075B6T6|TVAL2_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A075B604|A0A075B604_MOUSE",
+            "UP000000589_10090"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A075B6T6|TVAL2_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A075B620|A0A075B620_MOUSE",
+            "UP000000589_10090"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A075B6T6|TVAL2_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A075B6C1|A0A075B6C1_MOUSE",
+            "UP000000589_10090"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A075B6T6|TVAL2_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A075B6D1|A0A075B6D1_MOUSE",
+            "UP000000589_10090"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A075B6T6|TVAL2_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A0B4J1N1|A0A0B4J1N1_MOUSE",
+            "UP000000589_10090"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A075B6T6|TVAL2_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A0G2JEV5|A0A0G2JEV5_MOUSE",
+            "UP000000589_10090"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A075B6T6|TVAL2_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A0G2JFX6|A0A0G2JFX6_MOUSE",
+            "UP000000589_10090"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A075B6T6|TVAL2_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A0G2JUA1|A0A0G2JUA1_RAT",
+            "UP000002494_10116"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A075B6T6|TVAL2_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A0G2JWW1|A0A0G2JWW1_RAT",
+            "UP000002494_10116"
+          ]
+        ]
+      }
+    ]
+  },
+  "root_membership": {
+    "added_records": 12372,
+    "baseline_records": 365733,
+    "candidate_records": 366508,
+    "common_records": 354136,
+    "genes_in_changed_groups": 145471,
+    "removed_records": 11597,
+    "semantic_multisets_equal": false
+  },
+  "scope": "Ignores row order and arbitrary root/family IDs; preserves gene identity, pair species ownership and multiplicity. Confidence values and tree-event annotations are not compared. No claim of biological correctness or a uniquely identified causal stage.",
+  "species_tree_same_bytes": false,
+  "status": "native_membership_and_pair_multiset_contrast_completed"
+}

@@ -1,0 +1,33 @@
+{
+  "admitted_summary": {
+    "bytes": 4641978,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v23_20261014/summary.json",
+    "sha256": "f059b4fbbd6b1b339f385dea4d3e7c868c6d6153bbfad9a377227dc0c81f3677"
+  },
+  "contrast": {
+    "bytes": 9888,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/singleton_qfo_native_contrast_20261014.json",
+    "sha256": "220f00f7131bd55bd096e50ed0e1c13f692a5e05fb1c8794da277492a9b3e2e0"
+  },
+  "defaults_promoted": false,
+  "focused_tests_passed": 17,
+  "full_gene_universe": 984137,
+  "goal_completed": false,
+  "method_key": "singleton_tie:defer_ambiguous",
+  "native_products_match_admitted_hashes": true,
+  "pair_counts_match_admitted_coverage": true,
+  "root_group_counts_match_admitted_coverage": true,
+  "scope": "Descriptive prediction turnover only. No benchmark rescoring, labels, unique causal stage, or default promotion.",
+  "status": "qfo_native_contrast_bound_to_independently_admitted_control_and_variant",
+  "test_command": "env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /home/bizon/anaconda3/bin/python -m pytest -q tests/unit/test_compare_native_membership.py",
+  "test_source": {
+    "bytes": 6244,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_compare_native_membership.py",
+    "sha256": "10d212d7b239d56c94ac45c4e9da07ab9fa8bc603d3b5172fde976743dc11798"
+  },
+  "tested_main_source": {
+    "bytes": 7227,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/compare_native_membership.py",
+    "sha256": "609f10838c4a4d6a0b65b4e9b39a9f07842e48e31de421bfdfc7de4e857351f5"
+  }
+}
