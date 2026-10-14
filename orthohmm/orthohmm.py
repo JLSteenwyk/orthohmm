@@ -16,6 +16,7 @@ from .accuracy import (
     read_index_clusters,
     resolve_accuracy_profile,
     resolve_search_candidate_cap,
+    validate_search_result_order,
     write_accuracy_checkpoint,
 )
 from .args_processing import process_args
@@ -188,9 +189,10 @@ def _expand_phylogeny_candidates(
     return result
 
 
-def _collect_search_hit_arrays(search_results, evalue_threshold, gene_to_id):
+def _collect_search_hit_arrays(search_results, evalue_threshold, gene_to_id, *, result_order="arrival"):
     from .search.engine import IndexedSearchResults
 
+    validate_search_result_order(result_order)
     if isinstance(search_results, IndexedSearchResults):
         query_chunks = []
         target_chunks = []
@@ -203,7 +205,10 @@ def _collect_search_hit_arrays(search_results, evalue_threshold, gene_to_id):
             )
             for species, names in search_results.species_ids.items()
         }
-        for (query_species, target_species), result in search_results.items():
+        items = search_results.items()
+        if result_order=="canonical":
+            items = sorted(items,key=lambda item:item[0])
+        for (query_species, target_species), result in items:
             mask = result.evalues < evalue_threshold
             if not mask.any():
                 continue
@@ -226,6 +231,8 @@ def _collect_search_hit_arrays(search_results, evalue_threshold, gene_to_id):
             np.concatenate(score_chunks),
         )
 
+    if result_order!="arrival":
+        raise ValueError("Canonical collection requires indexed built-in search results")
     hit_queries = []
     hit_targets = []
     hit_scores = []
@@ -269,7 +276,8 @@ def _collect_edge_arrays(edges, gene_to_id):
 
 
 def _refine_cluster_file(output_directory, gene_lengths, search_results, edges,
-                         evalue_threshold, refinement_profile="default", **kwargs):
+                         evalue_threshold, refinement_profile="default", search_result_order="arrival", **kwargs):
+    validate_search_result_order(search_result_order)
     if search_results is None:
         return {}
 
@@ -315,6 +323,7 @@ def _refine_cluster_file(output_directory, gene_lengths, search_results, edges,
             search_results,
             evalue_threshold,
             gene_to_id,
+            **({"result_order":search_result_order} if search_result_order!="arrival" else {}),
         )
         edge_queries, edge_targets, edge_scores = _collect_edge_arrays(edges, gene_to_id)
     collection_finished = time.perf_counter()
@@ -451,6 +460,11 @@ def _execute(
             "and satellite_v2 candidates"
         )
     accuracy_config = resolve_accuracy_profile(accuracy_profile)
+    search_result_order = validate_search_result_order(kwargs.pop("search_result_order","arrival"))
+    if search_result_order!="arrival" and (
+        accuracy_config.name!="high_sensitivity" or search_mode!="builtin" or start is not None
+    ):
+        raise ValueError("Canonical search result collection requires fresh built-in high_sensitivity inference")
     deferred_copy_splitting = (
         isinstance(refinement_profile, str) and refinement_profile.lower() in PHYLOGENY_DEFERRED_PROFILES
     )
@@ -506,6 +520,7 @@ def _execute(
         accuracy_profile=accuracy_config.name,
         search_kmer_k=accuracy_config.kmer_k,
         search_max_candidates_per_query=search_candidate_cap,
+        search_result_order=search_result_order,
         leiden_seed=accuracy_config.leiden_seed,
         cpu_budget=cpu,
     )
@@ -680,6 +695,7 @@ def _execute(
                 search_results,
                 evalue_threshold,
                 gene_to_id,
+                **({"result_order":search_result_order} if search_result_order!="arrival" else {}),
             )
             checkpoint_path = write_accuracy_checkpoint(
                 output_directory,
@@ -829,6 +845,7 @@ def _execute(
             edges,
             evalue_threshold,
             refinement_profile=refinement_profile,
+            **({"search_result_order":search_result_order} if search_result_order!="arrival" else {}),
         )
     metrics.add_metadata(refinement_substages_s=refinement_substages)
     candidate_membership_constraints = None

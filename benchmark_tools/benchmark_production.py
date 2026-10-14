@@ -100,7 +100,10 @@ def parse_args(argv=None):
         default="midpoint",
     )
     parser.add_argument("--gene-tree-support-mode", choices=("legacy", "bipartition"), default="legacy")
+    parser.add_argument("--search-result-order", choices=("arrival","canonical"), default="arrival")
     args = parser.parse_args(argv)
+    if args.search_result_order!="arrival" and args.accuracy_profile!="high_sensitivity":
+        parser.error("--search-result-order canonical requires --accuracy-profile high_sensitivity")
     if args.gene_tree_support_mode != "legacy" and args.phylogeny != "reconcile":
         parser.error("--gene-tree-support-mode bipartition requires --phylogeny reconcile")
     return args
@@ -152,6 +155,8 @@ def main(argv=None) -> int:
             "--search_max_candidates_per_query",
             str(args.search_max_candidates_per_query),
         ])
+    if args.search_result_order!="arrival":
+        command.extend(["--search_result_order",args.search_result_order])
     if not args.full_output:
         command.extend(["--stop", "infer"])
     if args.phylogeny == "reconcile":

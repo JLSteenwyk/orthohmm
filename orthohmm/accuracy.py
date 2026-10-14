@@ -27,6 +27,12 @@ DEFAULT_ACCURACY_PROFILE = "standard"
 ACCURACY_CHECKPOINT_DIRECTORY = "high_sensitivity_checkpoint"
 
 
+def validate_search_result_order(order: str) -> str:
+    if not isinstance(order,str) or order not in {"arrival","canonical"}:
+        raise ValueError(f"Unsupported search result collection order: {order!r}")
+    return order
+
+
 @dataclass(frozen=True)
 class AccuracyProfile:
     """Parameters that change sequence-search sensitivity and graph inference."""

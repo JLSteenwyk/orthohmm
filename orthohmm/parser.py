@@ -135,6 +135,9 @@ def create_parser() -> ArgumentParser:
         --gene_tree_support_mode <mode>              gene-tree support transport: legacy or bipartition
                                                     (default: legacy)
 
+        --search_result_order <arrival, canonical>   high-sensitivity hit collection order
+                                                    (default: arrival)
+
         -------------------------------------
         | Detailed explanation of arguments | 
         -------------------------------------
@@ -475,6 +478,10 @@ def create_parser() -> ArgumentParser:
         default="midpoint",
         help=SUPPRESS,
         metavar="species_tree_rooting",
+    )
+
+    optional.add_argument(
+        "--search_result_order", choices=["arrival","canonical"], default="arrival", help=SUPPRESS,
     )
 
     optional.add_argument(

@@ -14,7 +14,7 @@ from .helpers import (
     SubstitutionMatrix,
 )
 from .files import fetch_fasta_files
-from .accuracy import resolve_accuracy_profile, resolve_search_candidate_cap
+from .accuracy import resolve_accuracy_profile, resolve_search_candidate_cap, validate_search_result_order
 from .refinement import PHYLOGENY_CANDIDATE_REFINEMENT_PROFILES
 from .phylogeny import (
     PhylogenyConfig,
@@ -123,6 +123,15 @@ def process_args(args) -> dict:
     refinement_profile = getattr(args, "refinement_profile", None) or "default"
     accuracy_profile = getattr(args, "accuracy_profile", None) or "standard"
     search_cap_override = getattr(args, "search_max_candidates_per_query", None)
+    try:
+        search_result_order = validate_search_result_order(getattr(args,"search_result_order","arrival"))
+        if search_result_order!="arrival" and (
+            accuracy_profile!="high_sensitivity" or search_mode!="builtin" or args.start
+        ):
+            raise ValueError("Canonical search result collection requires fresh built-in high_sensitivity inference")
+    except ValueError as exc:
+        logger.warning(str(exc))
+        sys.exit(1)
     if search_cap_override is not None:
         try:
             search_cap_override = resolve_search_candidate_cap(
@@ -257,6 +266,7 @@ def process_args(args) -> dict:
         species_tree_rooting=phylogeny_config.species_tree_rooting,
         satellite_membership_rule=phylogeny_config.satellite_membership_rule,
         gene_tree_support_mode=phylogeny_config.gene_tree_support_mode,
+        **({"search_result_order":search_result_order} if search_result_order!="arrival" else {}),
         **({"search_max_candidates_per_query": search_cap_override}
            if search_cap_override is not None else {}),
     )

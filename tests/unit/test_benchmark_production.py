@@ -7,7 +7,8 @@ from benchmark_tools import benchmark_production
 
 @pytest.mark.parametrize("cap", [None, 0, 400])
 @pytest.mark.parametrize("support_mode", ["legacy", "bipartition"])
-def test_main_passes_accuracy_profile_to_production_cli(tmp_path, monkeypatch, cap, support_mode):
+@pytest.mark.parametrize("result_order", ["arrival", "canonical"])
+def test_main_passes_accuracy_profile_to_production_cli(tmp_path, monkeypatch, cap, support_mode, result_order):
     input_directory = tmp_path / "input"
     input_directory.mkdir()
     (input_directory / "species.faa").write_text(">gene\nACDE\n")
@@ -33,12 +34,17 @@ def test_main_passes_accuracy_profile_to_production_cli(tmp_path, monkeypatch, c
         "--accuracy-profile", "high_sensitivity",
         "--phylogeny", "reconcile",
         "--gene-tree-support-mode", support_mode,
+        "--search-result-order", result_order,
         *([] if cap is None else ["--search-max-candidates-per-query", str(cap)]),
     ]) == 0
 
     command = captured["command"]
     profile_index = command.index("--accuracy_profile")
     assert command[profile_index + 1] == "high_sensitivity"
+    if result_order=="arrival":
+        assert "--search_result_order" not in command
+    else:
+        assert command[command.index("--search_result_order")+1]==result_order
     if support_mode == "legacy":
         assert "--gene_tree_support_mode" not in command
     else:
