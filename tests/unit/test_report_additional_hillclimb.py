@@ -30,7 +30,7 @@ def panel(tmp_path, monkeypatch, status="fresh_original_cap400_running"):
     unrelated = {"key": "other", "label": "other", "scores": {}, "cells": []}
     write_json(parent, {"score_table": record(table), "methods": [unrelated,
         {"key": "full_search:cap400", "label": "cap400", "scores": {}, "cells": [failed]}],
-        "round_screening": {}, "limitations": []})
+        "round_screening": {}, "limitations": [], "reporter_revision": "earlier_reporter"})
     monkeypatch.setattr(reporter, "runtime", lambda: {"files": []})
     return root, parent, unrelated, failed
 
@@ -42,6 +42,8 @@ def test_pending_producer_scores_are_not_admitted(tmp_path, monkeypatch):
     assert result["methods"][0] == unrelated
     assert result["methods"][1]["scores"] == {}
     assert "NA" in (tmp_path / "out/scores.tsv").read_text()
+    assert "reporter_revision" not in result
+    assert result["reporter_files"][0] == record(reporter.__file__)
 
 
 def test_completed_continuation_keeps_original_unrun_cell(tmp_path, monkeypatch):

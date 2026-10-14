@@ -174,6 +174,12 @@ def build(repo, parent_path, output, continuation_root=None, shared_root=None):
             writer.writerow([method["label"], *(method["scores"].get(k, "NA") for k in ENDPOINTS),
                              set(method["scores"]) == set(ENDPOINTS)])
     result = deepcopy(parent)
+    # Earlier reporting-code identities remain in the pinned parent, not this run.
+    result.pop("reporter_revision", None)
+    result["reporter_files"] = [record(Path(__file__).parent / name) for name in (
+        "report_additional_hillclimb.py", "report_current_hillclimb.py", "report_hillclimb.py",
+        "recover_full_qfo_search.py", "run_full_search_hillclimb.py", "run_membership_hillclimb.py",
+        "run_shared_hit_pipeline.py")]
     result.update(status="incremental_separate_trial_readback_no_default_promotion", parent_readback=record(parent_path),
                   reporter_source=record(__file__), methods=methods, score_table=record(output / "scores.tsv"),
                   additional_trial_observations=observations, defaults_promoted=False, goal_completed=False)
