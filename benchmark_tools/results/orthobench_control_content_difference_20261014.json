@@ -1,0 +1,98 @@
+{
+  "added_pairs": [
+    [
+      "ENSDARP00000067948",
+      "Danio_rerio.GRCz11.pep.all",
+      "ENSPTRP00000070234",
+      "Pan_troglodytes.Pan_tro_3.0.pep.all"
+    ],
+    [
+      "ENSGALP00000065924",
+      "Gallus_gallus.GRCg6a.pep.all",
+      "ENSPTRP00000070234",
+      "Pan_troglodytes.Pan_tro_3.0.pep.all"
+    ],
+    [
+      "ENSPTRP00000070234",
+      "Pan_troglodytes.Pan_tro_3.0.pep.all",
+      "ENSRNOP00000028779",
+      "Rattus_norvegicus.Rnor_6.0.pep.all"
+    ],
+    [
+      "ENSPTRP00000070234",
+      "Pan_troglodytes.Pan_tro_3.0.pep.all",
+      "ENSTNIP00000011624",
+      "Tetraodon_nigroviridis.TETRAODON8.pep.all"
+    ],
+    [
+      "ENSPTRP00000070234",
+      "Pan_troglodytes.Pan_tro_3.0.pep.all",
+      "FBpp0091127",
+      "Drosophila_melanogaster.BDGP6.28.pep.all"
+    ],
+    [
+      "ENSPTRP00000070234",
+      "Pan_troglodytes.Pan_tro_3.0.pep.all",
+      "WBGene00001915.1",
+      "Caenorhabditis_elegans.WBcel235.pep.all"
+    ]
+  ],
+  "defaults_promoted": false,
+  "fresh_control_score": {
+    "OrthoBench F1": 0.7410607351873405
+  },
+  "goal_completed": false,
+  "inputs": [
+    {
+      "bytes": 100248192,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/cells/p1_c1_r1/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+      "sha256": "bfbe3f2707a4a30cd1a7ad404dd9fbf6b3973e98eeeeea8411c8935277e9fb72"
+    },
+    {
+      "bytes": 100248198,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/OrthoBench/control100/output/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+      "sha256": "4987854aa79ef4affe2c3c15997b4111885849ffa69b65ed1f3fce9ff05920d8"
+    }
+  ],
+  "native_pair_count": 966439,
+  "removed_pairs": [
+    [
+      "ENSCAFP00000036635",
+      "Canis_familiaris.CanFam3.1.pep.all",
+      "ENSDARP00000067948",
+      "Danio_rerio.GRCz11.pep.all"
+    ],
+    [
+      "ENSCAFP00000036635",
+      "Canis_familiaris.CanFam3.1.pep.all",
+      "ENSGALP00000065924",
+      "Gallus_gallus.GRCg6a.pep.all"
+    ],
+    [
+      "ENSCAFP00000036635",
+      "Canis_familiaris.CanFam3.1.pep.all",
+      "ENSRNOP00000028779",
+      "Rattus_norvegicus.Rnor_6.0.pep.all"
+    ],
+    [
+      "ENSCAFP00000036635",
+      "Canis_familiaris.CanFam3.1.pep.all",
+      "ENSTNIP00000011624",
+      "Tetraodon_nigroviridis.TETRAODON8.pep.all"
+    ],
+    [
+      "ENSCAFP00000036635",
+      "Canis_familiaris.CanFam3.1.pep.all",
+      "FBpp0091127",
+      "Drosophila_melanogaster.BDGP6.28.pep.all"
+    ],
+    [
+      "ENSCAFP00000036635",
+      "Canis_familiaris.CanFam3.1.pep.all",
+      "WBGene00001915.1",
+      "Caenorhabditis_elegans.WBcel235.pep.all"
+    ]
+  ],
+  "scope": "Content comparison only. Historical versus fresh runs are not a controlled CPP-flag contrast; no causal attribution to arrival order, confidence support or kernel clearing. Both used full clearing. Full-pipeline equivalence must compare complete native products rather than reference F1 alone.",
+  "status": "retained_and_fresh_controls_have_same_reference_f1_but_nonidentical_native_pairs"
+}

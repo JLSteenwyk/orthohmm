@@ -1,0 +1,217 @@
+{
+  "original": {
+    "bytes": 9021,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hit_arrival_order_r1_v2_20261014/report.json",
+    "sha256": "29a1da2b2c02d49d94dac5735e6f09e38464d3f645c6410bd744a6297debc0b1"
+  },
+  "report": {
+    "checked": [
+      {
+        "bytes": 137238,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/OrthoBench/results.json",
+        "sha256": "3a72407cb0749cac3b088d44c6ed8adff9d4a1a21aacbe6b762385efad8fdf10"
+      },
+      {
+        "bytes": 838335,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/execution_plan.json",
+        "sha256": "2b9cdb799330d7a89e95bb437ea9910b638094394aa0cc693ef32ea0fbff54eb"
+      },
+      {
+        "bytes": 803,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/OrthoBench/control100/output/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+        "sha256": "b1765915d2c4ef68549a2f636189c242ce8d15403fbc1452089db4622f0d2176"
+      },
+      {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/OrthoBench/control100/output/orthohmm_working_res/high_sensitivity_checkpoint/gene_names.txt",
+        "sha256": "7d00e70589c72c747464e5b6c9840c2744be93ba7752c8fabcd2222bffdca090"
+      },
+      {
+        "bytes": 1005640,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/OrthoBench/control100/output/orthohmm_working_res/high_sensitivity_checkpoint/gene_to_species.npy",
+        "sha256": "ec7f34055237e77d4b84150640cb94ae12589bde32339cca9c8b1f726a68e7ff"
+      },
+      {
+        "bytes": 73946160,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/OrthoBench/control100/output/orthohmm_working_res/high_sensitivity_checkpoint/hit_queries.npy",
+        "sha256": "18739407cf99a024e94c1e8e5d7d555fc226727adac02757e5680d7748b7ab7d"
+      },
+      {
+        "bytes": 147892192,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/OrthoBench/control100/output/orthohmm_working_res/high_sensitivity_checkpoint/hit_scores.npy",
+        "sha256": "eddb1b709d804aec26d6e344f1493430d009f244948698e148522a7002201391"
+      },
+      {
+        "bytes": 73946160,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/OrthoBench/control100/output/orthohmm_working_res/high_sensitivity_checkpoint/hit_targets.npy",
+        "sha256": "0530515f272c3096c4aae14c05f1ead7b982e2e8210985ee57b7eb70b085be44"
+      }
+    ],
+    "checkpoint_audit": {
+      "accuracy_evaluated": false,
+      "auditor": {
+        "bytes": 4044,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/hit_arrival_order_r1_v2_20261014/benchmark_tools/audit_accuracy_checkpoint.py",
+        "sha256": "b71fa9cf1d2cb954206e61179535d7e22fc39946c4de97af6fa45533f7eb9643"
+      },
+      "limitations": "Checks hashes and numeric integrity, not FASTA/source equivalence, hit completeness or duplicate ordered pairs.",
+      "manifest": {
+        "bytes": 803,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/OrthoBench/control100/output/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+        "sha256": "b1765915d2c4ef68549a2f636189c242ce8d15403fbc1452089db4622f0d2176"
+      },
+      "schema_version": 1,
+      "status": "numeric_checkpoint_verified",
+      "summary": {
+        "gene_names_lexically_sorted": true,
+        "genes": 251378,
+        "hits": 18486508,
+        "maximum_score": 7.36,
+        "minimum_score": 0.005408973225839008,
+        "nonpositive_scores": 0,
+        "self_hits": 251135,
+        "species": 12
+      }
+    },
+    "defaults_promoted": false,
+    "goal_completed": false,
+    "initial_clusters": 58772,
+    "initial_rbnh_graph": {
+      "arrays": [
+        "254c3c2edd6d43911478a86307146eb1e06ef50385f7399e4c4ecd84826da1a9",
+        "6e694beeea64d06d0452c760ff5f87f66196cbe1487218b64c8b00f27580772f",
+        "69f06150d376d52a2d7e9e3fa128cf3c0e81c1fbbf45687c42cb30d72ea86d0e"
+      ],
+      "edges": 1803122
+    },
+    "job_id": "24236",
+    "rows": [
+      {
+        "assigned_singletons": 16282,
+        "changed_assignments": [],
+        "mode": "arrival",
+        "rbnh_graph_unchanged": true,
+        "singleton_edges": {
+          "arrays": [
+            "0485181d28bd3725b6957cb30ab50f36a42970b0aacf029580989c4e2c517d82",
+            "69d0eb4e7e668e0b3215823e2d8f12b06f7d6f104cc38b1f1c4149465d1c792a",
+            "acaeb22691ff6210dd4feb85c705b923466a980d48fda2bb44e5e5cda85771b6"
+          ],
+          "edges": 137482
+        }
+      },
+      {
+        "assigned_singletons": 16282,
+        "changed_assignments": [
+          {
+            "gene": "ENSCINP00000030798",
+            "original_cluster": 7216,
+            "permuted_cluster": 630
+          }
+        ],
+        "mode": "canonical_blocks",
+        "rbnh_graph_unchanged": true,
+        "singleton_edges": {
+          "arrays": [
+            "75da25fea9a1173e1b00e263142bba58c69fd434108479839654f395d6c2e803",
+            "d58969f7d308853ef8f813f41c4ccfcdab97ab574d48bdef76a8bf3ce6935b9e",
+            "1cad3436de0603cf8ca6e667dd507b1d68c3af5eedc9ef93324e5f0d6a3eabdb"
+          ],
+          "edges": 137490
+        }
+      },
+      {
+        "assigned_singletons": 16282,
+        "changed_assignments": [
+          {
+            "gene": "FBpp0308599",
+            "original_cluster": 5450,
+            "permuted_cluster": 1167
+          }
+        ],
+        "mode": "reversed_blocks",
+        "rbnh_graph_unchanged": true,
+        "singleton_edges": {
+          "arrays": [
+            "60c403a7da4b849eb55a0804f4c8ee3b640773bc590c2fb9204500f63e4e28b9",
+            "3892ce43cc70031b215ad7046eba0e06182427c04a777e77a2be6fb2de2efe44",
+            "46efc9c1aebb5d66d911c8c4cd77fa6815c63d147da6e75c0523f28922f3836e"
+          ],
+          "edges": 137482
+        }
+      }
+    ],
+    "runtime": {
+      "files": [
+        {
+          "bytes": 17157264,
+          "path": "/home/bizon/anaconda3/bin/python3.10",
+          "sha256": "ddd8126d3a409c6ad46c718225d853214d0c9dba3657123514172951fa79058b"
+        },
+        {
+          "bytes": 22147,
+          "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numpy/__init__.py",
+          "sha256": "6ae17b070c0f70a8e3cad89a510a256942e5a1f37ea5feb120cec167ed2a6236"
+        },
+        {
+          "bytes": 8609,
+          "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numba/__init__.py",
+          "sha256": "eda36e2eb85c8042b5d759df4428431417f96c2d7b099a44bf68af79512f5b7a"
+        },
+        {
+          "bytes": 461,
+          "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/llvmlite/__init__.py",
+          "sha256": "fd4c05b036b6c225f1d562f1d17515d9692b3d9a50c235d3478b0f48d4369c33"
+        },
+        {
+          "bytes": 5399,
+          "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/Bio/__init__.py",
+          "sha256": "ab472bf3c4a19d6231003a749ddd02a1c7a0aae99efb8fcdc50e372d3321c9bd"
+        }
+      ],
+      "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+      "versions": {
+        "Bio": "1.86",
+        "llvmlite": "0.47.0",
+        "numba": "0.65.0",
+        "numpy": "2.2.6"
+      }
+    },
+    "scope": "Unchanged initial graph/singleton helpers on a fixed accepted-hit checkpoint. No full inference, new scores, historical-difference causal attribution or default promotion.",
+    "sources": [
+      {
+        "bytes": 14777,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/hit_arrival_order_r1_v2_20261014/orthohmm/accuracy.py",
+        "sha256": "1d3356e2a10581b170ea96402c3bce06b71f86b65e723044bfaafe8d5b1c69e3"
+      },
+      {
+        "bytes": 10166,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/hit_arrival_order_r1_v2_20261014/orthohmm/externals.py",
+        "sha256": "5304b4190b01a53c7c4e3235f9d1df9e7eff1f01d09633d07750103487268115"
+      },
+      {
+        "bytes": 1411,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/hit_arrival_order_r1_v2_20261014/orthohmm/leiden_worker.py",
+        "sha256": "7d6d9fa5827bd99dcce28d2248688bbeb762b4b547bbc4e7491c16f0e2090c41"
+      },
+      {
+        "bytes": 8835,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/hit_arrival_order_r1_v2_20261014/benchmark_tools/audit_hit_arrival_order.py",
+        "sha256": "17cbb4eaa92d1410a3be58c5a4e7df50b2bdf4bff7d06efb32d72dc94bcf3d22"
+      },
+      {
+        "bytes": 2791,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/hit_arrival_order_r1_v2_20261014/benchmark_tools/hillclimb_hit_arrival_order_audit_20261014.json",
+        "sha256": "52fc805286a29dd81b434f1f560f45e6241a3e1964d72391c44ff9f9e4e54730"
+      }
+    ],
+    "species_pair_blocks": 144,
+    "status": "complete_native_hit_block_order_audit",
+    "toy": {
+      "original_assignment": 1,
+      "reversed_assignment": 2,
+      "same_input_hits": true
+    },
+    "wall_s": 37.80888675106689
+  }
+}

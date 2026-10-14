@@ -1,0 +1,66 @@
+{
+  "assigned_singletons": 16282,
+  "changed_assignments": {
+    "arrival": [],
+    "canonical_blocks": [
+      {
+        "gene": "ENSCINP00000030798",
+        "original_cluster": 7216,
+        "permuted_cluster": 630
+      }
+    ],
+    "reversed_blocks": [
+      {
+        "gene": "FBpp0308599",
+        "original_cluster": 5450,
+        "permuted_cluster": 1167
+      }
+    ]
+  },
+  "checkpoint_genes": 251378,
+  "checkpoint_hits": 18486508,
+  "defaults_promoted": false,
+  "failed_attempt": {
+    "bytes": 7014,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hit_arrival_order_r1_v1_20261014/report.json",
+    "sha256": "d03abb1c74054dc24a8e66c058f031d38b5f6d8dbb6523ca01b27287cf801b5a"
+  },
+  "failed_attempt_error": "[Errno 2] No such file or directory: '/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hit_arrival_order_r1_v1_20261014/orthohmm_working_res/orthohmm_edges_clustered.txt'",
+  "goal_completed": false,
+  "independent_winner_readback": {
+    "bytes": 1983,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hit_arrival_order_independent_winners_20261014.json",
+    "sha256": "58a07af6940a3db3b277fb45421eb4e5f029fca0998443e2773fac9c6c910e7a"
+  },
+  "initial_clusters": 58772,
+  "initial_rbnh_edges": 1803122,
+  "interpretation": "Accepted hit contents and RBNH graph remain the same, but exact-score singleton ties across species-pair blocks can depend on asynchronous arrival order. Independent winner arithmetic reproduces both affected gene decisions. This is a reproducibility finding, not proof that it caused the separately observed historical-versus-fresh native pair differences.",
+  "new_accuracy_scores": false,
+  "next_action": "Prespecify an opt-in canonical species-pair collection order, preserving within-pair hit order and exact hit contents. Test the collector and complete downstream replays across endpoints before default promotion; keep this mechanism separate from the CPP clearing flag when validating full-pipeline equivalence.",
+  "scheduler": "JobID|State|ExitCode\n24235|FAILED|1:0\n24236|COMPLETED|0:0\n",
+  "species_pair_blocks": 144,
+  "status": "real_hit_arrival_order_sensitivity_verified_without_inference_changes",
+  "successful_capture": {
+    "bytes": 9715,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hit_arrival_order_native_capture_20261014.json",
+    "sha256": "f37b4895a17b3ec8de1618241d51c75e660a9ddfb6c186b08710e9bdbed06274"
+  },
+  "tests": [
+    {
+      "passed": 20,
+      "report": {
+        "bytes": 2767,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hit_arrival_order_working_tests_v3_20261014.xml",
+        "sha256": "cc2e176c90276275eae8fea5f12c0d297b27e43809f286b98310e198f762d198"
+      }
+    },
+    {
+      "passed": 20,
+      "report": {
+        "bytes": 2767,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hit_arrival_order_frozen_tests_v2_20261014.xml",
+        "sha256": "4e221b330ea3a8e54b0734ed3cbc7779f10139aac4eb6f72a5b49764981d9090"
+      }
+    }
+  ]
+}

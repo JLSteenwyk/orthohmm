@@ -1,0 +1,46 @@
+{
+  "defaults_promoted": false,
+  "goal_completed": false,
+  "method": "Compute per-query maxima over eligible checkpoint hits, then select winners using original row rank or (species-pair block key, within-block row rank). This does not call the production singleton-assignment helper or permute/recompute edge graphs.",
+  "partition_observed_for_readback": {
+    "bytes": 4567716,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hit_arrival_order_r1_v2_20261014/orthohmm_working_res/orthohmm_edges_clustered.txt",
+    "sha256": "b87ffc233f1862ab5ac958de18e7f13d5377ad73613cdd6a595b4ef45f0b96d7"
+  },
+  "producer": {
+    "bytes": 9021,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hit_arrival_order_r1_v2_20261014/report.json",
+    "sha256": "29a1da2b2c02d49d94dac5735e6f09e38464d3f645c6410bd744a6297debc0b1"
+  },
+  "rows": [
+    {
+      "assigned_singletons": 16282,
+      "changed_assignments": [],
+      "mode": "arrival"
+    },
+    {
+      "assigned_singletons": 16282,
+      "changed_assignments": [
+        {
+          "gene": "ENSCINP00000030798",
+          "original_cluster": 7216,
+          "permuted_cluster": 630
+        }
+      ],
+      "mode": "canonical_blocks"
+    },
+    {
+      "assigned_singletons": 16282,
+      "changed_assignments": [
+        {
+          "gene": "FBpp0308599",
+          "original_cluster": 5450,
+          "permuted_cluster": 1167
+        }
+      ],
+      "mode": "reversed_blocks"
+    }
+  ],
+  "scope": "Winner arithmetic and affected-gene verification on the retained initial partition. The partition was fingerprinted at readback, not pinned in the original producer report. RBNH invariance is the producer result, not independently recomputed by this arithmetic check. No causal attribution to historical pair differences, new accuracy scores or default promotion.",
+  "status": "all_native_singleton_winner_changes_independently_reconstructed"
+}
