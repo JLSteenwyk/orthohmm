@@ -1,0 +1,89 @@
+{
+  "all_25_score_vectors_unchanged": true,
+  "defaults_promoted": false,
+  "goal_completed": false,
+  "inputs_and_reporter_pins": [
+    {
+      "bytes": 3321770,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v14_20261014/summary.json",
+      "sha256": "c4af627cba311ce75bc146d06c3532f752448abcd3ec5e9ea272ebf7035e7bf1"
+    },
+    {
+      "bytes": 4052,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v14_20261014/scores.tsv",
+      "sha256": "0637725f2922e1192b35f31c10b72132a28a175d3b03df0448b941c7cf4b2310"
+    },
+    {
+      "bytes": 3324645,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/canonical_qfo_recovery_reporter_pending_probe_20261014/summary.json",
+      "sha256": "b2edd8a83a3370e1b65d366f6429bccfd7b47828a3422184ec9644bf51973b97"
+    },
+    {
+      "bytes": 4052,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/canonical_qfo_recovery_reporter_pending_probe_20261014/scores.tsv",
+      "sha256": "0637725f2922e1192b35f31c10b72132a28a175d3b03df0448b941c7cf4b2310"
+    },
+    {
+      "bytes": 82732838,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/execution_plan.json",
+      "sha256": "139486d2f471ba1f324be2e2b8a2c3704995b868973068eafb3d7526960b8b7e"
+    },
+    {
+      "bytes": 304745,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/failed_parent_snapshot.json",
+      "sha256": "9f61a81597c57046382f14cd63e6906b518839643cc19cbdd5f09f1956dc4d4b"
+    },
+    {
+      "bytes": 17949,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/report_additional_hillclimb.py",
+      "sha256": "96d1bfb431438c75bb5e016f4b27ab7b59dd3054418e70021d7d405482c7630e"
+    },
+    {
+      "bytes": 9268,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/report_current_hillclimb.py",
+      "sha256": "b0209ff96f88ca0a01ce6fda79583b7d9c564241ba86d6fd6c996f9f012f154a"
+    },
+    {
+      "bytes": 27033,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/report_hillclimb.py",
+      "sha256": "1f9f93d2adde242e6e4132ef9b1cc25bc58572409652bbc5badd64c395be6b97"
+    },
+    {
+      "bytes": 19766,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/recover_full_qfo_search.py",
+      "sha256": "cd4c06039869b94cb8f38ddff49710b82c2720634a1c2652b2d68914e4f9aed5"
+    },
+    {
+      "bytes": 19025,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_full_search_hillclimb.py",
+      "sha256": "8c39fc7540d103a8e748533213a1deb941988ae70629f5f6880aaab2e83f9c74"
+    },
+    {
+      "bytes": 23273,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_membership_hillclimb.py",
+      "sha256": "1e96bcadd1e3feed68ef39534735227e84134d07d9858d409d7d98f1dabba966"
+    },
+    {
+      "bytes": 12398,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_shared_hit_pipeline.py",
+      "sha256": "8de682541bbd24e50e536906c03aba59f8921d579bc40f262191a4b69fdd4535"
+    },
+    {
+      "bytes": 9611,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/recover_canonical_qfo_scoring.py",
+      "sha256": "35a2211f56942ef0081330a6b51c1fbd74c10015b0039978d7d2991250c8fd31"
+    },
+    {
+      "bytes": 19445,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_canonical_downstream.py",
+      "sha256": "6950107a2dabfc9e0e4644763bb6271d7cb4672bf042159f7d2087e67666b292"
+    }
+  ],
+  "methods": 25,
+  "no_recovery_producer_report_yet": true,
+  "original_failure_preserved_in_immutable_recovery_snapshot": true,
+  "pending_recovery_supplies_no_scores": true,
+  "scope": "Reporter integration probe with no producer report yet, not new benchmark scores or completed recovery. Failure will join the table once a producer report is available.",
+  "score_table_bytes_unchanged": true,
+  "status": "pending_recovery_preserves_all_existing_scores_without_inferred_execution"
+}

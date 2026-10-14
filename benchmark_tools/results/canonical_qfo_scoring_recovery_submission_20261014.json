@@ -1,0 +1,47 @@
+{
+  "defaults_promoted": false,
+  "execution_plan": {
+    "bytes": 82732838,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/execution_plan.json",
+    "sha256": "139486d2f471ba1f324be2e2b8a2c3704995b868973068eafb3d7526960b8b7e"
+  },
+  "goal_completed": false,
+  "job_id": "24246",
+  "native_coverage": {
+    "genes": 984137,
+    "groups": 365733,
+    "pairs": 5953050,
+    "species": 78
+  },
+  "native_products": {
+    "orthohmm_pairwise_orthologs.tsv": {
+      "bytes": 495189914,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/QfO/canonical/native/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+      "sha256": "83ff64afcc8ee292ad6bddb7b2e25903d9dfcec7d9475f1d7651dfcf6c4893e7"
+    },
+    "orthohmm_pairwise_orthologs_confidence.tsv": {
+      "bytes": 530834841,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/QfO/canonical/native/orthohmm_phylogeny/orthohmm_pairwise_orthologs_confidence.tsv",
+      "sha256": "040175131852c37a5e7990ba3e76f4774af765d76efcaf407d9424f7248a8ff6"
+    },
+    "orthohmm_root_hogs.tsv": {
+      "bytes": 34482213,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_downstream_r1_v1_20261014/QfO/canonical/native/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "a3233ad15bf3ac7acd6ebe9680eae27279a9bccaa3af060df13f542dec8d101f"
+    }
+  },
+  "original_failed_status_preserved": true,
+  "original_job": "24240",
+  "protocol": {
+    "bytes": 1564,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_qfo_scoring_recovery_r1_v1_20261014/benchmark_tools/hillclimb_canonical_qfo_scoring_recovery_20261014.json",
+    "sha256": "52a131cee74a336768f2e36eb854a8b6f23c66e39b10559491ebb54365aac126"
+  },
+  "scheduler": "JobId=24246 JobName=ohmm-canonical-qfo-score\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=PENDING Reason=Resources Dependency=(null)\n   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:00 TimeLimit=1-00:00:00 TimeMin=N/A\n   SubmitTime=2026-10-14T05:18:50 EligibleTime=2026-10-14T05:18:50\n   AccrueTime=2026-10-14T05:18:50\n   StartTime=2026-10-14T13:19:36 EndTime=2026-10-15T13:19:36 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-14T05:18:53 Scheduler=Main\n   Partition=gpu AllocNode:Sid=bizon-link:874098\n   ReqNodeList=bizon ExcNodeList=(null)\n   NodeList= SchedNodeList=bizon\n   NumNodes=1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=8,mem=64G,node=1,billing=8\n   AllocTRES=(null)\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=8 MinMemoryNode=64G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_qfo_scoring_recovery_r1_v1_20261014/benchmark_tools/recover_canonical_qfo_scoring.slurm\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/slurm-24246.err\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/slurm-24246.out\n   TresPerTask=cpu=8\n   \n\n",
+  "scientific_revision": "402d32323f7166c6135f4c81b849b0abfc97e55c",
+  "scope": "Scoring-only recovery; scientific inference unchanged, no default promotion. Original failed QfO canonical row remains failed. Queued 24242 is unchanged; any skipped QfO sensitivity arm will require an explicit separate continuation.",
+  "scoring_id": "cq_d7eb236bb965",
+  "source_and_input_pin_count": 260725,
+  "source_revision": "8ede41cd72ca79173eb5d72b4cbdf13b4ce18d42",
+  "status": "scoring_only_recovery_submitted"
+}
