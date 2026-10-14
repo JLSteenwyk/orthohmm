@@ -1,0 +1,13 @@
+{
+  "schema": "opt_in_canonical_species_pair_collection_v1",
+  "status": "prespecified_before_implementation",
+  "hypothesis": "Sorting species-pair result blocks before accepted-hit collection removes the verified dependence of exact-score singleton ties on asynchronous worker arrival. This provides a reproducible base for subsequent performance and accuracy experiments without changing any HMM scores or within-pair candidate ranking.",
+  "mechanism": "Add search_result_order arrival/canonical, with arrival remaining default. Canonical collection visits indexed result keys in lexicographic (query_species, target_species) order. Preserve within-result row order, evalue filtering, gene IDs, score values and hit multiplicity. Do not change task submission/draining, prefilter/scoring, graph thresholds, tie algorithms, rooting or CPP compilation flags.",
+  "integration": "Expose the opt-in through production CLI/API, argument processing and benchmark wrapper; validate before expensive work. Nondefault canonical mode requires fresh built-in high_sensitivity inference, not standard/phmmer/resume workflows. Record actual policy in metrics/harness provenance and use it consistently for initial checkpoint collection and any refinement recollection.",
+  "tests": "Exercise opposite species-pair dictionary insertion orders, exact singleton ties, unchanged within-pair row order and hit multiset, finite evalue boundary filtering, empty results, legacy named-result compatibility, CLI/API invalid combinations and metadata handoff. Preserve default call shapes and behavior where compatibility requires it.",
+  "evaluation": "First validate collector output invariance and real accepted-hit checkpoint integrity. Then separately prespecify complete downstream replay/scoring across all eight endpoints against matched arrival-order controls. This is a reproducibility hypothesis, not a claimed accuracy gain. Do not combine it silently with boundary-only CPP clearing or explain historical native differences without traced evidence.",
+  "resources": {"cpus": 4, "memory_gib": 16, "host": "local shared Threadripper"},
+  "ongoing_runs": "Leave frozen QfO and Three Kingdoms cap tasks, inputs, code and libraries untouched. No duplicate successful native inference.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}
