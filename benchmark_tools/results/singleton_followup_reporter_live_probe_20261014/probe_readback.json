@@ -1,0 +1,99 @@
+{
+  "defaults_promoted": false,
+  "goal_completed": false,
+  "inherited_score_vectors_unchanged": 26,
+  "parent": {
+    "bytes": 4347127,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v20_20261014/summary.json",
+    "sha256": "a238c51848b8fa603379679af64ccbeb1bc01752f8633033a0a2840567e350ee"
+  },
+  "reporter_files": [
+    {
+      "bytes": 39217,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/report_additional_hillclimb.py",
+      "sha256": "090cde0f1f192d538e707ee5bb2005c296045afe5d5f7240d6437c9b25194da6"
+    },
+    {
+      "bytes": 9268,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/report_current_hillclimb.py",
+      "sha256": "b0209ff96f88ca0a01ce6fda79583b7d9c564241ba86d6fd6c996f9f012f154a"
+    },
+    {
+      "bytes": 27033,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/report_hillclimb.py",
+      "sha256": "1f9f93d2adde242e6e4132ef9b1cc25bc58572409652bbc5badd64c395be6b97"
+    },
+    {
+      "bytes": 19766,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/recover_full_qfo_search.py",
+      "sha256": "cd4c06039869b94cb8f38ddff49710b82c2720634a1c2652b2d68914e4f9aed5"
+    },
+    {
+      "bytes": 19025,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_full_search_hillclimb.py",
+      "sha256": "8c39fc7540d103a8e748533213a1deb941988ae70629f5f6880aaab2e83f9c74"
+    },
+    {
+      "bytes": 23273,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_membership_hillclimb.py",
+      "sha256": "1e96bcadd1e3feed68ef39534735227e84134d07d9858d409d7d98f1dabba966"
+    },
+    {
+      "bytes": 12398,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_shared_hit_pipeline.py",
+      "sha256": "8de682541bbd24e50e536906c03aba59f8921d579bc40f262191a4b69fdd4535"
+    },
+    {
+      "bytes": 9611,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/recover_canonical_qfo_scoring.py",
+      "sha256": "35a2211f56942ef0081330a6b51c1fbd74c10015b0039978d7d2991250c8fd31"
+    },
+    {
+      "bytes": 19445,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_canonical_downstream.py",
+      "sha256": "6950107a2dabfc9e0e4644763bb6271d7cb4672bf042159f7d2087e67666b292"
+    },
+    {
+      "bytes": 11244,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_singleton_tie_orthobench.py",
+      "sha256": "4edf1aed56c416e5cfec506791589725d6e218645801517dc9f80768d4b5d238"
+    },
+    {
+      "bytes": 13595,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/continue_shared_qfo.py",
+      "sha256": "78f6598d8431cc40f132d8f7f6a07473763e9c6f73ff6ce6a3951d102ea265e2"
+    },
+    {
+      "bytes": 17960,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_singleton_tie_followup.py",
+      "sha256": "13bb369c975164f6d75fe7c72ac7d5649e96efeda62d085cb3fc243d78262a3d"
+    }
+  ],
+  "scheduler_observation": "             JOBID                             NAME      STATE         TIME   CPUS NODELIST(REASON)\n             24247         ohmm-shared-qfo-continue    PENDING         0:00     16 (Dependency)\n             24252               ohmm-singleton-qfo    RUNNING        12:11     16 bizon\n             24251                ohmm-singleton-tk    RUNNING        13:14     16 bizon\n             24242                  ohmm-shared-hit    RUNNING      2:56:58     16 bizon\n             24245         ohmm-qfo-cap400-continue    RUNNING      6:27:23     32 bizon\n",
+  "scope": "Reporting integration only, no new accuracy endpoint. Full probe summary retained locally at its pinned hash rather than duplicating the unchanged admitted table in Git.",
+  "score_table": {
+    "bytes": 4274,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/singleton_followup_reporter_live_probe_20261014/scores.tsv",
+    "sha256": "b01b96acfc0c6904c82a952308f02be80c78bd7335135381bdf7513aabd288ec"
+  },
+  "score_table_byte_identical_to_parent": true,
+  "snapshots": [
+    {
+      "bytes": 65287,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/singleton_followup_reporter_live_probe_20261014/snapshots/singleton_qfo.json",
+      "sha256": "2bb87ade2888835578ce1ba8cac69eb20d208bcfde195b2c96fecdfade9db7c2"
+    },
+    {
+      "bytes": 65246,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/singleton_followup_reporter_live_probe_20261014/snapshots/singleton_tk.json",
+      "sha256": "da2dd567aa4b1f95d2b7a8d81fb27ba757a7ed71b62305b2090907080bcc1054"
+    }
+  ],
+  "status": "singleton_followup_live_reporting_integration_independently_verified",
+  "summary": {
+    "bytes": 4349177,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/singleton_followup_reporter_live_probe_20261014/summary.json",
+    "sha256": "f43ecb69198fcd09c3b6386f2339df6121aea520f86fbc30e7a9aaebc8f580f9"
+  },
+  "unfinished_followups_supply_no_scores": true
+}

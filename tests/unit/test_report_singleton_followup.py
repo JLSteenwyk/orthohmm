@@ -214,3 +214,25 @@ def test_dataset_admission_preserves_ob_and_unrelated_methods(tmp_path, monkeypa
     assert len(updated["scores"]) == expected
     assert result["defaults_promoted"] is False and result["goal_completed"] is False
     assert not updated["complete_eight_endpoints"]
+
+
+def test_both_verified_followups_complete_the_same_eight_endpoint_vector(tmp_path, monkeypatch):
+    qfo_root, _, _, _, _ = fixture(tmp_path, monkeypatch, "QfO")
+    tk_root, _, _, _, _ = fixture(tmp_path, monkeypatch, "ThreeKingdoms")
+    def native(row, *args):
+        genes, species = driver.UNIVERSES[row["dataset"]]
+        return {"genes": genes, "species": species, "groups": 1, "pairs": 1,
+                "phylogeny": str(tmp_path), "checked": [], "products": {}}
+    monkeypatch.setattr(reporter, "replay_native", native)
+    table = tmp_path / "old.tsv"
+    table.write_text("old")
+    ob = {"dataset": "OrthoBench", "status": "independent_content_readback_verified",
+          "scores": {"OrthoBench: OrthoBench F1": .7365896292967041}}
+    parent = tmp_path / "old.json"
+    write_json(parent, {"score_table": record(table), "methods": [{"key": "singleton_tie:defer_ambiguous",
+        "label": "singleton", "scores": ob["scores"], "cells": [ob]}], "round_screening": {}, "limitations": []})
+    result = reporter.build(tmp_path, parent, tmp_path / "out", singleton_qfo_root=qfo_root, singleton_tk_root=tk_root)
+    method = result["methods"][0]
+    assert set(method["scores"]) == set(ENDPOINTS) and method["complete_eight_endpoints"] is True
+    assert {cell["dataset"] for cell in method["cells"]} == {"OrthoBench", "QfO", "ThreeKingdoms"}
+    assert result["defaults_promoted"] is False
