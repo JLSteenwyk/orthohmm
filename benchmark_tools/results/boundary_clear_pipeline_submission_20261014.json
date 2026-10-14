@@ -1,0 +1,56 @@
+{
+  "actual_native_route_guard": true,
+  "defaults_promoted": false,
+  "execution_plan": {
+    "bytes": 1150797,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/boundary_clear_pipeline_r1_v1_20261014/execution_plan.json",
+    "sha256": "ca6545294967b14c7b966bce8d6f925bdb32258651624efd93c537797aff7af0"
+  },
+  "existing_jobs_untouched": [
+    "24190_1",
+    "24190_2",
+    "24204",
+    "24240"
+  ],
+  "goal_completed": false,
+  "inputs": 12,
+  "job_id": "24241",
+  "kernels": {
+    "boundary_only": {
+      "bytes": 58984,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/boundary_clear_pipeline_r1_v1_20261014/variants/boundary_only/orthohmm/search/csrc/hmm_viterbi.so",
+      "sha256": "6700c7d9ba18204947a53a949edd2596dfd8db15cd71fd67ebe23aadc9576db7"
+    },
+    "full_clear": {
+      "bytes": 58984,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/boundary_clear_pipeline_r1_v1_20261014/variants/full_clear/orthohmm/search/csrc/hmm_viterbi.so",
+      "sha256": "da2da6b7af77495584c1571e3b673fac5e17cc3862b2a2a86e3b9b6197dca8ab"
+    }
+  },
+  "live_libraries_overwritten": false,
+  "new_accuracy_scores": false,
+  "ordering": "canonical in both arms; its separate biological comparison remains in job 24240",
+  "previous_goal_turn_classification": "progress: admitted repeated collector probes, added tested frozen downstream runner, and launched job 24240. Current turn verified its exact OrthoBench control and launched the separate computational-equivalence gate.",
+  "private_kernel_fixture": {
+    "bytes": 76301,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/boundary_clear_pipeline_private_fixture_20261014.json",
+    "sha256": "e250c8319dfea0badb5a26d9ace4d68ff0c3b8d9d6b4b6ddbc35b11993bde656"
+  },
+  "scheduler_receipt": "JobId=24241 JobName=ohmm-boundary-native\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=PENDING Reason=None Dependency=(null)\n   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:00 TimeLimit=2-00:00:00 TimeMin=N/A\n   SubmitTime=2026-10-14T00:45:03 EligibleTime=2026-10-14T00:45:03\n   AccrueTime=Unknown\n   StartTime=Unknown EndTime=Unknown Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-14T00:45:03 Scheduler=Main\n   Partition=gpu AllocNode:Sid=bizon-link:360578\n   ReqNodeList=bizon ExcNodeList=(null)\n   NodeList=\n   NumNodes=1 NumCPUs=16 NumTasks=1 CPUs/Task=16 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=16,mem=64G,node=1,billing=16\n   AllocTRES=(null)\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=16 MinMemoryNode=64G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/boundary_clear_pipeline_r1_v1_20261014/benchmark_tools/run_boundary_clear_pipeline.slurm\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/boundary_clear_pipeline_r1_v1_20261014_24241.log\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/boundary_clear_pipeline_r1_v1_20261014_24241.log\n   TresPerTask=cpu=16\n   \n\n",
+  "scope": "Fresh full native OrthoBench output equivalence; one ordered shared-host pair is descriptive cost only.",
+  "source_pin_count": 3526,
+  "source_revision": "4ce513c4e53625b2cbcd68a429481c77e510a5c8",
+  "status": "submitted_matched_fresh_full_native_pipeline_equivalence_gate",
+  "tests": [
+    {
+      "bytes": 15759,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/boundary_clear_pipeline_extended_working_tests_20261014.xml",
+      "sha256": "5fe16b9cc10ee85fecb88ada72c5d39dcb177bbef568fb75fdabafa29f797df6"
+    },
+    {
+      "bytes": 15759,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/boundary_clear_pipeline_frozen_tests_20261014.xml",
+      "sha256": "eb6696527d5150a635a374ff4a06c1773ca8a16ccd82f3fab30dd5594ae94387"
+    }
+  ]
+}
