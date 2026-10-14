@@ -12,14 +12,15 @@ import pytest
 from orthohmm.search import viterbi
 
 
-@pytest.fixture(scope="module")
-def compiled_kernel(tmp_path_factory):
+@pytest.fixture(scope="module", params=("full", "boundary"))
+def compiled_kernel(tmp_path_factory, request):
     compiler = shutil.which("gcc")
     if sys.platform != "linux" or compiler is None:
         pytest.skip("Native regression requires Linux GCC/OpenMP")
     source = Path(viterbi.__file__).parent / "csrc/hmm_viterbi.c"
     library = tmp_path_factory.mktemp("banding_kernel") / "hmm_viterbi.so"
-    subprocess.run([compiler, "-O3", "-fopenmp", "-shared", "-fPIC", "-march=native",
+    flags = ["-DHMM_VITERBI_BOUNDARY_CLEAR_ONLY=1"] if request.param == "boundary" else []
+    subprocess.run([compiler, "-O3", "-fopenmp", "-shared", "-fPIC", "-march=native", *flags,
                     str(source), "-o", str(library)], check=True, capture_output=True)
     lib = ctypes.CDLL(str(library))
     lib.hmm_have_avx2.argtypes = []

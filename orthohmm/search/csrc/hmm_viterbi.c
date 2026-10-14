@@ -1019,10 +1019,18 @@ static void hmm_viterbi_batch8_avx2(
         __m256i v_jlo = _mm256_load_si256((const __m256i*)jlo_arr);
         __m256i v_jhi = _mm256_load_si256((const __m256i*)jhi_arr);
 
-        /* Clear out-of-band cells in [j_lo_min-1, j_hi_max+1] */
+        /* Interior cells are overwritten before same-row reads; only the
+         * exterior boundaries require initialization in the opt-in build. */
+#if defined(HMM_VITERBI_BOUNDARY_CLEAR_ONLY) && HMM_VITERBI_BOUNDARY_CLEAR_ONLY
+        const int32_t j_left = j_lo_min - 1;
+        const int32_t j_right = j_hi_max + 1;
+        Mc[j_left] = v_neg_inf; Ic[j_left] = v_neg_inf; Dc[j_left] = v_neg_inf;
+        Mc[j_right] = v_neg_inf; Ic[j_right] = v_neg_inf; Dc[j_right] = v_neg_inf;
+#else
         for (int32_t j = j_lo_min - 1; j <= j_hi_max + 1 && j <= max_T + 1; j++) {
             if (j >= 0) { Mc[j] = v_neg_inf; Ic[j] = v_neg_inf; Dc[j] = v_neg_inf; }
         }
+#endif
 
         for (int32_t j = j_lo_min; j <= j_hi_max; j++) {
             __m256i v_j = _mm256_set1_epi32(j);
