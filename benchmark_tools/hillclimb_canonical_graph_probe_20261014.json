@@ -1,0 +1,13 @@
+{
+  "hypothesis": "Preserved whole-block hit permutations leave the initial RBNH graph unchanged but exact-score ties in singleton attachment can change the multipass partition.",
+  "evidence": "Frozen native contrast found 440854 changed QfO pairs; retained multipass partitions already differ before profile expansion. This diagnostic isolates that earlier stage, not fresh search sensitivity or final accuracy.",
+  "scientific_revision": "402d32323f7166c6135f4c81b849b0abfc97e55c",
+  "inputs": "The original arrival checkpoint and verified canonical whole-block permutation from job 24240, plus both retained graph reports and multipass partitions.",
+  "design": "Build RBNH graphs with the original frozen implementation and compare gene tables and exact source/target/weight bytes. Only if equal, infer one seed-4 CPM-0.1 initial partition, reuse it for both inputs, and compare original singleton selection/edge output and subsequent multipass partitions.",
+  "selection_trace": "Independently calculate maximum scores, first winning cluster, and distinct equally-best target clusters. Require score/tie-count identity and that every changed cluster choice has a multi-cluster exact tie. This is a diagnostic reconstruction, not a new decision rule.",
+  "gates": "Require complete source/input/runtime pins before and after; verify generated multipass edge counts and complete membership against both retained original partitions before claiming reproduction.",
+  "resources": {"cpu": 1, "memory_GiB": 64, "time_hours": 6, "host": "bizon"},
+  "non_actions": "No HMM search, profile expansion, phylogenetic inference, reference scoring, or mutation of existing studies. No default promotion.",
+  "fallback": "If RBNH graphs differ, retain that verified difference and stop before interpreting singleton attachment on a matched graph. If reconstruction differs from the original partitions, report it explicitly; do not declare a causal explanation.",
+  "limitations": "Cached graph diagnosis cannot identify missing links from initial HMM search, establish improved accuracy, or assign all later gene/species-tree changes uniquely to one mechanism. Shared-host cost is not a benchmark timing result."
+}
