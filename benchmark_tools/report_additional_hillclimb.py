@@ -15,6 +15,7 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 from benchmark_tools.recover_full_qfo_search import verified_native
 from benchmark_tools.report_current_hillclimb import canonical_cell, upsert_cell
 from benchmark_tools.report_hillclimb import endpoint_vector, readback_scores, screen, snapshot
+from benchmark_tools.report_hillclimb import replay_native
 from benchmark_tools.run_full_search_hillclimb import runtime, validate_native, verify_input_inventory
 from benchmark_tools.run_membership_hillclimb import DATASETS, write_json
 from benchmark_tools.run_shared_hit_pipeline import selected_control
@@ -189,8 +190,65 @@ def recovery_capture(path, captures):
     return snapshot(path, captures, "canonical_recovery.json")
 
 
-def build(repo, parent_path, output, continuation_root=None, shared_root=None, canonical_recovery_root=None):
-    if output.exists() or all(root is None for root in (continuation_root, shared_root, canonical_recovery_root)):
+def singleton_policy_cell(repo, root, plan, report, row):
+    from benchmark_tools.run_canonical_downstream import commands
+    from benchmark_tools.run_membership_hillclimb import compare_golden
+    policy = row.get("label")
+    if (row.get("dataset") != "OrthoBench" or policy not in ("first_hit", "defer_ambiguous")
+            or row.get("status") != "native_and_score_independently_verified"
+            or report["source_revision"] != plan["source_revision"] or plan["cpu"] != 16):
+        raise ValueError("Require verified singleton-policy OrthoBench arm and frozen source")
+    folder = root / policy
+    preflight_path = folder / "preflight.json"
+    preflight = json.loads(preflight_path.read_text())
+    graph, command = commands(Path(plan["source_root"]), plan, plan["case"], folder,
+                              Path(plan["checkpoint"]), plan["checkpoint_sha"])
+    graph.extend(["--singleton-tie-policy", policy])
+    if preflight != {"graph": graph, "native": command}:
+        raise ValueError("Singleton-policy commands differ from the frozen pilot plan")
+    for key, expected in (("graph_execution", graph), ("native_execution", command)):
+        if row[key]["returncode"] != 0 or row[key]["command"] != expected:
+            raise ValueError("Singleton-policy actual execution differs from planned command")
+    graph_path = folder / "graph_metrics.json"
+    graph_report = json.loads(graph_path.read_text())
+    parameters = graph_report["parameters"]
+    if (parameters.get("singleton_tie_policy") != policy or parameters.get("cpm_resolution") != .1
+            or parameters.get("leiden_seed") != 4 or parameters.get("profile_iterations") != 1):
+        raise ValueError("Actual singleton graph mechanism or unchanged settings differ")
+    native = replay_native(row, {"command": command})
+    if (native["genes"], native["species"]) != (251378, 12):
+        raise ValueError("Singleton-policy complete gene universe differs")
+    scores, details, pins = readback_scores(repo, "OrthoBench", row, native, folder, None)
+    if policy == "first_hit":
+        compare_golden(Path(native["phylogeny"]), plan["golden"])
+        if scores != plan["control"]["scores"]:
+            raise ValueError("Independent singleton-policy control score differs")
+        for key in ("candidate_partition", "membership_constraints"):
+            a, b = row["candidate"][key], plan["control"]["candidate"][key]
+            check(a)
+            check(b)
+            if (a["bytes"], a["sha256"]) != (b["bytes"], b["sha256"]):
+                raise ValueError("Singleton-policy candidate control differs")
+    checked = [record(preflight_path), record(graph_path), *native["checked"], *pins]
+    for pin in checked:
+        check(pin)
+    cell = {"dataset": "OrthoBench", "status": "independent_content_readback_verified",
+            "scores": endpoint_vector("OrthoBench", scores), "details": details,
+            "products": native["products"], "checked": checked,
+            "coverage": {k: native[k] for k in ("genes", "species", "groups", "pairs")},
+            "source_revision": report["source_revision"], "singleton_tie_policy": policy,
+            "resources": {k: row[k] for k in ("graph_execution", "native_execution")},
+            "scope": "Matched canonical accepted-hit downstream replay with selective tree reuse, not fresh HMM search or isolated timing."}
+    if policy == "defer_ambiguous":
+        controls = [r for r in report["arms"] if r.get("label") == "first_hit"]
+        if len(controls) != 1:
+            raise ValueError("Ambiguous matched singleton-policy control")
+        cell["matched_control"] = singleton_policy_cell(repo, root, plan, report, controls[0])
+    return cell
+
+
+def build(repo, parent_path, output, continuation_root=None, shared_root=None, canonical_recovery_root=None, singleton_root=None):
+    if output.exists() or all(root is None for root in (continuation_root, shared_root, canonical_recovery_root, singleton_root)):
         raise ValueError("Require a fresh output and at least one producer namespace")
     parent = json.loads(parent_path.read_text())
     check(parent["score_table"])
@@ -200,7 +258,7 @@ def build(repo, parent_path, output, continuation_root=None, shared_root=None, c
     captures.mkdir()
     observations = []
     for kind, root in (("continuation", continuation_root), ("shared_hit", shared_root),
-                       ("canonical_recovery", canonical_recovery_root)):
+                       ("canonical_recovery", canonical_recovery_root), ("singleton_policy", singleton_root)):
         if root is None:
             continue
         path = root / "results.json"
@@ -211,6 +269,25 @@ def build(repo, parent_path, output, continuation_root=None, shared_root=None, c
                            else snapshot(path, captures, kind + ".json"))
         plan, pins = check_plan(repo, root, report)
         observations.append({"kind": kind, "producer_status": report["status"], "snapshot": capture["snapshot"]})
+        if kind == "singleton_policy":
+            labels = [row.get("label") for row in report.get("arms", [])]
+            if len(set(labels)) != len(labels) or any(label not in ("first_hit", "defer_ambiguous") for label in labels):
+                raise ValueError("Wrong or duplicate singleton-policy arm inventory")
+            rows = [row for row in report["arms"] if row["label"] == "defer_ambiguous"]
+            cell = {"dataset": "OrthoBench", "status": "not_yet_reported_execution_state_not_inferred", "scores": {},
+                    "source_snapshot": capture["snapshot"], "producer_job_id": report["job_id"]}
+            if rows:
+                row = rows[0]
+                cell.update(status=row["status"], producer_status=row["status"])
+                cell.update({k: row[k] for k in ("error", "error_type") if k in row})
+                if row["status"] == "native_and_score_independently_verified":
+                    cell.update(singleton_policy_cell(repo, root, plan, report, row))
+            upsert_cell(methods, "singleton_tie:defer_ambiguous", "OrthoHMM ambiguous singleton deferral (experimental)", cell)
+            for pin in pins:
+                check(pin)
+            if runtime() != plan["runtime"]:
+                raise ValueError("Scientific runtime changed during singleton admission")
+            continue
         if kind == "canonical_recovery":
             from benchmark_tools.recover_canonical_qfo_scoring import failed_row
             check(plan["parent_snapshot"])
@@ -257,7 +334,7 @@ def build(repo, parent_path, output, continuation_root=None, shared_root=None, c
             check(pin)
         if runtime() != plan["runtime"]:
             raise ValueError("Scientific runtime changed during admission")
-    allowed = {"full_search:cap400", "shared_hit:shared_hit1", "canonical_collection:canonical"}
+    allowed = {"full_search:cap400", "shared_hit:shared_hit1", "canonical_collection:canonical", "singleton_tie:defer_ambiguous"}
     for previous in parent["methods"]:
         if previous["key"] not in allowed and previous != next(m for m in methods if m["key"] == previous["key"]):
             raise ValueError("Unrelated method changed")
@@ -273,13 +350,17 @@ def build(repo, parent_path, output, continuation_root=None, shared_root=None, c
     result["reporter_files"] = [record(Path(__file__).parent / name) for name in (
         "report_additional_hillclimb.py", "report_current_hillclimb.py", "report_hillclimb.py",
         "recover_full_qfo_search.py", "run_full_search_hillclimb.py", "run_membership_hillclimb.py",
-        "run_shared_hit_pipeline.py", "recover_canonical_qfo_scoring.py", "run_canonical_downstream.py")]
+        "run_shared_hit_pipeline.py", "recover_canonical_qfo_scoring.py", "run_canonical_downstream.py",
+        "run_singleton_tie_orthobench.py")]
     result.update(status="incremental_separate_trial_readback_no_default_promotion", parent_readback=record(parent_path),
                   reporter_source=record(__file__), methods=methods, score_table=record(output / "scores.tsv"),
                   additional_trial_observations=observations, defaults_promoted=False, goal_completed=False)
     vectors = {m["key"]: m["scores"] for m in methods
                if m["key"] in {"shared_hit:shared_hit1", "canonical_collection:canonical"}}
     result["round_screening"]["shared_hit"] = screen(vectors, "canonical_collection:canonical")
+    singleton = {m["key"]: m["scores"] for m in methods
+                 if m["key"] in {"singleton_tie:defer_ambiguous", "canonical_collection:canonical"}}
+    result["round_screening"]["singleton_tie"] = screen(singleton, "canonical_collection:canonical")
     canonical = {m["key"].split(":", 1)[1]: m["scores"] for m in methods
                  if m["key"].startswith("canonical_collection:")}
     result["round_screening"]["canonical_collection"] = screen(canonical, "arrival")
@@ -296,11 +377,12 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ("repo", "parent", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
-    for name in ("continuation-root", "shared-root", "canonical-recovery-root"):
+    for name in ("continuation-root", "shared-root", "canonical-recovery-root", "singleton-root"):
         parser.add_argument("--" + name, type=Path)
     args = parser.parse_args()
     result = build(args.repo.resolve(), args.parent.resolve(), args.output.resolve(),
                    args.continuation_root.resolve() if args.continuation_root else None,
                    args.shared_root.resolve() if args.shared_root else None,
-                   args.canonical_recovery_root.resolve() if args.canonical_recovery_root else None)
+                   args.canonical_recovery_root.resolve() if args.canonical_recovery_root else None,
+                   args.singleton_root.resolve() if args.singleton_root else None)
     print(result["status"], len(result["methods"]))

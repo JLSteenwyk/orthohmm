@@ -159,6 +159,128 @@ def test_live_or_failed_producer_cannot_be_referenced_as_immutable(tmp_path, mon
         reporter.recovery_capture(path, tmp_path)
 
 
+def singleton_panel(tmp_path, monkeypatch, status=None):
+    root, parent, unrelated, failed = panel(tmp_path, monkeypatch)
+    report = json.loads((root / "results.json").read_text())
+    report["arms"] = [{"dataset": "OrthoBench", "label": "first_hit",
+                       "status": "native_and_score_independently_verified"}]
+    if status:
+        report["arms"].append({"dataset": "OrthoBench", "label": "defer_ambiguous", "status": status,
+                               "scores": {"OrthoBench F1": 1.0}})
+    write_json(root / "results.json", report)
+    return root, parent, unrelated, failed
+
+
+def test_singleton_variant_absence_does_not_infer_execution_or_scores(tmp_path, monkeypatch):
+    root, parent, unrelated, _ = singleton_panel(tmp_path, monkeypatch)
+    monkeypatch.setattr(reporter, "singleton_policy_cell", lambda *a: pytest.fail("Unreported variant admitted"))
+    result = reporter.build(tmp_path, parent, tmp_path / "out", singleton_root=root)
+    assert result["methods"][0] == unrelated
+    method = next(m for m in result["methods"] if m["key"] == "singleton_tie:defer_ambiguous")
+    assert method["scores"] == {} and method["cells"][0]["status"] == "not_yet_reported_execution_state_not_inferred"
+
+
+@pytest.mark.parametrize("status", ["running", "failed", "not_run_failed_control_gate"])
+def test_unverified_singleton_variant_never_supplies_scores(tmp_path, monkeypatch, status):
+    root, parent, unrelated, _ = singleton_panel(tmp_path, monkeypatch, status)
+    monkeypatch.setattr(reporter, "singleton_policy_cell", lambda *a: pytest.fail("Unverified singleton admitted"))
+    result = reporter.build(tmp_path, parent, tmp_path / "out", singleton_root=root)
+    assert result["methods"][0] == unrelated
+    assert result["methods"][-1]["scores"] == {}
+
+
+def test_completed_singleton_variant_updates_only_its_own_cell(tmp_path, monkeypatch):
+    root, parent, unrelated, failed = singleton_panel(tmp_path, monkeypatch, "native_and_score_independently_verified")
+    good = verified_cell("OrthoBench")
+    monkeypatch.setattr(reporter, "singleton_policy_cell", lambda *a: deepcopy(good))
+    result = reporter.build(tmp_path, parent, tmp_path / "out", singleton_root=root)
+    assert result["methods"][0] == unrelated and result["methods"][1]["cells"] == [failed]
+    assert result["methods"][-1]["scores"] == good["scores"]
+    assert result["methods"][-1]["complete_eight_endpoints"] is False
+    assert result["defaults_promoted"] is False
+
+
+def singleton_readback_fixture(tmp_path, monkeypatch):
+    source = tmp_path / "source"
+    artifact = tmp_path / "candidate"
+    artifact.write_text("fixture")
+    pin = record(artifact)
+    plan = {"source_root": str(source), "source_revision": "frozen", "cpu": 16, "case": {},
+            "checkpoint": "checkpoint", "checkpoint_sha": "hash", "golden": {},
+            "control": {"scores": {"OrthoBench F1": .74}, "candidate": {
+                "candidate_partition": pin, "membership_constraints": pin}}}
+    rows = []
+    for policy in ("first_hit", "defer_ambiguous"):
+        folder = tmp_path / policy
+        folder.mkdir()
+        graph = ["graph", "--singleton-tie-policy", policy]
+        native = ["native"]
+        write_json(folder / "preflight.json", {"graph": graph, "native": native})
+        write_json(folder / "graph_metrics.json", {"parameters": {"singleton_tie_policy": policy,
+            "cpm_resolution": .1, "leiden_seed": 4, "profile_iterations": 1}})
+        rows.append({"dataset": "OrthoBench", "label": policy, "status": "native_and_score_independently_verified",
+            "scores": {"OrthoBench F1": .74}, "graph_execution": {"command": graph, "returncode": 0},
+            "native_execution": {"command": native, "returncode": 0}, "candidate": {
+                "candidate_partition": pin, "membership_constraints": pin}})
+    report = {"source_revision": "frozen", "arms": rows}
+    import benchmark_tools.run_canonical_downstream as producer
+    monkeypatch.setattr(producer, "commands", lambda *a: (["graph"], ["native"]))
+    native = {"genes": 251378, "species": 12, "groups": 1, "pairs": 1, "products": {},
+              "checked": [], "phylogeny": str(tmp_path)}
+    monkeypatch.setattr(reporter, "replay_native", lambda *a: deepcopy(native))
+    monkeypatch.setattr(reporter, "readback_scores", lambda repo, dataset, row, *a: (row["scores"], {}, []))
+    import benchmark_tools.run_membership_hillclimb as membership
+    monkeypatch.setattr(membership, "compare_golden", lambda *a: {})
+    return plan, report, native
+
+
+def test_singleton_admission_rechecks_matched_control(tmp_path, monkeypatch):
+    plan, report, _ = singleton_readback_fixture(tmp_path, monkeypatch)
+    result = reporter.singleton_policy_cell(tmp_path, tmp_path, plan, report, report["arms"][1])
+    assert result["scores"] == {"OrthoBench: OrthoBench F1": .74}
+    assert result["matched_control"]["singleton_tie_policy"] == "first_hit"
+
+
+@pytest.mark.parametrize("field,value", [("singleton_tie_policy", "first_hit"), ("cpm_resolution", .2),
+                                         ("leiden_seed", 0), ("profile_iterations", 2)])
+def test_wrong_actual_singleton_graph_settings_rejected(tmp_path, monkeypatch, field, value):
+    plan, report, _ = singleton_readback_fixture(tmp_path, monkeypatch)
+    path = tmp_path / "defer_ambiguous/graph_metrics.json"
+    graph = json.loads(path.read_text())
+    graph["parameters"][field] = value
+    write_json(path, graph)
+    with pytest.raises(ValueError, match="graph mechanism"):
+        reporter.singleton_policy_cell(tmp_path, tmp_path, plan, report, report["arms"][1])
+
+
+def test_singleton_variant_requires_successful_matched_control(tmp_path, monkeypatch):
+    plan, report, _ = singleton_readback_fixture(tmp_path, monkeypatch)
+    report["arms"][0]["status"] = "failed"
+    with pytest.raises(ValueError, match="verified singleton-policy"):
+        reporter.singleton_policy_cell(tmp_path, tmp_path, plan, report, report["arms"][1])
+
+
+def test_singleton_wrong_actual_execution_rejected(tmp_path, monkeypatch):
+    plan, report, _ = singleton_readback_fixture(tmp_path, monkeypatch)
+    report["arms"][1]["native_execution"]["command"] = ["different"]
+    with pytest.raises(ValueError, match="actual execution"):
+        reporter.singleton_policy_cell(tmp_path, tmp_path, plan, report, report["arms"][1])
+
+
+def test_singleton_wrong_gene_universe_rejected(tmp_path, monkeypatch):
+    plan, report, native = singleton_readback_fixture(tmp_path, monkeypatch)
+    native["genes"] = 100
+    with pytest.raises(ValueError, match="gene universe"):
+        reporter.singleton_policy_cell(tmp_path, tmp_path, plan, report, report["arms"][1])
+
+
+def test_singleton_control_score_must_reproduce_retained_control(tmp_path, monkeypatch):
+    plan, report, _ = singleton_readback_fixture(tmp_path, monkeypatch)
+    report["arms"][0]["scores"] = {"OrthoBench F1": .9}
+    with pytest.raises(ValueError, match="control score differs"):
+        reporter.singleton_policy_cell(tmp_path, tmp_path, plan, report, report["arms"][1])
+
+
 def test_shared_result_joins_only_its_verified_canonical_control(tmp_path, monkeypatch):
     root, parent, unrelated, failed = panel(tmp_path, monkeypatch)
     report = json.loads((root / "results.json").read_text())
