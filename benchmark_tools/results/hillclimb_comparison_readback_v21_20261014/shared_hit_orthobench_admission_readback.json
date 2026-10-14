@@ -1,0 +1,43 @@
+{
+  "control_f1": 0.7410607351873405,
+  "coverage": {
+    "genes": 251378,
+    "groups": 60721,
+    "pairs": 958428,
+    "species": 12
+  },
+  "defaults_promoted": false,
+  "f1_delta": -0.0035144527041175433,
+  "goal_completed": false,
+  "inherited_score_vectors_unchanged": 26,
+  "interpretation": "Fresh initial min_total_hits 1 at fixed cap 100 is an OrthoBench regression versus independently verified canonical min4 control. Other seven endpoints are unavailable for this arm. Passing the development decline screen is not equivalence or grounds for default promotion. Fresh variant and cached control timings have different scopes.",
+  "original_qfo_skip_preserved": true,
+  "parent": {
+    "bytes": 4347127,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v20_20261014/summary.json",
+    "sha256": "a238c51848b8fa603379679af64ccbeb1bc01752f8633033a0a2840567e350ee"
+  },
+  "passes_existing_development_decline_screen": true,
+  "precision": 0.8141289662283302,
+  "precision_delta": -0.0035755717898564576,
+  "producer_snapshot": {
+    "bytes": 257579,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v21_20261014/snapshots/shared_hit.json",
+    "sha256": "305b94e3d069d56535bacf378d0ed062e25c98b9a9d66996458d14d99e9fe450"
+  },
+  "recall": 0.6741326359900208,
+  "recall_delta": -0.003420727092776521,
+  "score_table": {
+    "bytes": 4342,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v21_20261014/scores.tsv",
+    "sha256": "47958a8be56fbb46652689f2f2e1d17c147f356557f0f0eb59d699df9d4823fe"
+  },
+  "status": "shared_hit1_orthobench_independent_admission_verified",
+  "summary": {
+    "bytes": 4513678,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v21_20261014/summary.json",
+    "sha256": "6d1e6ab394840140517597aeaeddfae891435862158fb82a2c876127f5ddc88f"
+  },
+  "table_cells_match_summary": true,
+  "variant_f1": 0.737546282483223
+}
