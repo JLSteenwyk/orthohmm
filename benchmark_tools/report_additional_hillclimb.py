@@ -61,15 +61,9 @@ def continuation_cell(repo, plan, report):
     return cell
 
 
-def shared_cell(repo, root, plan, report, row):
-    dataset = row["dataset"]
-    cases = [case for case in plan["cases"] if case["dataset"] == dataset and case["label"] == "shared_hit1"]
-    if len(cases) != 1 or report["source_revision"] != plan["source_revision"]:
-        raise ValueError("Ambiguous shared-hit case or changed source revision")
-    case = cases[0]
-    if (case["search_min_total_hits"] != 1 or case["search_max_candidates_per_query"] != 100
-            or row["execution"]["returncode"] != 0 or row["control"]["initial_min_total_hits"] != 4):
-        raise ValueError("Wrong shared-hit intervention or control threshold")
+def shared_native(case, plan):
+    if case["search_min_total_hits"] != 1 or case["search_max_candidates_per_query"] != 100:
+        raise ValueError("Wrong shared-hit intervention")
     verify_input_inventory(case)
     native = validate_native(case, 16)
     metadata = native["metrics"]["metadata"]
@@ -91,6 +85,19 @@ def shared_cell(repo, root, plan, report, row):
             or len(harness["input_manifest"]) != len(case["inputs"])
             or {r["path"]: (r["bytes"], r["sha256"]) for r in harness["input_manifest"]} != expected_inputs):
         raise ValueError("Shared-hit native source/input manifests differ")
+    return native
+
+
+def shared_cell(repo, root, plan, report, row):
+    dataset = row["dataset"]
+    cases = [case for case in plan["cases"] if case["dataset"] == dataset and case["label"] == "shared_hit1"]
+    if len(cases) != 1 or report["source_revision"] != plan["source_revision"]:
+        raise ValueError("Ambiguous shared-hit case or changed source revision")
+    case = cases[0]
+    if row["execution"]["returncode"] != 0 or row["control"]["initial_min_total_hits"] != 4:
+        raise ValueError("Wrong shared-hit intervention or control threshold")
+    native = shared_native(case, plan)
+    harness = native["metrics"]["harness"]
     control_path = report["control_report"]
     check(control_path)
     control_report = json.loads(Path(control_path["path"]).read_text())

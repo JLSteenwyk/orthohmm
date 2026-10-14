@@ -1,0 +1,15 @@
+{
+  "purpose": "Complete the already prespecified QfO shared-hit sensitivity arm after scoring-only recovery of its canonical control.",
+  "hypothesis": "Lowering the initial prefilter shared-hit threshold from 4 to 1 at fixed candidate cap 100 may recover divergent links, but capped reranking can also displace existing candidates; measure all six QfO endpoints.",
+  "scientific_revision": "7e7acaed3f3392197c0c498dc60ba63abb726810",
+  "original_job": "24242",
+  "control_recovery_job": "24246",
+  "eligibility": "Both dependency jobs terminal; recovery COMPLETED with six independently verified scores; original QfO arm explicitly not_run_unverified_control because canonical control was unavailable; no original QfO native output directory.",
+  "intervention": "Only relocate original command output/metrics paths. Use unchanged original scientific source, native libraries, inputs, 16 CPUs, canonical hit collection, cap 100, initial min_total_hits 1, profile-search default 4, and original phylogeny settings.",
+  "scoring": "New short Darwin namespace prevalidated before inference. Read back all six endpoints and native products independently; retain FAS sampling limitation.",
+  "controls": "Recovered canonical min4 control remains separate from its original failed scoring attempt. Do not rerun its HMM search or trees.",
+  "resources": {"cpu": 16, "memory_GiB": 128, "time_hours": 240, "host": "bizon"},
+  "selection": "Existing per-endpoint/Pareto screening and 0.005 development decline heuristic, not equivalence. No automatic default promotion.",
+  "preservation": "Leave all original frozen runners, queued/running jobs, skipped rows, failed reports, and native namespaces unchanged.",
+  "timing_scope": "Fresh QfO variant plus separate scoring; cached downstream canonical control and recovered scoring are not a matched fresh timing baseline. Shared-host confounding remains nonblocking."
+}
