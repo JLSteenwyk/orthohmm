@@ -1,4 +1,6 @@
 """Unit tests for orthohmm/search/prefilter.py (k-mer index + candidate gen)."""
+from collections import Counter
+
 import numpy as np
 import pytest
 
@@ -12,7 +14,8 @@ from orthohmm.search.prefilter import (
     prefilter_candidates,
     prepare_kmer_index,
 )
-from orthohmm.search.sequences import SpeciesSequences
+from orthohmm.search.matrices import get_matrix
+from orthohmm.search.sequences import SpeciesSequences, encode_sequence
 
 
 def _make_species(tmp_path, records):
@@ -171,3 +174,34 @@ class TestPreparedKmerIndex:
                 use_reduced_alphabet=False,
                 prepared_index=prepared,
             )
+
+
+@pytest.mark.parametrize("threads", [1, 2])
+def test_lower_shared_hit_threshold_can_displace_an_existing_capped_candidate(tmp_path, threads):
+    if not is_c_prefilter_available():
+        pytest.skip("Requires native ungapped extension re-ranking")
+    query_sequence = "SPRSWEIGCITGKYPGCGYHWGYHGILYIESGTKPHILGLMGASSSAS"
+    long_sequence = "SPRSMEIGAITGEYPGAGYHMGYHNILYFESGAKPHFLGLFGASASAS"
+    short_sequence = query_sequence[:7]
+    query = _make_species(tmp_path, [("query", query_sequence)])
+    targets = _make_species(tmp_path, [("short_exact", short_sequence), ("long_low_kmer", long_sequence)])
+
+    def kmers(sequence):
+        encoded = REDUCED_ALPHA[encode_sequence(sequence)]
+        return Counter(tuple(encoded[i:i + 4]) for i in range(len(encoded) - 3))
+
+    query_kmers = kmers(query_sequence)
+    counts = [sum(count * kmers(sequence).get(word, 0) for word, count in query_kmers.items())
+              for sequence in (short_sequence, long_sequence)]
+    assert counts == [4, 1]
+    kwargs = dict(k=4, min_diag_hits=1, n_threads=threads,
+                  sub_matrix=get_matrix("BLOSUM62").astype(np.int8))
+    strict, strict_offsets = prefilter_candidates(query, targets, min_total_hits=4,
+                                                  max_candidates_per_query=1, **kwargs)
+    relaxed, relaxed_offsets = prefilter_candidates(query, targets, min_total_hits=1,
+                                                    max_candidates_per_query=1, **kwargs)
+    expanded, expanded_offsets = prefilter_candidates(query, targets, min_total_hits=1,
+                                                      max_candidates_per_query=2, **kwargs)
+    assert strict.tolist() == [0] and strict_offsets.tolist() == [0, 1]
+    assert relaxed.tolist() == [1] and relaxed_offsets.tolist() == [0, 1]
+    assert expanded.tolist() == [1, 0] and expanded_offsets.tolist() == [0, 2]
