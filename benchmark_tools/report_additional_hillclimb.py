@@ -128,8 +128,38 @@ def shared_cell(repo, root, plan, report, row):
     return cell
 
 
-def build(repo, parent_path, output, continuation_root=None, shared_root=None):
-    if output.exists() or continuation_root is None and shared_root is None:
+def canonical_recovery_cell(repo, plan, report, root):
+    from benchmark_tools.recover_canonical_qfo_scoring import REVISION, failed_row, verify_parent
+    if (report.get("status") != "canonical_qfo_scoring_recovered_independently_verified"
+            or report.get("original_attempt_preserved") is not True
+            or report.get("original_status") != "failed" or plan["scientific_revision"] != REVISION):
+        raise ValueError("Require independently verified scoring-only canonical recovery")
+    check(plan["parent_snapshot"])
+    check(plan["protocol"])
+    parent = json.loads(Path(plan["parent_snapshot"]["path"]).read_text())
+    if failed_row(parent) != plan["original_failed_row"]:
+        raise ValueError("Archived original failed row differs")
+    native, pins = verify_parent(repo, Path(plan["parent_root"]), parent, plan["original_failed_row"])
+    if native != plan["native"] or native != report["native"]:
+        raise ValueError("Recovered native predictions differ from the original completed arm")
+    scores, details, score_pins = readback_scores(repo, "QfO", report, native, root,
+        "ohmm_hillclimb_r1_" + plan["scoring_id"])
+    pins.extend([plan["parent_snapshot"], plan["protocol"], *score_pins, *report["checked"]])
+    for pin in pins:
+        check(pin)
+    return {"dataset": "QfO", "status": "independent_content_readback_verified",
+            "scores": endpoint_vector("QfO", scores), "details": details,
+            "products": native["products"], "checked": pins,
+            "coverage": {k: native[k] for k in ("genes", "species", "groups", "pairs")},
+            "source_revision": REVISION, "original_failed_attempt": plan["parent_snapshot"],
+            "resources": {"original_native_execution": plan["original_failed_row"]["native_execution"],
+                          "scoring_recovery_wall_s": report["scoring_recovery_wall_s"]},
+            "execution_kind": "scoring_only_recovery_of_completed_canonical_downstream",
+            "scope": "Original failed scoring attempt retained. Cached downstream inference plus separate scoring recovery is not fresh full-pipeline timing; FAS is unseeded."}
+
+
+def build(repo, parent_path, output, continuation_root=None, shared_root=None, canonical_recovery_root=None):
+    if output.exists() or all(root is None for root in (continuation_root, shared_root, canonical_recovery_root)):
         raise ValueError("Require a fresh output and at least one producer namespace")
     parent = json.loads(parent_path.read_text())
     check(parent["score_table"])
@@ -138,7 +168,8 @@ def build(repo, parent_path, output, continuation_root=None, shared_root=None):
     captures = output / "snapshots"
     captures.mkdir()
     observations = []
-    for kind, root in (("continuation", continuation_root), ("shared_hit", shared_root)):
+    for kind, root in (("continuation", continuation_root), ("shared_hit", shared_root),
+                       ("canonical_recovery", canonical_recovery_root)):
         if root is None:
             continue
         path = root / "results.json"
@@ -148,6 +179,31 @@ def build(repo, parent_path, output, continuation_root=None, shared_root=None):
         report, capture = snapshot(path, captures, kind + ".json")
         plan, pins = check_plan(repo, root, report)
         observations.append({"kind": kind, "producer_status": report["status"], "snapshot": capture["snapshot"]})
+        if kind == "canonical_recovery":
+            from benchmark_tools.recover_canonical_qfo_scoring import failed_row
+            check(plan["parent_snapshot"])
+            archived = json.loads(Path(plan["parent_snapshot"]["path"]).read_text())
+            if failed_row(archived) != plan["original_failed_row"]:
+                raise ValueError("Recovery archive does not preserve the original failed row")
+            key = "canonical_collection:canonical"
+            failed = {"dataset": "QfO", "status": "failed", "scores": {},
+                      "producer_status": "failed", "source_snapshot": plan["parent_snapshot"],
+                      "producer_job_id": "24240",
+                      "error": plan["original_failed_row"]["error"],
+                      "error_type": plan["original_failed_row"]["error_type"]}
+            upsert_cell(methods, key, "OrthoHMM canonical collection (experimental)", failed)
+            cell = {"dataset": "QfO", "status": report["status"], "scores": {},
+                    "producer_status": report["status"], "source_snapshot": capture["snapshot"],
+                    "producer_job_id": report["job_id"]}
+            cell.update({k: report[k] for k in ("error", "error_type") if k in report})
+            if report["status"] == "canonical_qfo_scoring_recovered_independently_verified":
+                cell.update(canonical_recovery_cell(repo, plan, report, root))
+            upsert_cell(methods, key, "OrthoHMM canonical collection (experimental)", cell)
+            for pin in pins:
+                check(pin)
+            if runtime() != plan["runtime"]:
+                raise ValueError("Scientific runtime changed during recovery admission")
+            continue
         rows = [("QfO", report)] if kind == "continuation" else [(row["dataset"], row) for row in report["arms"]]
         if any(dataset not in DATASETS for dataset, _ in rows) or len({dataset for dataset, _ in rows}) != len(rows):
             raise ValueError("Wrong or duplicate producer dataset inventory")
@@ -185,13 +241,16 @@ def build(repo, parent_path, output, continuation_root=None, shared_root=None):
     result["reporter_files"] = [record(Path(__file__).parent / name) for name in (
         "report_additional_hillclimb.py", "report_current_hillclimb.py", "report_hillclimb.py",
         "recover_full_qfo_search.py", "run_full_search_hillclimb.py", "run_membership_hillclimb.py",
-        "run_shared_hit_pipeline.py")]
+        "run_shared_hit_pipeline.py", "recover_canonical_qfo_scoring.py", "run_canonical_downstream.py")]
     result.update(status="incremental_separate_trial_readback_no_default_promotion", parent_readback=record(parent_path),
                   reporter_source=record(__file__), methods=methods, score_table=record(output / "scores.tsv"),
                   additional_trial_observations=observations, defaults_promoted=False, goal_completed=False)
     vectors = {m["key"]: m["scores"] for m in methods
                if m["key"] in {"shared_hit:shared_hit1", "canonical_collection:canonical"}}
     result["round_screening"]["shared_hit"] = screen(vectors, "canonical_collection:canonical")
+    canonical = {m["key"].split(":", 1)[1]: m["scores"] for m in methods
+                 if m["key"].startswith("canonical_collection:")}
+    result["round_screening"]["canonical_collection"] = screen(canonical, "arrival")
     full = {m["key"].split(":", 1)[1]: m["scores"] for m in methods if m["key"].startswith("full_search:")}
     result["round_screening"]["full_search"] = screen(full, "control100")
     result["limitations"].extend(["Newly completed trial cells are independently read back; unrelated earlier admissions are inherited, not rescored.",
@@ -205,10 +264,11 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ("repo", "parent", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
-    for name in ("continuation-root", "shared-root"):
+    for name in ("continuation-root", "shared-root", "canonical-recovery-root"):
         parser.add_argument("--" + name, type=Path)
     args = parser.parse_args()
     result = build(args.repo.resolve(), args.parent.resolve(), args.output.resolve(),
                    args.continuation_root.resolve() if args.continuation_root else None,
-                   args.shared_root.resolve() if args.shared_root else None)
+                   args.shared_root.resolve() if args.shared_root else None,
+                   args.canonical_recovery_root.resolve() if args.canonical_recovery_root else None)
     print(result["status"], len(result["methods"]))

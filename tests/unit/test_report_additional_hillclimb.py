@@ -80,6 +80,64 @@ def test_missing_producer_is_not_called_running_or_successful(tmp_path, monkeypa
     assert len(result["methods"]) == 2
 
 
+def recovery_panel(tmp_path, monkeypatch, status):
+    from benchmark_tools.recover_canonical_qfo_scoring import REVISION, PATH_ERROR
+    root, parent, unrelated, _ = panel(tmp_path, monkeypatch, status)
+    row = {"dataset": "QfO", "label": "canonical", "status": "failed", "scores": {},
+           "error": PATH_ERROR, "error_type": "ValueError", "outputs": [{"path": "native"}],
+           "graph_execution": {"returncode": 0}, "native_execution": {"returncode": 0},
+           "native_summary": {"genes": 984137}}
+    snapshot = root / "failed_parent_snapshot.json"
+    write_json(snapshot, {"source_revision": REVISION, "job_id": "24240", "arms": [row]})
+    path = root / "execution_plan.json"
+    plan = json.loads(path.read_text())
+    plan.update(parent_snapshot=record(snapshot), original_failed_row=row)
+    write_json(path, plan)
+    report = json.loads((root / "results.json").read_text())
+    report["execution_plan"] = record(path)
+    write_json(root / "results.json", report)
+    return root, parent, unrelated, row
+
+
+def test_pending_canonical_recovery_keeps_failure_and_no_scores(tmp_path, monkeypatch):
+    root, parent, unrelated, row = recovery_panel(tmp_path, monkeypatch, "scoring_only_recovery_running")
+    monkeypatch.setattr(reporter, "canonical_recovery_cell", lambda *args: pytest.fail("Pending scoring admitted"))
+    result = reporter.build(tmp_path, parent, tmp_path / "out", canonical_recovery_root=root)
+    assert result["methods"][0] == unrelated
+    method = next(m for m in result["methods"] if m["key"] == "canonical_collection:canonical")
+    assert method["scores"] == {}
+    assert any(c.get("error") == row["error"] and c["status"] == "failed" for c in method["cells"])
+    assert "NA" in (tmp_path / "out/scores.tsv").read_text()
+
+
+def test_completed_canonical_recovery_retains_original_failure(tmp_path, monkeypatch):
+    root, parent, unrelated, row = recovery_panel(tmp_path, monkeypatch,
+        "canonical_qfo_scoring_recovered_independently_verified")
+    good = verified_cell()
+    monkeypatch.setattr(reporter, "canonical_recovery_cell", lambda *args: deepcopy(good))
+    result = reporter.build(tmp_path, parent, tmp_path / "out", canonical_recovery_root=root)
+    assert result["methods"][0] == unrelated
+    method = next(m for m in result["methods"] if m["key"] == "canonical_collection:canonical")
+    assert method["scores"] == good["scores"]
+    assert method["cells"][0]["status"] == "failed"
+    assert method["cells"][0]["error"] == row["error"]
+    assert method["cells"][1]["status"] == "independent_content_readback_verified"
+    assert result["defaults_promoted"] is False and result["goal_completed"] is False
+
+
+def test_recovery_cannot_change_archived_failure(tmp_path, monkeypatch):
+    root, parent, _, _ = recovery_panel(tmp_path, monkeypatch, "scoring_only_recovery_running")
+    path = root / "execution_plan.json"
+    plan = json.loads(path.read_text())
+    plan["original_failed_row"]["error"] = "different"
+    write_json(path, plan)
+    report = json.loads((root / "results.json").read_text())
+    report["execution_plan"] = record(path)
+    write_json(root / "results.json", report)
+    with pytest.raises(ValueError, match="original failed row"):
+        reporter.build(tmp_path, parent, tmp_path / "out", canonical_recovery_root=root)
+
+
 def test_shared_result_joins_only_its_verified_canonical_control(tmp_path, monkeypatch):
     root, parent, unrelated, failed = panel(tmp_path, monkeypatch)
     report = json.loads((root / "results.json").read_text())
