@@ -1,0 +1,12 @@
+{
+  "purpose": "Primary-benchmark pilot of the precommitted first_hit versus defer_ambiguous singleton policy.",
+  "dataset": "OrthoBench",
+  "arms": ["first_hit", "defer_ambiguous"],
+  "input": "The preserved canonical whole-block accepted-hit checkpoint from completed job 24240.",
+  "control_gate": "Reproduce canonical candidate and constraint bytes, native root/pair/confidence/species-tree bytes, and OrthoBench F1 before running the variant.",
+  "parameters": "CPM 0.1, seed 4, one default profile pass, min_species 1, BLOSUM62, satellite_v2 candidates, high_confidence_pair membership, inferred min_variance species tree, species_overlap rooting, positive_paralogy pairs, legacy support handling. Only singleton tie policy changes at both graph-attachment stages.",
+  "verification": "Complete input/source/library/runtime pins; graph metadata must record actual policy; full gene-universe and native-content checks; independent OrthoBench score readback.",
+  "resources": {"cpu": 16, "memory_GiB": 64, "time_hours": 96, "host": "bizon"},
+  "followup": "If the variant passes the development OrthoBench decline screen, prepare corrected QfO and supplementary Three Kingdoms comparisons before considering promotion. A failing primary pilot is an explicit rejected trial, not success or a reason for reference-specific retuning.",
+  "limitations": "All labels are development-exposed. Selective tree-cache downstream replay is not fresh search or matched fresh timing evidence. The 0.005 screen is not statistical equivalence. Default first_hit stays unchanged."
+}

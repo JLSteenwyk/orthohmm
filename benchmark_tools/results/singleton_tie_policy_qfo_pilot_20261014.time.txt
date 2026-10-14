@@ -1,0 +1,63 @@
+	Command being timed: "/home/bizon/anaconda3/bin/python -c 
+import inspect,json,gc
+from pathlib import Path
+import numpy as np
+from orthohmm.accuracy import load_accuracy_checkpoint,read_index_clusters,build_singleton_assignment_edges
+from benchmark_tools.prepare_ob_candidate_neighborhood import check,record
+from benchmark_tools.run_membership_hillclimb import write_json
+repo=Path("/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm"); source=Path.cwd(); assert Path(inspect.getfile(build_singleton_assignment_edges)).resolve()==source/"orthohmm/accuracy.py"
+root=repo/"benchmarks/results/canonical_initial_graph_probe_r1_v1_20261014"; parent=json.loads((root/"results.json").read_text()); check(parent["execution_plan"]); plan=json.loads(Path(parent["execution_plan"]["path"]).read_text())
+assert parent["status"]=="matched_graph_singleton_tie_diagnosis_reproduces_original_multipass"
+folder=repo/"benchmarks/results/singleton_tie_policy_fixed_qfo_pilot_r1_v1_20261014"
+if folder.exists(): raise FileExistsError(folder)
+folder.mkdir(parents=True)
+pins=[record(root/"results.json"),parent["execution_plan"],*parent["checked"],record(source/"orthohmm/accuracy.py"),record(source/"benchmark_tools/hillclimb_singleton_tie_policy_20261014.json")]; [check(p) for p in pins]
+initial=root/"initial/orthohmm_working_res/orthohmm_edges_clustered.txt"; rows=[]; variant_pins=[]
+for label,checkpoint,old in zip(("arrival","canonical"),plan["checkpoints"],parent["singletons"]):
+ names,species,q,t,scores=load_accuracy_checkpoint(checkpoint,verify=True); clusters=read_index_clusters(str(initial),names)
+ assert len(names)==984137 and len(clusters)==350421
+ singleton=np.ones(len(names),dtype=bool)
+ for cluster in clusters:
+  if len(cluster)>1: singleton[cluster]=False
+ trace=np.load(root/label/"trace/tied_clusters.npy",mmap_mode="r",allow_pickle=False); ambiguous=np.flatnonzero(trace>1); assert len(ambiguous)==407
+ legacy=build_singleton_assignment_edges(names,clusters,q,t,scores)
+ old_arrays=[np.load(old["arrays"][key]["path"],mmap_mode="r",allow_pickle=False) for key in ("sources","targets","weights")]
+ for actual,expected in zip((legacy.sources,legacy.targets,legacy.weights),old_arrays): assert actual.tobytes()==expected.tobytes()
+ queries=np.where(singleton[old_arrays[0]],old_arrays[0],old_arrays[1]); dropped=np.isin(queries,ambiguous); assert len(np.unique(queries[dropped]))==407
+ expected=[values[~dropped] for values in old_arrays]
+ del legacy; gc.collect()
+ variant=build_singleton_assignment_edges(names,clusters,q,t,scores,tie_policy="defer_ambiguous")
+ assert variant.gene_names==names
+ paths=[]
+ for key,actual,target in zip(("sources","targets","weights"),(variant.sources,variant.targets,variant.weights),expected):
+  assert actual.tobytes()==target.tobytes(); path=folder/(label+"_"+key+".npy"); np.save(path,actual,allow_pickle=False); paths.append(record(path))
+ variant_pins.append(paths); rows.append({"label":label,"legacy_edges":len(old_arrays[0]),"variant_edges":len(variant.sources),"ambiguous_queries_deferred":407,"edges_removed":int(dropped.sum()),"all_other_edge_bytes_unchanged":True,"complete_gene_table_preserved":True,"outputs":paths})
+ del variant,old_arrays,expected,clusters; gc.collect()
+for a,b in zip(*variant_pins): assert (a["bytes"],a["sha256"])==(b["bytes"],b["sha256"])
+pins.extend(p for row in rows for p in row["outputs"]); [check(p) for p in pins]
+result={"status":"fixed_qfo_initial_partition_tie_deferral_matches_exact_expected_edge_removal","source_revision":"9259e969","genes":984137,"initial_groups":350421,"rows":rows,"deferred_edge_exports_identical_across_input_orders":True,"checked":list({p["path"]:p for p in pins}.values()),"scope":"Fixed initial-partition graph-function pilot only; no HMM search, profile expansion, phylogenetic inference or reference scoring. Whole-pipeline permutation invariance and accuracy improvement are not established. All 407 ambiguous queries are treated by one global rule, not gene-specific exceptions.","accuracy_evaluated":False,"defaults_promoted":False,"goal_completed":False}
+write_json(folder/"results.json",result); write_json(repo/"benchmark_tools/results/singleton_tie_policy_qfo_pilot_20261014.json",{"status":result["status"],"producer":record(folder/"results.json"),"rows":rows,"deferred_edge_exports_identical_across_input_orders":True,"scope":result["scope"],"accuracy_evaluated":False,"defaults_promoted":False,"goal_completed":False})
+print(json.dumps({"status":result["status"],"rows":rows,"permutation_invariant":True},indent=2))
+"
+	User time (seconds): 28.18
+	System time (seconds): 3.64
+	Percent of CPU this job got: 126%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:25.09
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2681072
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 235210
+	Voluntary context switches: 98
+	Involuntary context switches: 135
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 88080
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

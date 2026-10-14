@@ -1,0 +1,67 @@
+{
+  "accuracy_evaluated": false,
+  "defaults_promoted": false,
+  "deferred_edge_exports_identical_across_input_orders": true,
+  "goal_completed": false,
+  "producer": {
+    "bytes": 372696,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_policy_fixed_qfo_pilot_r1_v1_20261014/results.json",
+    "sha256": "63d8b7efe487309c2f3dada02785ceda5fd22993666f98266896bf665d8435f5"
+  },
+  "rows": [
+    {
+      "all_other_edge_bytes_unchanged": true,
+      "ambiguous_queries_deferred": 407,
+      "complete_gene_table_preserved": true,
+      "edges_removed": 1285,
+      "label": "arrival",
+      "legacy_edges": 1398094,
+      "outputs": [
+        {
+          "bytes": 5587364,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_policy_fixed_qfo_pilot_r1_v1_20261014/arrival_sources.npy",
+          "sha256": "da1258ea0d4f43d6bd8bbc0711a09b079ff9ed06d094a8b6b2046070b91b179c"
+        },
+        {
+          "bytes": 5587364,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_policy_fixed_qfo_pilot_r1_v1_20261014/arrival_targets.npy",
+          "sha256": "fa04716d87b552f6459d4d3b98f9558d5675782d764cbe05e091923c0aa5ad12"
+        },
+        {
+          "bytes": 11174600,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_policy_fixed_qfo_pilot_r1_v1_20261014/arrival_weights.npy",
+          "sha256": "faf32ecf324f8835920db05a413dfd967f6cf1330292e9e6e4abe32510135876"
+        }
+      ],
+      "variant_edges": 1396809
+    },
+    {
+      "all_other_edge_bytes_unchanged": true,
+      "ambiguous_queries_deferred": 407,
+      "complete_gene_table_preserved": true,
+      "edges_removed": 1174,
+      "label": "canonical",
+      "legacy_edges": 1397983,
+      "outputs": [
+        {
+          "bytes": 5587364,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_policy_fixed_qfo_pilot_r1_v1_20261014/canonical_sources.npy",
+          "sha256": "da1258ea0d4f43d6bd8bbc0711a09b079ff9ed06d094a8b6b2046070b91b179c"
+        },
+        {
+          "bytes": 5587364,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_policy_fixed_qfo_pilot_r1_v1_20261014/canonical_targets.npy",
+          "sha256": "fa04716d87b552f6459d4d3b98f9558d5675782d764cbe05e091923c0aa5ad12"
+        },
+        {
+          "bytes": 11174600,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/singleton_tie_policy_fixed_qfo_pilot_r1_v1_20261014/canonical_weights.npy",
+          "sha256": "faf32ecf324f8835920db05a413dfd967f6cf1330292e9e6e4abe32510135876"
+        }
+      ],
+      "variant_edges": 1396809
+    }
+  ],
+  "scope": "Fixed initial-partition graph-function pilot only; no HMM search, profile expansion, phylogenetic inference or reference scoring. Whole-pipeline permutation invariance and accuracy improvement are not established. All 407 ambiguous queries are treated by one global rule, not gene-specific exceptions.",
+  "status": "fixed_qfo_initial_partition_tie_deferral_matches_exact_expected_edge_removal"
+}
