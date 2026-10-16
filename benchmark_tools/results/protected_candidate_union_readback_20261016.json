@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "status": "protected_union_all_144_directions_independently_recounted",
+  "scheduler": {"JobIDRaw": "24361", "State": "COMPLETED", "ExitCode": "0:0", "AllocCPUS": "1", "NodeList": "bizon", "elapsed": "00:00:45"},
+  "source_revision": "6c18628bd12d1d3c05ec4f849570271e9a71588a",
+  "producer": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/protected_candidate_union_r1_v1_20261016/results.json",
+    "bytes": 708916,
+    "sha256": "03056a1bbfe84c44c774d28576687dc1d85e132c67f2bf4bfbafbba78e874018"
+  },
+  "time": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/protected_candidate_union_r1_v1_20261016.time.txt",
+    "bytes": 1012,
+    "sha256": "a0ef2473d6b9600eef61d7ca12bdbce81c243912ab013232bf1d2c31320cc071"
+  },
+  "resources": {"diagnostic_only_elapsed_seconds": 44.5, "user_seconds": 43.26, "system_seconds": 0.87, "max_reported_process_rss_kib": 222408, "exit_status": 0},
+  "verification": {
+    "source_input_raw_table_records_rehashed_before_and_after": 944,
+    "directions": 144,
+    "method": "Independent direct np.load reads, Python dictionaries keyed by query/target index, set intersections/unions, and struct.pack('dd', score, evalue) equality rather than the producer's NumPy intersect/merge implementation. Reconstructed every per-query union histogram and all-candidate significant count. Independently classified every watched pair using union E-values at both thresholds and the original literal CSV query/target/historical fields; compared every direction and aggregate count. Checked terminal accounting, GNU-time exit zero, all source/input/raw/table pins before and after, and unchanged v25 accuracy summary.",
+    "common_candidates_bitwise_verified": 1548735,
+    "all_direction_counts_match": true,
+    "all_threshold_counts_match": true,
+    "all_per_query_histograms_match": true,
+    "all_original_candidates_preserved": true,
+    "maximum_union_candidates_per_query_at_most": 200
+  },
+  "candidates": {"baseline": 2034503, "relaxed": 2040700, "common": 1548735, "baseline_only": 485768, "relaxed_only": 491965, "union": 2526468},
+  "candidate_burden_ratio": 1.2418108992712225,
+  "thresholds": [
+    {"threshold": 0.0001, "decisions": {"accepted": 32653, "not_selected_by_prefilter": 46994, "scored_not_significant": 1819}, "versus_control": {"gained": 1174, "lost": 0, "retained": 31479, "absent_both": 48813}, "historically_absent_accepted": 1174, "all_significant_hits": 131278},
+    {"threshold": 0.001, "decisions": {"accepted": 32792, "not_selected_by_prefilter": 46994, "scored_not_significant": 1680}, "versus_control": {"gained": 1179, "lost": 0, "retained": 31613, "absent_both": 48674}, "historically_absent_accepted": 1313, "all_significant_hits": 143632}
+  ],
+  "advance_gate_passed": true,
+  "decision": "Prespecify a fresh protected-union selection/scoring equivalence diagnostic and complete-proteome OrthoBench pilot. Do not change defaults, add an accuracy-table cell, or claim biological improvement based on cached union accounting.",
+  "unchanged_accuracy_parent": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v25_20261016/summary.json",
+    "bytes": 4739127,
+    "sha256": "7b57bd8c108ff979b4e2a2a2833069e7a27a30c185738ac9178ad7f16f3722dc"
+  },
+  "scope": "Development-exposed and reference-conditioned query set with complete target proteomes. No-loss union is partly a construction property, not independent biological evidence. The 24.18% candidate increase is a scored-pair count, not a measured fresh-search runtime or a bound on other datasets. More links can worsen graph clustering or phylogenetic discrimination; fresh execution and full accuracy evaluation remain necessary.",
+  "native_inference_rerun": false,
+  "accuracy_evaluated": false,
+  "defaults_promoted": false,
+  "goal_completed": false
+}
