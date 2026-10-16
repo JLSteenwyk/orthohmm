@@ -427,10 +427,11 @@ def singleton_followup_cell(repo, root, plan, report, row):
 
 
 def build(repo, parent_path, output, continuation_root=None, shared_root=None, canonical_recovery_root=None,
-          singleton_root=None, shared_qfo_root=None, singleton_qfo_root=None, singleton_tk_root=None):
+          singleton_root=None, shared_qfo_root=None, singleton_qfo_root=None, singleton_tk_root=None,
+          cap400_recovery_root=None):
     if output.exists() or all(root is None for root in (
             continuation_root, shared_root, canonical_recovery_root, singleton_root, shared_qfo_root,
-            singleton_qfo_root, singleton_tk_root)):
+            singleton_qfo_root, singleton_tk_root, cap400_recovery_root)):
         raise ValueError("Require a fresh output and at least one producer namespace")
     parent = json.loads(parent_path.read_text())
     check(parent["score_table"])
@@ -442,18 +443,38 @@ def build(repo, parent_path, output, continuation_root=None, shared_root=None, c
     for kind, root in (("continuation", continuation_root), ("shared_hit", shared_root),
                        ("canonical_recovery", canonical_recovery_root), ("singleton_policy", singleton_root),
                        ("shared_qfo", shared_qfo_root), ("singleton_qfo", singleton_qfo_root),
-                       ("singleton_tk", singleton_tk_root)):
+                       ("singleton_tk", singleton_tk_root), ("cap400_recovery", cap400_recovery_root)):
         if root is None:
             continue
         path = root / "results.json"
         if not path.exists():
             observations.append({"kind": kind, "path": str(path), "status": "report_missing_execution_state_not_inferred"})
             continue
-        report, capture = (recovery_capture(path, captures) if kind == "canonical_recovery"
-                           else snapshot(path, captures, kind + ".json"))
+        if kind == "cap400_recovery":
+            from benchmark_tools import report_cap400_downstream as recovery
+            report, capture = recovery.capture(path, captures)
+            plan, pins, failed = recovery.load_plan(repo, root, report)
+        else:
+            report, capture = (recovery_capture(path, captures) if kind == "canonical_recovery"
+                               else snapshot(path, captures, kind + ".json"))
         followup = kind in ("singleton_qfo", "singleton_tk")
-        plan, pins = (singleton_followup_plan(repo, root, report) if followup else check_plan(repo, root, report))
+        if kind != "cap400_recovery":
+            plan, pins = (singleton_followup_plan(repo, root, report) if followup else check_plan(repo, root, report))
         observations.append({"kind": kind, "producer_status": report["status"], "snapshot": capture["snapshot"]})
+        if kind == "cap400_recovery":
+            key = "full_search:cap400"
+            upsert_cell(methods, key, key, failed)
+            cell = {"dataset": "QfO", "status": report["status"], "producer_status": report["status"],
+                    "scores": {}, "source_snapshot": capture["snapshot"], "producer_job_id": report["job_id"]}
+            cell.update({k: report[k] for k in ("error", "error_type", "postflight_error") if k in report})
+            if report["status"] == recovery.SUCCESS:
+                cell.update(recovery.cell(repo, root, plan, report))
+            upsert_cell(methods, key, key, cell)
+            for pin in pins:
+                check(pin)
+            if runtime() != plan["runtime"]:
+                raise ValueError("Scientific runtime changed during cap400 recovery admission")
+            continue
         if kind == "singleton_policy" or followup:
             dataset = "QfO" if kind == "singleton_qfo" else "ThreeKingdoms" if kind == "singleton_tk" else "OrthoBench"
             labels = [row.get("label") for row in report.get("arms", [])]
@@ -544,7 +565,8 @@ def build(repo, parent_path, output, continuation_root=None, shared_root=None, c
         "report_additional_hillclimb.py", "report_current_hillclimb.py", "report_hillclimb.py",
         "recover_full_qfo_search.py", "run_full_search_hillclimb.py", "run_membership_hillclimb.py",
         "run_shared_hit_pipeline.py", "recover_canonical_qfo_scoring.py", "run_canonical_downstream.py",
-        "run_singleton_tie_orthobench.py", "continue_shared_qfo.py", "run_singleton_tie_followup.py")]
+        "run_singleton_tie_orthobench.py", "continue_shared_qfo.py", "run_singleton_tie_followup.py",
+        "report_cap400_downstream.py", "continue_cap400_downstream.py", "continue_cap400_downstream_worker.py")]
     result.update(status="incremental_separate_trial_readback_no_default_promotion", parent_readback=record(parent_path),
                   reporter_source=record(__file__), methods=methods, score_table=record(output / "scores.tsv"),
                   additional_trial_observations=observations, defaults_promoted=False, goal_completed=False)
@@ -561,7 +583,8 @@ def build(repo, parent_path, output, continuation_root=None, shared_root=None, c
     result["round_screening"]["full_search"] = screen(full, "control100")
     result["limitations"].extend(["Newly completed trial cells are independently read back; unrelated earlier admissions are inherited, not rescored.",
         "Pending, failed, absent and unverified cells do not supply scores. Cell admission is not a claim that the producer job is terminal.",
-        "Fresh shared-hit inference and cached canonical controls have different timing scopes. FAS remains unseeded."])
+        "Fresh shared-hit inference and cached canonical controls have different timing scopes. FAS remains unseeded.",
+        "Cap400 recovery preserves the failed fresh attempt and separates cached clustering/downstream costs; recovery is not uninterrupted full-pipeline timing."])
     write_json(output / "summary.json", result)
     return result
 
@@ -571,7 +594,7 @@ if __name__ == "__main__":
     for name in ("repo", "parent", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
     for name in ("continuation-root", "shared-root", "canonical-recovery-root", "singleton-root", "shared-qfo-root",
-                 "singleton-qfo-root", "singleton-three-kingdoms-root"):
+                 "singleton-qfo-root", "singleton-three-kingdoms-root", "cap400-recovery-root"):
         parser.add_argument("--" + name, type=Path)
     args = parser.parse_args()
     result = build(args.repo.resolve(), args.parent.resolve(), args.output.resolve(),
@@ -581,5 +604,6 @@ if __name__ == "__main__":
                    args.singleton_root.resolve() if args.singleton_root else None,
                    args.shared_qfo_root.resolve() if args.shared_qfo_root else None,
                    args.singleton_qfo_root.resolve() if args.singleton_qfo_root else None,
-                   args.singleton_three_kingdoms_root.resolve() if args.singleton_three_kingdoms_root else None)
+                   args.singleton_three_kingdoms_root.resolve() if args.singleton_three_kingdoms_root else None,
+                   args.cap400_recovery_root.resolve() if args.cap400_recovery_root else None)
     print(result["status"], len(result["methods"]))
