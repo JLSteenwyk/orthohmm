@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "status": "prespecified_cached_candidate_union_diagnostic_before_implementation",
+  "hypothesis": "The relaxed min1/cap100 prefilter displaced accepted min4/cap100 candidates. A label-free per-query union of both sets might retain those candidates while adding relaxed-search candidates at lower HMM burden than indiscriminate cap400. This diagnostic measures the exact retained-array union and score consistency; it does not execute or validate a new production search policy.",
+  "prior_evidence": [
+    {"path": "benchmark_tools/results/search_recovery_all_readback_20261012.json", "bytes": 63140, "sha256": "6f5c725730b91478be06aea0b494516be1e2132f594d5bfd502c1d58d3cd191f"},
+    {"path": "benchmark_tools/results/prefilter_threshold_displacement_diagnosis_20261014.json", "bytes": 84311, "sha256": "240e7f4f5fbe8441523080522664229e01bfe454f63106af97af7bbb69561cab"}
+  ],
+  "known_results_not_new_predictions": {"directions": 144, "watched_pairs": 81466, "relaxed_accepted_gained": 1174, "relaxed_accepted_lost": 748},
+  "inputs": {
+    "execution_plan": "benchmarks/results/search_recovery_r1_20261012/execution_plan.json",
+    "execution_plan_sha256": "aacbc6124f7e38a8cebd38646d7279dd6d556c6fcf34205b531f1db337e518a4",
+    "scientific_revision": "109f8ff3a14c2b92cb64253a623b950ea06487af",
+    "arms": ["control", "shared_hit1"],
+    "control_report_sha256": "07e95b92d8014d14e7c2ca19863106ead93bbd9c048313b6c7537bfe637f4ab4",
+    "relaxed_report_sha256": "fd5d96a0713b0c54ecbbc95fd62e4875a0c260d8ccaf7789b290d37f608110d2"
+  },
+  "fixed_settings": {"matrix_name": "BLOSUM62", "band_width": 64, "kmer_k": 4, "use_reduced_alphabet": false, "min_diag_hits": 1, "diag_bin_width": 10, "max_candidates_per_query": 100, "prefilter_phase_a_topk": 5000},
+  "thresholds": [0.0001, 0.001],
+  "method": [
+    "Rehash the retained audited source/input/runtime inventories and both terminal diagnostic reports. Reconstruct the original 12-FASTA universe and reference-conditioned direction/query order.",
+    "Read every unfiltered raw NPZ. Independently reproduce each retained watched-decision table and report count at both original significance thresholds.",
+    "Construct a union using only query/target candidate identity. Do not consult watched labels for union membership. Reject duplicate/out-of-range candidates, nonfinite scores, negative E-values or incompatible sequence universes.",
+    "Require bit-for-bit identical HMM scores and E-values for every candidate appearing in both arms. Stop on any discrepancy rather than selecting one value or claiming score invariance.",
+    "Order the union deterministically by query/target index. Require all original candidates and values retained, no duplicate, and at most 200 union targets per query. No post-union truncation is allowed.",
+    "Report baseline, relaxed, shared, baseline-only, relaxed-only and union candidate counts, per-query union distribution, all-candidate significant counts, watched decisions, gained/lost accepted links, and historically absent accepted recovery at both thresholds.",
+    "Rehash all inputs after analysis. Record diagnostic-only resources and competing host activity. Write a new report namespace; never modify original arrays or infer full-pipeline performance from their union."
+  ],
+  "advance_gate": "Recommend a separately prespecified fresh-search implementation/OrthoBench pilot only if all invariants pass, at least one watched accepted link is added, no original accepted link or value is lost at either threshold, and total union candidates are at most 1.25 times the min4/cap100 baseline. This is a feasibility gate on development-exposed, reference-conditioned observations, not an orthology accuracy test or evidence of Pareto improvement. Keep a failing result and stop this branch rather than tuning the gate after inspection.",
+  "followup_if_advanced": "Prespecify an opt-in protected-union production policy with unchanged HMM significance and graph/phylogeny settings. Demonstrate fresh selection and HMM score equivalence on complete diagnostic directions before a complete-proteome OrthoBench pilot. Only justified shortlisted candidates proceed to all eight endpoints and matched existing tool comparisons. Existing shared-hit QfO recovery must finish and be independently admitted or explicitly recorded failed; do not duplicate it.",
+  "scope": "Cached union accounting only. Initial query selection used reference-family genes; targets remain complete proteomes. A no-loss union is partly a construction property, not independent biological evidence. More homologous links can still worsen graph clustering, paralog discrimination or phylogenetic inference. No new accuracy-table cell, default change, independent-validation claim or speedup claim is permitted from this diagnostic.",
+  "resources": {"host": "local shared Threadripper / bizon", "cpus": 1, "memory_gib": 16, "wall_limit": "01:00:00", "concurrency": 1, "unrelated_jobs": "untouched", "dgx_required": false},
+  "git": "Commit and push this plan before implementation or real union evaluation, then focused tests, frozen execution evidence, independently verified findings and the advance/stop decision. Preserve unrelated working-tree changes.",
+  "native_inference_rerun": false,
+  "defaults_promoted": false,
+  "goal_completed": false
+}
