@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "status": "submitted_explicit_lossless_export_and_scoring_recovery_no_accuracy_admission",
+  "job_id": "24360",
+  "source_revision": "2dafecbb3e4c329475e8559ac68faeecf5b95cf8",
+  "source_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/shared_qfo_export_recovery_r1_v1_20261016",
+  "execution_plan": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/shared_qfo_export_recovery_r1_v1_20261016/execution_plan.json",
+    "bytes": 361191,
+    "sha256": "19ab4985a21d9f0c9523ee7a18187f3c46f99f267c295bc2a59bffb0dfb3bda4"
+  },
+  "working_tests": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/shared_qfo_export_recovery_regression_tests_20261016.xml",
+    "bytes": 40032,
+    "sha256": "33332d264ba1c3c18253d1970fd8b39315c517da2368a1c0fa7ebd877cc37d69"
+  },
+  "frozen_tests": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/shared_qfo_export_recovery_frozen_tests_20261016.xml",
+    "bytes": 39886,
+    "sha256": "ab69e5d217f0493d61042a557f7fdb463604d21f0d34b94209d8921c991baad7"
+  },
+  "working_tests_passed": 271,
+  "frozen_tests_passed": 270,
+  "test_scope": "Working tests include a real small HMM/phylogeny pipeline and prove default rejection persists while the explicit derived view validates. Frozen targeted suite excludes only that inference fixture; the recovery executor performs no method inference and does not require compiled search binaries.",
+  "executor_source_records": 1194,
+  "scoring_id": "fq_a7fadbc11d51fc19_1",
+  "resources": {"host": "bizon", "cpus": 8, "memory": "64G", "wall_limit": "08:00:00", "cuda": false, "requeue": false},
+  "original_failed_job": "24247",
+  "original_failed_skip_job": "24242",
+  "scientific_revision": "7e7acaed3f3392197c0c498dc60ba63abb726810",
+  "failure_evidence": "benchmark_tools/results/shared_qfo_duplicate_export_failure_20261016.json",
+  "expected_original_rows_per_table": 5561115,
+  "expected_distinct_pairs": 5561114,
+  "scope": "Explicit canonical-export view of the original min1/cap100/canonical relation set. Only one identical redundant pair/confidence row may be omitted in new files. All original artifacts and failure history remain. Original matched canonical control was independently reverified in preparation. Recheck projection, full native contracts and six raw endpoints before admission. Recovery costs are not uninterrupted successful full-pipeline timing; duplication cause remains unknown.",
+  "scores": {},
+  "native_inference_rerun": false,
+  "defaults_promoted": false,
+  "goal_completed": false
+}
