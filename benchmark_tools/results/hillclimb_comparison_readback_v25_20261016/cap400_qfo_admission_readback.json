@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "status": "cap400_qfo_scores_independently_admitted_and_crosschecked",
+  "method_key": "full_search:cap400",
+  "summary": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v25_20261016/summary.json",
+    "bytes": 4739127,
+    "sha256": "7b57bd8c108ff979b4e2a2a2833069e7a27a30c185738ac9178ad7f16f3722dc"
+  },
+  "parent": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v24_20261014/summary.json",
+    "bytes": 4674659,
+    "sha256": "8e2e262840cf394ed54433f9904e127eaca1ac7413e4f4ecd50abbc34bb99e75"
+  },
+  "score_table": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v25_20261016/scores.tsv",
+    "bytes": 4532,
+    "sha256": "a23ff44411654ae1628f22f94d609d84ac926621743befc5c04824ef84ae92b8"
+  },
+  "producer": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_scoring_only_recovery_r1_v1_20261016/results.json",
+    "bytes": 143096,
+    "sha256": "c4b8f2d51de3dd8141a764e6c03b670c93960989964a4d3256e85996762af0fe"
+  },
+  "reporter_tests": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v25_20261016/reporter_tests.xml",
+    "bytes": 32728,
+    "sha256": "8082041e278b7732ec336088a015b27fbdcfc766ed5193f2a79df756ff49a952"
+  },
+  "reporter_tests_passed": 218,
+  "terminal_scheduler": {
+    "job_id": "24355",
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "cpus": 8,
+    "node": "bizon",
+    "elapsed": "00:31:09"
+  },
+  "methods": 27,
+  "other_26_method_records_unchanged": true,
+  "all_27_table_rows_agree_with_summary": true,
+  "original_orthobench_and_three_kingdoms_scores_unchanged": true,
+  "retained_failed_jobs": ["24245", "24350"],
+  "variant_scores": {
+    "OrthoBench: OrthoBench F1": 0.7219520419563432,
+    "QfO: VGNC F": 0.8833749212938131,
+    "QfO: SwissTrees F": 0.8001211715812567,
+    "QfO: TreeFam-A F": 0.6138262580088669,
+    "QfO: EC": 0.96859993,
+    "QfO: GO": 0.49085418,
+    "QfO: FAS": 0.7545680240439208,
+    "ThreeKingdoms: Three Kingdoms F1": 0.9149140284849827
+  },
+  "matched_control_scores": {
+    "OrthoBench: OrthoBench F1": 0.7410607351873405,
+    "QfO: VGNC F": 0.9016900956268489,
+    "QfO: SwissTrees F": 0.8335132205147882,
+    "QfO: TreeFam-A F": 0.614863704412014,
+    "QfO: EC": 0.9656505,
+    "QfO: GO": 0.49034928,
+    "QfO: FAS": 0.7624114773550157,
+    "ThreeKingdoms: Three Kingdoms F1": 0.872133159469203
+  },
+  "deltas": {
+    "OrthoBench: OrthoBench F1": -0.019108693230997287,
+    "QfO: VGNC F": -0.018315174333035755,
+    "QfO: SwissTrees F": -0.033392048933531426,
+    "QfO: TreeFam-A F": -0.0010374464031470687,
+    "QfO: EC": 0.0029494300000000306,
+    "QfO: GO": 0.0005048999999999748,
+    "QfO: FAS": -0.007843453311094928,
+    "ThreeKingdoms: Three Kingdoms F1": 0.04278086901577971
+  },
+  "variant_coverage": {"genes": 984137, "species": 78, "groups": 370680, "pairs": 5836092},
+  "native_pair_delta": -123443,
+  "pair_conversion": {"written_pairs": 5836092, "total_pairs": 5836092, "retained_pairs": 5836092, "removed_mapping_pairs": 0},
+  "raw_metric_files_independently_parsed": 12,
+  "raw_f1_recalculation_absolute_tolerance": 1e-15,
+  "functional_assessed_relations": {
+    "EC": {"control": 117460, "variant": 98012},
+    "GO": {"control": 84211, "variant": 81929}
+  },
+  "complete_eight_endpoints": true,
+  "development_screen_passed": false,
+  "interpretation": "Larger initial candidate cap is a tradeoff, not a broad improvement: all four primary orthology F1 endpoints decline while supplementary Three Kingdoms improves. EC and GO similarity means increase on smaller assessed relation sets; this is not unconditional functional accuracy improvement. Retain opt-in status and do not promote defaults.",
+  "limitations": [
+    "All endpoints are development-exposed; TreeFam is supporting evidence and Three Kingdoms is a narrow BUSCO-reference co-membership assessment.",
+    "The 0.005 decline tolerance is a development screen, not statistical equivalence or noninferiority.",
+    "FAS is unseeded; this observed difference is not a replicated estimate of a method effect.",
+    "Original failed fresh inference and failed post-native scoring import remain explicit. Cached final-graph recovery, native downstream execution and scoring-only costs are separate, not uninterrupted fresh-pipeline timing.",
+    "Shared-hit QfO continuation 24247 remains running and supplies no scores to this table. No unrun score is imputed."
+  ],
+  "defaults_promoted": false,
+  "goal_completed": false
+}
