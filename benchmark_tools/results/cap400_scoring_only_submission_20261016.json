@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "status": "submitted_scoring_only_recovery_no_accuracy_admission",
+  "job_id": "24355",
+  "source_revision": "37f71d9c07ed67baf539a5894344bcb418c1874f",
+  "source_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cap400_scoring_only_recovery_r1_v1_20261016",
+  "execution_plan": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_scoring_only_recovery_r1_v1_20261016/execution_plan.json",
+    "bytes": 363361,
+    "sha256": "fff52449be3681d11683df9cbb77ca46d11332084b855869596bc7186dbe8d76"
+  },
+  "frozen_tests": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/cap400_scoring_only_frozen_tests_20261016.xml",
+    "bytes": 13404,
+    "sha256": "d88909086fb9cb73233274c072de0110b6abe86d91e241f6995ab7644e724455"
+  },
+  "tests_passed": 91,
+  "executor_source_records": 1191,
+  "scoring_id": "fq_b461d13ffb9cc00f_1",
+  "resources": {
+    "host": "bizon",
+    "cpus": 8,
+    "memory": "64G",
+    "wall_limit": "08:00:00",
+    "cuda": false
+  },
+  "parent_job": "24350",
+  "parent_status": "FAILED 1:0 after completed native inference; scoring converter import failed",
+  "native_admission": "benchmark_tools/results/cap400_scoring_parent_admission_20261016.json",
+  "scientific_revision": "2ccc411520d9e63678178a50207ba1fca87bfbb3",
+  "scope": "New frozen executor includes original unchanged QfO converter and scoring helpers. Revalidate retained native products, then perform pair conversion, six-endpoint scoring and independent raw readback only. Preserve original failed fresh job 24245, final graph recovery 24347 and downstream job 24350 separately. Shared-host and recovery timings are not uninterrupted fresh-pipeline measurements.",
+  "scores": {},
+  "native_inference_rerun": false,
+  "defaults_promoted": false,
+  "goal_completed": false
+}
