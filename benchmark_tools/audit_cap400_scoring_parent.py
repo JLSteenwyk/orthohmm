@@ -100,13 +100,19 @@ def audit(repo, root):
         "defaults_promoted": False, "goal_completed": False}
 
 
+def write_report(repo, root, output):
+    if output.exists():
+        raise FileExistsError(output)
+    result = audit(repo, root)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    write_json(output, result)
+    return result
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ("repo", "parent-root", "output"):
         parser.add_argument("--" + name, required=True, type=Path)
     args = parser.parse_args()
-    if args.output.exists():
-        raise FileExistsError(args.output)
-    result = audit(args.repo.resolve(), args.parent_root.resolve())
-    write_json(args.output.resolve(), result)
+    result = write_report(args.repo.resolve(), args.parent_root.resolve(), args.output.resolve())
     print(result["status"])

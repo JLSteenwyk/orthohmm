@@ -1,4 +1,5 @@
 from copy import deepcopy
+import json
 import sys
 
 import pytest
@@ -96,3 +97,20 @@ def test_changed_native_input_refused(tmp_path, native, field):
     metrics["input"][field] = "changed"
     with pytest.raises(ValueError, match="different candidate"):
         audit.require_native_execution(tmp_path, plan, report, metrics)
+
+
+def test_report_writer_creates_new_parent_directory(tmp_path, monkeypatch):
+    result = {"status": "verified_fixture", "scores": {}}
+    monkeypatch.setattr(audit, "audit", lambda *args: result)
+    output = tmp_path / "new/namespace/report.json"
+    assert audit.write_report(tmp_path, tmp_path, output) == result
+    assert json.loads(output.read_text()) == result
+
+
+def test_report_writer_preserves_existing_receipt(tmp_path, monkeypatch):
+    output = tmp_path / "report.json"
+    output.write_text("existing receipt\n")
+    monkeypatch.setattr(audit, "audit", lambda *args: pytest.fail("Existing output was reused"))
+    with pytest.raises(FileExistsError):
+        audit.write_report(tmp_path, tmp_path, output)
+    assert output.read_text() == "existing receipt\n"
