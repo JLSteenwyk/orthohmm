@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "prespecified_lossless_export_normalization_and_scoring_recovery",
+  "evidence": "benchmark_tools/results/shared_qfo_duplicate_export_failure_20261016.json",
+  "parent_job": "24247",
+  "parent_root": "benchmarks/results/shared_qfo_continuation_r1_v1_20261014",
+  "scientific_revision": "7e7acaed3f3392197c0c498dc60ba63abb726810",
+  "purpose": "Assess the unchanged predicted relation set of the completed min1/cap100/canonical arm despite one identical duplicate export row. This is transparent format recovery, not another scientific configuration or a successful fresh native export.",
+  "operation": "In a new frozen executor and output namespace, stream original pair and confidence files together. Copy every first row byte-for-byte and omit only the single known, exactly repeated adjacent row from each derived table. Do not sort, infer, add relations, change confidence, edit original files or change production defaults.",
+  "gates": [
+    "Require parent FAILED 1:0 on bizon with 16 CPUs, native command exit zero, empty scores, exact duplicate-validation error and matching retained artifact pins. Reverify original inputs, runtime, actual source manifests, native parameters and all gene/partition/mapping contracts.",
+    "Reject malformed headers/rows, reversed/self/same-species/unknown-gene pairs, ownership inconsistency, order violations, confidence mismatch, confidence conflict, an unexpected duplicate identity or more than exactly one duplicate. Require 5561115 original rows and 5561114 distinct rows, matching native summary and metric counts.",
+    "Preserve original root groups, candidate partition, tree results, annotations and species tree unchanged. Validate all 984137 genes and 78 species; strictly validate canonical derived pairs and confidence outputs. Stop on any inconsistency beyond the known redundant row.",
+    "Independently verify that the derived files are exactly the original streams modulo that identical redundant row. Compare full relation and confidence content, not just aggregate counts; no distinct prediction may be removed or added.",
+    "Run original QfO conversion and all six assessments in a fresh short namespace with zero accession-mapping loss. Independently read raw scores and compare against the original matched canonical control. Preserve missing scores as NA until successful terminal recovery and readback.",
+    "Keep failed original jobs 24242 and 24247 and the explicit original skip. Report derived-export/scoring costs separately from the original completed inference within a failed job; do not claim uninterrupted successful full-pipeline timing or a fixed producer bug."
+  ],
+  "resources": {"host": "local shared Threadripper; unrelated workloads untouched", "cpus": 8, "memory": "64G", "wall_limit": "08:00:00", "cuda": false},
+  "forbidden_reruns": ["initial HMM search", "profile expansion", "clustering", "refinement", "candidate expansion", "alignment", "species-tree inference", "gene-tree inference", "reconciliation"],
+  "tests": "Cover exact-copy semantics, duplicate identity/count, conflicting confidence, ownership/order/universe failures, immutable originals, namespace reuse, successful raw-score admission and failure-history preservation.",
+  "reporting": "Identify the QfO result as derived canonical-export scoring of the original relation set. Keep v25 and unrelated tool records unchanged; retain original failure and full normalization provenance in the next table cell. FAS remains unseeded and all labels development-exposed.",
+  "git": "Commit and push this protocol before implementation/evaluation; commit tested code, frozen launch evidence and independently validated results at meaningful milestones.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}
