@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "status": "completed_original_cap400_native_reverified_scoring_only_pending",
+  "auditor_revision": "bc23f3e0",
+  "audit": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_scoring_parent_audit_r1_v1_20261016/report.json",
+    "bytes": 1243269,
+    "sha256": "90e689feb3ab803d152929585893c8e27969137a8733662d5262b0f6dfa9c859"
+  },
+  "source": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_cap400_scoring_parent.py",
+    "bytes": 6627,
+    "sha256": "82ad2ac807f3e619744f010c5c05975f34d841c0bace5df251d34bc7cd272f36"
+  },
+  "producer": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_downstream_recovery_r1_v1_20261016/results.json",
+    "bytes": 189170,
+    "sha256": "24725fc99e68f48581c778dbdc8108c3a137f13f7a50b1b10f988f319eeefb6b"
+  },
+  "scheduler": {
+    "JobIDRaw": "24350",
+    "State": "FAILED",
+    "ExitCode": "1:0",
+    "AllocCPUS": "32",
+    "NodeList": "bizon"
+  },
+  "failure": "ModuleNotFoundError: No module named 'qfo_benchmark' during scoring converter import; graph and original native commands completed with exit zero. No scoring work or result namespace exists in the parent.",
+  "scientific_revision": "2ccc411520d9e63678178a50207ba1fca87bfbb3",
+  "coverage": {
+    "genes": 984137,
+    "species": 78,
+    "groups": 370680,
+    "pairs": 5836092
+  },
+  "verified_records": 4149,
+  "tests": {
+    "artifact": "benchmark_tools/results/cap400_scoring_parent_auditor_tests_v2_20261016.xml",
+    "passed": 60,
+    "scope": "Focused failure/scheduler/science/input/output-path gates and existing recovered-cap400 reporter tests; the actual audit above separately exercises real native content."
+  },
+  "scope": "Native integrity and failure authentication only, not accuracy admission. Complete checked inventory remains in the pinned audit. Preserve original failed fresh attempt 24245 and downstream attempt 24350. Next action is scoring-only recovery in a fresh frozen namespace; never rerun completed inference or claim uninterrupted fresh-pipeline timing.",
+  "scores": {},
+  "native_inference_rerun": false,
+  "defaults_promoted": false,
+  "goal_completed": false
+}
