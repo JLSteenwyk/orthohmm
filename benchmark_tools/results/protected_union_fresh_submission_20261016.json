@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "status": "submitted_fresh_protected_union_search_no_accuracy_admission",
+  "job_id": "24362",
+  "source_revision": "f520f30b5147977e39639c3d23f9764604f9086b",
+  "source_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/protected_union_fresh_r1_v1_20261016",
+  "execution_plan": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/protected_union_fresh_r1_v1_20261016/execution_plan.json",
+    "bytes": 280616,
+    "sha256": "8f8d6af3673e3c672ba117aa82b23c60d40401c91b8dadb7bd3c34eb12e44c22"
+  },
+  "working_production_tests": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/protected_union_production_cpu_tests_20261016.xml",
+    "bytes": 72798,
+    "sha256": "dc6460c1b6bbb6d160489562f5b7544dccc23edd9c56b0cb2956ddb0444d6009"
+  },
+  "working_runner_tests": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fresh_protected_union_runner_tests_20261016.xml",
+    "bytes": 21584,
+    "sha256": "0864b325ac6762d8028a76ff33a009aade8a1a62ae6e074f29184cf76ad213e2"
+  },
+  "frozen_tests": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/protected_union_fresh_frozen_tests_v2_20261016.xml",
+    "bytes": 75010,
+    "sha256": "7110ec91a08e59a4a9f1c82af364c7851e6968193dc90b27b380ca823b114c65"
+  },
+  "working_production_tests_passed": 503,
+  "working_runner_tests_passed": 154,
+  "frozen_tests_passed": 518,
+  "frozen_tests_skipped": 0,
+  "test_scope": "Includes real CPU union scoring versus both constituent searches at 1/2 threads, real small complete HMM/phylogeny pipelines, candidate bounds/deduplication, default worker/CLI compatibility, policy metrics, checkpoint isolation, raw-array equivalence and observed-kernel-route gates. CUDA hidden.",
+  "initial_frozen_test_failure": {
+    "passed": 503,
+    "failed": 15,
+    "artifact": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/protected_union_fresh_frozen_tests_20261016.xml",
+      "bytes": 94383,
+      "sha256": "a3a8a76e2d848f26f09a9f716f06b99d21f4374c0c5dd514b46cb3bc7460ab7e"
+    },
+    "cause_and_resolution": "Only legacy argument-parser tests failed because the sparse executor omitted their committed tests/samples directory. Added committed fixtures to this separate frozen checkout and reran into a new XML file without changing scientific code. Working-tree user fixture changes untouched. Small inference fixtures had passed; no new scientific benchmark job was launched before the corrected suite passed."
+  },
+  "libraries": {"hmm_viterbi.so": "f21d902852d727d6270b65ba900db52e7216cd874ee2d2b89fa72b6f16dcd5c0", "kmer_prefilter.so": "348b1c715e2e305dae7e889bae1d2498e609e48ce5d50cd668db71b548c60b88", "pair_align.so": "81c26c6ce92b1da37285824ea1b8dcea007a7fc18a11ee5fa3d150628fa800c7"},
+  "source_records": 49,
+  "input_records": 955,
+  "resources": {"host": "bizon", "cpus": 8, "memory_gib": 64, "wall_limit": "06:00:00", "cuda": false, "requeue": false, "unrelated_jobs": "untouched"},
+  "expected_directions": 144,
+  "scope": "Fresh reference-conditioned diagnostic queries against complete OrthoBench target proteomes. Both control and union must reproduce authenticated arrays and bitwise HMM scores/E-values. Observe original CPU multipair calls and reject fallback. No fresh full-proteome accuracy result, default promotion, isolated timing claim or replacement of failed historical producers follows from submission or partial progress.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}
