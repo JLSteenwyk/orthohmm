@@ -103,6 +103,32 @@ existing group member and receive a sequence-supported anchor before they can
 change a cluster. The profile currently requires the built-in search and
 Leiden clustering. The default `standard` profile is unchanged.
 
+**Protected candidate union (experimental).** The development checkout also
+provides `--search-candidate-policy protected_union` for fresh built-in
+high-sensitivity searches with canonical result collection and a fixed
+positive candidate cap. The default policy remains `single`.
+
+```shell
+orthohmm proteomes/ --accuracy_profile high_sensitivity \
+  --search_result_order canonical --search-candidate-policy protected_union \
+  --search_max_candidates_per_query 100
+```
+
+The policy unions candidates from two initial-search prefilters using minimum
+shared-hit thresholds of 4 and 1, removes duplicate query/target pairs, and
+scores each distinct candidate once with the unchanged HMM scorer. Leave
+`--search_min_total_hits` at 4; the second threshold is applied internally.
+The cap applies separately to each prefilter: this example can retain up to
+200 candidates per query, with no truncation after union. Profile-expansion
+filters are unchanged. Starting from existing search results is unsupported,
+and checkpoints from different candidate policies are not interchangeable.
+
+Preserving initial candidates does not guarantee preservation of downstream
+orthogroups or ortholog assignments. End-to-end accuracy and resource benefits
+are not established, and this policy is not a recommended replacement for the
+default. The committed [pilot protocol](benchmark_tools/hillclimb_protected_union_fresh_pilot_20261016.json)
+records the fixed evaluation settings and advancement criteria.
+
 High-sensitivity profile expansion also requires the compiled `pair_align.so`
 kernel and its OpenMP runtime. Source installation therefore needs a C
 compiler with OpenMP support. The Numba fallback for standard sequence search
