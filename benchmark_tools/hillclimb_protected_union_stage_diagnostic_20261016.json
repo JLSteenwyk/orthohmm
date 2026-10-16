@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "status": "post_hoc_explanatory_diagnostic_declared_after_negative_pilot_and_uncertainty",
+  "purpose": "Localize the rejected protected-union pilot's score changes between the retained phylogeny candidate partition and final reconciled partition. This is not a new inference experiment, an accuracy-selection round, independent validation or permission to retune/reopen the stopped branch.",
+  "prerequisites": ["benchmark_tools/results/hillclimb_comparison_readback_v27_20261016/protected_union_admission_readback.json", "benchmark_tools/results/protected_union_ob_uncertainty_20261016/independent_readback.json"],
+  "known_result": "Protected-union final OrthoBench F1 0.7340884328689253 versus matched canonical 0.7410607351873405; strict pilot gate failed. Paired-family intervals do not change the stop decision. Candidate-level scores and stage contrasts have not been computed for this readout.",
+  "executor_source": "benchmarks/work/protected_union_reporter_admission_20261016",
+  "executor_revision": "094f61f001b6235c41df4650db0ba816bcb5c981",
+  "helpers": {
+    "compare_native_membership.py": {"bytes": 7227, "sha256": "609f10838c4a4d6a0b65b4e9b39a9f07842e48e31de421bfdfc7de4e857351f5"},
+    "score_orthobench_partition.py": {"bytes": 6229, "sha256": "0e24c302a9d12ce8c82a4111ff0321c87303469b3c866c317dc2629ad66f9746"},
+    "run_membership_hillclimb.py": {"bytes": 23273, "sha256": "1e96bcadd1e3feed68ef39534735227e84134d07d9858d409d7d98f1dabba966"},
+    "audit_historical_profile_ablation.py": {"bytes": 10140, "sha256": "ffdafda2b55c9580eccc7497881f0e160450af6c9029e3540009bebba2081b31"},
+    "score_ygob_groups.py": {"bytes": 8335, "sha256": "b18e86dafa7370b75386890d1c8acedf721b8d026a2cd150c0565645698eb51a"}
+  },
+  "partitions": {
+    "control_candidate": {"path": "benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/canonical/candidate/orthohmm_working_res/orthohmm_edges_clustered.txt", "bytes": 4567716, "sha256": "44f201dbc7e4eccf06d9401e5ce1b20fdf6ad523e15ee6007fe1c58f3941842d"},
+    "union_candidate": {"path": "benchmarks/results/protected_union_orthobench_r1_v1_20261016/native/output/orthohmm_working_res/phylogeny_candidate_superfamilies.txt", "bytes": 4567716, "sha256": "62aec51d3cf0acbfd7de99cb69c26a556dd38d487f3dedb517ed1543ce4a7959"},
+    "control_final": {"path": "benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/canonical/native/orthohmm_working_res/orthohmm_edges_clustered.txt", "bytes": 4567716, "sha256": "370ee7f42f64784dcb981d994ea6b15fa61994187037fb703145c492a6321ba0"},
+    "union_final": {"path": "benchmarks/results/protected_union_orthobench_r1_v1_20261016/native/output/orthohmm_working_res/orthohmm_edges_clustered.txt", "bytes": 4567716, "sha256": "04e92c564047883bc6f7a7290fb595aff22897c813a3bc48bd20b84b03770e9b"}
+  },
+  "reference_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs",
+  "all_family_manifest": {"path": "benchmark_tools/results/orthobench_phylogeny_partition_20260902.json", "bytes": 18883, "sha256": "71ce14f0c0df944cb40028a2f63b667875b28e2ac8397831d15c56a421e5826d", "use": "Use --partition all only. Require development plus validation names to equal all 70 scored RefOGs exactly. Both historical subsets are development-exposed; no subset is a new holdout."},
+  "output": "benchmark_tools/results/protected_union_stage_diagnostic_20261016",
+  "analysis": [
+    "Authenticate both admission receipts, native producer and retained candidate provenance. Require candidate pins to match their respective provenance_manifest input_cluster_sha256. Validate all four partitions as nonoverlapping complete identical 251378-gene sets before analysis; never drop difficult genes or families.",
+    "Use the unchanged frozen score_orthobench_partition.py CLI with --partition all for all four partitions into separate fresh JSON files. Use the same 70 reference files and all 11 low-certainty exclusions authenticated by the admitted cells. Reproduce each final partition's entire family-detail record and aggregate F1/precision/recall before interpreting candidate-level diagnostics. Crosscheck all four against the original official scorer through the existing score_orthobench helper.",
+    "Compare full native roots and unordered gene/species pair multisets using frozen compare_native_membership.py; preserve multiplicity and validate complete gene ownership/reconciliation counts. These turnover counts are not benchmark accuracy or proof of a uniquely causal stage.",
+    "Compare candidate-versus-final membership changes using the existing strict partition_contrast helper. For each of the 70 families preserve raw TP/FP/FN, reference size, splits and exactness in all four scores; report every family, not only gains or losses.",
+    "Report candidate and final between-policy F1/precision/recall deltas plus each policy's candidate-to-final changes in percentage points. Verify the telescoping identity: final policy difference = candidate policy difference + union candidate-to-final change - control candidate-to-final change. This is descriptive stage association, not independent causal decomposition.",
+    "If examining species trees, compare identical terminal taxon sets and canonical rooted clades/unrooted bipartitions using the structured Bio.Phylo parser. Do not infer topology change from unequal byte hashes or compare arbitrary family IDs as biological identities. No new tree inference or fixed-tree intervention is authorized.",
+    "Independently recheck results and input/source/runtime/reference pins after execution, leave the admitted score table and gate unchanged, and retain failed attempts and descriptive diagnostic resources."
+  ],
+  "tests": "Run the existing frozen native-membership and OrthoBench scoring/helper tests before execution. No production code changes or new HMM algorithm are needed.",
+  "resources": {"host": "bizon local shared Threadripper", "cpus": 1, "memory_gib": 4, "time_limit": "00:15:00", "blas_threads": 1, "gpu_requested": false, "inference_runs": 0, "other_jobs": "untouched"},
+  "decision": "Do not tune parameters or reopen the failed protected-union branch based on these post-hoc diagnostics. Use findings only to justify a separately precommitted, genuinely different mechanism or a bounded plateau conclusion. No QfO or Three Kingdoms extension, no default promotion and no new uncertainty search.",
+  "limits": "The retained control is a cached matched downstream replay and union is a fresh pipeline. Stage-associated differences can reflect interacting changed search/graph/profile/candidate/tree/membership steps; endpoint association alone does not isolate a biological cause. Candidate-family scores are explanatory diagnostics, not final orthology claims. All references are development-exposed; shared-host diagnostic time is not pipeline timing.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}
