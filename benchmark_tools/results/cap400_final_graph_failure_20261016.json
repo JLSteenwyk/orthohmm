@@ -1,0 +1,149 @@
+{
+  "cause": "unknown; locating the crash does not establish causality",
+  "checkpoint_audit": {
+    "accuracy_evaluated": false,
+    "auditor": {
+      "bytes": 4044,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_accuracy_checkpoint.py",
+      "sha256": "b71fa9cf1d2cb954206e61179535d7e22fc39946c4de97af6fa45533f7eb9643"
+    },
+    "limitations": "Checks hashes and numeric integrity, not FASTA/source equivalence, hit completeness or duplicate ordered pairs.",
+    "manifest": {
+      "bytes": 808,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_qfo_cap400_continuation_r1_v1_20261014/cap400/native/output/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+      "sha256": "fd7e4a00b2669a536139808a5c232f23ab4d550254bea18e937d8d1f89b10ac7"
+    },
+    "schema_version": 1,
+    "status": "numeric_checkpoint_verified",
+    "summary": {
+      "gene_names_lexically_sorted": true,
+      "genes": 984137,
+      "hits": 150521022,
+      "maximum_score": 7.4837209302325585,
+      "minimum_score": 0.0047840368172403286,
+      "nonpositive_scores": 0,
+      "self_hits": 983854,
+      "species": 78
+    }
+  },
+  "defaults_promoted": false,
+  "execution_plan": {
+    "bytes": 1317215,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_qfo_cap400_continuation_r1_v1_20261014/execution_plan.json",
+    "sha256": "f51af606c0dc278386415cb748110e9fa1cbb75acaded958028756035ecbd835"
+  },
+  "failed_execution": {
+    "command": [
+      "/home/bizon/anaconda3/bin/python",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/full_search_hillclimb_r1_v3_20261012/benchmark_tools/benchmark_production.py",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_qfo_cap400_continuation_r1_v1_20261014/cap400/native/output",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_qfo_cap400_continuation_r1_v1_20261014/cap400/native/metrics.json",
+      "--cpu",
+      "32",
+      "--threads-per-worker",
+      "8",
+      "--full-output",
+      "--matrix",
+      "BLOSUM62",
+      "--evalue",
+      "0.0001",
+      "--clustering",
+      "leiden",
+      "--cpm-resolution",
+      "0.1",
+      "--refinement-profile",
+      "default",
+      "--accuracy-profile",
+      "high_sensitivity",
+      "--search-max-candidates-per-query",
+      "400",
+      "--phylogeny",
+      "reconcile",
+      "--species-tree-mode",
+      "infer",
+      "--aligner",
+      "mafft",
+      "--tree-builder",
+      "FastTree",
+      "--phylogeny-candidates",
+      "satellite_v2",
+      "--phylogeny-root-rule",
+      "species_overlap",
+      "--phylogeny-pair-rule",
+      "positive_paralogy",
+      "--species-tree-rooting",
+      "min_variance"
+    ],
+    "log": {
+      "bytes": 150,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_qfo_cap400_continuation_r1_v1_20261014/cap400/native/native.log",
+      "sha256": "f07fd666d4031f5d0b9f34874179b6c8b60ea230398e615404ed94ab5cae8f60"
+    },
+    "returncode": 1,
+    "time": {
+      "bytes": 1842,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_qfo_cap400_continuation_r1_v1_20261014/cap400/native/native.time.txt",
+      "sha256": "9f76409c67f9a14b440302b0ee45dff658c076d0fe5589db620bcb3325449c53"
+    }
+  },
+  "failed_native_metrics": {
+    "bytes": 26264,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_qfo_cap400_continuation_r1_v1_20261014/cap400/native/metrics.json",
+    "sha256": "43a1425f0110c2b9884c54aadbd5be576571a6c5306caac5054205ae906de04a"
+  },
+  "failure_location": "leidenalg.Optimiser.optimise_partition, frozen final post-profile singleton clustering at orthohmm.py:751",
+  "final_graph_edges_reported_by_failed_harness": 33585180,
+  "goal_completed": false,
+  "initial_hmm_search_rerun": false,
+  "limitations": [
+    "No completed native inference or QfO scores; the preceding partition must not be scored as final.",
+    "Numeric checkpoint audit verifies stored numeric integrity, not completeness of accepted hits relative to a fresh rerun.",
+    "Final ABC graph reconstruction and independent streaming parity verification remain required before any optimizer probe.",
+    "Search and profile results are retained; no HMM inference was rerun.",
+    "Failed fresh shared-host timing must remain separate from any incremental recovery costs."
+  ],
+  "optimizer_attempted": false,
+  "parent_result": {
+    "bytes": 161662,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_qfo_cap400_continuation_r1_v1_20261014/results.json",
+    "sha256": "73cbd9148710afe59d7e1d21e36353365306b78729da7367faa25a291dde745e"
+  },
+  "preceding_partition_groups_reported_by_failed_harness": 308883,
+  "recovery_protocol": {
+    "bytes": 4242,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hillclimb_cap400_final_graph_recovery_20261016.json",
+    "sha256": "be3e850aa380b8b72dca637352bfe769c4bb39ecb59fd91240a1dae584e8a244"
+  },
+  "retained_native_products": [
+    {
+      "bytes": 2258046353,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_qfo_cap400_continuation_r1_v1_20261014/cap400/native/output/orthohmm_working_res/orthohmm_edges.txt",
+      "sha256": "94babb52a0e41b879b3dfbbfd37d7bee7cdf90a3e5f79b5e122077aa601c2a51"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_qfo_cap400_continuation_r1_v1_20261014/cap400/native/output/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "sha256": "b935f5276377d93f29ad5201805ac529a367f73e2a24ca43c573938a65418f2c"
+    },
+    {
+      "bytes": 161876,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_qfo_cap400_continuation_r1_v1_20261014/cap400/native/output/benchmark.log",
+      "sha256": "afcfb9401388a6d3247b8bd6f315629afa54f82f61aeb3cbb31970b4947fc403"
+    }
+  ],
+  "scheduler": {
+    "AllocCPUS": "32",
+    "Elapsed": "2-04:30:54",
+    "ExitCode": "1:0",
+    "JobIDRaw": "24245",
+    "NodeList": "bizon",
+    "State": "FAILED"
+  },
+  "schema": "cap400_final_graph_failure_receipt_v1",
+  "scientific_revision": "2ccc411520d9e63678178a50207ba1fca87bfbb3",
+  "scientific_source": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/full_search_hillclimb_r1_v3_20261012",
+  "scores": {},
+  "source_input_runtime_reverified": true,
+  "status": "terminal_cap400_final_leiden_failure_and_retained_checkpoint_verified"
+}

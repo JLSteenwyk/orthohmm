@@ -1,0 +1,33 @@
+{
+  "schema": "cap400_final_graph_recovery_v1",
+  "status": "prespecified_before_recovery_execution",
+  "failure_evidence": "benchmark_tools/results/cap400_final_graph_failure_20261016.json",
+  "parent_job": "24245",
+  "parent_namespace": "benchmarks/results/full_qfo_cap400_continuation_r1_v1_20261014",
+  "purpose": "Complete the originally planned cap400 QfO evaluation after a native Leiden optimizer crash, without repeating the successful fresh initial HMM search or overwriting the failed attempt.",
+  "observation": "The parent failed with exit 1:0. Faulthandler places SIGSEGV inside leidenalg.Optimiser.optimise_partition, called by the frozen production final post-profile singleton clustering at orthohmm.py line 751. This locates the failure but does not establish its cause. The earlier partition is not a completed final inference and must not be scored.",
+  "scientific_identity": "Preserve original 2ccc411520d9e63678178a50207ba1fca87bfbb3 source, runtime, complete 984137-gene/78-species corrected QfO universe, cap400/min4/arrival search, CPM 0.1, seed 4, and original inferred-phylogeny settings. No library replacement, seed search, threshold change, benchmark-label access during inference, or silent method substitution.",
+  "preflight": [
+    "Authenticate terminal scheduler state, exact original command, failed harness source/input manifests, retained output hashes, and the final-clustering call site.",
+    "Independently audit the complete numeric search checkpoint with the existing bounded-memory auditor and retain its limitations.",
+    "Authenticate the saved final ABC edge file against the failed harness output manifest. Reconstruct compact arrays using the checkpoint's complete original gene order, preserving every edge row, endpoint orientation, duplicate, and float64 weight. Do not use legacy first-encounter vertex numbering.",
+    "Verify the reconstructed arrays against an independent full streaming readback of the saved ABC file and retain hashes. Confirm finite weights, valid identifiers, exact counts, and complete isolate inclusion. The frozen writer uses float(weight), permitting float64 round-trip preservation; test this property and validate the exact retained tokens rather than assuming a rounded export.",
+    "Require the original source/library/tool identities before and after every execution stage. Keep all recovery artifacts in a new namespace."
+  ],
+  "bounded_probe": "Attempt the final saved graph exactly once in a clean process using the original frozen orthohmm.leiden_worker and unchanged CPM/seed/include-isolates semantics. Enable faulthandler. Never retry a failed optimizer automatically. If it fails again, preserve the failure and diagnose before proposing another separately committed recovery experiment.",
+  "downstream_gate": "Only after complete partition validation may a separately tested continuation run unchanged production refinement, satellite_v2 candidate construction, inferred phylogeny, and all six corrected QfO scorers. Reuse the verified numeric search checkpoint and preserved graph; do not invent missing profile counters or use the pre-final partition as the final result. Require independent native-content and raw-score readback before admitting any score.",
+  "resources": {
+    "host": "local shared Threadripper",
+    "cpus": 1,
+    "memory_gib": 128,
+    "wall_limit": "1-00:00:00",
+    "optimizer_attempts": 1,
+    "concurrency": 1
+  },
+  "timing": "Preserve the failed fresh run's 2-04:30:54 scheduler elapsed time separately from cached graph/recovery costs. Shared-host timings remain confounded. No recovery timing is an uninterrupted full-pipeline measurement.",
+  "acceptance": "Recovery is execution repair, not a new accuracy hypothesis or grounds for promoting defaults. Keep original failure and absent scores in the ledger until independently admitted recovered results exist. Compare eventual scores only with the matched original control.",
+  "git": "Commit and push this plan and authenticated failure receipt before optimizer execution; test and freeze recovery orchestration, then commit and push validated milestones.",
+  "initial_hmm_search_rerun": false,
+  "defaults_promoted": false,
+  "goal_completed": false
+}
