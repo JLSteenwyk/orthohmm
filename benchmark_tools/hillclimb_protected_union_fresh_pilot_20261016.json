@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "status": "prespecified_before_production_policy_implementation_or_fresh_evaluation",
+  "hypothesis": "Preserving min4/cap100 candidates while adding nonduplicate min1/cap100 candidates may avoid the displacement losses of a single relaxed prefilter and recover useful HMM links without cap400's indiscriminate expansion. Retained-array feasibility does not establish that the resulting graph or phylogeny is more accurate.",
+  "prerequisite": {
+    "path": "benchmark_tools/results/protected_candidate_union_readback_20261016.json",
+    "bytes": 3971,
+    "sha256": "552752340ea5c2657bf8980001c9c6f4649a263febc6aa14e41bc3a410870111",
+    "status": "protected_union_all_144_directions_independently_recounted"
+  },
+  "known_development_observations": {"cached_union_candidates": 2526468, "control_candidates": 2034503, "burden_ratio": 1.2418108992712225, "watched_accepted_gained_at_1e4": 1174, "watched_accepted_lost": 0},
+  "production_interface": {
+    "cli": "--search-candidate-policy",
+    "api": "search_candidate_policy",
+    "default": "single",
+    "experimental_value": "protected_union",
+    "constraints": "Nondefault production use requires a fresh built-in high_sensitivity initial search, fixed positive candidate cap, search_min_total_hits=4 and canonical result collection. Do not silently reuse an incompatible initial-search checkpoint. The underlying label-free policy may use the caller's fixed cap, but this experimental round uses exactly 100 per constituent prefilter on every dataset. Reject invalid types, unknown policies and unsupported combinations."
+  },
+  "selection_algorithm": [
+    "Prepare one target k-mer index and run the existing prefilter twice with identical settings except min_total_hits=4 versus 1. Each call retains up to the fixed cap independently.",
+    "Build the per-query union of the returned target IDs without consulting reference labels, species relationships, benchmark identity, watched queries or previous predictions. Retain every original candidate, eliminate duplicate pairs, order by query/target index, and never truncate after union. The maximum is twice the fixed per-prefilter cap.",
+    "Build the original query HMM profiles and score each distinct union candidate once through the unchanged HMM backend. Preserve full-target database length, E-value calculation, score normalization, HMM parameters and significance cutoff.",
+    "Leave profile-expansion prefilters, graph/refinement rules, satellite recruitment and phylogenetic methods unchanged. Preserve default single-policy control flow and legacy worker tuple/call behavior. Record actual policy and unique scored-candidate counts, and include policy in initial-search checkpoint compatibility."
+  ],
+  "fixed_settings": {"accuracy_profile": "high_sensitivity", "matrix": "BLOSUM62", "band_width": 64, "kmer_k": 4, "min_diag_hits": 1, "diag_bin_width": 10, "prefilter_phase_a_topk": 5000, "per_prefilter_candidate_cap": 100, "evalue": 0.0001, "cpm_resolution": 0.1, "leiden_seed": 4, "refinement_profile": "default", "phylogeny_candidates": "satellite_v2", "species_tree_mode": "infer", "root_rule": "species_overlap", "pair_rule": "positive_paralogy", "species_tree_rooting": "min_variance", "gene_tree_support_mode": "legacy", "search_result_order": "canonical"},
+  "stages": [
+    "Implement and test the opt-in policy end to end, including default compatibility, fixed-cap bounds, per-query deduplication, deterministic order, empty inputs, invalid CLI/API combinations, multiprocessing handoff, actual metrics and checkpoint isolation. Use a real small HMM/phylogeny fixture in addition to mocked unit tests.",
+    "Freeze tested source, runtime and unchanged CPU libraries matching the original canonical controls. Run fresh control and protected-union searches for all original 144 reference-conditioned directions against complete targets at 8 CPU threads, with CUDA hidden. Save every scored candidate and value. Fresh control must match the authenticated retained control arrays; fresh union must match the independently verified cached union in membership and bitwise scores/E-values. No candidate forcing or scoring changes. Record and stop on disagreements rather than silently substituting cached values.",
+    "Once the fresh equivalence gate passes and shared-hit QfO job 24360 is terminal and independently admitted or explicitly recorded failed, run a single fresh complete-proteome OrthoBench protected-union pipeline with independently inferred trees. Revalidate the retained matched canonical min4/cap100 control. No tree or accepted-hit checkpoint replay may substitute for this new intervention.",
+    "Independently validate complete gene ownership, numeric checkpoints, HMM/profile activation, candidate partitions, native pairs/confidence, actual policy and fresh tree/reconciliation evidence, then independently reproduce OrthoBench precision, recall and F1. Retain failed attempts and separate inference/scoring/recovery costs.",
+    "Advance only if OrthoBench F1 is strictly greater than the matched canonical control and neither precision nor recall falls by more than 0.005, with full native coverage and all validity gates passed. If the gate fails, stop this branch and report it; do not relax selection or retune this policy after seeing results.",
+    "If advanced, prespecify and execute unchanged protected-union settings on complete corrected QfO and Three Kingdoms inputs, then independently read back the full eight-endpoint vector and all diagnostic/resource fields. Preserve any failed or missing endpoint explicitly; do not impute results."
+  ],
+  "controls": "Retained canonical_collection:canonical min4/cap100 controls, authenticated from their original execution/recovery evidence. The single relaxed shared_hit:shared_hit1 configuration is an additional diagnostic, not a replacement baseline. Compare finalized candidates with OrthoFinder 3.1.5 full and sequence-only pipelines and every other retained tool using the existing validated table. Do not rerun unchanged external tools unnecessarily.",
+  "final_selection": "Report all eight endpoints and Pareto tradeoffs, not an aggregate QfO mean. Any primary improvement with all endpoint declines at most 0.005 is only a development screen, not equivalence, independent validation or automatic default promotion. Functional similarity gains require scored-relation/denominator checks, and small FAS changes remain subject to unseeded sampling variability.",
+  "resources": {"host": "local shared Threadripper / bizon", "fresh_direction_diagnostic": {"cpus": 8, "memory_gib": 64, "wall_limit": "06:00:00"}, "complete_orthobench_pilot": {"cpus": 16, "memory_gib": 128, "wall_limit": "1-00:00:00"}, "concurrent_new_scientific_runs": 1, "cuda": false, "dgx_required": false, "unrelated_jobs": "untouched"},
+  "timing_scope": "Shared-host descriptive timing with competing activity recorded. A two-prefilter/one-HMM-pass policy has overhead not measured by cached union counts. The 24.18% restricted-query candidate increase is not a full-proteome cost guarantee. Retained controls have different timing scopes; no isolated speed claim follows.",
+  "validity": "All reference-conditioned diagnostics and existing benchmarks are development-exposed. No dataset-specific inference rules or benchmark labels in selection/scoring. TreeFam remains supporting and Three Kingdoms supplementary. Missing historical archives and host contention remain documented nonblocking limitations.",
+  "git": "Commit and push this plan before production implementation/evaluation; then tested code, frozen execution evidence, independent results and advance/stop decisions at meaningful milestones. Preserve unrelated work and all original failed exports.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}
