@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "status": "prespecified_pilot_readout_before_pilot_point_estimates_not_independent_confirmation",
+  "purpose": "Describe paired RefOG-resampling uncertainty for the eventual protected-union OrthoBench result against its matched canonical control without changing inference, the committed pilot gate or defaults.",
+  "timing": "Specified while native job 24363 remains in its initial search and reporter 24369 is pending; no pilot scores are available. The method and datasets are already development-exposed. Prespecifying this readout does not make the optimization program a prospective independent validation study.",
+  "eligibility": "Analyze any successfully and independently admitted complete OrthoBench pilot result, whether its signed change is positive or negative and whether its development gate passes or fails. Pending, failed, invalid or unadmitted predictions produce no bootstrap result. Do not choose analysis eligibility based on the observed effect or interval.",
+  "required_admission": "First inspect terminal native job 24363 and dependent reporter 24369, independently crosscheck the resulting v27 cell and all parent method records/TSV rows, and retain the admission receipt. A generated summary or reporter zero exit alone is insufficient. A separately justified fresh reporter-recovery namespace may replace v27 only with its failure lineage retained and actual native/score admission repeated.",
+  "executor_revision": "094f61f001b6235c41df4650db0ba816bcb5c981",
+  "executor_source": "benchmarks/work/protected_union_reporter_admission_20261016",
+  "helpers": {
+    "bootstrap_orthobench.py": {"bytes": 10002, "sha256": "b93022b0d05ee13edeca8ae4b083b338cc947df79ef5386fdf9103432c764d11"},
+    "score_orthobench_partition.py": {"bytes": 6229, "sha256": "0e24c302a9d12ce8c82a4111ff0321c87303469b3c866c317dc2629ad66f9746"},
+    "orthobench_stage_diagnostics.py": {"bytes": 13747, "sha256": "1ea4a651fef6765104b082d3b0d17d5c8a6263b8da61afbdab006cd85159b72e"},
+    "bootstrap_recent_hillclimb_ob.py": {"bytes": 6837, "sha256": "05f481b6beccd5141e39b2892efa31a7f910e1e6e34ed8a91f59a5f33e1c9d35"}
+  },
+  "baseline": {"key": "canonical_collection:canonical", "prediction": "benchmarks/results/canonical_downstream_r1_v1_20261014/OrthoBench/canonical/native/orthohmm_working_res/orthohmm_edges_clustered.txt", "bytes": 4567716, "sha256": "370ee7f42f64784dcb981d994ea6b15fa61994187037fb703145c492a6321ba0", "path_note": "Rechecked this dataset-correct partition against the admitted canonical OrthoBench cell. Reauthenticate its pin and native/scorer linkage after pilot admission before execution."},
+  "candidate": {"key": "protected_union:protected_union", "prediction": "benchmarks/results/protected_union_orthobench_r1_v1_20261016/native/output/orthohmm_working_res/orthohmm_edges_clustered.txt"},
+  "reference_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs",
+  "algorithm": "Reuse the existing frozen bootstrap_orthobench.py CLI. For the two authenticated complete native partitions, recompute the independent OrthoBench sufficient statistics with the same 70 RefOGs and low-certainty exclusions. Draw 70 RefOGs with replacement using shared multiplicities across methods. Recompute weighted TP/FP/FN totals and F1/precision/recall in every draw; do not average family F1 or assume independent gene pairs.",
+  "replicates": 100000,
+  "seed": 20261016,
+  "alpha": 0.05,
+  "multiplicity_endpoints": 3,
+  "multiplicity_scope": "The unchanged CLI defaults apply a Bonferroni-tail adjustment over the one contrast times three metrics. This covers only this readout, not earlier searches, previous uncertainty readouts, all benchmark endpoints or data-dependent selection. Do not describe it as correction for the entire hill-climb history.",
+  "command_shape": ["python", "frozen_bootstrap_orthobench.py", "--predictions", "canonical_collection:canonical=authenticated_OrthoBench_control_partition", "--predictions", "protected_union:protected_union=authenticated_full_pilot_partition", "--baseline", "canonical_collection:canonical", "--refogs", "release_matched_RefOG_directory", "--replicates", "100000", "--seed", "20261016", "--json", "fresh_output/report.json"],
+  "output": "benchmark_tools/results/protected_union_ob_uncertainty_20261016/report.json",
+  "verification": [
+    "Authenticate the admitted summary/table and native/scorer input pins, both complete 251378-gene/12-species universes, original scientific runtime and frozen helper Git bytes. Require distinct dataset-correct candidate and control partitions; reject accidental QfO inputs.",
+    "Require exactly 70 unique RefOG names with identical reference sizes, complete low-certainty exclusion inputs, and reproduction of every admitted per-family sufficient statistic, F1, precision and recall before interpreting intervals. Aggregate equality alone does not establish matched-control family identity.",
+    "Require the core's 100000 draws, seed 20261016, alpha 0.05 and three-endpoint tail adjustment. Recompute deterministically with the same seed into a separate fresh scratch output, compare all substantive bootstrap results while excluding generation-time/path metadata, and preserve any failed readout instead of overwriting it.",
+    "Independently verify signed candidate-minus-control changes in percentage points, every family count, nominal and adjusted percentile bounds, family win/tie/loss totals and unchanged pilot gate. Rehash native predictions, RefOG/uncertainty files, source helpers, runtime and admission evidence after analysis; preserve the benchmark score table unchanged."
+  ],
+  "prepared_tests": {"suite": ["tests/unit/test_bootstrap_orthobench.py", "tests/unit/test_bootstrap_recent_hillclimb_ob.py"], "passed": 28, "failed_or_skipped": 0, "report": "benchmarks/results/protected_union_ob_uncertainty_preparation_tests_20261016.xml", "scope": "Existing frozen core and sufficient-statistic validation tests; no pilot predictions, final point estimates or new reference assignments were used."},
+  "resources": {"cpus": 1, "memory_gib": 4, "wall_limit": "00:30:00", "host": "bizon", "blas_threads": 1, "cuda": false, "inference_runs": 0},
+  "limits": [
+    "Development-exposed conditional uncertainty only; not independent biological confirmation, a p-value, or evidence of generalization to arbitrary datasets.",
+    "RefOG resampling assumes exchangeable families; shared evolutionary history, fused predictions, prior tuning and selection can invalidate broader independence interpretations.",
+    "Percentile intervals and Bonferroni-tail adjustment are approximate, not guaranteed simultaneous coverage or correction for the full optimization program.",
+    "An interval containing zero does not demonstrate equivalence, noninferiority or no effect. The 0.005 decline heuristic remains only a point-estimate development screen.",
+    "This does not quantify run-to-run variation, species sampling, dataset shift or QfO/Three Kingdoms uncertainty. FAS remains unseeded and outside this readout."
+  ],
+  "gate_unchanged": "A valid negative pilot still closes this branch under the original strict F1/precision/recall rule, even if an interval contains zero. A passing point-estimate gate still requires separately prespecified unchanged-setting QfO/Three Kingdoms evaluation, not default promotion. Never relax or replace the gate after inspecting intervals.",
+  "inference_changes": false,
+  "new_pilot_scores_accessed": false,
+  "unopened_confirmation_labels_accessed": false,
+  "defaults_promoted": false,
+  "goal_completed": false
+}
