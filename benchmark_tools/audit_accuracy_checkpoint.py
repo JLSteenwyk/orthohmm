@@ -40,13 +40,14 @@ def check_arrays(names, species, queries, targets, scores, chunk_size=1000000):
             "nonpositive_scores": nonpositive, "minimum_score": minimum, "maximum_score": maximum}
 
 
-def audit(path, expected_hash):
+def audit(path, expected_hash, *, expected_candidate_policy="single"):
     manifest_path = path / "manifest.json"
     manifest = read_frozen(manifest_path, expected_hash)
     expected = {"gene_names.txt", "gene_to_species.npy", "hit_queries.npy", "hit_targets.npy", "hit_scores.npy"}
     if set(manifest["files"]) != expected or {p.name for p in path.iterdir()} != expected | {"manifest.json"}:
         raise ValueError("Unexpected checkpoint file inventory")
-    arrays = load_accuracy_checkpoint(path, verify=True)
+    arrays = load_accuracy_checkpoint(path, verify=True,
+        **({"expected_candidate_policy": expected_candidate_policy} if expected_candidate_policy != "single" else {}))
     summary = check_arrays(*arrays)
     if summary["genes"] != manifest["genes"] or summary["hits"] != manifest["hits"]:
         raise ValueError("Manifest counts differ")
@@ -62,10 +63,11 @@ def main():
     parser.add_argument("--checkpoint", type=Path, required=True)
     parser.add_argument("--sha256", required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--expected-candidate-policy", choices=("single", "protected_union"), default="single")
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError(args.output)
-    result = audit(args.checkpoint.resolve(), args.sha256)
+    result = audit(args.checkpoint.resolve(), args.sha256, expected_candidate_policy=args.expected_candidate_policy)
     with args.output.open("x") as handle:
         json.dump(result, handle, indent=2, sort_keys=True)
         handle.write("\n")

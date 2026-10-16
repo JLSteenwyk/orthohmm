@@ -32,6 +32,50 @@ _c_pf_lib = None
 _c_pf_available = None
 
 
+def union_candidate_sets(left_ids, left_offsets, right_ids, right_offsets, num_targets, cap):
+    """Union two bounded CSR candidate sets without truncating either input."""
+    integers = []
+    for value, name, lower in ((num_targets, "target count", 0), (cap, "candidate cap", 1)):
+        if isinstance(value, (bool, np.bool_)):
+            raise ValueError(f"Invalid {name}")
+        try:
+            number = operator.index(value)
+        except TypeError as error:
+            raise ValueError(f"Invalid {name}") from error
+        if not lower <= number <= np.iinfo(np.int32).max:
+            raise ValueError(f"Invalid {name}")
+        integers.append(number)
+    num_targets, cap = integers
+    left_offsets, right_offsets = np.asarray(left_offsets), np.asarray(right_offsets)
+    if left_offsets.shape != right_offsets.shape or left_offsets.ndim != 1 or not len(left_offsets):
+        raise ValueError("Candidate query offsets differ")
+    queries = len(left_offsets) - 1
+    if queries > np.iinfo(np.int32).max:
+        raise ValueError("Too many candidate queries")
+    keys = []
+    for ids, offsets in ((left_ids, left_offsets), (right_ids, right_offsets)):
+        ids = np.asarray(ids)
+        if (ids.ndim != 1 or ids.dtype.kind not in "iu" or offsets.dtype.kind not in "iu"
+                or offsets[0] != 0 or offsets[-1] != len(ids)
+                or np.any(offsets[1:] < offsets[:-1])
+                or np.any(ids < 0) or np.any(ids >= num_targets)):
+            raise ValueError("Invalid candidate IDs or offsets")
+        counts = np.diff(offsets.astype(np.int64))
+        if np.any(counts > cap):
+            raise ValueError("Candidate set exceeds its per-query cap")
+        packed = np.repeat(np.arange(queries, dtype=np.int64), counts) * num_targets + ids.astype(np.int64)
+        unique = np.unique(packed)
+        if len(unique) != len(ids):
+            raise ValueError("Duplicate candidate within a prefilter result")
+        keys.append(unique)
+    combined = np.union1d(*keys)
+    offsets = np.zeros(queries + 1, dtype=np.int64)
+    if not len(combined):
+        return np.empty(0, dtype=np.int32), offsets
+    offsets[1:] = np.cumsum(np.bincount(combined // num_targets, minlength=queries))
+    return (combined % num_targets).astype(np.int32), offsets
+
+
 def _load_c_prefilter():
     """Load the C/OpenMP prefilter shared library."""
     global _c_pf_lib, _c_pf_available

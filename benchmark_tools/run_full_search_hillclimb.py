@@ -153,6 +153,9 @@ def validate_native(case, cpu, pair_export=None):
     actual_min_hits = metadata.get("search_min_total_hits", 4)
     if type(actual_min_hits) is not int or actual_min_hits != case.get("search_min_total_hits", 4):
         raise ValueError("Actual shared-hit threshold differs from trial")
+    policy = case.get("search_candidate_policy", "single")
+    if metadata.get("search_candidate_policy", "single") != policy or policy not in ("single", "protected_union"):
+        raise ValueError("Actual search candidate policy differs from trial")
     expected = {"accuracy_profile": "high_sensitivity", "search_mode": "builtin", "clustering": "leiden",
         "cpm_resolution": .1, "substitution_matrix": "BLOSUM62", "evalue_threshold": 1e-4,
         "leiden_seed": 4, "cpu_budget": cpu, "search_kmer_k": 4,
@@ -189,8 +192,9 @@ def validate_native(case, cpu, pair_export=None):
                 raise ValueError("Duplicate or empty input sequence")
             owners[seq.id], filenames[seq.id] = taxa[path.name], path.name
     checkpoint = output / "orthohmm_working_res/high_sensitivity_checkpoint"
-    numeric = audit(checkpoint, record(checkpoint / "manifest.json")["sha256"])
-    names, species, *_ = load_accuracy_checkpoint(checkpoint, verify=False)
+    policy_options = {"expected_candidate_policy": policy} if policy != "single" else {}
+    numeric = audit(checkpoint, record(checkpoint / "manifest.json")["sha256"], **policy_options)
+    names, species, *_ = load_accuracy_checkpoint(checkpoint, verify=False, **policy_options)
     ownership = validate_ownership(names, species, filenames)
     candidate_path = output / "orthohmm_working_res/phylogeny_candidate_superfamilies.txt"
     candidates = {g: i for i, group in enumerate(read_partition(candidate_path, set(owners))) for g in group}

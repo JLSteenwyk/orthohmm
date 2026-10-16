@@ -71,6 +71,7 @@ def parse_args(argv=None):
     parser.add_argument("--full-output", action="store_true")
     parser.add_argument("--search-max-candidates-per-query", type=int, default=None)
     parser.add_argument("--search-min-total-hits", type=int, default=4)
+    parser.add_argument("--search-candidate-policy", choices=("single", "protected_union"), default="single")
     parser.add_argument("--phylogeny", choices=("off", "reconcile"), default="off")
     parser.add_argument(
         "--species-tree-mode", choices=("supplied", "infer"), default="supplied"
@@ -106,6 +107,11 @@ def parse_args(argv=None):
     parser.add_argument("--native-kernel-trace", type=Path,
                         help="Benchmark-only fail-closed CPU multipair route observation")
     args = parser.parse_args(argv)
+    if args.search_candidate_policy != "single" and (
+            args.accuracy_profile != "high_sensitivity" or args.search_result_order != "canonical"
+            or args.search_min_total_hits != 4
+            or (args.search_max_candidates_per_query is not None and args.search_max_candidates_per_query <= 0)):
+        parser.error("--search-candidate-policy protected_union requires high_sensitivity, canonical collection, min4 and a fixed positive cap")
     if args.search_result_order!="arrival" and args.accuracy_profile!="high_sensitivity":
         parser.error("--search-result-order canonical requires --accuracy-profile high_sensitivity")
     if args.singleton_tie_policy != "first_hit" and args.accuracy_profile != "high_sensitivity":
@@ -166,6 +172,8 @@ def main(argv=None) -> int:
         ])
     if args.search_min_total_hits != 4:
         command.extend(["--search_min_total_hits", str(args.search_min_total_hits)])
+    if args.search_candidate_policy != "single":
+        command.extend(["--search-candidate-policy", args.search_candidate_policy])
     if args.search_result_order!="arrival":
         command.extend(["--search_result_order",args.search_result_order])
     if args.singleton_tie_policy != "first_hit":

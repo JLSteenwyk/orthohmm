@@ -39,6 +39,12 @@ def validate_singleton_tie_policy(policy: str) -> str:
     return policy
 
 
+def validate_search_candidate_policy(policy: str) -> str:
+    if not isinstance(policy, str) or policy not in {"single", "protected_union"}:
+        raise ValueError(f"Unsupported search candidate policy: {policy!r}")
+    return policy
+
+
 @dataclass(frozen=True)
 class AccuracyProfile:
     """Parameters that change sequence-search sensitivity and graph inference."""
@@ -116,6 +122,16 @@ def resolve_search_min_total_hits(value=4) -> int:
     return result
 
 
+def resolve_search_candidate_policy(policy="single", *, min_total_hits=4, max_candidates_per_query=0):
+    """Validate policy and the fixed-cap/min4 contract of protected selection."""
+    policy = validate_search_candidate_policy(policy)
+    if policy != "single":
+        cap = resolve_search_candidate_cap(resolve_accuracy_profile("high_sensitivity"), max_candidates_per_query)
+        if max_candidates_per_query is None or cap <= 0 or resolve_search_min_total_hits(min_total_hits) != 4:
+            raise ValueError("Protected union requires min_total_hits=4 and a fixed positive candidate cap")
+    return policy
+
+
 def _sha256(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as handle:
@@ -131,8 +147,11 @@ def write_accuracy_checkpoint(
     hit_queries,
     hit_targets,
     hit_scores,
+    *,
+    search_candidate_policy="single",
 ) -> Path:
     """Atomically persist high-sensitivity hits before native graph stages."""
+    search_candidate_policy = validate_search_candidate_policy(search_candidate_policy)
     working_directory = Path(output_directory) / "orthohmm_working_res"
     working_directory.mkdir(parents=True, exist_ok=True)
     checkpoint = working_directory / ACCURACY_CHECKPOINT_DIRECTORY
@@ -174,6 +193,8 @@ def write_accuracy_checkpoint(
                 for path in files
             },
         }
+        if search_candidate_policy != "single":
+            manifest["search_candidate_policy"] = search_candidate_policy
         (temporary / "manifest.json").write_text(
             json.dumps(manifest, indent=2, sort_keys=True) + "\n"
         )
@@ -184,12 +205,15 @@ def write_accuracy_checkpoint(
     return checkpoint
 
 
-def load_accuracy_checkpoint(checkpoint: str | Path, verify: bool = True):
-    """Load a complete hit checkpoint, optionally verifying every file hash."""
+def load_accuracy_checkpoint(checkpoint: str | Path, verify: bool = True, *, expected_candidate_policy="single"):
+    """Load complete hits; a nondefault selection policy must be explicit."""
     checkpoint = Path(checkpoint)
     manifest = json.loads((checkpoint / "manifest.json").read_text())
     if manifest.get("schema_version") != 1 or not manifest.get("complete"):
         raise ValueError(f"incomplete accuracy checkpoint: {checkpoint}")
+    policy = validate_search_candidate_policy(manifest.get("search_candidate_policy", "single"))
+    if policy != validate_search_candidate_policy(expected_candidate_policy):
+        raise ValueError(f"accuracy checkpoint candidate policy mismatch: {policy!r} != {expected_candidate_policy!r}")
     if verify:
         for filename, record in manifest["files"].items():
             path = checkpoint / filename

@@ -366,6 +366,8 @@ def create_parser() -> ArgumentParser:
         metavar="search_max_candidates_per_query",
     )
     optional.add_argument("--search_min_total_hits", type=int, default=4, help=SUPPRESS)
+    optional.add_argument("--search-candidate-policy", "--search_candidate_policy",
+        choices=["single", "protected_union"], default="single", help=SUPPRESS)
 
     optional.add_argument(
         "--clustering",

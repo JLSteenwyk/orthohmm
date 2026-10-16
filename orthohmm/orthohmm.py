@@ -16,6 +16,7 @@ from .accuracy import (
     read_index_clusters,
     resolve_accuracy_profile,
     resolve_search_candidate_cap,
+    resolve_search_candidate_policy,
     resolve_search_min_total_hits,
     validate_search_result_order,
     validate_singleton_tie_policy,
@@ -510,6 +511,13 @@ def _execute(
         or search_candidate_cap <= 0
     ):
         raise ValueError("Nondefault shared-hit thresholds require fresh built-in high_sensitivity and a fixed positive cap")
+    search_candidate_policy = resolve_search_candidate_policy(kwargs.pop("search_candidate_policy", "single"),
+        min_total_hits=search_min_total_hits, max_candidates_per_query=search_candidate_cap)
+    if search_candidate_policy != "single" and (
+        accuracy_config.name != "high_sensitivity" or search_mode != "builtin" or start is not None
+        or search_result_order != "canonical"
+    ):
+        raise ValueError("Protected union requires fresh built-in high_sensitivity with canonical result collection")
     if search_cap_override is not None and (
         search_mode != "builtin" or start is not None
     ):
@@ -534,6 +542,7 @@ def _execute(
         search_kmer_k=accuracy_config.kmer_k,
         search_max_candidates_per_query=search_candidate_cap,
         search_min_total_hits=search_min_total_hits,
+        search_candidate_policy=search_candidate_policy,
         search_result_order=search_result_order,
         singleton_tie_policy=singleton_tie_policy,
         leiden_seed=accuracy_config.leiden_seed,
@@ -645,6 +654,7 @@ def _execute(
                 evalue_threshold=evalue_threshold,
                 threads_per_worker=threads_per_worker,
                 **({"min_total_hits": search_min_total_hits} if search_min_total_hits != 4 else {}),
+                **({"candidate_policy": search_candidate_policy} if search_candidate_policy != "single" else {}),
             )
         metrics.add_counts(
             search_candidates=sum(
@@ -718,6 +728,7 @@ def _execute(
                 gene_names,
                 gene_to_species,
                 *accuracy_hits,
+                **({"search_candidate_policy": search_candidate_policy} if search_candidate_policy != "single" else {}),
             )
             metrics.add_metadata(
                 high_sensitivity_checkpoint=str(checkpoint_path.resolve())

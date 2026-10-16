@@ -15,6 +15,7 @@ from .helpers import (
 )
 from .files import fetch_fasta_files
 from .accuracy import resolve_accuracy_profile, resolve_search_candidate_cap, validate_search_result_order, resolve_search_min_total_hits, validate_singleton_tie_policy
+from .accuracy import resolve_search_candidate_policy
 from .refinement import PHYLOGENY_CANDIDATE_REFINEMENT_PROFILES
 from .phylogeny import (
     PhylogenyConfig,
@@ -156,6 +157,14 @@ def process_args(args) -> dict:
             or resolve_search_candidate_cap(resolve_accuracy_profile(accuracy_profile), search_cap_override) <= 0
         ):
             raise ValueError("Nondefault shared-hit thresholds require fresh built-in high_sensitivity and a fixed positive cap")
+        search_candidate_policy = resolve_search_candidate_policy(getattr(args, "search_candidate_policy", "single"),
+            min_total_hits=search_min_total_hits,
+            max_candidates_per_query=resolve_search_candidate_cap(resolve_accuracy_profile(accuracy_profile), search_cap_override))
+        if search_candidate_policy != "single" and (
+            accuracy_profile != "high_sensitivity" or search_mode != "builtin" or args.start
+            or search_result_order != "canonical"
+        ):
+            raise ValueError("Protected union requires fresh built-in high_sensitivity with canonical result collection")
     except ValueError as exc:
         logger.warning(str(exc))
         sys.exit(1)
@@ -284,6 +293,7 @@ def process_args(args) -> dict:
         **({"search_result_order":search_result_order} if search_result_order!="arrival" else {}),
         **({"singleton_tie_policy": singleton_tie_policy} if singleton_tie_policy != "first_hit" else {}),
         **({"search_min_total_hits": search_min_total_hits} if search_min_total_hits != 4 else {}),
+        **({"search_candidate_policy": search_candidate_policy} if search_candidate_policy != "single" else {}),
         **({"search_max_candidates_per_query": search_cap_override}
            if search_cap_override is not None else {}),
     )

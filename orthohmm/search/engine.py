@@ -18,7 +18,7 @@ import numpy as np
 from .matrices import get_matrix, get_background_freqs, get_ka_params
 from .sequences import SequenceStore, SpeciesSequences
 from .profile import build_profiles_batch
-from .prefilter import prefilter_candidates, prepare_kmer_index
+from .prefilter import prefilter_candidates, prepare_kmer_index, union_candidate_sets
 from .viterbi import (
     batch_viterbi_score, batch_viterbi_c, batch_viterbi_multipair_c,
     is_c_available,
@@ -156,6 +156,7 @@ def search_species_pair_indexed(
     n_threads: int = 4,
     prepared_index=None,
     prefilter_phase_a_topk: int = 5000,
+    candidate_policy: str = "single",
 ) -> IndexedSpeciesPairResults:
     """Execute profile HMM search for one species pair.
 
@@ -168,7 +169,12 @@ def search_species_pair_indexed(
 
     If max_candidates_per_query=0 (default), mc is determined adaptively
     based on k-mer coverage between the species pair.
+    Protected union requires a fixed cap and unions min4/min1 prefilters
+    before the single HMM pass, without truncating the combined candidates.
     """
+    from ..accuracy import resolve_search_candidate_policy
+    candidate_policy = resolve_search_candidate_policy(candidate_policy,
+        min_total_hits=min_total_hits, max_candidates_per_query=max_candidates_per_query)
     sub_matrix = get_matrix(matrix_name)
     bg_freqs = get_background_freqs(matrix_name)
     lam, K = get_ka_params(matrix_name)
@@ -216,6 +222,22 @@ def search_species_pair_indexed(
         prepared_index=prepared_index,
         phase_a_topk=prefilter_phase_a_topk,
     )
+    if candidate_policy == "protected_union":
+        relaxed_ids, relaxed_offsets = prefilter_candidates(
+            query_species, target_species,
+            k=kmer_k,
+            use_reduced_alphabet=use_reduced_alphabet,
+            min_total_hits=1,
+            min_diag_hits=min_diag_hits,
+            diag_bin_width=diag_bin_width,
+            max_candidates_per_query=max_candidates_per_query,
+            n_threads=n_threads,
+            sub_matrix=sub_matrix,
+            prepared_index=prepared_index,
+            phase_a_topk=prefilter_phase_a_topk,
+        )
+        cand_ids, cand_offsets = union_candidate_sets(cand_ids, cand_offsets,
+            relaxed_ids, relaxed_offsets, N_target, max_candidates_per_query)
     del prepared_index
 
     if len(cand_ids) == 0:
@@ -353,6 +375,7 @@ def search_species_pair(
     diag_bin_width: int = 10,
     max_candidates_per_query: int = 0,
     n_threads: int = 4,
+    candidate_policy: str = "single",
 ) -> SpeciesPairResults:
     """Public name-based wrapper around the compact indexed search path."""
     indexed = search_species_pair_indexed(
@@ -367,6 +390,7 @@ def search_species_pair(
         diag_bin_width=diag_bin_width,
         max_candidates_per_query=max_candidates_per_query,
         n_threads=n_threads,
+        **({"candidate_policy": candidate_policy} if candidate_policy != "single" else {}),
     )
     return SpeciesPairResults(
         query_species=indexed.query_species,
@@ -427,13 +451,15 @@ def _filter_significant_indexed(
 
 def _search_pair_worker(args):
     """Worker function for one directed species comparison."""
-    from ..accuracy import resolve_search_min_total_hits
-    if len(args) not in (9, 10):
-        raise ValueError("Search worker requires nine default or ten opt-in arguments")
-    min_total_hits = resolve_search_min_total_hits(args[9] if len(args) == 10 else 4)
+    from ..accuracy import resolve_search_min_total_hits, resolve_search_candidate_policy
+    if len(args) not in (9, 10, 11):
+        raise ValueError("Search worker requires nine default, ten threshold or eleven policy arguments")
+    min_total_hits = resolve_search_min_total_hits(args[9] if len(args) >= 10 else 4)
     (query_file, target_file, fasta_directory,
      matrix_name, band_width, kmer_k, max_candidates_per_query,
      evalue_threshold, n_threads) = args[:9]
+    candidate_policy = resolve_search_candidate_policy(args[10] if len(args) == 11 else "single",
+        min_total_hits=min_total_hits, max_candidates_per_query=max_candidates_per_query)
 
     os.environ["OMP_NUM_THREADS"] = str(n_threads)
     try:
@@ -457,6 +483,7 @@ def _search_pair_worker(args):
         max_candidates_per_query=max_candidates_per_query,
         n_threads=n_threads,
         **({"min_total_hits": min_total_hits} if min_total_hits != 4 else {}),
+        **({"candidate_policy": candidate_policy} if candidate_policy != "single" else {}),
     )
     species_ids = query_sp.ids if query_file == target_file else None
     return _filter_significant_indexed(r, evalue_threshold), species_ids
@@ -489,6 +516,7 @@ def execute_builtin_search(
     threads_per_worker: int = 8,
     max_candidates_per_query: int = 0,
     min_total_hits: int = 4,
+    candidate_policy: str = "single",
 ) -> IndexedSearchResults:
     """Replace execute_phmmer_search with built-in search engine.
 
@@ -507,8 +535,10 @@ def execute_builtin_search(
     -------
     dict mapping (query_file, target_file) -> SpeciesPairResults
     """
-    from ..accuracy import resolve_search_min_total_hits
+    from ..accuracy import resolve_search_min_total_hits, resolve_search_candidate_policy
     min_total_hits = resolve_search_min_total_hits(min_total_hits)
+    candidate_policy = resolve_search_candidate_policy(candidate_policy,
+        min_total_hits=min_total_hits, max_candidates_per_query=max_candidates_per_query)
     matrix_name = substitution_matrix.value
     file_pairs = list(itertools.product(files, repeat=2))
     total_tasks = len(file_pairs)
@@ -524,7 +554,8 @@ def execute_builtin_search(
     worker_args = [
         (query, target, fasta_directory, matrix_name, band_width, kmer_k,
          max_candidates_per_query, evalue_threshold, worker_threads)
-        + ((min_total_hits,) if min_total_hits != 4 else ())
+        + ((min_total_hits, candidate_policy) if candidate_policy != "single"
+           else (min_total_hits,) if min_total_hits != 4 else ())
         for query, target in file_pairs
     ]
 
