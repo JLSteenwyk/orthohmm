@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "status": "prespecified_retained_output_diagnostic_before_new_pair_overlap_evaluation",
+  "purpose": "Explain the admitted min1/cap100 QfO tradeoff against its matched canonical min4/cap100 control without another tuning arm or inference run.",
+  "admission": "benchmark_tools/results/hillclimb_comparison_readback_v26_20261016/shared_qfo_admission_readback.json",
+  "summary_sha256": "53da4f256685e3d348b4c882a282bdc47e2f6977076bbaa176c1d78c170b0de3",
+  "baseline_key": "canonical_collection:canonical",
+  "candidate_key": "shared_hit:shared_hit1",
+  "baseline": "benchmarks/results/canonical_downstream_r1_v1_20261014/QfO/canonical/native/orthohmm_phylogeny",
+  "candidate": "benchmarks/results/shared_qfo_export_recovery_r1_v1_20261016/canonical_export",
+  "candidate_export_scope": "Use only the independently admitted lossless derived view. Original failed exports remain untouched; no producer bug is claimed fixed.",
+  "executor": "benchmarks/work/cap400_scoring_only_recovery_r1_v1_20261016",
+  "executor_revision": "37f71d9c07ed67baf539a5894344bcb418c1874f",
+  "helpers": {
+    "compare_native_membership.py": "609f10838c4a4d6a0b65b4e9b39a9f07842e48e31de421bfdfc7de4e857351f5",
+    "compare_qfo_scored_pairs.py": "c86184be5a06238d520ff892ffe2b85ca32e2014d432c6051a01bbe48cb37bbc"
+  },
+  "raw_scores": {
+    "control": {
+      "GO": {
+        "path": "benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/qfo_scoring/results/GO/GO_ohmm-hillclimb-r1-cq-d7eb236bb965_5530032f5c75_raw.txt.gz",
+        "bytes": 788545,
+        "sha256": "e8a6ce4e8662ff9fbdb18bbf65104ec6fc708faf411996eacfdf7a216c5f781c"
+      },
+      "EC": {
+        "path": "benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/qfo_scoring/results/EC/EC_ohmm-hillclimb-r1-cq-d7eb236bb965_e2bfb6cfb11e_raw.txt.gz",
+        "bytes": 644825,
+        "sha256": "d4e5a2268f5dc7f25df2fc078cf9305792da3083276323459820d01b17e0292a"
+      }
+    },
+    "variant": {
+      "GO": {
+        "path": "benchmarks/results/shared_qfo_export_recovery_r1_v1_20261016/qfo_scoring/results/GO/GO_ohmm-hillclimb-r1-fq-a7fadbc11d51fc19-1_7b7819925f63_raw.txt.gz",
+        "bytes": 761697,
+        "sha256": "1f51ae2264826b2c3d05ff415d83783b4f151dfdb59f49e9fef7b30374723d09"
+      },
+      "EC": {
+        "path": "benchmarks/results/shared_qfo_export_recovery_r1_v1_20261016/qfo_scoring/results/EC/EC_ohmm-hillclimb-r1-fq-a7fadbc11d51fc19-1_ebd41635f8dc_raw.txt.gz",
+        "bytes": 551685,
+        "sha256": "456dc0f46fdb892f738502208679fef043f7ca92a428fbc1833e396090c84d86"
+      }
+    }
+  },
+  "questions": [
+    "Does the net loss of 391936 native pairs conceal substantial additions as well as removals? Count full unordered gene/species pair multisets and root memberships, ignoring arbitrary family IDs and row order while retaining multiplicity.",
+    "Do small GO/EC mean increases accompany changes in eligible-pair populations rather than increased serialized scores on the same pairs? Compare exact integer-millionth scores and decompose mean differences using the original denominators."
+  ],
+  "gates": "Authenticate the v26 admission/summary, selected native-product pins, normalization receipt and both producers. Require the same complete 984137-gene universe, native reconciliation counts, consistent species ownership and zero duplicates in the admitted views. Bind raw GO/EC files to their producer verification inventories and independently admitted count/mean axes. Hash every diagnostic input and helper before and after evaluation. Preserve all v26 method records and scores unchanged.",
+  "orientation": "Native comparison uses baseline=control and candidate=variant. Functional overlap uses left=variant and right=control, so original_mean_difference is variant minus control. Never reverse these axes when interpreting results.",
+  "verification": "Run existing unit suites for both helpers. Independently recount complete root membership and native-pair intersections with a separate representation/streaming strategy, and independently parse raw rounded scores and reproduce count/sum/overlap/decomposition fields without calling the comparison helpers. Reconcile raw mean rounding with the published eight-decimal endpoint; do not require bit equality to rounded aggregates.",
+  "resources": "One-CPU native contrast with 16 GiB RAM and two-hour limit on shared bizon; GO/EC overlap is small and single-process. These are read-only diagnostics, not additional scientific inference. Leave running OrthoBench job 24363 and unrelated work untouched; diagnostic timing is not pipeline benchmark timing.",
+  "outputs": [
+    "benchmark_tools/results/shared_hit_qfo_native_contrast_20261016.json",
+    "benchmark_tools/results/shared_hit_go_scored_pair_overlap_20261016.json",
+    "benchmark_tools/results/shared_hit_ec_scored_pair_overlap_20261016.json",
+    "benchmark_tools/results/shared_hit_qfo_native_diagnostics_readback_20261016.json"
+  ],
+  "limits": "Post hoc development diagnostics. Pair changes do not establish correctness or uniquely identify a causal stage. Shared-pair conditioning changes the endpoint and cannot replace official scores or provide uncertainty. FAS is unseeded and excluded from this pair-score decomposition; its exported relation axis is not its sampled/scored denominator. This does not establish a protected-union accuracy gain or justify changing its precommitted pilot gate.",
+  "accuracy_evaluated": false,
+  "defaults_promoted": false,
+  "goal_completed": false
+}
