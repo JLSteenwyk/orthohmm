@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "status": "cap400_native_and_functional_diagnostics_independently_crosschecked",
+  "plan": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hillclimb_cap400_native_diagnostics_20261016.json",
+    "bytes": 2738,
+    "sha256": "b89e834bb23de53ddc6f16aadbdfa69032a56c0a788fc253c78f701a7b45a154"
+  },
+  "native": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/cap400_native_contrast_20261016.json",
+    "bytes": 9810,
+    "sha256": "6ba47bf167a4013c9baa8bcaa66d8c06217e8066f4614c4a2cfab96cf423df50"
+  },
+  "functional_reports": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/cap400_go_scored_pair_overlap_20261016.json",
+      "bytes": 2310,
+      "sha256": "0ce55e341475361842137232074ec8aabf38779873a1d88c8d82cdee2d2b71de"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/cap400_ec_scored_pair_overlap_20261016.json",
+      "bytes": 2311,
+      "sha256": "14112ff29ad02041f3601bc824bcc8f2ec6bf21040df10f9fbed024fad36042e"
+    }
+  ],
+  "tests": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/cap400_native_diagnostic_tests_20261016.xml",
+    "bytes": 4239,
+    "sha256": "0129feaeca3a0bd520c609812d9010e405f7759766bdd9547c30fd4aa2547c4f"
+  },
+  "tests_passed": 31,
+  "accuracy_table_unchanged": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v25_20261016/summary.json",
+    "bytes": 4739127,
+    "sha256": "7b57bd8c108ff979b4e2a2a2833069e7a27a30c185738ac9178ad7f16f3722dc"
+  },
+  "scheduler": {"job_id": "24357", "state": "COMPLETED", "exit_code": "0:0", "cpus": 1, "node": "bizon", "elapsed": "00:01:42"},
+  "diagnostic_resources": {
+    "source": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/cap400_native_contrast_20261016.time.txt",
+      "bytes": 1384,
+      "sha256": "a56cd5a8e804ae1ab15dc1dcd191a49293c2ed17c54d03360df575ab25cf8817"
+    },
+    "elapsed_seconds": 101.38,
+    "user_seconds": 98.44,
+    "system_seconds": 2.92,
+    "max_process_rss_kib": 2131484,
+    "scope": "One-CPU diagnostic only; not pipeline benchmark timing or aggregate process-tree memory."
+  },
+  "genes": 984137,
+  "independent_verification": "Direct CSV root-group sets, complete nonoverlapping gene universes and an ordered gene-pair streaming merge agree with the frozen packed-ID Counter contrast. No reuse of Counter comparison logic in the streaming check. Input hashes checked again afterward.",
+  "root_counts": {
+    "baseline_records": 366071,
+    "candidate_records": 370680,
+    "common_records": 284077,
+    "removed_records": 81994,
+    "added_records": 86603,
+    "genes_in_changed_groups": 565210
+  },
+  "streaming_pair_merge_counts": {
+    "baseline_records": 5959535,
+    "candidate_records": 5836092,
+    "common_records": 4588204,
+    "removed_records": 1371331,
+    "added_records": 1247888,
+    "affected_genes": 484089,
+    "baseline_duplicate_rows": 0,
+    "candidate_duplicate_rows": 0
+  },
+  "functional_overlap": {
+    "GO": {"variant_pairs": 81929, "control_pairs": 84211, "shared_pairs": 69297, "variant_only_pairs": 12632, "control_only_pairs": 14914, "shared_pairs_with_different_serialized_scores": 0, "shared_conditional_mean_difference": 0.0},
+    "EC": {"variant_pairs": 98012, "control_pairs": 117460, "shared_pairs": 86377, "variant_only_pairs": 11635, "control_only_pairs": 31083, "shared_pairs_with_different_serialized_scores": 0, "shared_conditional_mean_difference": 0.0}
+  },
+  "functional_arithmetic": "Eligible counts match official raw-readback relation counts; exact millionth-score mean decompositions close within 1e-15. Rounded-pair means agree with official aggregate means within 5.05e-7, allowing serialized per-pair and aggregate rounding. Official v25 scores are not replaced by these derived means.",
+  "interpretation": "The larger cap changes many memberships and replaces pairs rather than monotonically adding relations. GO/EC mean increases accompany changed eligible sets, with identical serialized scores on shared pairs. These diagnostics reinforce the observed tradeoff, not a claim that changed pairs are correct or that a uniquely identified stage caused the accuracy decline.",
+  "limitations": ["Post hoc, development-exposed and descriptive; no uncertainty interval or new accuracy assessment.", "Species trees have different bytes; this is not proof of a topology change.", "Shared-pair conditioning is not a substitute benchmark endpoint.", "Await the existing shared-hit QfO continuation before selecting further tuning runs."],
+  "accuracy_evaluated": false,
+  "defaults_promoted": false,
+  "goal_completed": false
+}

@@ -1,0 +1,351 @@
+{
+  "accuracy_evaluated": false,
+  "baseline": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_native_recovery_r1_v1_20261014/native/orthohmm_phylogeny",
+  "candidate": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_downstream_recovery_r1_v1_20261016/native/orthohmm_phylogeny",
+  "checked": [
+    {
+      "bytes": 34492015,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_native_recovery_r1_v1_20261014/native/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "47e70e77223b58660168c2d9e340d7be8bf098aa4cc06f68b675ad0474823c2d"
+    },
+    {
+      "bytes": 495747582,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_native_recovery_r1_v1_20261014/native/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+      "sha256": "f3dbc8cc3a142937370cf324035e55543b12b4091b97c1b51d64daa699a241c0"
+    },
+    {
+      "bytes": 549,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_native_recovery_r1_v1_20261014/native/orthohmm_phylogeny/reconciliation_summary.json",
+      "sha256": "a25c126ee263028415fa5c080c456c6096376bd9b9cbd0d2634653293b9e18b9"
+    },
+    {
+      "bytes": 34625676,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_downstream_recovery_r1_v1_20261016/native/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "d640a0009f32bc7a964a8edfb8b4ba2d799b0ea1431f36f8325678ae9846ce30"
+    },
+    {
+      "bytes": 486021307,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_downstream_recovery_r1_v1_20261016/native/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+      "sha256": "7f2d2911ff71c1fdbe5490d0713319ebe01b45b309eb9b8a46fcc7b7a8fcde40"
+    },
+    {
+      "bytes": 553,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_downstream_recovery_r1_v1_20261016/native/orthohmm_phylogeny/reconciliation_summary.json",
+      "sha256": "36de70502e4e476b3a831298031f3375b59ef1f922b4fbd7e4d59f34e0caef48"
+    },
+    {
+      "bytes": 7227,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cap400_scoring_only_recovery_r1_v1_20261016/benchmark_tools/compare_native_membership.py",
+      "sha256": "609f10838c4a4d6a0b65b4e9b39a9f07842e48e31de421bfdfc7de4e857351f5"
+    },
+    {
+      "bytes": 8335,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cap400_scoring_only_recovery_r1_v1_20261016/benchmark_tools/score_ygob_groups.py",
+      "sha256": "b18e86dafa7370b75386890d1c8acedf721b8d026a2cd150c0565645698eb51a"
+    },
+    {
+      "bytes": 3582,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_native_recovery_r1_v1_20261014/native/orthohmm_phylogeny/species_tree.rooted.nwk",
+      "sha256": "24198609aaaa7d9bd1c7f9a6ba7ee160e3450572be4c6869933681099afff26e"
+    },
+    {
+      "bytes": 3583,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_downstream_recovery_r1_v1_20261016/native/orthohmm_phylogeny/species_tree.rooted.nwk",
+      "sha256": "61e5ac706ceea6153b313badcc7a651a3eef0ea6cf20a53ff0d0d6f4457ef0d6"
+    }
+  ],
+  "defaults_promoted": false,
+  "genes": 984137,
+  "goal_completed": false,
+  "pair_membership": {
+    "added_records": 1247888,
+    "affected_genes": 484089,
+    "baseline_duplicate_rows": 0,
+    "baseline_records": 5959535,
+    "baseline_unique_pairs": 5959535,
+    "candidate_duplicate_rows": 0,
+    "candidate_records": 5836092,
+    "candidate_unique_pairs": 5836092,
+    "common_records": 4588204,
+    "removed_records": 1371331,
+    "semantic_multisets_equal": false
+  },
+  "pair_samples": {
+    "added": [
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A024RBG1|NUD4B_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A0D1EAH2|A0A0D1EAH2_USTMA",
+            "UP000000561_237631"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A024RBG1|NUD4B_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A3Q2UFD5|A0A3Q2UFD5_CHICK",
+            "UP000000539_9031"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A024RBG1|NUD4B_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|K7E122|K7E122_MONDO",
+            "UP000002280_13616"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A024RBG1|NUD4B_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|Q5AGF0|Q5AGF0_CANAL",
+            "UP000000559_237561"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A024RBG1|NUD4B_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|Q9ADD1|Q9ADD1_STRCO",
+            "UP000001973_100226"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A075B6H9|LV469_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A5F8G2U0|A0A5F8G2U0_MONDO",
+            "UP000002280_13616"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A075B6H9|LV469_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A5F8G324|A0A5F8G324_MONDO",
+            "UP000002280_13616"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A075B6H9|LV469_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A5F8G6W4|A0A5F8G6W4_MONDO",
+            "UP000002280_13616"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A075B6H9|LV469_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A5F8G7C3|A0A5F8G7C3_MONDO",
+            "UP000002280_13616"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A075B6H9|LV469_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A5F8G9N5|A0A5F8G9N5_MONDO",
+            "UP000002280_13616"
+          ]
+        ]
+      }
+    ],
+    "removed": [
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A024RBG1|NUD4B_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|H2MEF9|H2MEF9_ORYLA",
+            "UP000001038_8090"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A024RBG1|NUD4B_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|Q1L8L1|Q1L8L1_DANRE",
+            "UP000000437_7955"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A024RBG1|NUD4B_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|W5NDU8|W5NDU8_LEPOC",
+            "UP000018468_7918"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A067Z9B6|FMAD_ASPFU",
+            "UP000002530_330879"
+          ],
+          [
+            "tr|Q7S4T6|Q7S4T6_NEUCR",
+            "UP000001805_367110"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A075B6I0|LV861_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A3Q1LL87|A0A3Q1LL87_BOVIN",
+            "UP000009136_9913"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A075B6I0|LV861_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A3Q1LP51|A0A3Q1LP51_BOVIN",
+            "UP000009136_9913"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A075B6I0|LV861_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A3Q1LVJ5|A0A3Q1LVJ5_BOVIN",
+            "UP000009136_9913"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A075B6I0|LV861_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A3Q1MGY3|A0A3Q1MGY3_BOVIN",
+            "UP000009136_9913"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A075B6I0|LV861_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A3Q1N7F5|A0A3Q1N7F5_BOVIN",
+            "UP000009136_9913"
+          ]
+        ]
+      },
+      {
+        "count": 1,
+        "pair": [
+          [
+            "sp|A0A075B6I0|LV861_HUMAN",
+            "UP000005640_9606"
+          ],
+          [
+            "tr|A0A5F4BUM3|A0A5F4BUM3_CANLF",
+            "UP000002254_9615"
+          ]
+        ]
+      }
+    ]
+  },
+  "root_membership": {
+    "added_records": 86603,
+    "baseline_records": 366071,
+    "candidate_records": 370680,
+    "common_records": 284077,
+    "genes_in_changed_groups": 565210,
+    "removed_records": 81994,
+    "semantic_multisets_equal": false
+  },
+  "scope": "Ignores row order and arbitrary root/family IDs; preserves gene identity, pair species ownership and multiplicity. Confidence values and tree-event annotations are not compared. No claim of biological correctness or a uniquely identified causal stage.",
+  "species_tree_same_bytes": false,
+  "status": "native_membership_and_pair_multiset_contrast_completed"
+}
