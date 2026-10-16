@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "live_scoring_recovery_reporter_readback_preserves_all_scores_and_both_failed_attempts",
+  "reporter_revision": "7158b479",
+  "parent": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v24_20261014/summary.json",
+    "bytes": 4674659,
+    "sha256": "8e2e262840cf394ed54433f9904e127eaca1ac7413e4f4ecd50abbc34bb99e75"
+  },
+  "probe": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_scoring_reporter_probe_r1_v1_20261016/summary.json",
+    "bytes": 4686762,
+    "sha256": "19b0cf1feced4fc2bc6015c23f50aa634083373a87f409212922425ade8f861e"
+  },
+  "table": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_scoring_reporter_probe_r1_v1_20261016/scores.tsv",
+    "bytes": 4453,
+    "sha256": "fa7a7bd2a64540ad4c3b10a4a0aa92e112952a81435c69ffbbef190a3a67f286"
+  },
+  "methods": 27,
+  "unchanged_score_vectors": 27,
+  "fully_unchanged_other_method_records": 26,
+  "tsv_rows_verified": 27,
+  "retained_failed_jobs": ["24245", "24350"],
+  "pending_job": "24355",
+  "pending_scores": {},
+  "inherited_orthobench_and_three_kingdoms_cells_unchanged": true,
+  "focused_reporting_tests_passed": 156,
+  "scope": "Independent JSON/TSV readback of actual live scoring-only producer, native-admission, executor and runtime pins. Missing endpoints remain NA and both failed attempts remain explicit. Pending-state proof only: no completed candidate accuracy admission or fresh-pipeline timing claim.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}
