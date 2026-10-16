@@ -1,0 +1,119 @@
+{
+  "accuracy_evaluated": false,
+  "complete_gene_order": {
+    "bytes": 23875927,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_qfo_cap400_continuation_r1_v1_20261014/cap400/native/output/orthohmm_working_res/high_sensitivity_checkpoint/gene_names.txt",
+    "sha256": "ad6ee208adc2c3e90bab86d68e40c32857c0f93a89989bd1a70d76385ef0edd7"
+  },
+  "defaults_promoted": false,
+  "execution": {
+    "command": [
+      "/home/bizon/anaconda3/bin/python",
+      "-m",
+      "orthohmm.leiden_worker",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_final_graph_recovery_r1_v1_20261016/payload"
+    ],
+    "log": {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_final_graph_recovery_r1_v1_20261016/optimizer.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "resources": {
+      "elapsed_seconds": 387.72,
+      "exit_status": 0,
+      "max_process_rss_kib": 7018460,
+      "semantics": {
+        "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+        "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+        "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+        "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+      },
+      "system_seconds": 9.07,
+      "user_seconds": 378.56
+    },
+    "returncode": 0,
+    "time": {
+      "bytes": 917,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_final_graph_recovery_r1_v1_20261016/optimizer.time.txt",
+      "sha256": "54fc903f7d848b9ee4b288a19f29a02352ebf5a8dbc14bded488df47a86b1d7e"
+    }
+  },
+  "execution_plan": {
+    "bytes": 368714,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_final_graph_recovery_r1_v1_20261016/execution_plan.json",
+    "sha256": "284e0abccf18a2221426bee322b55e9013322d76c423d723b2ef2a60738f4ef8"
+  },
+  "genes": 984137,
+  "goal_completed": false,
+  "groups": 276617,
+  "independent_graph_readback": {
+    "edge_rows_deduplicated_or_reordered": false,
+    "edges": 33585180,
+    "genes": 984137,
+    "isolates_preserved_by_complete_gene_table": true,
+    "status": "all_saved_rows_and_float64_bits_verified"
+  },
+  "initial_hmm_search_rerun": false,
+  "limitations": [
+    "This is the recovered final graph partition, not completed production refinement or phylogeny and not a benchmark score.",
+    "Success of a clean optimizer attempt does not identify the cause of the original SIGSEGV.",
+    "The original failed full-run and incremental shared-host graph-recovery timings remain distinct."
+  ],
+  "partition": {
+    "bytes": 23875927,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_final_graph_recovery_r1_v1_20261016/native/orthohmm_working_res/orthohmm_edges_clustered.txt",
+    "sha256": "21b9bae0f0ef009cc7967102fada612188750852c295df78896af65160fd277c"
+  },
+  "postflight_pins_verified": true,
+  "producer": {
+    "bytes": 130668,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_final_graph_recovery_r1_v1_20261016/report.json",
+    "sha256": "ffa880a677df9035a22ca91c963ecd9613129c16feebdbdc5b37ba4fa11e791d"
+  },
+  "reconstructed_arrays": [
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_final_graph_recovery_r1_v1_20261016/payload/gene_names.txt",
+      "sha256": "ad6ee208adc2c3e90bab86d68e40c32857c0f93a89989bd1a70d76385ef0edd7"
+    },
+    {
+      "bytes": 134340848,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_final_graph_recovery_r1_v1_20261016/payload/sources.npy",
+      "sha256": "8d439d5f7e7a31e6f38a4f908c69487339dcac02f19c8e185607784878874029"
+    },
+    {
+      "bytes": 134340848,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_final_graph_recovery_r1_v1_20261016/payload/targets.npy",
+      "sha256": "4175381af3edcbc2b652b62cad4969c010b750b0bb928916be523bb1aee863d5"
+    },
+    {
+      "bytes": 268681568,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_final_graph_recovery_r1_v1_20261016/payload/weights.npy",
+      "sha256": "ffeba845315cbcf2dec84efdd830c4e36cb3bc3db5d66803f1071b310344115a"
+    }
+  ],
+  "runner_revision": "0c9c3ae94f1bd9d9638836bc3cd559855b87733e",
+  "saved_graph": {
+    "bytes": 2258046353,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_qfo_cap400_continuation_r1_v1_20261014/cap400/native/output/orthohmm_working_res/orthohmm_edges.txt",
+    "sha256": "94babb52a0e41b879b3dfbbfd37d7bee7cdf90a3e5f79b5e122077aa601c2a51"
+  },
+  "scheduler": {
+    "AllocCPUS": "1",
+    "Elapsed": "00:11:04",
+    "ExitCode": "0:0",
+    "JobIDRaw": "24347",
+    "NodeList": "bizon",
+    "State": "COMPLETED"
+  },
+  "schema": "cap400_final_graph_partition_readback_v1",
+  "scientific_revision": "2ccc411520d9e63678178a50207ba1fca87bfbb3",
+  "scores": {},
+  "settings": {
+    "cpm_resolution": 0.1,
+    "include_isolates": true,
+    "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_final_graph_recovery_r1_v1_20261016/native",
+    "seed": 4
+  },
+  "status": "original_frozen_final_partition_independently_read_back_downstream_pending"
+}
