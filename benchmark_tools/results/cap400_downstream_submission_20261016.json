@@ -1,0 +1,109 @@
+{
+  "control_report": {
+    "bytes": 167049,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_native_recovery_r1_v1_20261014/results.json",
+    "sha256": "16c91a533d82bfb378354728474b2f22c82f3849fba7dc6c68729297d4447c50"
+  },
+  "control_scores": {
+    "EC": 0.9656505,
+    "FAS": 0.7624114773550157,
+    "GO": 0.49034928,
+    "SwissTrees F": 0.8335132205147882,
+    "TreeFam-A F": 0.614863704412014,
+    "VGNC F": 0.9016900956268489
+  },
+  "defaults_promoted": false,
+  "execution_plan": {
+    "bytes": 1323386,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_downstream_recovery_r1_v1_20261016/execution_plan.json",
+    "sha256": "0af3de691b0f6bd0467f25e4a05aa7b8535ffa61dddb2a7625c90c43ad1d18b4"
+  },
+  "frozen_tests": {
+    "bytes": 11645,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/cap400_downstream_frozen_tests_20261016.xml",
+    "sha256": "ec0c4dfb4f78667111f09910f7d6d0f07b5611ad2b2698d781531fda2c94c612"
+  },
+  "goal_completed": false,
+  "graph_clustering_rerun": false,
+  "initial_hmm_search_rerun": false,
+  "job_id": "24350",
+  "limitations": [
+    "Submission is not completed native inference or score admission.",
+    "Failed fresh full-run, successful graph recovery, and downstream cached costs remain separate.",
+    "Shared-host timing is confounded; datasets remain development-exposed."
+  ],
+  "native_command": [
+    "/home/bizon/anaconda3/bin/python",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/full_search_hillclimb_r1_v3_20261012/benchmark_tools/replay_phylogeny.py",
+    "--fasta-directory",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918",
+    "--candidate-clusters",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_downstream_recovery_r1_v1_20261016/graph/orthohmm_working_res/phylogeny_candidate_superfamilies.txt",
+    "--membership-constraints",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_downstream_recovery_r1_v1_20261016/graph/orthohmm_working_res/phylogeny_candidate_merges.json",
+    "--output-directory",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_downstream_recovery_r1_v1_20261016/native",
+    "--json",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_downstream_recovery_r1_v1_20261016/native_metrics.json",
+    "--cpu",
+    "32",
+    "--species-tree-mode",
+    "infer",
+    "--aligner",
+    "mafft",
+    "--tree-builder",
+    "FastTree",
+    "--root-rule",
+    "species_overlap",
+    "--pair-rule",
+    "positive_paralogy",
+    "--species-tree-rooting",
+    "min_variance",
+    "--satellite-membership-rule",
+    "high_confidence_pair"
+  ],
+  "original_failed_run_preserved": true,
+  "partition": {
+    "bytes": 23875927,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_final_graph_recovery_r1_v1_20261016/native/orthohmm_working_res/orthohmm_edges_clustered.txt",
+    "sha256": "21b9bae0f0ef009cc7967102fada612188750852c295df78896af65160fd277c"
+  },
+  "partition_admission": {
+    "bytes": 5772,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/cap400_final_graph_partition_readback_20261016.json",
+    "sha256": "a666df07c76b41c199e0e3d07b27cc08a12312f0a2e5ea0b21f893fa5b3877a7"
+  },
+  "profile_hmm_expansion_rerun": false,
+  "protocol": {
+    "bytes": 4060,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hillclimb_cap400_downstream_recovery_20261016.json",
+    "sha256": "f0df262933f4d61d94ba2800dd8284dccbdc963a8cb60e3541acf6fc02c40660"
+  },
+  "resources": {
+    "cpus": 32,
+    "memory_gib": 128,
+    "wall_limit": "2-00:00:00"
+  },
+  "runner_revision": "986c10aec9452380ddb93e730062e2d726efa930",
+  "scheduler_at_submission": "JobId=24350 JobName=ohmm-cap400-downstream\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=RUNNING Reason=None Dependency=(null)\n   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:22 TimeLimit=2-00:00:00 TimeMin=N/A\n   SubmitTime=2026-10-16T08:17:02 EligibleTime=2026-10-16T08:17:02\n   AccrueTime=2026-10-16T08:17:02\n   StartTime=2026-10-16T08:17:02 EndTime=2026-10-18T08:17:02 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-16T08:17:02 Scheduler=Main\n   Partition=gpu AllocNode:Sid=bizon-link:1258833\n   ReqNodeList=bizon ExcNodeList=(null)\n   NodeList=bizon\n   BatchHost=bizon\n   NumNodes=1 NumCPUs=32 NumTasks=1 CPUs/Task=32 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=32,mem=128G,node=1,billing=32\n   AllocTRES=cpu=32,mem=128G,node=1,billing=32\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=32 MinMemoryNode=128G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cap400_downstream_recovery_r1_v1_20261016/benchmark_tools/continue_cap400_downstream.slurm\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_downstream_recovery_r1_v1_20261016/slurm-24350.err\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_downstream_recovery_r1_v1_20261016/slurm-24350.out\n   TresPerTask=cpu=32\n   \n\n",
+  "scientific_revision": "2ccc411520d9e63678178a50207ba1fca87bfbb3",
+  "scores": {},
+  "sources": [
+    {
+      "bytes": 18441,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cap400_downstream_recovery_r1_v1_20261016/benchmark_tools/continue_cap400_downstream.py",
+      "sha256": "3389e69cd565fca5e7b9a109bedb82c1666a7802f0d8962676d26e763123a83d"
+    },
+    {
+      "bytes": 5157,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cap400_downstream_recovery_r1_v1_20261016/benchmark_tools/continue_cap400_downstream_worker.py",
+      "sha256": "159fdbea457c6005cefdeeef73d024bf3b43421bfabaebf26c466ef3f8637f83"
+    },
+    {
+      "bytes": 572,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cap400_downstream_recovery_r1_v1_20261016/benchmark_tools/continue_cap400_downstream.slurm",
+      "sha256": "67443ce1a5aa4612907d16fd7e14b6387ae5f4cec3103748e51cf4b88af36109"
+    }
+  ],
+  "status": "original_cap400_cached_downstream_submitted"
+}
