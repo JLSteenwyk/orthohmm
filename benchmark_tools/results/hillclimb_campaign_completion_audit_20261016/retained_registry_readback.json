@@ -1,0 +1,211 @@
+{
+  "all_eight_method_records_and_24_cells_unchanged": true,
+  "all_retained_scores_versions_semantics_and_resources_reproduced": true,
+  "comparison": {
+    "bytes": 5030145,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v27_20261016/summary.json",
+    "sha256": "2947c9b80eb1c646c7e8aa3a762b2eed2f16987480df2f2e85ff423563ea42b0"
+  },
+  "complete_transitive_provenance": false,
+  "defaults_promoted": false,
+  "frozen_auditor_revision": "0cd8c4e7784b4ce9299a7d81cdf48575ec5c14d0",
+  "goal_completed": false,
+  "historical_input_consumption_proven": false,
+  "integrator_bytes_match_original": true,
+  "integrator_source": {
+    "bytes": 13820,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/hillclimb_campaign_regression_v2_20261016/benchmark_tools/integrate_benchmark_metadata.py",
+    "sha256": "14784bd4cadfb912f6461c1aa043fb4a9f559fe8eec5f808b305dd852fe89bc7"
+  },
+  "limitations": [
+    "Three fixed metadata/score receipts are directly rehashed; their prior raw prediction/input/runtime audits are reused, not rerun. Transitive artifact identities remain inherited.",
+    "All 24 original rows, including exact scores, versions, semantics, commands, input notes, gaps and resources, are preserved. Version text is not universal runtime attestation.",
+    "Seven historical Three Kingdoms supplements add recorded argv, metrics, source/harness chronology and recovery events. Directory/output association is not immutable historical execution or input-consumption proof.",
+    "The contemporary matched Sonic row is unchanged; do not attach its replaced historical run's timing or commands.",
+    "Thirty-seven table entries preserve 29 earlier resource entries, including unavailable placeholders, and add eight supplemental intervals. Not 37 independent runs: wrappers, native intervals, cached replay, checkpoint conversion and recovered stages are not summed, replaced or treated as independent repeats.",
+    "GNU-time process RSS, sampled tree RSS, driver/container scopes and historical allocations remain distinct. Unknown is not zero. Shared-host contention is unknown and potentially method dependent; no isolated speed ranking.",
+    "The sequence-only OrthoFinder output remains a same-full-run MCL checkpoint, not a separately timed sequence-only inference. FastOMA supplied-tree dependence remains disclosed.",
+    "The completed replacement timing panel and original factorial resource observations remain separate. No new cost is imputed to unmatched configurations or historical score runs.",
+    "QfO GO/EC/FAS are similarities and the six-metric mean is secondary. OrthoBench group F1 and Three Kingdoms BUSCO co-membership are not interchangeable endpoints or universal generalization evidence."
+  ],
+  "metadata_input_receipts": [
+    {
+      "bytes": 458287,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/all_benchmark_provenance_20261004_v2/register.json",
+      "sha256": "48be4b216f9f3776354246894c8c2a38f790fd4f075528e88f56b230a0a3c47c"
+    },
+    {
+      "bytes": 83910,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/three_kingdoms_run_metadata_20261004.json",
+      "sha256": "bb6d910021583da61ba4892690c5bf50796fcf81cafcfaeb0d09742e41b8a093"
+    },
+    {
+      "bytes": 22282,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/current_benchmark_scores_20260926_v2/manifest.json",
+      "sha256": "8d56dae74721c4530ab2b86c5008b2d0ebac07878e574fd85b1ad84e4b908f07"
+    }
+  ],
+  "method_configurations": 8,
+  "method_dataset_rows": 24,
+  "registry": {
+    "bytes": 571775,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v6_20261013/snapshots/retained_registry.json",
+    "sha256": "4c6f01afb28ef36c25991155c2484a6e2db273556529506350c2f7912083ba80"
+  },
+  "row_identity_counts": [
+    {
+      "dataset": "OrthoBench",
+      "input_records": 0,
+      "method": "orthohmm_high_sensitivity",
+      "output_records": 1
+    },
+    {
+      "dataset": "OrthoBench",
+      "input_records": 0,
+      "method": "orthohmm_phylogeny_satellite_v2",
+      "output_records": 1
+    },
+    {
+      "dataset": "OrthoBench",
+      "input_records": 0,
+      "method": "orthofinder_3_1_5_full",
+      "output_records": 1
+    },
+    {
+      "dataset": "OrthoBench",
+      "input_records": 0,
+      "method": "orthofinder_3_1_5_sequence_only",
+      "output_records": 1
+    },
+    {
+      "dataset": "OrthoBench",
+      "input_records": 0,
+      "method": "sonicparanoid_2_0_9",
+      "output_records": 1
+    },
+    {
+      "dataset": "OrthoBench",
+      "input_records": 0,
+      "method": "proteinortho_6_3_6",
+      "output_records": 1
+    },
+    {
+      "dataset": "OrthoBench",
+      "input_records": 0,
+      "method": "fastoma_0_3_5",
+      "output_records": 1
+    },
+    {
+      "dataset": "OrthoBench",
+      "input_records": 0,
+      "method": "orthomcl_1_4",
+      "output_records": 1
+    },
+    {
+      "dataset": "QfO",
+      "input_records": 78,
+      "method": "orthohmm_high_sensitivity",
+      "output_records": 1
+    },
+    {
+      "dataset": "QfO",
+      "input_records": 78,
+      "method": "orthohmm_phylogeny_satellite_v2",
+      "output_records": 1
+    },
+    {
+      "dataset": "QfO",
+      "input_records": 156,
+      "method": "orthofinder_3_1_5_full",
+      "output_records": 1
+    },
+    {
+      "dataset": "QfO",
+      "input_records": 156,
+      "method": "orthofinder_3_1_5_sequence_only",
+      "output_records": 1
+    },
+    {
+      "dataset": "QfO",
+      "input_records": 78,
+      "method": "sonicparanoid_2_0_9",
+      "output_records": 1
+    },
+    {
+      "dataset": "QfO",
+      "input_records": 78,
+      "method": "proteinortho_6_3_6",
+      "output_records": 1
+    },
+    {
+      "dataset": "QfO",
+      "input_records": 78,
+      "method": "fastoma_0_3_5",
+      "output_records": 1
+    },
+    {
+      "dataset": "QfO",
+      "input_records": 4,
+      "method": "orthomcl_1_4",
+      "output_records": 1
+    },
+    {
+      "dataset": "ThreeKingdoms",
+      "input_records": 1,
+      "method": "orthohmm_high_sensitivity",
+      "output_records": 1
+    },
+    {
+      "dataset": "ThreeKingdoms",
+      "input_records": 1,
+      "method": "orthohmm_phylogeny_satellite_v2",
+      "output_records": 1
+    },
+    {
+      "dataset": "ThreeKingdoms",
+      "input_records": 13,
+      "method": "orthofinder_3_1_5_full",
+      "output_records": 1
+    },
+    {
+      "dataset": "ThreeKingdoms",
+      "input_records": 1,
+      "method": "orthofinder_3_1_5_sequence_only",
+      "output_records": 1
+    },
+    {
+      "dataset": "ThreeKingdoms",
+      "input_records": 12,
+      "method": "sonicparanoid_2_0_9",
+      "output_records": 1
+    },
+    {
+      "dataset": "ThreeKingdoms",
+      "input_records": 12,
+      "method": "proteinortho_6_3_6",
+      "output_records": 1
+    },
+    {
+      "dataset": "ThreeKingdoms",
+      "input_records": 13,
+      "method": "fastoma_0_3_5",
+      "output_records": 1
+    },
+    {
+      "dataset": "ThreeKingdoms",
+      "input_records": 1,
+      "method": "orthomcl_1_4",
+      "output_records": 1
+    }
+  ],
+  "scope": "Reconstructed the complete metadata integration from three fixed input receipts and compared every field except the authenticated frozen integrator file path. Rebuilt all eight retained score vectors and 24 cells; all old fields equal v27. Rehashed every directly registered input/output and controlling source/receipt/table file, including all four values of the keyed OrthoMCL input map. Native inference and scores were not rerun. These checks do not turn historically incomplete transitive executable/input-consumption provenance into proof or fill absent input records. Separate historical audits remain necessary for stronger claims.",
+  "score_table": {
+    "bytes": 4707,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v27_20261016/scores.tsv",
+    "sha256": "454479af6d8738b193c7f80c6aada19fd71d5b514a3a6d26650c934670dd93e6"
+  },
+  "status": "retained_24_cell_registry_reconstruction_and_file_identity_readback_verified",
+  "streamed_bytes": 33918678267,
+  "unestablished_historical_inputs_remain_explicit": true,
+  "unique_input_output_and_source_records_rehashed": 480
+}
