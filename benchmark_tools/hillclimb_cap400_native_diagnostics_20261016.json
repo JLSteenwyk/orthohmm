@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "purpose": "Explain the admitted larger-cap tradeoff using retained native products and eligible-pair overlap, without another tuning arm.",
+  "evidence": "benchmark_tools/results/hillclimb_comparison_readback_v25_20261016/cap400_qfo_admission_readback.json",
+  "baseline": "benchmarks/results/qfo_native_recovery_r1_v1_20261014/native/orthohmm_phylogeny",
+  "candidate": "benchmarks/results/cap400_downstream_recovery_r1_v1_20261016/native/orthohmm_phylogeny",
+  "scoring_baseline": "benchmarks/results/qfo_native_recovery_r1_v1_20261014/qfo_scoring/results",
+  "scoring_candidate": "benchmarks/results/cap400_scoring_only_recovery_r1_v1_20261016/qfo_scoring/results",
+  "executor": "benchmarks/work/cap400_scoring_only_recovery_r1_v1_20261016",
+  "executor_revision": "37f71d9c07ed67baf539a5894344bcb418c1874f",
+  "helpers": {
+    "compare_native_membership.py": "609f10838c4a4d6a0b65b4e9b39a9f07842e48e31de421bfdfc7de4e857351f5",
+    "compare_qfo_scored_pairs.py": "c86184be5a06238d520ff892ffe2b85ca32e2014d432c6051a01bbe48cb37bbc"
+  },
+  "questions": [
+    "Does the net loss of 123443 native pairs conceal substantial additions as well as removals? Count full unordered gene/species pair multisets and root memberships, ignoring arbitrary family IDs and row order while retaining multiplicity.",
+    "Do the small EC/GO similarity increases accompany changed eligible-pair sets rather than increased serialized similarity on the same pairs? Compare exact integer-millionth raw scores and decompose mean differences descriptively."
+  ],
+  "gates": "Use only already admitted products. Require the same complete 984137-gene universe, native reconciliation counts, consistent pair ownership and no duplicates. Hash inputs before and after every diagnostic; preserve v25 and its accuracy vector unchanged.",
+  "resources": "One-CPU native contrast with 16 GiB RAM and two-hour limit on shared bizon; GO/EC overlap is small and single-process. Leave unrelated work and the running shared-hit QfO continuation untouched. Diagnostic cost is not pipeline benchmark timing.",
+  "outputs": [
+    "benchmark_tools/results/cap400_native_contrast_20261016.json",
+    "benchmark_tools/results/cap400_go_scored_pair_overlap_20261016.json",
+    "benchmark_tools/results/cap400_ec_scored_pair_overlap_20261016.json"
+  ],
+  "limits": "Post hoc development diagnostics. Pair changes do not establish correctness or uniquely locate a causal stage. Shared-pair conditioning changes the functional endpoint and cannot replace official scores or provide an uncertainty interval. This is not a fresh HMM search or another selection round.",
+  "accuracy_evaluated": false,
+  "defaults_promoted": false,
+  "goal_completed": false
+}
