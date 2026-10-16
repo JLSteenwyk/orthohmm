@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "status": "prespecified_execution_recovery_not_new_scientific_arm",
+  "parent_job": "24350",
+  "parent_root": "benchmarks/results/cap400_downstream_recovery_r1_v1_20261016",
+  "failure": "Terminal FAILED 1:0 after successful native inference and content readback: ModuleNotFoundError: No module named 'qfo_benchmark', during lazy import of prepare_qfo_factorial_pairs by score_qfo. No scoring namespace was created.",
+  "scientific_revision": "2ccc411520d9e63678178a50207ba1fca87bfbb3",
+  "intervention": "Make the unchanged trusted QfO converter available in a new frozen executor checkout, independently revalidate retained native outputs, then run only original QfO pair conversion and six-endpoint scoring in a fresh short namespace.",
+  "gates": [
+    "Require unique terminal accounting for parent 24350: FAILED 1:0, 32 CPUs, bizon; exact recorded missing-module failure, empty scores, postflight pins verified, graph and native commands both returned zero.",
+    "Revalidate the parent's execution plan, original scientific source/runtime/inputs, recovered final-graph admission, unchanged refinement/candidate settings, complete native metrics and gene universe, sorted canonical pairs and confidence table. All 984137 genes and 78 species must be retained.",
+    "Require a new output directory and short Darwin-safe work namespace. Pin every used converter/scoring helper to committed content before execution and check the actual imported converter path. Do not alter either frozen parent checkout or scientific code.",
+    "Pin completed native products and source reports before scoring; rehash afterward. No HMM search, graph clustering, profile expansion, refinement, alignment, species-tree inference, gene-tree inference, or reconciliation may rerun.",
+    "Require zero mapping loss, all six raw endpoint readbacks, exact deltas against the original arrival-order control, and successful terminal scoring-only scheduler state before accuracy admission.",
+    "Retain original failed jobs 24245 and 24350 separately, along with cached final-graph recovery 24347, successful native-stage execution within failed job 24350, and new scoring-only resource use. Never label their sum uninterrupted fresh-pipeline timing."
+  ],
+  "resources": {
+    "host": "local shared Threadripper; unrelated workloads untouched",
+    "cpus": 8,
+    "memory": "64G",
+    "wall_limit": "08:00:00",
+    "cuda": false
+  },
+  "endpoints": ["VGNC F", "SwissTrees F", "TreeFam-A F", "EC", "GO", "FAS"],
+  "limitations": "Development-exposed endpoints, TreeFam supporting, FAS unseeded. Missing scores remain NA. No default promotion or new accuracy claim from native counts.",
+  "git": "Commit and push protocol, tested scoring-only implementation, frozen launch evidence, and independently admitted results at meaningful milestones.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}
