@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "status": "submitted_cached_protected_union_diagnostic_no_accuracy_admission",
+  "job_id": "24361",
+  "source_revision": "6c18628bd12d1d3c05ec4f849570271e9a71588a",
+  "source_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/protected_candidate_union_r1_v1_20261016",
+  "output": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/protected_candidate_union_r1_v1_20261016",
+  "protocol": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hillclimb_protected_candidate_union_diagnostic_20261016.json",
+    "bytes": 5350,
+    "sha256": "0f02b3afbcd73155273970d179d71da491a5099f57dd29b8ceb6a2f7c8569fd6"
+  },
+  "working_tests": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/protected_candidate_union_regression_tests_20261016.xml",
+    "bytes": 9673,
+    "sha256": "dbd821680c95c13ea4f0dd486311933913a9d624af5b7cc00798657da569b51c"
+  },
+  "frozen_tests": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/protected_candidate_union_frozen_tests_v2_20261016.xml",
+    "bytes": 9933,
+    "sha256": "46285d565e24304c77911d2919ce03eed36f60ed7d2e655f079eee4cadf8a7bd"
+  },
+  "working_tests_passed": 71,
+  "frozen_tests_passed": 70,
+  "frozen_tests_skipped": [{"test": "test_shortlist_reaches_native_ranker_and_changes_candidates", "reason": "C extension unavailable in sparse executor. This retained-array-only diagnostic neither ranks candidates nor runs HMM scoring. The test passed in the working suite."}],
+  "initial_frozen_collection_failure": {
+    "invocation_exit_code": 4,
+    "reason": "No tests collected because the new --no-checkout worktree had not yet been populated. Populated the committed sparse worktree with read-tree -mu HEAD and reran in a separate result namespace; no analysis was started.",
+    "artifact": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/protected_candidate_union_frozen_tests_20261016.xml",
+      "bytes": 231,
+      "sha256": "515853398b386f0b7d741fec6174cd689ca197bdb505ef40fa4e49720b21ede5"
+    }
+  },
+  "resources": {"host": "bizon", "cpus": 1, "memory_gib": 16, "wall_limit": "01:00:00", "cuda": false, "requeue": false},
+  "scope": "Authenticated cached min4/cap100 and min1/cap100 array union only. Require exact common scores, preserve all baseline candidates and independently reproduce both original watched classifications. Predetermined candidate-burden/no-loss gate can justify a separately prespecified fresh pilot, not accuracy improvement, timing superiority or default promotion.",
+  "native_inference_rerun": false,
+  "scores": {},
+  "defaults_promoted": false,
+  "goal_completed": false
+}
