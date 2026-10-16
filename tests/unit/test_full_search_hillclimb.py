@@ -163,6 +163,27 @@ def test_real_small_full_pipeline_and_independent_native_validation(tmp_path):
     assert result["pairs"] > 0
     assert all(result["historical_product_matches"].values())
     assert result["summary"]["checkpoint_hits"] == 0
+    from benchmark_tools.shared_qfo_export import normalize, verify_projection
+    pairs, confidence = phylo / runner.PRODUCTS[1], phylo / runner.PRODUCTS[2]
+    pair_bytes, confidence_bytes = pairs.read_bytes(), confidence.read_bytes()
+    pair_rows, confidence_rows = pair_bytes.splitlines(keepends=True), confidence_bytes.splitlines(keepends=True)
+    pairs.write_bytes(pair_rows[0] + pair_rows[1] + b"".join(pair_rows[1:]))
+    confidence.write_bytes(confidence_rows[0] + confidence_rows[1] + b"".join(confidence_rows[1:]))
+    invalid_pins = record(pairs), record(confidence)
+    with pytest.raises(ValueError, match="canonical, unique and sorted"):
+        runner.validate_native(case, 2)
+    proof = normalize(pairs, confidence, tmp_path / "canonical_pairs", tmp_path / "canonical_confidence",
+        tuple(pair_rows[1].decode().rstrip("\n").split("\t")), len(pair_rows), len(pair_rows) - 1)
+    assert verify_projection(proof)["distinct_rows"] == result["pairs"]
+    normalized = runner.validate_native(case, 2, pair_export=proof)
+    assert normalized["status"] == "derived_native_content_verified"
+    assert normalized["pairs"] == result["pairs"] and normalized["genes"] == result["genes"]
+    assert normalized["products"][runner.PRODUCTS[1]]["sha256"] == case["golden"][runner.PRODUCTS[1]]["sha256"]
+    assert (record(pairs), record(confidence)) == invalid_pins
+    with pytest.raises(ValueError, match="canonical, unique and sorted"):
+        runner.validate_native(case, 2)
+    pairs.write_bytes(pair_bytes)
+    confidence.write_bytes(confidence_bytes)
     metrics_path = folder / "metrics.json"
     data = json.loads(metrics_path.read_text())
     data["metadata"]["search_max_candidates_per_query"] = 400

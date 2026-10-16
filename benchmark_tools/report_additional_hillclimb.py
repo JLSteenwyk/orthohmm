@@ -63,11 +63,12 @@ def continuation_cell(repo, plan, report):
     return cell
 
 
-def shared_native(case, plan):
+def shared_native(case, plan, pair_export=None):
     if case["search_min_total_hits"] != 1 or case["search_max_candidates_per_query"] != 100:
         raise ValueError("Wrong shared-hit intervention")
     verify_input_inventory(case)
-    native = validate_native(case, 16)
+    native = (validate_native(case, 16) if pair_export is None
+              else validate_native(case, 16, pair_export=pair_export))
     metadata = native["metrics"]["metadata"]
     if metadata.get("search_result_order") != "canonical" or metadata.get("search_min_total_hits") != 1:
         raise ValueError("Actual native shared-hit mechanism differs from the plan")

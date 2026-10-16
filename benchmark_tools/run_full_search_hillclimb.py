@@ -143,7 +143,7 @@ def validate_confidence(path, pairs):
     return count
 
 
-def validate_native(case, cpu):
+def validate_native(case, cpu, pair_export=None):
     folder = Path(case["output"])
     output, phylo = folder / "output", folder / "output/orthohmm_phylogeny"
     metrics = json.loads((folder / "metrics.json").read_text())
@@ -201,8 +201,16 @@ def validate_native(case, cpu):
             or {frozenset(g) for g in groups} != {frozenset(g) for g in root.values()}
             or {frozenset(g) for g in groups} != {frozenset(g) for g in exported.values()}):
         raise ValueError("Native partition/root/exported products differ")
-    count = check_pairs(phylo / PRODUCTS[1], owners, candidates, summary["ortholog_pairs"])
-    if count <= 0 or validate_confidence(phylo / PRODUCTS[2], phylo / PRODUCTS[1]) != count:
+    pairs_path, confidence_path = phylo / PRODUCTS[1], phylo / PRODUCTS[2]
+    if pair_export is not None:
+        from benchmark_tools.shared_qfo_export import verify_projection
+        if pair_export["original"] != {"pairs": record(pairs_path), "confidence": record(confidence_path)}:
+            raise ValueError("Derived export belongs to another original native run")
+        verify_projection(pair_export)
+        pairs_path = Path(pair_export["derived"]["pairs"]["path"])
+        confidence_path = Path(pair_export["derived"]["confidence"]["path"])
+    count = check_pairs(pairs_path, owners, candidates, summary["ortholog_pairs"])
+    if count <= 0 or validate_confidence(confidence_path, pairs_path) != count:
         raise ValueError("Invalid native pair/confidence count")
     if (summary["checkpoint_hits"] != 0 or summary["species_tree_checkpoint_hit"] is not False
             or summary.get("remapped_checkpoint_hits", 0) != 0 or summary["reconciled_families"] <= 0
@@ -217,10 +225,16 @@ def validate_native(case, cpu):
            ("search_candidates", "significant_hits", "high_sensitivity_profiles")):
         raise ValueError("Missing initial/profile HMM evidence")
     products = {name: record(phylo / name) for name in (*PRODUCTS, "species_tree.rooted.nwk")}
-    return {"status": "fresh_native_content_verified", "genes": len(owners), "species": len(taxa),
+    if pair_export is not None:
+        products[PRODUCTS[1]], products[PRODUCTS[2]] = record(pairs_path), record(confidence_path)
+    result = {"status": "fresh_native_content_verified" if pair_export is None else "derived_native_content_verified",
+        "genes": len(owners), "species": len(taxa),
         "groups": len(groups), "pairs": count, "numeric_checkpoint": numeric, "ownership": ownership,
         "historical_product_matches": {name: item["sha256"] == case["golden"][name]["sha256"] for name, item in products.items()},
         "products": products, "metrics": metrics, "summary": summary}
+    if pair_export is not None:
+        result["pair_export"] = pair_export
+    return result
 
 
 def run(path, dataset):
