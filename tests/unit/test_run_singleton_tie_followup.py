@@ -1,6 +1,7 @@
 from copy import deepcopy
 import importlib.util
 import json
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -70,7 +71,8 @@ def test_mixed_scientific_imports_rejected(tmp_path):
 
 def test_standalone_driver_loads_existing_frozen_science_in_fresh_process():
     repo = PATH.parent.parent
-    source = repo / "benchmarks/work/singleton_tie_orthobench_r1_v1_20261014"
+    source = Path(os.environ.get("ORTHOHMM_SINGLETON_SCIENCE",
+        str(repo / "benchmarks/work/singleton_tie_orthobench_r1_v1_20261014")))
     if not source.exists():
         pytest.skip("Retained local scientific snapshot unavailable")
     code = """

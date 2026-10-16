@@ -46,9 +46,13 @@ def probe_case(query_count, successes):
         raise ValueError("Actual adaptive probe loop differs from prespecified source")
     observed_coverage = successes/calls
     observed_cap = 20 if observed_coverage > .8 else 60 if observed_coverage > .5 else 100 if observed_coverage > .2 else 200
+    # Counterfactual arithmetic is not a measurement from the historical engine.
+    legacy_coverage = successes/nominal
+    legacy_cap = 20 if legacy_coverage > .8 else 60 if legacy_coverage > .5 else 100 if legacy_coverage > .2 else 200
     return {"queries":query_count,"explicit_stub_successes":successes,"nominal_sample_size":nominal,
-        "actual_probe_calls":calls,"stride":step,"legacy_reported_coverage":coverage,
-        "observed_fraction":observed_coverage,"legacy_cap":cap,"observed_fraction_cap":observed_cap,
+        "actual_probe_calls":calls,"stride":step,"reported_coverage":coverage,
+        "observed_fraction":observed_coverage,"reported_cap":cap,"observed_fraction_cap":observed_cap,
+        "legacy_formula_coverage":legacy_coverage,"legacy_formula_cap":legacy_cap,
         "reported_coverage_exceeds_one":coverage>1,"cap_would_change":cap!=observed_cap}
 
 
@@ -61,8 +65,8 @@ def run(output):
     if plan["status"] != "prespecified_before_reproducer_execution":
         raise ValueError("Unexpected adaptive arithmetic audit plan")
     rows = [probe_case(*case) for case in CASES]
-    if rows[2]["legacy_cap"] != 20 or rows[2]["observed_fraction_cap"] != 60 or not rows[1]["reported_coverage_exceeds_one"]:
-        raise ValueError("Prespecified unchanged-source reproducer no longer demonstrates the issue")
+    if rows[2]["reported_cap"] != 20 or rows[2]["observed_fraction_cap"] != 60 or not rows[1]["reported_coverage_exceeds_one"]:
+        raise ValueError("Prespecified unchanged-source reproducer no longer demonstrates the issue; use the pinned historical engine, not its corrected replacement")
     check(source)
     write_json(output,{"status":"adaptive_probe_denominator_inflation_reproduced_without_source_changes",
         "source":source,"reader":record(__file__),"plan":record(plan_path),"rows":rows,

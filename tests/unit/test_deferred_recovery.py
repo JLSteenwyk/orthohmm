@@ -11,8 +11,9 @@ from benchmark_tools.run_qfo_recovered_assessment import require_darwin_work_pat
 from benchmark_tools.prepare_ob_candidate_neighborhood import record
 
 
-def test_short_scoring_namespace_fits_actual_repo_where_old_identifier_fails():
-    repo = Path(qfo.__file__).resolve().parent.parent
+def test_short_scoring_namespace_fits_root_budget_where_old_identifier_fails():
+    # A fixed synthetic root tests the budget independently of checkout depth.
+    repo = Path("/" + "r" * 64)
     output = repo / "benchmarks/results/deferred_qfo_inferred_r1_v2_20261013"
     ids = [qfo.scoring_id(repo, output, i) for i in (0, 1)]
     assert ids[0] != ids[1]
@@ -22,6 +23,12 @@ def test_short_scoring_namespace_fits_actual_repo_where_old_identifier_fails():
         require_darwin_work_path(repo / "qfo_benchmark/w" / ("hc1_" + name))
     with pytest.raises(ValueError, match="length limit"):
         require_darwin_work_path(repo / "qfo_benchmark/w/hc1_deferred_own_0123456789abcdef_0")
+
+
+def test_scoring_namespace_rejects_root_beyond_validated_budget():
+    repo = Path("/" + "r" * 160)
+    with pytest.raises(ValueError, match="length limit"):
+        qfo.scoring_id(repo, repo / "output", 0)
 
 
 @pytest.mark.parametrize("index", [-1, 2, True, 0., "0", None])

@@ -74,13 +74,19 @@ def test_scheduler_requires_exact_raw_terminal_job_and_resources():
             helper.terminal_scheduler(header + bad, "24201")
 
 
-def test_short_namespace_passes_real_repo_length_preflight():
-    repo = Path(helper.__file__).resolve().parent.parent
+def test_short_namespace_passes_validated_root_length_budget():
+    repo = Path("/" + "r" * 64)
     name = helper.short_id(repo, repo / "benchmarks/results/recovery_example", 0)
     helper.require_darwin_work_path(repo / "qfo_benchmark/w" / ("hc1_" + name))
     for index in (True, -1, 2, "0", .5):
         with pytest.raises(ValueError, match="arm index"):
             helper.short_id(repo, repo, index)
+
+
+def test_short_namespace_rejects_overlong_root():
+    repo = Path("/" + "r" * 160)
+    with pytest.raises(ValueError, match="length limit"):
+        helper.short_id(repo, repo / "output", 0)
 
 
 def parent_fixture(tmp_path):
