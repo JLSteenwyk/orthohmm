@@ -54,15 +54,15 @@ def read_admission(pin):
     return admission, evidence
 
 
-def verify_helpers(source, parent, revision):
+def verify_helpers(source, parent, revision, *, protocol=PROTOCOL, slurm="recover_cap400_scores.slurm"):
     actual = subprocess.check_output(["git", "-C", str(source), "rev-parse", "HEAD"], text=True).strip()
     if actual != revision:
         raise ValueError("Frozen recovery executor revision changed")
     pins = [record(p) for p in sorted((source / "benchmark_tools").glob("*.py"))]
     pins += [record(p) for p in sorted((source / "orthohmm").rglob("*.py"))]
     pins += [record(source / "qfo_benchmark/og_to_pairwise.py"),
-             record(source / "benchmark_tools" / PROTOCOL),
-             record(source / "benchmark_tools/recover_cap400_scores.slurm")]
+             record(source / "benchmark_tools" / protocol),
+             record(source / "benchmark_tools" / slurm)]
     for pin in pins:
         relative = Path(pin["path"]).relative_to(source)
         blob = subprocess.check_output(["git", "-C", str(source), "show", f"{revision}:{relative}"])

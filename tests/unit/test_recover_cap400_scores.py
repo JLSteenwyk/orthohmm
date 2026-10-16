@@ -256,3 +256,20 @@ def test_changed_executor_revision_rejected(frozen_helpers):
     source, parent, _ = frozen_helpers
     with pytest.raises(ValueError, match="executor revision"):
         runner.verify_helpers(source, parent, "different")
+
+
+def test_custom_recovery_protocol_and_slurm_are_pinned(frozen_helpers):
+    source, parent, files = frozen_helpers
+    for relative in ("benchmark_tools/shared_protocol.json", "benchmark_tools/shared.slurm"):
+        files[relative] = "# shared recovery fixture\n"
+        (source / relative).write_text(files[relative])
+    pins = runner.verify_helpers(source, parent, "executor",
+                                 protocol="shared_protocol.json", slurm="shared.slurm")
+    assert record(source / "benchmark_tools/shared_protocol.json") in pins
+    assert record(source / "benchmark_tools/shared.slurm") in pins
+
+
+def test_missing_custom_protocol_refused_before_execution(frozen_helpers):
+    source, parent, _ = frozen_helpers
+    with pytest.raises(FileNotFoundError):
+        runner.verify_helpers(source, parent, "executor", protocol="missing_protocol.json")
