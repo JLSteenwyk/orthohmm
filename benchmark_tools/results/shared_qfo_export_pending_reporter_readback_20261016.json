@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "status": "pending_shared_qfo_export_probe_verified_without_score_admission",
+  "reporter_commit": "2af7302b6fdfc0f45830cc9b8d06afc7c797786d",
+  "parent": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v25_20261016/summary.json",
+    "bytes": 4739127,
+    "sha256": "7b57bd8c108ff979b4e2a2a2833069e7a27a30c185738ac9178ad7f16f3722dc"
+  },
+  "probe": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/shared_qfo_export_reporter_pending_probe_v1_20261016/summary.json",
+    "bytes": 4746068,
+    "sha256": "c7cafdfdfc0afbb7474b7a2c9b47f0989fc5ce3733d3352ebdc9f05a218b6997"
+  },
+  "score_table": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/shared_qfo_export_reporter_pending_probe_v1_20261016/scores.tsv",
+    "bytes": 4532,
+    "sha256": "a23ff44411654ae1628f22f94d609d84ac926621743befc5c04824ef84ae92b8"
+  },
+  "producer_snapshot": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/shared_qfo_export_reporter_pending_probe_v1_20261016/snapshots/shared_export.json",
+    "bytes": 68737,
+    "sha256": "5353344a9f5330f05b1e2057c9f999da3403831dd24c18c23cb13e0c45d3dc18"
+  },
+  "tests": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/shared_qfo_export_admission_regression_tests_20261016.xml",
+    "bytes": 54761,
+    "sha256": "a635db9b1cf80565897c049cc618751d17400f8460af7ac2c79043a2e7958413"
+  },
+  "tests_passed": 370,
+  "method_count": 27,
+  "other_method_records_unchanged": 26,
+  "all_score_vectors_unchanged": true,
+  "all_table_rows_match": true,
+  "all_original_shared_hit_cells_retained": true,
+  "original_skip_job": "24242",
+  "original_failed_export_job": "24247",
+  "producer_job": "24360",
+  "producer_snapshot_status": "scoring_derived_shared_qfo_relation_set",
+  "producer_scheduler_observation": {"state": "RUNNING", "elapsed": "00:23:13", "exit_code_not_terminal": "0:0"},
+  "new_qfo_scores_admitted": 0,
+  "native_inference_rerun": false,
+  "defaults_promoted": false,
+  "goal_completed": false,
+  "scope": "A real pending-run probe completed the authenticated launch, original scientific source/input/runtime and matched-control checks. Independent assertions compare every method score vector, the other 26 complete method records, retained original cells, all 27 TSV rows and their missing-value/completeness flags, and all reporter source pins. No derived QfO scores are admitted until terminal producer success, independent byte projection, full native validation and six raw endpoint readbacks. Original export failure and unknown duplication cause remain; no producer bug is claimed fixed."
+}
