@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "status": "frozen_pilot_reporter_tested_and_live_pending_admission_independently_crosschecked",
+  "reporter_revision": "094f61f001b6235c41df4650db0ba816bcb5c981",
+  "reporter_source": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/protected_union_reporter_admission_20261016",
+  "scientific_revision": "d650d6853869238a738b31367688018158d49625",
+  "scientific_source_unchanged": true,
+  "previous_goal_turn_classification": "verified_wait_and_user_requested_goal_prompt; specific live job 24363 was authoritatively polled, with no new scientific results admitted",
+  "current_goal_turn_classification": "progress; implemented and pushed terminal-gated independent reporting, tested working and frozen revisions, and independently verified actual pending snapshots",
+  "parent_comparison": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v26_20261016/summary.json",
+    "bytes": 4768740,
+    "sha256": "53da4f256685e3d348b4c882a282bdc47e2f6977076bbaa176c1d78c170b0de3"
+  },
+  "working_tests": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/protected_union_reporter_regression_tests_20261016.xml",
+    "bytes": 74047,
+    "sha256": "4b31b511255c433c9f5eef2f7af72a05e9e4e149433d59d0d8adfa9f59e4bb1e"
+  },
+  "frozen_tests": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/protected_union_reporter_frozen_tests_20261016.xml",
+    "bytes": 74047,
+    "sha256": "41866431f680a77269ce947743593b4c9b7f8201e633fa4ca5629c3dd00ca7c6"
+  },
+  "working_tests_passed": 484,
+  "frozen_tests_passed": 484,
+  "tests_failed_or_skipped_in_successful_suites": 0,
+  "test_scope": "Includes all selected existing incremental reporters and the real small HMM/profile/phylogeny fixture; the 74 new reporter tests cover terminal resources, immutable launch identity, plan/runtime/source/input boundaries, complete native coverage, actual kernel-route evidence, raw scores and precision/recall gate, failed-attempt retention, exact prior 27-method preservation and no imputation of missing endpoints.",
+  "preserved_setup_failure": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/protected_union_reporter_unpopulated_checkout_tests_20261016.xml",
+    "bytes": 231,
+    "sha256": "aeebb43a01ffc3494ae489f3d9de12ac2e32595afcad36d8a13d295bfbd870a4"
+  },
+  "setup_failure_explanation": "Initial frozen test invocation exited 4 with no tests because the new --no-checkout sparse worktree had not been populated. Populated this new worktree using git read-tree -mu HEAD, copied the three original pinned CPU libraries, and reran the unchanged selected suite: 484 passed. No scientific run was launched or changed by this setup failure. Existing invalid-escape deprecation warnings were left unrelated.",
+  "working_probe": {
+    "summary": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/protected_union_reporter_pending_probe_20261016/summary.json",
+      "bytes": 4773094,
+      "sha256": "2266688208c68a784472443bc28471d10219da8badd76ab322398b863902d9f2"
+    },
+    "score_table": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/protected_union_reporter_pending_probe_20261016/scores.tsv",
+      "bytes": 4691,
+      "sha256": "430d044b1291319c48d6bd3afce7815a7d8d1fc1c7876436df27604bff306826"
+    },
+    "snapshot": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/protected_union_reporter_pending_probe_20261016/snapshots/protected_pilot.json",
+      "bytes": 116719,
+      "sha256": "e6341691b8dcdaa8c7942c37fead5b694785bd4512d819ca7af9542f888dde09"
+    }
+  },
+  "frozen_probe": {
+    "summary": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/protected_union_reporter_frozen_pending_probe_20261016/summary.json",
+      "bytes": 4774915,
+      "sha256": "70168f1fe307f015f52367a38f7a556e2adf024d35f83f9c6a8d69dd13efa423"
+    },
+    "score_table": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/protected_union_reporter_frozen_pending_probe_20261016/scores.tsv",
+      "bytes": 4691,
+      "sha256": "430d044b1291319c48d6bd3afce7815a7d8d1fc1c7876436df27604bff306826"
+    },
+    "snapshot": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/protected_union_reporter_frozen_pending_probe_20261016/snapshots/protected_pilot.json",
+      "bytes": 116719,
+      "sha256": "e6341691b8dcdaa8c7942c37fead5b694785bd4512d819ca7af9542f888dde09"
+    }
+  },
+  "independent_probe_checks": {
+    "prior_method_records_exactly_unchanged_in_each_probe": 27,
+    "prior_tsv_rows_exactly_unchanged_in_each_probe": 27,
+    "new_method_key": "protected_union:protected_union",
+    "pilot_scores_empty": true,
+    "pilot_endpoints_NA_in_each_probe": 8,
+    "pilot_complete_eight_endpoints": false,
+    "reporter_files_per_probe_rehashed_and_authenticated_against_frozen_git_blobs": 29,
+    "working_and_frozen_tsv_bytes_identical": true,
+    "new_scientific_scores_admitted": 0,
+    "v26_left_unchanged": true
+  },
+  "scheduler_observation": {
+    "job_id": "24363",
+    "state": "RUNNING",
+    "elapsed": "00:12:51",
+    "allocated_cpus": 16,
+    "host": "bizon",
+    "restarts": 0,
+    "requeue": false,
+    "producer_status": "fresh_full_orthobench_native_running"
+  },
+  "next_action": "Poll the same scientific job, do not restart it. When terminal successful with SUCCESS producer status, run the frozen reporter with --protected-pilot-root and the unchanged v26 parent into a fresh comparison v27 namespace; independently crosscheck raw official/independent scores, complete native coverage, all prior method records and every TSV row before committing admission. If terminal failed, preserve its attempt without scores and diagnose. A valid negative pilot must be admitted as negative rather than retuned or relaunched.",
+  "advance_rule": "Only prespecify unchanged protected-union QfO and Three Kingdoms runs if independently revalidated OrthoBench F1 strictly increases and neither precision nor recall drops more than 0.005. Otherwise stop this branch and record its failure without relaxing the gate. This development screen is not equivalence or default promotion.",
+  "scope": "Reporting readiness and actual pending-path validation, not scientific accuracy admission or terminal execution proof. Shared-host timing and missing historical TreeFam archives remain nonblocking. Unrelated jobs and user sample changes are untouched.",
+  "scores": {},
+  "defaults_promoted": false,
+  "goal_completed": false
+}
