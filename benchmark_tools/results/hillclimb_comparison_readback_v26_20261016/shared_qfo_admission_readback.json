@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "status": "shared_qfo_all_six_scores_admitted_and_independently_crosschecked",
+  "auditor_source_revision": "b80d7a1408c4c2b2b3e4d4e7dc9583d45d044d0f",
+  "auditor_source_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/shared_qfo_export_admission_v26_20261016",
+  "scientific_revision": "7e7acaed3f3392197c0c498dc60ba63abb726810",
+  "producer_scheduler": {"JobIDRaw": "24360", "State": "COMPLETED", "ExitCode": "0:0", "AllocCPUS": "8", "NodeList": "bizon", "elapsed": "00:38:58"},
+  "summary": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v26_20261016/summary.json",
+    "bytes": 4768740,
+    "sha256": "53da4f256685e3d348b4c882a282bdc47e2f6977076bbaa176c1d78c170b0de3"
+  },
+  "score_table": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v26_20261016/scores.tsv",
+    "bytes": 4611,
+    "sha256": "5d3e462ac809df860a05223b6e38fffb0a7b4940a76b3ae87150cab9bdbfb1a5"
+  },
+  "producer": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/shared_qfo_export_recovery_r1_v1_20261016/results.json",
+    "bytes": 138538,
+    "sha256": "094c0fdafa121008ba87b1f275858b6110f0293eeafe4fbcc601c32e57063ebc"
+  },
+  "normalization": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/shared_qfo_export_recovery_r1_v1_20261016/normalization.json",
+    "bytes": 5551,
+    "sha256": "7f60ea2db80d4db321d2c613ae24d058cfd47e341a9b245c1f54b67516e2aba4"
+  },
+  "control_producer": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/results.json",
+    "bytes": 165173207,
+    "sha256": "a0868cd292420b8b9ac1b0daf29151c8f67bd767d6a4e541f48e19bcf35890b2"
+  },
+  "reporter_tests": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v26_20261016/reporter_tests.xml",
+    "bytes": 33518,
+    "sha256": "02833ba3dcca190ad2062566b5d05008f63e5bbbc727551bf4b696943690a2be"
+  },
+  "reporter_tests_passed": 220,
+  "method_count": 27,
+  "other_method_records_unchanged": 26,
+  "inherited_orthobench_three_kingdoms_scores_unchanged": true,
+  "raw_metric_files_read": 12,
+  "all_27_table_rows_match": true,
+  "verification_record_count": 263057,
+  "coverage": {"genes": 984137, "species": 78, "groups": 370016, "pairs": 5561114},
+  "conversion_mapping_loss": 0,
+  "independent_projection": {"status": "full_byte_projection_verified", "distinct_rows": 5561114, "removed_identical_rows_per_file": 1, "original_files_unchanged": true},
+  "scores": {"OrthoBench: OrthoBench F1": 0.737546282483223, "QfO: VGNC F": 0.9006358023274497, "QfO: SwissTrees F": 0.8033057432526411, "QfO: TreeFam-A F": 0.5968818183839146, "QfO: EC": 0.96633632, "QfO: GO": 0.49081323, "QfO: FAS": 0.7657498628934432, "ThreeKingdoms: Three Kingdoms F1": 0.8602433919851173},
+  "deltas_from_matched_canonical_control": {"OrthoBench: OrthoBench F1": -0.0035144527041175433, "QfO: VGNC F": -0.0014319616448579264, "QfO: SwissTrees F": -0.02804196244164281, "QfO: TreeFam-A F": -0.018896242800506058, "QfO: EC": 0.0009545600000000487, "QfO: GO": 0.0005768600000000124, "QfO: FAS": 0.002025153069102781, "ThreeKingdoms: Three Kingdoms F1": -0.011889767484085656},
+  "qfo_precision_recall": {
+    "control": {"VGNC F": {"precision": 0.9993396993092238, "recall": 0.8220523105205984}, "SwissTrees F": {"precision": 0.95464765, "recall": 0.73625484}, "TreeFam-A F": {"precision": 0.95933142, "recall": 0.45340559}},
+    "variant": {"VGNC F": {"precision": 0.9992869148881984, "recall": 0.8197125428261052}, "SwissTrees F": {"precision": 0.9422207, "recall": 0.70008911}, "TreeFam-A F": {"precision": 0.95826564, "recall": 0.43342672}}
+  },
+  "functional_relation_axes": {"EC": {"control": 118067, "variant": 100029}, "GO": {"control": 84021, "variant": 81032}, "FAS_exported_pair_axis_not_sample_denominator": {"control": 5953050, "variant": 5561114}},
+  "resources": {"original_completed_native_command_in_failed_export_job": {"job_id": "24247", "cpus": 16, "elapsed_seconds": 166479.0, "max_reported_process_rss_kib": 16946528, "native_command_exit_status": 0, "overall_job_status": "FAILED"}, "derived_export_validation_and_scoring": {"job_id": "24360", "cpus": 8, "elapsed_seconds": 2337.78, "user_seconds": 5088.88, "system_seconds": 568.42, "max_reported_process_rss_kib": 34130536, "exit_status": 0}},
+  "failure_lineage_retained": {"original_unrun_job": "24242", "failed_export_job": "24247", "derived_export_recovery_job": "24360", "duplicate_cause": "unknown"},
+  "complete_eight_endpoint_contrast": true,
+  "passes_point_estimate_screen": false,
+  "decision": "Do not promote the single relaxed threshold. All four tracked primary F1 endpoints decline; SwissTrees, TreeFam and supplementary Three Kingdoms exceed the 0.005 development decline screen. Nominal functional means increase on changed relation populations; do not call them unconditional orthology gains or statistically reliable FAS improvements.",
+  "verification_scope": "Frozen independent admission authenticated launch, source/input/runtime inventories, matched canonical control, full native contracts and the explicit lossless export projection. A separate readback reproduced both sets of six raw metric files and all precision/recall axes, independently rechecked the byte projection, compared all 27 TSV rows and missing/completeness flags, confirmed other 26 method records and all old shared-hit cells unchanged, and rehashed reporting-code/metric/normalization pins. Original failed outputs remain untouched; no distinct relation/confidence changed. Inherited endpoints and other tools are not newly rescored.",
+  "limitations": ["All datasets development-exposed; point-estimate screening is not equivalence or independent validation.", "FAS remains unseeded; its relation axis is not the count of sampled/scored FAS observations.", "EC/GO conditional means have different scored-relation denominators; no shared-pair composition decomposition is claimed here.", "Recovery costs are separate from the original failed native execution and are not uninterrupted successful full-pipeline timing. Shared-host contention remains confounded.", "No original producer bug is claimed fixed; the exact redundant export record was omitted only in new derived tables under the committed recovery protocol."],
+  "native_inference_rerun": false,
+  "defaults_promoted": false,
+  "goal_completed": false
+}
