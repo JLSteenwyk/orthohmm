@@ -429,10 +429,10 @@ def singleton_followup_cell(repo, root, plan, report, row):
 
 def build(repo, parent_path, output, continuation_root=None, shared_root=None, canonical_recovery_root=None,
           singleton_root=None, shared_qfo_root=None, singleton_qfo_root=None, singleton_tk_root=None,
-          cap400_recovery_root=None, cap400_scoring_root=None):
+          cap400_recovery_root=None, cap400_scoring_root=None, shared_export_root=None):
     if output.exists() or all(root is None for root in (
             continuation_root, shared_root, canonical_recovery_root, singleton_root, shared_qfo_root,
-            singleton_qfo_root, singleton_tk_root, cap400_recovery_root, cap400_scoring_root)):
+            singleton_qfo_root, singleton_tk_root, cap400_recovery_root, cap400_scoring_root, shared_export_root)):
         raise ValueError("Require a fresh output and at least one producer namespace")
     parent = json.loads(parent_path.read_text())
     check(parent["score_table"])
@@ -445,18 +445,21 @@ def build(repo, parent_path, output, continuation_root=None, shared_root=None, c
                        ("canonical_recovery", canonical_recovery_root), ("singleton_policy", singleton_root),
                        ("shared_qfo", shared_qfo_root), ("singleton_qfo", singleton_qfo_root),
                        ("singleton_tk", singleton_tk_root), ("cap400_recovery", cap400_recovery_root),
-                       ("cap400_scoring", cap400_scoring_root)):
+                       ("cap400_scoring", cap400_scoring_root), ("shared_export", shared_export_root)):
         if root is None:
             continue
         path = root / "results.json"
         if not path.exists():
             observations.append({"kind": kind, "path": str(path), "status": "report_missing_execution_state_not_inferred"})
             continue
-        if kind in ("cap400_recovery", "cap400_scoring"):
+        separate_recovery = kind in ("cap400_recovery", "cap400_scoring", "shared_export")
+        if separate_recovery:
             if kind == "cap400_recovery":
                 from benchmark_tools import report_cap400_downstream as recovery
-            else:
+            elif kind == "cap400_scoring":
                 from benchmark_tools import report_cap400_scores as recovery
+            else:
+                from benchmark_tools import report_shared_qfo_export as recovery
             report, capture = recovery.capture(path, captures)
             plan, pins, failed = recovery.load_plan(repo, root, report)
             if kind == "cap400_recovery":
@@ -465,11 +468,11 @@ def build(repo, parent_path, output, continuation_root=None, shared_root=None, c
             report, capture = (recovery_capture(path, captures) if kind == "canonical_recovery"
                                else snapshot(path, captures, kind + ".json"))
         followup = kind in ("singleton_qfo", "singleton_tk")
-        if kind not in ("cap400_recovery", "cap400_scoring"):
+        if not separate_recovery:
             plan, pins = (singleton_followup_plan(repo, root, report) if followup else check_plan(repo, root, report))
         observations.append({"kind": kind, "producer_status": report["status"], "snapshot": capture["snapshot"]})
-        if kind in ("cap400_recovery", "cap400_scoring"):
-            key = "full_search:cap400"
+        if separate_recovery:
+            key = "shared_hit:shared_hit1" if kind == "shared_export" else "full_search:cap400"
             for attempt in failed:
                 upsert_cell(methods, key, key, attempt)
             cell = {"dataset": "QfO", "status": report["status"], "producer_status": report["status"],
@@ -477,11 +480,13 @@ def build(repo, parent_path, output, continuation_root=None, shared_root=None, c
             cell.update({k: report[k] for k in ("error", "error_type", "postflight_error") if k in report})
             if report["status"] == recovery.SUCCESS:
                 cell.update(recovery.cell(repo, root, plan, report))
+                if kind == "shared_export":
+                    recovery.require_existing_control(methods, cell)
             upsert_cell(methods, key, key, cell)
             for pin in pins:
                 check(pin)
             if runtime() != plan["runtime"]:
-                raise ValueError("Scientific runtime changed during cap400 recovery admission")
+                raise ValueError("Scientific runtime changed during separate recovery admission")
             continue
         if kind == "singleton_policy" or followup:
             dataset = "QfO" if kind == "singleton_qfo" else "ThreeKingdoms" if kind == "singleton_tk" else "OrthoBench"
@@ -575,7 +580,8 @@ def build(repo, parent_path, output, continuation_root=None, shared_root=None, c
         "run_shared_hit_pipeline.py", "recover_canonical_qfo_scoring.py", "run_canonical_downstream.py",
         "run_singleton_tie_orthobench.py", "continue_shared_qfo.py", "run_singleton_tie_followup.py",
         "report_cap400_downstream.py", "continue_cap400_downstream.py", "continue_cap400_downstream_worker.py",
-        "report_cap400_scores.py", "recover_cap400_scores.py", "audit_cap400_scoring_parent.py")]
+        "report_cap400_scores.py", "recover_cap400_scores.py", "audit_cap400_scoring_parent.py",
+        "report_shared_qfo_export.py", "recover_shared_qfo_export.py", "shared_qfo_export.py")]
     result.update(status="incremental_separate_trial_readback_no_default_promotion", parent_readback=record(parent_path),
                   reporter_source=record(__file__), methods=methods, score_table=record(output / "scores.tsv"),
                   additional_trial_observations=observations, defaults_promoted=False, goal_completed=False)
@@ -593,7 +599,8 @@ def build(repo, parent_path, output, continuation_root=None, shared_root=None, c
     result["limitations"].extend(["Newly completed trial cells are independently read back; unrelated earlier admissions are inherited, not rescored.",
         "Pending, failed, absent and unverified cells do not supply scores. Cell admission is not a claim that the producer job is terminal.",
         "Fresh shared-hit inference and cached canonical controls have different timing scopes. FAS remains unseeded.",
-        "Cap400 recovery preserves the failed fresh attempt and separates cached clustering/downstream costs; recovery is not uninterrupted full-pipeline timing."])
+        "Cap400 recovery preserves the failed fresh attempt and separates cached clustering/downstream costs; recovery is not uninterrupted full-pipeline timing.",
+        "Shared-QfO derived-export recovery, when admitted, preserves the original failed export and removes only one byte-verified identical redundant record from each new pair/confidence table; no inference is rerun."])
     write_json(output / "summary.json", result)
     return result
 
@@ -603,7 +610,8 @@ if __name__ == "__main__":
     for name in ("repo", "parent", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
     for name in ("continuation-root", "shared-root", "canonical-recovery-root", "singleton-root", "shared-qfo-root",
-                 "singleton-qfo-root", "singleton-three-kingdoms-root", "cap400-recovery-root", "cap400-scoring-root"):
+                 "singleton-qfo-root", "singleton-three-kingdoms-root", "cap400-recovery-root", "cap400-scoring-root",
+                 "shared-export-root"):
         parser.add_argument("--" + name, type=Path)
     args = parser.parse_args()
     result = build(args.repo.resolve(), args.parent.resolve(), args.output.resolve(),
@@ -615,5 +623,6 @@ if __name__ == "__main__":
                    args.singleton_qfo_root.resolve() if args.singleton_qfo_root else None,
                    args.singleton_three_kingdoms_root.resolve() if args.singleton_three_kingdoms_root else None,
                    args.cap400_recovery_root.resolve() if args.cap400_recovery_root else None,
-                   args.cap400_scoring_root.resolve() if args.cap400_scoring_root else None)
+                   args.cap400_scoring_root.resolve() if args.cap400_scoring_root else None,
+                   args.shared_export_root.resolve() if args.shared_export_root else None)
     print(result["status"], len(result["methods"]))
