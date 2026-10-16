@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "status": "submitted_full_orthobench_protected_union_pilot_no_score_admission",
+  "job_id": "24363",
+  "source_revision": "d650d6853869238a738b31367688018158d49625",
+  "source_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/protected_union_orthobench_r1_v1_20261016",
+  "execution_plan": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/protected_union_orthobench_r1_v1_20261016/execution_plan.json",
+    "bytes": 1150599,
+    "sha256": "b7330b9b01a96762549abba7c54ccfef437587ce8adb93590b7586218dc8e94b"
+  },
+  "working_tests": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/protected_union_pilot_regression_tests_20261016.xml",
+    "bytes": 45599,
+    "sha256": "533d457c31e4ed0662555b950dde14ebd85090557c5acb2ecacdf99354a14f95"
+  },
+  "frozen_tests": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/protected_union_pilot_frozen_tests_20261016.xml",
+    "bytes": 45599,
+    "sha256": "76af2b6e5d1faccc74cf1b8bdba87f77cdb9921a1daaa000765c614c75276ae6"
+  },
+  "working_tests_passed": 294,
+  "frozen_tests_passed": 294,
+  "frozen_tests_skipped": 0,
+  "test_scope": "Includes a real guarded small HMM/profile/phylogeny pipeline, complete native validation, actual initial/profile CPU kernel accounting, CLI/API compatibility, protected checkpoint policy, source/input/control gates and strict F1/precision/recall advancement boundaries. CUDA hidden; committed sample fixtures included in the separate frozen checkout. Working-tree user fixtures untouched.",
+  "input_records": 2569,
+  "source_records": 1204,
+  "scientific_source_matches_fresh_gate": "All scientific Python/C files and the three original CPU libraries match the independently verified fresh-search executor; no method change after that gate.",
+  "profile_runtime_probe": "passed",
+  "dataset": "OrthoBench",
+  "candidate_policy": "protected_union",
+  "per_constituent_prefilter_cap": 100,
+  "initial_shared_hit_thresholds": [4, 1],
+  "complete_proteomes": 12,
+  "complete_protein_universe": 251378,
+  "control": {
+    "configuration": "canonical min4/cap100 high_sensitivity with satellite_v2 and inferred phylogeny",
+    "independently_revalidated_before_preparation": true,
+    "F1": 0.7410607351873405,
+    "precision": 0.8177045380181867,
+    "recall": 0.6775533630827973,
+    "coverage": {"genes": 251378, "species": 12, "groups": 59770, "pairs": 966439},
+    "scope": "Accepted-hit/cached downstream accuracy control, not matched fresh timing. Full OrthoBench native outputs, complete gene ownership and official/independent scoring rechecked; unrelated QfO tree inventories are not rescored for this single-dataset pilot."
+  },
+  "prerequisites": {"fresh_search_job": "24362 COMPLETED 0:0; all 144 directions independently verified", "prior_qfo_recovery": "24360 COMPLETED 0:0; independently admitted in v26", "original_control_job": "24240 FAILED 1:0 overall; its successful independently admitted OrthoBench cell is retained and revalidated"},
+  "resources": {"host": "bizon", "cpus": 16, "memory_gib": 128, "wall_limit": "1-00:00:00", "cuda": false, "requeue": false, "unrelated_jobs": "untouched"},
+  "scheduler_observation": {"state": "RUNNING", "elapsed": "00:01:16", "restarts": 0, "producer_status": "fresh_full_orthobench_native_running"},
+  "advancement_rule": "F1 strictly above matched canonical control and neither precision nor recall down by more than 0.005, with all source/runtime/input/native/score gates passed. This is a development screen only. Failure stops this branch without retuning; success requires separately prespecified unchanged-setting QfO/Three Kingdoms evaluations before a full vector claim.",
+  "scope": "Fresh complete-proteome initial HMM search, graph construction, profile expansion, candidate recruitment and independent species/gene-tree inference/reconciliation. No accepted-hit or tree replay substitutes for the variant. Shared-host wall/CPU/process-RSS records are descriptive and not isolated speed comparisons. Gene labels/reference annotations are not inference inputs. No pilot score is admitted from submission or partial progress.",
+  "scores": {},
+  "defaults_promoted": false,
+  "goal_completed": false
+}
