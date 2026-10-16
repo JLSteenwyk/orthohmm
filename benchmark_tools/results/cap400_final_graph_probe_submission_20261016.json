@@ -1,0 +1,61 @@
+{
+  "defaults_promoted": false,
+  "execution_plan": {
+    "bytes": 368714,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_final_graph_recovery_r1_v1_20261016/execution_plan.json",
+    "sha256": "284e0abccf18a2221426bee322b55e9013322d76c423d723b2ef2a60738f4ef8"
+  },
+  "failure": {
+    "bytes": 6927,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/cap400_final_graph_failure_20261016.json",
+    "sha256": "d5a0ac87792b38a092517d5cbeb6efc9bbcd3eeca06bac6b3ee8b0adebe653ce"
+  },
+  "frozen_tests": {
+    "bytes": 6042,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/cap400_final_graph_probe_frozen_tests_v3_20261016.xml",
+    "sha256": "acd59e7ce74738de8162eebceabaa716a027111451a11eae4da4d7d9d48885d5"
+  },
+  "genes": 984137,
+  "goal_completed": false,
+  "initial_hmm_search_rerun": false,
+  "job_id": "24347",
+  "limitations": [
+    "Submission is not successful clustering, completed inference, accuracy admission, or goal completion.",
+    "Full graph reconstruction and independent row/float-bit verification must pass before the one optimizer attempt.",
+    "The original failed full run and all cached recovery costs remain separate; shared-host timing is confounded."
+  ],
+  "original_failure_preserved": true,
+  "protocol": {
+    "bytes": 4242,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hillclimb_cap400_final_graph_recovery_20261016.json",
+    "sha256": "be3e850aa380b8b72dca637352bfe769c4bb39ecb59fd91240a1dae584e8a244"
+  },
+  "resources": {
+    "cpus": 1,
+    "memory_gib": 128,
+    "wall_limit": "1-00:00:00"
+  },
+  "runner": {
+    "bytes": 16694,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cap400_final_graph_recovery_r1_v1_20261016/benchmark_tools/probe_cap400_final_graph.py",
+    "sha256": "b5ee4650c817d382b77b252669b457d328fc89de1520a6e68d494667903138dd"
+  },
+  "runner_revision": "0c9c3ae94f1bd9d9638836bc3cd559855b87733e",
+  "saved_edge_rows": 33585180,
+  "scheduler_at_submission": "JobId=24347 JobName=ohmm-cap400-final-graph\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=RUNNING Reason=None Dependency=(null)\n   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:26 TimeLimit=1-00:00:00 TimeMin=N/A\n   SubmitTime=2026-10-16T07:49:39 EligibleTime=2026-10-16T07:49:39\n   AccrueTime=2026-10-16T07:49:39\n   StartTime=2026-10-16T07:49:39 EndTime=2026-10-17T07:49:39 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-16T07:49:39 Scheduler=Main\n   Partition=gpu AllocNode:Sid=bizon-link:1216404\n   ReqNodeList=bizon ExcNodeList=(null)\n   NodeList=bizon\n   BatchHost=bizon\n   NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=1,mem=128G,node=1,billing=1\n   AllocTRES=cpu=1,mem=128G,node=1,billing=1\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=1 MinMemoryNode=128G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cap400_final_graph_recovery_r1_v1_20261016/benchmark_tools/probe_cap400_final_graph.slurm\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_final_graph_recovery_r1_v1_20261016/slurm-24347.err\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_final_graph_recovery_r1_v1_20261016/slurm-24347.out\n   TresPerTask=cpu=1\n   \n\n",
+  "scientific_revision": "2ccc411520d9e63678178a50207ba1fca87bfbb3",
+  "scores": {},
+  "settings": {
+    "cpm_resolution": 0.1,
+    "include_isolates": true,
+    "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_final_graph_recovery_r1_v1_20261016/native",
+    "seed": 4
+  },
+  "slurm": {
+    "bytes": 569,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cap400_final_graph_recovery_r1_v1_20261016/benchmark_tools/probe_cap400_final_graph.slurm",
+    "sha256": "60470d136977330ab431a359f111cf2d2852178bfeb038786c6fa5055b74300a"
+  },
+  "species": 78,
+  "status": "single_saved_final_graph_probe_submitted"
+}
