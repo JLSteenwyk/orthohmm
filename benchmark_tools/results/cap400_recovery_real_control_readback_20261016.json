@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "status": "original_control_native_and_all_six_scores_reverified_with_recovery_reporter",
+  "date": "2026-10-16",
+  "reporter_revision": "e3667423",
+  "entrypoint": "benchmark_tools.report_cap400_downstream.control_readback",
+  "invocation_scope": "Read execution_plan.json, call control_readback(repo, plan, {'control': plan['control']}, {'control': plan['control']}), then rehash all returned pins and the execution plan. This exercises the retained control's real native and raw-score readback, not the completed candidate-admission path or separate original-failure authentication gates.",
+  "execution_plan": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/cap400_downstream_recovery_r1_v1_20261016/execution_plan.json",
+    "bytes": 1323386,
+    "sha256": "0af3de691b0f6bd0467f25e4a05aa7b8535ffa61dddb2a7625c90c43ad1d18b4"
+  },
+  "reporter_sources": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/report_cap400_downstream.py",
+      "bytes": 10744,
+      "sha256": "143ded4513164ac898cca068434b7cab72f8d9b3f1e31563aa8f6d4390ec380a"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/report_hillclimb.py",
+      "bytes": 27033,
+      "sha256": "1f9f93d2adde242e6e4132ef9b1cc25bc58572409652bbc5badd64c395be6b97"
+    }
+  ],
+  "control_report": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_native_recovery_r1_v1_20261014/results.json",
+    "bytes": 167049,
+    "sha256": "16c91a533d82bfb378354728474b2f22c82f3849fba7dc6c68729297d4447c50"
+  },
+  "scientific_revision": "2ccc411520d9e63678178a50207ba1fca87bfbb3",
+  "coverage": {
+    "genes": 984137,
+    "species": 78,
+    "groups": 366071,
+    "pairs": 5959535
+  },
+  "scores": {
+    "QfO: VGNC F": 0.9016900956268489,
+    "QfO: SwissTrees F": 0.8335132205147882,
+    "QfO: TreeFam-A F": 0.614863704412014,
+    "QfO: EC": 0.9656505,
+    "QfO: GO": 0.49034928,
+    "QfO: FAS": 0.7624114773550157
+  },
+  "verified_record_count": 107,
+  "retained_comparison": {
+    "method_key": "full_search:control100",
+    "all_six_scores_exactly_equal": true,
+    "summary": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v24_20261014/summary.json",
+      "bytes": 4674659,
+      "sha256": "8e2e262840cf394ed54433f9904e127eaca1ac7413e4f4ecd50abbc34bb99e75"
+    }
+  },
+  "scope": "Read-only readiness audit of the retained original control. FAS was read back, not resampled. No new inference, candidate scores, comparison-table changes, or timing claim.",
+  "candidate_scores_admitted": false,
+  "defaults_promoted": false,
+  "goal_completed": false
+}
