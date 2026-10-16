@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "status": "shared_hit_retained_native_and_functional_pair_diagnostics_independently_verified",
+  "plan_revision": "ea75430b363a0dc66ddbddb201974b6d34c7d23e",
+  "plan": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hillclimb_shared_hit_qfo_native_diagnostics_20261016.json",
+    "bytes": 6255,
+    "sha256": "d13c913b340c84b729ec4db8e0cca8784609c02b371b6f58670b36afb2a3bae2"
+  },
+  "executor_revision": "37f71d9c07ed67baf539a5894344bcb418c1874f",
+  "executor_source": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cap400_scoring_only_recovery_r1_v1_20261016",
+  "admission_receipt": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v26_20261016/shared_qfo_admission_readback.json",
+    "bytes": 6683,
+    "sha256": "6f10b251b293b2861d8da37c8dc2730188b486885499e65fa83a170fdfb01bee"
+  },
+  "tests": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/shared_hit_qfo_native_diagnostic_tests_20261016.xml",
+    "bytes": 4239,
+    "sha256": "4e399e3d1c7673432b603fe18bec01ec1af562b41d6fce10568d4ac5361cfe4b"
+  },
+  "tests_passed": 31,
+  "tests_failed_or_skipped": 0,
+  "native_contrast": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/shared_hit_qfo_native_contrast_20261016.json",
+    "bytes": 9830,
+    "sha256": "af4da4519c50fd67d31a0919afb75579663ec4517978323d09d4dbea28753201"
+  },
+  "functional_overlap": {
+    "GO": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/shared_hit_go_scored_pair_overlap_20261016.json",
+      "bytes": 2321,
+      "sha256": "7cc8abffd673af0b430fdb83c8eca603f4eac2639f53cf38bd83ee90202a3f11"
+    },
+    "EC": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/shared_hit_ec_scored_pair_overlap_20261016.json",
+      "bytes": 2320,
+      "sha256": "7c1947924faede5cab835356d953376eb2fae006811473eda2b17ef5d552a403"
+    }
+  },
+  "scheduler": {
+    "native_contrast": {"job_id": "24366", "state": "COMPLETED", "exit_code": "0:0", "elapsed": "00:01:45", "cpus": 1, "memory_gib": 16, "host": "bizon"},
+    "independent_readback": {"job_id": "24367", "state": "COMPLETED", "exit_code": "0:0", "elapsed": "00:01:21", "cpus": 1, "memory_gib": 16, "host": "bizon", "dependency": "afterok:24366"}
+  },
+  "diagnostic_resource_records": {
+    "native_contrast": {
+      "time": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/shared_hit_qfo_native_contrast_20261016.time.txt",
+        "bytes": 1399,
+        "sha256": "f023bf51e874246e7ba5a8fd365c6b788da96819ec67af243ec15d6c7cc4ccd3"
+      },
+      "elapsed_seconds": 103.89,
+      "user_seconds": 101.26,
+      "system_seconds": 2.61,
+      "max_process_rss_kib": 1858600,
+      "exit_status": 0
+    },
+    "independent_readback": {
+      "time_and_complete_readonly_python_command": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/shared_hit_qfo_native_independent_readback_20261016.time.txt",
+        "bytes": 6520,
+        "sha256": "79e180f022ffd234a0bbb62c50303632393d40c23ff6bdacef48363873f5acf9"
+      },
+      "elapsed_seconds": 80.33,
+      "user_seconds": 77.18,
+      "system_seconds": 3.13,
+      "max_process_rss_kib": 1488836,
+      "exit_status": 0
+    }
+  },
+  "native_readback": {
+    "genes": 984137,
+    "pair_species": 78,
+    "baseline_groups": 365733,
+    "variant_groups": 370016,
+    "unchanged_groups": 300715,
+    "removed_groups": 65018,
+    "added_groups": 69301,
+    "genes_in_changed_groups": 497369,
+    "baseline_pairs": 5953050,
+    "variant_pairs": 5561114,
+    "common_pairs": 4609410,
+    "removed_pairs": 1343640,
+    "added_pairs": 951704,
+    "net_pairs_change": -391936,
+    "genes_in_changed_pairs": 438228,
+    "baseline_duplicate_rows": 0,
+    "variant_duplicate_rows": 0,
+    "species_tree_same_bytes": false,
+    "baseline_confidence": {"high": 3013217, "medium": 2939833},
+    "variant_confidence": {"high": 2830176, "medium": 2730938}
+  },
+  "functional_readback": {
+    "GO": {
+      "control_scored_pairs": 84021,
+      "variant_scored_pairs": 81032,
+      "shared_pairs": 71547,
+      "removed_pairs": 12474,
+      "added_pairs": 9485,
+      "shared_serialized_scores_different": 0,
+      "shared_conditional_mean_difference": 0.0,
+      "variant_minus_control_raw_mean": 0.0005768547975914091,
+      "independent_comparison_fields_reproduced": 16,
+      "exact_rational_decomposition_verified": true
+    },
+    "EC": {
+      "control_scored_pairs": 118067,
+      "variant_scored_pairs": 100029,
+      "shared_pairs": 87346,
+      "removed_pairs": 30721,
+      "added_pairs": 12683,
+      "shared_serialized_scores_different": 0,
+      "shared_conditional_mean_difference": 0.0,
+      "variant_minus_control_raw_mean": 0.0009545537225080416,
+      "independent_comparison_fields_reproduced": 16,
+      "exact_rational_decomposition_verified": true
+    },
+    "all_scored_pair_native_memberships_verified": {"control_GO_EC_union": 185412, "variant_GO_EC_union": 165476}
+  },
+  "verification_scope": "Authenticated original v26 admission, summary, score table, both producer reports, normalization receipt, selected native products, producer-pinned aggregate JSON and participant headers. Rehashed all four newly pinned raw gzip files and exact helper Git identities before evaluation. Existing frozen helpers passed 31 tests. A separate one-CPU process used direct CSV/frozenset gene groups and string-key baseline set deletion while streaming candidate pairs, rather than the producer packed-index Counter algorithm; reproduced all root/pair counts, zero duplicates, ownership, complete gene universe and tree-byte comparison. Streamed pair and confidence files in lockstep, checked injective accession mapping and membership of every raw GO/EC pair in its own native exports. Independent Decimal/Fraction parsing reproduced all 16 overlap fields per metric, checked exact rational decomposition and count/mean agreement with admitted aggregates within six-decimal raw serialization tolerance. Rehashed inputs after evaluation; v26 summary and score table remain unchanged.",
+  "historical_raw_pin_limit": "Original producer reports authenticated GO/EC aggregate JSON but did not retain raw gzip hash pins. Raw gzip pins were first committed in this diagnostic plan before pair-overlap evaluation. Namespace, participant, aggregate and native-membership checks support this descriptive diagnostic, but do not retrospectively establish original-time raw-file hash identity. This limitation is retained explicitly.",
+  "interpretation": "The relaxed min1/cap100 initial prefilter changes downstream group and pair populations substantially, including many additions despite fewer total predicted pairs. Small GO/EC mean increases occur with changed eligible populations and original denominators; shared pairs have identical serialized annotation scores. These conditional functional means are not evidence of improved annotation similarity on the same pairs or unconditional orthology accuracy. The independently admitted primary F1 declines and failed full-vector development screen remain unchanged; do not promote this default.",
+  "limits": [
+    "Post hoc development diagnostics; no independent confirmation or uncertainty interval.",
+    "Group/pair turnover does not establish which changed relations are correct or uniquely locate a causal stage.",
+    "Different serialized tree bytes do not establish different topology or phylogeny as the cause.",
+    "High/medium native confidence labels are reconciliation evidence categories, not calibrated correctness probabilities.",
+    "FAS remains unseeded and is excluded from this decomposition; exported relation count is not the sampled/scored FAS denominator.",
+    "Raw serialized mean differences can differ slightly from differences of eight-decimal aggregate scores; no benchmark score is replaced.",
+    "One-CPU diagnostic times and process-RSS values are descriptive and not native pipeline timing or isolated speed comparisons."
+  ],
+  "protected_union_pilot": {"job_id": "24363", "last_observed_state": "RUNNING", "elapsed": "00:22:11", "cpus": 16, "source_unchanged": true, "scores_admitted": false},
+  "next_action": "Continue the existing protected-union pilot and its committed strict OrthoBench gate. These diagnostics neither establish its accuracy nor justify changing that gate. No duplicate scientific inference, benchmark score revision or default promotion is authorized by this result.",
+  "previous_goal_turn_classification": "progress; independently gated reporting was implemented, tested in working and frozen sources, and pushed with actual pending-path evidence",
+  "current_goal_turn_classification": "progress; prespecified, executed and independently verified new retained-output diagnostics that resolve the shared-hit functional-composition question",
+  "accuracy_evaluated": false,
+  "native_inference_rerun": false,
+  "comparison_v26_unchanged": true,
+  "defaults_promoted": false,
+  "goal_completed": false
+}

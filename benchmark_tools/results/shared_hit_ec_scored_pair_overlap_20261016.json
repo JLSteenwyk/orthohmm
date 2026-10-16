@@ -1,0 +1,50 @@
+{
+  "inputs": [
+    {
+      "bytes": 551685,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/shared_qfo_export_recovery_r1_v1_20261016/qfo_scoring/results/EC/EC_ohmm-hillclimb-r1-fq-a7fadbc11d51fc19-1_ebd41635f8dc_raw.txt.gz",
+      "sha256": "456dc0f46fdb892f738502208679fef043f7ca92a428fbc1833e396090c84d86"
+    },
+    {
+      "bytes": 644825,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/qfo_scoring/results/EC/EC_ohmm-hillclimb-r1-cq-d7eb236bb965_e2bfb6cfb11e_raw.txt.gz",
+      "sha256": "d4e5a2268f5dc7f25df2fc078cf9305792da3083276323459820d01b17e0292a"
+    }
+  ],
+  "limitations": [
+    "Rounded eligible-pair scores only, not all predicted relations.",
+    "Shared-pair conditioning changes the endpoint and is not a replacement benchmark score.",
+    "Decomposition is arithmetic, not causal attribution or independent-unit inference.",
+    "No underlying annotation score recomputation or biological confidence interval."
+  ],
+  "metric": "EC",
+  "result": {
+    "left_mean": 0.9663363232262644,
+    "left_only_pairs": 12683,
+    "left_pairs": 100029,
+    "left_score_sum_millionths": 96661656076,
+    "maximum_shared_absolute_difference_millionths": 0,
+    "original_mean_difference": 0.000954553722508078,
+    "original_mean_difference_components": {
+      "left_only": 0.11785120724989753,
+      "negative_right_only": -0.24652622421167641,
+      "shared_with_original_denominators": 0.12962957068428693
+    },
+    "right_mean": 0.9653817695037563,
+    "right_only_pairs": 30721,
+    "right_pairs": 118067,
+    "right_score_sum_millionths": 113979729380,
+    "shared_conditional_mean_difference": 0.0,
+    "shared_left_sum_millionths": 84873117666,
+    "shared_pairs": 87346,
+    "shared_pairs_with_different_serialized_scores": 0,
+    "shared_right_sum_millionths": 84873117666
+  },
+  "source": {
+    "bytes": 4290,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cap400_scoring_only_recovery_r1_v1_20261016/benchmark_tools/compare_qfo_scored_pairs.py",
+    "sha256": "c86184be5a06238d520ff892ffe2b85ca32e2014d432c6051a01bbe48cb37bbc"
+  },
+  "status": "descriptive_scored_pair_comparison",
+  "uncertainty_admitted": false
+}
