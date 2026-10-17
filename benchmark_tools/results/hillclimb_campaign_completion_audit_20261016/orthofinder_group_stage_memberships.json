@@ -1,0 +1,167 @@
+{
+  "defaults_promoted": false,
+  "goal_completed": false,
+  "helpers": [
+    {
+      "bytes": 6689,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_orthofinder_group_stages.py",
+      "sha256": "b42e1ed01e6935121d61dc59acc663066108f20fb9cce20be236719ef8fe20bb"
+    },
+    {
+      "bytes": 10365,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_ob_orthofinder_provenance.py",
+      "sha256": "6f1c5730395c21d90a5ec54066cf1dee2252fda83e3bf0e08dd92f21c60c8dc5"
+    },
+    {
+      "bytes": 4518,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/orthofinder_mcl_to_orthogroups.py",
+      "sha256": "20879a9a041b2a9b48e4bf0d81c895793d8b0a75c8d2e06c777f472e72484eb8"
+    },
+    {
+      "bytes": 3857,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/restore_orthofinder_ids.py",
+      "sha256": "dac0c5d0679686e97d14c00d1fc9874965cc1382250f0245718b7a9b1eb80f9f"
+    },
+    {
+      "bytes": 7448,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    }
+  ],
+  "rows": {
+    "OrthoBench": {
+      "checked": [
+        {
+          "bytes": 6738650,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/SequenceIDs.txt",
+          "sha256": "cc326a396bf388b1a2a65f1303b392fb2af4214390a536df60c74a9460cf2356"
+        },
+        {
+          "bytes": 484,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/SpeciesIDs.txt",
+          "sha256": "6f5e1ae5777fac7fd0c15104c3b70798b9b01bc201aa498d0cbb8f079aa66bbc"
+        },
+        {
+          "bytes": 2379433,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/N0.ids.tsv",
+          "sha256": "da70e176c115dd95d9629114e52c53d855fd533f73a108fb3905b73fd44ac970"
+        },
+        {
+          "bytes": 2487193,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/WorkingDirectory/clusters_OrthoFinder_I1.2.txt_id_pairs.txt",
+          "sha256": "ea9eb298600ee0f22cf6244ece14359c5893ec28a0817a1f23fc0513655b9080"
+        },
+        {
+          "bytes": 4957710,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthofinder_v3_diamond/input/OrthoFinder/Results_Jul15/Orthogroups/Orthogroups.txt",
+          "sha256": "e0bf8d21b7ddc4494f0df1224dc2cd57d964cb92507eb40bd1f058cbc6f47af7"
+        }
+      ],
+      "common_groups": 35433,
+      "genes": 251378,
+      "genes_in_changed_groups": 862,
+      "identifiers_restored": 0,
+      "latest_root_hog_only_groups": 43,
+      "latest_root_hog_padded_groups": 35476,
+      "latest_root_hog_rows": 15798,
+      "latest_root_hog_singleton_padding": 19678,
+      "latest_root_hogs_refine_official_partition": true,
+      "mcl_groups": 34230,
+      "official_differs_from_mcl": true,
+      "official_equals_latest_root_hog_partition": false,
+      "official_groups": 35454,
+      "official_only_groups": 21,
+      "species": 12
+    },
+    "QfO": {
+      "checked": [
+        {
+          "bytes": 144123382,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_primary_v1/orthofinder_full/input/OrthoFinder/Results_Sep18/WorkingDirectory/SequenceIDs.txt",
+          "sha256": "1339883829169cef1a382552afd10d810c8911c2577eabc239816cfb2640eb40"
+        },
+        {
+          "bytes": 2189,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_primary_v1/orthofinder_full/input/OrthoFinder/Results_Sep18/WorkingDirectory/SpeciesIDs.txt",
+          "sha256": "0b12fa1d951718589c650245bdd1c03f15c7c0a9510d3484883f4c1015697b28"
+        },
+        {
+          "bytes": 11990805,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_primary_v1/orthofinder_full/input/OrthoFinder/Results_Sep18/WorkingDirectory/N0.ids.tsv",
+          "sha256": "2fb40719139fff906a31b233243723df5c9bc591a42057a366f5909fa404da83"
+        },
+        {
+          "bytes": 10985744,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_primary_v1/orthofinder_full/input/OrthoFinder/Results_Sep18/WorkingDirectory/clusters_OrthoFinder_I1.2.txt_id_pairs.txt",
+          "sha256": "9849855c9841f11f28c335f8e87a80604ee3fd183ad37d9e1c1a426ed18b5de1"
+        },
+        {
+          "bytes": 25803446,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_primary_v1/orthofinder_full/input/OrthoFinder/Results_Sep18/Orthogroups/Orthogroups.txt",
+          "sha256": "95a006e13f0a7fc7e7ae940393644e9ccc91d8c87337ca66049fff2ca912e8e8"
+        }
+      ],
+      "common_groups": 174977,
+      "genes": 984137,
+      "genes_in_changed_groups": 40996,
+      "identifiers_restored": 0,
+      "latest_root_hog_only_groups": 809,
+      "latest_root_hog_padded_groups": 175786,
+      "latest_root_hog_rows": 44661,
+      "latest_root_hog_singleton_padding": 131125,
+      "latest_root_hogs_refine_official_partition": true,
+      "mcl_groups": 167209,
+      "official_differs_from_mcl": true,
+      "official_equals_latest_root_hog_partition": false,
+      "official_groups": 175229,
+      "official_only_groups": 252,
+      "species": 78
+    },
+    "ThreeKingdoms": {
+      "checked": [
+        {
+          "bytes": 101224874,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/run/input/OrthoFinder/Results_Sep07/WorkingDirectory/SequenceIDs.txt",
+          "sha256": "68bdfa17d6557e858a2f08193a2887cb76cbe889e31ad3af2d7f7efc0a8986c7"
+        },
+        {
+          "bytes": 170,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/run/input/OrthoFinder/Results_Sep07/WorkingDirectory/SpeciesIDs.txt",
+          "sha256": "81765e4be811e731c6bba3976beda392378d70a3939af5b8b513ef00b8dd7561"
+        },
+        {
+          "bytes": 4735238,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/run/input/OrthoFinder/Results_Sep07/WorkingDirectory/N0.ids.tsv",
+          "sha256": "c2b613a793ec99aca0bcd02718bfe74030c27e8be5abf2af9b951313d07dd75c"
+        },
+        {
+          "bytes": 4699492,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/run/input/OrthoFinder/Results_Sep07/WorkingDirectory/clusters_OrthoFinder_I1.2.txt_id_pairs.txt",
+          "sha256": "f1c53e71b9e9a68bf4fe369cb7e8ab3472f43bddc401287d2a799a66f0e3e29b"
+        },
+        {
+          "bytes": 8587216,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/run/input/OrthoFinder/Results_Sep07/Orthogroups/Orthogroups.txt",
+          "sha256": "4f0d1d8a43a1e8bf1d1c987587e58eddde690838a0769b8350346b3826fb55a7"
+        }
+      ],
+      "common_groups": 67099,
+      "genes": 443217,
+      "genes_in_changed_groups": 2210,
+      "identifiers_restored": 5146,
+      "latest_root_hog_only_groups": 75,
+      "latest_root_hog_padded_groups": 67174,
+      "latest_root_hog_rows": 30966,
+      "latest_root_hog_singleton_padding": 36208,
+      "latest_root_hogs_refine_official_partition": true,
+      "mcl_groups": 65602,
+      "official_differs_from_mcl": true,
+      "official_equals_latest_root_hog_partition": false,
+      "official_groups": 67131,
+      "official_only_groups": 32,
+      "species": 12
+    }
+  },
+  "scope": "Read-only native partition contrasts. Installed version-specific source and historical run provenance must be checked separately; matching filenames or this partition relation alone do not prove historical execution. No new inference, score selection, current-N0 substitution or changes to retained benchmark scores.",
+  "status": "orthofinder_group_stage_memberships_checked"
+}
