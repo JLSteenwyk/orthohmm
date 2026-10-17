@@ -1,0 +1,60 @@
+  Continue hill-climbing OrthoHMM’s HMM-based orthology inference to improve accuracy, robustness, and computational efficiency relative to OrthoFinder 3.1.5,
+  including its full phylogenetic pipeline. Prioritize OrthoBench and corrected QfO; use Three Kingdoms as supplementary evidence. Seek improvements across
+  the metric vector without sacrificing precision for recall indiscriminately or requiring unsupported claims of universal superiority.
+ 
+  1. Continue From Existing Work
+     Inspect benchmark_tools/hillclimb_round1_20261012.json, the membership hill-climb runner, retained results, and Slurm array 24180. Finish or recover
+     outstanding QfO and Three Kingdoms evaluations before submitting duplicate experiments. Preserve all completed, failed, and unavailable configurations.
+ 
+     OrthoBench currently favors broader candidates with existing satellite retention. Path-based retention lowered F1 relative to its matched control on both
+     candidate sets. Treat these as development findings, not grounds for changing defaults.
+ 
+  2. Prioritize Diagnosed Failure Modes
+     Start the next experiments with fresh initial-HMM candidate recovery. Determine whether missing homologous links arise from prefilter sensitivity,
+     candidate caps, ranking, significance thresholds, or downstream filtering. Cached graph replays cannot establish these causes.
+ 
+     Then investigate broader candidate families followed by duplication-aware phylogenetic splitting, evidence-aware satellite retention, and coordinated
+     tuning of search, clustering, and profile expansion. Preserve species-overlap and duplication evidence. Do not merge families merely to increase recall.
+     Pursue more expensive tree or profile-comparison changes only when diagnostics justify them.
+ 
+  3. Run Bounded, Hypothesis-Driven Rounds
+     Before evaluating each round, commit a short experimental plan specifying hypotheses, parameter ranges, controls, metrics, resource limits, and selection
+     criteria. Reuse existing valid results and change one mechanism at a time before testing interactions.
+ 
+     Keep experimental behavior opt-in. Preserve the published baseline, frozen comparison results, and immutable source revisions for each experiment.
+     Promote defaults only after reproducible, broadly supported improvement.
+ 
+  4. Evaluate Every Relevant Endpoint
+     Report OrthoBench F1; QfO VGNC, SwissTrees, and TreeFam-A F1; QfO GO, EC, and FAS similarity; and Three Kingdoms BUSCO-pair F1 separately. Include
+     precision, recall, coverage, predicted-pair counts, failures, wall time, CPU use, and peak memory.
+ 
+     Compare candidates with the current OrthoHMM baseline, OrthoFinder’s full pipeline, its sequence-only diagnostic, and the other benchmarked tools using
+     identical inputs and scoring conventions. Validate native outputs and reproduce controls before interpreting differences.
+ 
+     Select using per-metric changes and Pareto tradeoffs, not the QfO six-metric mean alone. Functional similarity is not proof of orthology accuracy. The
+     existing 0.005 decline tolerance is a development screening rule, not statistical equivalence.
+ 
+  5. Protect Scientific Validity
+     Treat all previously examined datasets as development-exposed. Internal holdouts can guide tuning but must not be called independent validation. Seek
+     genuinely unexposed confirmation data where feasible and audit overlap.
+ 
+     Use TreeFam as supporting evidence; missing original family archives are nonblocking limitations. Retain conventional VGNC and GO/EC reporting without
+     inventing unsupported uncertainty estimates. Account for FAS sampling variability before attributing small changes to the method.
+ 
+  6. Use the Local Threadripper
+     Continue locally without requiring the DGX or a quiet window. Use bounded, resource-aware allocations and leave unrelated workloads untouched. Record
+     competing activity and disclose shared-host timing confounding. Distinguish cached incremental replay timings from fresh full-pipeline timings; do not
+     claim isolated speed advantages from confounded measurements.
+ 
+  7. Test, Commit, and Push Throughout
+     Add focused regression tests for changed behavior, deterministic output, checkpoint validity, gene-universe preservation, CLI compatibility, and edge
+     cases. Commit and push experimental plans, tested code, and validated result summaries at meaningful milestones. Stage only task-owned changes and
+     preserve unrelated work.
+ 
+  8. Deliver an Honest Conclusion
+     Maintain a reproducible experiment ledger and per-metric comparison tables, including unsuccessful trials. Explain which changes improve performance,
+     their tradeoffs, and whether any justify promotion. If bounded rounds plateau, document that outcome and the next evidence-driven experiments rather than
+     declaring success without support.
+ 
+  Continue useful work despite documented scientific limitations. Report genuine execution blockers clearly, but do not let missing historical files, shared-
+  host timing, or inconclusive improvements repeatedly halt the optimization program.
