@@ -5,10 +5,8 @@ import csv
 import hashlib
 import json
 from pathlib import Path
-import shutil
 import subprocess
 import sys
-import xml.etree.ElementTree as ET
 
 
 def record(path):
@@ -43,6 +41,11 @@ def jobs_in(value, found):
     elif isinstance(value, list):
         for child in value:
             jobs_in(child, found)
+    elif isinstance(value, str) and "|" in value:
+        states = {"COMPLETED", "FAILED", "CANCELLED", "TIMEOUT", "RUNNING", "PENDING", "OUT_OF_MEMORY"}
+        for row in csv.reader(value.splitlines(), delimiter="|"):
+            if len(row) >= 3 and row[0].isdigit() and 24180 <= int(row[0]) <= 24388 and row[1] in states:
+                found.add(row[0])
 
 
 def main(root, output):
