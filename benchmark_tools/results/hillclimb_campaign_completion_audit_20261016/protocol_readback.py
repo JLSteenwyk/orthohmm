@@ -47,8 +47,7 @@ def blob_id(path):
     return hashlib.sha1(b"blob " + str(len(content)).encode() + b"\0" + content).hexdigest()
 
 
-def main(root):
-    destination = root / "protocol_readback.json"
+def main(root, destination):
     if destination.exists():
         raise FileExistsError("Preserve prior protocol audits")
     specification = root / "protocol_specification.json"
@@ -138,10 +137,18 @@ def main(root):
             require_pin(plan_pin)
             checked[plan_pin["path"]] = plan_pin
             plan = json.loads(Path(plan_pin["path"]).read_text())
-            revision, source_root = plan["source_revision"], Path(plan["source_root"])
-            source_trees.setdefault(revision, tree(revision))
+            split_manifest = "source_revision" not in plan
+            if split_manifest:
+                revision, source_root = plan["driver_revision"], Path(plan["driver_root"])
+                sources = plan["driver_sources"]
+                assert any(p["revision"] == plan["scientific_revision"]
+                    and p["source_root"] == plan["scientific_source"] for p in execution_plans.values())
+            else:
+                revision, source_root, sources = plan["source_revision"], Path(plan["source_root"]), plan["sources"]
+            if revision not in source_trees:
+                source_trees[revision] = tree(revision)
             code_count = native_count = 0
-            for source in plan["sources"]:
+            for source in sources:
                 if source["path"] not in source_checks:
                     require_pin(source)
                     source_checks[source["path"]] = source
@@ -160,9 +167,24 @@ def main(root):
                 elif path.name in NATIVE:
                     assert source["sha256"] == NATIVE[path.name]
                     native_count += 1
+            frozen_evidence_count = 0
+            if split_manifest:
+                for pair in plan["frozen_reporting_evidence"]:
+                    source = pair["frozen"]
+                    require_pin(source)
+                    source_checks[source["path"]] = source
+                    assert source["bytes"] == pair["original"]["bytes"]
+                    assert source["sha256"] == pair["original"]["sha256"]
+                    original = Path(pair["original"]["path"]).relative_to(Path.cwd()).as_posix()
+                    assert blob_id(source["path"]) == source_trees[revision][original]
+                    frozen_code_checks.add((revision, original, source["sha256"]))
+                    frozen_evidence_count += 1
             execution_plans[plan_pin["path"]] = dict(source=plan_pin, revision=revision, source_root=str(source_root),
-                checked_source_records=len(plan["sources"]), git_verified_code_records=code_count,
-                original_native_libraries_verified=native_count)
+                checked_source_records=len(sources), git_verified_code_records=code_count,
+                original_native_libraries_verified=native_count, split_driver_and_scientific_manifest=split_manifest,
+                scientific_revision=plan.get("scientific_revision", revision),
+                scientific_source=plan.get("scientific_source", str(source_root)),
+                frozen_reporting_evidence_verified=frozen_evidence_count)
     pilot = methods["protected_union:protected_union"]["cells"][0]
     baseline = next(c for c in methods["canonical_collection:canonical"]["cells"] if c["dataset"] == "OrthoBench")
     strict_gate = (pilot["scores"]["OrthoBench: OrthoBench F1"] > baseline["scores"]["OrthoBench: OrthoBench F1"]
@@ -181,6 +203,9 @@ def main(root):
             "Producer status strings retain historical snapshots, including running; they are not current scheduler liveness claims. Actual cell admission and retained terminal accounting take precedence.",
             "This is a source/selection audit, not new raw scoring. Full per-gate execution evidence and every supporting diagnostic plan still require the final requirement audit.",
             "Initial audit-specification lookup guessed the QfO native recovery driver as 402d3232; it lacked that later plan. The pinned actual execution manifest identifies 6b64c6fa, used here without changing any historical source."],
+        failure_lineage={"job": "24385 FAILED 1:0", "recipe_revision": "211b20c5",
+            "log": pin("benchmarks/results/hillclimb_protocol_audit_20261016-24385.out"),
+            "reason": "Reader expected a combined source manifest; singleton follow-up deliberately separates frozen driver and scientific source. Failure preceded all result writing; v2 verifies the split sources and original evidence blobs explicitly."},
         remaining=["Complete supporting-diagnostic and per-gate execution-evidence review against the original eight requirements.",
                    "Issue final separate-endpoint default recommendation and next justified experiments, then perform completion audit."],
         scientific_inference_rerun=False, defaults_promoted=False, goal_completed=False)
@@ -192,4 +217,4 @@ def main(root):
 
 
 if __name__ == "__main__":
-    main(Path(sys.argv[1]))
+    main(Path(sys.argv[1]), Path(sys.argv[2]))
