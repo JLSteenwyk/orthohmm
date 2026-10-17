@@ -117,6 +117,20 @@ def main(root, destination):
         fingerprints[key] = hashlib.sha256(value).hexdigest()
         assert fingerprints[key] == samples[key]
     assert subprocess.check_output(["git", "diff", "de89fd84..HEAD", "--", "orthohmm"]) == b""
+    primary_xml = repo / "benchmarks/results/hillclimb_campaign_regression_v2_20261016/regression.xml"
+    suites = list(ET.parse(primary_xml).getroot().iter("testsuite"))
+    primary_counts = {key: sum(int(s.attrib.get(key, 0)) for s in suites)
+                      for key in ("tests", "failures", "errors", "skipped")}
+    assert primary_counts == dict(tests=2349, failures=0, errors=0, skipped=0)
+    modules = {path[:-3].replace("/", ".") for path in regression["selected_paths"]}
+    executed = collections.Counter()
+    for case in ET.parse(primary_xml).getroot().iter("testcase"):
+        matches = [module for module in modules if case.attrib["classname"] == module
+                   or case.attrib["classname"].startswith(module + ".")]
+        assert len(matches) == 1, case.attrib
+        if case.find("skipped") is None:
+            executed[matches[0]] += 1
+    assert len(executed) == 99 and set(executed) == modules and all(executed.values())
     current, dispositions, unresolved, xml = {}, [], [], []
     by_digest = collections.defaultdict(list)
     for pin in pins.values():
@@ -151,16 +165,6 @@ def main(root, destination):
             dispositions.append({"source": item, "verification": "retained_exact_archive_binding", "archive": archive})
         else:
             unresolved.append({"expected": item, "actual": actual})
-    primary_xml = repo / "benchmarks/results/hillclimb_campaign_regression_v2_20261016/regression.xml"
-    suites = list(ET.parse(primary_xml).getroot().iter("testsuite"))
-    primary_counts = {key: sum(int(s.attrib.get(key, 0)) for s in suites)
-                      for key in ("tests", "failures", "errors", "skipped")}
-    assert primary_counts == dict(tests=2349, failures=0, errors=0, skipped=0)
-    executed = collections.Counter()
-    for case in ET.parse(primary_xml).getroot().iter("testcase"):
-        if case.find("skipped") is None:
-            executed[case.attrib["classname"]] += 1
-    assert len(executed) == 99 and all(executed.values())
     for pin, _ in documents.values():
         assert record(pin["path"]) == pin
     assert record(regression_path) == regression_pin
@@ -170,6 +174,9 @@ def main(root, destination):
         artifact_dispositions=dispositions, unresolved=unresolved, parsed_test_reports=xml,
         primary_regression={"source": record(primary_xml), "counts": primary_counts, "executed_modules": len(executed)},
         primary_worktree_preserved={"selection": regression_pin, "sample_files": len(original_files), "fingerprints": fingerprints},
+        failed_attempt={"job": "24387 FAILED 1:0", "recipe_revision": "8c84427b",
+            "log": record("benchmarks/results/hillclimb_supporting_audit_20261016-24387.out"),
+            "reason": "Reader counted 107 JUnit classes as modules; all cases map uniquely to the exact 99 selected modules. Original XML still has 2349 passes and zero failures/errors/skips. Corrected module preflight now precedes artifact hashing; original failed result namespace has no output."},
         actual_files_hashed=len(current), actual_bytes_hashed=sum(p["bytes"] for p in current.values() if p),
         limitations=["Supporting receipt gates, direct artifact identities and historical source/archive bindings are explicit; Git bindings do not retroactively prove historical execution or current-file equality.",
             "The already audited 24 retained comparator cells and 480 registered identities are inherited rather than rehashing unrelated OrthoMCL BPO files through retained_details. Their historical input-consumption limits remain explicit.",
