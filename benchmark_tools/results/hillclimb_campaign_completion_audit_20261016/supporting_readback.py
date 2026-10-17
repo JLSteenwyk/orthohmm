@@ -31,6 +31,13 @@ def follow(value, path):
     return value
 
 
+def selected_module(classname, modules):
+    matches = [module for module in modules if classname == module or classname.startswith(module + ".")]
+    if len(matches) != 1:
+        raise ValueError("JUnit case must belong to exactly one selected test module: " + classname)
+    return matches[0]
+
+
 def collect(value, found):
     if isinstance(value, dict):
         if ({"path", "bytes", "sha256"} <= value.keys() and isinstance(value["path"], str)
@@ -125,12 +132,15 @@ def main(root, destination):
     modules = {path[:-3].replace("/", ".") for path in regression["selected_paths"]}
     executed = collections.Counter()
     for case in ET.parse(primary_xml).getroot().iter("testcase"):
-        matches = [module for module in modules if case.attrib["classname"] == module
-                   or case.attrib["classname"].startswith(module + ".")]
-        assert len(matches) == 1, case.attrib
+        module = selected_module(case.attrib["classname"], modules)
         if case.find("skipped") is None:
-            executed[matches[0]] += 1
+            executed[module] += 1
     assert len(executed) == 99 and set(executed) == modules and all(executed.values())
+    reader_xml = repo / "benchmarks/results/hillclimb_supporting_reader_tests_20261016.xml"
+    reader_suites = list(ET.parse(reader_xml).getroot().iter("testsuite"))
+    reader_counts = {key: sum(int(s.attrib.get(key, 0)) for s in reader_suites)
+                     for key in ("tests", "failures", "errors", "skipped")}
+    assert reader_counts == dict(tests=78, failures=0, errors=0, skipped=0)
     current, dispositions, unresolved, xml = {}, [], [], []
     by_digest = collections.defaultdict(list)
     for pin in pins.values():
@@ -173,6 +183,8 @@ def main(root, destination):
         protocol_count=67, group_count=len(groups), unique_receipts=len(documents),
         artifact_dispositions=dispositions, unresolved=unresolved, parsed_test_reports=xml,
         primary_regression={"source": record(primary_xml), "counts": primary_counts, "executed_modules": len(executed)},
+        reader_tests={"source": record(reader_xml), "counts": reader_counts,
+            "new_regression_test": record(repo / "tests/unit/test_supporting_campaign_readback.py")},
         primary_worktree_preserved={"selection": regression_pin, "sample_files": len(original_files), "fingerprints": fingerprints},
         failed_attempt={"job": "24387 FAILED 1:0", "recipe_revision": "8c84427b",
             "log": record("benchmarks/results/hillclimb_supporting_audit_20261016-24387.out"),
