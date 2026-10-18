@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "active_qfo_weighting_running_hmmer_queued_local_complete_readback_native_runner_tested",
+  "status": "active_qfo_weighting_running_hmmer24493_and_local_final24495_queued",
   "objective": "/home/bizon/.codex/attachments/be402858-3414-45ba-9a1b-323a1b394ab1/pasted-text-1.txt",
   "protocol": "benchmark_tools/hmm_evidence_campaign_20261018.json",
   "protocol_commit": "d2ccfd44",
@@ -83,7 +83,7 @@
     "fresh_joint_context": "After profile acceptance, runs fresh MAFFT/FastTree LG through the existing native reconciler against the baseline's own species tree, with unchanged baseline policies. Applies intact original-family membership constraints before the admission gate. Retains command vectors, token mapping, profile/joint decisions, native tree/checkpoint artifacts and terminal failure receipts; cannot overwrite a prior context or reuse a provisional raw tree. Caller must authenticate the baseline tree and runtime tools in the pending driver.",
     "candidate_writer": "Only completed, accepted disjoint whole-family proposals can alter the effective candidate partition. Validates complete original ownership and every original constraint before writing. Rejected/no proposals preserve the original bytes, including whitespace and CRLF. Does not write final OGs or pairs; authenticated proposal readback and the final ordinary native pipeline remain mandatory.",
     "profile_workflow_tests": {"path": "benchmark_tools/results/local_rescue_profile_workflow_tests_20261018.xml", "result": "173 selected tests passed, zero failures/errors/skips across six modules, including34 new profile/workflow cases and45 existing local nomination/admission cases. Tests overlap earlier suites and must not be added as independent coverage.", "coverage": "Actual reciprocal profile construction and original CPU scoring; full-database significance; raw-score/span equality; target/source separation; global/member-order invariance; informative versus unknown-only sources; asymmetric fragments; significant partial-shared-region rejection; two-gene/one-species abstention; scalar fallback and missing-library failure; malformed ownership/layout/config rejection; failed profile/tree receipts; exact rejected candidate bytes; accepted whole contexts and intact constraints; fresh actual MAFFT/FastTree joint inference; authenticated cache remap, sequence-change invalidation and raw-tree tamper rejection.", "final_native_fixture": "Actual four-species16-gene fixture first infers its own control species tree, validates a split family via reciprocal profiles and a fresh joint gene tree, admits one context and passes the effective candidate partition through ordinary final inferred-species-tree/reconciliation output writers. Final stage reuses the compatible joint raw tree but freshly infers its species tree; unique complete gene ownership and every exported pair's species/root/effective-candidate ownership are checked. This is synthetic integration evidence, not biological accuracy or generalizability."},
-    "remaining": "Probe24489 completed all128 contexts with91 trees and6 producer admissions. Complete independent readback/composite/final-native runner now passes524 selected tests; see local_joint_complete_runner_milestone_20261018.json. Freeze/prepare/queue its full OrthoBench run, then independently admit actual accuracy/uncertainty before extension or defaults. Failed24483 preserved; do not repeat original probe or retune.",
+    "remaining": "Probe24489 completed128 contexts with91 trees/6 producer admissions. Complete independent readback/composite/final-native runner passes524 selected tests, frozen84b5a847 plan prepared24494 and queued24495; see local_joint_final_pilot. Monitor without duplication, then separately admit actual accuracy/uncertainty before extension/defaults. Failed24483 preserved; do not repeat probe or retune.",
     "biological_accuracy_evaluated": false
   },
   "local_rescue_applicability_driver": {
@@ -197,6 +197,22 @@
     "defaults_promoted": false,
     "goal_completed": false
   },
+  "local_joint_final_pilot": {
+    "runner_commit": "84b5a8470ebd6f6426a345457b47d93200854eba",
+    "runner_push": "git push origin main succeeded; git ls-remote verified origin/main equals84b5a847 before frozen preparation/submission",
+    "scientific_source": "benchmarks/work/local_joint_final_pilot_v1_20261018",
+    "original_scientific_revision": "8c4ddfb7bb7dbff7f56fabed91788df725f33367",
+    "original_launch_binding": {"revision": "a80e10d45b3914d418e89ad810411ef4baaedd65", "path": "benchmark_tools/results/hmm_evidence_campaign_status_20261018.json", "git_blob_sha256": "8358d91a5aa5b2cb859bf9b949167bdfc99a209bf19fd0f3022acd80d1f2d1ca"},
+    "execution_plan": {"path": "benchmarks/results/local_joint_final_pilot_v1_20261018/execution_plan.json", "bytes": 18355309, "sha256": "8c666a1e824e27c15dba570ef07360381df152188ec8e244cd5fcf16d2060ac2", "input_records": 54664, "source_records": 1222},
+    "preparation": {"job_id": "24494", "state": "COMPLETED", "exit_code": "0:0", "elapsed": "00:00:29", "cpus": 1, "memory_allocation": "16G", "log": "benchmarks/results/local_joint_final_prepare_v1_20261018-24494.out", "scope": "Original terminal probe, complete canonical case, used scientific-code compatibility and all source/input/cache/runtime fingerprints checked; no biological nomination/profile/tree/native evaluation rerun during preparation"},
+    "inference": {"job_id": "24495", "last_observed_state": "PENDING", "dependency": "afterany:24493,afterok:24494", "cpus": 16, "memory_allocation": "128G", "wall_limit": "1-00:00:00", "log": "benchmarks/results/local_joint_final_pilot_v1_20261018-24495.out", "results": "benchmarks/results/local_joint_final_pilot_v1_20261018/results.json"},
+    "arms": ["off", "local_joint_v1"],
+    "scope": "Full original OrthoBench nomination/profile/proposal readback, authenticated composite-cache rebuilding and exact-control ordinary inferred-native pilot. Six original admissions remain provisional until this run and separate post-run accuracy admission succeed. No HMMER or weighting combination, no initial-search rerun or isolated timing claim.",
+    "remaining": "Monitor24495 without duplication. Separately verify actual full-panel readback/native output/OG scores and uncertainty, update comparison and apply original point gate. Run unchanged QfO/Three Kingdoms extension only for an independently admitted pass; retain failures/negative outcomes and NA endpoints.",
+    "accuracy_result_admitted": false,
+    "defaults_promoted": false,
+    "goal_completed": false
+  },
   "synthetic_diagnostic": {
     "producer": {"path": "benchmarks/results/hmm_evidence_weighting_synthetic_v2_20261018/summary.json", "bytes": 190610, "sha256": "29a138b11aa445d4f59191916cce4c3d954717c44e4d70daeae4fa0508407c88"},
     "readback": {"path": "benchmark_tools/results/hmm_evidence_weighting_synthetic_readback_20261018.json", "bytes": 27483, "sha256": "463925f484b48e5033003af47b67547a29a03efeb1d1527ccb78bdcc577af343"},
@@ -227,9 +243,9 @@
   "readback_tests": {"path": "benchmark_tools/results/hmm_evidence_weighting_readback_tests_20261018.xml", "result": "73 focused tests passed, including independent raw recount and tamper/ownership guards; this overlaps the222-test implementation suite and must not be summed as independent coverage."},
   "resources": "Use local shared bizon Threadripper, one new scientific job at a time; no DGX or quiet-window prerequisite. Other jobs untouched. Timing descriptive only.",
   "remaining": [
-    "Monitor running QfO24490, queued Three Kingdoms24491 and queued HMMER24493 without duplicates. Local24489 completed with6 provisional admissions requiring independent readback and final-native accuracy evaluation. Finish HMMER immutable-launch readback/uncertainty and any required applicability fallback. Alignment fixed branch stopped; failed localv1 preserved. Small weighting gains and intervals spanning zero are not a full-vector result.",
+    "Monitor running QfO24490, queued Three Kingdoms24491, HMMER24493 and local readback/final-native24495 without duplicates. Local24489's6 admissions remain provisional until24495 and separate post-run accuracy admission. Finish HMMER immutable-launch readback/uncertainty and any required applicability fallback. Alignment fixed branch stopped; failed localv1 preserved. Small weighting gains and intervals spanning zero are not a full-vector result.",
     "Extend only advancing arms to corrected QfO and Three Kingdoms; retain all eight endpoint slots and denominator/resource diagnostics, including explicit NA for stopped branches.",
-    "Local complete proposal/composite/final-native runner now passes524 selected tests: freeze/prepare/queue and verify full biological execution, independent accuracy/uncertainty and original point gate. Selective HMMER24493 is queued; finish post-run admission and any required applicability fallback. Both methods remain required regardless of earlier results.",
+    "Local complete proposal/composite/final-native runner passes524 selected tests and24495 is queued: verify full biological execution, separate accuracy/uncertainty admission and original point gate. Selective HMMER24493 is queued; finish post-run admission and any required applicability fallback. Both methods remain required regardless of earlier results.",
     "Evaluate justified combinations, seek post-freeze confirmation if available, update the full comparator table and final recommendation, and verify all intended milestones committed/pushed."
   ],
   "defaults_promoted": false,
