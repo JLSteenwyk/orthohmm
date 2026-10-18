@@ -1,4 +1,8 @@
-"""Run the prespecified complete-proteome OrthoBench profile-weighting pilots."""
+"""Run prespecified complete-proteome OrthoBench profile-evidence pilots.
+
+The historical weighting interface remains the default; alignment selects
+the separately prespecified off/strict-span-guard experiment.
+"""
 
 from __future__ import annotations
 
@@ -41,6 +45,14 @@ ARMS = ("none", "henikoff", "henikoff_cluster", "species_henikoff_cluster")
 PROTOCOL = "hmm_evidence_campaign_20261018.json"
 RETAINED = "benchmarks/results/canonical_downstream_r1_v1_20261014/results.json"
 UNIVERSE = (251378, 12)
+
+
+def experiment_settings(experiment):
+    if experiment == "weighting":
+        return ARMS, PROTOCOL
+    if experiment == "alignment":
+        return ("off", "strict_span_guard"), "hmm_aligned_profile_guard_20261018.json"
+    raise ValueError("Unknown profile-evidence experiment")
 
 
 def advancement(control, candidate):
@@ -89,14 +101,17 @@ def selected_baseline(repo):
     return baseline
 
 
-def prepare(repo, source, output):
+def prepare(repo, source, output, experiment="weighting"):
     if output.exists() or source == repo:
         raise ValueError("Require fresh output and a frozen scientific checkout")
     revision = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=source, text=True).strip()
-    protocol = source / "benchmark_tools" / PROTOCOL
+    arms, protocol_name = experiment_settings(experiment)
+    protocol = source / "benchmark_tools" / protocol_name
     spec = json.loads(protocol.read_text())
-    if tuple(arm["label"] for arm in spec["first_experiment"]["arms"]) != ARMS:
-        raise ValueError("Unexpected prespecified weighting arms")
+    declared = (tuple(arm["label"] for arm in spec["first_experiment"]["arms"])
+                if experiment == "weighting" else tuple(spec["arms"]))
+    if declared != arms:
+        raise ValueError("Unexpected prespecified profile-evidence arms")
     case = selected_baseline(repo)
     if len(case["fastas"]) != 12:
         raise ValueError("Require all12 OrthoBench proteomes")
@@ -124,7 +139,8 @@ def prepare(repo, source, output):
     for pin in (*inputs, *source_pins, *scientific_runtime["files"]):
         check(pin)
     plan = {"status": "prepared_unrun", "source_root": str(source), "source_revision": revision,
-            "repo": str(repo), "output": str(output), "cpu": 16, "arms": list(ARMS),
+            "repo": str(repo), "output": str(output), "cpu": 16, "arms": list(arms),
+            "experiment": experiment,
             "case": case, "inputs": inputs, "sources": source_pins, "runtime": scientific_runtime,
             "profile_runtime": require_profile_runtime(source), "tool_path": os.environ["PATH"],
             "scope": "Complete-proteome downstream HMM/profile inference from immutable canonical initial-search hits, with content-compatible tree-cache reuse. Shared-host incremental timing, not a fresh-search or isolated full-pipeline speed comparison.",
@@ -135,18 +151,72 @@ def prepare(repo, source, output):
 
 
 def arm_commands(source, plan, folder, mode):
-    if mode not in ARMS:
+    experiment = plan.get("experiment", "weighting")
+    arms, _ = experiment_settings(experiment)
+    if mode not in arms:
         raise ValueError("Unexpected weighting arm")
     case = plan["case"]
     graph, native = commands(source, plan, case, folder, Path(case["checkpoint"]), case["checkpoint_manifest"]["sha256"])
-    if mode != "none":
-        graph.extend(["--profile-sequence-weighting", mode])
+    if mode != arms[0]:
+        flag = "--profile-sequence-weighting" if experiment == "weighting" else "--profile-alignment-policy"
+        graph.extend([flag, mode])
     return graph, native
 
 
-def validate_activation(graph, mode):
+def validate_alignment_evidence(iteration, strict_edges):
+    evidence, sources = iteration.get("alignment_evidence", []), iteration.get("alignment_profiles", [])
+    if not evidence or not sources:
+        raise ValueError("Complete-proteome guard requires nonempty actual alignment evidence")
+    by_profile = {row["cluster_id"]: row["member_ids"] for row in sources}
+    if len(by_profile) != len(sources) or any(not 3 <= len(members) <= 200 for members in by_profile.values()):
+        raise ValueError("Missing/duplicate source-profile member evidence")
+    seen, edges, rejected = set(), {}, 0
+    for row in evidence:
+        gene, anchor, profile = row["gene_id"], row["anchor_gene_id"], row["profile_cluster_id"]
+        if gene in seen or gene == anchor or profile not in by_profile or row["anchor_name"] not in by_profile[profile]:
+            raise ValueError("Alignment evidence does not describe unique selected source anchors")
+        seen.add(gene)
+        m, t, matched = row["model_length"], row["target_length"], row["matched_known_residues"]
+        if (not all(type(row[field]) is int for field in (
+                "gene_id", "anchor_gene_id", "profile_cluster_id", "model_length", "target_length",
+                "score", "model_start", "model_end", "target_start", "target_end", "matched_known_residues"))
+                or gene < 0 or anchor < 0 or m <= 0 or t <= 0 or row["score"] <= 0
+                or not 0 <= row["model_start"] < row["model_end"] <= m
+                or not 0 <= row["target_start"] < row["target_end"] <= t
+                or not 0 <= matched <= min(row["model_end"] - row["model_start"], row["target_end"] - row["target_start"])
+                or not math.isfinite(row["anchor_score"]) or row["anchor_score"] <= 0):
+            raise ValueError("Invalid alignment evidence coordinates, counts or scores")
+        model_covered, target_covered = 5 * matched >= 4 * m, 5 * matched >= 4 * t
+        keep = model_covered or target_covered
+        category = ("both_sides_covered" if model_covered and target_covered else
+                    "asymmetric_coverage" if keep else "partial_shared_region")
+        expected = {"aligned_model_coverage": matched / m, "aligned_target_coverage": matched / t,
+                    "bounding_model_coverage": (row["model_end"] - row["model_start"]) / m,
+                    "bounding_target_coverage": (row["target_end"] - row["target_start"]) / t}
+        if (type(row["passes_guard"]) is not bool or row["passes_guard"] != keep
+                or row["category"] != category or row["coordinate_system"] != "zero_based_half_open"
+                or any(row[key] != value for key, value in expected.items())):
+            raise ValueError("Alignment classification or coverage does not reproduce from counts")
+        if keep:
+            key = min(gene, anchor), max(gene, anchor)
+            edges[key] = max(edges.get(key, -math.inf), row["anchor_score"])
+        else:
+            rejected += 1
+    if len(edges) != strict_edges or set(by_profile) != {row["profile_cluster_id"] for row in evidence}:
+        raise ValueError("Guarded unique-edge/source-profile counts disagree with evidence")
+    return {"alignment_traced": len(evidence), "alignment_rejected": rejected,
+            "alignment_retained": len(evidence) - rejected}
+
+
+def validate_activation(graph, mode, experiment="weighting"):
+    arms, _ = experiment_settings(experiment)
+    if mode not in arms:
+        raise ValueError("Unknown profile-evidence arm")
     parameters, counts = graph["parameters"], graph["counts"]
-    if (parameters.get("profile_sequence_weighting") != mode
+    expected_weighting = mode if experiment == "weighting" else "none"
+    expected_alignment = mode if experiment == "alignment" else "off"
+    if (parameters.get("profile_sequence_weighting") != expected_weighting
+            or parameters.get("profile_alignment_policy", "off") != expected_alignment
             or parameters.get("profile_iterations") != 1
             or parameters.get("profile_expansion") is not True
             or parameters.get("matrix") != "BLOSUM62"
@@ -162,7 +232,7 @@ def validate_activation(graph, mode):
     if len(iterations) != 1 or iterations[0]["profiles_built"] != counts["profiles_built"]:
         raise ValueError("Missing profile iteration evidence")
     effective = iterations[0]["profile_effective_counts"]
-    if mode == "none":
+    if expected_weighting == "none":
         if effective:
             raise ValueError("Unweighted control unexpectedly records weighted profiles")
     elif (len(effective) != counts["profiles_built"]
@@ -170,8 +240,13 @@ def validate_activation(graph, mode):
           or any(not math.isfinite(item["effective_sequence_count"])
                  or not 0 < item["effective_sequence_count"] <= 200 + 1e-8 for item in effective)):
         raise ValueError("Invalid per-profile weighting activation/effective counts")
-    return {"mode": mode, "profiles_built": counts["profiles_built"],
-            "weighted_profiles": len(effective), "strict_profile_edges": counts["strict_profile_edges"]}
+    result = {"mode": mode, "profiles_built": counts["profiles_built"],
+              "weighted_profiles": len(effective), "strict_profile_edges": counts["strict_profile_edges"]}
+    if expected_alignment == "strict_span_guard":
+        result.update(validate_alignment_evidence(iterations[0], counts["strict_profile_edges"]))
+    elif iterations[0].get("alignment_evidence") or iterations[0].get("alignment_profiles"):
+        raise ValueError("Off control unexpectedly has alignment intervention evidence")
+    return result
 
 
 def normalized(row):
@@ -184,7 +259,9 @@ def run(plan_path):
     source, repo, output = (Path(plan[key]) for key in ("source_root", "repo", "output"))
     if Path(__file__).resolve() != source / "benchmark_tools/run_profile_weighting_pilot.py":
         raise ValueError("Execute frozen pilot source")
-    if tuple(plan["arms"]) != ARMS or plan["cpu"] != 16 or (output / "results.json").exists():
+    experiment = plan.get("experiment", "weighting")
+    arms, _ = experiment_settings(experiment)
+    if tuple(plan["arms"]) != arms or plan["cpu"] != 16 or (output / "results.json").exists():
         raise ValueError("Unexpected arm/budget or existing attempt; preserve previous runs")
     checked = [record(plan_path), *plan["inputs"], *plan["sources"], *plan["runtime"]["files"]]
     for pin in checked:
@@ -209,14 +286,15 @@ def run(plan_path):
            "MKL_NUM_THREADS": "1", "NUMBA_NUM_THREADS": "16"}
     report = {"status": "running", "execution_plan": record(plan_path), "job_id": os.environ.get("SLURM_JOB_ID"),
               "source_revision": plan["source_revision"], "arms": [], "scope": plan["scope"],
+              "experiment": experiment,
               "checkpoint_audit": checkpoint_audit, "ownership": ownership,
               "host_before": host_activity(), "defaults_promoted": False, "goal_completed": False}
     write_json(output / "results.json", report)
     control = None
-    for mode in ARMS:
+    for mode in arms:
         row = {"dataset": "OrthoBench", "label": mode, "status": "running", "scores": {}}
         report["arms"].append(row)
-        if mode != "none" and control is None:
+        if mode != arms[0] and control is None:
             row["status"] = "not_run_failed_control_gate"
             write_json(output / "results.json", report)
             continue
@@ -233,7 +311,7 @@ def run(plan_path):
             if row["graph_execution"]["returncode"]:
                 raise RuntimeError("Graph/profile replay failed")
             graph_report = json.loads((folder / "graph_metrics.json").read_text())
-            row["activation"] = validate_activation(graph_report, mode)
+            row["activation"] = validate_activation(graph_report, mode, experiment)
             row["graph_report"] = record(folder / "graph_metrics.json")
             for stage in graph_report["stages"]:
                 check(stage["output"])
@@ -249,7 +327,7 @@ def run(plan_path):
                 "memory_scope": "Parent lifetime high-water mark, not an aggregate process-tree peak"}
             candidate = Path(row["candidate"]["candidate_partition"]["path"])
             constraints = Path(row["candidate"]["membership_constraints"]["path"])
-            if mode == "none":
+            if mode == arms[0]:
                 row["candidate_control_matches"] = candidate_control_matches(
                     candidate, constraints, case["candidate"], case["constraints"])
             row["native_execution"] = timed_stage(native_command, folder, "native", source, env)
@@ -263,7 +341,7 @@ def run(plan_path):
             if (native["genes"], native["species"]) != UNIVERSE:
                 raise ValueError("Wrong native universe")
             row["native_summary"] = native["summary"]
-            if mode == "none":
+            if mode == arms[0]:
                 row["golden_matches"] = compare_golden(phylo, case["golden"])
             row.update(score_orthobench(repo, prediction))
             actual, details, score_files = readback_scores(repo, "OrthoBench", row, native, folder, "weighting")
@@ -274,7 +352,7 @@ def run(plan_path):
                 check(pin)
             if runtime() != plan["runtime"]:
                 raise ValueError("Runtime changed during evaluation")
-            if mode == "none":
+            if mode == arms[0]:
                 if normalized(row) != case["expected"]:
                     raise ValueError("Replayed control scores differ from admitted canonical control")
                 control = normalized(row)
@@ -299,12 +377,13 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     commands_parser = parser.add_subparsers(dest="command", required=True)
     preparation = commands_parser.add_parser("prepare")
+    preparation.add_argument("--experiment", choices=("weighting", "alignment"), default="weighting")
     for name in ("repo", "source", "output"):
         preparation.add_argument("--" + name, required=True, type=Path)
     execution = commands_parser.add_parser("run")
     execution.add_argument("--execution-plan", required=True, type=Path)
     args = parser.parse_args(argv)
-    result = (prepare(args.repo.resolve(), args.source.resolve(), args.output.resolve())
+    result = (prepare(args.repo.resolve(), args.source.resolve(), args.output.resolve(), args.experiment)
               if args.command == "prepare" else run(args.execution_plan.resolve()))
     print(result["status"])
     return 0 if result["status"] in ("prepared_unrun", "finished_all_arms_verified") else 1

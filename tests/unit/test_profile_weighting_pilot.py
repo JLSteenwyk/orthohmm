@@ -201,3 +201,118 @@ def test_preparation_requires_frozen_source_and_fresh_namespace(tmp_path):
         pilot.prepare(tmp_path, tmp_path, tmp_path / "new")
     with pytest.raises(ValueError, match="fresh output"):
         pilot.prepare(Path("/repo"), Path("/source"), tmp_path)
+
+
+def alignment_graph_fixture(mode):
+    graph = graph_fixture("none")
+    graph["parameters"]["profile_alignment_policy"] = mode
+    iteration = graph["profile_iterations"][0]
+    iteration.update(alignment_profiles=[], alignment_evidence=[])
+    if mode == "off":
+        return graph
+    iteration["alignment_profiles"] = [{"cluster_id": 0, "member_ids": ["anchor0", "anchor1", "anchor2"]}]
+    for index, matched in enumerate((8, 3)):
+        keep = matched >= 8
+        iteration["alignment_evidence"].append({
+            "gene_id": 3 + index, "gene_name": f"query{index}", "profile_cluster_id": 0,
+            "anchor_gene_id": index, "anchor_name": f"anchor{index}", "anchor_score": .8,
+            "model_length": 10, "target_length": 10, "score": matched * 5,
+            "model_start": 0, "model_end": 10, "target_start": 0, "target_end": 10,
+            "matched_known_residues": matched, "passes_guard": keep,
+            "category": "both_sides_covered" if keep else "partial_shared_region",
+            "aligned_model_coverage": matched / 10, "aligned_target_coverage": matched / 10,
+            "bounding_model_coverage": 1., "bounding_target_coverage": 1.,
+            "coordinate_system": "zero_based_half_open",
+        })
+    graph["counts"]["strict_profile_edges"] = 1
+    return graph
+
+
+def test_alignment_experiment_uses_its_own_frozen_protocol_and_two_arms():
+    arms, protocol = pilot.experiment_settings("alignment")
+    assert arms == ("off", "strict_span_guard")
+    assert protocol == "hmm_aligned_profile_guard_20261018.json"
+    with pytest.raises(ValueError, match="Unknown profile-evidence experiment"):
+        pilot.experiment_settings("unknown")
+
+
+@pytest.mark.parametrize("mode", ["off", "strict_span_guard"])
+def test_alignment_command_changes_only_the_guard_option(mode):
+    plan = {"experiment": "alignment", "cpu": 16, "case": {
+        "checkpoint": "/hits", "checkpoint_manifest": {"sha256": "pin"},
+        "fasta_directory": "/proteomes", "aligner": "mafft", "tree_builder": "FastTree", "baseline_output": "/old/native"}}
+    graph, native = pilot.arm_commands(Path("/frozen"), plan, Path("/out"), mode)
+    control_graph, control_native = pilot.arm_commands(Path("/frozen"), plan, Path("/out"), "off")
+    assert native == control_native
+    assert graph == (control_graph if mode == "off" else control_graph + ["--profile-alignment-policy", mode])
+    assert "--profile-sequence-weighting" not in graph
+
+
+@pytest.mark.parametrize("mode", ["off", "strict_span_guard"])
+def test_alignment_activation_is_recounted_from_coordinates_and_unique_edges(mode):
+    result = pilot.validate_activation(alignment_graph_fixture(mode), mode, "alignment")
+    assert result["weighted_profiles"] == 0
+    if mode != "off":
+        assert result["alignment_traced"] == 2
+        assert result["alignment_rejected"] == result["alignment_retained"] == 1
+
+
+@pytest.mark.parametrize("field,value", [
+    ("passes_guard", False), ("matched_known_residues", 3), ("aligned_target_coverage", .2),
+    ("bounding_model_coverage", .5), ("category", "asymmetric_coverage"),
+    ("coordinate_system", "one_based"), ("model_end", 11), ("score", 0),
+    ("anchor_name", "wrong_member"), ("anchor_gene_id", 3), ("gene_id", -1),
+])
+def test_tampered_alignment_evidence_cannot_pass_activation(field, value):
+    graph = alignment_graph_fixture("strict_span_guard")
+    graph["profile_iterations"][0]["alignment_evidence"][0][field] = value
+    with pytest.raises(ValueError):
+        pilot.validate_activation(graph, "strict_span_guard", "alignment")
+
+
+@pytest.mark.parametrize("kind", ["empty", "missing_profiles", "duplicate_gene", "edge_count", "weighted"])
+def test_inactive_incomplete_or_combined_alignment_evidence_rejected(kind):
+    graph = alignment_graph_fixture("strict_span_guard")
+    iteration = graph["profile_iterations"][0]
+    if kind == "empty":
+        iteration["alignment_evidence"] = []
+    elif kind == "missing_profiles":
+        iteration["alignment_profiles"] = []
+    elif kind == "duplicate_gene":
+        iteration["alignment_evidence"][1]["gene_id"] = iteration["alignment_evidence"][0]["gene_id"]
+    elif kind == "edge_count":
+        graph["counts"]["strict_profile_edges"] += 1
+    else:
+        graph["parameters"]["profile_sequence_weighting"] = "henikoff"
+    with pytest.raises(ValueError):
+        pilot.validate_activation(graph, "strict_span_guard", "alignment")
+
+
+def test_alignment_off_control_cannot_silently_run_an_active_guard():
+    graph = alignment_graph_fixture("strict_span_guard")
+    graph["parameters"]["profile_alignment_policy"] = "off"
+    with pytest.raises(ValueError, match="Off control"):
+        pilot.validate_activation(graph, "off", "alignment")
+
+
+def test_common_runner_executes_two_arm_alignment_panel_with_original_control_gate(tmp_path, monkeypatch):
+    path, executed = fake_execution(tmp_path, monkeypatch)
+    plan = json.loads(path.read_text())
+    plan.update(experiment="alignment", arms=["off", "strict_span_guard"])
+    path.write_text(json.dumps(plan))
+    original = pilot.timed_stage
+
+    def timed(command, folder, name, source, env):
+        result = original(command, folder, name, source, env)
+        if name == "graph":
+            graph = alignment_graph_fixture(command[0])
+            graph["stages"] = []
+            (folder / "graph_metrics.json").write_text(json.dumps(graph))
+        return result
+
+    monkeypatch.setattr(pilot, "timed_stage", timed)
+    result = pilot.run(path)
+    assert result["experiment"] == "alignment" and result["status"] == "finished_all_arms_verified"
+    assert executed == [(mode, stage) for mode in plan["arms"] for stage in ("graph", "native")]
+    assert result["arms"][1]["activation"]["alignment_rejected"] == 1
+    assert not result["arms"][1]["advancement"]["eligible"]
