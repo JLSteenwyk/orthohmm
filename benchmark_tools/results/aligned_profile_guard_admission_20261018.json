@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "status": "alignment_guard_orthobench_independently_admitted_fixed_branch_stopped",
+  "readback": {"path": "benchmarks/results/aligned_profile_guard_readback_v1_20261018/summary.json", "bytes": 15774058, "sha256": "48b3ac3f754c4c90f00804663735db2c3cc1129034c3c5f4610ebbd63d0d56d6"},
+  "score_table": {"path": "benchmark_tools/results/aligned_profile_guard_scores_20261018.tsv", "bytes": 2161, "sha256": "def2ee76dd9643e69e9d42f1c431d53c70ea068ade4078c1e8f0d12dd9612c3d"},
+  "scientific_revision": "cda800b34aab0b72fb64bd2c82c8ef3001e85f90",
+  "readback_revision": "b1ec66c191b9f3f49a83ce23970bd0b1732da347",
+  "inference": {"job_id": "24480", "state": "COMPLETED", "exit_code": "0:0", "elapsed": "00:38:40", "cpus": 16, "memory_allocation": "128G"},
+  "readback_job": {"job_id": "24485", "state": "COMPLETED", "exit_code": "0:0", "elapsed": "00:00:50", "cpus": 1, "memory_allocation": "16G"},
+  "checked_records": 46397,
+  "control": "off; exact canonical candidate/constraints/native products/rooted species tree and normalized precision/recall/F1 reproduced",
+  "coverage": {"genes": 251378, "species": 12, "reference_families": 70},
+  "arms": [
+    {"label": "off", "f1": 0.7410607351873405, "precision": 0.8177045380181867, "recall": 0.6775533630827973, "root_hogs": 59770, "pairs": 966439},
+    {"label": "strict_span_guard", "f1": 0.7391503919942537, "deltas": {"f1": -0.0019103431930868053, "precision": 0.0022335735842033966, "recall": -0.004698698986591476}, "root_hogs": 60001, "pairs": 965036, "advances": false}
+  ],
+  "advancing_labels": [],
+  "stopped_labels": ["strict_span_guard"],
+  "uncertainty": {"replicates": 100000, "seed": 20261018, "alpha": 0.05, "multiplicity_endpoints": 3, "f1_difference_percentage_points": -0.19103431930868453, "paired_percentile_ci": [-1.580553382794376, 0.7237764185036545], "bonferroni_percentile_ci": [-1.9935521935898357, 0.8632335153029675], "family_wins_ties_losses": [5, 62, 3], "qualification": "Intervals include zero. Post hoc descriptive uncertainty on development-exposed families does not change the original point gate or establish independent biological harm. Full precision/recall intervals and dependence limitations remain in the pinned readback."},
+  "decision": "Stop this fixed global guard branch without retuning or QfO/Three Kingdoms extension because strict F1 improvement failed. Preserve aligned-span infrastructure for the separately prespecified local-rescue validation, not a claim that every alignment-aware method fails. Unrun endpoint slots remain NA.",
+  "scope": "Separate post-run content/score readback using shared validated scoring helpers, not a wholly independent scoring implementation or independent biological panel. Shared-host cached downstream replay and exact-compatible tree reuse are not isolated fresh full-pipeline timing. Retained comparator vectors are contextual; functional EC/GO/FAS means are not F1 and populations can differ.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}
