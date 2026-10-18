@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "active_weighting_implementation_tested_scientific_evaluations_pending",
+  "status": "active_weighting_implemented_synthetic_readback_complete_biological_pilots_pending",
   "objective": "/home/bizon/.codex/attachments/be402858-3414-45ba-9a1b-323a1b394ab1/pasted-text-1.txt",
   "protocol": "benchmark_tools/hmm_evidence_campaign_20261018.json",
   "protocol_commit": "d2ccfd44",
@@ -8,7 +8,7 @@
   "methods": [
     {
       "method": "sequence_weighted_family_profiles",
-      "state": "opt_in_implementation_and_tests_complete_diagnostic_and_biological_pilots_pending",
+      "state": "opt_in_implementation_and_synthetic_diagnostic_complete_biological_pilots_pending",
       "modes": ["none", "henikoff", "henikoff_cluster", "species_henikoff_cluster"],
       "implementation": ["orthohmm/search/sequence_weights.py", "orthohmm/search/msa_profile.py", "orthohmm/search/profile_expansion.py"],
       "interfaces": "Production API/CLI, benchmark production harness and numeric-hit graph replay; nondefault policies require active profile inference, default none preserves the legacy worker call shape.",
@@ -20,6 +20,27 @@
     {"method": "local_joint_tree_rescue", "state": "required_pending_detailed_protocol_and_implementation"},
     {"method": "selective_hmmer_validation", "state": "required_pending_detailed_protocol_and_implementation"}
   ],
+  "implementation_milestone": {"commit": "6b3b9afc", "push": "Verified successful origin/main push", "frozen_source": "benchmarks/work/hmm_evidence_weighting_v1_20261018", "cpu_libraries": "Original unchanged pair_align.so, hmm_viterbi.so and kmer_prefilter.so copied into the detached scientific worktree."},
+  "synthetic_diagnostic": {
+    "producer": {"path": "benchmarks/results/hmm_evidence_weighting_synthetic_v2_20261018/summary.json", "bytes": 190610, "sha256": "29a138b11aa445d4f59191916cce4c3d954717c44e4d70daeae4fa0508407c88"},
+    "readback": {"path": "benchmark_tools/results/hmm_evidence_weighting_synthetic_readback_20261018.json", "bytes": 27483, "sha256": "463925f484b48e5033003af47b67547a29a03efeb1d1527ccb78bdcc577af343"},
+    "readback_source_commit": "5542d05c52bf6949eb6639206912d2c64b1eb9db",
+    "readback_scope": "All16 raw score/threshold/assignment result rows recounted;66 source/runtime/data records checked. Effective-count displays remain producer-reported, not independently reconstructed profiles.",
+    "jobs": [
+      {"job_id": "24474", "state": "FAILED", "exit_code": "1:0", "elapsed": "00:00:02", "cpus": 4, "memory_allocation": "16G", "peak_memory": null, "log": "benchmarks/results/hmm_evidence_weighting_synthetic_v1_20261018-24474.out", "scope": "Stopped before output directory creation because the batch environment did not satisfy the explicit empty CUDA_VISIBLE_DEVICES guard. No scoring occurred."},
+      {"job_id": "24475", "state": "COMPLETED", "exit_code": "0:0", "elapsed": "00:00:38", "cpus": 4, "memory_allocation": "16G", "peak_memory": null, "log": "benchmarks/results/hmm_evidence_weighting_synthetic_v2_20261018-24475.out", "scope": "Same frozen6b3b9afc science, fresh v2 output, CPU-only environment applied inside the job. Accounting did not supply MaxRSS; allocation is not a measured memory peak."}
+    ],
+    "successful_command": "env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMBA_NUM_THREADS=4 PYTHONHASHSEED=0 /home/bizon/anaconda3/bin/python -m benchmark_tools.diagnose_profile_weighting --cpu 4 --output /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_evidence_weighting_synthetic_v2_20261018",
+    "successful_cwd": "benchmarks/work/hmm_evidence_weighting_v1_20261018",
+    "seed_order": [18102026, 19102026],
+    "strict_correct_of_144_positives": {
+      "unexpanded": {"none": [1, 1], "henikoff": [0, 1], "henikoff_cluster": [1, 1], "species_henikoff_cluster": [7, 5]},
+      "four_extra_same_species_copies": {"none": [14, 17], "henikoff": [1, 1], "henikoff_cluster": [12, 15], "species_henikoff_cluster": [7, 5]}
+    },
+    "finding": "All modes identify the correct top family for all144 positive queries in both seeds/scenarios, and make no false strict assignments on this synthetic panel. Strict acceptance is nevertheless low. Species-normalized weighting improves unexpanded strict recovery but loses recovery relative to the expanded unweighted control. Position weights with actual N reproduce threshold optimism; reducing effective N changes margins but does not establish a broad gain.",
+    "decision": "Retain as a mixed synthetic mechanism diagnostic, not orthology F1 or independent biological evidence. Do not retune. Proceed with all three prespecified OrthoBench pilots after a verified matched canonical unweighted control.",
+    "biological_accuracy_evaluated": false
+  },
   "tests": {
     "latest": "benchmark_tools/results/hmm_evidence_weighting_tests_v4_20261018.xml",
     "result": "222 passed, zero failures/errors/skips across 11 selected unit/integration modules; 16.94 seconds on shared host, not an inference speed measurement.",
@@ -27,9 +48,9 @@
     "prior_runs": "Initial targeted run: 157 pass and three new-test failures from an incorrectly cased enum member; corrected to existing blosum62. Next 188 pass. A later requested nonexistent test filename yielded collection exit4 before running tests; corrected selection yielded209 pass, then213 pass, then222 pass after invalid-identity coverage. These are test/setup histories, not failed biological experiments.",
     "additional_legacy_spot_check": "A read-only comparison against committed16941f80 msa_profile.py produced byte-identical default outputs for384 randomized PSSMs over BLOSUM45/62/80 and three real center-star profiles. This local spot check does not replace the required complete-proteome control gate."
   },
+  "readback_tests": {"path": "benchmark_tools/results/hmm_evidence_weighting_readback_tests_20261018.xml", "result": "73 focused tests passed, including independent raw recount and tamper/ownership guards; this overlaps the222-test implementation suite and must not be summed as independent coverage."},
   "resources": "Use local shared bizon Threadripper, one new scientific job at a time; no DGX or quiet-window prerequisite. Other jobs untouched. Timing descriptive only.",
   "remaining": [
-    "Commit and push tested implementation, freeze the scientific source and run the prespecified two-seed, two-copy-scenario synthetic diagnostic; independently recount retained raw score archives.",
     "Prepare and execute matched canonical complete-proteome OrthoBench downstream control plus all three weighting pilots. Verify exact control and actual activation, independently score P/R/F1 and apply the original advancement gate.",
     "Extend only advancing arms to corrected QfO and Three Kingdoms; retain all eight endpoint slots and denominator/resource diagnostics, including explicit NA for stopped branches.",
     "Prespecify, implement, test and evaluate aligned-span evidence, local joint-tree rescue and selective HMMER validation. A negative weighting branch does not complete the goal.",
