@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "active_qfo_weighting_running_hmmer24493_and_local_final24495_queued",
+  "status": "active_qfo_weighting_running_hmmer_local_pilots_and_hmmer_readback24498_queued",
   "objective": "/home/bizon/.codex/attachments/be402858-3414-45ba-9a1b-323a1b394ab1/pasted-text-1.txt",
   "protocol": "benchmark_tools/hmm_evidence_campaign_20261018.json",
   "protocol_commit": "d2ccfd44",
@@ -213,6 +213,20 @@
     "defaults_promoted": false,
     "goal_completed": false
   },
+  "selective_hmmer_postrun_readback": {
+    "runner_commit": "4dfcee8de69f8153cb9997511d3751b232037d69",
+    "runner_push": "git push origin main succeeded; git ls-remote verified origin/main equals4dfcee8d before submission",
+    "scientific_reader_source": "benchmarks/work/selective_hmmer_readback_v1_20261018",
+    "protocol": "benchmark_tools/hmm_selective_hmmer_readback_20261018.json",
+    "tests_and_scope": "benchmark_tools/results/selective_hmmer_postrun_reader_milestone_20261018.json",
+    "job": {"job_id": "24498", "last_observed_state": "PENDING", "dependency": "afterany:24493", "cpus": 1, "memory_allocation": "16G", "wall_limit": "02:00:00", "log": "benchmarks/results/selective_hmmer_readback_v1_20261018-24498.out", "summary": "benchmarks/results/selective_hmmer_readback_v1_20261018/summary.json"},
+    "launch": "Original HMMER launch bound to immutablea80e10d4, source248c9561, job24493. Actual readback command is python -m benchmark_tools.report_profile_evidence_pilot --repo <primary repo> --experiment selective_hmmer --output <fresh readback directory>, executed from frozen4dfcee8d with CPU-only/single-thread controls and the three unchanged original libraries.",
+    "submission_history": "Two afterok:24493 submissions were rejected by Slurm as circular dependencies, consuming unregistered IDs24496/24497; no output/job handles were created. Revalidated the unchanged acyclic parent chain24493->24491->24490 and absent rejected handle. afterany:24493 submission succeeded as24498. Runtime reader still requires unique terminal COMPLETED0:0 planned resources and complete successful ordered producer panel, so failures cannot enter score admission. No parent or unrelated job changed.",
+    "remaining": "Monitor actual24498 after24493; preserve failure evidence if parent/readback fails. Use only separately admitted results for uncertainty/comparison/extension. Local and complete weighting follow-up post-run admission remain required.",
+    "accuracy_result_admitted": false,
+    "defaults_promoted": false,
+    "goal_completed": false
+  },
   "synthetic_diagnostic": {
     "producer": {"path": "benchmarks/results/hmm_evidence_weighting_synthetic_v2_20261018/summary.json", "bytes": 190610, "sha256": "29a138b11aa445d4f59191916cce4c3d954717c44e4d70daeae4fa0508407c88"},
     "readback": {"path": "benchmark_tools/results/hmm_evidence_weighting_synthetic_readback_20261018.json", "bytes": 27483, "sha256": "463925f484b48e5033003af47b67547a29a03efeb1d1527ccb78bdcc577af343"},
@@ -243,7 +257,7 @@
   "readback_tests": {"path": "benchmark_tools/results/hmm_evidence_weighting_readback_tests_20261018.xml", "result": "73 focused tests passed, including independent raw recount and tamper/ownership guards; this overlaps the222-test implementation suite and must not be summed as independent coverage."},
   "resources": "Use local shared bizon Threadripper, one new scientific job at a time; no DGX or quiet-window prerequisite. Other jobs untouched. Timing descriptive only.",
   "remaining": [
-    "Monitor running QfO24490, queued Three Kingdoms24491, HMMER24493 and local readback/final-native24495 without duplicates. Local24489's6 admissions remain provisional until24495 and separate post-run accuracy admission. Finish HMMER immutable-launch readback/uncertainty and any required applicability fallback. Alignment fixed branch stopped; failed localv1 preserved. Small weighting gains and intervals spanning zero are not a full-vector result.",
+    "Monitor running QfO24490 and queued Three Kingdoms24491/HMMER24493/local24495/HMMER-reader24498 without duplicates. Local24489's6 admissions remain provisional until24495 and separate post-run accuracy admission. Complete local and weighting full-vector readers, verify all actual results/uncertainty and any required HMMER applicability fallback. Alignment fixed branch stopped; failed localv1 preserved. Small weighting gains and intervals spanning zero are not a full-vector result.",
     "Extend only advancing arms to corrected QfO and Three Kingdoms; retain all eight endpoint slots and denominator/resource diagnostics, including explicit NA for stopped branches.",
     "Local complete proposal/composite/final-native runner passes524 selected tests and24495 is queued: verify full biological execution, separate accuracy/uncertainty admission and original point gate. Selective HMMER24493 is queued; finish post-run admission and any required applicability fallback. Both methods remain required regardless of earlier results.",
     "Evaluate justified combinations, seek post-freeze confirmation if available, update the full comparator table and final recommendation, and verify all intended milestones committed/pushed."
