@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "active_weighting_implemented_synthetic_readback_complete_biological_pilots_pending",
+  "status": "active_weighting_orthobench_panel_running_alignment_span_kernel_tested",
   "objective": "/home/bizon/.codex/attachments/be402858-3414-45ba-9a1b-323a1b394ab1/pasted-text-1.txt",
   "protocol": "benchmark_tools/hmm_evidence_campaign_20261018.json",
   "protocol_commit": "d2ccfd44",
@@ -8,7 +8,7 @@
   "methods": [
     {
       "method": "sequence_weighted_family_profiles",
-      "state": "opt_in_implementation_and_synthetic_diagnostic_complete_biological_pilots_pending",
+      "state": "opt_in_implementation_and_synthetic_diagnostic_complete_orthobench_panel_running",
       "modes": ["none", "henikoff", "henikoff_cluster", "species_henikoff_cluster"],
       "implementation": ["orthohmm/search/sequence_weights.py", "orthohmm/search/msa_profile.py", "orthohmm/search/profile_expansion.py"],
       "interfaces": "Production API/CLI, benchmark production harness and numeric-hit graph replay; nondefault policies require active profile inference, default none preserves the legacy worker call shape.",
@@ -16,11 +16,34 @@
       "diagnostic_script": "benchmark_tools/diagnose_profile_weighting.py",
       "biological_accuracy_evaluated": false
     },
-    {"method": "alignment_aware_recruitment", "state": "required_pending_detailed_protocol_and_implementation"},
+    {"method": "alignment_aware_recruitment", "state": "detailed_protocol_pushed_span_kernel_tested_recruitment_integration_and_pilots_pending", "protocol": "benchmark_tools/hmm_aligned_profile_guard_20261018.json", "protocol_commit": "a1dd2946", "implementation": "orthohmm/search/profile_spans.py", "limitation": "Span helper is not yet wired into recruitment and establishes no accuracy benefit."},
     {"method": "local_joint_tree_rescue", "state": "required_pending_detailed_protocol_and_implementation"},
     {"method": "selective_hmmer_validation", "state": "required_pending_detailed_protocol_and_implementation"}
   ],
   "implementation_milestone": {"commit": "6b3b9afc", "push": "Verified successful origin/main push", "frozen_source": "benchmarks/work/hmm_evidence_weighting_v1_20261018", "cpu_libraries": "Original unchanged pair_align.so, hmm_viterbi.so and kmer_prefilter.so copied into the detached scientific worktree."},
+  "weighting_orthobench_pilot": {
+    "runner_commit": "620bfdf91d3d1b8c3a5d054df36b0f199c11de55",
+    "runner_push": "Verified successful origin/main push before preparation/submission",
+    "runner_tests": {"path": "benchmark_tools/results/profile_weighting_pilot_tests_v2_20261018.xml", "result": "133 selected tests passed; includes gate boundaries, activation/settings guards, unchanged native commands, sequential execution, failed-control blocking, continuation after a weighted-arm failure, preservation of existing attempts, and neighboring real profile/phylogeny tests. Overlaps earlier suites; do not add counts as independent coverage."},
+    "scientific_source": "benchmarks/work/profile_weighting_pilot_v1_20261018",
+    "execution_plan": {"path": "benchmarks/results/profile_weighting_pilot_v1_20261018/execution_plan.json", "bytes": 14839164, "sha256": "001573a5d8a8b8620ad72abac3a0b53d5b87742a53c4dbbc9fbe1dba3a4dd0b4"},
+    "preparation": {"job_id": "24476", "state": "COMPLETED", "exit_code": "0:0", "elapsed": "00:00:26", "cpus": 1, "memory_allocation": "16G", "peak_memory": null, "log": "benchmarks/results/profile_weighting_pilot_prepare_v1_20261018-24476.out", "scope": "Read-only input/source/tool/runtime hashing plus tiny profile runtime probe;43919 input and1211 frozen source records. No biological pilot or scoring."},
+    "inference": {"job_id": "24477", "last_observed_state": "RUNNING", "last_observed_stage": "none/control graph replay", "cpus": 16, "memory_allocation": "128G", "wall_limit": "1-00:00:00", "log": "benchmarks/results/profile_weighting_pilot_v1_20261018-24477.out", "results": "benchmarks/results/profile_weighting_pilot_v1_20261018/results.json", "status_scope": "Observation only. Revalidate scheduler and process state on continuation; do not restart from this stale ledger or an empty buffered log."},
+    "arms": ["none", "henikoff", "henikoff_cluster", "species_henikoff_cluster"],
+    "canonical_checkpoint_sha256": "81943f71185de387d66a3a55f1dfef0a061e00c0c88ec7751505e5523b995c7b",
+    "expected_control": {"f1": 0.7410607351873405, "precision": 0.8177045380181867, "recall": 0.6775533630827973},
+    "scope": "Complete-proteome downstream graph/profile inference from immutable canonical initial-search hits, with exact-compatible tree-cache reuse and inferred phylogeny. Shared-host incremental wall/CPU/process-RSS, not a fresh-search or isolated full-pipeline timing comparison.",
+    "commands": {"preparation": "python -m benchmark_tools.run_profile_weighting_pilot prepare --repo <primary repo> --source <scientific_source> --output benchmarks/results/profile_weighting_pilot_v1_20261018", "submission": "sbatch --dependency=afterok:24476 --output=<log> <scientific_source>/benchmark_tools/run_profile_weighting_pilot.slurm <scientific_source> <execution_plan>", "actual_execution": "Exact absolute paths and all per-arm graph/native commands are retained in the immutable execution plan and each arm's preflight/timing receipts."},
+    "accuracy_result_admitted": false,
+    "extension": "Run corrected QfO/Three Kingdoms only for arms passing the original OrthoBench point gate after control verification. All other methods remain required even if weighting fails."
+  },
+  "alignment_span_kernel": {
+    "implementation": "orthohmm/search/profile_spans.py",
+    "test_receipt": "benchmark_tools/results/profile_span_kernel_tests_v2_20261018.xml",
+    "tests": "124 selected tests passed, zero failures/errors/skips, including neighboring profile/weighting/expansion suites. Within the span suite,224 varied length/band pairs reproduce both original Numba and installed original C integer scores; fixtures verify half-open coordinates, restarts, repeats/ties, fragments/asymmetry, insertion/deletion versus bounding coverage, unknown residues, score-mismatch rejection and invalid inputs. Counts overlap other suites.",
+    "default_path": "Unchanged: new helper is not imported or called by production inference yet; all three original CPU libraries remain unchanged.",
+    "remaining": "Refactor strict selection with exact default edge compatibility, wire opt-in guard through production/replay/CLI with actual diagnostics and CPU bounds, test parallel/native workflow activation, then run its prespecified two-arm pilot only after the weighting panel is terminal."
+  },
   "synthetic_diagnostic": {
     "producer": {"path": "benchmarks/results/hmm_evidence_weighting_synthetic_v2_20261018/summary.json", "bytes": 190610, "sha256": "29a138b11aa445d4f59191916cce4c3d954717c44e4d70daeae4fa0508407c88"},
     "readback": {"path": "benchmark_tools/results/hmm_evidence_weighting_synthetic_readback_20261018.json", "bytes": 27483, "sha256": "463925f484b48e5033003af47b67547a29a03efeb1d1527ccb78bdcc577af343"},
@@ -51,9 +74,9 @@
   "readback_tests": {"path": "benchmark_tools/results/hmm_evidence_weighting_readback_tests_20261018.xml", "result": "73 focused tests passed, including independent raw recount and tamper/ownership guards; this overlaps the222-test implementation suite and must not be summed as independent coverage."},
   "resources": "Use local shared bizon Threadripper, one new scientific job at a time; no DGX or quiet-window prerequisite. Other jobs untouched. Timing descriptive only.",
   "remaining": [
-    "Prepare and execute matched canonical complete-proteome OrthoBench downstream control plus all three weighting pilots. Verify exact control and actual activation, independently score P/R/F1 and apply the original advancement gate.",
+    "Monitor existing weighting job24477 without duplicate submission; finish matched canonical OrthoBench control plus three weighted pilots, independently verify actual activation/native P/R/F1 and apply the original advancement gate. Preserve every failed or incomplete stage.",
     "Extend only advancing arms to corrected QfO and Three Kingdoms; retain all eight endpoint slots and denominator/resource diagnostics, including explicit NA for stopped branches.",
-    "Prespecify, implement, test and evaluate aligned-span evidence, local joint-tree rescue and selective HMMER validation. A negative weighting branch does not complete the goal.",
+    "Complete production integration and evaluation of the prespecified aligned-span guard; prespecify, implement, test and evaluate local joint-tree rescue and selective HMMER validation. A negative weighting branch does not complete the goal.",
     "Evaluate justified combinations, seek post-freeze confirmation if available, update the full comparator table and final recommendation, and verify all intended milestones committed/pushed."
   ],
   "defaults_promoted": false,
