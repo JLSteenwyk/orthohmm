@@ -149,7 +149,7 @@ def read_context(proposal_path, context, gene_names, database, gene_species, seq
 def build_composite_cache(baseline_phylogeny, contexts, output_directory):
     """Copy baseline cache plus only authenticated accepted raw-tree contexts."""
     baseline, destination = Path(baseline_phylogeny).resolve(), Path(output_directory).resolve()
-    if destination.exists() or destination.resolve() == baseline.resolve():
+    if destination.exists() or destination.is_relative_to(baseline):
         raise FileExistsError("Require a fresh composite cache namespace")
     accepted = [row for row in contexts if row["accepted"]]
     source_pins = [record(p) for p in sorted(baseline.rglob("*")) if p.is_file()]

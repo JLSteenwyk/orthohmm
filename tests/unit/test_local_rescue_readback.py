@@ -144,6 +144,13 @@ def test_composite_cache_contains_only_read_back_admissions_and_preserves_source
         readback.build_composite_cache(accepted["baseline"], [proposal], destination)
 
 
+def test_composite_cannot_be_created_inside_original_cache(accepted):
+    destination = accepted["baseline"] / "must_not_create"
+    with pytest.raises(FileExistsError, match="fresh composite cache"):
+        readback.build_composite_cache(accepted["baseline"], [], destination)
+    assert not destination.exists()
+
+
 @pytest.mark.parametrize("kind", ["unchecked", "changed_pin", "changed_genes", "id_collision"])
 def test_composite_rejects_unchecked_tampered_or_ambiguous_admissions(accepted, tmp_path, kind):
     proposal = readback.read_context(accepted["proposal"], *accepted["arguments"], tmp_path / "readback", cpu=1)
