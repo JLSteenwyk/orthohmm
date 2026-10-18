@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "posthoc_readback_plan_recorded_before_uncertainty_on_actual_pilot_data",
+  "hypothesis": "Verify that complete frozen profile-evidence pilots reproduce their native outputs, scores and original gates. Describe family-level uncertainty without treating development-exposed point gains as independent confirmation.",
+  "launch_ledger_revision": "79e69e6c23abb9dee732dd613bf98e5d88e4deea",
+  "experiments": ["weighting", "alignment"],
+  "control": "The declared off arm must exactly reproduce the retained canonical candidate partition, membership constraints, native products, rooted species tree and OrthoBench precision/recall/F1.",
+  "readback": "Require successful terminal scheduler accounting on16 CPUs/128G/bizon, all declared arms in original order, immutable launch/plan/source/runtime/input checks, actual activation, raw command/log/resource agreement, full ownership and native product consistency, and repeated official plus independent OrthoBench scoring with per-family records. Shared validated helper implementations do not constitute an independent scoring implementation or biological confirmation panel.",
+  "uncertainty": {
+    "replicates": 100000,
+    "seed": 20261018,
+    "alpha": 0.05,
+    "families": 70,
+    "metrics": ["f_score", "precision", "recall"],
+    "multiplicity": "three_metrics_per_noncontrol_arm",
+    "pairing": "Resample the same RefOG multiplicities for every arm and recompute the original weighted statistic from TP/FP/FN sufficient statistics. Repeat exactly to verify determinism.",
+    "limitations": "Post hoc after observing development point results. Exchangeable-family resampling can miss shared evolutionary histories or dependencies induced by fused predictions; percentile intervals and Bonferroni tail adjustments are descriptive approximations. They do not repair earlier method selection or substitute for independent confirmation."
+  },
+  "advancement": "Recompute the unchanged original point gate separately for every active arm: F1 strictly increases and neither precision nor recall declines by more than0.005. Bootstrap intervals never create a new gate, suppress a prespecified advancing arm or rescue a failed arm. All advancing arms require unchanged complete corrected-QfO/Three Kingdoms follow-up.",
+  "stopping_rule": "Any incomplete producer, changed artifact/runtime, missing activation, native/scoring mismatch or inconsistent family statistics fails readback explicitly. Preserve the attempt; do not silently admit only selected passing rows or restart in the same namespace.",
+  "comparison_table": "Include all eight named endpoints, explicit NA for unrun new arms and separately labeled retained comparator vectors from the immutable prior admission snapshot. Retained vectors are not freshly re-audited in this readback; functional means are not F1 and population differences remain limitations.",
+  "resources": {"cpus": 1, "memory_gib": 16, "wall_limit": "02:00:00", "new_inference": false, "unrelated_jobs": "untouched", "timing": "Source pilot timings are shared-host cached downstream replay, not isolated fresh full-pipeline inference; GNU-time RSS is maximum process, not aggregate process-tree memory."},
+  "defaults_promoted": false,
+  "goal_completed": false
+}

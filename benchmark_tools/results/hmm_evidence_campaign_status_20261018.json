@@ -116,6 +116,19 @@
     "biological_accuracy_evaluated": false,
     "defaults_promoted": false
   },
+  "profile_evidence_postrun_readback": {
+    "state": "implemented_and_tested_pending_frozen_submission",
+    "implementation": "benchmark_tools/report_profile_evidence_pilot.py",
+    "protocol": "benchmark_tools/hmm_profile_evidence_readback_20261018.json",
+    "launch_binding": "Reads the immutable launch ledger from committed79e69e6c, not the changing primary status file. Requires exact execution-plan/source/arm/job identity and successful terminal16-CPU128G/bizon accounting. Rechecks source revision/inventory, scientific runtime and every frozen input before and after separate native/scoring readback.",
+    "verification": "Checks fixed graph/native commands against preflight and raw GNU-time/log receipts, actual weighting/span activation, complete stage/candidate/native ownership, intact original constraints, native products/counts and exact unchanged off control. Repeats official and independent OrthoBench scores and per-family records, then independently recomputes every original advancement gate. No producer or native artifact is rewritten; failed or partial panels cannot be silently admitted selectively.",
+    "uncertainty": "Post hoc descriptive paired bootstrap over70 RefOGs,100000 replicates,seed20261018,alpha0.05, three metrics per noncontrol arm for Bonferroni tail adjustment. Recomputes the original weighted statistic from TP/FP/FN sufficient statistics and repeats to check determinism. Does not alter original point gates or establish independent biological confirmation; family dependence and earlier development exposure remain limitations.",
+    "table": "All eight endpoint columns; unrun new-arm endpoints stay NA. Nine inherited comparator/control vectors retain their precision/recall/population/semantics metadata and are explicitly labeled retained context, not newly re-audited results. The inherited snapshot is authenticated against its committed Git bytes.",
+    "resources": {"cpus": 1, "memory_gib": 16, "wall_limit": "02:00:00", "new_inference": false, "scope": "Read-only input/native assessment plus paired-family uncertainty; may run alongside the one active scientific inference job without stopping unrelated work."},
+    "tests": {"path": "benchmark_tools/results/profile_evidence_readback_tests_20261018.xml", "result": "337 selected tests passed, zero failures/errors/skips across ten modules;44 dedicated readback tests plus overlapping pilot/local/native/profile/HMMER suites. Do not sum overlapping receipt counts as independent coverage.", "coverage": "Full versus partial/reordered/failed producers; legacy weighting-header compatibility; scheduler/job/resource guards; actual raw timing/log identity; planned arm commands and activation; malformed candidate/native/score claims; real deterministic100000-replicate paired-family calculations and inconsistent statistics; immutable complete retained vectors and assessed populations; explicit NA endpoints and preservation of existing output namespaces."},
+    "accuracy_result_admitted": false,
+    "defaults_promoted": false
+  },
   "synthetic_diagnostic": {
     "producer": {"path": "benchmarks/results/hmm_evidence_weighting_synthetic_v2_20261018/summary.json", "bytes": 190610, "sha256": "29a138b11aa445d4f59191916cce4c3d954717c44e4d70daeae4fa0508407c88"},
     "readback": {"path": "benchmark_tools/results/hmm_evidence_weighting_synthetic_readback_20261018.json", "bytes": 27483, "sha256": "463925f484b48e5033003af47b67547a29a03efeb1d1527ccb78bdcc577af343"},
