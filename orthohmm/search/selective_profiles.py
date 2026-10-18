@@ -161,17 +161,21 @@ def nominate_queries(gene_names, clusters, profiles, profile_hits, self_threshol
             "original_hit_score": external[query].get(family),
             "original_self_threshold": float(self_thresholds[family]),
             "anchor": anchors.get((query, family))} for family in sorted(competitors, key=family_key.get)]})
-    canonical = [{"query": row["query_gene"], "priority": row["priority"],
-        "competitors": [{"members": sorted(c["members"]), "original_hit_score": c["original_hit_score"],
-        "original_self_threshold": c["original_self_threshold"],
-        "is_own": c["is_own"], "anchor": None if c["anchor"] is None else
-        {"gene": c["anchor"]["gene"], "score": c["anchor"]["score"]}} for c in row["competitors"]]} for row in result]
-    digest = hashlib.sha256(json.dumps(canonical, sort_keys=True, separators=(",", ":"), allow_nan=False).encode()).hexdigest()
-    return {"schema_version": 1, "selected": result, "candidate_digest": digest,
+    return {"schema_version": 1, "selected": result, "candidate_digest": query_list_digest(result),
             "audit": [audit[q] for q in sorted(audit, key=lambda q: names[q])],
             "without_external_hits": sorted(set(names) - {names[q] for q in external}),
             "selected_profiles": sorted(selected_profiles, key=family_key.get),
             "orthology_inferred": False}
+
+
+def query_list_digest(selected):
+    """Identify complete nominated comparisons independently of integer IDs."""
+    canonical = [{"query": row["query_gene"], "priority": row["priority"],
+        "competitors": [{"members": sorted(c["members"]), "original_hit_score": c["original_hit_score"],
+        "original_self_threshold": c["original_self_threshold"],
+        "is_own": c["is_own"], "anchor": None if c["anchor"] is None else
+        {"gene": c["anchor"]["gene"], "score": c["anchor"]["score"]}} for c in row["competitors"]]} for row in selected]
+    return hashlib.sha256(json.dumps(canonical, sort_keys=True, separators=(",", ":"), allow_nan=False).encode()).hexdigest()
 
 
 def decide_query(query, measurements):
