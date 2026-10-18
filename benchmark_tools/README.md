@@ -36,6 +36,11 @@ score checks, and the original controls/gates. Existing cached files are not
 proof of completed inference. The combined report retains all eight endpoint
 columns, explicit `NA` for unrun endpoints, precision/recall/coverage and
 resource details in its JSON, and conditional EC/GO/FAS assessed populations.
+Functional counts preserve the native `NR_ORTHOLOGS` coordinate. For FAS this
+is an eligible-pair pool before subsampling, not the number of numeric scores
+in the saved mean; distinguish those counts when interpreting coverage or
+uncertainty. The [real-control helper check](results/weighting_qfo_control_helper_integration_20261018.json)
+records both for the canonical QfO control without creating a new FAS sample.
 Measurement-only HMMER must reproduce off and cannot advance. Failed fixed
 branches remain stopped without retuning; an unmeasured pool requires its
 prespecified applicability fallback, not a negative accuracy claim.
