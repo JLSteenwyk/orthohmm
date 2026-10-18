@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "status": "prespecified_before_implementation_and_new_evaluation",
+  "objective": {
+    "path": "/home/bizon/.codex/attachments/be402858-3414-45ba-9a1b-323a1b394ab1/pasted-text-1.txt",
+    "sha256": "1631e4eeeb6ef6c6b16c52dfbb36708b08fe5a71f3d778f3e115cbb16ee5475a"
+  },
+  "starting_revision": "16941f805dc53daa8a84f94b12839ecf3bac8524",
+  "previous_campaign": "benchmark_tools/results/hillclimb_campaign_status_20261016.json",
+  "comparison": "benchmark_tools/results/hillclimb_comparison_readback_v27_20261016/summary.json",
+  "score_table": "benchmark_tools/results/hillclimb_comparison_readback_v27_20261016/scores.tsv",
+  "scope": [
+    "Implement, test and evaluate sequence-weighted family profiles with separate relative-weight and effective-count ablations.",
+    "Implement, test and evaluate aligned-span evidence that distinguishes shared-domain bridges, fragments and fusion/fission cases without an identical-domain-architecture requirement.",
+    "Implement, test and evaluate bounded local joint-tree rescue without unconditional or irreversible global OG merging; report pair and membership effects separately.",
+    "Implement, test and evaluate selective standard HMMER validation, separating candidate generation, scoring and orthology decision effects.",
+    "Combine only independently promising mechanisms, with prespecified ablations; retain negative findings and all missing endpoints.",
+    "Deliver reproducibility scripts, tests, benchmark comparison, uncertainty and population diagnostics, recommendation, and verified milestone commits and pushes."
+  ],
+  "prior_negative_evidence": {
+    "species_only_weighting": "benchmark_tools/results/profile_species_balance_holdout_20260829.json",
+    "finding": "An uncommitted earlier species-only emission weighting test reduced strict synthetic recovery through increased weakest-member thresholds. Do not reproduce that rule and describe it as new. Position-based redundancy weighting, effective-count ablation and species-normalized position weights are distinct interventions, but the same threshold failure remains plausible.",
+    "other_rejections": "Do not repeat global candidate-cap, broad clustering, unconditional family union or simple branch-support sweeps from the closed campaign."
+  },
+  "first_experiment": {
+    "hypothesis": "Position-based weights can reduce redundant or lineage-expanded profile bias. Separating relative weights from total effective count can reveal whether gains or failures arise from changed residue distributions or pseudocount strength. No gain is assumed.",
+    "arms": [
+      {"label": "none", "relative_weights": "uniform", "effective_count": "actual_n"},
+      {"label": "henikoff", "relative_weights": "position_based", "effective_count": "actual_n"},
+      {"label": "henikoff_cluster", "relative_weights": "position_based", "effective_count": "single_linkage_clusters_0.62"},
+      {"label": "species_henikoff_cluster", "relative_weights": "position_based_then_equal_total_per_species", "effective_count": "single_linkage_clusters_0.62"}
+    ],
+    "interface": "Opt-in profile_sequence_weighting API/CLI and benchmark replay option; default none. Reject unsupported modes and incompatible inference paths rather than silently ignoring a requested intervention.",
+    "algorithm": [
+      "Compute position-based relative weight contributions 1/(distinct_residues_in_column * count_of_this_residue). Ignore gaps and unknowns. Normalize row contributions by the number of valid residues so fragments are not downweighted solely for missing sites. Normalize final weights to the arm's specified total.",
+      "For the species-normalized arm, divide each position-based row weight by the sum of weights of usable rows from its species, then normalize to the specified total. Use only the existing gene-to-species mapping, never gene-name heuristics or benchmark annotations.",
+      "For cluster effective count, use single-linkage connected components at aligned identity >=0.62; identity is matching valid residues divided by the smaller valid sequence length. Exclude empty rows from the count. This is an experimental cluster-count alternative, not HMMER's default entropy weighting and not a claim of bit-identical HMMER construction.",
+      "Preserve the historical unweighted match-column mask, pseudocount formula, insert emissions, transitions, prefilter, significance cutoff, strict weakest-member rule, best-profile rule and sequence-anchor rule. Apply weights to PSSM residue counts only. Recompute self thresholds from each arm's actual profiles; never borrow unweighted thresholds.",
+      "Any jackknife rebuild must preserve the selected weighting policy and retained species mapping. Record the policy, per-profile effective count and actual activation. Default none must reproduce historical arrays and default worker calls."
+    ],
+    "literature": [
+      {"title": "Henikoff and Henikoff, Position-based sequence weights (1994)", "url": "https://pubmed.ncbi.nlm.nih.gov/7966282/"},
+      {"title": "HMMER user guide, relative weights and effective sequence number", "url": "https://eddylab.org/software/hmmer/CURRENT/Userguide.pdf", "qualification": "The retrieved guide describes --wpb, --eclust and default --eent; it explicitly treats cluster effective count as experimental. OrthoHMM's simplified profiles are not Plan7 models."}
+    ],
+    "stages": [
+      "Test hand-computed weights, duplicate and row-permutation behavior, species totals, effective counts, transitive identity components, empty/unknown/gap cases, finite values, exact unweighted compatibility, serial/spawn equivalence, jackknife propagation, CLI/API restrictions, metrics and a real profile scoring fixture.",
+      "Run a bounded synthetic diagnostic with fixed seeds 18102026 and 19102026, 36 families each, using existing simulator machinery. Compare top-family identification, strict true-query recovery, false assignments, score margins and profile effective counts. Generated truth is evaluator-only. This diagnostic is not independent biological validation and does not replace the OrthoBench pilot.",
+      "Freeze tested code and runtime. Reuse only authenticated canonical initial-search hit arrays, since profile weighting changes no initial search. Rebuild all affected downstream graph/profile stages for the control and each of the three nondefault arms on complete OrthoBench proteomes. Infer each candidate's species tree and changed gene trees; exact-compatible unchanged tree checkpoints may be reused only with explicit provenance. Record replay versus fresh costs separately.",
+      "Require the unweighted replay to reproduce the admitted canonical OrthoBench control before interpreting candidate scores. Validate ownership, native products, profile activation and scorer inputs. Independently score precision, recall and F1.",
+      "Advance an arm only if valid OrthoBench F1 is strictly greater than its matched control and neither precision nor recall decreases by more than 0.005. If none passes, close the weighting branch without retuning and proceed to the other three required mechanisms. Every valid weighted arm receives its pilot; errors remain errors, not negative biological results.",
+      "For every advanced arm, freeze unchanged settings and execute corrected QfO and Three Kingdoms, reporting the complete eight-endpoint vector. Full-vector screening requires at least one primary F1 improvement and no endpoint point decline >0.005; this is a development screen, not equivalence, significance or automatic default promotion. Inspect functional population changes before interpreting means."
+    ],
+    "budget": {"weighted_arms": 3, "synthetic_families_per_seed": 36, "synthetic_seeds": 2, "orthobench_pilots_per_arm": 1, "post_result_parameter_retuning": false}
+  },
+  "subsequent_protocols": "Prespecify detailed controls, bounds and advancement gates for each remaining mechanism before its implementation/evaluation, informed by label-free diagnostics and the preceding findings. They remain required branches, not optional future suggestions. A negative weighting result does not close this goal.",
+  "benchmarks": {
+    "endpoints": ["OrthoBench F1", "QfO VGNC F1", "QfO SwissTrees F1", "QfO TreeFam-A F1", "QfO EC similarity", "QfO GO similarity", "QfO FAS similarity", "Three Kingdoms F1"],
+    "priority": "OrthoBench and corrected QfO primary; TreeFam supporting, Three Kingdoms supplementary.",
+    "comparator": "Frozen canonical OrthoHMM experimental control and OrthoFinder 3.1.5 full phylogenetic pipeline; existing sequence-only checkpoint and other tools retained as context, not rerun unnecessarily.",
+    "missing_policy": "Explicit NA with reason for stopped branches; never impute, select per-dataset winners or relabel functional means as F1.",
+    "diagnostics": "Precision, recall, assignment/reference coverage, assessed pair populations, stage activation and resource scope accompany scores. Use paired-family uncertainty where defensible. Existing panels are development-exposed.",
+    "confirmation": "Seek independent confirmation only after a final candidate is frozen. Missing independent data is a nonblocking claim limitation."
+  },
+  "resources": {"host": "local shared Threadripper / bizon", "cpus_per_scientific_run": 16, "memory_gib": 128, "wall_limit": "1-00:00:00", "concurrent_new_scientific_runs": 1, "cuda": false, "dgx_required": false, "quiet_window_required": false, "unrelated_jobs": "untouched", "timing": "Descriptive shared-host timing, contention recorded; cached/replay/fresh/scoring/recovery costs separate."},
+  "git": "Commit and push this protocol before implementing interventions; then push focused tested code, frozen execution manifests, results and decisions at each validated milestone. Stage task-owned paths only. Verify remote commit and final synchronization; record failures honestly and continue useful local work.",
+  "preserved_user_samples": {"status_sha256": "5a72884464c7a52298571745329d080e86722b69658902b096d4f10c4574d0a7", "binary_diff_sha256": "91643349c94c9b543fdbb3f33297c5486b8eac916fc5b86e397bdfc07776bcca"},
+  "defaults_promoted": false,
+  "goal_completed": false
+}
