@@ -14,6 +14,15 @@ from numba import njit
 from .viterbi import NEG_INF
 
 
+PROFILE_ALIGNMENT_POLICIES = ("off", "strict_span_guard")
+
+
+def validate_profile_alignment_policy(policy):
+    if not isinstance(policy, str) or policy not in PROFILE_ALIGNMENT_POLICIES:
+        raise ValueError("Unknown profile alignment policy; expected off or strict_span_guard")
+    return policy
+
+
 @njit(cache=True, nogil=True)
 def _span_one(match_emit, insert_emit, transitions, target, band_width):
     length, target_length = len(match_emit), len(target)

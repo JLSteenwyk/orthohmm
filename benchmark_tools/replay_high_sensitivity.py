@@ -122,6 +122,8 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--singleton-tie-policy", choices=("first_hit", "defer_ambiguous"), default="first_hit")
     from orthohmm.search.sequence_weights import PROFILE_SEQUENCE_WEIGHTING
     parser.add_argument("--profile-sequence-weighting", choices=PROFILE_SEQUENCE_WEIGHTING, default="none")
+    from orthohmm.search.profile_spans import PROFILE_ALIGNMENT_POLICIES
+    parser.add_argument("--profile-alignment-policy", choices=PROFILE_ALIGNMENT_POLICIES, default="off")
     parser.add_argument(
         "--profile-iterations",
         type=int,
@@ -159,6 +161,10 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv=None) -> int:
     args = build_parser().parse_args(argv)
+    if args.profile_alignment_policy != "off" and not args.fasta_directory:
+        raise SystemExit("--profile-alignment-policy requires --fasta-directory")
+    if args.profile_alignment_policy != "off" and args.profile_sequence_weighting != "none":
+        raise SystemExit("Combined profile weighting and alignment guards require a separate experiment")
     if args.profile_sequence_weighting != "none" and not args.fasta_directory:
         raise SystemExit("--profile-sequence-weighting requires --fasta-directory")
     if (
@@ -272,6 +278,8 @@ def main(argv=None) -> int:
                 ),
                 **({"sequence_weighting": args.profile_sequence_weighting}
                    if args.profile_sequence_weighting != "none" else {}),
+                **({"alignment_policy": args.profile_alignment_policy}
+                   if args.profile_alignment_policy != "off" else {}),
             )
             profile_results.append(profile_result)
             profile_base_edges = combine_edges(
@@ -383,6 +391,7 @@ def main(argv=None) -> int:
             "leiden_seed": args.leiden_seed,
             "singleton_tie_policy": args.singleton_tie_policy,
             "profile_sequence_weighting": args.profile_sequence_weighting,
+            "profile_alignment_policy": args.profile_alignment_policy,
         },
         "counts": {
             "genes": len(gene_names),
@@ -430,6 +439,9 @@ def main(argv=None) -> int:
                     {"cluster_id": cluster, "effective_sequence_count": count}
                     for cluster, count in item.profile_effective_counts
                 ],
+                "alignment_profiles": [{"cluster_id": cluster, "member_ids": list(members)}
+                                       for cluster, members in item.alignment_profiles],
+                "alignment_evidence": list(item.alignment_evidence),
             }
             for iteration, item in enumerate(profile_results, start=1)
         ]

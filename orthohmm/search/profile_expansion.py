@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import multiprocessing
 import os
-from concurrent.futures import FIRST_COMPLETED, ProcessPoolExecutor, wait
+from concurrent.futures import FIRST_COMPLETED, ProcessPoolExecutor, ThreadPoolExecutor, wait
 from dataclasses import dataclass
 from typing import Collection, Mapping, Sequence
 
@@ -60,6 +60,8 @@ class ProfileExpansionResult:
     significant_profile_hits: int
     calibrated_profiles: int = 0
     profile_effective_counts: tuple[tuple[int, float], ...] = ()
+    alignment_evidence: tuple[dict, ...] = ()
+    alignment_profiles: tuple[tuple[int, tuple[str, ...]], ...] = ()
 
 
 def load_global_sequence_database(
@@ -598,7 +600,21 @@ def compute_profile_self_thresholds(
     return thresholds
 
 
-def build_strict_profile_edges(
+@dataclass(frozen=True)
+class _ProfileAnchors:
+    genes: np.ndarray
+    profiles: np.ndarray
+    members: np.ndarray
+    anchor_scores: np.ndarray
+    profile_scores: np.ndarray
+
+
+def _empty_profile_anchors():
+    return _ProfileAnchors(*(np.empty(0, dtype=np.int32) for _ in range(3)),
+                           *(np.empty(0, dtype=np.float64) for _ in range(2)))
+
+
+def _select_strict_profile_anchors(
     gene_names: Sequence[str],
     clusters: Sequence[Sequence[int]],
     profile_hits: ProfileHits,
@@ -606,8 +622,8 @@ def build_strict_profile_edges(
     hit_queries,
     hit_targets,
     hit_scores,
-) -> IndexedEdges:
-    """Create one sequence-supported anchor for each strict profile candidate."""
+) -> _ProfileAnchors:
+    """Preserve the original best-profile and sequence-anchor selection."""
     n_genes = len(gene_names)
     cluster_by_gene = np.full(n_genes, -1, dtype=np.int32)
     member_rank = np.full(n_genes, np.iinfo(np.int32).max, dtype=np.int32)
@@ -620,7 +636,7 @@ def build_strict_profile_edges(
     candidate_genes = np.asarray(profile_hits.gene_ids, dtype=np.int32)
     profile_scores = np.asarray(profile_hits.scores, dtype=np.float64)
     if len(profile_ids) == 0:
-        return deduplicate_undirected_edges(gene_names, [], [], [])
+        return _empty_profile_anchors()
     thresholds = np.fromiter(
         (self_thresholds.get(int(profile_id), np.inf) for profile_id in profile_ids),
         dtype=np.float64,
@@ -631,7 +647,7 @@ def build_strict_profile_edges(
         & (profile_scores >= thresholds)
     )
     if not eligible.any():
-        return deduplicate_undirected_edges(gene_names, [], [], [])
+        return _empty_profile_anchors()
 
     eligible_rows = np.flatnonzero(eligible)
     best_scores = np.full(n_genes, -np.inf, dtype=np.float64)
@@ -682,7 +698,7 @@ def build_strict_profile_edges(
     anchor_members = np.concatenate((targets[outgoing], queries[reverse_rows]))
     anchor_scores = np.concatenate((scores[outgoing], scores[reverse_rows]))
     if len(anchor_genes) == 0:
-        return deduplicate_undirected_edges(gene_names, [], [], [])
+        return _empty_profile_anchors()
     best_anchor_scores = np.full(n_genes, -np.inf, dtype=np.float64)
     np.maximum.at(best_anchor_scores, anchor_genes, anchor_scores)
     tied_anchor_rows = np.flatnonzero(
@@ -700,12 +716,83 @@ def build_strict_profile_edges(
         anchor_genes[ordered_rows], return_index=True
     )
     selected_rows = ordered_rows[first]
-    return deduplicate_undirected_edges(
-        gene_names,
-        selected_genes,
-        anchor_members[selected_rows],
-        anchor_scores[selected_rows],
-    )
+    return _ProfileAnchors(selected_genes, selected_profile[selected_genes],
+                           anchor_members[selected_rows], anchor_scores[selected_rows],
+                           best_scores[selected_genes])
+
+
+def _trace_profile_anchors(anchors, gene_names, profiles, database, cpu):
+    """Trace only selected anchors with a bounded queue and stable output order."""
+    from .profile_spans import profile_alignment_span
+    if isinstance(cpu, (bool, np.bool_)) or not isinstance(cpu, (int, np.integer)) or cpu < 1:
+        raise ValueError("Profile alignment tracing requires a positive integer CPU budget")
+
+    def trace(index):
+        gene, cluster, member = (int(array[index]) for array in
+                                 (anchors.genes, anchors.profiles, anchors.members))
+        evidence = profile_alignment_span(profiles[cluster], database.get_sequence(gene),
+                                          expected_score=anchors.profile_scores[index])
+        return {"gene_id": gene, "gene_name": gene_names[gene], "profile_cluster_id": cluster,
+                "anchor_gene_id": member, "anchor_name": gene_names[member],
+                "anchor_score": float(anchors.anchor_scores[index]), **evidence.as_record()}
+
+    count = len(anchors.genes)
+    if count == 0:
+        return []
+    # Compile the selective Numba signature before worker threads enter it.
+    rows = [None] * count
+    rows[0] = trace(0)
+    workers = min(int(cpu), count - 1)
+    if workers <= 1:
+        for index in range(1, count):
+            rows[index] = trace(index)
+        return rows
+    indices = iter(range(1, count))
+    with ThreadPoolExecutor(max_workers=workers) as executor:
+        pending = {executor.submit(trace, index): index
+                   for index in (next(indices) for _ in range(min(2 * workers, count - 1)))}
+        while pending:
+            completed, _ = wait(pending, return_when=FIRST_COMPLETED)
+            for future in completed:
+                index = pending.pop(future)
+                rows[index] = future.result()
+                next_index = next(indices, None)
+                if next_index is not None:
+                    pending[executor.submit(trace, next_index)] = next_index
+    return rows
+
+
+def build_strict_profile_edges(
+    gene_names: Sequence[str],
+    clusters: Sequence[Sequence[int]],
+    profile_hits: ProfileHits,
+    self_thresholds: Mapping[int, float],
+    hit_queries,
+    hit_targets,
+    hit_scores,
+    alignment_policy: str = "off",
+    profiles: Mapping[int, MSAProfile] | None = None,
+    sequence_database: SpeciesSequences | None = None,
+    cpu: int = 1,
+    alignment_trace: list | None = None,
+) -> IndexedEdges:
+    """Create the original anchors, optionally removing poorly aligned links."""
+    from .profile_spans import validate_profile_alignment_policy
+    validate_profile_alignment_policy(alignment_policy)
+    if alignment_policy != "off" and (
+        profiles is None or sequence_database is None or not isinstance(alignment_trace, list)
+        or alignment_trace
+    ):
+        raise ValueError("Profile alignment guard requires profiles, sequences and an empty evidence list")
+    anchors = _select_strict_profile_anchors(gene_names, clusters, profile_hits, self_thresholds,
+                                            hit_queries, hit_targets, hit_scores)
+    keep = slice(None)
+    if alignment_policy != "off":
+        evidence = _trace_profile_anchors(anchors, gene_names, profiles, sequence_database, cpu)
+        alignment_trace.extend(evidence)
+        keep = np.array([row["passes_guard"] for row in evidence], dtype=bool)
+    return deduplicate_undirected_edges(gene_names, anchors.genes[keep],
+                                       anchors.members[keep], anchors.anchor_scores[keep])
 
 
 def expand_profiles(
@@ -724,8 +811,13 @@ def expand_profiles(
     min_profile_species: int = 1,
     calibrate_single_copy_profiles: bool = False,
     sequence_weighting: str = "none",
+    alignment_policy: str = "off",
 ) -> ProfileExpansionResult:
     """Run the complete strict profile-expansion stage."""
+    from .profile_spans import validate_profile_alignment_policy
+    validate_profile_alignment_policy(alignment_policy)
+    if alignment_policy != "off" and sequence_weighting != "none":
+        raise ValueError("Combined profile weighting and alignment guards require a separate experiment")
     os.environ["OMP_NUM_THREADS"] = str(cpu)
     sequence_database = load_global_sequence_database(
         fasta_directory, files, gene_names
@@ -763,6 +855,7 @@ def expand_profiles(
         calibrate_weakest_member=calibrate_profiles,
         calibration_profile_ids=calibration_profile_ids,
     )
+    alignment_trace = []
     edges = build_strict_profile_edges(
         gene_names,
         clusters,
@@ -771,6 +864,9 @@ def expand_profiles(
         hit_queries,
         hit_targets,
         hit_scores,
+        **({"alignment_policy": alignment_policy, "profiles": profiles,
+            "sequence_database": sequence_database, "cpu": cpu, "alignment_trace": alignment_trace}
+           if alignment_policy != "off" else {}),
     )
     return ProfileExpansionResult(
         edges=edges,
@@ -786,5 +882,10 @@ def expand_profiles(
             tuple((int(cluster), float(profile.effective_sequence_count))
                   for cluster, profile in sorted(profiles.items()))
             if sequence_weighting != "none" else ()
+        ),
+        alignment_evidence=tuple(alignment_trace),
+        alignment_profiles=tuple(
+            (cluster, tuple(profiles[cluster].member_ids))
+            for cluster in sorted({row["profile_cluster_id"] for row in alignment_trace})
         ),
     )

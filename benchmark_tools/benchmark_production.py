@@ -106,9 +106,15 @@ def parse_args(argv=None):
     parser.add_argument("--singleton-tie-policy", choices=("first_hit", "defer_ambiguous"), default="first_hit")
     from orthohmm.search.sequence_weights import PROFILE_SEQUENCE_WEIGHTING
     parser.add_argument("--profile-sequence-weighting", choices=PROFILE_SEQUENCE_WEIGHTING, default="none")
+    from orthohmm.search.profile_spans import PROFILE_ALIGNMENT_POLICIES
+    parser.add_argument("--profile-alignment-policy", choices=PROFILE_ALIGNMENT_POLICIES, default="off")
     parser.add_argument("--native-kernel-trace", type=Path,
                         help="Benchmark-only fail-closed CPU multipair route observation")
     args = parser.parse_args(argv)
+    if args.profile_alignment_policy != "off" and args.accuracy_profile != "high_sensitivity":
+        parser.error("--profile-alignment-policy requires --accuracy-profile high_sensitivity")
+    if args.profile_alignment_policy != "off" and args.profile_sequence_weighting != "none":
+        parser.error("Combined profile weighting and alignment guards require a separate experiment")
     if args.profile_sequence_weighting != "none" and args.accuracy_profile != "high_sensitivity":
         parser.error("--profile-sequence-weighting requires --accuracy-profile high_sensitivity")
     if args.search_candidate_policy != "single" and (
@@ -184,6 +190,8 @@ def main(argv=None) -> int:
         command.extend(["--singleton_tie_policy", args.singleton_tie_policy])
     if args.profile_sequence_weighting != "none":
         command.extend(["--profile-sequence-weighting", args.profile_sequence_weighting])
+    if args.profile_alignment_policy != "off":
+        command.extend(["--profile-alignment-policy", args.profile_alignment_policy])
     if not args.full_output:
         command.extend(["--stop", "infer"])
     if args.phylogeny == "reconcile":

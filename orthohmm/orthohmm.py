@@ -467,6 +467,14 @@ def _execute(
     profile_sequence_weighting = validate_profile_sequence_weighting(
         kwargs.pop("profile_sequence_weighting", "none")
     )
+    from .search.profile_spans import validate_profile_alignment_policy
+    profile_alignment_policy = validate_profile_alignment_policy(kwargs.pop("profile_alignment_policy", "off"))
+    if profile_alignment_policy != "off" and (
+        accuracy_config.name != "high_sensitivity" or search_mode != "builtin" or start is not None
+    ):
+        raise ValueError("Profile alignment guard requires fresh built-in high_sensitivity inference")
+    if profile_alignment_policy != "off" and profile_sequence_weighting != "none":
+        raise ValueError("Combined profile weighting and alignment guards require a separate experiment")
     if profile_sequence_weighting != "none" and (
         accuracy_config.name != "high_sensitivity" or search_mode != "builtin" or start is not None
     ):
@@ -554,6 +562,7 @@ def _execute(
         search_result_order=search_result_order,
         singleton_tie_policy=singleton_tie_policy,
         profile_sequence_weighting=profile_sequence_weighting,
+        profile_alignment_policy=profile_alignment_policy,
         leiden_seed=accuracy_config.leiden_seed,
         cpu_budget=cpu,
     )
@@ -830,7 +839,22 @@ def _execute(
                 **({"sequence_weighting": profile_sequence_weighting,
                     "gene_to_species": gene_to_species}
                    if profile_sequence_weighting != "none" else {}),
+                **({"alignment_policy": profile_alignment_policy} if profile_alignment_policy != "off" else {}),
             )
+            if profile_alignment_policy != "off":
+                alignment_path = os.path.join(working_dir, "profile_alignment_evidence.json")
+                with open(alignment_path, "w") as handle:
+                    json.dump({"policy": profile_alignment_policy,
+                        "profiles": [{"cluster_id": cluster, "member_ids": list(members)}
+                                     for cluster, members in profile_result.alignment_profiles],
+                        "anchors": list(profile_result.alignment_evidence)}, handle, indent=2)
+                    handle.write("\n")
+                metrics.add_metadata(profile_alignment_evidence=alignment_path)
+                metrics.add_counts(
+                    high_sensitivity_alignment_traced=len(profile_result.alignment_evidence),
+                    high_sensitivity_alignment_rejected=sum(
+                        not row["passes_guard"] for row in profile_result.alignment_evidence),
+                )
             if profile_sequence_weighting != "none":
                 diagnostics_path = os.path.join(working_dir, "profile_sequence_weighting.json")
                 with open(diagnostics_path, "w") as handle:

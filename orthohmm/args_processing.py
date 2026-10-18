@@ -17,6 +17,7 @@ from .files import fetch_fasta_files
 from .accuracy import resolve_accuracy_profile, resolve_search_candidate_cap, validate_search_result_order, resolve_search_min_total_hits, validate_singleton_tie_policy
 from .accuracy import resolve_search_candidate_policy
 from .search.sequence_weights import validate_profile_sequence_weighting
+from .search.profile_spans import validate_profile_alignment_policy
 from .refinement import PHYLOGENY_CANDIDATE_REFINEMENT_PROFILES
 from .phylogeny import (
     PhylogenyConfig,
@@ -129,6 +130,13 @@ def process_args(args) -> dict:
         profile_sequence_weighting = validate_profile_sequence_weighting(
             getattr(args, "profile_sequence_weighting", "none")
         )
+        profile_alignment_policy = validate_profile_alignment_policy(getattr(args, "profile_alignment_policy", "off"))
+        if profile_alignment_policy != "off" and (
+            accuracy_profile != "high_sensitivity" or search_mode != "builtin" or args.start
+        ):
+            raise ValueError("Profile alignment guard requires fresh built-in high_sensitivity inference")
+        if profile_alignment_policy != "off" and profile_sequence_weighting != "none":
+            raise ValueError("Combined profile weighting and alignment guards require a separate experiment")
         if profile_sequence_weighting != "none" and (
             accuracy_profile != "high_sensitivity" or search_mode != "builtin" or args.start
         ):
@@ -303,6 +311,7 @@ def process_args(args) -> dict:
         **({"search_min_total_hits": search_min_total_hits} if search_min_total_hits != 4 else {}),
         **({"search_candidate_policy": search_candidate_policy} if search_candidate_policy != "single" else {}),
         **({"profile_sequence_weighting": profile_sequence_weighting} if profile_sequence_weighting != "none" else {}),
+        **({"profile_alignment_policy": profile_alignment_policy} if profile_alignment_policy != "off" else {}),
         **({"search_max_candidates_per_query": search_cap_override}
            if search_cap_override is not None else {}),
     )
