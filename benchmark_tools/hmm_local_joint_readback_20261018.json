@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "prespecified_execution_readback_before_local_final_accuracy_scoring",
+  "parent": "benchmark_tools/hmm_local_joint_rescue_20261018.json",
+  "hypothesis": "Unchanged original local_joint_v1 hypothesis and gates; this specifies evidence validation/cache delivery, not a new intervention or parameter search.",
+  "launch_revision": "a80e10d45b3914d418e89ad810411ef4baaedd65",
+  "ledger": "benchmark_tools/results/hmm_evidence_campaign_status_20261018.json",
+  "original_scientific_revision": "8c4ddfb7bb7dbff7f56fabed91788df725f33367",
+  "readback": [
+    "Bind the completed original probe to its immutable committed launch plan, producer/case/proposal records, terminal scheduler evidence, exact complete input/FASTA/checkpoint/source/runtime/tool pins, and original unchanged CPU libraries. Preserve the failedv1 and successfulv2 namespaces.",
+    "Authenticate reader scientific compatibility against the original probe checkout: all existing OrthoHMM Python files and the original probe/replay drivers must remain identical, except the unused expand_profiles function may contain the later explicit HMMER hook. Compare the remaining profile_expansion module AST exactly. New selective-only modules may exist but may not change local readback scoring or inference.",
+    "Repeat complete-proteome nomination from original candidate families and original initial-hit arrays, comparing the entire nomination object including exclusions and order. Repeat the two unweighted family profile builds, original CPU scores, full-database significance and aligned-span decisions for every selected context, including rejections. Compare full recorded profile evidence; do not cherry-pick six accepted contexts.",
+    "For every profile-supported context, authenticate the source raw tree, source input/config hash, tokenized candidate FASTA, alignment ownership, original checkpoint hashes and baseline species-tree identity. In a fresh readback directory, reroot/reconcile that exact raw tree through the ordinary native reconciler, apply intact original membership constraints and recompute the joint gate. Require checkpoint reuse; never infer a replacement tree to make readback pass. Compare joint admission, constraint audit, token mapping and resulting tree hashes.",
+    "Rebuild the complete effective candidate partition from all independently checked proposals in a fresh namespace. Require exact bytes versus the producer, intact original constraints and full unique ownership. Record original versus effective family counts and accepted context IDs; no official pairs or OGs are manually appended."
+  ],
+  "composite_cache": [
+    "Copy the authenticated baseline phylogeny cache into a fresh cache namespace without changing its files. Include only independently accepted local raw-tree/checkpoint pairs; use distinct context identifiers, reject collisions and verify every copied file hash.",
+    "Validate the composite through the existing raw-tree loader and require compatible records for every accepted complete joint gene set. Preserve provenance to the source context and original baseline cache. Do not replace baseline raw trees with rejected contexts or copy a provisional species-tree inference cache over the baseline cache."
+  ],
+  "final_native": [
+    "Run off first through the original ordinary native replay using original candidates/constraints/cache. Require exact canonical native products/rooted species tree and original official/independent OG precision/recall/F1 before interpreting local_joint_v1.",
+    "Run local_joint_v1 with the read-back effective partition, unchanged constraints and authenticated composite cache. Infer the final global species tree normally; provisional baseline-tree preservation does not imply final monotonicity. Validate complete gene/root/candidate/pair ownership with existing native readback, not only producer counts.",
+    "Report provisional versus final high-pair preservation, native pair/confidence turnover, canonical root-OG membership turnover, final species-tree change and cache/replay costs separately from OG accuracy. Recompute the original strict F1-improvement and precision/recall0.005 gates, preserving negative/inactive/failure results."
+  ],
+  "evaluation": "OrthoBench primary pilot with complete251378-gene/12-species universe. Original corrected-QfO/Three Kingdoms extension only after an independently admitted passing point gate. Eight endpoint slots remain explicit, and no defaults or generalizability claim follow from provisional rescue alone. Post-run paired-family uncertainty uses the already recorded100000-replicate/seed20261018 descriptive method; existing panels remain development-exposed.",
+  "resources": {"host": "local shared Threadripper/bizon", "cpus": 16, "memory_gib": 128, "wall_limit": "1-00:00:00", "concurrent_new_scientific_runs": 1, "cuda": false, "dgx_required": false, "quiet_window_required": false, "unrelated_jobs": "untouched", "timing": "Separate nomination/profile readback, cached local reconciliation, composite preparation and final native replay/scoring; descriptive shared-host incremental timing, not isolated fresh full-pipeline timing"},
+  "git": "Push this readback specification before implementation; then commit/push tested reader/cache/runner milestones, immutable execution manifests and admitted results. Stage only task-owned paths and verify remote synchronization.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}
