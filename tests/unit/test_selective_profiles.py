@@ -473,3 +473,98 @@ def test_empty_active_stage_is_explicit_not_a_fabricated_accuracy_comparison(rea
     edges, report = selective_profile_edges(*args, database, mode="builtin_reselect", output_directory=tmp_path / "empty")
     assert len(edges) == report["selected_queries"] == report["completely_measured_queries"] == 0
     assert not report["decisions"] and not report["measurements"]
+
+
+@pytest.mark.parametrize("options", [
+    {"sequence_weighting": "henikoff"}, {"alignment_policy": "strict_span_guard"},
+    {"calibrate_weakest_member": True}, {"calibrate_single_copy_profiles": True},
+    {"min_profile_species": 2}, {"selective_evidence": ["existing"]},
+])
+def test_expansion_rejects_unprespecified_combinations_before_loading_sequences(options, tmp_path):
+    from orthohmm.search.profile_expansion import expand_profiles
+    keywords = {"selective_mode": "builtin_reselect", "selective_evidence": [],
+                "selective_output_directory": tmp_path / "unused", **options}
+    with pytest.raises(ValueError):
+        expand_profiles([], [], "/missing", [], "BLOSUM62", 1, 1e-4, [], [], [], **keywords)
+    assert not (tmp_path / "unused").exists()
+
+
+@pytest.mark.parametrize("mode", ["builtin_reselect", "hmmer_score_only", "hmmer_reselect"])
+def test_real_profile_expansion_hook_records_identical_nonempty_pool(real_stage, tmp_path, mode):
+    from Bio import SeqIO
+    from Bio.Seq import Seq
+    from Bio.SeqRecord import SeqRecord
+    from orthohmm.search.profile_expansion import expand_profiles, _decode_sequence
+    args, database = real_stage
+    if mode.startswith("hmmer") and (not shutil.which("hmmbuild") or not shutil.which("hmmsearch")):
+        pytest.skip("Requires real HMMER3.4 tools")
+    SeqIO.write([SeqRecord(Seq(_decode_sequence(database.get_sequence(g))), id=name, description="")
+                 for g, name in enumerate(args[0])], tmp_path / "input.fa", "fasta")
+    common = (args[1], args[0], str(tmp_path), ["input.fa"], "BLOSUM62", 2, 1e-4, *args[5:])
+    control = expand_profiles(*common)
+    evidence = []
+    result = expand_profiles(*common, selective_mode=mode, selective_output_directory=tmp_path / mode,
+                              selective_evidence=evidence)
+    assert result.profiles_built == control.profiles_built == 2
+    assert result.significant_profile_hits == control.significant_profile_hits > 0
+    assert len(evidence) == 1 and evidence[0]["selected_queries"] > 0
+    assert evidence[0]["completely_measured_queries"] > 0
+    if mode == "hmmer_score_only":
+        for key in ("sources", "targets", "weights"):
+            assert getattr(result.edges, key).tobytes() == getattr(control.edges, key).tobytes()
+    assert result.profile_effective_counts == control.profile_effective_counts
+
+
+@pytest.mark.parametrize("extra", [
+    ["--profile-sequence-weighting", "henikoff"], ["--profile-alignment-policy", "strict_span_guard"],
+    ["--profile-iterations", "2"], ["--jackknife-profile-thresholds"], ["--jackknife-single-copy-profiles"],
+    ["--profile-min-species", "2"], ["--matrix", "BLOSUM45"], ["--cpu", "32"],
+    ["--leiden-seed", "5"], ["--cpm-resolution", ".2"], ["--singleton-tie-policy", "defer_ambiguous"],
+])
+def test_replay_rejects_incompatible_settings_before_outputs(tmp_path, monkeypatch, extra):
+    from benchmark_tools.replay_high_sensitivity import main
+    monkeypatch.setenv("CUDA_VISIBLE_DEVICES", "")
+    output = tmp_path / "must_not_exist"
+    with pytest.raises(SystemExit, match="original fixed baseline"):
+        main(["--hits-pickle", "missing", "--fasta-directory", "missing", "--output-directory", str(output),
+              "--json", str(tmp_path / "result.json"), "--cpu", "2", "--selective-profile-mode", "hmmer_reselect", *extra])
+    assert not output.exists()
+
+
+def test_actual_numeric_graph_replay_measurement_control_preserves_all_partitions(real_stage, tmp_path):
+    from Bio import SeqIO
+    from Bio.Seq import Seq
+    from Bio.SeqRecord import SeqRecord
+    from benchmark_tools.replay_high_sensitivity import main
+    from benchmark_tools.prepare_ob_candidate_neighborhood import record
+    from orthohmm.accuracy import write_accuracy_checkpoint
+    from orthohmm.search.profile_expansion import _decode_sequence
+    if not shutil.which("hmmbuild") or not shutil.which("hmmsearch"):
+        pytest.skip("Requires real HMMER3.4 tools")
+    args, database = real_stage
+    fasta = tmp_path / "input"
+    fasta.mkdir()
+    for species in range(3):
+        SeqIO.write([SeqRecord(Seq(_decode_sequence(database.get_sequence(g))), id=name, description="")
+            for g, name in enumerate(args[0]) if g % 3 == species], fasta / f"species{species}.faa", "fasta")
+    pairs = {(g, g): 100. for g in range(len(args[0]))}
+    for group in args[1][:2]:
+        pairs.update({(g, h): 30. for g in group for h in group if g != h})
+    pairs.update({(int(q), int(t)): float(s) for q, t, s in zip(*args[5:])})
+    checkpoint = write_accuracy_checkpoint(str(tmp_path / "checkpoint"), args[0],
+        [g % 3 for g in range(len(args[0]))], [q for q, t in pairs], [t for q, t in pairs], list(pairs.values()))
+    checksum = record(checkpoint / "manifest.json")["sha256"]
+    reports = {}
+    for mode in ("off", "hmmer_score_only"):
+        folder = tmp_path / mode
+        report = tmp_path / (mode + ".json")
+        assert main(["--accuracy-checkpoint", str(checkpoint), "--checkpoint-sha256", checksum,
+            "--fasta-directory", str(fasta), "--output-directory", str(folder), "--json", str(report),
+            "--cpu", "2", "--selective-profile-mode", mode]) == 0
+        reports[mode] = json.loads(report.read_text())
+    for path in (tmp_path / "off").glob("orthogroups*.txt"):
+        assert path.read_bytes() == (tmp_path / "hmmer_score_only" / path.name).read_bytes()
+    assert reports["hmmer_score_only"]["counts"] == reports["off"]["counts"]
+    assert "selective_profile_evidence" not in reports["off"]
+    actual, = reports["hmmer_score_only"]["selective_profile_evidence"]
+    assert actual["measurement_only"] and not actual["applied_changed_query_anchors"]

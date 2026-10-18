@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "status": "experimental_graph_replay_hook_tested_final_native_and_biological_panel_pending",
+  "protocol": "benchmark_tools/hmm_selective_hmmer_20261018.json",
+  "package_milestone_revision": "9655169b057fadc5f0336adf4e9fc6db8dd14d1f",
+  "package_push": "git ls-remote verified origin/main equals9655169b before the replay milestone commit",
+  "implementation": ["orthohmm/search/profile_expansion.py", "benchmark_tools/replay_high_sensitivity.py"],
+  "interface": "Explicit --selective-profile-mode off|builtin_reselect|hmmer_score_only|hmmer_reselect on the experimental replay. Active expansion requires fresh evidence and original unweighted/uncalibrated BLOSUM62 settings, strict1e-4 cutoff and CPU-only1..16 CPUs. Replay additionally fixes one profile iteration, seed4, CPM0.1 and historical singleton ties. Default production API/CLI are not given a new option; ordinary default calls and result shapes remain unchanged.",
+  "tests": {"path": "benchmark_tools/results/selective_profile_replay_combined_tests_20261018.xml", "sha256": "38a40894b6a6061cd2289a638a5dfc73690626b7109e43b58c15c1c648d340f3", "passed": 455, "failures": 0, "errors": 0, "skipped": 0, "scope": "Twelve overlapping selector/profile/replay/local/HMMER/pilot/readback modules. Do not sum overlapping counts as independent coverage."},
+  "focused_tests": {"path": "benchmark_tools/results/selective_profile_replay_tests_20261018.xml", "sha256": "2de4bd4d1787797831405880446dae43a93afcbf0ecfb2624d6e4d0cd405c1a1", "passed": 177},
+  "actual_integration": "Complete actual native profile construction, prefilter and search invoke each active arm on the same small protein fixture with nonempty selected and completely measured query pools. The HMMER measurement arm preserves default strict-edge arrays exactly. A separate actual numeric-checkpoint graph replay runs historical graph clustering/refinement and verifies byte-identical orthogroup partitions and equal counts between off and hmmer_score_only. That full-graph fixture is a compatibility control; nonempty activation is independently required in the real expansion fixture. Existing ordinary-native tests also pass but do not establish new HMMER final-native integration.",
+  "remaining": "Implement/test the four-arm authenticated final native/benchmark runner, freeze source/input/runtime manifests, probe complete-proteome applicability and run bounded OrthoBench evaluation. Independently read back controls, activation, native ownership/products/pair turnover and scores; apply original gates, retaining failures/inactivity and NA endpoints. Extend advancing arms unchanged to QfO/Three Kingdoms only after admission. No biological accuracy or default-promotion claim from these fixtures.",
+  "defaults_promoted": false,
+  "biological_accuracy_evaluated": false,
+  "goal_completed": false
+}

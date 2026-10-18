@@ -124,6 +124,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--profile-sequence-weighting", choices=PROFILE_SEQUENCE_WEIGHTING, default="none")
     from orthohmm.search.profile_spans import PROFILE_ALIGNMENT_POLICIES
     parser.add_argument("--profile-alignment-policy", choices=PROFILE_ALIGNMENT_POLICIES, default="off")
+    parser.add_argument("--selective-profile-mode", choices=("off", "builtin_reselect", "hmmer_score_only", "hmmer_reselect"), default="off")
     parser.add_argument(
         "--profile-iterations",
         type=int,
@@ -161,6 +162,15 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv=None) -> int:
     args = build_parser().parse_args(argv)
+    if args.selective_profile_mode != "off" and (
+        not args.fasta_directory or args.matrix != "BLOSUM62" or not 1 <= args.cpu <= 16
+        or args.profile_sequence_weighting != "none" or args.profile_alignment_policy != "off"
+        or args.jackknife_profile_thresholds or args.jackknife_single_copy_profiles
+        or args.profile_min_species != 1 or args.profile_iterations != 1
+        or args.singleton_tie_policy != "first_hit" or args.cpm_resolution != 0.1 or args.leiden_seed != 4
+        or os.environ.get("CUDA_VISIBLE_DEVICES") != ""
+    ):
+        raise SystemExit("Selective profile pilot requires original fixed baseline settings, sequences and CPU-only1..16 CPUs")
     if args.profile_alignment_policy != "off" and not args.fasta_directory:
         raise SystemExit("--profile-alignment-policy requires --fasta-directory")
     if args.profile_alignment_policy != "off" and args.profile_sequence_weighting != "none":
@@ -250,6 +260,7 @@ def main(argv=None) -> int:
     )
 
     profile_results = []
+    selective_evidence = []
     profile_stage_paths = []
     profile_edges = None
     profile_base_edges = rbnh_edges
@@ -280,6 +291,10 @@ def main(argv=None) -> int:
                    if args.profile_sequence_weighting != "none" else {}),
                 **({"alignment_policy": args.profile_alignment_policy}
                    if args.profile_alignment_policy != "off" else {}),
+                **({"selective_mode": args.selective_profile_mode,
+                    "selective_output_directory": args.output_directory / "selective_profiles",
+                    "selective_evidence": selective_evidence}
+                   if args.selective_profile_mode != "off" else {}),
             )
             profile_results.append(profile_result)
             profile_base_edges = combine_edges(
@@ -407,6 +422,9 @@ def main(argv=None) -> int:
         "peak_process_rss_gib": round(max_rss_kib / (1024 ** 2), 6),
         "stages": stages,
     }
+    if args.selective_profile_mode != "off":
+        result["parameters"]["selective_profile_mode"] = args.selective_profile_mode
+        result["selective_profile_evidence"] = selective_evidence
     if profile_results:
         result["counts"].update({
             "profiles_built": sum(

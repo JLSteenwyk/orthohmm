@@ -812,12 +812,28 @@ def expand_profiles(
     calibrate_single_copy_profiles: bool = False,
     sequence_weighting: str = "none",
     alignment_policy: str = "off",
+    selective_mode: str = "off",
+    selective_output_directory=None,
+    selective_evidence: list | None = None,
 ) -> ProfileExpansionResult:
     """Run the complete strict profile-expansion stage."""
     from .profile_spans import validate_profile_alignment_policy
     validate_profile_alignment_policy(alignment_policy)
     if alignment_policy != "off" and sequence_weighting != "none":
         raise ValueError("Combined profile weighting and alignment guards require a separate experiment")
+    if selective_mode not in ("off", "builtin_reselect", "hmmer_score_only", "hmmer_reselect"):
+        raise ValueError("Unknown selective profile mode")
+    if selective_mode != "off" and (
+        alignment_policy != "off" or sequence_weighting != "none" or calibrate_weakest_member
+        or calibrate_single_copy_profiles or min_profile_species != 1
+        or matrix_name != "BLOSUM62" or evalue_threshold != 0.0001
+        or selective_output_directory is None or not isinstance(selective_evidence, list) or selective_evidence
+        or isinstance(cpu, (bool, np.bool_)) or not isinstance(cpu, (int, np.integer)) or not 1 <= cpu <= 16
+        or os.environ.get("CUDA_VISIBLE_DEVICES") != ""
+    ):
+        raise ValueError("Selective pilot requires original BLOSUM62/unweighted/uncalibrated settings and fresh evidence")
+    if selective_mode == "off" and (selective_output_directory is not None or selective_evidence is not None):
+        raise ValueError("Selective evidence requires an active experimental mode")
     os.environ["OMP_NUM_THREADS"] = str(cpu)
     sequence_database = load_global_sequence_database(
         fasta_directory, files, gene_names
@@ -856,18 +872,27 @@ def expand_profiles(
         calibration_profile_ids=calibration_profile_ids,
     )
     alignment_trace = []
-    edges = build_strict_profile_edges(
-        gene_names,
-        clusters,
-        profile_hits,
-        self_thresholds,
-        hit_queries,
-        hit_targets,
-        hit_scores,
-        **({"alignment_policy": alignment_policy, "profiles": profiles,
-            "sequence_database": sequence_database, "cpu": cpu, "alignment_trace": alignment_trace}
-           if alignment_policy != "off" else {}),
-    )
+    if selective_mode == "off":
+        edges = build_strict_profile_edges(
+            gene_names,
+            clusters,
+            profile_hits,
+            self_thresholds,
+            hit_queries,
+            hit_targets,
+            hit_scores,
+            **({"alignment_policy": alignment_policy, "profiles": profiles,
+                "sequence_database": sequence_database, "cpu": cpu, "alignment_trace": alignment_trace}
+               if alignment_policy != "off" else {}),
+        )
+    else:
+        from .selective_profiles import selective_profile_edges
+        edges, evidence = selective_profile_edges(
+            gene_names, clusters, profiles, profile_hits, self_thresholds,
+            hit_queries, hit_targets, hit_scores, sequence_database,
+            mode=selective_mode, output_directory=selective_output_directory, cpu=cpu,
+        )
+        selective_evidence.append(evidence)
     return ProfileExpansionResult(
         edges=edges,
         profiles_built=len(profiles),
