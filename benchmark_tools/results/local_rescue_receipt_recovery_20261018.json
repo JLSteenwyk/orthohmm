@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "status": "receipt_only_recovery_tested_before_fresh_attempt",
+  "failed_attempt": {"job_id": "24483", "state": "FAILED", "exit_code": "1:0", "elapsed": "00:03:13", "output": "benchmarks/results/local_joint_rescue_v1_20261018", "source_revision": "7e7b60201dda1889b250542236c0eda99f63f3e1"},
+  "failure": "Strict JSON serialization rejected Infinity in an original optional membership-constraint margin at context6. Five preceding contexts completed, including two actual joint trees; no prefix context was accepted. This is not a complete negative biological result.",
+  "fix": "Recursively tag nonfinite values in the constraint evidence copy only. Pass original constraints unchanged to reconciliation. Keep strict finite JSON for all profile/tree scores and other result fields. No scientific rule, parameter, source profile, candidate selection or native policy changes.",
+  "tests": {"path": "benchmark_tools/results/local_rescue_constraint_receipt_tests_20261018.xml", "sha256": "0cf6aeb8c5610e99c4bd4ed0f15276868b48732fd4076c96587eb74345c2a398", "passed": 345, "failures": 0, "errors": 0, "skipped": 0, "scope": "Nine overlapping local, profile, HMMER, pilot, follow-up and readback modules. Five new regression cases cover positive/negative Infinity and NaN diagnostics, nested/finite values, actual MAFFT/FastTree reconciliation receiving the identical original constraint, and scientific NaNs remaining errors. Do not sum overlapping receipt counts as independent coverage."},
+  "recovery": "Preserve immutable v1 source and outputs. Freeze the committed fix, prepare a fresh v2 execution plan, and rerun the same bounded applicability protocol. Never overwrite or reinterpret the failed prefix as a completed panel.",
+  "defaults_promoted": false,
+  "accuracy_evaluated": false,
+  "goal_completed": false
+}

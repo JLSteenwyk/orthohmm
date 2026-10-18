@@ -421,6 +421,18 @@ def _context_constraints(constraints, groups):
     return selected
 
 
+def _constraint_evidence(value):
+    """Encode legacy diagnostic nonfinites without modifying inference inputs."""
+    if isinstance(value, float) and not math.isfinite(value):
+        label = "nan" if math.isnan(value) else "positive_infinity" if value > 0 else "negative_infinity"
+        return {"nonfinite_constraint_diagnostic": label}
+    if isinstance(value, dict):
+        return {key: _constraint_evidence(item) for key, item in value.items()}
+    if isinstance(value, (tuple, list)):
+        return [_constraint_evidence(item) for item in value]
+    return value
+
+
 def evaluate_local_context(context, gene_names, sequence_database, gene_species, sequences,
                            species_tree_path, proteome_files, config, output_directory,
                            constraints, baseline_high_pairs, *, cpu=1):
@@ -469,7 +481,9 @@ def evaluate_local_context(context, gene_names, sequence_database, gene_species,
     result = {"schema_version": 1, "context": context, "profile_validation": None,
               "accepted": False, "status": "profile_validation_running", "tree_inferred": False,
               "species_tree": {"path": str(validated.path.resolve()), "sha256": _sha256_file(validated.path)},
-              "constraints": selected_constraints, "families_merged": False, "final_native_inference": False}
+              "constraints": _constraint_evidence(selected_constraints),
+              "constraint_evidence_encoding": "Only legacy constraint diagnostic nonfinites are tagged. Inference receives the original unmodified constraints; profile/tree scores remain strict finite JSON.",
+              "families_merged": False, "final_native_inference": False}
     receipt = directory / "proposal.json"
     _atomic_write(receipt, json.dumps(result, indent=2, sort_keys=True, allow_nan=False) + "\n")
     try:

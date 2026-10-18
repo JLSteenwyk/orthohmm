@@ -2,6 +2,7 @@ from copy import deepcopy
 import csv
 from dataclasses import replace
 import json
+import math
 import shutil
 
 import numpy as np
@@ -219,6 +220,55 @@ def test_failed_context_keeps_a_terminal_failure_receipt(tmp_path, monkeypatch, 
     assert not receipt["accepted"] and not receipt["tree_inferred"]
     assert receipt["error"] == {"type": "RuntimeError", "message": "controlled tool failure"}
     assert not receipt["families_merged"]
+
+
+@pytest.mark.parametrize("value,label", [(float("inf"), "positive_infinity"),
+    (float("-inf"), "negative_infinity"), (float("nan"), "nan")])
+def test_legacy_constraint_diagnostics_are_json_safe_without_changing_runtime_constraints(tmp_path, monkeypatch, value, label):
+    import orthohmm.local_rescue as local
+    args = workflow_arguments(tmp_path, unrelated=True)
+    constraint = {"source_genes": ["a1"], "target_genes": ["a2"], "margin": value,
+                  "nested_diagnostic": [value, {"value": value}], "finite_diagnostic": 1.5}
+    args[9] = [constraint]
+    # A profile rejection still has to serialize its original constraint audit.
+    result = evaluate_local_context(*args)
+    encoded = {"nonfinite_constraint_diagnostic": label}
+    assert result["constraints"][0]["margin"] == encoded
+    assert result["constraints"][0]["nested_diagnostic"] == [encoded, {"value": encoded}]
+    assert result["constraints"][0]["finite_diagnostic"] == 1.5
+    assert result["constraints"][0]["source_genes"] == ["a1"]
+    assert math.isnan(constraint["margin"]) if label == "nan" else constraint["margin"] == value
+    assert json.loads((args[8] / "proposal.json").read_text()) == result
+    assert not result["tree_inferred"] and not result["accepted"]
+    assert local._context_constraints(args[9], [args[0]["genes_a"], args[0]["genes_b"]])[0] is constraint
+
+
+def test_scoring_nonfinite_is_not_hidden_by_constraint_diagnostic_encoding(tmp_path, monkeypatch):
+    import orthohmm.local_rescue as local
+    args = workflow_arguments(tmp_path, unrelated=True)
+    monkeypatch.setattr(local, "validate_local_profiles", lambda *a, **kw: {"accepted": False, "score": float("nan")})
+    with pytest.raises(ValueError, match="JSON compliant"):
+        evaluate_local_context(*args)
+
+
+@pytest.mark.skipif(not shutil.which("mafft") or not shutil.which("FastTree"), reason="Requires real tree tools")
+def test_original_infinite_diagnostic_reaches_actual_reconciliation_unchanged(tmp_path, monkeypatch):
+    import orthohmm.phylogeny_pipeline as pipeline
+    args = workflow_arguments(tmp_path)
+    original = pipeline.apply_satellite_membership_constraints
+    constraint = {"source_genes": ["a1"], "target_genes": ["a2"], "margin": float("inf")}
+    args[9] = [constraint]
+    calls = []
+    def observed(outcomes, constraints, *a, **kw):
+        calls.append(constraints)
+        return original(outcomes, constraints, *a, **kw)
+    monkeypatch.setattr(pipeline, "apply_satellite_membership_constraints", observed)
+    result = evaluate_local_context(*args)
+    assert result["tree_inferred"] and result["status"] == "joint_tree_evaluated"
+    assert calls == [[constraint]] and calls[0][0] is constraint
+    assert calls[0][0]["margin"] == float("inf")
+    assert result["constraints"][0]["margin"] == {"nonfinite_constraint_diagnostic": "positive_infinity"}
+    json.dumps(result, allow_nan=False)
 
 
 def proposal_fixture(context, accepted=True):
