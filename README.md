@@ -103,6 +103,41 @@ existing group member and receive a sequence-supported anchor before they can
 change a cluster. The profile currently requires the built-in search and
 Leiden clustering. The default `standard` profile is unchanged.
 
+**Profile evidence experiments.** Fresh built-in high-sensitivity runs can
+opt into `--profile-sequence-weighting`:
+
+| Mode | Relative weights | Effective sequence count |
+| --- | --- | --- |
+| `none` (default) | Uniform | Actual number of sequences |
+| `henikoff` | Position-based, adjusted for nonmissing sequence length | Actual number of sequences |
+| `henikoff_cluster` | Same position-based weights | Experimental single-linkage cluster count at aligned identity 0.62 |
+| `species_henikoff_cluster` | Position-based, then equal total weight per species with usable residues | Same experimental cluster count |
+
+For example, to request the experimental actual-count weighting mode:
+
+```shell
+orthohmm proteomes/ --accuracy_profile high_sensitivity \
+  --profile-sequence-weighting henikoff
+```
+
+Nondefault weighting is unsupported when restarting from existing search
+results. It changes profile residue counts, not the initial search; each
+weighted profile gets its own weakest-member threshold and still requires a
+sequence-supported recruitment anchor. These simplified profiles and cluster
+counts are not HMMER's standard profile construction or entropy weighting.
+The output's `orthohmm_working_res/profile_sequence_weighting.json` records
+the mode and each built profile's effective count. Small development-panel
+gains do not establish generalization or make these modes recommended defaults.
+
+The separate `--profile-alignment-policy strict_span_guard` experiment also
+requires fresh built-in high-sensitivity inference and cannot be combined
+with nondefault weighting. Its fixed OrthoBench pilot failed the advancement
+gate; retain it as an experimental option, not a recommended default.
+Local joint-tree rescue and selective HMMER validation currently use package
+helpers and explicit benchmark workflows, not main-CLI options. See the
+[HMM evidence campaign guide](benchmark_tools/README.md#hmm-evidence-campaign)
+for frozen protocols, controls, result validation and reproduction scope.
+
 **Protected candidate union (experimental).** The development checkout also
 provides `--search-candidate-policy protected_union` for fresh built-in
 high-sensitivity searches with canonical result collection and a fixed

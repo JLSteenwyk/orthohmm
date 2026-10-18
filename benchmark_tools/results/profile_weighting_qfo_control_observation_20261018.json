@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "status": "qfo_none_producer_control_gate_corroborated_weighted_panel_incomplete",
+  "job": {"job_id": "24490", "last_observed_state": "RUNNING", "last_observed_elapsed": "01:15:49", "arms": [{"label": "none", "status": "native_and_score_independently_verified"}, {"label": "henikoff", "status": "graph_running"}]},
+  "scientific_revision": "620bfdf91d3d1b8c3a5d054df36b0f199c11de55",
+  "driver_revision": "6e684fb2d050563d03578d636e3de9325ecec73c",
+  "execution_plan": {"path": "benchmarks/results/profile_weighting_followup_qfo_v1_20261018/execution_plan.json", "bytes": 82164197, "sha256": "f413d9685d667dc94a677a0d96ab0c73db9055d0bb1e50a95dac02ca4fc339e0"},
+  "producer": "benchmarks/results/profile_weighting_followup_qfo_v1_20261018/results.json",
+  "producer_scope": "The live producer continues changing as later arms execute. Stable completed-control artifacts below, rather than a checksum of this changing producer, identify the observation. The original immutable plan and separate post-run reader remain authoritative for final panel admission.",
+  "control": {"genes": 984137, "species": 78, "profiles_built": 57967, "weighted_profiles": 0, "strict_profile_edges": 99353, "root_hogs": 365733, "ortholog_pairs": 5953050, "gene_tree_checkpoint_hits": 24295, "remapped_checkpoint_hits": 0, "species_tree_checkpoint_hit": true},
+  "scores": {"QfO: VGNC F": 0.9020677639723076, "QfO: SwissTrees F": 0.831347705694284, "QfO: TreeFam-A F": 0.6157780611844207, "QfO: EC": 0.96538176, "QfO: GO": 0.49023637, "QfO: FAS": 0.7637247098243404},
+  "direct_checks": {"producer_checked_content_records_rechecked": 107, "candidate_control": "candidate_control_matches requires exact canonical candidate/constraint bytes", "native_control": "compare_golden requires exact canonical root-HOG, pair, confidence and rooted species-tree bytes, matching the producer's all-true golden_matches", "scores": "All six metric_vector values exactly equal the original admitted canonical control vector in the launched plan", "limits": "Fresh direct content/identity checks corroborate the producer gate. This observation does not repeat every raw scorer algorithm, admit weighted outcomes, replace terminal-success post-run reader24500 or establish new accuracy improvement."},
+  "stable_artifacts": [
+    {"path": "benchmarks/results/profile_weighting_followup_qfo_v1_20261018/none/preflight.json", "bytes": 2892, "sha256": "f49db63a5564fab83e2e5ec0ea4bd6b6f07007008027743ed8db6e92634748bc"},
+    {"path": "benchmarks/results/profile_weighting_followup_qfo_v1_20261018/none/graph_metrics.json", "bytes": 6043, "sha256": "bf5f31b2ae263407e3d66944bbb1a00d4db6dd1c5222014c4c41815bed38a1b5"},
+    {"path": "benchmarks/results/profile_weighting_followup_qfo_v1_20261018/none/native_metrics.json", "bytes": 9308, "sha256": "bcbe1e438a7bcfae029d7a17db27cde1485f28c614a8f603b62f703bb5e847e5"},
+    {"path": "benchmarks/results/profile_weighting_followup_qfo_v1_20261018/none/graph.time.txt", "bytes": 1767, "sha256": "c6d5d455b39fa606bb3e630014f7ca2dd1a28309e03cfce6828dc3afac23ba20"},
+    {"path": "benchmarks/results/profile_weighting_followup_qfo_v1_20261018/none/native.time.txt", "bytes": 2184, "sha256": "8b9dfae3466fae125e1408ff45db9e71ce3004462774aafb353b1470fb508b5a"}
+  ],
+  "compact_record_verification": "Paths in this compact committed record are repository-relative. Resolve them against the repository and compare only path/bytes/sha256 to the absolute three-field content helper. An initial direct comparison without that normalization rejected the plan path; after normalization all seven recorded plan/artifact/assessment identities matched. This was a metadata representation issue, not a source change or failed biological run.",
+  "scoring_reuse": {"path": "benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014/results.json", "bytes": 165173207, "sha256": "a0868cd292420b8b9ac1b0daf29151c8f67bd767d6a4e541f48e19bcf35890b2", "scope": "Canonical assessment reused only after exact native equivalence and fresh raw assessment checks by the producer. Not fresh stochastic FAS scoring or an additional FAS replicate."},
+  "resources": {"graph": {"elapsed_seconds": 3668.0, "user_seconds": 37343.6, "system_seconds": 73.89, "max_process_rss_kib": 8283000}, "native": {"elapsed_seconds": 406.01, "user_seconds": 389.54, "system_seconds": 58.98, "max_process_rss_kib": 7743708}, "scope": "Original raw GNU-time stage receipts, both exit0. Shared-host downstream replay from retained initial hits and compatible tree caches, not fresh isolated full-pipeline timing. RSS is maximum process, not simultaneous process-tree memory. Reused canonical scoring compute is not newly timed."},
+  "documentation_checks": {"path": "benchmark_tools/results/hmm_evidence_documented_interface_tests_20261018.xml", "sha256": "1800c7a31e8e0428e190f926ac8ef45ab908c1a7b7158f5e252b9df99519d088", "passed": 156, "failures": 0, "errors": 0, "skipped": 0, "scope": "Existing weighting/alignment/pilot CLI/API and actual small native integration tests; overlaps prior suites, not156 new independent cases. README example separately parses to high_sensitivity/henikoff. Documentation only; no scientific or queued source code changed."},
+  "remaining": "Monitor the original weighted QfO arms, then unchanged Three Kingdoms, HMMER/local pilots and their queued readers/collator. No new weighted QfO score is available at this observation. Preserve all original gates and sources.",
+  "accuracy_result_admitted": false,
+  "defaults_promoted": false,
+  "goal_completed": false
+}

@@ -1,5 +1,53 @@
 # Benchmark Workflows
 
+## HMM Evidence Campaign
+
+The [campaign protocol](hmm_evidence_campaign_20261018.json) and
+[execution ledger](results/hmm_evidence_campaign_status_20261018.json) describe
+the bounded investigation of weighted profiles, alignment-aware recruitment,
+local joint-tree rescue and selective HMMER validation. This is development
+work, not a new validated default or a completed publication release.
+
+Weighting and the standalone alignment guard have production opt-in flags
+described in the [main README](../README.md). Local rescue and selective
+HMMER are experimental package/workflow integrations; promising results
+require complete-dataset follow-up and a tested production opt-in interface
+before recommendation. HMM similarity alone does not establish orthology.
+
+| Workflow | Execution | Separate result validation |
+| --- | --- | --- |
+| Weighted-profile and alignment-guard OrthoBench pilots | `run_profile_weighting_pilot.py` | `report_profile_evidence_pilot.py` |
+| Unchanged weighting transfer to QfO and Three Kingdoms | `run_profile_weighting_followup.py` | `report_weighting_followup.py` |
+| Local nomination, cached joint-tree readback and final native pilot | `run_local_rescue_probe.py`, then `run_local_joint_pilot.py` | `report_local_joint_pilot.py` |
+| Matched off/builtin/HMMER-measurement/HMMER-reselect pilot | `run_profile_weighting_pilot.py prepare --experiment selective_hmmer`, then run its plan | `report_profile_evidence_pilot.py --experiment selective_hmmer` |
+| Combined admitted results and explicit follow-up decisions | No new inference | `report_hmm_evidence_campaign.py` |
+
+Use the ledger's immutable execution plans and frozen source revisions rather
+than rerunning these scripts with current modules or reusing an output folder.
+The weighting follow-up driver must run as a standalone file, not with `-m`;
+it binds the original pilot's scientific modules before importing benchmark
+packages. Preparation, inference and result validation have distinct commands;
+consult each script's `--help` and the retained exact submission records.
+Weighting and alignment pilots likewise select `prepare --experiment weighting`
+or `prepare --experiment alignment` before running their frozen plans.
+
+The post-run readers require complete successful source jobs, raw content and
+score checks, and the original controls/gates. Existing cached files are not
+proof of completed inference. The combined report retains all eight endpoint
+columns, explicit `NA` for unrun endpoints, precision/recall/coverage and
+resource details in its JSON, and conditional EC/GO/FAS assessed populations.
+Measurement-only HMMER must reproduce off and cannot advance. Failed fixed
+branches remain stopped without retuning; an unmeasured pool requires its
+prespecified applicability fallback, not a negative accuracy claim.
+
+OrthoBench and corrected QfO are primary; TreeFam is supporting and Three
+Kingdoms supplementary. Existing panels are development-exposed. Functional
+means are not F1, FAS is unseeded, and shared-Threadripper cached replay timing
+is approximate, not isolated fresh-pipeline timing or aggregate process-tree
+memory. Passing a point screen does not establish significance or generalize
+to arbitrary datasets. The collator does not promote defaults or close the
+campaign; its `required_next_actions` remain work to complete.
+
 ## Publication Study
 
 Start with the [publication reproduction guide](PUBLICATION_REPRODUCTION.md)
