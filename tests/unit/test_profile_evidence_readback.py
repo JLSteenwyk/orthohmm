@@ -24,7 +24,7 @@ def completed(experiment="weighting"):
     return report, plan, arms
 
 
-@pytest.mark.parametrize("experiment", ["weighting", "alignment"])
+@pytest.mark.parametrize("experiment", ["weighting", "alignment", "selective_hmmer"])
 def test_full_ordered_terminal_producer_required_and_legacy_weighting_header_supported(experiment):
     report, plan, arms = completed(experiment)
     readback.require_completed(report, plan, arms, experiment, "24477")
@@ -98,7 +98,7 @@ def test_resource_receipts_come_from_exact_raw_logs_not_allocations(tmp_path, ki
         assert len(readback.execution_receipt(execution, command, tmp_path, "graph")) == 2
 
 
-def arm_fixture(tmp_path, monkeypatch, mode="none"):
+def arm_fixture(tmp_path, monkeypatch, mode="none", *, experiment="weighting", activation=None):
     source, root = tmp_path / "source", tmp_path / "producer"
     folder = root / mode
     working = folder / "candidate/orthohmm_working_res"
@@ -119,19 +119,21 @@ def arm_fixture(tmp_path, monkeypatch, mode="none"):
             "candidate": record(candidate), "constraints": record(constraints),
             "golden": {"product.tsv": record(phylo / "product.tsv")}, "expected": {"f1": .7, "precision": .8, "recall": .6}}
     plan = {"source_root": str(source), "output": str(root), "cpu": 16, "source_revision": "frozen", "case": case}
+    if experiment != "weighting": plan.update(experiment=experiment, hmmer_tools={})
     graph_command, native_command = pilot.arm_commands(source, plan, folder, mode)
     (folder / "preflight.json").write_text(json.dumps({"graph": graph_command, "native": native_command}))
-    graph = {"parameters": {"profile_sequence_weighting": mode, "profile_iterations": 1, "profile_expansion": True,
+    graph = {"parameters": {"profile_sequence_weighting": mode if experiment == "weighting" else "none", "profile_iterations": 1, "profile_expansion": True,
         "matrix": "BLOSUM62", "cpm_resolution": .1, "leiden_seed": 4, "jackknife_profile_thresholds": False,
         "jackknife_single_copy_profiles": False, "profile_min_species": 1, "singleton_tie_policy": "first_hit"},
         "counts": {"profiles_built": 1, "strict_profile_edges": 1}, "profile_iterations": [{"profiles_built": 1,
-            "profile_effective_counts": [] if mode == "none" else [{"cluster_id": 0, "effective_sequence_count": 3.}]}],
-        "stages": [{"output": record(seed)}]}
+            "profile_effective_counts": [] if mode == "none" or experiment != "weighting" else [{"cluster_id": 0, "effective_sequence_count": 3.}]}],
+        "stages": [{"label": "fixture", "output": record(seed)}]}
+    if experiment == "selective_hmmer": graph["parameters"]["selective_profile_mode"] = mode
     (folder / "graph_metrics.json").write_text(json.dumps(graph))
     details = {"precision": .8, "recall": .6, "family_details": {"fixture": True}}
     row = {"label": mode, "graph_execution": timing(folder, "graph", graph_command),
         "native_execution": timing(folder, "native", native_command), "graph_report": record(folder / "graph_metrics.json"),
-        "activation": pilot.validate_activation(graph, mode), "scores": {"OrthoBench F1": .7}, "details": details,
+        "activation": pilot.validate_activation(graph, mode, experiment) if activation is None else activation, "scores": {"OrthoBench F1": .7}, "details": details,
         "metric_vector": {ENDPOINTS[0]: .7}, "native_summary": {"fixture": True},
         "coverage": readback.validate_partition(candidate, prediction),
         "candidate": {"candidate_partition": record(candidate), "membership_constraints": record(constraints), "seed_partition": record(seed)},

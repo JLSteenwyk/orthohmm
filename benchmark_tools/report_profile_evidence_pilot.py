@@ -18,6 +18,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from benchmark_tools.audit_historical_profile_ablation import read_partition
 from benchmark_tools.bootstrap_orthobench import METRICS, paired_bootstrap, statistics, weighted_records
 from benchmark_tools.metric_frontier import ENDPOINTS
+from benchmark_tools.native_pair_turnover import native_pair_turnover
 from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 from benchmark_tools.replay_phylogeny import load_membership_constraints
 from benchmark_tools.report_hillclimb import endpoint_vector, readback_scores, replay_native
@@ -33,6 +34,8 @@ LEDGER = "benchmark_tools/results/hmm_evidence_campaign_status_20261018.json"
 LAUNCH_REVISION = "79e69e6c23abb9dee732dd613bf98e5d88e4deea"
 ADMISSION = "benchmark_tools/results/hillclimb_comparison_readback_v27_20261016/summary.json"
 PROTOCOL = "hmm_profile_evidence_readback_20261018.json"
+HMMER_LAUNCH = "a80e10d45b3914d418e89ad810411ef4baaedd65"
+HMMER_PROTOCOL = "hmm_selective_hmmer_readback_20261018.json"
 RETAINED_KEYS = ("orthohmm_high_sensitivity", "orthohmm_phylogeny_satellite_v2", "orthofinder_3_1_5_full",
                  "orthofinder_3_1_5_sequence_only", "sonicparanoid_2_0_9", "proteinortho_6_3_6",
                  "fastoma_0_3_5", "orthomcl_1_4", "canonical_collection:canonical")
@@ -49,13 +52,15 @@ def terminal(job_id):
 
 
 def launch(repo, experiment):
-    payload = subprocess.check_output(["git", "show", LAUNCH_REVISION + ":" + LEDGER], cwd=repo)
+    revision = HMMER_LAUNCH if experiment == "selective_hmmer" else LAUNCH_REVISION
+    payload = subprocess.check_output(["git", "show", revision + ":" + LEDGER], cwd=repo)
     ledger = json.loads(payload)
-    key = "weighting_orthobench_pilot" if experiment == "weighting" else "alignment_guard_pilot"
+    key = {"weighting": "weighting_orthobench_pilot", "alignment": "alignment_guard_pilot",
+           "selective_hmmer": "selective_hmmer_pilot"}[experiment]
     entry = ledger[key]
-    plan_pin = dict(entry["execution_plan"])
+    plan_pin = {key: entry["execution_plan"][key] for key in ("path", "bytes", "sha256")}
     plan_pin["path"] = str((repo / plan_pin["path"]).resolve())
-    return entry, plan_pin, {"revision": LAUNCH_REVISION, "path": LEDGER,
+    return entry, plan_pin, {"revision": revision, "path": LEDGER,
                             "git_blob_sha256": hashlib.sha256(payload).hexdigest()}
 
 
@@ -94,13 +99,17 @@ def admit_arm(repo, plan, row, experiment, names):
     if row["graph_report"] != record(graph_path):
         raise ValueError("Graph report differs from producer pin")
     graph = json.loads(graph_path.read_text())
-    activated = validate_activation(graph, mode, experiment)
+    if experiment == "selective_hmmer" and not isinstance(names, (tuple, list)):
+        raise ValueError("Selective readback requires ordered original gene IDs")
+    options = {"folder": folder, "gene_names": names, "hmmer_tools": plan["hmmer_tools"]} if experiment == "selective_hmmer" else {}
+    activated = validate_activation(graph, mode, experiment, **options)
     if activated != row["activation"]:
         raise ValueError("Reported profile activation differs from evidence")
     checked.append(record(graph_path))
+    checked.extend(activated.get("checked", []))
     for stage in graph["stages"]:
         check(stage["output"])
-        read_partition(Path(stage["output"]["path"]), names)
+        read_partition(Path(stage["output"]["path"]), set(names))
         checked.append(stage["output"])
     candidate, constraints = (row["candidate"][key] for key in ("candidate_partition", "membership_constraints"))
     expected = folder / "candidate/orthohmm_working_res"
@@ -110,7 +119,7 @@ def admit_arm(repo, plan, row, experiment, names):
     for pin in (candidate, constraints, row["candidate"]["seed_partition"]):
         check(pin)
         checked.append(pin)
-    read_partition(Path(candidate["path"]), names)
+    read_partition(Path(candidate["path"]), set(names))
     load_membership_constraints(Path(constraints["path"]), Path(candidate["path"]))
     prediction = folder / "native/orthohmm_working_res/orthohmm_edges_clustered.txt"
     if validate_partition(Path(candidate["path"]), prediction) != row["coverage"]:
@@ -119,28 +128,39 @@ def admit_arm(repo, plan, row, experiment, names):
     if ((native["genes"], native["species"]) != (251378, 12) or native["summary"] != row["native_summary"]):
         raise ValueError("Native universe or summary differs")
     scores, details, pins = readback_scores(repo, "OrthoBench", row, native, folder, "profile_evidence_readback")
-    if details != row["details"] or endpoint_vector("OrthoBench", scores) != row["metric_vector"]:
+    if scores != row["scores"] or details != row["details"] or endpoint_vector("OrthoBench", scores) != row["metric_vector"]:
         raise ValueError("Per-family/aggregate score readback differs")
     arms, _ = experiment_settings(experiment)
-    if mode == arms[0]:
+    if mode == arms[0] or (experiment == "selective_hmmer" and mode == "hmmer_score_only"):
         control = plan["case"]
         if (candidate_control_matches(Path(candidate["path"]), Path(constraints["path"]), control["candidate"], control["constraints"])
                 != row["candidate_control_matches"]
                 or compare_golden(Path(native["phylogeny"]), control["golden"]) != row["golden_matches"]
                 or normalized(row) != control["expected"]):
             raise ValueError("Unchanged off control differs from canonical control")
+    turnover = None
+    if experiment == "selective_hmmer" and mode != "off":
+        turnover = native_pair_turnover(Path(plan["case"]["baseline_output"]) / "orthohmm_phylogeny/orthohmm_pairwise_orthologs_confidence.tsv",
+            Path(native["phylogeny"]) / "orthohmm_pairwise_orthologs_confidence.tsv")
+        if {k: v for k, v in turnover.items() if k != "wall_s"} != {k: v for k, v in row["native_pair_turnover"].items() if k != "wall_s"}:
+            raise ValueError("Native pair/confidence turnover differs from actual raw files")
+        checked.extend(turnover["files"])
     checked += [*native["checked"], *pins]
     for pin in checked:
         check(pin)
-    return {"dataset": "OrthoBench", "label": mode, "status": "independent_content_readback_verified",
+    cell = {"dataset": "OrthoBench", "label": mode, "status": "independent_content_readback_verified",
         "scores": endpoint_vector("OrthoBench", scores), "details": details,
         "coverage": {key: native[key] for key in ("genes", "species", "groups", "pairs")},
         "products": native["products"], "activation": activated, "source_revision": plan["source_revision"],
         "candidate": row["candidate"], "checked": list({pin["path"]: pin for pin in checked}.values()),
         "resources": {key: row[key] for key in ("graph_execution", "candidate_resources", "native_execution", "total_incremental_wall_s")}}
+    if experiment == "selective_hmmer":
+        cell["graph_stages"] = [{"label": s["label"], "bytes": s["output"]["bytes"], "sha256": s["output"]["sha256"]} for s in graph["stages"]]
+        if turnover is not None: cell["native_pair_turnover"] = turnover
+    return cell
 
 
-def uncertainty(cells):
+def uncertainty(cells, *, multiplicity_endpoints=None):
     protocol = json.loads(Path(__file__).with_name(PROTOCOL).read_text())["uncertainty"]
     if any(protocol[key] != value for key, value in {
         "replicates": 100000, "seed": 20261018, "alpha": .05, "families": 70,
@@ -153,12 +173,62 @@ def uncertainty(cells):
         if len(names) != 70 or not np.allclose(statistics(counts.sum(axis=0)), [score[key] for key in METRICS], atol=1e-8, rtol=0):
             raise ValueError("Family sufficient statistics do not reproduce full OrthoBench scores")
         records[cell["label"]] = score["refog_records"]
-    options = {"replicates": 100000, "seed": 20261018, "alpha": .05, "multiplicity_endpoints": 3 * (len(cells) - 1)}
+    minimum = 3 * (len(cells) - 1)
+    if multiplicity_endpoints is not None and (type(multiplicity_endpoints) is not int or multiplicity_endpoints < minimum):
+        raise ValueError("Multiplicity must cover every reported metric contrast")
+    options = {"replicates": 100000, "seed": 20261018, "alpha": .05,
+               "multiplicity_endpoints": minimum if multiplicity_endpoints is None else multiplicity_endpoints}
     result = paired_bootstrap(records, cells[0]["label"], **options)
     if result != paired_bootstrap(records, cells[0]["label"], **options):
         raise ValueError("Paired-family uncertainty does not reproduce")
     result["scope"] = "Post hoc descriptive uncertainty after observed development point results. Does not change the original point gates or provide independent confirmation."
     return result
+
+
+def selective_gate(control, cell):
+    actual = {"f1": cell["scores"][ENDPOINTS[0]], "precision": cell["details"]["precision"], "recall": cell["details"]["recall"]}
+    result = advancement(control, actual)
+    if cell["activation"]["completely_measured_queries"] == 0:
+        result.update(eligible=False, reason="No completely measured queries; applicability fallback remains required")
+    return result
+
+
+def verify_selective_panel(cells, rows):
+    labels = ["off", "builtin_reselect", "hmmer_score_only", "hmmer_reselect"]
+    if [c["label"] for c in cells] != labels or [r["label"] for r in rows] != labels:
+        raise ValueError("Require complete ordered selective panel")
+    off, builtin, measurement, hmmer = cells
+    digests = [c["activation"]["candidate_digest"] for c in cells[1:]]
+    def signature(products):
+        return {key: {field: pin[field] for field in ("bytes", "sha256")} for key, pin in products.items()}
+    if (len(set(digests)) != 1 or measurement["graph_stages"] != off["graph_stages"]
+            or signature(measurement["products"]) != signature(off["products"])
+            or measurement["scores"] != off["scores"] or measurement["details"] != off["details"]
+            or any(signature({key: measurement["candidate"][key]}) != signature({key: off["candidate"][key]})
+                   for key in ("candidate_partition", "membership_constraints"))
+            or rows[2].get("measurement_control_matches") is not True):
+        raise ValueError("Selective candidate universe or exact measurement control differs")
+    control = {"f1": off["scores"][ENDPOINTS[0]], "precision": off["details"]["precision"], "recall": off["details"]["recall"]}
+    for cell, row in ((builtin, rows[1]), (hmmer, rows[3])):
+        cell["advancement"] = selective_gate(control, cell)
+        if cell["advancement"] != row["advancement"] or row.get("accuracy_interpretation") != cell["activation"]["applicability"]:
+            raise ValueError("Selective gate/applicability differs from independently read-back point values")
+    return {"f1": hmmer["scores"][ENDPOINTS[0]] - builtin["scores"][ENDPOINTS[0]],
+            "precision": hmmer["details"]["precision"] - builtin["details"]["precision"],
+            "recall": hmmer["details"]["recall"] - builtin["details"]["recall"],
+            "scope": "HMMER-minus-builtin development point contrast. Off-relative gain alone does not establish backend-specific benefit; construction/scoring/significance effects remain bundled."}
+
+
+def selective_uncertainty(cells):
+    protocol = json.loads(Path(__file__).with_name(HMMER_PROTOCOL).read_text())["uncertainty"]
+    expected = {"replicates": 100000, "seed": 20261018, "alpha": .05, "families": 70,
+                "metrics": list(METRICS), "multiplicity_endpoints": 12}
+    if (any(protocol[key] != value for key, value in expected.items())
+            or [c["label"] for c in cells] != ["off", "builtin_reselect", "hmmer_score_only", "hmmer_reselect"]):
+        raise ValueError("Unexpected selective uncertainty contrasts/multiplicity")
+    return {"versus_off": uncertainty(cells, multiplicity_endpoints=12),
+            "hmmer_versus_builtin": uncertainty([cells[1], cells[3]], multiplicity_endpoints=12),
+            "scope": "Twelve-endpoint descriptive paired-family intervals. These do not change point gates or supply independent biological confirmation."}
 
 
 def retained_context(repo):
@@ -229,6 +299,7 @@ def run(repo, experiment, output):
     driver = Path(__file__).resolve().parents[1]
     reporter_revision = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=driver, text=True).strip()
     reporter_files = sources(driver) + [record(Path(__file__).with_name(PROTOCOL))]
+    if experiment == "selective_hmmer": reporter_files.append(record(Path(__file__).with_name(HMMER_PROTOCOL)))
     for pin in reporter_files:
         relative = Path(pin["path"]).relative_to(driver)
         if relative.suffix != ".so":
@@ -247,8 +318,8 @@ def run(repo, experiment, output):
     write_json(output / "summary.json", result)
     try:
         for row in report["arms"]:
-            cell = admit_arm(repo, plan, row, experiment, set(names))
-            if row["label"] != arms[0]:
+            cell = admit_arm(repo, plan, row, experiment, names)
+            if row["label"] != arms[0] and experiment != "selective_hmmer":
                 control = {"f1": result["cells"][0]["scores"][ENDPOINTS[0]],
                            "precision": result["cells"][0]["details"]["precision"], "recall": result["cells"][0]["details"]["recall"]}
                 actual = {"f1": cell["scores"][ENDPOINTS[0]], "precision": cell["details"]["precision"], "recall": cell["details"]["recall"]}
@@ -258,7 +329,12 @@ def run(repo, experiment, output):
             result["cells"].append(cell)
             checked += cell["checked"]
             write_json(output / "summary.json", result)
-        result["uncertainty"] = uncertainty(result["cells"])
+        if experiment == "selective_hmmer":
+            result["backend_contrast"] = verify_selective_panel(result["cells"], report["arms"])
+            result["selective_readback_protocol"] = record(Path(__file__).with_name(HMMER_PROTOCOL))
+            result["uncertainty"] = selective_uncertainty(result["cells"])
+        else:
+            result["uncertainty"] = uncertainty(result["cells"])
         write_table(output / "scores.tsv", result["cells"], context)
         result["score_table"] = record(output / "scores.tsv")
         for pin in checked:
@@ -266,7 +342,7 @@ def run(repo, experiment, output):
         if runtime() != plan["runtime"]:
             raise ValueError("Runtime changed during independent readback")
         result["checked"] = list({pin["path"]: pin for pin in checked}.values())
-        result["advancing_labels"] = [cell["label"] for cell in result["cells"][1:] if cell["advancement"]["eligible"]]
+        result["advancing_labels"] = [cell["label"] for cell in result["cells"][1:] if cell.get("advancement", {}).get("eligible", False)]
         result.update(status="profile_pilot_independently_read_back", accuracy_result_admitted=True)
     except Exception as error:
         result.update(status="failed", error_type=type(error).__name__, error=str(error))
@@ -279,7 +355,7 @@ def run(repo, experiment, output):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--repo", type=Path, required=True)
-    parser.add_argument("--experiment", choices=("weighting", "alignment"), required=True)
+    parser.add_argument("--experiment", choices=("weighting", "alignment", "selective_hmmer"), required=True)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     print(run(args.repo.resolve(), args.experiment, args.output.resolve())["status"])

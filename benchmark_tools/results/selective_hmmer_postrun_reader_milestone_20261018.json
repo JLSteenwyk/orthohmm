@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "status": "selective_hmmer_postrun_reader_tested_before_actual_pilot_results",
+  "protocol": "benchmark_tools/hmm_selective_hmmer_readback_20261018.json",
+  "implementation": "benchmark_tools/report_profile_evidence_pilot.py --experiment selective_hmmer",
+  "tests": {"path": "benchmark_tools/results/selective_hmmer_postrun_reader_combined_tests_20261018.xml", "sha256": "6660cc8d3af9866491ff8ae053a55c3a0423aa8958a6ff9662e334cc33d3cad5", "passed": 549, "failures": 0, "errors": 0, "skipped": 0, "scope": "Seventeen overlapping reader/pilot/local/profile/HMMER/native/replay modules, including24 new selective reader cases and one additional whole-panel completion case. Do not sum overlapping receipt counts as independent coverage."},
+  "behavior": "Use immutablea80e10d4 selective launch and standard three-field plan pin, not live campaign status. Preserve ordered gene IDs for raw selector/measurement checks. Require all four ordered successful arms; repeat activation, source/target ownership and native/scoring/resource readback. Measurement-only must match off graph stages, candidates/constraints, native products and full per-family/aggregate scores and cannot advance. Every active arm must share an identical nomination digest. Repeat native pair/confidence turnover from raw files. Recompute both original independent reselect gates with explicit incomplete-measurement ineligibility.",
+  "uncertainty": "Existing100000-replicate/seed20261018 paired70-family weighted-statistic bootstrap, repeated for determinism. All three off-relative comparisons plus HMMER reselect versus builtin reselect use conservative12-endpoint Bonferroni tails. Expose HMMER-minus-builtin point deltas and intervals; off-relative improvement alone is not a backend-specific benefit. Development exposure, dependence, shared algorithms and absence of independent confirmation remain limitations; intervals never change the original point gates.",
+  "comparison": "All eight endpoint columns, immutable inherited comparator vectors/population details, explicit NA for unrun new endpoints. Functional EC/GO/FAS means are not F1. Reader does not alter original producer files or any queued scientific source.",
+  "source_isolation": "The edited primary reader path has no intersection with the checked inputs/sources of live QfO24490, queued Three Kingdoms24491, HMMER24493 or local24495 plans. Their frozen scientific sources remain unchanged.",
+  "remaining": "Freeze/push this reader and queue a fresh1CPU16G post-run readback after successful24493. Admit actual scores only after terminal source/output/control verification. Preserve failed/partial panels and required applicability fallback; no biological HMMER result is available while its pilot is queued.",
+  "defaults_promoted": false,
+  "accuracy_result_admitted": false,
+  "goal_completed": false
+}
