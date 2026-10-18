@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "recorded_before_actual_selective_hmmer_pilot_results",
+  "parent": "benchmark_tools/hmm_selective_hmmer_20261018.json",
+  "launch_revision": "a80e10d45b3914d418e89ad810411ef4baaedd65",
+  "launch_key": "selective_hmmer_pilot",
+  "arms": ["off", "builtin_reselect", "hmmer_score_only", "hmmer_reselect"],
+  "readback": [
+    "Require terminal successful planned16CPU128G/bizon execution and the entire ordered four-arm panel, with immutable launch/plan/scientific-source/runtime/input checks. Never admit only selected passing rows from a failed panel.",
+    "Preserve ordered checkpoint gene IDs for query/anchor validation. Repeat actual raw selective receipt/profile-source ownership/measurement parsing and decision readback, using exact pinned HMMER3.4 tools and complete competitor/member/target sets. This shares validated algorithm implementations; it is not an independent algorithm implementation or biological confirmation.",
+    "Require a single identical candidate-generation digest across all active arms. Off must exactly reproduce canonical candidates/constraints/native products/species tree and scores. Measurement-only must exactly reproduce off graph stage contents, candidate/constraint products, native products/species tree and full aggregate/per-family scoring; it cannot advance as a method.",
+    "Repeat actual native pair/confidence turnover counts from raw native files, separately from reference OG accuracy, and preserve command/log/timing/input/output provenance. Resource allocations are not measured memory peaks; shared-host cached replay is not isolated fresh pipeline timing.",
+    "Recompute each active reselect arm's original independent off-relative point gate. A completely unmeasured arm cannot advance; preserve its applicability/fallback requirement. Zero actual changed decisions remains explicit rather than a manufactured activation claim."
+  ],
+  "uncertainty": {
+    "replicates": 100000,
+    "seed": 20261018,
+    "alpha": 0.05,
+    "families": 70,
+    "metrics": ["f_score", "precision", "recall"],
+    "multiplicity_endpoints": 12,
+    "contrasts": "Three off-relative arm contrasts, including the exact measurement identity check, plus HMMER reselect versus builtin reselect; three metrics each. Use the same conservative12-endpoint Bonferroni tails for all reported intervals.",
+    "method": "Existing paired-family bootstrap of weighted sufficient statistics, repeated to verify determinism. Intervals describe the development panel and do not alter original point gates.",
+    "limitations": "Existing panels are development-exposed; family exchangeability, shared evolutionary histories and prediction-induced dependence limit bootstrap interpretation. No independent generalization or superiority claim follows from a point gain or interval alone."
+  },
+  "backend_interpretation": "Report HMMER-minus-builtin precision/recall/F1 point differences and paired intervals explicitly. A favorable HMMER-versus-off result alone does not establish HMMER-specific benefit if the same gain comes from the native decision policy. Profile construction, transitions, priors, scoring and significance remain bundled backend effects, not individually isolated mechanisms.",
+  "comparison": "All eight endpoint columns; new unrun QfO/Three Kingdoms slots remain NA. Retained comparator vectors retain their inherited-evidence/population limitations. Functional EC/GO/FAS means are not F1.",
+  "resources": {"cpus": 1, "memory_gib": 16, "wall_limit": "02:00:00", "new_inference": false, "unrelated_jobs": "untouched"},
+  "git": "Commit/push before actual readback; freeze tested reader source and retain fresh readback output/failed attempts. Do not modify any queued scientific source or original producer artifacts.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}
