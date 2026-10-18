@@ -17,6 +17,9 @@ import numpy as np
 
 from .matrices import ALPHABET, ALPHABET_SIZE, FULL_CHAR_TO_IDX
 from .msa_center_star import center_star_msa
+from .sequence_weights import (
+    profile_sequence_weights, validate_profile_sequence_weighting,
+)
 
 
 @dataclass
@@ -28,6 +31,9 @@ class MSAProfile:
     transitions: np.ndarray          # (7,) int32, uniform across positions
     consensus: np.ndarray            # uint8 consensus sequence for prefilter use
     member_ids: List[str] = field(default_factory=list)  # source genes
+    sequence_weighting: str = "none"
+    member_species: Optional[list] = None
+    effective_sequence_count: Optional[float] = None
 
 
 def encode_alignment(aligned_seqs: List[str]) -> np.ndarray:
@@ -57,6 +63,7 @@ def compute_pssm(
     bg_freqs: np.ndarray,
     pseudocount_weight: float = 5.0,
     gap_fraction_threshold: float = 0.5,
+    sequence_weights: Optional[np.ndarray] = None,
 ) -> tuple:
     """Compute position-specific scoring matrix from encoded MSA.
 
@@ -68,6 +75,8 @@ def compute_pssm(
     pseudocount_weight : BLOSUM pseudocount weight
     gap_fraction_threshold : retain only columns with gap/unknown fraction
         strictly below this value (equal fractions are dropped)
+    sequence_weights : optional nonnegative row counts, summing to effective N;
+        these alter emissions only, not the historical match-column mask
 
     Returns
     -------
@@ -76,6 +85,17 @@ def compute_pssm(
     consensus : (L_match,) uint8 consensus sequence
     """
     n, L = encoded_msa.shape
+    if sequence_weights is not None:
+        sequence_weights = np.asarray(sequence_weights, dtype=np.float64)
+        if (sequence_weights.shape != (n,)
+                or not np.isfinite(sequence_weights).all()
+                or np.any(sequence_weights < 0)
+                or not np.isfinite(sequence_weights.sum())
+                or (n and sequence_weights.sum() <= 0)):
+            raise ValueError("Sequence weights must be finite nonnegative row counts with positive total")
+    if n == 0:
+        return (np.empty((0, 20), dtype=np.int8),
+                np.zeros(L, dtype=bool), np.empty(0, dtype=np.uint8))
 
     # Compute gap fraction per column
     gap_counts = (encoded_msa == 20).sum(axis=0)
@@ -111,7 +131,9 @@ def compute_pssm(
         # Position frequency: count of each AA at this column
         pfm = np.zeros(20, dtype=np.float64)
         for a in range(20):
-            pfm[a] = (encoded_msa[:, col] == a).sum()
+            rows = encoded_msa[:, col] == a
+            pfm[a] = (rows.sum() if sequence_weights is None
+                      else sequence_weights[rows].sum())
 
         n_aa = pfm.sum()  # non-gap count
         if n_aa == 0:
@@ -159,6 +181,8 @@ def build_msa_profile(
     gap_open: int = -12,
     gap_extend: int = -3,
     align_threads: int = 1,
+    sequence_weighting: str = "none",
+    species=None,
 ) -> Optional[MSAProfile]:
     """Build a multi-sequence profile from a list of sequences.
 
@@ -167,6 +191,13 @@ def build_msa_profile(
 
     Returns None if profile can't be built (too few sequences, etc.).
     """
+    validate_profile_sequence_weighting(sequence_weighting)
+    if len(ids) != len(sequences):
+        raise ValueError("Profile sequences and member IDs must align")
+    if sequence_weighting == "species_henikoff_cluster" and (
+        species is None or len(species) != len(sequences)
+    ):
+        raise ValueError("Species weighting requires one valid species label per row")
     if len(sequences) < 2:
         return None
 
@@ -182,7 +213,15 @@ def build_msa_profile(
         return None
 
     # Compute PSSM
-    pssm, match_mask, consensus = compute_pssm(enc, sub_matrix, bg_freqs)
+    weights = None
+    if sequence_weighting != "none":
+        weights = profile_sequence_weights(enc, sequence_weighting, species)
+        if weights.sum() <= 0:
+            return None
+    pssm, match_mask, consensus = compute_pssm(
+        enc, sub_matrix, bg_freqs,
+        **({"sequence_weights": weights} if weights is not None else {}),
+    )
     if pssm.shape[0] == 0:
         return None
 
@@ -200,4 +239,7 @@ def build_msa_profile(
         transitions=transitions,
         consensus=consensus,
         member_ids=list(ids),
+        sequence_weighting=sequence_weighting,
+        member_species=list(species) if species is not None else None,
+        effective_sequence_count=float(weights.sum()) if weights is not None else float(len(sequences)),
     )

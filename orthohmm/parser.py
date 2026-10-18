@@ -13,6 +13,7 @@ from .helpers import (
     SubstitutionMatrix,
 )
 from .version import __version__
+from .search.sequence_weights import PROFILE_SEQUENCE_WEIGHTING
 
 
 def create_parser() -> ArgumentParser:
@@ -368,6 +369,8 @@ def create_parser() -> ArgumentParser:
     optional.add_argument("--search_min_total_hits", type=int, default=4, help=SUPPRESS)
     optional.add_argument("--search-candidate-policy", "--search_candidate_policy",
         choices=["single", "protected_union"], default="single", help=SUPPRESS)
+    optional.add_argument("--profile-sequence-weighting", "--profile_sequence_weighting",
+        choices=PROFILE_SEQUENCE_WEIGHTING, default="none", help=SUPPRESS)
 
     optional.add_argument(
         "--clustering",

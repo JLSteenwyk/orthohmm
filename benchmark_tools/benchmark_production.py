@@ -104,9 +104,13 @@ def parse_args(argv=None):
     parser.add_argument("--gene-tree-support-mode", choices=("legacy", "bipartition"), default="legacy")
     parser.add_argument("--search-result-order", choices=("arrival","canonical"), default="arrival")
     parser.add_argument("--singleton-tie-policy", choices=("first_hit", "defer_ambiguous"), default="first_hit")
+    from orthohmm.search.sequence_weights import PROFILE_SEQUENCE_WEIGHTING
+    parser.add_argument("--profile-sequence-weighting", choices=PROFILE_SEQUENCE_WEIGHTING, default="none")
     parser.add_argument("--native-kernel-trace", type=Path,
                         help="Benchmark-only fail-closed CPU multipair route observation")
     args = parser.parse_args(argv)
+    if args.profile_sequence_weighting != "none" and args.accuracy_profile != "high_sensitivity":
+        parser.error("--profile-sequence-weighting requires --accuracy-profile high_sensitivity")
     if args.search_candidate_policy != "single" and (
             args.accuracy_profile != "high_sensitivity" or args.search_result_order != "canonical"
             or args.search_min_total_hits != 4
@@ -178,6 +182,8 @@ def main(argv=None) -> int:
         command.extend(["--search_result_order",args.search_result_order])
     if args.singleton_tie_policy != "first_hit":
         command.extend(["--singleton_tie_policy", args.singleton_tie_policy])
+    if args.profile_sequence_weighting != "none":
+        command.extend(["--profile-sequence-weighting", args.profile_sequence_weighting])
     if not args.full_output:
         command.extend(["--stop", "infer"])
     if args.phylogeny == "reconcile":

@@ -20,6 +20,7 @@ from .matrices import (
     get_matrix,
 )
 from .msa_profile import MSAProfile, build_msa_profile
+from .sequence_weights import validate_profile_sequence_weighting
 from .prefilter import prefilter_candidates
 from .sequences import SequenceStore, SpeciesSequences
 from .viterbi import (
@@ -58,6 +59,7 @@ class ProfileExpansionResult:
     profile_candidates: int
     significant_profile_hits: int
     calibrated_profiles: int = 0
+    profile_effective_counts: tuple[tuple[int, float], ...] = ()
 
 
 def load_global_sequence_database(
@@ -104,13 +106,15 @@ def _decode_sequence(sequence: np.ndarray) -> str:
 
 
 def _build_profile_worker(task):
-    cluster_id, member_ids, sequences, sub_matrix, background = task
+    cluster_id, member_ids, sequences, sub_matrix, background = task[:5]
+    options = task[5] if len(task) == 6 else {}
     try:
         profile = build_msa_profile(
             [_decode_sequence(sequence) for sequence in sequences],
             member_ids,
             sub_matrix,
             background,
+            **options,
         )
     except Exception as error:
         raise RuntimeError(
@@ -167,8 +171,12 @@ def build_cluster_profiles(
     max_cluster_size: int = 200,
     gene_to_species=None,
     min_species_count: int = 1,
+    sequence_weighting: str = "none",
 ) -> dict[int, MSAProfile]:
     """Build center-star MSA profiles for informative cluster sizes."""
+    validate_profile_sequence_weighting(sequence_weighting)
+    if sequence_weighting == "species_henikoff_cluster" and gene_to_species is None:
+        raise ValueError("gene_to_species is required for species profile weighting")
     if min_species_count < 1:
         raise ValueError("min_species_count must be >= 1")
     if min_species_count > 1 and gene_to_species is None:
@@ -202,9 +210,15 @@ def build_cluster_profiles(
             sequences = [
                 sequence_database.get_sequence(int(gene)) for gene in cluster
             ]
-            yield (
+            task = (
                 cluster_id, member_ids, sequences, sub_matrix, background
             )
+            if sequence_weighting != "none":
+                options = {"sequence_weighting": sequence_weighting}
+                if sequence_weighting == "species_henikoff_cluster":
+                    options["species"] = [int(species[int(gene)]) for gene in cluster]
+                task += (options,)
+            yield task
 
     return _execute_profile_build_tasks(tasks(), len(cluster_ids), cpu)
 
@@ -522,13 +536,23 @@ def compute_profile_self_thresholds(
             ]
             if len(retained_sequences) != len(retained_names):
                 continue
-            yield (
+            task = (
                 cluster_id,
                 retained_names,
                 retained_sequences,
                 sub_matrix,
                 background,
             )
+            original = profiles[cluster_id]
+            if original.sequence_weighting != "none":
+                options = {"sequence_weighting": original.sequence_weighting}
+                if original.sequence_weighting == "species_henikoff_cluster":
+                    if original.member_species is None:
+                        raise ValueError("Weighted jackknife profile lacks member species")
+                    species_by_name = dict(zip(original.member_ids, original.member_species))
+                    options["species"] = [species_by_name[name] for name in retained_names]
+                task += (options,)
+            yield task
 
     jackknife_cluster_ids = [
         cluster_id
@@ -699,6 +723,7 @@ def expand_profiles(
     gene_to_species=None,
     min_profile_species: int = 1,
     calibrate_single_copy_profiles: bool = False,
+    sequence_weighting: str = "none",
 ) -> ProfileExpansionResult:
     """Run the complete strict profile-expansion stage."""
     os.environ["OMP_NUM_THREADS"] = str(cpu)
@@ -713,6 +738,7 @@ def expand_profiles(
         cpu,
         gene_to_species=gene_to_species,
         min_species_count=min_profile_species,
+        **({"sequence_weighting": sequence_weighting} if sequence_weighting != "none" else {}),
     )
     profile_hits = search_genes_against_profiles(
         profiles,
@@ -755,5 +781,10 @@ def expand_profiles(
             len(profiles)
             if calibrate_weakest_member
             else len(calibration_profile_ids or ())
+        ),
+        profile_effective_counts=(
+            tuple((int(cluster), float(profile.effective_sequence_count))
+                  for cluster, profile in sorted(profiles.items()))
+            if sequence_weighting != "none" else ()
         ),
     )

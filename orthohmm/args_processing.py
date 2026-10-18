@@ -16,6 +16,7 @@ from .helpers import (
 from .files import fetch_fasta_files
 from .accuracy import resolve_accuracy_profile, resolve_search_candidate_cap, validate_search_result_order, resolve_search_min_total_hits, validate_singleton_tie_policy
 from .accuracy import resolve_search_candidate_policy
+from .search.sequence_weights import validate_profile_sequence_weighting
 from .refinement import PHYLOGENY_CANDIDATE_REFINEMENT_PROFILES
 from .phylogeny import (
     PhylogenyConfig,
@@ -125,6 +126,13 @@ def process_args(args) -> dict:
     accuracy_profile = getattr(args, "accuracy_profile", None) or "standard"
     search_cap_override = getattr(args, "search_max_candidates_per_query", None)
     try:
+        profile_sequence_weighting = validate_profile_sequence_weighting(
+            getattr(args, "profile_sequence_weighting", "none")
+        )
+        if profile_sequence_weighting != "none" and (
+            accuracy_profile != "high_sensitivity" or search_mode != "builtin" or args.start
+        ):
+            raise ValueError("Profile sequence weighting requires fresh built-in high_sensitivity inference")
         singleton_tie_policy = validate_singleton_tie_policy(getattr(args, "singleton_tie_policy", "first_hit"))
         if singleton_tie_policy != "first_hit" and (
             accuracy_profile != "high_sensitivity" or search_mode != "builtin" or args.start
@@ -294,6 +302,7 @@ def process_args(args) -> dict:
         **({"singleton_tie_policy": singleton_tie_policy} if singleton_tie_policy != "first_hit" else {}),
         **({"search_min_total_hits": search_min_total_hits} if search_min_total_hits != 4 else {}),
         **({"search_candidate_policy": search_candidate_policy} if search_candidate_policy != "single" else {}),
+        **({"profile_sequence_weighting": profile_sequence_weighting} if profile_sequence_weighting != "none" else {}),
         **({"search_max_candidates_per_query": search_cap_override}
            if search_cap_override is not None else {}),
     )

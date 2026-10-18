@@ -463,6 +463,14 @@ def _execute(
             "and satellite_v2 candidates"
         )
     accuracy_config = resolve_accuracy_profile(accuracy_profile)
+    from .search.sequence_weights import validate_profile_sequence_weighting
+    profile_sequence_weighting = validate_profile_sequence_weighting(
+        kwargs.pop("profile_sequence_weighting", "none")
+    )
+    if profile_sequence_weighting != "none" and (
+        accuracy_config.name != "high_sensitivity" or search_mode != "builtin" or start is not None
+    ):
+        raise ValueError("Profile sequence weighting requires fresh built-in high_sensitivity inference")
     singleton_tie_policy = validate_singleton_tie_policy(kwargs.pop("singleton_tie_policy", "first_hit"))
     if singleton_tie_policy != "first_hit" and (
         accuracy_config.name != "high_sensitivity" or search_mode != "builtin" or start is not None
@@ -545,6 +553,7 @@ def _execute(
         search_candidate_policy=search_candidate_policy,
         search_result_order=search_result_order,
         singleton_tie_policy=singleton_tie_policy,
+        profile_sequence_weighting=profile_sequence_weighting,
         leiden_seed=accuracy_config.leiden_seed,
         cpu_budget=cpu,
     )
@@ -818,7 +827,23 @@ def _execute(
                 cpu,
                 evalue_threshold,
                 *accuracy_hits,
+                **({"sequence_weighting": profile_sequence_weighting,
+                    "gene_to_species": gene_to_species}
+                   if profile_sequence_weighting != "none" else {}),
             )
+            if profile_sequence_weighting != "none":
+                diagnostics_path = os.path.join(working_dir, "profile_sequence_weighting.json")
+                with open(diagnostics_path, "w") as handle:
+                    json.dump({
+                        "mode": profile_sequence_weighting,
+                        "profiles": [
+                            {"cluster_id": cluster, "effective_sequence_count": count}
+                            for cluster, count in profile_result.profile_effective_counts
+                        ],
+                    }, handle, indent=2)
+                    handle.write("\n")
+                metrics.add_metadata(profile_sequence_weighting_diagnostics=diagnostics_path)
+                metrics.add_counts(high_sensitivity_weighted_profiles=profile_result.profiles_built)
             profile_base_edges = combine_edges(
                 rbnh_edges,
                 profile_result.edges,

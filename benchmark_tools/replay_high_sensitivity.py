@@ -120,6 +120,8 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--cpu", type=int, default=os.cpu_count() or 1)
     parser.add_argument("--leiden-seed", type=int, default=4)
     parser.add_argument("--singleton-tie-policy", choices=("first_hit", "defer_ambiguous"), default="first_hit")
+    from orthohmm.search.sequence_weights import PROFILE_SEQUENCE_WEIGHTING
+    parser.add_argument("--profile-sequence-weighting", choices=PROFILE_SEQUENCE_WEIGHTING, default="none")
     parser.add_argument(
         "--profile-iterations",
         type=int,
@@ -157,6 +159,8 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv=None) -> int:
     args = build_parser().parse_args(argv)
+    if args.profile_sequence_weighting != "none" and not args.fasta_directory:
+        raise SystemExit("--profile-sequence-weighting requires --fasta-directory")
     if (
         args.jackknife_profile_thresholds
         and args.jackknife_single_copy_profiles
@@ -266,6 +270,8 @@ def main(argv=None) -> int:
                 calibrate_single_copy_profiles=(
                     args.jackknife_single_copy_profiles
                 ),
+                **({"sequence_weighting": args.profile_sequence_weighting}
+                   if args.profile_sequence_weighting != "none" else {}),
             )
             profile_results.append(profile_result)
             profile_base_edges = combine_edges(
@@ -376,6 +382,7 @@ def main(argv=None) -> int:
             "matrix": args.matrix,
             "leiden_seed": args.leiden_seed,
             "singleton_tie_policy": args.singleton_tie_policy,
+            "profile_sequence_weighting": args.profile_sequence_weighting,
         },
         "counts": {
             "genes": len(gene_names),
@@ -419,6 +426,10 @@ def main(argv=None) -> int:
                 "significant_profile_hits": item.significant_profile_hits,
                 "strict_profile_edges": len(item.edges),
                 "calibrated_profiles": item.calibrated_profiles,
+                "profile_effective_counts": [
+                    {"cluster_id": cluster, "effective_sequence_count": count}
+                    for cluster, count in item.profile_effective_counts
+                ],
             }
             for iteration, item in enumerate(profile_results, start=1)
         ]

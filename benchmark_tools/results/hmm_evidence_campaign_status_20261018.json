@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "status": "active_weighting_implementation_tested_scientific_evaluations_pending",
+  "objective": "/home/bizon/.codex/attachments/be402858-3414-45ba-9a1b-323a1b394ab1/pasted-text-1.txt",
+  "protocol": "benchmark_tools/hmm_evidence_campaign_20261018.json",
+  "protocol_commit": "d2ccfd44",
+  "protocol_push": "git push origin main succeeded; remote advanced from 16941f80 to d2ccfd44",
+  "methods": [
+    {
+      "method": "sequence_weighted_family_profiles",
+      "state": "opt_in_implementation_and_tests_complete_diagnostic_and_biological_pilots_pending",
+      "modes": ["none", "henikoff", "henikoff_cluster", "species_henikoff_cluster"],
+      "implementation": ["orthohmm/search/sequence_weights.py", "orthohmm/search/msa_profile.py", "orthohmm/search/profile_expansion.py"],
+      "interfaces": "Production API/CLI, benchmark production harness and numeric-hit graph replay; nondefault policies require active profile inference, default none preserves the legacy worker call shape.",
+      "provenance": "Production metrics identify the mode and actual weighted-profile count; JSON records each profile's effective sequence count. Replay receipts retain the same per-profile counts. Jackknife rebuilds preserve mode and retained species labels.",
+      "diagnostic_script": "benchmark_tools/diagnose_profile_weighting.py",
+      "biological_accuracy_evaluated": false
+    },
+    {"method": "alignment_aware_recruitment", "state": "required_pending_detailed_protocol_and_implementation"},
+    {"method": "local_joint_tree_rescue", "state": "required_pending_detailed_protocol_and_implementation"},
+    {"method": "selective_hmmer_validation", "state": "required_pending_detailed_protocol_and_implementation"}
+  ],
+  "tests": {
+    "latest": "benchmark_tools/results/hmm_evidence_weighting_tests_v4_20261018.xml",
+    "result": "222 passed, zero failures/errors/skips across 11 selected unit/integration modules; 16.94 seconds on shared host, not an inference speed measurement.",
+    "scope": "Hand-calculated weights, species totals, effective-count transitivity, fragments/unknowns, row/column permutation, invalid inputs, exact uniform-count compatibility, serial/spawn builds, actual HMM self-scoring, jackknife propagation, CLI/API scope guards, replay/harness paths, and all three weighted modes through a real 16-gene/four-species complete native phylogeny fixture.",
+    "prior_runs": "Initial targeted run: 157 pass and three new-test failures from an incorrectly cased enum member; corrected to existing blosum62. Next 188 pass. A later requested nonexistent test filename yielded collection exit4 before running tests; corrected selection yielded209 pass, then213 pass, then222 pass after invalid-identity coverage. These are test/setup histories, not failed biological experiments.",
+    "additional_legacy_spot_check": "A read-only comparison against committed16941f80 msa_profile.py produced byte-identical default outputs for384 randomized PSSMs over BLOSUM45/62/80 and three real center-star profiles. This local spot check does not replace the required complete-proteome control gate."
+  },
+  "resources": "Use local shared bizon Threadripper, one new scientific job at a time; no DGX or quiet-window prerequisite. Other jobs untouched. Timing descriptive only.",
+  "remaining": [
+    "Commit and push tested implementation, freeze the scientific source and run the prespecified two-seed, two-copy-scenario synthetic diagnostic; independently recount retained raw score archives.",
+    "Prepare and execute matched canonical complete-proteome OrthoBench downstream control plus all three weighting pilots. Verify exact control and actual activation, independently score P/R/F1 and apply the original advancement gate.",
+    "Extend only advancing arms to corrected QfO and Three Kingdoms; retain all eight endpoint slots and denominator/resource diagnostics, including explicit NA for stopped branches.",
+    "Prespecify, implement, test and evaluate aligned-span evidence, local joint-tree rescue and selective HMMER validation. A negative weighting branch does not complete the goal.",
+    "Evaluate justified combinations, seek post-freeze confirmation if available, update the full comparator table and final recommendation, and verify all intended milestones committed/pushed."
+  ],
+  "defaults_promoted": false,
+  "goal_completed": false
+}
