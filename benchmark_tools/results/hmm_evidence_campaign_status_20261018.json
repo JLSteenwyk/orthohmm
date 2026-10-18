@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "active_qfo_weighting_running_hmmer_local_pilots_and_hmmer_readback24498_queued",
+  "status": "active_qfo_weighting_running_hmmer_local_pilots_and_postrun_readers24498_24499_queued",
   "objective": "/home/bizon/.codex/attachments/be402858-3414-45ba-9a1b-323a1b394ab1/pasted-text-1.txt",
   "protocol": "benchmark_tools/hmm_evidence_campaign_20261018.json",
   "protocol_commit": "d2ccfd44",
@@ -227,6 +227,19 @@
     "defaults_promoted": false,
     "goal_completed": false
   },
+  "local_joint_postrun_readback": {
+    "runner_commit": "6d69989f9369b3670658ad168e5a8f9a79420292",
+    "runner_push": "git push origin main succeeded; git ls-remote verified origin/main equals6d69989f before frozen source creation/submission",
+    "scientific_reader_source": "benchmarks/work/local_joint_postrun_v1_20261018",
+    "protocol": "benchmark_tools/hmm_local_joint_postrun_20261018.json",
+    "tests_and_scope": "benchmark_tools/results/local_joint_postrun_reader_milestone_20261018.json",
+    "job": {"job_id": "24499", "last_observed_state": "PENDING", "dependency": "afterany:24495", "cpus": 1, "memory_allocation": "16G", "wall_limit": "02:00:00", "log": "benchmarks/results/local_joint_postrun_v1_20261018-24499.out", "summary": "benchmarks/results/local_joint_postrun_v1_20261018/summary.json"},
+    "launch": "Original final-native launch bound to immutablea5b4f9a3, source84b5a847, job24495. Reader executes python -m benchmark_tools.report_local_joint_pilot --repo <primary repo> --output <fresh directory> from frozen6d69989f with CPU-only/single-thread controls and unchanged original CPU libraries. scontrol confirms oneCPU/16G/2h and afterany24495 dependency; runtime reader requires unique terminal successful16CPU128G parent and complete ordered panel, so failed/partial science cannot enter accuracy admission.",
+    "remaining": "Monitor24499 after24495 without duplication; repeat all128 original proposals, actual producer artifacts, effective partitions/caches, final native scores/turnover and paired-family uncertainty. Do not infer accuracy from six provisional admissions. Full weighting readback and any independently justified extensions/combinations remain required.",
+    "accuracy_result_admitted": false,
+    "defaults_promoted": false,
+    "goal_completed": false
+  },
   "synthetic_diagnostic": {
     "producer": {"path": "benchmarks/results/hmm_evidence_weighting_synthetic_v2_20261018/summary.json", "bytes": 190610, "sha256": "29a138b11aa445d4f59191916cce4c3d954717c44e4d70daeae4fa0508407c88"},
     "readback": {"path": "benchmark_tools/results/hmm_evidence_weighting_synthetic_readback_20261018.json", "bytes": 27483, "sha256": "463925f484b48e5033003af47b67547a29a03efeb1d1527ccb78bdcc577af343"},
@@ -257,7 +270,7 @@
   "readback_tests": {"path": "benchmark_tools/results/hmm_evidence_weighting_readback_tests_20261018.xml", "result": "73 focused tests passed, including independent raw recount and tamper/ownership guards; this overlaps the222-test implementation suite and must not be summed as independent coverage."},
   "resources": "Use local shared bizon Threadripper, one new scientific job at a time; no DGX or quiet-window prerequisite. Other jobs untouched. Timing descriptive only.",
   "remaining": [
-    "Monitor running QfO24490 and queued Three Kingdoms24491/HMMER24493/local24495/HMMER-reader24498 without duplicates. Local24489's6 admissions remain provisional until24495 and separate post-run accuracy admission. Complete local and weighting full-vector readers, verify all actual results/uncertainty and any required HMMER applicability fallback. Alignment fixed branch stopped; failed localv1 preserved. Small weighting gains and intervals spanning zero are not a full-vector result.",
+    "Monitor running QfO24490 and queued Three Kingdoms24491/HMMER24493/local24495/HMMER-reader24498/local-reader24499 without duplicates. Local24489's6 admissions remain provisional until24495 and separate post-run accuracy admission24499. Both dedicated pilot readers are tested, pushed, frozen and queued; finish weighting full-vector reader, verify all actual results/uncertainty and any required HMMER applicability fallback. Alignment fixed branch stopped; failed localv1 preserved. Small weighting gains and intervals spanning zero are not a full-vector result.",
     "Extend only advancing arms to corrected QfO and Three Kingdoms; retain all eight endpoint slots and denominator/resource diagnostics, including explicit NA for stopped branches.",
     "Local complete proposal/composite/final-native runner passes524 selected tests and24495 is queued: verify full biological execution, separate accuracy/uncertainty admission and original point gate. Selective HMMER24493 is queued; finish post-run admission and any required applicability fallback. Both methods remain required regardless of earlier results.",
     "Evaluate justified combinations, seek post-freeze confirmation if available, update the full comparator table and final recommendation, and verify all intended milestones committed/pushed."
