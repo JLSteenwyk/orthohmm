@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "active_qfo_weighting_running_remaining_inference_and_all_three_postrun_readers_queued",
+  "status": "active_qfo_control_native_running_remaining_inference_readers_and_campaign_report_queued",
   "objective": "/home/bizon/.codex/attachments/be402858-3414-45ba-9a1b-323a1b394ab1/pasted-text-1.txt",
   "protocol": "benchmark_tools/hmm_evidence_campaign_20261018.json",
   "protocol_commit": "d2ccfd44",
@@ -175,7 +175,7 @@
     "scientific_revision": "620bfdf91d3d1b8c3a5d054df36b0f199c11de55",
     "arms": ["none", "henikoff", "henikoff_cluster"],
     "datasets": [
-      {"dataset": "QfO", "execution_plan": {"path": "benchmarks/results/profile_weighting_followup_qfo_v1_20261018/execution_plan.json", "bytes": 82164197, "sha256": "f413d9685d667dc94a677a0d96ab0c73db9055d0bb1e50a95dac02ca4fc339e0"}, "preparation": {"job_id": "24486", "state": "COMPLETED", "exit_code": "0:0", "elapsed": "00:01:50", "cpus": 1, "memory_allocation": "16G"}, "inference": {"job_id": "24490", "last_observed_state": "RUNNING", "last_observed_elapsed": "01:00:52", "last_observed_stage": "none graph_running; producer status running, no completed follow-up arm yet", "dependency": "afterany:24489,afterok:24486 satisfied", "log": "benchmarks/results/profile_weighting_followup_qfo_v1_20261018-24490.out"}},
+      {"dataset": "QfO", "execution_plan": {"path": "benchmarks/results/profile_weighting_followup_qfo_v1_20261018/execution_plan.json", "bytes": 82164197, "sha256": "f413d9685d667dc94a677a0d96ab0c73db9055d0bb1e50a95dac02ca4fc339e0"}, "preparation": {"job_id": "24486", "state": "COMPLETED", "exit_code": "0:0", "elapsed": "00:01:50", "cpus": 1, "memory_allocation": "16G"}, "inference": {"job_id": "24490", "last_observed_state": "RUNNING", "last_observed_elapsed": "01:09:29", "last_observed_stage": "none native_running; complete graph/profile metrics report984137 genes/78 species/57967 profiles. Control native products and score gate not yet admitted.", "dependency": "afterany:24489,afterok:24486 satisfied", "log": "benchmarks/results/profile_weighting_followup_qfo_v1_20261018-24490.out"}},
       {"dataset": "ThreeKingdoms", "execution_plan": {"path": "benchmarks/results/profile_weighting_followup_tk_v1_20261018/execution_plan.json", "bytes": 46291379, "sha256": "b057c8aeb7ca00bd16bd8eb2443dbe31f40f6ff51a1e499d4235aa1de6acfa72"}, "preparation": {"job_id": "24487", "state": "COMPLETED", "exit_code": "0:0", "elapsed": "00:00:52", "cpus": 1, "memory_allocation": "16G"}, "inference": {"job_id": "24491", "last_observed_state": "PENDING", "dependency": "afterany:24490,afterok:24487", "log": "benchmarks/results/profile_weighting_followup_tk_v1_20261018-24491.out"}}
     ],
     "resources": "16CPUs/128GiB/one day each; sequential new scientific jobs, CPU-only shared local Threadripper, unrelated jobs untouched. Large immutable plans remain outside Git. Full commands, inputs, source/runtime fingerprints and scoring namespaces are pinned in each plan.",
@@ -253,6 +253,18 @@
     "defaults_promoted": false,
     "goal_completed": false
   },
+  "campaign_results_collator": {
+    "runner_commit": "2be98345e60e82f2876c32120c8c0e0524a6f62f",
+    "runner_push": "git push origin main succeeded; git ls-remote verified origin/main equals2be98345 before frozen source creation/submission",
+    "source": "benchmarks/work/hmm_campaign_report_v1_20261018",
+    "implementation": "benchmark_tools/report_hmm_evidence_campaign.py",
+    "tests_and_scope": "benchmark_tools/results/hmm_campaign_report_milestone_20261018.json",
+    "job": {"job_id": "24501", "last_observed_state": "PENDING", "dependency": "afterany:24498:24499:24500", "cpus": 1, "memory_allocation": "16G", "wall_limit": "02:00:00", "log": "benchmarks/results/hmm_campaign_report_v1_20261018-24501.out", "summary": "benchmarks/results/hmm_campaign_report_v1_20261018/summary.json", "table": "benchmarks/results/hmm_campaign_report_v1_20261018/scores.tsv"},
+    "launch": "Original reader entries bound to immutable23abc652, jobs24498/24499/24500 and their exact frozen sources. Actual command is python -m benchmark_tools.report_hmm_evidence_campaign --repo <primary repo> --output <fresh directory>, executed from frozen2be98345 with CPU-only/single-thread controls and verified unchanged original CPU libraries. scontrol independently confirms all three afterany dependencies, oneCPU/16G/2h. Runtime requires all three source readers terminal successful with complete admitted results; parent failure cannot become negative accuracy evidence or an admitted comparison.",
+    "remaining": "Monitor24501 without duplication. Verify actual combined source-bound table, conditional functional populations, original point/full-vector gates, measurement-control roles and explicit required_next_actions. The collator is deliberately interim: it never promotes defaults or closes the goal, and it does not replace required applicability/full-vector/production-interface/confirmation work.",
+    "defaults_promoted": false,
+    "goal_completed": false
+  },
   "synthetic_diagnostic": {
     "producer": {"path": "benchmarks/results/hmm_evidence_weighting_synthetic_v2_20261018/summary.json", "bytes": 190610, "sha256": "29a138b11aa445d4f59191916cce4c3d954717c44e4d70daeae4fa0508407c88"},
     "readback": {"path": "benchmark_tools/results/hmm_evidence_weighting_synthetic_readback_20261018.json", "bytes": 27483, "sha256": "463925f484b48e5033003af47b67547a29a03efeb1d1527ccb78bdcc577af343"},
@@ -283,9 +295,9 @@
   "readback_tests": {"path": "benchmark_tools/results/hmm_evidence_weighting_readback_tests_20261018.xml", "result": "73 focused tests passed, including independent raw recount and tamper/ownership guards; this overlaps the222-test implementation suite and must not be summed as independent coverage."},
   "resources": "Use local shared bizon Threadripper, one new scientific job at a time; no DGX or quiet-window prerequisite. Other jobs untouched. Timing descriptive only.",
   "remaining": [
-    "Monitor running QfO24490 and queued Three Kingdoms24491/HMMER24493/local24495/HMMER-reader24498/local-reader24499/weighting-reader24500 without duplicates. Local24489's6 admissions remain provisional until24495 and separate post-run accuracy admission24499. All three dedicated readers are tested, pushed, frozen and queued. Verify actual results/uncertainty, complete vectors and any required HMMER applicability fallback. Alignment fixed branch stopped; failed localv1 preserved. Small weighting gains and intervals spanning zero are not a full-vector result.",
+    "Monitor running QfO24490 and queued Three Kingdoms24491/HMMER24493/local24495/HMMER-reader24498/local-reader24499/weighting-reader24500/campaign-report24501 without duplicates. QfO none graph/profile pass is complete and native replay is running; its control gate is not yet admitted. Local24489's6 admissions remain provisional until24495 and accuracy admission24499. All readers and the interim collator are tested, pushed, frozen and queued. Verify actual results/uncertainty, complete vectors and required applicability/follow-up actions. Alignment fixed branch stopped; failed localv1 preserved.",
     "Extend only advancing arms to corrected QfO and Three Kingdoms; retain all eight endpoint slots and denominator/resource diagnostics, including explicit NA for stopped branches.",
-    "Local24495 and selective HMMER24493 remain required regardless of weighting results; both have separately queued post-run readers. Verify full biological execution, activation, source/output/score/uncertainty admission and original point gates before extensions. Latest633-test suite spans19 overlapping modules; unit and small actual native integration evidence do not replace biological runs.",
+    "Local24495 and selective HMMER24493 remain required regardless of weighting results; both have separately queued post-run readers. Verify full biological execution, activation, source/output/score/uncertainty admission and original point gates before extensions. Latest661-test suite spans20 overlapping modules, including28 collator cases; unit and small actual native integration evidence do not replace biological runs.",
     "Evaluate justified combinations, seek post-freeze confirmation if available, update the full comparator table and final recommendation, and verify all intended milestones committed/pushed."
   ],
   "defaults_promoted": false,
