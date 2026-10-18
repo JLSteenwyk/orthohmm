@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "status": "local_context_readback_and_composite_cache_helpers_tested_full_panel_runner_pending",
+  "protocol": "benchmark_tools/hmm_local_joint_readback_20261018.json",
+  "implementation": "benchmark_tools/local_rescue_readback.py",
+  "tests": {"path": "benchmark_tools/results/local_rescue_readback_helper_tests_v2_20261018.xml", "sha256": "ac8c8aebb061860b7aba924e6a41877dd29a0af769950019a2b8649c7b2f1097", "passed": 132, "failures": 0, "errors": 0, "skipped": 0, "scope": "Four overlapping local helper/profile/nomination/probe modules, including27 new readback/cache/compatibility cases. Do not sum overlapping counts as independent coverage."},
+  "behavior": "Authenticate unchanged used scientific code versus original8c4ddfb7; repeat complete-database original CPU profile scoring and spans, including rejections; authenticate original source tree/checkpoint/tokenized input/alignment and baseline species-tree hashes; reroot/reconcile the exact cached raw tree in a fresh namespace, reapply intact membership constraints and compare full joint admission and tree hashes. Copy baseline cache plus only checked accepted raw-tree/checkpoint pairs, validating copies and source preservation. Never infer a replacement tree or manually write official predictions.",
+  "actual_fixture": "Original16-gene/four-species inferred baseline plus a real accepted two-family MAFFT/FastTree context. The helper repeats its actual profiles/admission while tool execution is forbidden, proving source cache reuse. Composite loading recognizes the accepted complete joint gene set and preserves original files. Separate unrelated profiles remain rejected, including an original Infinity diagnostic retained only through explicit evidence encoding.",
+  "history": "Initial129 passes/three failures exposed missing checkpoint/gene-tree directories in an otherwise valid all-bypassed baseline cache and a corresponding collision fixture setup. Created required empty cache directories and corrected fixture setup; then132 passed. No biological result or parameter changed.",
+  "remaining": "Integrate complete original nomination/proposal/scheduler/source/runtime admission, rebuild all effective candidate bytes, prepare frozen composite/final-native execution and run the matched off/local accuracy pilot. These helper fixtures do not independently admit the128 actual biological proposals or establish accuracy.",
+  "defaults_promoted": false,
+  "accuracy_result_admitted": false,
+  "goal_completed": false
+}
