@@ -1,12 +1,14 @@
-"""Label-independent, bounded nomination for experimental local tree rescue.
+"""Label-independent, bounded family-HMM and local joint-tree proposals.
 
-Nomination does not merge families or infer orthology. A nominee still
-requires cross-profile validation and a joint-tree admission decision.
+Nomination and cross-profile support do not establish orthology. Admitted
+joint contexts still require ordinary final native inference and evaluation.
 """
 
 from dataclasses import dataclass
+import json
 import math
 from numbers import Integral
+from pathlib import Path
 
 import numpy as np
 
@@ -284,3 +286,295 @@ def assess_joint_outcome(outcome, genes_a, genes_b, baseline_high_pairs, gene_sp
         "uncertain_events": reconciliation.uncertain_count,
         "scope": "Provisional constrained joint-tree admission, not a final pair/group export or accuracy claim",
     }
+
+
+def _local_families(context, gene_species):
+    groups = [tuple(context[key]) for key in ("genes_a", "genes_b")]
+    if any(len(group) < 3 or any(not isinstance(gene, str) or not gene for gene in group)
+           or len(set(group)) != len(group) for group in groups):
+        raise ValueError("Local profiles require complete unique families of at least three genes")
+    if set(groups[0]) & set(groups[1]) or sum(map(len, groups)) > 200:
+        raise ValueError("Local families must be disjoint and within the joint 200-gene budget")
+    for group in groups:
+        if any(gene not in gene_species or not isinstance(gene_species[gene], str)
+               or not gene_species[gene] for gene in group):
+            raise ValueError("Missing local gene species ownership")
+        if len({gene_species[gene] for gene in group}) < 2:
+            raise ValueError("Local families require at least two species")
+    return [tuple(sorted(group)) for group in groups]
+
+
+def validate_local_profiles(context, gene_names, sequence_database, gene_species, *, cpu=1):
+    """Validate a nominated context with reciprocal, unweighted CPU profiles.
+
+    The database must be the complete proteome collection, not a neighborhood
+    subset. Its total residue count is used for the existing approximate
+    significance calculation. This routine does not infer orthology.
+    """
+    from .search.evalue import batch_estimate_evalues
+    from .search.matrices import get_ka_params
+    from .search.profile_expansion import build_cluster_profiles, _pack_profiles
+    from .search.profile_spans import profile_alignment_span
+    from .search.viterbi import is_c_available, batch_viterbi_multipair_c, batch_viterbi_c
+
+    cpu = _positive_integer(cpu, "CPU count")
+    groups = _local_families(context, gene_species)
+    names = list(gene_names)
+    if (not names or any(not isinstance(gene, str) or not gene for gene in names)
+            or len(names) != len(set(names)) or names != list(sequence_database.ids)
+            or len(names) > np.iinfo(np.int32).max):
+        raise ValueError("Local profiles require the unique complete database-aligned gene table")
+    lookup = {gene: index for index, gene in enumerate(names)}
+    if any(gene not in lookup for group in groups for gene in group):
+        raise ValueError("Local family gene is absent from the complete sequence database")
+    lengths, offsets, flat = (np.asarray(array) for array in (
+        sequence_database.lengths, sequence_database.offsets, sequence_database.flat_sequences))
+    if (lengths.shape != (len(names),) or offsets.shape != lengths.shape or flat.ndim != 1
+            or lengths.dtype != np.dtype("int32") or offsets.dtype != np.dtype("int64")
+            or flat.dtype != np.dtype("uint8") or np.any(lengths < 0)
+            or not np.array_equal(offsets, np.r_[0, np.cumsum(lengths[:-1], dtype=np.int64)])
+            or int(lengths.sum(dtype=np.int64)) != len(flat)):
+        raise ValueError("Invalid complete sequence database layout for CPU scoring")
+    if not is_c_available():
+        raise RuntimeError("Local profile protocol requires the original CPU Viterbi library")
+    clusters = [[lookup[gene] for gene in group] for group in groups]
+    profiles = build_cluster_profiles(clusters, names, sequence_database, "BLOSUM62", cpu)
+    result = {
+        "schema_version": 1, "genes_a": list(groups[0]), "genes_b": list(groups[1]),
+        "accepted": False, "reasons": [], "orthology_inferred": False,
+        "parameters": {"matrix": "BLOSUM62", "sequence_weighting": "none", "evalue": 1e-4,
+                       "band_width": 64, "coverage_rule": "5*known_matches >= 4*min(model_length,target_length)",
+                       "database_genes": len(names), "database_residues": len(flat)},
+        "profiles": [], "hits": [], "supported_genes_a": [], "supported_genes_b": [],
+        "supported_species_a": [], "supported_species_b": [],
+    }
+    for index, profile in sorted(profiles.items()):
+        if profile.sequence_weighting != "none" or list(profile.member_ids) != list(groups[index]):
+            raise ValueError("Local profile sources or weighting differ from the fixed protocol")
+        result["profiles"].append({"side": "ab"[index], "members": list(profile.member_ids),
+            "length": int(profile.length), "sequence_weighting": profile.sequence_weighting,
+            "effective_sequence_count": profile.effective_sequence_count,
+            "match_emissions": profile.match_emissions.tolist(), "insert_emissions": profile.insert_emissions.tolist(),
+            "transitions": profile.transitions.tolist(), "consensus": profile.consensus.tolist()})
+    if set(profiles) != {0, 1}:
+        result["reasons"].append("missing_informative_profile")
+        return result
+    _, packed = _pack_profiles(profiles)
+    profile_lengths, profile_offsets, emissions, _, insertions, transitions = packed
+    pairs = np.asarray([(index, lookup[gene]) for index in (0, 1) for gene in groups[1 - index]], dtype=np.int32)
+    args = (emissions, insertions, transitions, profile_offsets, profile_lengths,
+            flat, offsets, lengths, pairs, 64)
+    try:
+        scores = batch_viterbi_multipair_c(*args, n_threads=cpu)
+        result["scorer"] = "original_cpu_multipair"
+    except RuntimeError:
+        scores = batch_viterbi_c(*args, n_threads=cpu)
+        result["scorer"] = "original_cpu_scalar_fallback"
+    if (scores.shape != (len(pairs),) or scores.dtype.kind not in "iu" or np.any(scores < 0)):
+        raise ValueError("Invalid raw CPU profile scores")
+    lam, k = get_ka_params("BLOSUM62")
+    evalues = batch_estimate_evalues(scores, profile_lengths[pairs[:, 0]], len(flat), lam, k)
+    if not np.isfinite(evalues).all() or np.any(evalues < 0):
+        raise ValueError("Invalid approximate profile significance")
+    supported = [set(), set()]
+    for (profile_id, gene_id), score, evalue in zip(pairs, scores, evalues):
+        profile_id, gene_id = int(profile_id), int(gene_id)
+        row = {"profile_side": "ab"[profile_id], "target_side": "ab"[1 - profile_id],
+               "target_gene": names[gene_id], "raw_score": int(score), "evalue": float(evalue),
+               "significant": bool(evalue < 1e-4), "supported": False, "span": None}
+        if row["significant"]:
+            span = profile_alignment_span(profiles[profile_id], sequence_database.get_sequence(gene_id),
+                                          band_width=64, expected_score=int(score))
+            row["span"] = span.as_record()
+            row["supported"] = bool(span.passes_guard)
+            if span.passes_guard:
+                supported[1 - profile_id].add(names[gene_id])
+        row["reason"] = ("supported" if row["supported"] else
+                         "aligned_coverage" if row["significant"] else "profile_significance")
+        result["hits"].append(row)
+    for index, side in enumerate("ab"):
+        species = sorted({gene_species[gene] for gene in supported[index]})
+        result["supported_genes_" + side] = sorted(supported[index])
+        result["supported_species_" + side] = species
+        if len(supported[index]) < 2:
+            result["reasons"].append("insufficient_profile_genes_" + side)
+        if len(species) < 2:
+            result["reasons"].append("insufficient_profile_species_" + side)
+    result["accepted"] = not result["reasons"]
+    return result
+
+
+def _context_constraints(constraints, groups):
+    sides = [set(group) for group in groups]
+    universe, selected = set.union(*sides), []
+    for row in constraints:
+        source, target = tuple(row["source_genes"]), tuple(row["target_genes"])
+        if (not source or not target or any(not isinstance(gene, str) or not gene for gene in (*source, *target))
+                or len(set(source)) != len(source) or len(set(target)) != len(target) or set(source) & set(target)):
+            raise ValueError("Invalid original family membership constraint")
+        genes = set(source) | set(target)
+        if not genes & universe:
+            continue
+        if not any(genes <= side for side in sides):
+            raise ValueError("Original membership constraint crosses local source family boundaries")
+        selected.append(row)
+    return selected
+
+
+def evaluate_local_context(context, gene_names, sequence_database, gene_species, sequences,
+                           species_tree_path, proteome_files, config, output_directory,
+                           constraints, baseline_high_pairs, *, cpu=1):
+    """Validate profiles and infer one fresh, constrained provisional joint tree.
+
+    The caller authenticates that species_tree_path belongs to the unmodified
+    baseline. No baseline checkpoint is reused for this fresh joint context.
+    Final candidate/native inference and benchmark evaluation remain separate.
+    """
+    from .phylogeny import parse_species_tree
+    from .phylogeny_pipeline import (_atomic_write, _sha256_file, _reconcile_family,
+                                     _gene_tokens, _aligner_command, _tree_command,
+                                     apply_satellite_membership_constraints)
+
+    groups = _local_families(context, gene_species)
+    expected = {"mode": "reconcile", "species_tree_mode": "infer", "species_tree_rooting": "min_variance",
+                "root_duplication_rule": "species_overlap", "pair_orthology_rule": "positive_paralogy",
+                "satellite_membership_rule": "high_confidence_pair", "gene_tree_support_mode": "legacy"}
+    if any(getattr(config, key) != value for key, value in expected.items()):
+        raise ValueError("Local rescue requires the fixed baseline phylogeny policies")
+    family_id = context["context_id"]
+    if (not isinstance(family_id, str) or not family_id.startswith("LocalContext")
+            or not family_id[len("LocalContext"):].isdigit()):
+        raise ValueError("Invalid local context identifier")
+    selected_constraints = _context_constraints(constraints, groups)
+    universe = set(groups[0]) | set(groups[1])
+    original_pairs = []
+    for pair in baseline_high_pairs:
+        if len(pair) != 2 or pair[0] == pair[1] or any(gene not in gene_species for gene in pair):
+            raise ValueError("Invalid baseline high-confidence pair")
+        if set(pair) & universe:
+            if not any(set(pair) <= set(group) for group in groups):
+                raise ValueError("Baseline pair crosses original candidate family boundaries")
+            original_pairs.append(pair)
+    from .search.sequences import encode_sequence
+    indices = {gene: index for index, gene in enumerate(gene_names)}
+    if any(gene not in sequences or not isinstance(sequences[gene], str) or gene not in indices
+           or not np.array_equal(encode_sequence(sequences[gene]), sequence_database.get_sequence(indices[gene]))
+           for gene in universe):
+        raise ValueError("Joint tree and profile sequences differ")
+    validated = parse_species_tree(species_tree_path, proteome_files)
+    if not {gene_species[gene] for gene in universe} <= set(validated.taxa):
+        raise ValueError("Local context species are absent from the baseline species tree")
+    directory = Path(output_directory)
+    directory.mkdir(parents=True, exist_ok=False)
+    result = {"schema_version": 1, "context": context, "profile_validation": None,
+              "accepted": False, "status": "profile_validation_running", "tree_inferred": False,
+              "species_tree": {"path": str(validated.path.resolve()), "sha256": _sha256_file(validated.path)},
+              "constraints": selected_constraints, "families_merged": False, "final_native_inference": False}
+    receipt = directory / "proposal.json"
+    _atomic_write(receipt, json.dumps(result, indent=2, sort_keys=True, allow_nan=False) + "\n")
+    try:
+        evidence = validate_local_profiles(context, gene_names, sequence_database, gene_species, cpu=cpu)
+    except Exception as error:
+        result.update({"status": "profile_validation_failed", "error": {
+            "type": type(error).__name__, "message": str(error)}})
+        _atomic_write(receipt, json.dumps(result, indent=2, sort_keys=True, allow_nan=False) + "\n")
+        raise
+    result.update({"profile_validation": evidence, "status": "rejected_by_profiles"})
+    _atomic_write(receipt, json.dumps(result, indent=2, sort_keys=True, allow_nan=False) + "\n")
+    if not evidence["accepted"]:
+        return result
+    result["status"] = "joint_tree_running"
+    result["commands"] = {
+        "alignment": _aligner_command(config.aligner, directory / "candidate_fastas" / f"{family_id}.faa"),
+        "gene_tree": _tree_command(config.tree_builder, directory / "alignments" / f"{family_id}.faa")}
+    _atomic_write(receipt, json.dumps(result, indent=2, sort_keys=True, allow_nan=False) + "\n")
+    genes = tuple(sorted(universe))
+    try:
+        outcome = _reconcile_family(family_id, genes, sequences, gene_species, validated.tree,
+                                    result["species_tree"]["sha256"], config, directory, {})
+        result["tree_inferred"] = True
+        if outcome.checkpoint_hit or outcome.remapped_checkpoint_hit:
+            raise ValueError("Provisional local context unexpectedly reused a gene tree")
+        constrained, audit = apply_satellite_membership_constraints([outcome], selected_constraints)
+        decision = assess_joint_outcome(constrained[0], *groups, original_pairs, gene_species)
+    except Exception as error:
+        result.update({"status": "joint_tree_failed", "error": {
+            "type": type(error).__name__, "message": str(error)}})
+        _atomic_write(receipt, json.dumps(result, indent=2, sort_keys=True, allow_nan=False) + "\n")
+        raise
+    result.update({"status": "joint_tree_evaluated", "tree_inferred": True, "accepted": decision["accepted"],
+                   "joint_admission": decision, "constraint_audit": audit, "token_to_gene": _gene_tokens(genes)})
+    _atomic_write(receipt, json.dumps(result, indent=2, sort_keys=True, allow_nan=False) + "\n")
+    return result
+
+
+def write_effective_candidates(original_path, gene_names, proposals, output_path, constraints):
+    """Join only admitted, disjoint whole-family contexts for final inference.
+
+    This writes candidate groups, never official orthogroups or native pairs.
+    With no admitted contexts the original file is preserved byte for byte.
+    The caller must authenticate the proposal evidence before using it.
+    """
+    from .phylogeny_pipeline import _atomic_write
+
+    original_path, output_path = Path(original_path), Path(output_path)
+    if output_path.exists() or output_path.is_symlink() or output_path.resolve() == original_path.resolve():
+        raise FileExistsError(output_path)
+    raw = original_path.read_bytes()
+    groups = [tuple(line.split()) for line in raw.decode("utf-8").splitlines() if line.split()]
+    names, owner = list(gene_names), {}
+    for index, group in enumerate(groups):
+        for gene in group:
+            if gene in owner:
+                raise ValueError("Original candidate partition has duplicate ownership")
+            owner[gene] = index
+    if (any(not isinstance(gene, str) or not gene for gene in names) or len(set(names)) != len(names)
+            or set(owner) != set(names)):
+        raise ValueError("Original candidate partition does not match the complete gene table")
+    consumed, joins = set(), {}
+    accepted = []
+    for proposal in proposals:
+        if not proposal.get("accepted", False):
+            continue
+        profile, joint = proposal.get("profile_validation"), proposal.get("joint_admission")
+        if (proposal.get("accepted") is not True or proposal.get("status") != "joint_tree_evaluated"
+                or proposal.get("tree_inferred") is not True or not isinstance(profile, dict)
+                or profile.get("accepted") is not True or not isinstance(joint, dict)
+                or joint.get("accepted") is not True):
+            raise ValueError("Accepted proposal lacks completed profile and joint-tree admission")
+        context = proposal["context"]
+        sides = [tuple(context[key]) for key in ("genes_a", "genes_b")]
+        indices = []
+        for side in sides:
+            if not side or len(set(side)) != len(side) or any(gene not in owner for gene in side):
+                raise ValueError("Proposal has invalid source family genes")
+            index = owner[side[0]]
+            if set(side) != set(groups[index]):
+                raise ValueError("Proposal does not preserve a complete original source family")
+            indices.append(index)
+        if indices[0] == indices[1] or any(index in consumed for index in indices):
+            raise ValueError("Accepted local contexts overlap")
+        consumed.update(indices)
+        joins[min(indices)] = tuple(sorted(sides[0] + sides[1]))
+        accepted.append({"context_id": context["context_id"], "original_family_indices": indices,
+                         "genes": len(joins[min(indices)])})
+    effective = [joins[index] if index in joins else group
+                 for index, group in enumerate(groups) if index not in consumed or index in joins]
+    effective_owner = {gene: index for index, group in enumerate(effective) for gene in group}
+    for constraint in constraints:
+        source, target = tuple(constraint["source_genes"]), tuple(constraint["target_genes"])
+        genes = source + target
+        if (not source or not target or len(set(genes)) != len(genes) or any(gene not in owner for gene in genes)
+                or len({owner[gene] for gene in genes}) != 1
+                or len({effective_owner[gene] for gene in genes}) != 1):
+            raise ValueError("Membership constraint is not intact inside one original and effective family")
+    if joins:
+        _atomic_write(output_path, "".join(" ".join(group) + "\n" for group in effective))
+    else:
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        with output_path.open("xb") as stream:
+            stream.write(raw)
+    return {"schema_version": 1, "original_families": len(groups), "effective_families": len(effective),
+            "genes": len(owner), "accepted_contexts": accepted, "constraints_preserved": len(constraints),
+            "original_bytes_preserved": not joins, "final_native_inference": False,
+            "scope": "Candidate partition only; final native inference is required for all official outputs"}
