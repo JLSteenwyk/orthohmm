@@ -57,6 +57,7 @@ a new production recommendation.
 | Matched five-arm projection/HMMER recovery | `run_profile_weighting_pilot.py prepare --experiment projection_recovery`, then run its frozen plan | `report_projection_recovery.py --launch-revision <full immutable commit>` |
 | Combined admitted results and explicit follow-up decisions | No new inference | `report_hmm_evidence_campaign.py` |
 | Separately bound recovery campaign comparison | No new inference | `report_hmm_recovery_campaign.py` |
+| Gated projection transfer input preparation | `plan_projection_followup.py` after independent pilot admission | Inputs only; execution driver/full-vector reader required before launch |
 
 The [recovery report protocol](hmm_recovery_campaign_report_20261019.json)
 retains the original successful weighting/local reader bindings and separately
@@ -67,6 +68,14 @@ comparisons qualify FAS eligible pools and carry the previously audited numeric
 sample counts; these are conditional unseeded means, not orthology F1 or paired
 independent observations. This report does not close the campaign or promote
 defaults while follow-up/confirmation requirements remain.
+
+The [projection transfer contract](hmm_projection_followup_20261019.json)
+requires complete original pilot/reader success and unchanged gates before
+preparation. It retains every passing candidate and the original inactivity
+fallback, with matched construction/decision/measurement controls explicitly
+separated from advancement. A failed-gate arm can be required as a control but
+cannot thereby become an advancing candidate. If nothing qualifies, preparation
+records no follow-up rather than searching additional datasets for a pass.
 
 Use the ledger's immutable execution plans and frozen source revisions rather
 than rerunning these scripts with current modules or reusing an output folder.

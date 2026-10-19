@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "gated_transfer_planner_tested_no_preparation_or_scientific_transfer_yet",
+  "parent_revision": "ebfd18e0784dbe120d95b757cd6726432d18a119",
+  "implementation": "benchmark_tools/plan_projection_followup.py",
+  "protocol": "benchmark_tools/hmm_projection_followup_20261019.json",
+  "scope": "Read-only eligibility/control-role and authenticated input preparation for fixed QfO/Three Kingdoms transfer. This is not an execution driver, completed full-vector reader, new benchmark outcome or default recommendation.",
+  "scientific_revision_unchanged": "a6a56ac50ef7d89a2b70428b28914f8bcdce876d",
+  "reader_revision_unchanged": "84ac3933a759e8cf30251c173b74b848b6512961",
+  "rules": [
+    "Require original science24514 and independent reader24515 uniquely terminal successful on original resources, complete five-arm source/plan/reader/content admission and unchanged original scientific runtime before preparing any transfer case.",
+    "Repeat original legacy-relative and matched repaired-control gates and backend contrast. Include every strict point-gate pass, not only a selected winner. Retain zero-measurement reselect applicability fallback separately; failures are never inactivity.",
+    "Use the minimum original ordered control closure: legacy/projection for any transfer; native decision and HMMER measurement controls when HMMER is selected. Keep failed-gate configurations control-only, and retain explicit control dependencies even for dual-role advancing configurations.",
+    "No passing candidate and no declared inactivity means a no_followup_required receipt with no QfO/TK case work. Do not search extra datasets for a favorable outcome or relabel a control as a passing candidate.",
+    "Reuse existing authenticated canonical-case preparation and hash exact initial-hit checkpoints, native products/caches, reference inputs and full frozen preparer source. Preparation remains inputs-only until a separately tested/frozen execution driver and independent full-vector reader exist."
+  ],
+  "tests": {
+    "final": {"path": "benchmark_tools/results/projection_followup_plan_combined_tests_20261019.xml", "bytes": 153340, "sha256": "38ce001454f152f8156267906e2c641d4b9eb68e2948ed6f7d1f8ea25a36fae4", "passed": 994, "failures": 0, "errors": 0, "skipped": 0, "pytest_wall_seconds": 172.32},
+    "scope": "29 overlapping modules. New tests cover every passing candidate, minimal ordered control closure, failed-gate control roles, inactivity versus advancement, no-pass stopping, pending/changed-source/input rejection, full original authentication, committed preparer/protocol guards and actual input receipt writing. Existing profile/native/weighted/local/HMMER/readback/report suites remain covered; no biological accuracy inferred.",
+    "history": [
+      {"path": "benchmark_tools/results/projection_followup_plan_tests_20261019.xml", "bytes": 26300, "sha256": "705f33b65e8f5a932dfe3d85ac6b2148d7a6625a4a8b4aeb3b9852faf3a9aab9", "passed": 159, "failures": 0},
+      {"path": "benchmark_tools/results/projection_followup_plan_tests_v2_20261019.xml", "bytes": 26300, "sha256": "75e7c3d327506e93f19e443dda942f126bf0ef24bdc2597580ffaf6d6a2758b1", "passed": 159, "failures": 0, "scope": "Intermediate checks; final994 additionally covers full preparer source inventory and protocol mutation rejection."}
+    ],
+    "history_storage": "Earlier XML retained outside Git with hashes; overlapping counts are not additive independent coverage."
+  },
+  "actual_readiness_probe": {"reader_job": "24515", "observed_state": "PENDING", "result": "followup_correctly_not_ready", "guard": "Follow-up prerequisite job is not uniquely terminal successful", "scope": "Read-only authenticate() call against actual immutable launch/current scheduler state rejected pending reader before preparation/output/inference/scoring. Expected readiness guard, not a failed scientific experiment or request for user input."},
+  "preservation": "Active science24514 and reader/report24515/24516 untouched. Original scientific source/native libraries and sample status/diff hashes unchanged; unrelated jobs left running.",
+  "remaining": "Commit/push/verify/freeze planner and queue read-only preparation after existing comparison stage. Inspect complete actual pilot admission and resulting original eligibility before implementing/finalizing transfer execution and independent full-vector validation. No extra dataset inference before required code/tests/freeze and original gates. Complete remaining confirmation/recommendation/table/remote audit requirements before goal closure.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}
