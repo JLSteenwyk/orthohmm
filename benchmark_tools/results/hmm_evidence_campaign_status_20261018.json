@@ -593,6 +593,18 @@
     "defaults_promoted": false,
     "goal_completed": false
   },
+  "complete_campaign_endpoint_diagnostics": {
+    "implementation": "benchmark_tools/export_hmm_campaign_diagnostics.py",
+    "milestone": "benchmark_tools/results/hmm_campaign_diagnostics_milestone_20261019.json",
+    "state": "tested593_actual_completed_input_schema_and_pointers_verified_before_commit_freeze_and_submission",
+    "compiler_submission": "6ed21295ab918a4e3de5f65aeef3943545941b13",
+    "compiler_source": "d21d076cf0ce817a7c6807b4c9512532c9b36dcd",
+    "prerequisite_job": "24527",
+    "scope": "Read-only export of precision/recall, coverage and eligible/numeric populations using existing diagnostic helpers and exact committed retained comparator evidence. Actual completed-input compatibility verified105 scored pointers in176 slots; no transferred accuracy admission. Final independently complete compiler remains required. Missing counts/stopped endpoints stay NA, conditional means have no orthology precision/recall, context is not freshly reaudited and original gate decisions remain unchanged.",
+    "accuracy_result_admitted": false,
+    "defaults_promoted": false,
+    "goal_completed": false
+  },
   "completed_hmm_incremental_resource_readback": {
     "implementation": "benchmark_tools/report_completed_hmm_resources.py",
     "source_revision": "3446fc30100e073917d0625642573a9d01ca27dd",

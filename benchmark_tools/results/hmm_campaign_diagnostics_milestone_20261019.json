@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "status": "endpoint_diagnostic_exporter_tested593_before_commit_freeze_and_submission",
+  "parent_revision": "6ed21295ab918a4e3de5f65aeef3943545941b13",
+  "implementation": "benchmark_tools/export_hmm_campaign_diagnostics.py",
+  "purpose": "Deliver readable precision/recall, native and reference coverage, assessed eligible relations and known numeric sample counts alongside all eight headline endpoint slots and source-bound original gate decisions. Reuse existing diagnostic arithmetic; no new inference/scoring/sampling or scientific rule changes.",
+  "immutable_inputs": {
+    "compiler_submission": "6ed21295ab918a4e3de5f65aeef3943545941b13",
+    "compiler_source": "d21d076cf0ce817a7c6807b4c9512532c9b36dcd",
+    "compiler_job": "24527",
+    "compiler_dependency": "afterany:24525",
+    "compiler_summary": "benchmarks/results/hmm_transfer_campaign_report_v1_20261019/summary.json",
+    "retained_comparator_details": "benchmark_tools/results/current_benchmark_scores_20260926_v2/manifest.json",
+    "retained_comparator_sha256": "8d56dae74721c4530ab2b86c5008b2d0ebac07878e574fd85b1ad84e4b908f07"
+  },
+  "validation": {
+    "combined_tests": {
+      "path": "benchmark_tools/results/hmm_campaign_diagnostics_combined_tests_20261019.xml",
+      "bytes": 100423,
+      "sha256": "2f9a1b3023d7247c241bbf74f523b7628727b0fe6b66ffb6ab1f9dd66b678a97",
+      "passed": 593,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "modules": 13,
+      "pytest_wall_seconds": 18.78
+    },
+    "new_exporter_cases": 32,
+    "coverage": "Immutable compiler submission/resources/dependency and pending rejection; retained comparator hash/provenance; every source pointer across context and experimental methods; compact native context without duplicate score fields; percent conversion and official OrthoFinder output semantics; all eight slots, failed/stopped NA, reference/native populations, conditional functional means, separate numeric sample counts, invalid-count rejection, missing diagnostic parent anchoring, input preservation and full writer lifecycle. Unit lifecycle admissions are mocked; tests do not establish accuracy or independent biological confirmation. Counts overlap previous suites and are not additive independent evidence.",
+    "development_history": "Initial uncommitted tests exposed absent detail-document fields on NA rows and nonexistent endpoint detail pointers when diagnostics are missing. Corrected by retaining NA and anchoring missing diagnostics to existing parents, never manufacturing values. An actual completed-input compatibility check additionally exposed compact context records with method-level scores; explicit source-preserving adaptation and regression fixtures now cover that real schema. No biological run or original reader was changed.",
+    "actual_completed_input_compatibility": {
+      "current_endpoint_slots": 176,
+      "scored_endpoints": 105,
+      "historical_endpoint_observations": 105,
+      "known_numeric_functional_populations": 3,
+      "all_scored_and_numeric_source_pointers_resolved": true,
+      "scope": "Pure schema/pointer compatibility on existing completed weighting/local/five-arm pilot and nine retained comparators. No files emitted, raw rescoring, new transfer score admission or independent biological confirmation. The final complete compiler report remains required."
+    },
+    "sample_status_sha256": "5a72884464c7a52298571745329d080e86722b69658902b096d4f10c4574d0a7",
+    "sample_diff_sha256": "91643349c94c9b543fdbb3f33297c5486b8eac916fc5b86e397bdfc07776bcca"
+  },
+  "contracts": [
+    "Use exact immutable6ed21295 compiler24527 submission, frozen d21d076c source and terminal successful1CPU16G admission before exporting. Recheck all source/content/table pins and exact committed retained comparator evidence. Pending/failed compiler cannot create diagnostic output.",
+    "Reuse export_hillclimb_diagnostics for metric definitions and percent conversion. Map source locations back to actual context/population_details or methods/cells paths, with compact context scores at method level. Original method roles, statuses and negative branches remain visible.",
+    "Preserve native universe, assignment/reference coverage, functional eligible relations and known numeric scored samples as different fields. FAS eligible pools are never sample sizes; unknown counts stay NA. Saved unseeded samples with repeated proteins do not provide IID biological uncertainty. Conditional means never acquire orthology precision/recall.",
+    "Contextual comparator diagnostics retain historical limitations and official output semantics; no fresh historical inference-consumption audit, pooled score, ranking, default promotion or goal closure."
+  ],
+  "resources": {"cpus": 1, "memory_gib": 16, "wall_limit": "02:00:00", "new_biological_inference": false},
+  "remaining": "Commit/push, verify remote, freeze exact exporter source with unchanged native libraries, verify actual pending compiler guard and queue read-only export afterany24527 in a fresh namespace. Complete live transfer inference/admission, report/export, justified-combination assessment, final freeze/confirmation or documented data limits, recommendation and final remote audit remain.",
+  "accuracy_result_admitted": false,
+  "defaults_promoted": false,
+  "goal_completed": false
+}

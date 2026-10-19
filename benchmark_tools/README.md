@@ -118,6 +118,17 @@ Its [frozen submission record](results/hmm_transfer_campaign_report_submission_2
 binds compiler `d21d076c` and read-only job24527 to prerequisite reader24525;
 the expected pending-reader rejection creates no output or accuracy admission.
 
+`export_hmm_campaign_diagnostics.py --repo <repo> --output <fresh directory>`
+adds endpoint-level precision, recall, native/reference coverage and assessed
+populations after successful compiler24527. It binds the immutable `6ed21295`
+submission and committed retained OrthoBench evidence, reusing the existing
+diagnostic exporter rather than rescoring predictions. Context scores remain
+at their original method-level locations; all diagnostic pointers resolve to
+the actual source documents. Numeric saved FAS sample counts stay separate
+from eligible pools; unknown numeric counts and unrun endpoints remain NA.
+Functional means never acquire orthology precision/recall. Comparator history
+is retained context, not a fresh provenance audit or biological confirmation.
+
 | Workflow | Execution | Separate result validation |
 | --- | --- | --- |
 | Weighted-profile and alignment-guard OrthoBench pilots | `run_profile_weighting_pilot.py` | `report_profile_evidence_pilot.py` |
@@ -130,6 +141,7 @@ the expected pending-reader rejection creates no output or accuracy admission.
 | Gated projection transfer input preparation | `plan_projection_followup.py` after independent pilot admission | Inputs only; separately frozen execution/reader and original gates required |
 | Fixed projection transfer execution | Standalone `run_projection_followup.py prepare`, then its frozen Slurm driver | `report_projection_followup.py --launch-revision <full immutable commit>` |
 | Complete admitted individual mechanisms and projection transfers | No new inference; immutable successful input-reader bindings required | `report_hmm_transfer_campaign.py` |
+| Endpoint precision/recall, coverage and population export | No new scoring or sampling; completed compiler24527 required | `export_hmm_campaign_diagnostics.py` |
 
 The [recovery report protocol](hmm_recovery_campaign_report_20261019.json)
 retains the original successful weighting/local reader bindings and separately
