@@ -128,6 +128,8 @@ the actual source documents. Numeric saved FAS sample counts stay separate
 from eligible pools; unknown numeric counts and unrun endpoints remain NA.
 Functional means never acquire orthology precision/recall. Comparator history
 is retained context, not a fresh provenance audit or biological confirmation.
+The [frozen exporter submission](results/hmm_campaign_diagnostics_submission_20261019.json)
+records source `a390eecc`, read-only job24528 and its compiler24527 prerequisite.
 
 | Workflow | Execution | Separate result validation |
 | --- | --- | --- |
