@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "status": "tested_recovery_comparison_reporter_freeze_and_queue_pending",
+  "parent_revision": "a884d9c0d2d7b3762e0ef2960bfb411bc847837a",
+  "implementation": "benchmark_tools/report_hmm_recovery_campaign.py",
+  "protocol": "benchmark_tools/hmm_recovery_campaign_report_20261019.json",
+  "binding": {"historical_revision": "23abc652b56990063552572ab98549aeb4a2269e", "historical_blob_sha256": "295e46a43d5f087ef8fcc194107b2831ef92a09eaa0f1245150284ca29326047", "recovery_revision": "a884d9c0d2d7b3762e0ef2960bfb411bc847837a", "recovery_blob_sha256": "74e6991d2f64566c4013e3e758b318c6df362e09b661944647d9aed83305e4a8", "required_reader_jobs": {"weighting": "24500", "local": "24499", "recovery": "24515"}, "science_job": "24514"},
+  "behavior": [
+    "Keep the old four-arm collator's default interface and immutable inputs unchanged; add explicit recovery-mode collation and a distinct fixed-launch entry point. Reuse validated comparison/gate logic rather than redirecting failed originals.",
+    "Require all three original reader jobs uniquely terminal successful on1CPU16G, exact frozen reader/source bindings and complete source/data/score inventories. Reject partial/failed input readers before producing a comparison.",
+    "Retain all original weighting/alignment/local branches and complete ordered five-arm recovery controls. Repeat original point/full-vector screens and matched repaired-control/HMMER-minus-builtin attribution. No repair-only gain becomes a backend benefit.",
+    "Preserve original failed HMMER24493/reader24498/collator24501 as verified failure history and an explicitly unadmitted all-NA method row. Actual three pinned failed files and FAILED1:0 accounting were checked during preflight.",
+    "Retain all eight endpoint slots, inherited uncertainty/populations and explicit next actions. Qualify FAS NR_ORTHOLOGS eligible pools separately from numeric scored samples; carry immutable previously audited counts without new sampling or independent-pair inference. Never promote defaults or close the goal from this interim report."
+  ],
+  "tests": {
+    "final": {"path": "benchmark_tools/results/hmm_recovery_campaign_report_combined_tests_v2_20261019.xml", "bytes": 147635, "sha256": "47d0a9aa48e69afa91d0d559d246f6625fc73ae98ae9b2a23ecf622b0a1a9c9b", "passed": 959, "failures": 0, "errors": 0, "skipped": 0, "pytest_wall_seconds": 161.00},
+    "scope": "28 overlapping modules covering original and recovery report paths, preserved method/control roles, full-vector/point/matched gates, conditional populations, FAS audited-count/source consistency, immutable reader/science bindings, original failure history, actual table/summary writers, failed-input rejection and fresh namespace guards. Existing native/profile/local/weighting/HMMER readers remain covered; unit/integration tests are not biological accuracy.",
+    "history": [
+      {"path": "benchmark_tools/results/hmm_recovery_campaign_report_tests_20261019.xml", "bytes": 32782, "sha256": "c78f550eecf0c9186807c6ff36667702a962165891b8ab4d8485a0921b26498d", "passed": 196, "failures": 0},
+      {"path": "benchmark_tools/results/hmm_recovery_campaign_report_combined_tests_20261019.xml", "bytes": 146820, "sha256": "e336c9ecef69c0253905afd81413c7eb89ac7a221d96499ed5fd3f6d3a6a4623", "passed": 954, "failures": 0, "scope": "Pre-final combined suite; final959 adds explicit FAS numeric-sample/source checks."}
+    ],
+    "history_storage": "Earlier XML retained outside Git with checksums; overlapping counts are not additive independent coverage."
+  },
+  "actual_preflight": {
+    "launch": "Current entry point resolved original reader jobs24500/24499 and recovery24515/science24514 from the two immutable launch blobs.",
+    "failure_history": "Original producer316245-byte JSON and1198/1409-byte reader/collator failure logs match protocol pins; each original job uniquely FAILED1:0 in sacct.",
+    "fas_evidence": {"path": "benchmark_tools/results/completed_weighting_local_readback_20261019.json", "bytes": 7286, "sha256": "feb5b637d27321ca86876790225329001541f076b9d8e9b96f5a53a2c13b169a", "numeric_pairs": {"none": 176307, "henikoff": 176709, "henikoff_cluster": 175092}, "scope": "Previously audited counts content-bound to immutable launch and checked against current complete weighting eligible pools; no new score sampling."}
+  },
+  "legacy_control_observation": {
+    "scope": "Producer-complete first arm of still-running24514, directly rechecked at this milestone; not separately admitted full-panel science or any repaired-method accuracy result.",
+    "status": "legacy_off_independent_content_readback_verified_by_producer",
+    "f1": 0.7410607351873405,
+    "precision": 0.8177045380181867,
+    "recall": 0.6775533630827973,
+    "profiles_built": 15901,
+    "strict_profile_edges": 24738,
+    "genes_preserved": 251378,
+    "content_pins_checked": 11,
+    "control_identity": "Candidate partition/constraints and native root HOGs, ortholog pairs, confidence and rooted species tree match original canonical products and points exactly. Checked graph/native/golden/tree/candidate pins; mutable running results.json is not pinned as terminal evidence.",
+    "graph_report": {"path": "benchmarks/results/projection_recovery_pilot_v1_20261019/legacy_off/graph_metrics.json", "bytes": 6157, "sha256": "7176d1ba9956d3c9f18f00db8738acbf6072e1547eb88e1e7b61511fa74eceda"},
+    "rooted_species_tree": {"path": "benchmarks/results/projection_recovery_pilot_v1_20261019/legacy_off/native/orthohmm_phylogeny/species_tree.rooted.nwk", "bytes": 717, "sha256": "61ba4deadbc1f1e357b892bad11ac6b605e0495393816f077badaeb35b183878"},
+    "timing": {"graph_wall_seconds": 759.71, "native_wall_seconds": 101.79, "scope": "Shared-host cached downstream replay; descriptive, not isolated fresh full-pipeline timing or a speedup claim."},
+    "next_arm": "projection_off running; remaining active arms and independent full-panel reader24515 still required"
+  },
+  "remaining": "Commit/push/verify/freeze reporter, validate frozen inventory and queue afterany24515. Admit only complete actual inputs; verify results and advancement/full-vector requirements, justified combinations and post-freeze confirmation or documented unavailable data before final recommendation and remote audit.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}

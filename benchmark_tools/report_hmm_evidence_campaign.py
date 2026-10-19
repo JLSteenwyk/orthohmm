@@ -92,7 +92,7 @@ def pilot_method(prefix, cell, role, control):
         "missing_endpoints": [key for key in ENDPOINTS if key not in cell["scores"]]}
 
 
-def collate(weighting, local, hmmer, hmmer_producer):
+def collate(weighting, local, hmmer, hmmer_producer, *, recovery=False):
     context = weighting["context"]
     if local["context"] != context or hmmer["context"] != context:
         raise ValueError("The three experiment reports use different retained comparator snapshots")
@@ -112,18 +112,32 @@ def collate(weighting, local, hmmer, hmmer_producer):
     control = methods[0]["cells"][0]
     if [c["label"] for c in local["cells"]] != ["off", "local_joint_v1"]:
         raise ValueError("Require both ordered local pilot cells")
-    if [c["label"] for c in hmmer["cells"]] != ["off", "builtin_reselect", "hmmer_score_only", "hmmer_reselect"]:
-        raise ValueError("Require all four ordered HMMER pilot cells")
+    if recovery:
+        from benchmark_tools.report_projection_recovery import ARMS, verify_panel
+        labels, verify = list(ARMS), verify_panel
+    else:
+        labels, verify = ["off", "builtin_reselect", "hmmer_score_only", "hmmer_reselect"], verify_selective_panel
+    if [c["label"] for c in hmmer["cells"]] != labels:
+        raise ValueError("Require the complete ordered HMMER panel")
     if any(point(report["cells"][0]) != point(control) for report in (local, hmmer)):
         raise ValueError("Local/HMMER off precision, recall or F1 differs from the weighting canonical control")
-    if hmmer["backend_contrast"] != verify_selective_panel(hmmer["cells"], hmmer_producer["arms"]):
+    if hmmer["backend_contrast"] != verify(hmmer["cells"], hmmer_producer["arms"]):
         raise ValueError("HMMER-specific contrast differs from matched builtin decision control")
-    for prefix, report in (("local", local), ("selective", hmmer)):
+    hmmer_prefix = "projection_recovery" if recovery else "selective"
+    for prefix, report in (("local", local), (hmmer_prefix, hmmer)):
         for cell in report["cells"]:
             if cell["status"] != "independent_content_readback_verified" or cell["dataset"] != "OrthoBench":
                 raise ValueError("Unadmitted pilot cell in campaign report")
-            role = "unchanged_control" if cell["label"] == "off" else "measurement_control" if cell["label"] == "hmmer_score_only" else "candidate"
-            methods.append(pilot_method(prefix, cell, role, report["cells"][0]))
+            role = ("unchanged_control" if cell["label"] == report["cells"][0]["label"] else
+                    "measurement_control" if cell["label"] in ("hmmer_score_only", "projection_hmmer_score_only") else "candidate")
+            method = pilot_method(prefix, cell, role, report["cells"][0])
+            if recovery and prefix == hmmer_prefix:
+                method["construction_role"] = ("legacy_control" if cell["label"] == "legacy_off" else
+                                               "projection_only" if cell["label"] == "projection_off" else "matched_repaired_profile")
+                if "matched_projection_advancement" in cell:
+                    method["matched_projection_gate"] = cell["matched_projection_advancement"]
+                method["interpretation"] = "Original advancement uses legacy canonical; repair-only gain is not backend-specific benefit."
+            methods.append(method)
     vectors = {m["key"]: m["scores"] for m in [*context, *methods]}
     if len(vectors) != len(context) + len(methods): raise ValueError("Duplicate campaign method key")
     frontier = metric_frontier(vectors)
@@ -148,7 +162,8 @@ def collate(weighting, local, hmmer, hmmer_producer):
                 "scope": "Conditional similarities over assessed relation populations, not orthology F1 or matched-population causal effects."})
     return {"methods": methods, "context": context, "frontier": frontier, "required_next_actions": actions,
         "functional_population_comparisons": population_changes,
-        "uncertainty": {"weighting": weighting["orthobench_uncertainty"], "local": local["uncertainty"], "selective": hmmer["uncertainty"]},
+        "uncertainty": {"weighting": weighting["orthobench_uncertainty"], "local": local["uncertainty"],
+                        "projection_recovery" if recovery else "selective": hmmer["uncertainty"]},
         "backend_contrast": hmmer["backend_contrast"],
         "recommendation": "Keep production defaults unchanged. Preserve fixed negative branches and experimental candidates. Execute listed follow-ups/confirmation or document unavailable independent data before a final recommendation. Do not combine mechanisms before their individual full-vector effects are understood.",
         "scope": "Development-exposed point comparisons and inherited comparator context; no mixed-endpoint average, universal superiority, independent confirmation or timing leaderboard. TreeFam supports primary OrthoBench/QfO evidence; Three Kingdoms remains supplementary. FAS is unseeded. Shared-host cached incremental time and max-process RSS are not isolated fresh pipeline costs or simultaneous aggregate memory."}

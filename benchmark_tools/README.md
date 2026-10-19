@@ -56,6 +56,17 @@ a new production recommendation.
 | Matched off/builtin/HMMER-measurement/HMMER-reselect pilot | `run_profile_weighting_pilot.py prepare --experiment selective_hmmer`, then run its plan | `report_profile_evidence_pilot.py --experiment selective_hmmer` |
 | Matched five-arm projection/HMMER recovery | `run_profile_weighting_pilot.py prepare --experiment projection_recovery`, then run its frozen plan | `report_projection_recovery.py --launch-revision <full immutable commit>` |
 | Combined admitted results and explicit follow-up decisions | No new inference | `report_hmm_evidence_campaign.py` |
+| Separately bound recovery campaign comparison | No new inference | `report_hmm_recovery_campaign.py` |
+
+The [recovery report protocol](hmm_recovery_campaign_report_20261019.json)
+retains the original successful weighting/local reader bindings and separately
+binds the complete five-arm recovery reader. The original failed HMMER panel
+remains an explicitly unadmitted all-NA row. Repair-only gains, matched decision
+effects and HMMER-minus-builtin effects remain distinct. Functional-population
+comparisons qualify FAS eligible pools and carry the previously audited numeric
+sample counts; these are conditional unseeded means, not orthology F1 or paired
+independent observations. This report does not close the campaign or promote
+defaults while follow-up/confirmation requirements remain.
 
 Use the ledger's immutable execution plans and frozen source revisions rather
 than rerunning these scripts with current modules or reusing an output folder.
