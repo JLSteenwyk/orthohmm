@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "prospective_readback_contract_before_biological_recovery",
+  "scientific_protocol": "benchmark_tools/hmm_projection_integrity_recovery_20261018.json",
+  "ordered_arms": ["legacy_off", "projection_off", "projection_builtin_reselect", "projection_hmmer_score_only", "projection_hmmer_reselect"],
+  "binding": "Use a separately committed/pushed/frozen reader, an explicit immutable full Git launch revision and ledger path, the exact frozen scientific revision, original execution-plan content record and unique original parent Slurm job. The launch revision may be supplied after submission; reader implementation/tests must be complete before biological submission. Never redirect original failed HMMER/reader/collator bindings.",
+  "admission": [
+    "Require original parent uniquely terminal COMPLETED0:0 with16CPUs128G onbizon, complete successful ordered five-arm producer and unchanged runtime/source/input inventories. No partial success, failed tool, corrupt source or inactive backend becomes negative accuracy evidence.",
+    "Recreate all fixed graph/native commands and compare actual preflights, GNU-time receipts, logs, profile policy and intervention activation. Rehash source/input/output artifacts, validate complete unique251378-gene/12-species ownership and repeat candidate/native/scoring readback.",
+    "legacy_off must exactly reproduce the original canonical partition/constraints/native products/species tree and precision/recall/F1. projection_off is a distinct candidate, not required to equal legacy.",
+    "All repaired arms require residue_preserving profile construction. Active arms must retain identical complete query/competitor nominations and digests; each native/HMMER measurement receipt must identify the same projection policy. Recount complete calibration/target sets, raw HMMER tables and actual decisions using existing strict helpers.",
+    "projection_hmmer_score_only must exactly match projection_off graph stages, candidate partition, constraints, native products, rooted species tree, all aggregate/per-family scores and biological coverage. Verify repaired-control tree identity from its original recorded pin, not a fresh unbound read.",
+    "Recompute final native pair/confidence turnover relative to legacy, and record membership/output differences without calling these reference accuracy. Retain canonical and all existing benchmark tools as inherited context, explicitly not reaudited comparator biology."
+  ],
+  "gates": "Recompute original strict OrthoBench F1 improvement versus legacy canonical with precision/recall declines at most0.005. Apply to projection_off and both reselect candidates; active candidates with no completely measured queries require the original applicability fallback instead. Repeat matched repaired-control contrasts and HMMER-minus-builtin comparison. A gain entirely attributable to projection must never be called a HMMER backend improvement. Measurement-only arm is a control, not an advancing method.",
+  "uncertainty": {
+    "replicates": 100000,
+    "seed": 20261018,
+    "alpha": 0.05,
+    "families": 70,
+    "metrics": ["f_score", "precision", "recall"],
+    "multiplicity_endpoints": 24,
+    "contrasts": "Four repaired arms versus legacy(12 metric contrasts), three active repaired arms versus projection_off(9), and projection_hmmer_reselect versus projection_builtin_reselect(3). Include all contrasts even when exact controls coincide; no selection of only favorable differences.",
+    "scope": "Deterministic paired RefOG sufficient-statistic bootstrap, descriptive on development-exposed data. No pair-independent interval, p-value, retrospective gate change or independent confirmation."
+  },
+  "resources": "Read-only post-run reader1CPU16GiB2h may overlap one bounded scientific inference. Local shared Threadripper timings remain approximate; do not stop unrelated analyses.",
+  "required_outputs": ["Source-bound complete reader summary with checked artifact inventory", "Comparison table retaining all eight endpoint slots and explicit missing/unrun reasons", "All original and matched-control gates plus backend contrast and descriptive uncertainty", "Explicit next actions: unchanged corrected-QfO/TK extensions only for independently admitted advancing candidates, tested production opt-ins, justified combinations, post-freeze confirmation or documented unavailable data and final remote audit"],
+  "defaults_promoted": false,
+  "goal_completed": false
+}

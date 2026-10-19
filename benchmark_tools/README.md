@@ -37,9 +37,12 @@ Production requires fresh built-in high-sensitivity inference; replay requires
 the original sequences. Worker and jackknife profiles retain the policy.
 Untested combinations with weighting or alignment guards are rejected. Metrics
 identify the selected policy, and production records the repaired-profile count.
-The recovery runner and complete-panel reader must still be finished before
-launching the new biological panel. This is not a validated accuracy improvement
-or a new production recommendation.
+The five-arm recovery runner is tested, including a complete small native
+fixture. Its [independent reader contract](hmm_projection_recovery_readback_20261019.json)
+requires separate repair/decision/backend contrasts and exact repaired-control
+identity. Reader implementation and tests must be finished before launching the
+biological panel; read-only frozen-plan preparation may proceed. This is not a
+validated accuracy improvement or a new production recommendation.
 
 | Workflow | Execution | Separate result validation |
 | --- | --- | --- |

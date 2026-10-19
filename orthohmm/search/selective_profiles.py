@@ -325,6 +325,8 @@ def score_selected_builtin(selection, profiles, gene_names, sequence_database, s
         result[int(ids[local])]["measurements"][gene_names[int(gene)]] = {
             "reported": True, "full_sequence_score": float(score), "sequence_evalue": float(evalue)}
     for family, measured in result.items():
+        if chosen[family].projection_policy != "legacy":
+            measured["parameters"]["profile_projection_policy"] = chosen[family].projection_policy
         threshold = min(measured["measurements"][g]["full_sequence_score"] for g in measured["members"])
         if threshold != self_thresholds[family]:
             raise ValueError("Recomputed native source minimum differs from original self threshold")

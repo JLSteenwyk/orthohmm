@@ -144,7 +144,8 @@ def test_off_readback_needs_no_selective_files_and_rejects_hidden_intervention(t
         validate(graph, "off", tmp_path, [])
 
 
-def test_actual_four_arm_graph_candidates_and_inferred_native_control(tmp_path, monkeypatch):
+@pytest.mark.parametrize("experiment", ["selective_hmmer", "projection_recovery"])
+def test_actual_four_arm_graph_candidates_and_inferred_native_control(tmp_path, monkeypatch, experiment):
     from benchmark_tools.verify_frozen_phylogeny_install import fixture
     from benchmark_tools.run_full_search_hillclimb import native_command
     tools = [shutil.which(tool) for tool in ("mafft", "FastTree", "hmmbuild", "hmmsearch")]
@@ -175,8 +176,9 @@ def test_actual_four_arm_graph_candidates_and_inferred_native_control(tmp_path, 
         "constraints": record(work / "phylogeny_candidate_merges.json"), "aligner": tools[0], "tree_builder": tools[1],
         "golden": {name: record(phylo / name) for name in (*pilot.PRODUCTS, "species_tree.rooted.nwk")},
         "expected": {"f1": .7, "precision": .8, "recall": .6}}
+    arms = pilot.experiment_settings(experiment)[0]
     plan = {"source_root": str(source), "repo": str(source), "output": str(output), "cpu": 16,
-        "experiment": "selective_hmmer", "arms": list(ARMS), "sources": [], "inputs": [],
+        "experiment": experiment, "arms": list(arms), "sources": [], "inputs": [],
         "runtime": {"files": []}, "source_revision": "unit_fixture_not_frozen_biological_run", "tool_path": os.environ["PATH"],
         "scope": "Actual complete16-gene/four-species integration, scorer mocked; no biological accuracy claim",
         "hmmer_tools": {name: record(path) for name, path in zip(("hmmbuild", "hmmsearch"), tools[2:])}, "case": case}
@@ -194,9 +196,9 @@ def test_actual_four_arm_graph_candidates_and_inferred_native_control(tmp_path, 
     for row in result["arms"]:
         assert row["native_summary"]["candidate_families"] > 0
         assert row["coverage"]["all_candidate_genes_preserved"]
-    measurement = result["arms"][2]
+    measurement = result["arms"][2 if experiment == "selective_hmmer" else 3]
     assert measurement["measurement_control_matches"]
     assert all(measurement["golden_matches"].values())
     # Separate real profile-stage fixtures require nonempty HMMER activation;
     # this complete native fixture can be inactive and remains so labeled.
-    assert result["arms"][3]["activation"]["applicability"] in ("completely_measured", "no_complete_measurements")
+    assert result["arms"][-1]["activation"]["applicability"] in ("completely_measured", "no_complete_measurements")

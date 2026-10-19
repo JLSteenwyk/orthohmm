@@ -101,6 +101,8 @@ def validate(graph, mode, folder, gene_names, expected_tools=None):
         expected_status = "builtin_profile_scored" if mode == "builtin_reselect" else "hmmer_profile_scored"
         if (data["status"] != expected_status or data["members"] != groups[family]
                 or data["queries"] != sorted(queries) or data["parameters"]["database_genes"] != len(gene_names)
+                or data["parameters"].get("profile_projection_policy", "legacy")
+                != graph["parameters"].get("profile_projection_policy", "legacy")
                 or set(data["measurements"]) != set(groups[family]) | set(queries)):
             raise ValueError("Backend measurement targets/source/database scope differs")
         if mode != "builtin_reselect":

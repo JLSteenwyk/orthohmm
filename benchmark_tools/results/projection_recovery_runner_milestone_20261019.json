@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "five_arm_runner_tested_independent_reader_not_yet_implemented_biological_panel_not_launched",
+  "parent_revision": "5aa0b86ad246e0e9165fefdf344fe1a3f4aa1727",
+  "parent_push": "Successful origin/main push independently verified by git ls-remote before this milestone",
+  "scientific_protocol": "benchmark_tools/hmm_projection_integrity_recovery_20261018.json",
+  "prospective_readback_contract": "benchmark_tools/hmm_projection_recovery_readback_20261019.json",
+  "implementation": {
+    "runner": "benchmark_tools/run_profile_weighting_pilot.py --experiment projection_recovery during preparation; execution uses the resulting immutable plan",
+    "ordered_arms": ["legacy_off", "projection_off", "projection_builtin_reselect", "projection_hmmer_score_only", "projection_hmmer_reselect"],
+    "controls": "Legacy canonical exact control; repaired off candidate; matched repaired native-reselect; nonmutating HMMER measurement; repaired HMMER-reselect. Exact native commands unchanged. Active arms require one nomination digest. Measurement requires repaired-off graph/candidate/native/tree/score identity, not legacy identity.",
+    "integrity": "Pin the repaired rooted species tree when generated, rather than refreshing its reference at measurement time. Actual native/HMMER measurement receipts identify projection policy and the validator rejects disagreement with graph metadata. Frozen old experiment behavior and original failure history preserved.",
+    "gates": "Legacy canonical failure blocks all arms; repaired control failure blocks repaired active arms; failed measurement blocks HMMER reselect. Independent candidate failures remain explicit. All candidate original gates use legacy scores; active candidates also record a distinct matched repaired-control gate. No backend benefit inferred from repair-only gains.",
+    "preparation": "May perform read-only plan/source/tool/runtime preparation after commit/push/freeze. Do not submit biological inference until the separately frozen reader implementation/tests are complete and a new immutable launch binding is available."
+  },
+  "tests": {
+    "final": {"path": "benchmark_tools/results/projection_recovery_runner_combined_tests_v2_20261019.xml", "bytes": 130820, "sha256": "5d6800656dbba318e9b26074bad8ba7cbb4c7487ad72882b339edb75f061f83b", "passed": 858, "failures": 0, "errors": 0, "skipped": 0, "pytest_wall_seconds": 155.04},
+    "scope": "26 overlapping modules. New arm flags, unchanged downstream native commands, repaired/measurement failure gates, nomination/graph rejection, distinct legacy/repaired score controls, matched advancement, hidden policy changes and actual nonempty native/HMMER backend receipts. Real16-gene/four-species complete native integration now covers both original four-arm and new five-arm workflows; only reference scoring is mocked in that fixture. Nonempty scoring fixtures separately exercise HMMER3.4. No biological accuracy inference.",
+    "history": [
+      {"path": "benchmark_tools/results/projection_recovery_runner_tests_20261019.xml", "bytes": 37460, "sha256": "396d4ec541e8de017e11b2457ede12f9a5988eed24bf6e29c682559f1b556819", "passed": 237, "failures": 1, "reason": "New test imported graph_metrics instead of the existing graph_fixture helper; fixed test name, no production change."},
+      {"path": "benchmark_tools/results/projection_recovery_runner_tests_v2_20261019.xml", "bytes": 36998, "sha256": "6318eae2e5c2f1e1ea9ac7cb809437aad911dff8c5ed79abae0ddecd293808c0", "passed": 240, "failures": 0},
+      {"path": "benchmark_tools/results/projection_recovery_runner_combined_tests_20261019.xml", "bytes": 130631, "sha256": "e8d94bb6efea84f23962b07e5497e6adf35386ec4cefb7aa97738b0e510322d5", "passed": 857, "failures": 0, "scope": "Pre-final combined check; final858 rerun covers recorded-tree pinning and additional complete five-arm native fixture."}
+    ],
+    "history_storage": "Earlier raw XML retained outside Git with hashes; counts overlap and must not be summed."
+  },
+  "preservation": "All three original native library hashes unchanged. Unrelated tests/samples status/diff hashes remain5a72884464c7a52298571745329d080e86722b69658902b096d4f10c4574d0a7 and91643349c94c9b543fdbb3f33297c5486b8eac916fc5b86e397bdfc07776bcca. No existing job/output/source binding retargeted.",
+  "remaining": "Implement/test/freeze the separately bound complete recovery reader before biological launch. Then evaluate the full panel, original and matched gates, unchanged QfO/TK extensions for advancing candidates, justified combinations and post-freeze confirmation or documented unavailable data. Existing completed weighting/local evidence and all eight endpoint slots remain required in the final campaign report and remote audit.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}

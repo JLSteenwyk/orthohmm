@@ -55,7 +55,19 @@ def experiment_settings(experiment):
         return ("off", "strict_span_guard"), "hmm_aligned_profile_guard_20261018.json"
     if experiment == "selective_hmmer":
         return ("off", "builtin_reselect", "hmmer_score_only", "hmmer_reselect"), "hmm_selective_hmmer_20261018.json"
+    if experiment == "projection_recovery":
+        return ("legacy_off", "projection_off", "projection_builtin_reselect",
+                "projection_hmmer_score_only", "projection_hmmer_reselect"), "hmm_projection_integrity_recovery_20261018.json"
     raise ValueError("Unknown profile-evidence experiment")
+
+
+def recovery_configuration(mode):
+    arms, _ = experiment_settings("projection_recovery")
+    if mode not in arms:
+        raise ValueError("Unknown projection recovery arm")
+    if mode == "legacy_off":
+        return "legacy", "off"
+    return "residue_preserving", mode.removeprefix("projection_")
 
 
 def advancement(control, candidate):
@@ -112,7 +124,8 @@ def prepare(repo, source, output, experiment="weighting"):
     protocol = source / "benchmark_tools" / protocol_name
     spec = json.loads(protocol.read_text())
     declared = (tuple(arm["label"] for arm in spec["first_experiment"]["arms"])
-                if experiment == "weighting" else tuple(spec["arms"]))
+                if experiment == "weighting" else tuple(spec["recovery_panel"]["ordered_arms"])
+                if experiment == "projection_recovery" else tuple(spec["arms"]))
     if declared != arms:
         raise ValueError("Unexpected prespecified profile-evidence arms")
     case = selected_baseline(repo)
@@ -126,7 +139,7 @@ def prepare(repo, source, output, experiment="weighting"):
         inputs.extend(record(path) for path in sorted((phylo / directory).rglob("*")) if path.is_file())
     inputs.extend(record(shutil.which(case[key]) or case[key]) for key in ("aligner", "tree_builder"))
     hmmer_tools = {}
-    if experiment == "selective_hmmer":
+    if experiment in ("selective_hmmer", "projection_recovery"):
         for tool in ("hmmbuild", "hmmsearch"):
             binary = Path(shutil.which(tool) or tool).resolve(strict=True)
             help_text = subprocess.check_output([str(binary), "-h"], text=True, timeout=10)
@@ -157,7 +170,7 @@ def prepare(repo, source, output, experiment="weighting"):
             "profile_runtime": require_profile_runtime(source), "tool_path": os.environ["PATH"],
             "scope": "Complete-proteome downstream HMM/profile inference from immutable canonical initial-search hits, with content-compatible tree-cache reuse. Shared-host incremental timing, not a fresh-search or isolated full-pipeline speed comparison.",
             "defaults_promoted": False}
-    if experiment == "selective_hmmer":
+    if experiment in ("selective_hmmer", "projection_recovery"):
         plan["hmmer_tools"] = hmmer_tools
     output.mkdir(parents=True)
     write_json(output / "execution_plan.json", plan)
@@ -171,7 +184,13 @@ def arm_commands(source, plan, folder, mode):
         raise ValueError("Unexpected weighting arm")
     case = plan["case"]
     graph, native = commands(source, plan, case, folder, Path(case["checkpoint"]), case["checkpoint_manifest"]["sha256"])
-    if mode != arms[0]:
+    if experiment == "projection_recovery":
+        policy, selective = recovery_configuration(mode)
+        if policy != "legacy":
+            graph.extend(["--profile-projection-policy", policy])
+        if selective != "off":
+            graph.extend(["--selective-profile-mode", selective])
+    elif mode != arms[0]:
         flag = {"weighting": "--profile-sequence-weighting", "alignment": "--profile-alignment-policy",
                 "selective_hmmer": "--selective-profile-mode"}[experiment]
         graph.extend([flag, mode])
@@ -223,7 +242,13 @@ def validate_alignment_evidence(iteration, strict_edges):
             "alignment_retained": len(evidence) - rejected}
 
 
-def validate_activation(graph, mode, experiment="weighting", *, folder=None, gene_names=None, hmmer_tools=None):
+def validate_activation(graph, mode, experiment="weighting", *, folder=None, gene_names=None, hmmer_tools=None,
+                        projection_policy="legacy"):
+    if experiment == "projection_recovery":
+        policy, selective = recovery_configuration(mode)
+        actual = validate_activation(graph, selective, "selective_hmmer", folder=folder,
+                                     gene_names=gene_names, hmmer_tools=hmmer_tools, projection_policy=policy)
+        return {**actual, "arm": mode, "projection_policy": policy}
     arms, _ = experiment_settings(experiment)
     if mode not in arms:
         raise ValueError("Unknown profile-evidence arm")
@@ -232,6 +257,7 @@ def validate_activation(graph, mode, experiment="weighting", *, folder=None, gen
     expected_alignment = mode if experiment == "alignment" else "off"
     if (parameters.get("profile_sequence_weighting") != expected_weighting
             or parameters.get("profile_alignment_policy", "off") != expected_alignment
+            or parameters.get("profile_projection_policy", "legacy") != projection_policy
             or parameters.get("profile_iterations") != 1
             or parameters.get("profile_expansion") is not True
             or parameters.get("matrix") != "BLOSUM62"
@@ -310,15 +336,22 @@ def run(plan_path):
               "checkpoint_audit": checkpoint_audit, "ownership": ownership,
               "host_before": host_activity(), "defaults_promoted": False, "goal_completed": False}
     write_json(output / "results.json", report)
-    control, measurement_control, candidate_digest, control_stages = None, False, None, None
+    selective_experiment = experiment in ("selective_hmmer", "projection_recovery")
+    recovery = experiment == "projection_recovery"
+    control, projection_control, measurement_control, candidate_digest, control_stages = None, None, False, None, None
     for mode in arms:
+        selective_mode = recovery_configuration(mode)[1] if recovery else mode
         row = {"dataset": "OrthoBench", "label": mode, "status": "running", "scores": {}}
         report["arms"].append(row)
         if mode != arms[0] and control is None:
             row["status"] = "not_run_failed_control_gate"
             write_json(output / "results.json", report)
             continue
-        if experiment == "selective_hmmer" and mode == "hmmer_reselect" and not measurement_control:
+        if recovery and mode not in ("legacy_off", "projection_off") and projection_control is None:
+            row["status"] = "not_run_failed_projection_control_gate"
+            write_json(output / "results.json", report)
+            continue
+        if selective_experiment and selective_mode == "hmmer_reselect" and not measurement_control:
             row["status"] = "not_run_failed_measurement_control_gate"
             write_json(output / "results.json", report)
             continue
@@ -336,19 +369,19 @@ def run(plan_path):
                 raise RuntimeError("Graph/profile replay failed")
             graph_report = json.loads((folder / "graph_metrics.json").read_text())
             activation_options = ({"folder": folder, "gene_names": names, "hmmer_tools": plan["hmmer_tools"]}
-                                  if experiment == "selective_hmmer" else {})
+                                  if selective_experiment else {})
             row["activation"] = validate_activation(graph_report, mode, experiment, **activation_options)
             stage_signature = [(stage["label"], stage["output"]["bytes"], stage["output"]["sha256"])
-                               for stage in graph_report["stages"]] if experiment == "selective_hmmer" else None
-            if experiment == "selective_hmmer":
-                if mode == "off":
+                               for stage in graph_report["stages"]] if selective_experiment else None
+            if selective_experiment:
+                if selective_mode == "off":
                     control_stages = stage_signature
                 else:
                     digest = row["activation"]["candidate_digest"]
                     if candidate_digest is not None and candidate_digest != digest:
                         raise ValueError("Candidate generation differs across active arms")
                     candidate_digest = digest
-                    if mode == "hmmer_score_only" and stage_signature != control_stages:
+                    if selective_mode == "hmmer_score_only" and stage_signature != control_stages:
                         raise ValueError("HMMER measurement-only graph products differ from off")
             row["graph_report"] = record(folder / "graph_metrics.json")
             for stage in graph_report["stages"]:
@@ -365,10 +398,19 @@ def run(plan_path):
                 "memory_scope": "Parent lifetime high-water mark, not an aggregate process-tree peak"}
             candidate = Path(row["candidate"]["candidate_partition"]["path"])
             constraints = Path(row["candidate"]["membership_constraints"]["path"])
-            exact_control = mode == arms[0] or (experiment == "selective_hmmer" and mode == "hmmer_score_only")
+            measurement_only = selective_experiment and selective_mode == "hmmer_score_only"
+            exact_control = mode == arms[0] or measurement_only
+            reference = case
+            if recovery and measurement_only:
+                reference = {
+                    "candidate": projection_control["candidate"]["candidate_partition"],
+                    "constraints": projection_control["candidate"]["membership_constraints"],
+                    "golden": {Path(pin["path"]).name: pin for pin in projection_control["outputs"]},
+                }
+                reference["golden"]["species_tree.rooted.nwk"] = projection_control["rooted_species_tree"]
             if exact_control:
                 row["candidate_control_matches"] = candidate_control_matches(
-                    candidate, constraints, case["candidate"], case["constraints"])
+                    candidate, constraints, reference["candidate"], reference["constraints"])
             row["native_execution"] = timed_stage(native_command, folder, "native", source, env)
             if row["native_execution"]["returncode"]:
                 raise RuntimeError("Native phylogeny replay failed")
@@ -376,16 +418,18 @@ def run(plan_path):
             prediction = folder / "native/orthohmm_working_res/orthohmm_edges_clustered.txt"
             row["coverage"] = validate_partition(candidate, prediction)
             row["outputs"] = [record(phylo / name) for name in PRODUCTS]
+            if recovery:
+                row["rooted_species_tree"] = record(phylo / "species_tree.rooted.nwk")
             native = replay_native(row, {"command": native_command})
             if (native["genes"], native["species"]) != UNIVERSE:
                 raise ValueError("Wrong native universe")
             row["native_summary"] = native["summary"]
-            if experiment == "selective_hmmer" and mode != "off":
+            if selective_experiment and mode != arms[0]:
                 row["native_pair_turnover"] = native_pair_turnover(
                     Path(case["baseline_output"]) / "orthohmm_phylogeny/orthohmm_pairwise_orthologs_confidence.tsv",
                     phylo / "orthohmm_pairwise_orthologs_confidence.tsv")
             if exact_control:
-                row["golden_matches"] = compare_golden(phylo, case["golden"])
+                row["golden_matches"] = compare_golden(phylo, reference["golden"])
             row.update(score_orthobench(repo, prediction))
             actual, details, score_files = readback_scores(repo, "OrthoBench", row, native, folder, "weighting")
             if actual != row["scores"]:
@@ -399,18 +443,22 @@ def run(plan_path):
                 if normalized(row) != case["expected"]:
                     raise ValueError("Replayed control scores differ from admitted canonical control")
                 control = normalized(row)
-            elif experiment == "selective_hmmer" and mode == "hmmer_score_only":
-                if normalized(row) != control:
+            elif measurement_only:
+                if normalized(row) != (normalized(projection_control) if recovery else control):
                     raise ValueError("HMMER measurement-only scores differ from off")
                 row["measurement_control_matches"] = True
                 measurement_control = True
             else:
                 row["advancement"] = advancement(control, normalized(row))
-                if experiment == "selective_hmmer":
+                if recovery and mode == "projection_off":
+                    projection_control = row
+                if selective_experiment and selective_mode != "off":
                     row["accuracy_interpretation"] = row["activation"]["applicability"]
                     if row["activation"]["completely_measured_queries"] == 0:
                         row["advancement"]["eligible"] = False
                         row["advancement"]["reason"] = "No completely measured queries; applicability fallback remains required"
+                if recovery and selective_mode != "off":
+                    row["matched_projection_advancement"] = advancement(normalized(projection_control), normalized(row))
             row["status"] = "independent_content_readback_verified"
         except Exception as error:
             row.update(status="failed", error_type=type(error).__name__, error=str(error))
@@ -430,7 +478,7 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     commands_parser = parser.add_subparsers(dest="command", required=True)
     preparation = commands_parser.add_parser("prepare")
-    preparation.add_argument("--experiment", choices=("weighting", "alignment", "selective_hmmer"), default="weighting")
+    preparation.add_argument("--experiment", choices=("weighting", "alignment", "selective_hmmer", "projection_recovery"), default="weighting")
     for name in ("repo", "source", "output"):
         preparation.add_argument("--" + name, required=True, type=Path)
     execution = commands_parser.add_parser("run")
