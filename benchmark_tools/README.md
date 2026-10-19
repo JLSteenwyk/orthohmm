@@ -57,8 +57,8 @@ a new production recommendation.
 | Matched five-arm projection/HMMER recovery | `run_profile_weighting_pilot.py prepare --experiment projection_recovery`, then run its frozen plan | `report_projection_recovery.py --launch-revision <full immutable commit>` |
 | Combined admitted results and explicit follow-up decisions | No new inference | `report_hmm_evidence_campaign.py` |
 | Separately bound recovery campaign comparison | No new inference | `report_hmm_recovery_campaign.py` |
-| Gated projection transfer input preparation | `plan_projection_followup.py` after independent pilot admission | Inputs only; execution driver/full-vector reader required before launch |
-| Fixed projection transfer execution | Standalone `run_projection_followup.py prepare`, then its frozen Slurm driver | Independent full-vector reader still required before biological submission |
+| Gated projection transfer input preparation | `plan_projection_followup.py` after independent pilot admission | Inputs only; separately frozen execution/reader and original gates required |
+| Fixed projection transfer execution | Standalone `run_projection_followup.py prepare`, then its frozen Slurm driver | `report_projection_followup.py --launch-revision <full immutable commit>` |
 
 The [recovery report protocol](hmm_recovery_campaign_report_20261019.json)
 retains the original successful weighting/local reader bindings and separately
@@ -88,6 +88,19 @@ exact repaired assessment with fresh score readback; QfO FAS is not resampled fo
 this control. Preparation and execution preserve previous attempts and use short,
 distinct fresh scoring identifiers. This driver does not replace an independent
 post-run reader, authorize a new biological submission, or promote defaults.
+
+The [independent projection transfer reader](hmm_projection_followup_readback_20261019.json)
+binds both actual dataset jobs, exact execution plans and separately frozen reader
+identity through an immutable launch snapshot. It verifies complete ownership,
+commands, raw resources, profile/backend evidence, native products, control
+equivalence and source/runtime fingerprints before admitting eight-endpoint
+vectors. Scheduler accounting must show nonoverlapping QfO-before-Three-Kingdoms
+inference; this is not a quiet-host timing requirement. Newly audited raw
+functional populations are content-pinned against the admitted aggregates,
+including numeric FAS sample counts distinct from the eligible pool. Stopped,
+applicability and measurement roles remain explicit; repair-only gains cannot
+establish backend benefit. The reader is not independent biological confirmation
+and does not itself authorize default promotion or goal completion.
 
 Use the ledger's immutable execution plans and frozen source revisions rather
 than rerunning these scripts with current modules or reusing an output folder.
