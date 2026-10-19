@@ -40,9 +40,13 @@ identify the selected policy, and production records the repaired-profile count.
 The five-arm recovery runner is tested, including a complete small native
 fixture. Its [independent reader contract](hmm_projection_recovery_readback_20261019.json)
 requires separate repair/decision/backend contrasts and exact repaired-control
-identity. Reader implementation and tests must be finished before launching the
-biological panel; read-only frozen-plan preparation may proceed. This is not a
-validated accuracy improvement or a new production recommendation.
+identity. `report_projection_recovery.py` binds an explicit full immutable launch
+revision, the original parent job and complete five-arm producer, and repeats
+native/score/ownership readback before admission. Freeze committed/pushed runner
+and reader sources before biological submission; pass the new immutable launch
+revision to the separately frozen reader. The original failed HMMER/collator
+bindings are never redirected. This is not a validated accuracy improvement or
+a new production recommendation.
 
 | Workflow | Execution | Separate result validation |
 | --- | --- | --- |
@@ -50,6 +54,7 @@ validated accuracy improvement or a new production recommendation.
 | Unchanged weighting transfer to QfO and Three Kingdoms | `run_profile_weighting_followup.py` | `report_weighting_followup.py` |
 | Local nomination, cached joint-tree readback and final native pilot | `run_local_rescue_probe.py`, then `run_local_joint_pilot.py` | `report_local_joint_pilot.py` |
 | Matched off/builtin/HMMER-measurement/HMMER-reselect pilot | `run_profile_weighting_pilot.py prepare --experiment selective_hmmer`, then run its plan | `report_profile_evidence_pilot.py --experiment selective_hmmer` |
+| Matched five-arm projection/HMMER recovery | `run_profile_weighting_pilot.py prepare --experiment projection_recovery`, then run its frozen plan | `report_projection_recovery.py --launch-revision <full immutable commit>` |
 | Combined admitted results and explicit follow-up decisions | No new inference | `report_hmm_evidence_campaign.py` |
 
 Use the ledger's immutable execution plans and frozen source revisions rather

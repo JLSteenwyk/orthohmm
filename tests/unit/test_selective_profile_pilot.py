@@ -202,3 +202,18 @@ def test_actual_four_arm_graph_candidates_and_inferred_native_control(tmp_path, 
     # Separate real profile-stage fixtures require nonempty HMMER activation;
     # this complete native fixture can be inactive and remains so labeled.
     assert result["arms"][-1]["activation"]["applicability"] in ("completely_measured", "no_complete_measurements")
+    if experiment == "projection_recovery":
+        from benchmark_tools import report_profile_evidence_pilot as readback
+        from benchmark_tools import report_projection_recovery as recovery
+        from orthohmm.accuracy import load_accuracy_checkpoint
+        monkeypatch.setattr(readback, "UNIVERSE", (16, 4))
+        monkeypatch.setattr(readback, "readback_scores", lambda repo, dataset, row, *a: (
+            row["scores"], row["details"], []))
+        names = load_accuracy_checkpoint(checkpoint, verify=True)[0]
+        cells = []
+        for row in result["arms"]:
+            cell = readback.admit_arm(source, plan, row, experiment, names,
+                                     projection_control=cells[1] if len(cells) >= 2 else None)
+            cells.append(cell)
+        contrast = recovery.verify_panel(cells, result["arms"])
+        assert contrast["f1"] == 0 and len(cells) == 5

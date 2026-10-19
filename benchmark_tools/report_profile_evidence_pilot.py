@@ -36,6 +36,7 @@ ADMISSION = "benchmark_tools/results/hillclimb_comparison_readback_v27_20261016/
 PROTOCOL = "hmm_profile_evidence_readback_20261018.json"
 HMMER_LAUNCH = "a80e10d45b3914d418e89ad810411ef4baaedd65"
 HMMER_PROTOCOL = "hmm_selective_hmmer_readback_20261018.json"
+UNIVERSE = (251378, 12)
 RETAINED_KEYS = ("orthohmm_high_sensitivity", "orthohmm_phylogeny_satellite_v2", "orthofinder_3_1_5_full",
                  "orthofinder_3_1_5_sequence_only", "sonicparanoid_2_0_9", "proteinortho_6_3_6",
                  "fastoma_0_3_5", "orthomcl_1_4", "canonical_collection:canonical")
@@ -85,7 +86,7 @@ def execution_receipt(execution, command, folder, stage):
     return list(expected.values())
 
 
-def admit_arm(repo, plan, row, experiment, names):
+def admit_arm(repo, plan, row, experiment, names, *, projection_control=None):
     source, root = Path(plan["source_root"]), Path(plan["output"])
     folder, mode = root / row["label"], row["label"]
     graph_command, native_command = arm_commands(source, plan, folder, mode)
@@ -99,9 +100,11 @@ def admit_arm(repo, plan, row, experiment, names):
     if row["graph_report"] != record(graph_path):
         raise ValueError("Graph report differs from producer pin")
     graph = json.loads(graph_path.read_text())
-    if experiment == "selective_hmmer" and not isinstance(names, (tuple, list)):
+    selective = experiment in ("selective_hmmer", "projection_recovery")
+    recovery = experiment == "projection_recovery"
+    if selective and not isinstance(names, (tuple, list)):
         raise ValueError("Selective readback requires ordered original gene IDs")
-    options = {"folder": folder, "gene_names": names, "hmmer_tools": plan["hmmer_tools"]} if experiment == "selective_hmmer" else {}
+    options = {"folder": folder, "gene_names": names, "hmmer_tools": plan["hmmer_tools"]} if selective else {}
     activated = validate_activation(graph, mode, experiment, **options)
     if activated != row["activation"]:
         raise ValueError("Reported profile activation differs from evidence")
@@ -125,21 +128,38 @@ def admit_arm(repo, plan, row, experiment, names):
     if validate_partition(Path(candidate["path"]), prediction) != row["coverage"]:
         raise ValueError("Reported complete native coverage differs")
     native = replay_native(row, {"command": native_command})
-    if ((native["genes"], native["species"]) != (251378, 12) or native["summary"] != row["native_summary"]):
+    if ((native["genes"], native["species"]) != UNIVERSE or native["summary"] != row["native_summary"]):
         raise ValueError("Native universe or summary differs")
     scores, details, pins = readback_scores(repo, "OrthoBench", row, native, folder, "profile_evidence_readback")
     if scores != row["scores"] or details != row["details"] or endpoint_vector("OrthoBench", scores) != row["metric_vector"]:
         raise ValueError("Per-family/aggregate score readback differs")
     arms, _ = experiment_settings(experiment)
-    if mode == arms[0] or (experiment == "selective_hmmer" and mode == "hmmer_score_only"):
+    if recovery:
+        tree = record(Path(native["phylogeny"]) / "species_tree.rooted.nwk")
+        if row.get("rooted_species_tree") != tree:
+            raise ValueError("Recorded recovery species tree differs from actual product")
+        checked.append(tree)
+    measurement = (experiment == "selective_hmmer" and mode == "hmmer_score_only"
+                   or recovery and mode == "projection_hmmer_score_only")
+    if mode == arms[0] or measurement:
         control = plan["case"]
+        if recovery and measurement:
+            if projection_control is None or projection_control.get("label") != "projection_off":
+                raise ValueError("Recovery measurement requires the independently admitted repaired control")
+            control = {"candidate": projection_control["candidate"]["candidate_partition"],
+                "constraints": projection_control["candidate"]["membership_constraints"],
+                "golden": {**projection_control["products"],
+                           "species_tree.rooted.nwk": projection_control["rooted_species_tree"]},
+                "expected": {"f1": projection_control["scores"][ENDPOINTS[0]],
+                             "precision": projection_control["details"]["precision"],
+                             "recall": projection_control["details"]["recall"]}}
         if (candidate_control_matches(Path(candidate["path"]), Path(constraints["path"]), control["candidate"], control["constraints"])
                 != row["candidate_control_matches"]
                 or compare_golden(Path(native["phylogeny"]), control["golden"]) != row["golden_matches"]
                 or normalized(row) != control["expected"]):
-            raise ValueError("Unchanged off control differs from canonical control")
+            raise ValueError("Unchanged off control differs from its required reference")
     turnover = None
-    if experiment == "selective_hmmer" and mode != "off":
+    if selective and mode != arms[0]:
         turnover = native_pair_turnover(Path(plan["case"]["baseline_output"]) / "orthohmm_phylogeny/orthohmm_pairwise_orthologs_confidence.tsv",
             Path(native["phylogeny"]) / "orthohmm_pairwise_orthologs_confidence.tsv")
         if {k: v for k, v in turnover.items() if k != "wall_s"} != {k: v for k, v in row["native_pair_turnover"].items() if k != "wall_s"}:
@@ -154,9 +174,11 @@ def admit_arm(repo, plan, row, experiment, names):
         "products": native["products"], "activation": activated, "source_revision": plan["source_revision"],
         "candidate": row["candidate"], "checked": list({pin["path"]: pin for pin in checked}.values()),
         "resources": {key: row[key] for key in ("graph_execution", "candidate_resources", "native_execution", "total_incremental_wall_s")}}
-    if experiment == "selective_hmmer":
+    if selective:
         cell["graph_stages"] = [{"label": s["label"], "bytes": s["output"]["bytes"], "sha256": s["output"]["sha256"]} for s in graph["stages"]]
         if turnover is not None: cell["native_pair_turnover"] = turnover
+    if recovery:
+        cell["rooted_species_tree"] = tree
     return cell
 
 
