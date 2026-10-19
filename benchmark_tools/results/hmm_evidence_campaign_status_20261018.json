@@ -559,14 +559,22 @@
     "implementation": "benchmark_tools/report_projection_followup.py --campaign stockholm_annotation",
     "protocol": "benchmark_tools/hmm_stockholm_projection_followup_readback_20261019.json",
     "milestone": "benchmark_tools/results/stockholm_projection_followup_reader_milestone_20261019.json",
-    "state": "reader84074667_frozen_science24523_24524_submitted_immutable_launch_binding_next",
+    "state": "reader24525_pending_afterany24524_exact_83ac596e_science_launch_verified",
     "runner_commit": "840746675e9dc1e953c0adee7dba158182922b19",
     "scientific_reader_source": "benchmarks/work/stockholm_projection_followup_readback_v1_20261019",
     "scientific_revision": "8f0cd5605842e470e64f40c31bc608c37945b8b3",
     "driver_revision": "abe393ded90143880378136bf60691581ed24061",
     "preparer_revision": "017245981e62d6ca4955ba6acf08387f541ed9da",
-    "job": {"submitted": false, "planned_cpus": 1, "planned_memory": "16G", "planned_wall_limit": "02:00:00"},
-    "verification": "Exact84074667 remote revision verified before freeze; actual frozen reporter_inventory reverified1234 source/protocol records immediately before transfer submission. Frozen unsubmitted-launch guard passed earlier. Scientific jobs24523/24524 now submitted after complete original admission/preparation and preflight; immutable launch binding and reader submission follow, not transferred accuracy admission.",
+    "job": {"submitted":true,"job_id":"24525","last_observed_state":"PENDING","dependency":"afterany:24524","cpus":1,"memory_allocation":"16G","wall_limit":"02:00:00","log":"benchmarks/results/stockholm_projection_followup_readback_v1_20261019-24525.out","summary":"benchmarks/results/stockholm_projection_followup_readback_v1_20261019/summary.json"},
+    "launch_binding": {
+      "revision": "83ac596e6c9f67f52f8599177284e6ad5c6c8e21",
+      "path": "benchmark_tools/results/hmm_evidence_campaign_status_20261018.json",
+      "git_blob_sha256": "8e012cdbe9bf43a231c6468d8c20493b797cd64ff19239e9aa70b0f693478174",
+      "entry_key": "stockholm_projection_followup_execution"
+    },
+    "submission_record": "benchmark_tools/results/stockholm_projection_transfer_reader_submission_20261019.json",
+    "accuracy_result_admitted": false,
+    "verification": "Exact83ac596e remote science-launch revision verified before submission. Actual frozen84074667 launch() authenticates exact83ac596e ledger blob/entry, jobs24523/24524 and plan/source/selection/reader identities. scontrol confirms reader24525 pending afterany24524, correct frozen cwd,1CPU16G/two hours and zero restarts. Both scientific parents and complete original full-vector admission still required; no transferred score claim.",
     "scope": "Explicit new immutable-launch/campaign binding only. Original score/native/population/assessment/full-vector and sequential checks preserved; seven scientific/evaluation function ASTs unchanged. Old reader/default/frozen failures untouched. Complete new panel/preparation/original eligibility and actual two submitted transfer jobs/plans are still required; no accuracy admission or goal closure."
   },
   "completed_hmm_incremental_resource_readback": {
@@ -602,7 +610,7 @@
   "remaining": [
     "Completed weighting/local source-bound evidence and comparison integrated after464691 unique-record readback; retain mixed weighting candidates without default promotion and stop fixed neutral local branch. Original HMMER24493/reader24498/collator24501 failures preserved; prepare a new recovery/report namespace rather than retargeting old immutable bindings.",
     "Extend only advancing arms to corrected QfO and Three Kingdoms; retain all eight endpoint slots and denominator/resource diagnostics, including explicit NA for stopped branches.",
-    "Complete science24519, independent reader24520, input preparation24521 and two-plan preparation24522 are COMPLETED0:0. Only projection_off passes original pilot gate; both active builtin/HMMER reselection policies fail recall/F1 and stop without retuning or applicability fallback. Monitor new QfO24523 and sequential afterok24523 ThreeKingdoms24524 without duplication. Driverabe393de/reader84074667 tested/pushed/frozen and exact sources/runtime/tool/plan/role preflight passed. Bind actual two jobs/plans and reader in a new immutable launch, queue separate reader and require complete full-vector admission. Preserve all old failed7f82be69/a884d9c0 and98e05ee6/80974fba/f491275c sources/jobs; never retarget or loosen gates. Repair's tiny development gain is not significance, generalizability or default promotion.",
+    "Complete science24519, independent reader24520, input preparation24521 and two-plan preparation24522 are COMPLETED0:0. Only projection_off passes original pilot gate; both active builtin/HMMER reselection policies fail recall/F1 and stop without retuning or applicability fallback. Monitor QfO24523, sequential afterok24523 ThreeKingdoms24524 and reader24525 pending afterany24524 without duplication. Driverabe393de/reader84074667 tested/pushed/frozen; exact sources/runtime/tool/plan/role preflight and actual frozen immutable83ac596e launch binding pass. Require terminal-successful source/content/full-vector admission before transferred conclusions. Preserve all old failed7f82be69/a884d9c0 and98e05ee6/80974fba/f491275c sources/jobs; never retarget or loosen gates. Repair's tiny development gain is not significance, generalizability or default promotion.",
     "Evaluate justified combinations, seek post-freeze confirmation if available, update the full comparator table and final recommendation, and verify all intended milestones committed/pushed."
   ],
   "defaults_promoted": false,

@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "job_id": "24525",
+  "reader_revision": "840746675e9dc1e953c0adee7dba158182922b19",
+  "reader_source": "benchmarks/work/stockholm_projection_followup_readback_v1_20261019",
+  "launch_binding": {
+    "revision": "83ac596e6c9f67f52f8599177284e6ad5c6c8e21",
+    "path": "benchmark_tools/results/hmm_evidence_campaign_status_20261018.json",
+    "git_blob_sha256": "8e012cdbe9bf43a231c6468d8c20493b797cd64ff19239e9aa70b0f693478174",
+    "entry_key": "stockholm_projection_followup_execution"
+  },
+  "scientific_jobs": [
+    {
+      "dataset": "QfO",
+      "job_id": "24523"
+    },
+    {
+      "dataset": "ThreeKingdoms",
+      "job_id": "24524",
+      "dependency": "afterok:24523"
+    }
+  ],
+  "argv": [
+    "sbatch",
+    "--parsable",
+    "--job-name=ohmm-stockholm-transfer-reader",
+    "--partition=gpu",
+    "--nodelist=bizon",
+    "--cpus-per-task=1",
+    "--mem=16G",
+    "--time=02:00:00",
+    "--dependency=afterany:24524",
+    "--chdir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/stockholm_projection_followup_readback_v1_20261019",
+    "--output=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/stockholm_projection_followup_readback_v1_20261019-%j.out",
+    "--wrap=exec env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMBA_NUM_THREADS=1 PYTHONHASHSEED=0 /home/bizon/anaconda3/bin/python -m benchmark_tools.report_projection_followup --campaign stockholm_annotation --repo /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm --launch-revision 83ac596e6c9f67f52f8599177284e6ad5c6c8e21 --output /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/stockholm_projection_followup_readback_v1_20261019"
+  ],
+  "resources": {
+    "cpus": 1,
+    "memory_allocation": "16G",
+    "wall_limit": "02:00:00",
+    "dependency": "afterany:24524"
+  },
+  "preflight": "Exact83ac596e remote revision independently verified after push. Actual frozen84074667 launch() authenticates this exact immutable ledger blob, both submitted jobs/plans, original legacy/projection selection and separate reader identity. scontrol confirms pending afterany24524, correct frozen cwd,1CPU16G/two hours and zero restarts.",
+  "scope": "Queued independent content/score/full-vector readback, not an admitted transfer result or independent biological confirmation. Terminal-successful both parents, exact source/native/assessment/population/role/uncertainty checks and original full-vector screen remain mandatory; afterany is scheduling only.",
+  "accuracy_result_admitted": false,
+  "defaults_promoted": false,
+  "goal_completed": false
+}
