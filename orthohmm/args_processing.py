@@ -131,6 +131,16 @@ def process_args(args) -> dict:
             getattr(args, "profile_sequence_weighting", "none")
         )
         profile_alignment_policy = validate_profile_alignment_policy(getattr(args, "profile_alignment_policy", "off"))
+        from .search.msa_center_star import validate_profile_projection_policy
+        profile_projection_policy = validate_profile_projection_policy(getattr(args, "profile_projection_policy", "legacy"))
+        if profile_projection_policy != "legacy" and (
+            accuracy_profile != "high_sensitivity" or search_mode != "builtin" or args.start
+        ):
+            raise ValueError("Profile projection repair requires fresh built-in high_sensitivity inference")
+        if profile_projection_policy != "legacy" and (
+            profile_sequence_weighting != "none" or profile_alignment_policy != "off"
+        ):
+            raise ValueError("Combined projection repair and weighting/alignment guards require a separate experiment")
         if profile_alignment_policy != "off" and (
             accuracy_profile != "high_sensitivity" or search_mode != "builtin" or args.start
         ):
@@ -312,6 +322,7 @@ def process_args(args) -> dict:
         **({"search_candidate_policy": search_candidate_policy} if search_candidate_policy != "single" else {}),
         **({"profile_sequence_weighting": profile_sequence_weighting} if profile_sequence_weighting != "none" else {}),
         **({"profile_alignment_policy": profile_alignment_policy} if profile_alignment_policy != "off" else {}),
+        **({"profile_projection_policy": profile_projection_policy} if profile_projection_policy != "legacy" else {}),
         **({"search_max_candidates_per_query": search_cap_override}
            if search_cap_override is not None else {}),
     )

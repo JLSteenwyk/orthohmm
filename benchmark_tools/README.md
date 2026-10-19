@@ -22,9 +22,15 @@ matched recovery panel. Package-level `projection_policy="residue_preserving"`
 is an opt-in repair in `center_star_msa` and `build_msa_profile`; the default
 remains `legacy`, and frozen scientific jobs are unchanged. HMMER reconstruction
 uses the profile's recorded policy without relaxing source/profile checks.
-The recovery runner, complete-panel reader and production/replay propagation
-must be finished before launching the new biological panel. This is not a
-validated accuracy improvement or a new production recommendation.
+The repair is also available as experimental API `profile_projection_policy`
+and CLI/harness/replay `--profile-projection-policy residue_preserving`.
+Production requires fresh built-in high-sensitivity inference; replay requires
+the original sequences. Worker and jackknife profiles retain the policy.
+Untested combinations with weighting or alignment guards are rejected. Metrics
+identify the selected policy, and production records the repaired-profile count.
+The recovery runner and complete-panel reader must still be finished before
+launching the new biological panel. This is not a validated accuracy improvement
+or a new production recommendation.
 
 | Workflow | Execution | Separate result validation |
 | --- | --- | --- |

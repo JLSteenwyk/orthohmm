@@ -194,8 +194,8 @@ def build_msa_profile(
     Returns None if profile can't be built (too few sequences, etc.).
     """
     validate_profile_sequence_weighting(sequence_weighting)
-    if projection_policy not in ("legacy", "residue_preserving"):
-        raise ValueError("Unknown center-star projection policy")
+    from .msa_center_star import validate_profile_projection_policy
+    validate_profile_projection_policy(projection_policy)
     if len(ids) != len(sequences):
         raise ValueError("Profile sequences and member IDs must align")
     if sequence_weighting == "species_henikoff_cluster" and (

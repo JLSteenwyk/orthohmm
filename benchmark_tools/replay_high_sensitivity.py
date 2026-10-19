@@ -124,6 +124,8 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--profile-sequence-weighting", choices=PROFILE_SEQUENCE_WEIGHTING, default="none")
     from orthohmm.search.profile_spans import PROFILE_ALIGNMENT_POLICIES
     parser.add_argument("--profile-alignment-policy", choices=PROFILE_ALIGNMENT_POLICIES, default="off")
+    from orthohmm.search.msa_center_star import PROFILE_PROJECTION_POLICIES
+    parser.add_argument("--profile-projection-policy", choices=PROFILE_PROJECTION_POLICIES, default="legacy")
     parser.add_argument("--selective-profile-mode", choices=("off", "builtin_reselect", "hmmer_score_only", "hmmer_reselect"), default="off")
     parser.add_argument(
         "--profile-iterations",
@@ -162,6 +164,12 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv=None) -> int:
     args = build_parser().parse_args(argv)
+    if args.profile_projection_policy != "legacy" and not args.fasta_directory:
+        raise SystemExit("--profile-projection-policy requires --fasta-directory")
+    if args.profile_projection_policy != "legacy" and (
+        args.profile_sequence_weighting != "none" or args.profile_alignment_policy != "off"
+    ):
+        raise SystemExit("Combined projection repair and weighting/alignment guards require a separate experiment")
     if args.selective_profile_mode != "off" and (
         not args.fasta_directory or args.matrix != "BLOSUM62" or not 1 <= args.cpu <= 16
         or args.profile_sequence_weighting != "none" or args.profile_alignment_policy != "off"
@@ -291,6 +299,8 @@ def main(argv=None) -> int:
                    if args.profile_sequence_weighting != "none" else {}),
                 **({"alignment_policy": args.profile_alignment_policy}
                    if args.profile_alignment_policy != "off" else {}),
+                **({"projection_policy": args.profile_projection_policy}
+                   if args.profile_projection_policy != "legacy" else {}),
                 **({"selective_mode": args.selective_profile_mode,
                     "selective_output_directory": args.output_directory / "selective_profiles",
                     "selective_evidence": selective_evidence}
@@ -407,6 +417,7 @@ def main(argv=None) -> int:
             "singleton_tie_policy": args.singleton_tie_policy,
             "profile_sequence_weighting": args.profile_sequence_weighting,
             "profile_alignment_policy": args.profile_alignment_policy,
+            "profile_projection_policy": args.profile_projection_policy,
         },
         "counts": {
             "genes": len(gene_names),

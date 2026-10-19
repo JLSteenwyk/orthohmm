@@ -15,6 +15,7 @@ from .helpers import (
 from .version import __version__
 from .search.sequence_weights import PROFILE_SEQUENCE_WEIGHTING
 from .search.profile_spans import PROFILE_ALIGNMENT_POLICIES
+from .search.msa_center_star import PROFILE_PROJECTION_POLICIES
 
 
 def create_parser() -> ArgumentParser:
@@ -374,6 +375,8 @@ def create_parser() -> ArgumentParser:
         choices=PROFILE_SEQUENCE_WEIGHTING, default="none", help=SUPPRESS)
     optional.add_argument("--profile-alignment-policy", "--profile_alignment_policy",
         choices=PROFILE_ALIGNMENT_POLICIES, default="off", help=SUPPRESS)
+    optional.add_argument("--profile-projection-policy", "--profile_projection_policy",
+        choices=PROFILE_PROJECTION_POLICIES, default="legacy", help=SUPPRESS)
 
     optional.add_argument(
         "--clustering",

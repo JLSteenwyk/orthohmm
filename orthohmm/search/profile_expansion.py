@@ -20,6 +20,7 @@ from .matrices import (
     get_matrix,
 )
 from .msa_profile import MSAProfile, build_msa_profile
+from .msa_center_star import validate_profile_projection_policy
 from .sequence_weights import validate_profile_sequence_weighting
 from .prefilter import prefilter_candidates
 from .sequences import SequenceStore, SpeciesSequences
@@ -174,9 +175,11 @@ def build_cluster_profiles(
     gene_to_species=None,
     min_species_count: int = 1,
     sequence_weighting: str = "none",
+    projection_policy: str = "legacy",
 ) -> dict[int, MSAProfile]:
     """Build center-star MSA profiles for informative cluster sizes."""
     validate_profile_sequence_weighting(sequence_weighting)
+    validate_profile_projection_policy(projection_policy)
     if sequence_weighting == "species_henikoff_cluster" and gene_to_species is None:
         raise ValueError("gene_to_species is required for species profile weighting")
     if min_species_count < 1:
@@ -215,10 +218,14 @@ def build_cluster_profiles(
             task = (
                 cluster_id, member_ids, sequences, sub_matrix, background
             )
+            options = {}
             if sequence_weighting != "none":
-                options = {"sequence_weighting": sequence_weighting}
+                options["sequence_weighting"] = sequence_weighting
                 if sequence_weighting == "species_henikoff_cluster":
                     options["species"] = [int(species[int(gene)]) for gene in cluster]
+            if projection_policy != "legacy":
+                options["projection_policy"] = projection_policy
+            if options:
                 task += (options,)
             yield task
 
@@ -546,13 +553,17 @@ def compute_profile_self_thresholds(
                 background,
             )
             original = profiles[cluster_id]
+            options = {}
             if original.sequence_weighting != "none":
-                options = {"sequence_weighting": original.sequence_weighting}
+                options["sequence_weighting"] = original.sequence_weighting
                 if original.sequence_weighting == "species_henikoff_cluster":
                     if original.member_species is None:
                         raise ValueError("Weighted jackknife profile lacks member species")
                     species_by_name = dict(zip(original.member_ids, original.member_species))
                     options["species"] = [species_by_name[name] for name in retained_names]
+            if original.projection_policy != "legacy":
+                options["projection_policy"] = original.projection_policy
+            if options:
                 task += (options,)
             yield task
 
@@ -815,10 +826,14 @@ def expand_profiles(
     selective_mode: str = "off",
     selective_output_directory=None,
     selective_evidence: list | None = None,
+    projection_policy: str = "legacy",
 ) -> ProfileExpansionResult:
     """Run the complete strict profile-expansion stage."""
     from .profile_spans import validate_profile_alignment_policy
     validate_profile_alignment_policy(alignment_policy)
+    validate_profile_projection_policy(projection_policy)
+    if projection_policy != "legacy" and (sequence_weighting != "none" or alignment_policy != "off"):
+        raise ValueError("Combined projection repair and weighting/alignment guards require a separate experiment")
     if alignment_policy != "off" and sequence_weighting != "none":
         raise ValueError("Combined profile weighting and alignment guards require a separate experiment")
     if selective_mode not in ("off", "builtin_reselect", "hmmer_score_only", "hmmer_reselect"):
@@ -847,6 +862,7 @@ def expand_profiles(
         gene_to_species=gene_to_species,
         min_species_count=min_profile_species,
         **({"sequence_weighting": sequence_weighting} if sequence_weighting != "none" else {}),
+        **({"projection_policy": projection_policy} if projection_policy != "legacy" else {}),
     )
     profile_hits = search_genes_against_profiles(
         profiles,

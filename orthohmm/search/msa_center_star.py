@@ -25,6 +25,13 @@ from .matrices import FULL_CHAR_TO_IDX
 
 
 _pa_lib = None
+PROFILE_PROJECTION_POLICIES = ("legacy", "residue_preserving")
+
+
+def validate_profile_projection_policy(policy):
+    if policy not in PROFILE_PROJECTION_POLICIES:
+        raise ValueError("Unknown center-star projection policy")
+    return policy
 
 
 def _load_pair_align():
@@ -94,11 +101,13 @@ def center_star_msa(
        many columns into the output MSA.
     4. Project each member onto the merged coordinate system.
     """
-    if projection_policy not in ("legacy", "residue_preserving"):
-        raise ValueError("Unknown center-star projection policy")
+    validate_profile_projection_policy(projection_policy)
     preserve_residues = projection_policy == "residue_preserving"
     n = len(sequences)
     if n < 2:
+        if preserve_residues:
+            return [bytes(_aa_to_char(aa) for aa in _encode_sequence(s)).decode("ascii")
+                    for s in sequences]
         return sequences
 
     # Encode everything to uint8

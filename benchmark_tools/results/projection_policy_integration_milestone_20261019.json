@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "status": "production_and_replay_opt_in_tested_biological_recovery_not_launched",
+  "parent_revision": "b86b9411aeb927f2dd0a091dcebf5cd8b86fee2c",
+  "parent_push": "git push origin main succeeded; git ls-remote independently verified parent revision before this integration milestone",
+  "protocol": "benchmark_tools/hmm_projection_integrity_recovery_20261018.json",
+  "implementation": {
+    "production_api": "profile_projection_policy='residue_preserving'",
+    "cli_harness_replay": "--profile-projection-policy residue_preserving",
+    "default": "legacy",
+    "scope_guards": "Production requires fresh built-in high_sensitivity inference. Replay requires original FASTAs. Reject unregistered weighting/alignment-guard combinations before inference. Legacy argument/task shapes remain unchanged.",
+    "propagation": "All family-profile worker tasks and weakest-member jackknife rebuilds retain the policy. Production metrics identify the policy and actual repaired-profile count; replay metrics record the policy. HMMER reconstruction uses the profile's recorded policy and retains strict source/profile equality checks.",
+    "degenerate_msa": "Opt-in empty/single-row calls also use native normalization; legacy calls retain original input behavior.",
+    "frozen_science": "No existing scientific checkout, CPU shared library, original launch binding, benchmark output, threshold, scoring parameter or production default changed."
+  },
+  "tests": {
+    "focused": {"path": "benchmark_tools/results/projection_policy_integration_tests_v3_20261019.xml", "bytes": 14604, "sha256": "069cffb6f567fad3a3d1826bd6ff9ff6b2b35abd56e8498691169c9a2067cca1", "passed": 96, "failures": 0, "errors": 0, "skipped": 0},
+    "combined": {"path": "benchmark_tools/results/projection_policy_combined_tests_20261019.xml", "bytes": 127627, "sha256": "ed4bf85728b1e6ba4bb5b7e302e6f944bfb58cdc9b06427a5ff3d6e5dfca65a0", "passed": 839, "failures": 0, "errors": 0, "skipped": 0, "pytest_wall_seconds": 139.60},
+    "scope": "25 overlapping modules, including real native serial/spawn profiles and self-thresholds, held-out-member rebuilding, FASTA expansion/scoring, numeric-hit graph replay, actual small native inferred phylogeny through benchmark harness/CLI/API, HMMER3.4 reconstruction, parser/default behavior and existing independent readers/collator. This is integration evidence, not biological accuracy or an isolated runtime benchmark.",
+    "history": [
+      {"path": "benchmark_tools/results/projection_policy_integration_tests_20261019.xml", "bytes": 20107, "sha256": "e29f49ee875848a96fd8253039f954fd750df2a28582c1b691c6574e48dc4a43", "passed": 94, "failures": 2, "reason": "New tests incorrectly assumed production API validation preceded output-directory creation. Harness rejection fixture also omitted required --cpu and was corrected to check the intended policy error."},
+      {"path": "benchmark_tools/results/projection_policy_integration_tests_v2_20261019.xml", "bytes": 22661, "sha256": "d128f5b7491ad07dd3260dd74a501f01b32d060dcfc5cc60a2ef8ced79b24660", "passed": 94, "failures": 2, "reason": "API also creates its empty working directory before validation. Tests now verify absence of biological files rather than directories; production validation behavior unchanged."}
+    ],
+    "history_storage": "Raw failed-test XML retained outside Git with checksums; no failed biological evidence removed or reclassified."
+  },
+  "remaining": "Complete the controlled five-arm OrthoBench recovery runner and separately frozen independent reader, bind a new launch and preserve the failed original panel/collator history. Only then launch fresh committed/pushed sources. Separate projection, decision and HMMER backend effects, retain original advancement gates and all eight endpoint/confirmation requirements.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}

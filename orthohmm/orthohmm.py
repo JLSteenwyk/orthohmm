@@ -469,6 +469,16 @@ def _execute(
     )
     from .search.profile_spans import validate_profile_alignment_policy
     profile_alignment_policy = validate_profile_alignment_policy(kwargs.pop("profile_alignment_policy", "off"))
+    from .search.msa_center_star import validate_profile_projection_policy
+    profile_projection_policy = validate_profile_projection_policy(kwargs.pop("profile_projection_policy", "legacy"))
+    if profile_projection_policy != "legacy" and (
+        accuracy_config.name != "high_sensitivity" or search_mode != "builtin" or start is not None
+    ):
+        raise ValueError("Profile projection repair requires fresh built-in high_sensitivity inference")
+    if profile_projection_policy != "legacy" and (
+        profile_sequence_weighting != "none" or profile_alignment_policy != "off"
+    ):
+        raise ValueError("Combined projection repair and weighting/alignment guards require a separate experiment")
     if profile_alignment_policy != "off" and (
         accuracy_config.name != "high_sensitivity" or search_mode != "builtin" or start is not None
     ):
@@ -563,6 +573,7 @@ def _execute(
         singleton_tie_policy=singleton_tie_policy,
         profile_sequence_weighting=profile_sequence_weighting,
         profile_alignment_policy=profile_alignment_policy,
+        profile_projection_policy=profile_projection_policy,
         leiden_seed=accuracy_config.leiden_seed,
         cpu_budget=cpu,
     )
@@ -840,7 +851,10 @@ def _execute(
                     "gene_to_species": gene_to_species}
                    if profile_sequence_weighting != "none" else {}),
                 **({"alignment_policy": profile_alignment_policy} if profile_alignment_policy != "off" else {}),
+                **({"projection_policy": profile_projection_policy} if profile_projection_policy != "legacy" else {}),
             )
+            if profile_projection_policy != "legacy":
+                metrics.add_counts(high_sensitivity_residue_preserving_profiles=profile_result.profiles_built)
             if profile_alignment_policy != "off":
                 alignment_path = os.path.join(working_dir, "profile_alignment_evidence.json")
                 with open(alignment_path, "w") as handle:
