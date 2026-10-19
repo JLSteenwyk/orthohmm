@@ -402,6 +402,17 @@
     "verification": "Exact01724598 remote revision independently verified before freeze. All1232 frozen source/protocol records match committed bytes, native libraries unchanged. Actual frozen prepare() correctly rejects pending24520 before output creation; scontrol confirms correct frozen working directory/resources/dependency and zero restarts.",
     "scope": "Read-only new preparation binding; default old planner and all frozen failed sources/jobs untouched. Original candidate/control/inactivity gates unchanged. No transfer inference or accuracy admission; explicitly rebound execution driver/full-vector reader still required."
   },
+  "stockholm_projection_followup_execution": {
+    "implementation": "benchmark_tools/run_projection_followup.py prepare --campaign stockholm_annotation",
+    "protocol": "benchmark_tools/hmm_stockholm_projection_followup_20261019.json",
+    "milestone": "benchmark_tools/results/stockholm_projection_followup_driver_milestone_20261019.json",
+    "state": "new_explicit_driver_tested1237_awaiting_push_freeze_and_independent_reader",
+    "scientific_revision": "8f0cd5605842e470e64f40c31bc608c37945b8b3",
+    "preparer_revision": "017245981e62d6ca4955ba6acf08387f541ed9da",
+    "preparation_job": "24521",
+    "submitted": false,
+    "scope": "Same original settings and gates; explicit new namespace/source/preparer binding, isolated full-inventory reauthentication and unchanged exact measurement reuse. Default old mode and frozen historical sources untouched. Independent new reader and actual successful panel/preparation admission still required before inference."
+  },
   "remaining": [
     "Completed weighting/local source-bound evidence and comparison integrated after464691 unique-record readback; retain mixed weighting candidates without default promotion and stop fixed neutral local branch. Original HMMER24493/reader24498/collator24501 failures preserved; prepare a new recovery/report namespace rather than retargeting old immutable bindings.",
     "Extend only advancing arms to corrected QfO and Three Kingdoms; retain all eight endpoint slots and denominator/resource diagnostics, including explicit NA for stopped branches.",

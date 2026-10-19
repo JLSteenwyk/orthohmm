@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "status": "explicit_stockholm_driver_tested1237_awaiting_push_freeze_no_transfer_submitted",
+  "parent_revision": "b30f2d148cf3eaf5cb1fd135d2147b473e1024e1",
+  "implementation": "benchmark_tools/run_projection_followup.py",
+  "protocol": "benchmark_tools/hmm_stockholm_projection_followup_20261019.json",
+  "scientific_revision": "8f0cd5605842e470e64f40c31bc608c37945b8b3",
+  "preparer_revision": "017245981e62d6ca4955ba6acf08387f541ed9da",
+  "preparation_job": "24521",
+  "scope": "New explicit orchestration binding only. Original default mode and frozen old drivers/readers/jobs remain untouched. The current driver can prepare/run only the independently selected original arm subsequence and matched controls using corrected frozen scientific source, not new scoring parameters or biological claims.",
+  "contracts": [
+    "Explicit prepare --campaign stockholm_annotation uses only the new prepared-input namespace and source/preparer/job bindings. Missing/unknown campaign, old source/preparer/path, pending preparation and modified complete inventories are rejected.",
+    "Reauthenticate complete pilot admission, every original pass/inactivity rule and the full original data/checkpoint/cache/source/protocol inventory in the isolated frozen01724598 planner process. Include new transfer, original parent and Stockholm format contracts in source verification.",
+    "Keep original graph/native flags, candidate/control order, dependencies and scientific budgets unchanged. Failed controls block dependents. HMMER measurement reuses exact repaired assessment with fresh readback rather than resampling FAS; control roles never become advancing candidates.",
+    "Bind scientific helpers exclusively to retained8f0cd560 source in standalone mode; current driver modules cannot leak into science. Complete plan/input/runtime/ownership checks precede inference; source revision and campaign are explicit in results.",
+    "Preserve fresh output/assessment namespaces, negative/failed records and all old immutable launches. Shared-host cached incremental timings are not isolated complete-pipeline measurements."
+  ],
+  "validation": {
+    "combined": {"path": "benchmark_tools/results/stockholm_projection_followup_driver_combined_tests_20261019.xml", "bytes": 193999, "sha256": "64323a091a0043d6a91b50db7194c0ce9f66c8e100483e438b4dba35894f122d", "passed": 1237, "failures": 0, "errors": 0, "skipped": 0, "pytest_wall_seconds": 185.63, "modules": 34},
+    "focused": {"path": "benchmark_tools/results/stockholm_projection_followup_driver_tests_20261019.xml", "bytes": 38565, "sha256": "7afc6173f90233c2e4fdb03f8aabb5f7cd31d2546240c2c74c918cce2291734f", "passed": 228, "pytest_wall_seconds": 8.94, "scope": "Retained outside Git; overlaps final coverage, not independent evidence."},
+    "coverage": "38 new cases plus1199 preceding cases. Both datasets and minimal control closures; failed controls; old/missing campaign/source/preparer/namespace; full isolated authentication; committed-driver preparation; standalone run guards; actual corrected-source helper origins including annotated-alignment validator. Fixtures mock biological inference/scoring and do not establish accuracy.",
+    "preservation": "Sample status/diff hashes and all three native-library hashes unchanged; no native rebuild, no changed live jobs or unrelated analyses. Scoped diff --check passes."
+  },
+  "remaining": "Push/freeze and verify this tested driver, then bind/test/push/freeze a new independent full-vector reader. Do not submit QfO/TK inference until complete24519/24520 admission, successful24521 preparation and original eligibility are verified. Eight-endpoint readback, justified combinations, candidate freeze/confirmation limits and final campaign table/recommendation/remote audit remain required.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}

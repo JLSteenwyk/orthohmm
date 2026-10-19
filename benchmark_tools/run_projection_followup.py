@@ -29,6 +29,28 @@ ARMS = ("legacy_off", "projection_off", "projection_builtin_reselect",
 SUCCESS = "native_and_score_independently_verified"
 
 
+def configuration(campaign_name="projection"):
+    if campaign_name == "projection":
+        return {"science": SCIENCE, "preparer": PREPARER, "protocol": PROTOCOL,
+            "prepared": PREPARED, "planner": PLANNER, "preparation_job": "24517"}
+    if campaign_name == "stockholm_annotation":
+        return {"science": "8f0cd5605842e470e64f40c31bc608c37945b8b3",
+            "preparer": "017245981e62d6ca4955ba6acf08387f541ed9da",
+            "protocol": "benchmark_tools/hmm_stockholm_projection_followup_20261019.json",
+            "prepared": "benchmarks/results/stockholm_projection_followup_inputs_v1_20261019/prepared_inputs.json",
+            "planner": "benchmarks/work/stockholm_projection_followup_plan_v1_20261019",
+            "preparation_job": "24521"}
+    raise ValueError("Unknown explicit projection execution campaign")
+
+
+def driver_paths(campaign_name="projection"):
+    paths = ("benchmark_tools/run_projection_followup.py", "benchmark_tools/run_projection_followup.slurm",
+             "benchmark_tools/run_profile_weighting_followup.py", configuration(campaign_name)["protocol"])
+    if campaign_name == "stockholm_annotation":
+        paths += (PROTOCOL, "benchmark_tools/hmm_stockholm_annotation_recovery_20261019.json")
+    return paths
+
+
 def helper(driver):
     spec = importlib.util.spec_from_file_location("_projection_weighting_bridge",
         driver / "benchmark_tools/run_profile_weighting_followup.py")
@@ -51,23 +73,30 @@ def science_api(source, driver):
 
 
 def authenticate_prepared(repo, prepared):
+    campaign_name = prepared.get("campaign", "projection")
+    binding = configuration(campaign_name)
     if (prepared.get("status") != "projection_transfer_inputs_prepared_execution_driver_required"
-            or prepared.get("scientific_revision") != SCIENCE or prepared.get("preparer_revision") != PREPARER
+            or prepared.get("scientific_revision") != binding["science"] or prepared.get("preparer_revision") != binding["preparer"]
             or prepared.get("cpu") != 16 or prepared.get("repo") != str(repo)
-            or prepared.get("output") != str((repo / PREPARED).parent)
+            or prepared.get("output") != str((repo / binding["prepared"]).parent)
             or prepared.get("defaults_promoted") is not False or prepared.get("goal_completed") is not False):
         raise ValueError("Require original prepared transfer, not a partial, failed or no-followup receipt")
-    planner = repo / PLANNER
-    helper(Path(__file__).resolve().parents[1]).successful_job("24517", 1, "16G")
-    if subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=planner, text=True).strip() != PREPARER:
+    planner = repo / binding["planner"]
+    helper(Path(__file__).resolve().parents[1]).successful_job(binding["preparation_job"], 1, "16G")
+    if subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=planner, text=True).strip() != binding["preparer"]:
         raise ValueError("Frozen original preparer revision changed")
     # Keep current orchestration imports out of the original scientific process.
     code = """import hashlib,json,sys
 from pathlib import Path
 from types import SimpleNamespace
 from benchmark_tools import plan_projection_followup as original
-repo=Path(sys.argv[1]); driver=Path.cwd()
-r,p,s,pins,provenance=original.authenticate(repo)
+repo=Path(sys.argv[1]); driver=Path.cwd(); campaign=sys.argv[2]
+if campaign=='projection':
+    r,p,s,pins,provenance=original.authenticate(repo)
+    protocol_name=original.PROTOCOL
+else:
+    r,p,s,pins,provenance=original.authenticate(repo,campaign_name=campaign)
+    protocol_name=original.configuration(campaign)[0]
 api=SimpleNamespace(record=original.record,check=original.check,verified_cell=original.verified_cell,PRODUCTS=original.PRODUCTS)
 cases=[]
 for dataset in original.DATASETS if s['execution_arms'] else ():
@@ -76,8 +105,11 @@ for dataset in original.DATASETS if s['execution_arms'] else ():
     phylo=Path(case['case']['baseline_output'])/'orthohmm_phylogeny'
     for name in ('alignments','gene_trees','checkpoints','species_tree_inference'):
         pins += [original.record(path) for path in sorted((phylo/name).rglob('*')) if path.is_file()]
-protocol=original.record(driver/'benchmark_tools'/original.PROTOCOL)
+protocol=original.record(driver/'benchmark_tools'/protocol_name)
 files=original.sources(driver)+[protocol]
+if campaign!='projection':
+    spec=json.loads(Path(protocol['path']).read_text())
+    files += [original.record(driver/spec[key]) for key in ('parent','format_recovery')]
 pins=original.campaign.unique_pins(pins+files)
 evidence=dict(inputs=pins,cases=cases,preparer_files=files,protocol=protocol)
 digest=hashlib.sha256(json.dumps(evidence,sort_keys=True,separators=(',',':')).encode()).hexdigest()
@@ -85,7 +117,7 @@ print(json.dumps(dict(selection=s,pilot_readback=provenance['reader']['reader'],
 """
     env = {**os.environ, "PYTHONPATH": str(planner), "CUDA_VISIBLE_DEVICES": "",
         "OMP_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1", "NUMBA_NUM_THREADS": "1"}
-    audit = json.loads(subprocess.check_output([sys.executable, "-c", code, str(repo)], cwd=planner, env=env, text=True))
+    audit = json.loads(subprocess.check_output([sys.executable, "-c", code, str(repo), campaign_name], cwd=planner, env=env, text=True))
     evidence = {key: prepared[key] for key in ("inputs", "cases", "preparer_files", "protocol")}
     digest = hashlib.sha256(json.dumps(evidence, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
     if digest != audit.pop("prepared_evidence_digest"):
@@ -94,6 +126,7 @@ print(json.dumps(dict(selection=s,pilot_readback=provenance['reader']['reader'],
         if prepared[key] != audit[key]: raise ValueError("Prepared transfer differs from reauthenticated " + key)
     if not audit["selection"]["execution_arms"]:
         raise ValueError("No original candidate or applicability follow-up requires inference")
+    if campaign_name != "projection": audit["campaign"] = campaign_name
     return audit
 
 
@@ -102,9 +135,10 @@ def scoring_id(output, label):
 
 
 def validate_plan(plan):
+    binding = configuration(plan.get("campaign", "projection"))
     chosen, dataset, output = plan["selection"], plan["dataset"], Path(plan["output"])
     arms = chosen["execution_arms"]
-    if (plan["status"] != "prepared_projection_followup_unrun" or plan["scientific_revision"] != SCIENCE
+    if (plan["status"] != "prepared_projection_followup_unrun" or plan["scientific_revision"] != binding["science"]
             or plan["cpu"] != 16 or dataset not in UNIVERSES or not arms
             or arms != [label for label in ARMS if label in arms] or arms[:2] != list(ARMS[:2])
             or plan["arms"] != arms or set(chosen["roles"]) != set(arms)
@@ -137,12 +171,15 @@ def validate_plan(plan):
         raise ValueError("Projection transfer is missing authenticated source/data/tool inputs")
 
 
-def prepare(repo, driver, output, dataset):
+def prepare(repo, driver, output, dataset, *, campaign_name="projection"):
     if output.exists(): raise FileExistsError("Preserve every projection execution namespace")
     if driver == repo or Path(__file__).resolve() != driver / "benchmark_tools/run_projection_followup.py":
         raise ValueError("Require frozen standalone projection execution driver")
-    prepared_path = repo / PREPARED
+    binding = configuration(campaign_name)
+    prepared_path = repo / binding["prepared"]
     prepared = json.loads(prepared_path.read_text())
+    if prepared.get("campaign", "projection") != campaign_name:
+        raise ValueError("Prepared receipt belongs to a different explicit campaign")
     audit = authenticate_prepared(repo, prepared)
     science = Path(audit["scientific_source"])
     api = science_api(science, driver)
@@ -152,23 +189,23 @@ def prepare(repo, driver, output, dataset):
     if case != next(c for c in prepared["cases"] if c["dataset"] == dataset):
         raise ValueError("Prepared case differs from original admitted canonical case")
     revision = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=driver, text=True).strip()
-    driver_files = [api.record(driver / path) for path in ("benchmark_tools/run_projection_followup.py",
-        "benchmark_tools/run_projection_followup.slurm", "benchmark_tools/run_profile_weighting_followup.py", PROTOCOL)]
+    driver_files = [api.record(driver / path) for path in driver_paths(campaign_name)]
     for pin in driver_files:
         blob = subprocess.check_output(["git", "show", revision + ":" + str(Path(pin["path"]).relative_to(driver))], cwd=driver)
         if hashlib.sha256(blob).hexdigest() != pin["sha256"]:
             raise ValueError("Projection driver differs from committed source")
-    if api.record(driver / PROTOCOL)["sha256"] != prepared["protocol"]["sha256"]:
+    if api.record(driver / binding["protocol"])["sha256"] != prepared["protocol"]["sha256"]:
         raise ValueError("Transfer protocol changed after pilot selection")
     plan = {"status": "prepared_projection_followup_unrun", "repo": str(repo), "output": str(output),
         "driver_root": str(driver), "driver_revision": revision, "driver_sources": driver_files,
-        "scientific_revision": SCIENCE, "prepared_inputs": api.record(prepared_path), "cpu": 16,
+        "scientific_revision": binding["science"], "prepared_inputs": api.record(prepared_path), "cpu": 16,
         **audit, "case": case, "dataset": dataset, "arms": prepared["selection"]["execution_arms"],
         "scoring_ids": {label: scoring_id(output, label) for label in prepared["selection"]["execution_arms"]
                         if label not in ("legacy_off", "projection_hmmer_score_only")},
         "inputs": [api.record(prepared_path), *prepared["inputs"]],
         "defaults_promoted": False, "goal_completed": False,
         "scope": "Fixed source/selection/controls; complete-proteome cached-search and compatible native-cache replay with inferred phylogeny. Shared-host incremental timings, not isolated fresh-pipeline costs. Assessment reuse is labeled and not an independent replicate."}
+    if campaign_name != "projection": plan["campaign"] = campaign_name
     validate_plan(plan)
     for pin in [*plan["inputs"], *driver_files]: api.check(pin)
     if api.runtime() != plan["runtime"]: raise ValueError("Scientific runtime changed")
@@ -227,9 +264,10 @@ def execute_arms(api, plan, path, names, species, hits, ownership):
     output, source = Path(plan["output"]), Path(plan["scientific_source"])
     pins = [api.record(path), *plan["inputs"], *plan["driver_sources"]]
     result = {"status": "running", "execution_plan": api.record(path), "job_id": os.environ.get("SLURM_JOB_ID"),
-        "source_revision": SCIENCE, "driver_revision": plan["driver_revision"], "dataset": plan["dataset"],
+        "source_revision": plan["scientific_revision"], "driver_revision": plan["driver_revision"], "dataset": plan["dataset"],
         "selection": plan["selection"], "ownership": ownership, "arms": [], "host_before": api.host_activity(),
         "defaults_promoted": False, "goal_completed": False, "scope": plan["scope"]}
+    if "campaign" in plan: result["campaign"] = plan["campaign"]
     env = {**os.environ, "PATH": plan["tool_path"], "PYTHONPATH": str(source), "PYTHONHASHSEED": "0",
         "CUDA_VISIBLE_DEVICES": "", "OMP_NUM_THREADS": "1", "NUMBA_NUM_THREADS": "16", "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"}
     completed, projection, digest = {}, None, None
@@ -325,17 +363,21 @@ def execute_arms(api, plan, path, names, species, hits, ownership):
 def run(path):
     plan = json.loads(path.read_text())
     validate_plan(plan)
+    binding = configuration(plan.get("campaign", "projection"))
     source, driver, output, repo = (Path(plan[key]) for key in ("scientific_source", "driver_root", "output", "repo"))
     if Path(__file__).resolve() != driver / "benchmark_tools/run_projection_followup.py" or (output / "results.json").exists():
         raise ValueError("Require frozen driver and preserve prior attempts")
     prepared_path = Path(plan["prepared_inputs"]["path"])
-    if prepared_path != repo / PREPARED: raise ValueError("Unexpected original preparation path")
-    audit = authenticate_prepared(repo, json.loads(prepared_path.read_text()))
+    if prepared_path != repo / binding["prepared"]: raise ValueError("Unexpected original preparation path")
+    prepared = json.loads(prepared_path.read_text())
+    if prepared.get("campaign", "projection") != plan.get("campaign", "projection"):
+        raise ValueError("Execution and preparation belong to different explicit campaigns")
+    audit = authenticate_prepared(repo, prepared)
     if any(plan[key] != value for key, value in audit.items()): raise ValueError("Execution plan changes original authenticated transfer")
     api = science_api(source, driver)
     for pin in [api.record(path), *plan["inputs"], *plan["driver_sources"]]: api.check(pin)
     if (api.runtime() != plan["runtime"] or os.environ.get("CUDA_VISIBLE_DEVICES") != ""
-            or subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=source, text=True).strip() != SCIENCE
+            or subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=source, text=True).strip() != binding["science"]
             or subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=driver, text=True).strip() != plan["driver_revision"]
             or api.sources(source) + [api.record(source / "benchmark_tools/run_profile_weighting_pilot.slurm")] != plan["scientific_sources"]):
         raise ValueError("Original science, driver or runtime changed")
@@ -359,9 +401,11 @@ if __name__ == "__main__":
     prep = commands.add_parser("prepare")
     for name in ("repo", "driver", "output"): prep.add_argument("--" + name, required=True, type=Path)
     prep.add_argument("--dataset", required=True, choices=UNIVERSES)
+    prep.add_argument("--campaign", choices=("projection", "stockholm_annotation"), default="projection")
     worker = commands.add_parser("run")
     worker.add_argument("--execution-plan", required=True, type=Path)
     args = parser.parse_args()
-    result = prepare(args.repo.resolve(), args.driver.resolve(), args.output.resolve(), args.dataset) if args.command == "prepare" else run(args.execution_plan.resolve())
+    result = prepare(args.repo.resolve(), args.driver.resolve(), args.output.resolve(), args.dataset,
+        campaign_name=args.campaign) if args.command == "prepare" else run(args.execution_plan.resolve())
     print(result["status"])
     raise SystemExit(0 if result["status"] in ("prepared_projection_followup_unrun", "all_projection_followup_arms_scored") else 1)

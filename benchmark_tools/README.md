@@ -65,9 +65,13 @@ science24519/reader24520 launch snapshots. The default planner still targets the
 original recovery. Both enforce the same full-panel admission, selection gates,
 inactivity rules and minimal matched-control closure. The new option prepares
 inputs only after successful independent readback; it does not redirect the old
-failed preparation or authorize the old transfer driver. A separately bound,
-tested, committed/pushed execution driver and full-vector reader remain required
-before new QfO/Three Kingdoms inference.
+failed preparation or authorize the old transfer driver. The standalone current
+driver accepts `prepare --campaign stockholm_annotation` and reauthenticates the
+new frozen planner/source and preparation job24521 in an isolated process. It
+preserves all original scientific settings, control dependencies and exact
+measurement-assessment reuse. Its default remains the original recovery.
+Separately frozen, tested and committed/pushed execution and full-vector reader
+bindings remain required before new QfO/Three Kingdoms inference.
 
 | Workflow | Execution | Separate result validation |
 | --- | --- | --- |
