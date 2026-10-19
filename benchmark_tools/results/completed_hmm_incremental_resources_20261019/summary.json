@@ -1,0 +1,874 @@
+{
+  "admission": {
+    "bytes": 7286,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/completed_weighting_local_readback_20261019.json",
+    "sha256": "feb5b637d27321ca86876790225329001541f076b9d8e9b96f5a53a2c13b169a"
+  },
+  "admission_revision": "5aa0b86ad246e0e9165fefdf344fe1a3f4aa1727",
+  "checked": [
+    {
+      "bytes": 7286,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/completed_weighting_local_readback_20261019.json",
+      "sha256": "feb5b637d27321ca86876790225329001541f076b9d8e9b96f5a53a2c13b169a"
+    },
+    {
+      "bytes": 8677,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/report_completed_hmm_resources.py",
+      "sha256": "519b040576537c36bf907d95c413a2aadaf5bc8afacdde478e214ea7a9cc989c"
+    },
+    {
+      "bytes": 113857100,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/weighting_followup_readback_v1_20261018/summary.json",
+      "sha256": "a1c61f618768d27357cf7f7827aaf9d640e89257297aa2cba9a7b6dcfca0795f"
+    },
+    {
+      "bytes": 271,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_pilot_v1_20261018/none/graph.log",
+      "sha256": "1e6995cb85c98e719eb6a4441742c3ac014d1e3e5d04a42f09e5bf18c9af1f42"
+    },
+    {
+      "bytes": 1725,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_pilot_v1_20261018/none/graph.time.txt",
+      "sha256": "35ee318af0f82a3667407e9df8f783bc2b0fdc90acaa97aba6d86c7bd8d82dad"
+    },
+    {
+      "bytes": 166,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_pilot_v1_20261018/none/native.log",
+      "sha256": "5218b6eba5559e9dee2cebb3bc03c7c1c70380b1ff776a8c319f6620baf1c7f2"
+    },
+    {
+      "bytes": 2125,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_pilot_v1_20261018/none/native.time.txt",
+      "sha256": "a7dab8ab3850ec019061a623e2ecf7e5c7758585c7d7f7784f081a2cb8c916ba"
+    },
+    {
+      "bytes": 278,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_followup_qfo_v1_20261018/none/graph.log",
+      "sha256": "b33fca57cebf3e389a73fcc58cd412c3184fc494d71d409f082b20ad7bdc001f"
+    },
+    {
+      "bytes": 1767,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_followup_qfo_v1_20261018/none/graph.time.txt",
+      "sha256": "c6d5d455b39fa606bb3e630014f7ca2dd1a28309e03cfce6828dc3afac23ba20"
+    },
+    {
+      "bytes": 173,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_followup_qfo_v1_20261018/none/native.log",
+      "sha256": "d6e3278ba57ca0487e9daac3824a2394da882726a2edf7baf2765cc87b0c3003"
+    },
+    {
+      "bytes": 2184,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_followup_qfo_v1_20261018/none/native.time.txt",
+      "sha256": "8b9dfae3466fae125e1408ff45db9e71ce3004462774aafb353b1470fb508b5a"
+    },
+    {
+      "bytes": 277,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_followup_tk_v1_20261018/none/graph.log",
+      "sha256": "da688c2c20a7e2504480eb9815bb1b8ebbef3efc8bb8ef0e90cd4806be8a7714"
+    },
+    {
+      "bytes": 1747,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_followup_tk_v1_20261018/none/graph.time.txt",
+      "sha256": "337c34462521b30cce9917a468365c45f1dba56fe71be3392db4fa2072efd880"
+    },
+    {
+      "bytes": 172,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_followup_tk_v1_20261018/none/native.log",
+      "sha256": "a076ccab975261156e978f4062a926534569b5d4a657290aa6254c6a0e7323e1"
+    },
+    {
+      "bytes": 2310,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_followup_tk_v1_20261018/none/native.time.txt",
+      "sha256": "0fdf314468873e9198d446273320b42d110dbb934fe2d33fed96b2607dca5237"
+    },
+    {
+      "bytes": 275,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_pilot_v1_20261018/henikoff/graph.log",
+      "sha256": "5b0641364b91586ccb8d70dcc2934ef7accc0b4c6fd3b7f98091bc6ea1512c3a"
+    },
+    {
+      "bytes": 1773,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_pilot_v1_20261018/henikoff/graph.time.txt",
+      "sha256": "b7f071fb374adc85be62f8dc41a91c67bfe3a98494e178e563f8a782fc637786"
+    },
+    {
+      "bytes": 170,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_pilot_v1_20261018/henikoff/native.log",
+      "sha256": "09dcdb35151ab8fe9b3e466139c9fe0f2baeb02541bc1ea1805275a7541e7bba"
+    },
+    {
+      "bytes": 2154,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_pilot_v1_20261018/henikoff/native.time.txt",
+      "sha256": "f425e64c652b0bbec5fedd141f6391c186d1e6e8b3a091f2b73acbe7e1145e40"
+    },
+    {
+      "bytes": 282,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_followup_qfo_v1_20261018/henikoff/graph.log",
+      "sha256": "5deedc48cee08448ca2270d133e9a140e38c77d0daf5e28b9be574f6c3d9f935"
+    },
+    {
+      "bytes": 1812,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_followup_qfo_v1_20261018/henikoff/graph.time.txt",
+      "sha256": "e74610fa700254a6b0f6210ea260be2ec96ab31090230e24a099a23c63405770"
+    },
+    {
+      "bytes": 177,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_followup_qfo_v1_20261018/henikoff/native.log",
+      "sha256": "168652d43888691e80ec09ecf458efcf8036eb001269d89c3577382a8090315d"
+    },
+    {
+      "bytes": 2211,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_followup_qfo_v1_20261018/henikoff/native.time.txt",
+      "sha256": "985aa2e59d790958d550df9bf9395ed950c5e37c3eca723a94110aa93c3d34aa"
+    },
+    {
+      "bytes": 281,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_followup_tk_v1_20261018/henikoff/graph.log",
+      "sha256": "f535056fe3b91f7cdb95b3f0f063f4e99a5b3492c95ccc61217cf4361000260a"
+    },
+    {
+      "bytes": 1793,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_followup_tk_v1_20261018/henikoff/graph.time.txt",
+      "sha256": "605f820da78bce592ab163c792923359cf734d71193afddea0188ee6700f704e"
+    },
+    {
+      "bytes": 176,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_followup_tk_v1_20261018/henikoff/native.log",
+      "sha256": "9020bc3e3cdfcdc597fecc108e16ebae106a6a1307d43d619e4bf4012aa093c2"
+    },
+    {
+      "bytes": 2338,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_followup_tk_v1_20261018/henikoff/native.time.txt",
+      "sha256": "a1bc26705109b767e92d1ca72a1de527b48fae720bc8808eebce1f72b98f785c"
+    },
+    {
+      "bytes": 283,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_pilot_v1_20261018/henikoff_cluster/graph.log",
+      "sha256": "7b676b46a88c4460696f4413ebceebdff6850222d4248b9cff61f22c78c7602d"
+    },
+    {
+      "bytes": 1796,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_pilot_v1_20261018/henikoff_cluster/graph.time.txt",
+      "sha256": "293cc6f3e9defcc72053ba2d66fa79860cc7416ac11b1501a8a905d969bcf1c8"
+    },
+    {
+      "bytes": 178,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_pilot_v1_20261018/henikoff_cluster/native.log",
+      "sha256": "905f7431aaa97e28e9adfdf66ba206445f54db22df688154b7552cb4a205ac71"
+    },
+    {
+      "bytes": 2184,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_pilot_v1_20261018/henikoff_cluster/native.time.txt",
+      "sha256": "4a21eeb4b63c35ad2529d658f546a2a4c3774f927a1dbdd9517caf083d58854d"
+    },
+    {
+      "bytes": 290,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_followup_qfo_v1_20261018/henikoff_cluster/graph.log",
+      "sha256": "6874cd60f607c809f2ae63f28e1bdde7dc1104c003e06269440eda5b31b90ae7"
+    },
+    {
+      "bytes": 1837,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_followup_qfo_v1_20261018/henikoff_cluster/graph.time.txt",
+      "sha256": "0c861ccb6961efbf3024b820092d5e1f85e168e3f8547b78b1bcf50cbdbda15e"
+    },
+    {
+      "bytes": 185,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_followup_qfo_v1_20261018/henikoff_cluster/native.log",
+      "sha256": "ce38cfc39881c6bb3bdbde25cd7fe3f0908b70dccd73cbc6bbcb14ad64a88fda"
+    },
+    {
+      "bytes": 2243,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_followup_qfo_v1_20261018/henikoff_cluster/native.time.txt",
+      "sha256": "0c741b2bad50b394502931eefa98d51d862330827902b578f8cba0fe3ff1357a"
+    },
+    {
+      "bytes": 289,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_followup_tk_v1_20261018/henikoff_cluster/graph.log",
+      "sha256": "7fbe663441f6a62b415bcf1a443a1ae2876675febd4f25664ad392485b163e12"
+    },
+    {
+      "bytes": 1816,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_followup_tk_v1_20261018/henikoff_cluster/graph.time.txt",
+      "sha256": "4ddeb65a3a2aec100e89bc59f0bf235c2b611e255ae088a56462718844282ecf"
+    },
+    {
+      "bytes": 184,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_followup_tk_v1_20261018/henikoff_cluster/native.log",
+      "sha256": "c46166f96106e91ebf066c94dd0c064876b2e310ae89802fe0dbc04efdb465f2"
+    },
+    {
+      "bytes": 2370,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_followup_tk_v1_20261018/henikoff_cluster/native.time.txt",
+      "sha256": "a2276525b544ba0833450688db713c85bc21bf2a42914fc98dd985734f040de8"
+    },
+    {
+      "bytes": 291,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_pilot_v1_20261018/species_henikoff_cluster/graph.log",
+      "sha256": "c0d160718dcc44ffcb56e54cb21dc5b69d92a37a3551be89aabfdb17f9e29068"
+    },
+    {
+      "bytes": 1818,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_pilot_v1_20261018/species_henikoff_cluster/graph.time.txt",
+      "sha256": "29bd3352756bdaad2770b7bdf88a52c744ac8ba48f2366b17262ee8ad4320ac6"
+    },
+    {
+      "bytes": 186,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_pilot_v1_20261018/species_henikoff_cluster/native.log",
+      "sha256": "4d3e34df30127450d2df187d97ab7957b32bcfad0e19e5275ae797aa8b757e91"
+    },
+    {
+      "bytes": 2217,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/profile_weighting_pilot_v1_20261018/species_henikoff_cluster/native.time.txt",
+      "sha256": "b759df1f1b4f0c7b74c17b2bd07a4d7bdb7f12ce1c5749c6f832ba7ca99a7a4d"
+    },
+    {
+      "bytes": 282,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/aligned_profile_guard_v1_20261018/strict_span_guard/graph.log",
+      "sha256": "bc0b3553bbb6e96357aa2405702ca1964b272b0c11f328f1205d6e8c2754da2e"
+    },
+    {
+      "bytes": 1789,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/aligned_profile_guard_v1_20261018/strict_span_guard/graph.time.txt",
+      "sha256": "5615b8279cee60d4106ba7307249bb5a1fca6cf7ba543c105d53256c4d8df8dd"
+    },
+    {
+      "bytes": 177,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/aligned_profile_guard_v1_20261018/strict_span_guard/native.log",
+      "sha256": "9c951089d5796056f4747182397d10add206dba38dc14d49f1b63f30ecfdeac8"
+    },
+    {
+      "bytes": 2180,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/aligned_profile_guard_v1_20261018/strict_span_guard/native.time.txt",
+      "sha256": "b9fad71b8c7ffeba63893e8146f3510a20e616a8c491661e1538a6803d3df25a"
+    },
+    {
+      "bytes": 52012913,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/local_joint_postrun_v1_20261018/summary.json",
+      "sha256": "73dfd2a1efd8615a27fe4e05d152a69346301a2e0a9f2e34b260c678cc478ddd"
+    },
+    {
+      "bytes": 165,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/local_joint_final_pilot_v1_20261018/off/native.log",
+      "sha256": "9e4ca4f3947496d115539613ab63b56ff6d7a81f364e1b30bb5ecc849c111a11"
+    },
+    {
+      "bytes": 2121,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/local_joint_final_pilot_v1_20261018/off/native.time.txt",
+      "sha256": "7d18c47c96328ef0b3166dc67dee2269e0d8e50b70f5e4990c58fcfec5da2559"
+    },
+    {
+      "bytes": 176,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/local_joint_final_pilot_v1_20261018/local_joint_v1/native.log",
+      "sha256": "df77e3dc17008cce9944eac6e68f411a4b5121f4a183f302162c06a123151166"
+    },
+    {
+      "bytes": 2168,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/local_joint_final_pilot_v1_20261018/local_joint_v1/native.time.txt",
+      "sha256": "d9868941cea3c6be6fd1f7bf55f6db12739f6ee191bd562c255b517c66c57fa8"
+    }
+  ],
+  "defaults_promoted": false,
+  "goal_completed": false,
+  "inputs": {
+    "local": {
+      "reader_revision": "6d69989f9369b3670658ad168e5a8f9a79420292",
+      "report": {
+        "bytes": 52012913,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/local_joint_postrun_v1_20261018/summary.json",
+        "sha256": "73dfd2a1efd8615a27fe4e05d152a69346301a2e0a9f2e34b260c678cc478ddd"
+      },
+      "scheduler": {
+        "AllocCPUS": "1",
+        "ExitCode": "0:0",
+        "JobIDRaw": "24499",
+        "NodeList": "bizon",
+        "ReqMem": "16G",
+        "State": "COMPLETED"
+      }
+    },
+    "weighting": {
+      "reader_revision": "45419005ffa4593b2ba0f22c2fc79612ae80e09a",
+      "report": {
+        "bytes": 113857100,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/weighting_followup_readback_v1_20261018/summary.json",
+        "sha256": "a1c61f618768d27357cf7f7827aaf9d640e89257297aa2cba9a7b6dcfca0795f"
+      },
+      "scheduler": {
+        "AllocCPUS": "1",
+        "ExitCode": "0:0",
+        "JobIDRaw": "24500",
+        "NodeList": "bizon",
+        "ReqMem": "16G",
+        "State": "COMPLETED"
+      }
+    }
+  },
+  "new_biological_inference": false,
+  "resource_table": {
+    "bytes": 12179,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/completed_hmm_incremental_resources_20261019/resources.tsv",
+    "sha256": "b18beaced437cde896aeeefd308aa57b33512a6726e30ca393d3646870e059cc"
+  },
+  "rows": [
+    {
+      "cpu_scope": "native_child_and_waited_descendants",
+      "cpu_seconds": 9884.23,
+      "dataset": "OrthoBench",
+      "elapsed_seconds": 721.65,
+      "evidence": "raw_GNU_time_reparsed_and_log_rehashed",
+      "max_process_rss_gib": 5.8876953125,
+      "method": "profile_weighting:none",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "graph",
+      "scope": "Cached graph/profile replay; excludes initial search."
+    },
+    {
+      "cpu_scope": "native_child_and_waited_descendants",
+      "cpu_seconds": 85.56,
+      "dataset": "OrthoBench",
+      "elapsed_seconds": 73.23,
+      "evidence": "raw_GNU_time_reparsed_and_log_rehashed",
+      "max_process_rss_gib": 1.5917510986328125,
+      "method": "profile_weighting:none",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "native",
+      "scope": "Native phylogeny replay with compatible retained caches; not fresh full-pipeline inference."
+    },
+    {
+      "cpu_scope": "parent_process_only",
+      "cpu_seconds": 8.500751999999999,
+      "dataset": "OrthoBench",
+      "elapsed_seconds": 8.50255144201219,
+      "evidence": "retained_producer_metadata_not_independently_retimed",
+      "max_process_rss_gib": null,
+      "method": "profile_weighting:none",
+      "parent_lifetime_max_rss_gib": 2.028064727783203,
+      "phase": "candidate_parent",
+      "scope": "In-process candidate preparation; RSS is parent lifetime maximum, not this phase's incremental or aggregate memory."
+    },
+    {
+      "cpu_scope": "unmeasured",
+      "cpu_seconds": null,
+      "dataset": "OrthoBench",
+      "elapsed_seconds": 832.4419984340202,
+      "evidence": "retained_producer_metadata_not_independently_retimed",
+      "max_process_rss_gib": null,
+      "method": "profile_weighting:none",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "arm_total",
+      "scope": "Shared-host incremental arm including verification and assessment/reuse; not end-to-end tool runtime. Do not sum with component phases."
+    },
+    {
+      "cpu_scope": "native_child_and_waited_descendants",
+      "cpu_seconds": 37417.49,
+      "dataset": "QfO",
+      "elapsed_seconds": 3668.0,
+      "evidence": "raw_GNU_time_reparsed_and_log_rehashed",
+      "max_process_rss_gib": 7.899284362792969,
+      "method": "profile_weighting:none",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "graph",
+      "scope": "Cached graph/profile replay; excludes initial search."
+    },
+    {
+      "cpu_scope": "native_child_and_waited_descendants",
+      "cpu_seconds": 448.52000000000004,
+      "dataset": "QfO",
+      "elapsed_seconds": 406.01,
+      "evidence": "raw_GNU_time_reparsed_and_log_rehashed",
+      "max_process_rss_gib": 7.384975433349609,
+      "method": "profile_weighting:none",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "native",
+      "scope": "Native phylogeny replay with compatible retained caches; not fresh full-pipeline inference."
+    },
+    {
+      "cpu_scope": "parent_process_only",
+      "cpu_seconds": 126.96545900000001,
+      "dataset": "QfO",
+      "elapsed_seconds": 126.98234061198309,
+      "evidence": "retained_producer_metadata_not_independently_retimed",
+      "max_process_rss_gib": null,
+      "method": "profile_weighting:none",
+      "parent_lifetime_max_rss_gib": 11.009021759033203,
+      "phase": "candidate_parent",
+      "scope": "In-process candidate preparation; RSS is parent lifetime maximum, not this phase's incremental or aggregate memory."
+    },
+    {
+      "cpu_scope": "unmeasured",
+      "cpu_seconds": null,
+      "dataset": "QfO",
+      "elapsed_seconds": 4348.3388353711925,
+      "evidence": "retained_producer_metadata_not_independently_retimed",
+      "max_process_rss_gib": null,
+      "method": "profile_weighting:none",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "arm_total",
+      "scope": "Shared-host incremental arm including verification and assessment/reuse; not end-to-end tool runtime. Do not sum with component phases."
+    },
+    {
+      "cpu_scope": "native_child_and_waited_descendants",
+      "cpu_seconds": 18960.64,
+      "dataset": "ThreeKingdoms",
+      "elapsed_seconds": 1351.45,
+      "evidence": "raw_GNU_time_reparsed_and_log_rehashed",
+      "max_process_rss_gib": 4.610904693603516,
+      "method": "profile_weighting:none",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "graph",
+      "scope": "Cached graph/profile replay; excludes initial search."
+    },
+    {
+      "cpu_scope": "native_child_and_waited_descendants",
+      "cpu_seconds": 131.5,
+      "dataset": "ThreeKingdoms",
+      "elapsed_seconds": 107.17,
+      "evidence": "raw_GNU_time_reparsed_and_log_rehashed",
+      "max_process_rss_gib": 1.8682365417480469,
+      "method": "profile_weighting:none",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "native",
+      "scope": "Native phylogeny replay with compatible retained caches; not fresh full-pipeline inference."
+    },
+    {
+      "cpu_scope": "parent_process_only",
+      "cpu_seconds": 12.815204999999995,
+      "dataset": "ThreeKingdoms",
+      "elapsed_seconds": 12.81664148112759,
+      "evidence": "retained_producer_metadata_not_independently_retimed",
+      "max_process_rss_gib": null,
+      "method": "profile_weighting:none",
+      "parent_lifetime_max_rss_gib": 2.2471694946289062,
+      "phase": "candidate_parent",
+      "scope": "In-process candidate preparation; RSS is parent lifetime maximum, not this phase's incremental or aggregate memory."
+    },
+    {
+      "cpu_scope": "unmeasured",
+      "cpu_seconds": null,
+      "dataset": "ThreeKingdoms",
+      "elapsed_seconds": 1526.592082891846,
+      "evidence": "retained_producer_metadata_not_independently_retimed",
+      "max_process_rss_gib": null,
+      "method": "profile_weighting:none",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "arm_total",
+      "scope": "Shared-host incremental arm including verification and assessment/reuse; not end-to-end tool runtime. Do not sum with component phases."
+    },
+    {
+      "cpu_scope": "native_child_and_waited_descendants",
+      "cpu_seconds": 10027.349999999999,
+      "dataset": "OrthoBench",
+      "elapsed_seconds": 740.15,
+      "evidence": "raw_GNU_time_reparsed_and_log_rehashed",
+      "max_process_rss_gib": 5.891048431396484,
+      "method": "profile_weighting:henikoff",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "graph",
+      "scope": "Cached graph/profile replay; excludes initial search."
+    },
+    {
+      "cpu_scope": "native_child_and_waited_descendants",
+      "cpu_seconds": 8017.41,
+      "dataset": "OrthoBench",
+      "elapsed_seconds": 839.35,
+      "evidence": "raw_GNU_time_reparsed_and_log_rehashed",
+      "max_process_rss_gib": 1.597137451171875,
+      "method": "profile_weighting:henikoff",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "native",
+      "scope": "Native phylogeny replay with compatible retained caches; not fresh full-pipeline inference."
+    },
+    {
+      "cpu_scope": "parent_process_only",
+      "cpu_seconds": 12.331566999999998,
+      "dataset": "OrthoBench",
+      "elapsed_seconds": 12.332142794970423,
+      "evidence": "retained_producer_metadata_not_independently_retimed",
+      "max_process_rss_gib": null,
+      "method": "profile_weighting:henikoff",
+      "parent_lifetime_max_rss_gib": 2.116840362548828,
+      "phase": "candidate_parent",
+      "scope": "In-process candidate preparation; RSS is parent lifetime maximum, not this phase's incremental or aggregate memory."
+    },
+    {
+      "cpu_scope": "unmeasured",
+      "cpu_seconds": null,
+      "dataset": "OrthoBench",
+      "elapsed_seconds": 1620.366947547067,
+      "evidence": "retained_producer_metadata_not_independently_retimed",
+      "max_process_rss_gib": null,
+      "method": "profile_weighting:henikoff",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "arm_total",
+      "scope": "Shared-host incremental arm including verification and assessment/reuse; not end-to-end tool runtime. Do not sum with component phases."
+    },
+    {
+      "cpu_scope": "native_child_and_waited_descendants",
+      "cpu_seconds": 37949.95,
+      "dataset": "QfO",
+      "elapsed_seconds": 3704.0,
+      "evidence": "raw_GNU_time_reparsed_and_log_rehashed",
+      "max_process_rss_gib": 7.9022674560546875,
+      "method": "profile_weighting:henikoff",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "graph",
+      "scope": "Cached graph/profile replay; excludes initial search."
+    },
+    {
+      "cpu_scope": "native_child_and_waited_descendants",
+      "cpu_seconds": 46464.98,
+      "dataset": "QfO",
+      "elapsed_seconds": 3276.76,
+      "evidence": "raw_GNU_time_reparsed_and_log_rehashed",
+      "max_process_rss_gib": 7.388622283935547,
+      "method": "profile_weighting:henikoff",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "native",
+      "scope": "Native phylogeny replay with compatible retained caches; not fresh full-pipeline inference."
+    },
+    {
+      "cpu_scope": "parent_process_only",
+      "cpu_seconds": 76.72725699999992,
+      "dataset": "QfO",
+      "elapsed_seconds": 76.73798479908146,
+      "evidence": "retained_producer_metadata_not_independently_retimed",
+      "max_process_rss_gib": null,
+      "method": "profile_weighting:henikoff",
+      "parent_lifetime_max_rss_gib": 11.039665222167969,
+      "phase": "candidate_parent",
+      "scope": "In-process candidate preparation; RSS is parent lifetime maximum, not this phase's incremental or aggregate memory."
+    },
+    {
+      "cpu_scope": "unmeasured",
+      "cpu_seconds": null,
+      "dataset": "QfO",
+      "elapsed_seconds": 8984.389600620838,
+      "evidence": "retained_producer_metadata_not_independently_retimed",
+      "max_process_rss_gib": null,
+      "method": "profile_weighting:henikoff",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "arm_total",
+      "scope": "Shared-host incremental arm including verification and assessment/reuse; not end-to-end tool runtime. Do not sum with component phases."
+    },
+    {
+      "cpu_scope": "native_child_and_waited_descendants",
+      "cpu_seconds": 19175.14,
+      "dataset": "ThreeKingdoms",
+      "elapsed_seconds": 1365.27,
+      "evidence": "raw_GNU_time_reparsed_and_log_rehashed",
+      "max_process_rss_gib": 4.616214752197266,
+      "method": "profile_weighting:henikoff",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "graph",
+      "scope": "Cached graph/profile replay; excludes initial search."
+    },
+    {
+      "cpu_scope": "native_child_and_waited_descendants",
+      "cpu_seconds": 12505.15,
+      "dataset": "ThreeKingdoms",
+      "elapsed_seconds": 890.69,
+      "evidence": "raw_GNU_time_reparsed_and_log_rehashed",
+      "max_process_rss_gib": 1.8774566650390625,
+      "method": "profile_weighting:henikoff",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "native",
+      "scope": "Native phylogeny replay with compatible retained caches; not fresh full-pipeline inference."
+    },
+    {
+      "cpu_scope": "parent_process_only",
+      "cpu_seconds": 12.583025000000006,
+      "dataset": "ThreeKingdoms",
+      "elapsed_seconds": 12.584407695103437,
+      "evidence": "retained_producer_metadata_not_independently_retimed",
+      "max_process_rss_gib": null,
+      "method": "profile_weighting:henikoff",
+      "parent_lifetime_max_rss_gib": 2.2563552856445312,
+      "phase": "candidate_parent",
+      "scope": "In-process candidate preparation; RSS is parent lifetime maximum, not this phase's incremental or aggregate memory."
+    },
+    {
+      "cpu_scope": "unmeasured",
+      "cpu_seconds": null,
+      "dataset": "ThreeKingdoms",
+      "elapsed_seconds": 2323.3675186510663,
+      "evidence": "retained_producer_metadata_not_independently_retimed",
+      "max_process_rss_gib": null,
+      "method": "profile_weighting:henikoff",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "arm_total",
+      "scope": "Shared-host incremental arm including verification and assessment/reuse; not end-to-end tool runtime. Do not sum with component phases."
+    },
+    {
+      "cpu_scope": "native_child_and_waited_descendants",
+      "cpu_seconds": 10050.619999999999,
+      "dataset": "OrthoBench",
+      "elapsed_seconds": 731.5,
+      "evidence": "raw_GNU_time_reparsed_and_log_rehashed",
+      "max_process_rss_gib": 5.887081146240234,
+      "method": "profile_weighting:henikoff_cluster",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "graph",
+      "scope": "Cached graph/profile replay; excludes initial search."
+    },
+    {
+      "cpu_scope": "native_child_and_waited_descendants",
+      "cpu_seconds": 8105.910000000001,
+      "dataset": "OrthoBench",
+      "elapsed_seconds": 857.57,
+      "evidence": "raw_GNU_time_reparsed_and_log_rehashed",
+      "max_process_rss_gib": 1.5971488952636719,
+      "method": "profile_weighting:henikoff_cluster",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "native",
+      "scope": "Native phylogeny replay with compatible retained caches; not fresh full-pipeline inference."
+    },
+    {
+      "cpu_scope": "parent_process_only",
+      "cpu_seconds": 8.423846999999999,
+      "dataset": "OrthoBench",
+      "elapsed_seconds": 8.42476735287346,
+      "evidence": "retained_producer_metadata_not_independently_retimed",
+      "max_process_rss_gib": null,
+      "method": "profile_weighting:henikoff_cluster",
+      "parent_lifetime_max_rss_gib": 2.116840362548828,
+      "phase": "candidate_parent",
+      "scope": "In-process candidate preparation; RSS is parent lifetime maximum, not this phase's incremental or aggregate memory."
+    },
+    {
+      "cpu_scope": "unmeasured",
+      "cpu_seconds": null,
+      "dataset": "OrthoBench",
+      "elapsed_seconds": 1626.2382706368808,
+      "evidence": "retained_producer_metadata_not_independently_retimed",
+      "max_process_rss_gib": null,
+      "method": "profile_weighting:henikoff_cluster",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "arm_total",
+      "scope": "Shared-host incremental arm including verification and assessment/reuse; not end-to-end tool runtime. Do not sum with component phases."
+    },
+    {
+      "cpu_scope": "native_child_and_waited_descendants",
+      "cpu_seconds": 38043.409999999996,
+      "dataset": "QfO",
+      "elapsed_seconds": 3720.0,
+      "evidence": "raw_GNU_time_reparsed_and_log_rehashed",
+      "max_process_rss_gib": 7.905555725097656,
+      "method": "profile_weighting:henikoff_cluster",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "graph",
+      "scope": "Cached graph/profile replay; excludes initial search."
+    },
+    {
+      "cpu_scope": "native_child_and_waited_descendants",
+      "cpu_seconds": 48918.8,
+      "dataset": "QfO",
+      "elapsed_seconds": 3377.58,
+      "evidence": "raw_GNU_time_reparsed_and_log_rehashed",
+      "max_process_rss_gib": 7.401653289794922,
+      "method": "profile_weighting:henikoff_cluster",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "native",
+      "scope": "Native phylogeny replay with compatible retained caches; not fresh full-pipeline inference."
+    },
+    {
+      "cpu_scope": "parent_process_only",
+      "cpu_seconds": 75.69779499999999,
+      "dataset": "QfO",
+      "elapsed_seconds": 75.70776997809298,
+      "evidence": "retained_producer_metadata_not_independently_retimed",
+      "max_process_rss_gib": null,
+      "method": "profile_weighting:henikoff_cluster",
+      "parent_lifetime_max_rss_gib": 11.040451049804688,
+      "phase": "candidate_parent",
+      "scope": "In-process candidate preparation; RSS is parent lifetime maximum, not this phase's incremental or aggregate memory."
+    },
+    {
+      "cpu_scope": "unmeasured",
+      "cpu_seconds": null,
+      "dataset": "QfO",
+      "elapsed_seconds": 9071.693765236065,
+      "evidence": "retained_producer_metadata_not_independently_retimed",
+      "max_process_rss_gib": null,
+      "method": "profile_weighting:henikoff_cluster",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "arm_total",
+      "scope": "Shared-host incremental arm including verification and assessment/reuse; not end-to-end tool runtime. Do not sum with component phases."
+    },
+    {
+      "cpu_scope": "native_child_and_waited_descendants",
+      "cpu_seconds": 19258.7,
+      "dataset": "ThreeKingdoms",
+      "elapsed_seconds": 1370.74,
+      "evidence": "raw_GNU_time_reparsed_and_log_rehashed",
+      "max_process_rss_gib": 4.6170806884765625,
+      "method": "profile_weighting:henikoff_cluster",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "graph",
+      "scope": "Cached graph/profile replay; excludes initial search."
+    },
+    {
+      "cpu_scope": "native_child_and_waited_descendants",
+      "cpu_seconds": 13576.960000000001,
+      "dataset": "ThreeKingdoms",
+      "elapsed_seconds": 987.97,
+      "evidence": "raw_GNU_time_reparsed_and_log_rehashed",
+      "max_process_rss_gib": 1.8708610534667969,
+      "method": "profile_weighting:henikoff_cluster",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "native",
+      "scope": "Native phylogeny replay with compatible retained caches; not fresh full-pipeline inference."
+    },
+    {
+      "cpu_scope": "parent_process_only",
+      "cpu_seconds": 12.722556999999995,
+      "dataset": "ThreeKingdoms",
+      "elapsed_seconds": 12.724078311119229,
+      "evidence": "retained_producer_metadata_not_independently_retimed",
+      "max_process_rss_gib": null,
+      "method": "profile_weighting:henikoff_cluster",
+      "parent_lifetime_max_rss_gib": 2.2564163208007812,
+      "phase": "candidate_parent",
+      "scope": "In-process candidate preparation; RSS is parent lifetime maximum, not this phase's incremental or aggregate memory."
+    },
+    {
+      "cpu_scope": "unmeasured",
+      "cpu_seconds": null,
+      "dataset": "ThreeKingdoms",
+      "elapsed_seconds": 2426.5218800529838,
+      "evidence": "retained_producer_metadata_not_independently_retimed",
+      "max_process_rss_gib": null,
+      "method": "profile_weighting:henikoff_cluster",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "arm_total",
+      "scope": "Shared-host incremental arm including verification and assessment/reuse; not end-to-end tool runtime. Do not sum with component phases."
+    },
+    {
+      "cpu_scope": "native_child_and_waited_descendants",
+      "cpu_seconds": 10035.09,
+      "dataset": "OrthoBench",
+      "elapsed_seconds": 734.94,
+      "evidence": "raw_GNU_time_reparsed_and_log_rehashed",
+      "max_process_rss_gib": 5.8875732421875,
+      "method": "profile_weighting:species_henikoff_cluster",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "graph",
+      "scope": "Cached graph/profile replay; excludes initial search."
+    },
+    {
+      "cpu_scope": "native_child_and_waited_descendants",
+      "cpu_seconds": 7937.620000000001,
+      "dataset": "OrthoBench",
+      "elapsed_seconds": 748.22,
+      "evidence": "raw_GNU_time_reparsed_and_log_rehashed",
+      "max_process_rss_gib": 1.5947036743164062,
+      "method": "profile_weighting:species_henikoff_cluster",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "native",
+      "scope": "Native phylogeny replay with compatible retained caches; not fresh full-pipeline inference."
+    },
+    {
+      "cpu_scope": "parent_process_only",
+      "cpu_seconds": 8.345169000000002,
+      "dataset": "OrthoBench",
+      "elapsed_seconds": 8.345942887011915,
+      "evidence": "retained_producer_metadata_not_independently_retimed",
+      "max_process_rss_gib": null,
+      "method": "profile_weighting:species_henikoff_cluster",
+      "parent_lifetime_max_rss_gib": 2.1454391479492188,
+      "phase": "candidate_parent",
+      "scope": "In-process candidate preparation; RSS is parent lifetime maximum, not this phase's incremental or aggregate memory."
+    },
+    {
+      "cpu_scope": "unmeasured",
+      "cpu_seconds": null,
+      "dataset": "OrthoBench",
+      "elapsed_seconds": 1520.1724244861398,
+      "evidence": "retained_producer_metadata_not_independently_retimed",
+      "max_process_rss_gib": null,
+      "method": "profile_weighting:species_henikoff_cluster",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "arm_total",
+      "scope": "Shared-host incremental arm including verification and assessment/reuse; not end-to-end tool runtime. Do not sum with component phases."
+    },
+    {
+      "cpu_scope": "native_child_and_waited_descendants",
+      "cpu_seconds": 9917.47,
+      "dataset": "OrthoBench",
+      "elapsed_seconds": 728.28,
+      "evidence": "raw_GNU_time_reparsed_and_log_rehashed",
+      "max_process_rss_gib": 5.882575988769531,
+      "method": "alignment:strict_span_guard",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "graph",
+      "scope": "Cached graph/profile replay; excludes initial search."
+    },
+    {
+      "cpu_scope": "native_child_and_waited_descendants",
+      "cpu_seconds": 9105.19,
+      "dataset": "OrthoBench",
+      "elapsed_seconds": 709.94,
+      "evidence": "raw_GNU_time_reparsed_and_log_rehashed",
+      "max_process_rss_gib": 1.595428466796875,
+      "method": "alignment:strict_span_guard",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "native",
+      "scope": "Native phylogeny replay with compatible retained caches; not fresh full-pipeline inference."
+    },
+    {
+      "cpu_scope": "parent_process_only",
+      "cpu_seconds": 8.674634000000006,
+      "dataset": "OrthoBench",
+      "elapsed_seconds": 8.67536869412288,
+      "evidence": "retained_producer_metadata_not_independently_retimed",
+      "max_process_rss_gib": null,
+      "method": "alignment:strict_span_guard",
+      "parent_lifetime_max_rss_gib": 2.1504783630371094,
+      "phase": "candidate_parent",
+      "scope": "In-process candidate preparation; RSS is parent lifetime maximum, not this phase's incremental or aggregate memory."
+    },
+    {
+      "cpu_scope": "unmeasured",
+      "cpu_seconds": null,
+      "dataset": "OrthoBench",
+      "elapsed_seconds": 1475.907402937999,
+      "evidence": "retained_producer_metadata_not_independently_retimed",
+      "max_process_rss_gib": null,
+      "method": "alignment:strict_span_guard",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "arm_total",
+      "scope": "Shared-host incremental arm including verification and assessment/reuse; not end-to-end tool runtime. Do not sum with component phases."
+    },
+    {
+      "cpu_scope": "native_child_and_waited_descendants",
+      "cpu_seconds": 85.32,
+      "dataset": "OrthoBench",
+      "elapsed_seconds": 73.12,
+      "evidence": "raw_GNU_time_reparsed_and_log_rehashed",
+      "max_process_rss_gib": 1.5904350280761719,
+      "method": "local:off",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "native",
+      "scope": "Cached final native replay only; excludes nomination, joint alignment/tree preparation and initial search."
+    },
+    {
+      "cpu_scope": "native_child_and_waited_descendants",
+      "cpu_seconds": 497.84000000000003,
+      "dataset": "OrthoBench",
+      "elapsed_seconds": 157.17000000000002,
+      "evidence": "raw_GNU_time_reparsed_and_log_rehashed",
+      "max_process_rss_gib": 1.5893135070800781,
+      "method": "local:local_joint_v1",
+      "parent_lifetime_max_rss_gib": null,
+      "phase": "native",
+      "scope": "Cached final native replay only; excludes nomination, joint alignment/tree preparation and initial search."
+    }
+  ],
+  "scope": "Prior source-bound accuracy admission retained, not a new accuracy/native-output re-audit. Raw saved GNU-time/log receipts freshly verified; candidate/arm totals are retained producer metadata, not independent retiming. Shared-host cached phase costs, not isolated fresh-pipeline costs, tool rankings or aggregate simultaneous memory. No sums of RSS or arm/component times; local nomination/joint-tree preparation excluded. Unadmitted/in-progress HMMER and contextual tools are not silently assigned these costs.",
+  "source": {
+    "bytes": 8677,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/report_completed_hmm_resources.py",
+    "sha256": "519b040576537c36bf907d95c413a2aadaf5bc8afacdde478e214ea7a9cc989c"
+  },
+  "source_revision": "3446fc30100e073917d0625642573a9d01ca27dd",
+  "status": "completed_hmm_incremental_resource_receipts_read_back"
+}

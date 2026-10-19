@@ -30,6 +30,11 @@ candidate/arm metadata explicitly distinct, and never adds arm totals to their
 components or sums RSS values. Local final-pilot native time excludes earlier
 nomination and joint-tree preparation. These cached shared-host costs are not
 fresh end-to-end tool runtimes or a timing leaderboard; missing phases stay NA.
+The [completed phase-cost table](results/completed_hmm_incremental_resources_20261019/resources.tsv)
+and [source-bound readback](results/completed_hmm_incremental_resources_20261019/summary.json)
+cover 13 completed method/dataset cells. Cache reuse can differ between arms;
+do not infer algorithmic speed ratios from their native replay times. In-progress
+or unadmitted HMMER runs are excluded rather than assigned provisional costs.
 
 The first selective HMMER biological pilot failed a source-residue integrity
 check, rather than producing an admissible negative accuracy result. The
