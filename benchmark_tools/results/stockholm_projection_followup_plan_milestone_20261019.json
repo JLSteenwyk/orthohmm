@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "status": "explicit_stockholm_input_planner_tested1199_awaiting_push_freeze",
+  "parent_revision": "17706a85e78105512fd957419e607a24d1cbd09d",
+  "implementation": "benchmark_tools/plan_projection_followup.py",
+  "protocol": "benchmark_tools/hmm_stockholm_projection_followup_20261019.json",
+  "scope": "Named read-only replacement preparation for complete Stockholm recovery. Default original planner behavior remains unchanged, all previous frozen sources/jobs/bindings remain untouched, and no new biological inference or accuracy outcome is admitted.",
+  "scientific_revision": "8f0cd5605842e470e64f40c31bc608c37945b8b3",
+  "reader_revision": "8f0cd5605842e470e64f40c31bc608c37945b8b3",
+  "bindings": {
+    "reader_submission": {"revision": "17706a85e78105512fd957419e607a24d1cbd09d", "path": "benchmark_tools/results/hmm_evidence_campaign_status_20261018.json", "git_blob_sha256": "c9be10eaa68cb292806ab5442cc415ffb7a85b4012a9b27e2123b182c539cc22"},
+    "scientific_launch": {"revision": "8731d0730fc38c1cdedcb81eef269aecf653afd4", "path": "benchmark_tools/results/hmm_evidence_campaign_status_20261018.json", "git_blob_sha256": "a9aa166301808862e349d83c85c7382fc859595fe58906c3d46459d7ccefec83", "entry_key": "stockholm_annotation_recovery_pilot"},
+    "science_job": "24519",
+    "reader_job": "24520",
+    "separate_source_paths_required": true
+  },
+  "rules": [
+    "Both immutable snapshots must bind the same exact submitted science, independent reader, original resources, dependency and plan. Reject stale24514/24515 sources/jobs, altered paths/resources and partial evidence.",
+    "Require complete independently admitted successful five-arm content readback and exact source/runtime/inventory before selection or case preparation. afterany scheduling never waives successful prerequisites.",
+    "New binding uses exactly the original point gates, candidate ordering, minimum matched-control closure and declared inactivity fallback. Include every original pass, keep control-only/applicability roles distinct, and stop dataset work if nothing qualifies.",
+    "Pin the new transfer protocol, original parent contract and Stockholm format-recovery contract alongside committed planner source and complete selected data/cache inventory. Preparation has no inference/scoring/submission capability."
+  ],
+  "tests": {
+    "final": {"path": "benchmark_tools/results/stockholm_projection_followup_plan_combined_tests_20261019.xml", "bytes": 187295, "sha256": "d43fd6a75750f1538ac14c2d6b15a93ba3eb28033e2502c8d1f7271e0eca9c9e", "passed": 1199, "failures": 0, "errors": 0, "skipped": 0, "pytest_wall_seconds": 177.33, "modules": 33},
+    "focused_history": {"path": "benchmark_tools/results/stockholm_projection_followup_plan_tests_20261019.xml", "bytes": 25110, "sha256": "6924af06ecb33bcf6d4e6fdb54b75e27b99375c488f5ff32855403e7f85678c1", "passed": 148, "scope": "Intermediate focused run before adding parent-contract inventory pins; retained outside Git. Overlapping counts are not additive."},
+    "coverage": "50 new cases plus1149 existing neighboring cases. Exact original/new selection equivalence across passes/inactivity; rejection of old/partial/changed evidence; immutable dual-launch and separate-reader checks; complete new authentication; committed protocol/source pins; no-pass preparation avoids dataset work. Existing production/profile/native/local/HMMER/score/report cases remain passing."
+  },
+  "actual_readiness_probe": {"science_job": "24519", "reader_job": "24520", "reader_observed_state": "PENDING", "result": "correctly_not_ready", "guard": "Follow-up prerequisite job is not uniquely terminal successful", "scope": "Read-only launch/authenticate against real immutable Git snapshots and current scheduler binds correct new jobs, then rejects pending reader before creating output or preparing datasets. Expected readiness guard, not a failed biological measurement."},
+  "preservation": {"sample_status_sha256": "5a72884464c7a52298571745329d080e86722b69658902b096d4f10c4574d0a7", "sample_diff_sha256": "91643349c94c9b543fdbb3f33297c5486b8eac916fc5b86e397bdfc07776bcca", "native_libraries": "All three original library hashes unchanged; no rebuild. Live24519/24520 and unrelated analyses untouched."},
+  "remaining": "Push/freeze this tested planner, verify actual frozen committed inventory and pending-parent guard, then queue only read-only input preparation after24520. New explicit transfer execution and full-vector reader bindings must be tested/pushed/frozen before inference. Actual successful panel, selection, eight-endpoint transfer, justified combinations, candidate freeze/confirmation limits and final recommendation/table/remote audit remain required.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}

@@ -388,6 +388,17 @@
     "defaults_promoted": false,
     "goal_completed": false
   },
+  "stockholm_projection_followup_planning": {
+    "implementation": "benchmark_tools/plan_projection_followup.py --campaign stockholm_annotation",
+    "protocol": "benchmark_tools/hmm_stockholm_projection_followup_20261019.json",
+    "milestone": "benchmark_tools/results/stockholm_projection_followup_plan_milestone_20261019.json",
+    "state": "explicit_new_input_planner_tested1199_awaiting_push_freeze",
+    "scientific_revision": "8f0cd5605842e470e64f40c31bc608c37945b8b3",
+    "pilot_launch": "8731d0730fc38c1cdedcb81eef269aecf653afd4",
+    "reader_submission_launch": "17706a85e78105512fd957419e607a24d1cbd09d",
+    "job": {"submitted": false, "planned_cpus": 1, "planned_memory": "16G", "planned_wall_limit": "02:00:00"},
+    "scope": "Read-only new preparation binding; default old planner and all frozen failed sources/jobs untouched. Actual launch probe binds24519/24520 then correctly rejects pending reader. Original candidate/control/inactivity gates unchanged. No transfer inference or accuracy admission; explicitly rebound execution driver/full-vector reader still required."
+  },
   "remaining": [
     "Completed weighting/local source-bound evidence and comparison integrated after464691 unique-record readback; retain mixed weighting candidates without default promotion and stop fixed neutral local branch. Original HMMER24493/reader24498/collator24501 failures preserved; prepare a new recovery/report namespace rather than retargeting old immutable bindings.",
     "Extend only advancing arms to corrected QfO and Three Kingdoms; retain all eight endpoint slots and denominator/resource diagnostics, including explicit NA for stopped branches.",

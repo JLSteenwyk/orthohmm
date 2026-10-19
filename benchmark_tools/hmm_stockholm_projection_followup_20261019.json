@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "explicit_stockholm_transfer_binding_before_complete_pilot_admission",
+  "parent": "benchmark_tools/hmm_projection_followup_20261019.json",
+  "format_recovery": "benchmark_tools/hmm_stockholm_annotation_recovery_20261019.json",
+  "pilot_launch": "17706a85e78105512fd957419e607a24d1cbd09d",
+  "scientific_launch": "8731d0730fc38c1cdedcb81eef269aecf653afd4",
+  "launch_entry": "stockholm_annotation_recovery_pilot",
+  "scientific_revision": "8f0cd5605842e470e64f40c31bc608c37945b8b3",
+  "reader_revision": "8f0cd5605842e470e64f40c31bc608c37945b8b3",
+  "hypothesis": "Test unchanged transfer of every independently admitted pilot pass and original declared inactivity fallback to complete corrected QfO and supplementary Three Kingdoms. The only scientific-source change from the original transfer contract is corrected Stockholm annotation validation; this is not a new scoring/threshold/model or selection search.",
+  "datasets": ["QfO", "ThreeKingdoms"],
+  "universes": {"QfO": {"genes": 984137, "species": 78}, "ThreeKingdoms": {"genes": 443217, "species": 12}},
+  "candidate_order": ["projection_off", "projection_builtin_reselect", "projection_hmmer_reselect"],
+  "eligibility": "Require new science24519 and separate frozen reader24520 uniquely terminal successful, exact immutable science/reader/plan bindings and independently admitted complete ordered five-arm content readback. Repeat original strict OrthoBench F1 gain versus legacy with precision/recall decline at most0.005, retaining matched repaired-control/backend contrasts and every original passing candidate. Partial producer scores, old failed24514/24515 results and prediction labels cannot bypass these gates.",
+  "inactivity": "Only a reselect arm with zero completely measured queries receives the original corrected-QfO then Three Kingdoms applicability fallback without retuning; label applicability_followup, not a pilot pass. Execution/integrity failure is never inactivity. Projection-only repair has no inactivity exception.",
+  "required_controls": [
+    "For any follow-up, include legacy_off exact canonical control and projection_off. A failed projection_off original gate makes it a matched_construction_control, never an advancing candidate.",
+    "HMMER reselect requires projection_builtin_reselect as matched_decision_control and projection_hmmer_score_only as measurement_control, even when builtin failed. Preserve each original gate and role.",
+    "Preserve the original ordered five-arm subsequence and minimum control closure. Projection-only follow-up runs only legacy_off/projection_off; builtin-only does not add HMMER arms.",
+    "If no original candidate passes and no original inactivity fallback applies, emit no_projection_followup_required and do not run further datasets to search for a favorable result."
+  ],
+  "inference": "Use frozen8f0cd560 science/runtime and the same three unchanged CPU libraries. Preserve all legacy/residue_preserving and off/builtin/HMMER settings, candidate/competitor/member budgets, gap/substitution settings, initial hits, native inferred phylogeny/reconciliation and HMMER3.4 flags/priors/null2 behavior. Do not combine weighting, alignment guards or local rescue here. Labels and annotations remain evaluation-only.",
+  "scoring": "Use unchanged corrected six-challenge QfO workflow and supplementary BUSCO-derived Three Kingdoms scoring with complete unique ownership and zero mapping loss. Exact canonical QfO assessment reuse requires native equivalence and fresh readback. HMMER measurement must exactly reuse the repaired control assessment after graph/candidate/native/tree equivalence, never resample FAS or call reuse an independent replicate. Distinguish numeric sample counts from eligible pools.",
+  "reporting": "Retain all eight endpoints, precision/recall, coverage, evaluated populations, original paired-family uncertainty and caching/resource semantics. Original full-vector development screen remains at least one primary F1 gain with no endpoint decline exceeding0.005; controls/applicability roles cannot become advancing candidates by relabeling. No universal superiority or default promotion from development point gains. Stopped/failed endpoints remain explicit NA.",
+  "resources": {"host": "local shared Threadripper", "cpus_per_run": 16, "memory_gib": 128, "wall_limit_per_dataset": "1-00:00:00", "concurrent_new_scientific_runs": 1, "order": "QfO then Three Kingdoms; each original arm subsequence sequential", "cuda": false, "dgx_required": false, "quiet_window_required": false, "unrelated_jobs": "untouched"},
+  "delivery": "Test, commit/push and freeze explicitly new planner, execution driver and independent full-vector reader bindings before transfer inference. Use fresh namespaces; preserve old failed jobs, immutable launches and frozen sources. Input preparation is read-only1CPU16G/two hours, not scientific inference or a complete transfer. Preserve exact commands, inputs/hashes, failures and recovery history. Verify remote milestones throughout.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}

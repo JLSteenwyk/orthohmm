@@ -59,6 +59,16 @@ Use a fresh complete five-arm pilot and explicit reader
 `--launch-entry stockholm_annotation_recovery_pilot`; do not retarget or admit
 the failed original recovery or its dependent jobs.
 
+The [explicit Stockholm transfer binding](hmm_stockholm_projection_followup_20261019.json)
+uses `plan_projection_followup.py --campaign stockholm_annotation` with immutable
+science24519/reader24520 launch snapshots. The default planner still targets the
+original recovery. Both enforce the same full-panel admission, selection gates,
+inactivity rules and minimal matched-control closure. The new option prepares
+inputs only after successful independent readback; it does not redirect the old
+failed preparation or authorize the old transfer driver. A separately bound,
+tested, committed/pushed execution driver and full-vector reader remain required
+before new QfO/Three Kingdoms inference.
+
 | Workflow | Execution | Separate result validation |
 | --- | --- | --- |
 | Weighted-profile and alignment-guard OrthoBench pilots | `run_profile_weighting_pilot.py` | `report_profile_evidence_pilot.py` |
