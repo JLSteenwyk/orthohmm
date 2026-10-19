@@ -74,11 +74,16 @@ def center_star_msa(
     gap_extend: int = -1,
     band_width: int = 0,
     n_threads: int = 1,
+    projection_policy: str = "legacy",
 ) -> Optional[List[str]]:
     """Build a center-star MSA from a list of protein strings.
 
     Returns aligned sequences (with '-' as gap) in the input order, or
     None if the alignment could not be built.
+
+    The default legacy projection preserves historical behavior. The opt-in
+    residue_preserving policy repairs insertion coordinates and separates
+    unknown input residues from traceback gaps, then checks row integrity.
 
     Steps
     -----
@@ -89,12 +94,19 @@ def center_star_msa(
        many columns into the output MSA.
     4. Project each member onto the merged coordinate system.
     """
+    if projection_policy not in ("legacy", "residue_preserving"):
+        raise ValueError("Unknown center-star projection policy")
+    preserve_residues = projection_policy == "residue_preserving"
     n = len(sequences)
     if n < 2:
         return sequences
 
     # Encode everything to uint8
     encoded = [_encode_sequence(s) for s in sequences]
+    if preserve_residues:
+        # The kernel scores unknowns neutrally, but reserves 20 for traceback gaps.
+        for sequence in encoded:
+            sequence[sequence == 20] = 21
     lens = np.array([len(e) for e in encoded], dtype=np.int32)
 
     # Center = median length (argmedian)
@@ -175,11 +187,13 @@ def center_star_msa(
     # Merged MSA length = L_center + sum(max_insert)
     msa_len = L_center + int(max_insert.sum())
 
-    # Cumulative insert positions: insertion slot before center residue k
-    # starts at column = k + sum(max_insert[:k])
+    # Fixed center residue k follows all insertion slots through k. Retain the
+    # historical offset only in legacy mode for matched-control reproducibility.
     insert_start = np.zeros(L_center + 1, dtype=np.int32)
+    if preserve_residues:
+        insert_start[0] = max_insert[0]
     for k in range(1, L_center + 1):
-        insert_start[k] = insert_start[k - 1] + 1 + max_insert[k - 1]
+        insert_start[k] = insert_start[k - 1] + 1 + max_insert[k if preserve_residues else k - 1]
     # center residue k lands at column: insert_start[k]
 
     # Build aligned sequences
@@ -211,17 +225,17 @@ def center_star_msa(
             a_aa = a[col]
             if walk[col][1] == 0:
                 # Match column: place a_aa at insert_start[center_col]
-                if a_aa < 20:
+                if a_aa < 20 or (preserve_residues and a_aa == 21):
                     member_aligned[insert_start[center_col]] = _aa_to_char(a_aa)
                 # else: a had a gap here — leave as '-'
                 center_col += 1
                 insert_count = 0
             else:
-                # Insertion column: place a_aa at insert_start[center_col] + 1 + insert_count
+                # Insertions precede the next center residue (or the end sentinel).
                 slot = insert_start[center_col] - max_insert[center_col] + insert_count
                 # insert_start[center_col] points to center residue col; insertions
                 # sit in columns [insert_start[center_col] - max_insert[center_col], insert_start[center_col])
-                if 0 <= slot < msa_len and a_aa < 20:
+                if 0 <= slot < msa_len and (a_aa < 20 or (preserve_residues and a_aa == 21)):
                     member_aligned[slot] = _aa_to_char(a_aa)
                 insert_count += 1
         aligned[pair_idx] = bytes(member_aligned).decode("ascii")
@@ -230,6 +244,10 @@ def center_star_msa(
     for k in range(n):
         if aligned[k] is None:
             return None
+        if preserve_residues:
+            expected = bytes(_aa_to_char(aa) for aa in encoded[k]).decode("ascii")
+            if aligned[k].replace("-", "") != expected:
+                raise ValueError("Center-star projection changed source residues")
 
     return aligned
 

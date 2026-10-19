@@ -14,6 +14,18 @@ HMMER are experimental package/workflow integrations; promising results
 require complete-dataset follow-up and a tested production opt-in interface
 before recommendation. HMM similarity alone does not establish orthology.
 
+The first selective HMMER biological pilot failed a source-residue integrity
+check, rather than producing an admissible negative accuracy result. The
+[projection recovery protocol](hmm_projection_integrity_recovery_20261018.json)
+records the diagnosed center-star insertion-projection fault and a prospective
+matched recovery panel. Package-level `projection_policy="residue_preserving"`
+is an opt-in repair in `center_star_msa` and `build_msa_profile`; the default
+remains `legacy`, and frozen scientific jobs are unchanged. HMMER reconstruction
+uses the profile's recorded policy without relaxing source/profile checks.
+The recovery runner, complete-panel reader and production/replay propagation
+must be finished before launching the new biological panel. This is not a
+validated accuracy improvement or a new production recommendation.
+
 | Workflow | Execution | Separate result validation |
 | --- | --- | --- |
 | Weighted-profile and alignment-guard OrthoBench pilots | `run_profile_weighting_pilot.py` | `report_profile_evidence_pilot.py` |

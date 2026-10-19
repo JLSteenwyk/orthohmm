@@ -168,12 +168,22 @@ def test_composite_rejects_unchecked_tampered_or_ambiguous_admissions(accepted, 
 
 
 def test_actual_scientific_compatibility_with_original_probe_checkout():
-    source = Path(readback.__file__).resolve().parents[1]
-    original = source / "benchmarks/work/local_joint_rescue_v2_20261018"
+    repo = Path(readback.__file__).resolve().parents[1]
+    original = repo / "benchmarks/work/local_joint_rescue_v2_20261018"
+    reader = repo / "benchmarks/work/local_joint_postrun_v1_20261018"
+    if not original.is_dir() or not reader.is_dir():
+        pytest.skip("Requires retained immutable probe and reader checkouts")
+    actual = readback.scientific_compatibility(original, reader)
+    assert actual["status"] == "original_local_scientific_code_unchanged" and actual["checked"]
+
+
+def test_projection_repair_cannot_enter_the_original_local_readback():
+    repo = Path(readback.__file__).resolve().parents[1]
+    original = repo / "benchmarks/work/local_joint_rescue_v2_20261018"
     if not original.is_dir():
         pytest.skip("Requires retained immutable probe checkout")
-    actual = readback.scientific_compatibility(original, source)
-    assert actual["status"] == "original_local_scientific_code_unchanged" and actual["checked"]
+    with pytest.raises(ValueError, match="scientific code differs"):
+        readback.scientific_compatibility(original, repo)
 
 
 @pytest.mark.parametrize("kind", ["core", "profile_helper", "unexpected_module"])

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "status": "tested_opt_in_package_repair_biological_recovery_not_launched",
+  "parent_revision": "be4bef6cdf84204b50eb8b4a4a71df1bd46efc5d",
+  "protocol": "benchmark_tools/hmm_projection_integrity_recovery_20261018.json",
+  "failure": {
+    "job_id": "24493",
+    "state": "FAILED",
+    "exit_code": "1:0",
+    "elapsed": "00:47:40",
+    "results": {"path": "benchmarks/results/selective_hmmer_pilot_v1_20261018/results.json", "sha256": "ac60369797286bd4ddb264162882ae333d138e59b362400374a77d5741543a58"},
+    "graph_log": {"path": "benchmarks/results/selective_hmmer_pilot_v1_20261018/hmmer_score_only/graph.log", "sha256": "493bef73ad5d0adb6f18a665d9bef40b38d02e120c3a20e3e78c6dcd621151c3"},
+    "measurement_receipts": {"count": 19, "all_status": "failed", "all_error": "Native alignment changed known source residues", "scope": "Observed receipts, not a complete attempted or successfully measured family panel."},
+    "reader": {"job_id": "24498", "state": "FAILED", "exit_code": "1:0", "elapsed": "00:00:01", "reason": "Complete unchanged profile pilot required; incomplete producer panel correctly rejected."},
+    "interpretation": "Execution failure, not negative accuracy, inactivity or an applicability fallback. Preserve failed source, outputs and original reader/collator bindings."
+  },
+  "implementation": {
+    "scope": "Package center-star MSA, family-profile construction and HMMER native-source reconstruction only. Production/replay propagation, five-arm recovery runner and independent reader remain required before biological recovery launch.",
+    "policies": ["legacy", "residue_preserving"],
+    "default": "legacy",
+    "repair": "Correct insertion coordinates and use input unknown code21 distinct from traceback gap20. Require exact normalized ungapped input recovery for every row. No C scoring, gap parameter, library rebuild, emission reconstruction or HMMER integrity relaxation.",
+    "legacy_diagnostic": "Read-only comparison against parent center-star module: identical default alignments for96 randomized families, seed20261018,3..7 members,10..59 residues, canonical amino acids plusX, gaps-12/-3,one thread. This spot check does not replace a full biological control.",
+    "failed_family_serial_reproduction": {"profile_id": 81, "members": 40, "ordered_members_sha256_compact_json": "118780fe7c1427a7bce63924d12962c41ab6fb84863ae628abe03022b863170d", "columns_both_policies": 1416, "legacy_mismatched_source_rows": 34, "residue_preserving_mismatched_source_rows": 0, "scope": "Original selected ordered members and original OrthoBench FASTAs, decoded with native amino-acid normalization, BLOSUM62,gaps-12/-3,one thread. Serial native MSA only, no rescoring or benchmark labels. Initial diagnostic mistakenly supplied encoded arrays to the string API; corrected decoding before this successful comparison."}
+  },
+  "tests": {
+    "focused": {"path": "benchmark_tools/results/projection_integrity_recovery_tests_20261018.xml", "bytes": 11407, "sha256": "6a8c6904df3a3f0d6de7d858b59fe7f4de2387f137b12ae047371e591a9d1519", "passed": 76, "failures": 0, "errors": 0, "skipped": 0},
+    "combined": {"path": "benchmark_tools/results/projection_integrity_recovery_combined_tests_v3_20261018.xml", "bytes": 106589, "sha256": "e88261dc43170ca725fb0d05f01ffd4d905dc4f8e70c38347562313f5b354e74", "passed": 701, "failures": 0, "errors": 0, "skipped": 0, "pytest_wall_seconds": 91.84},
+    "scope": "21 overlapping modules; insertion boundaries, unknown residues, mixed indels, randomized serial/threaded row preservation, unchanged legacy arrays, real HMMER construction/calibration, strict source checks, existing profile/replay/local/weighting/readback/collator behavior. Counts overlap earlier suites and are not independent biological evidence.",
+    "history": [
+      {"path": "benchmark_tools/results/projection_integrity_recovery_combined_tests_20261018.xml", "bytes": 121005, "sha256": "f5635f7538ac24efa3c897c0d4c3d836d97796e72f0af0e6a44ed1dce7b34168", "storage": "Retained outside Git; raw traceback whitespace preserved.", "passed": 645, "failures": 1, "errors": 0, "skipped": 54, "reason": "Overrestricted PATH omitted MAFFT/FastTree; historical compatibility fixture incorrectly treated evolving primary source as the immutable reader."},
+      {"path": "benchmark_tools/results/projection_integrity_recovery_combined_tests_v2_20261018.xml", "bytes": 172003, "sha256": "f19935b2b3ee65784fc33fcb695ae634da616538e74c182477313a3345c6573f", "storage": "Retained outside Git; raw traceback whitespace preserved.", "passed": 680, "failures": 2, "errors": 19, "skipped": 0, "reason": "Synthetic current-code proposal falsely claimed historical source. Fixture now binds actual generating source. Historical frozen-reader compatibility remains strict; an explicit test rejects repaired primary source under the old binding."}
+    ],
+    "environment": "Normal PATH including installed MAFFT/FastTree/HMMER3.4; OMP/OPENBLAS/MKL/NUMBA_NUM_THREADS=1 and CUDA_VISIBLE_DEVICES empty. Shared-host test times, not inference timing."
+  },
+  "unchanged_libraries": {
+    "pair_align.so": "81c26c6ce92b1da37285824ea1b8dcea007a7fc18a11ee5fa3d150628fa800c7",
+    "hmm_viterbi.so": "f21d902852d727d6270b65ba900db52e7216cd874ee2d2b89fa72b6f16dcd5c0",
+    "kmer_prefilter.so": "348b1c715e2e305dae7e889bae1d2498e609e48ce5d50cd668db71b548c60b88"
+  },
+  "limitations": "Correctness repair is not an accuracy result, default recommendation or goal completion. Recovery must separate projection effects from decision-rule and backend effects using the prospective five-arm panel; retain all original mechanisms, extension gates, eight endpoints and confirmation limitations.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}

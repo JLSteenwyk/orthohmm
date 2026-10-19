@@ -202,7 +202,9 @@ def score_family_hmmer(profile, member_sequences, query_sequences, full_database
             raise ValueError("Full original database gene count must cover all distinct targets")
         matrix, background = get_matrix("BLOSUM62"), get_background_freqs("BLOSUM62")
         aligned = center_star_msa([sources[gene] for gene in members], matrix,
-                                  gap_open=-12, gap_extend=-3, n_threads=1)
+                                  gap_open=-12, gap_extend=-3, n_threads=1,
+                                  **({"projection_policy": profile.projection_policy}
+                                     if profile.projection_policy != "legacy" else {}))
         if aligned is None:
             raise ValueError("Native source alignment could not be reconstructed")
         aligned_residues = {gene: sequence.replace("-", "").replace(".", "").upper()
@@ -236,6 +238,11 @@ def score_family_hmmer(profile, member_sequences, query_sequences, full_database
                 "sequence_normalization": "native_20_amino_acids_else_X", "sequence_weighting": "none",
                 "effective_sequence_number": len(members), "seed": 42, "worker_threads": 0,
                 "per_tool_timeout_seconds": 600, "score_precision": "HMMER CLI reported values; ties may reflect rounding"}})
+        if profile.projection_policy != "legacy":
+            result["parameters"]["profile_projection_policy"] = profile.projection_policy
+            result["source_alignment_scope"] = (
+                "Residue-preserving native projection; every normalized source residue, including X, is retained."
+            )
         environment = {**os.environ, "LC_ALL": "C", "HMMER_NCPU": "0", "OMP_NUM_THREADS": "1",
                        "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"}
         result["environment_overrides"] = {key: environment[key] for key in (

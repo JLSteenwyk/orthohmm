@@ -54,8 +54,8 @@ def prepared(accepted, tmp_path, monkeypatch):
     report_path = root / "probe.json"
     report_path.write_text(json.dumps(report))
     source = Path(pilot.__file__).resolve().parents[1]
-    original_source = source / "benchmarks/work/local_joint_rescue_v2_20261018"
-    if not original_source.is_dir(): pytest.skip("Requires retained original scientific source for compatibility")
+    # This synthetic proposal was built above with current modules, not the historical probe.
+    original_source = source
     case = {"dataset": "OrthoBench", "fasta_directory": str(accepted["root"] / "input"),
         "baseline_output": str(baseline), "checkpoint": str(checkpoint),
         "checkpoint_manifest": record(checkpoint / "manifest.json"),

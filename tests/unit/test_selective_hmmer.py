@@ -201,6 +201,34 @@ def test_scoring_preserves_readonly_native_parameters_and_source_order(tmp_path,
     assert members == sources_before and query == queries_before and profile.member_ids == ids_before
 
 
+@pytest.mark.parametrize("position", [0, 30, 60])
+def test_real_hmmer_reconstructs_residue_preserving_native_profiles(tmp_path, tools, position):
+    base = "ACDEFGHIKLMNPQRSTVWY" * 3
+    members = {"a": base, "b": base, "c": base[:position] + "GGG" + base[position:]}
+    profile = build_msa_profile(list(members.values()), list(members), get_matrix("BLOSUM62"),
+                                get_background_freqs("BLOSUM62"), projection_policy="residue_preserving")
+    result = hmmer.score_family_hmmer(profile, members, {"query": base}, 10000, tmp_path / "fixed", **tools)
+    assert result["status"] == "hmmer_profile_scored" and result["calibration_complete"]
+    assert result["parameters"]["profile_projection_policy"] == "residue_preserving"
+    alignment = AlignIO.read(tmp_path / "fixed/source.sto", "stockholm")
+    actual = {result["token_to_gene"][row.id]: str(row.seq).replace("-", "") for row in alignment}
+    assert actual == members
+    assert alignment.column_annotations["reference_annotation"].count("x") == profile.length
+
+
+def test_lossy_legacy_alignment_still_fails_before_external_tools(tmp_path, monkeypatch):
+    base = "ACDEFGHIKLMNPQRSTVWY" * 3
+    members = {"a": base, "b": base, "c": "GGG" + base}
+    profile = build_msa_profile(list(members.values()), list(members), get_matrix("BLOSUM62"),
+                                get_background_freqs("BLOSUM62"))
+    def forbidden(*args, **kwargs):
+        raise AssertionError("Lossy source alignment must not be scored")
+    monkeypatch.setattr(hmmer, "_run_tool", forbidden)
+    with pytest.raises(ValueError, match="changed known source residues"):
+        hmmer.score_family_hmmer(profile, members, {"query": base}, 10000, tmp_path / "legacy")
+    assert json.loads((tmp_path / "legacy/measurements.json").read_text())["status"] == "failed"
+
+
 @pytest.mark.parametrize("kind", ["emissions", "consensus", "transitions", "weighted", "source_ownership", "query_ownership", "database_count"])
 def test_invalid_native_source_or_scope_fails_before_external_tools(tmp_path, monkeypatch, kind):
     profile, members, query = source_fixture()

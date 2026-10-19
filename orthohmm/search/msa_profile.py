@@ -34,6 +34,7 @@ class MSAProfile:
     sequence_weighting: str = "none"
     member_species: Optional[list] = None
     effective_sequence_count: Optional[float] = None
+    projection_policy: str = "legacy"
 
 
 def encode_alignment(aligned_seqs: List[str]) -> np.ndarray:
@@ -183,6 +184,7 @@ def build_msa_profile(
     align_threads: int = 1,
     sequence_weighting: str = "none",
     species=None,
+    projection_policy: str = "legacy",
 ) -> Optional[MSAProfile]:
     """Build a multi-sequence profile from a list of sequences.
 
@@ -192,6 +194,8 @@ def build_msa_profile(
     Returns None if profile can't be built (too few sequences, etc.).
     """
     validate_profile_sequence_weighting(sequence_weighting)
+    if projection_policy not in ("legacy", "residue_preserving"):
+        raise ValueError("Unknown center-star projection policy")
     if len(ids) != len(sequences):
         raise ValueError("Profile sequences and member IDs must align")
     if sequence_weighting == "species_henikoff_cluster" and (
@@ -203,7 +207,9 @@ def build_msa_profile(
 
     aligned = center_star_msa(sequences, sub_matrix,
                               gap_open=gap_open, gap_extend=gap_extend,
-                              n_threads=align_threads)
+                              n_threads=align_threads,
+                              **({"projection_policy": projection_policy}
+                                 if projection_policy != "legacy" else {}))
     if aligned is None:
         return None
 
@@ -242,4 +248,5 @@ def build_msa_profile(
         sequence_weighting=sequence_weighting,
         member_species=list(species) if species is not None else None,
         effective_sequence_count=float(weights.sum()) if weights is not None else float(len(sequences)),
+        projection_policy=projection_policy,
     )
