@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "fixed_projection_transfer_driver_tested_not_submitted_independent_transfer_reader_required",
+  "status": "fixed_projection_transfer_driver_tested_pushed_frozen_not_submitted_independent_transfer_reader_required",
   "parent_revision": "ebff5d15ddd9a1ff83c43c38fd0f1b3a10708920",
   "protocol": "benchmark_tools/hmm_projection_followup_20261019.json",
   "implementation": ["benchmark_tools/run_projection_followup.py", "benchmark_tools/run_projection_followup.slurm"],
@@ -41,7 +41,15 @@
     "graph_report": {"path": "benchmarks/results/projection_recovery_pilot_v1_20261019/projection_off/graph_metrics.json", "bytes": 6254, "sha256": "ee8c5cb4e69a302c0cb489ad3ec1efcd0f510dfabb7ddab77a8bcd43032c3b45"},
     "scope": "Observation of completed producer arm only; builtin reselect now running. Separate complete-panel reader24515, comparison24516, uncertainty and original transfer selection remain pending. Do not substitute this provisional observation for admitted accuracy, automatic extension or generalizable improvement."
   },
-  "remaining": "Commit/push/freeze verified driver. Continue original pilot/readers/input-preparation handles without duplication. Implement/test/freeze independently bound full-vector reader and inspect actual complete pilot eligibility before preparing/submitting sequential QfO then Three Kingdoms inference. Preserve original gates, failed/stopped branches, denominators, confirmation limitations and final recommendation/remote audit requirements.",
+  "frozen_execution": {
+    "revision": "80974fba96897fccc8ec2eea36ba08bb6830bd85",
+    "source": "benchmarks/work/projection_followup_driver_v1_20261019",
+    "push": "git push origin main succeeded; git ls-remote independently matched exact80974fba revision before frozen verification",
+    "verification": "All1230 scientific/orchestration/protocol/wrapper source records checked against committed bytes, no mismatches. Three original CPU libraries copied without rebuilding and hashes unchanged. Frozen standalone preparation-readiness probe correctly rejected actual pending24517 with uniquely-terminal-successful guard, before any input receipt access, output creation or inference.",
+    "submitted": false,
+    "scope": "Verified execution implementation only. Independent transfer reader and actual original pilot/preparation admission still required before biological submission."
+  },
+  "remaining": "Continue original pilot/readers/input-preparation handles24514/24515/24516/24517 without duplication. Implement/test/freeze independently bound full-vector reader and inspect actual complete pilot eligibility before preparing/submitting sequential QfO then Three Kingdoms inference. Preserve original gates, failed/stopped branches, denominators, confirmation limitations and final recommendation/remote audit requirements.",
   "defaults_promoted": false,
   "goal_completed": false
 }
