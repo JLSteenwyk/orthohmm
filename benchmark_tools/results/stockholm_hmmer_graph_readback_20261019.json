@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "status": "completed_hmmer_measurement_graph_raw_readback_verified_native_panel_pending",
+  "scientific_job": "24519",
+  "observed_parent_accounting": {"job_id": "24519", "state": "RUNNING", "elapsed": "01:28:14", "cpus": 16, "memory_allocation": "128G", "reader24520": "PENDING", "preparation24521": "PENDING"},
+  "scientific_revision": "8f0cd5605842e470e64f40c31bc608c37945b8b3",
+  "reader_revision": "8f0cd5605842e470e64f40c31bc608c37945b8b3",
+  "reader_source": "benchmarks/work/stockholm_annotation_recovery_readback_v1_20261019",
+  "reader_verification": "Fresh git HEAD and exact committed-byte checks passed for run_profile_weighting_pilot.py, validate_selective_profile_evidence.py, selective_hmmer.py and selective_profiles.py in the separately frozen reader. No source/numerical changes were made for this readback.",
+  "launch": "8731d0730fc38c1cdedcb81eef269aecf653afd4",
+  "launch_entry": "stockholm_annotation_recovery_pilot",
+  "execution_plan": {"path": "benchmarks/results/stockholm_annotation_recovery_pilot_v1_20261019/execution_plan.json", "bytes": 14860823, "sha256": "a49a54741d8978c6287737c0f3a4a1581172c3a13c192c6cd392123489ee154d"},
+  "graphs": {
+    "projection_off": {"path": "benchmarks/results/stockholm_annotation_recovery_pilot_v1_20261019/projection_off/graph_metrics.json", "bytes": 6352, "sha256": "d58241325b246ee0b0da45122d6c8f02794977ce2e71017237e8748bd41fa5cd"},
+    "projection_hmmer_score_only": {"path": "benchmarks/results/stockholm_annotation_recovery_pilot_v1_20261019/projection_hmmer_score_only/graph_metrics.json", "bytes": 36840582, "sha256": "74c98b6079482f10a87b8718f6d30d7ed32c80af06ade118171d4ffa0370e520"}
+  },
+  "activation": {"mode": "hmmer_score_only", "profiles_built": 15901, "weighted_profiles": 0, "strict_profile_edges": 24113, "selective_mode": "hmmer_score_only", "candidate_digest": "0b9259644764d9be4f87387d015fde8f4af9bbf3e22df1b06569e662cb3426c0", "selected_queries": 128, "selected_profiles": 128, "completely_measured_queries": 126, "applied_changed_query_anchors": 0, "applicability": "completely_measured", "arm": "projection_hmmer_score_only", "projection_policy": "residue_preserving"},
+  "raw_profile_statuses": {"hmmer_profile_scored": 128},
+  "raw_readback": {"checkpoint_gene_names": 251378, "unique_checked_records": 1925, "ordered_inventory_sha256": "54edeaddd7a214ae10d824e522751534d2dbaf95847065cdfb54967515057bd7", "scope": "Raw HMMER build/search commands, frozen binaries, ownership, targets, source/annotated alignments, masks, calibrated score/domain tables and decisions independently re-read using the frozen validator. Not native-output or benchmark-score admission."},
+  "matching_graph_stages": [
+    {"label": "multipass", "bytes": 4567716, "sha256": "c6057d2428322c3b1922200cf68cedcd4c2ebfc2e814f525f93ec458b452560f"},
+    {"label": "multipass_refined", "bytes": 4567716, "sha256": "3ab1c37f8f073492b3c28f6bf261f3db85e4882020cce74cfd17b66cdb356899"},
+    {"label": "strict_profiles", "bytes": 4567716, "sha256": "352d9e875f41b6e91ba56ec8a9014d3f619e561ab36667181a5f8372e2bc7ee6"},
+    {"label": "strict_profiles_refined", "bytes": 4567716, "sha256": "950cb42f3bd95ea97031efe91a19ac101d20967a962cff766718cbfca0dc5119"}
+  ],
+  "matching_candidate_products": [
+    {"name": "orthohmm_edges_clustered.txt", "bytes": 4567716, "sha256": "19b3571e289df33df1c96e0b930dfa1fa5762a3f6a3457420ec04e65820a78ad"},
+    {"name": "phylogeny_candidate_merges.json", "bytes": 13671756, "sha256": "1a9c21970770f0a60c808c670b759c96408b724c27e00cdba9e163c793c0d1f3"}
+  ],
+  "decision_diagnostics": {"counterfactual_external_anchor_actions": {"reject": 121, "recruit": 5, "preserve": 2}, "reasons": {"own_family_winner": 115, "unique_external_winner_passed": 5, "below_member_threshold": 6, "incomplete_measurements": 2}, "counterfactual_changed_query_anchors": 66, "actual_changed_query_anchors": 0, "scope": "Recruitment-anchor decisions, not orthology accuracy labels or protein removals. The measurement-only arm applies no changes; counterfactual differences do not predict final benchmark effects."},
+  "incomplete_measurement_diagnostic": {
+    "preserved_queries": ["ENSMUSP00000122787", "ENSDARP00000099117"],
+    "profile_id": 12806,
+    "missing_source_member": "FBpp0084219",
+    "model_match_columns": 417,
+    "source_members": 85,
+    "source_sequence_length": 881,
+    "threonines": 591,
+    "unknown_residues": 0,
+    "reported_HMMER_sequence_hit": false,
+    "files": [
+      {"path": "benchmarks/results/stockholm_annotation_recovery_pilot_v1_20261019/projection_hmmer_score_only/graph/selective_profiles/profile00012806/measurements.json", "bytes": 135922, "sha256": "13064fcb0a07a87ba973664536985e1fad10c37d0d5bf655ca2c4e0f3207f979"},
+      {"path": "benchmarks/results/stockholm_annotation_recovery_pilot_v1_20261019/projection_hmmer_score_only/graph/selective_profiles/profile00012806/targets.faa", "bytes": 41871, "sha256": "2c6103b1971fab9656dedfc06830d679a2f7b47b50860666dd93004af3038f0c"}
+    ],
+    "interpretation": "A source-member hit is absent for one threonine-rich protein. Composition counts are descriptive, not a proven cause. Original conservative policy preserves both affected query decisions rather than imputing scores. This is not zero activation, a tool failure, a missing input gene or evidence of accuracy loss; all other126 queries are completely measured. No threshold, null-model or fallback retuning."
+  },
+  "reproduction": "From the frozen reader cwd, CPU-only Python restricted to one allowed CPU/16GiB address space/120CPU seconds: load_accuracy_checkpoint(plan.case.checkpoint,verify=True); validate_activation(graph,'projection_hmmer_score_only','projection_recovery',folder=arm,gene_names=names,hmmer_tools=plan.hmmer_tools); unique_pins([record(graph_path),*activation.checked]); check every pin; SHA256(json.dumps(pins,sort_keys=True,separators=(',',':')).encode()). Separately rehash both graphs' stage outputs and both candidate files, comparing label/bytes/SHA256 signatures. Do not read benchmark labels or change running outputs.",
+  "scope": "Completed graph/backend measurement-stage evidence only. It demonstrates the corrected format guard on fresh biological data and an unchanged graph/candidate measurement control; it does not establish native equivalence, scores, uncertainty, a complete panel, advancement, default promotion or goal completion. Native measurement-control reconstruction is still live; HMMER reselect, independent24520 readback and24521 preparation remain required. Old failed jobs/outputs/bindings remain preserved.",
+  "graph_control_verified": true,
+  "native_control_verified": false,
+  "accuracy_result_admitted": false,
+  "defaults_promoted": false,
+  "goal_completed": false
+}
