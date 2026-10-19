@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "gated_transfer_planner_tested_no_preparation_or_scientific_transfer_yet",
+  "status": "gated_transfer_planner_tested_pushed_frozen_input_preparation24517_pending_no_scientific_transfer",
   "parent_revision": "ebfd18e0784dbe120d95b757cd6726432d18a119",
   "implementation": "benchmark_tools/plan_projection_followup.py",
   "protocol": "benchmark_tools/hmm_projection_followup_20261019.json",
@@ -25,7 +25,16 @@
   },
   "actual_readiness_probe": {"reader_job": "24515", "observed_state": "PENDING", "result": "followup_correctly_not_ready", "guard": "Follow-up prerequisite job is not uniquely terminal successful", "scope": "Read-only authenticate() call against actual immutable launch/current scheduler state rejected pending reader before preparation/output/inference/scoring. Expected readiness guard, not a failed scientific experiment or request for user input."},
   "preservation": "Active science24514 and reader/report24515/24516 untouched. Original scientific source/native libraries and sample status/diff hashes unchanged; unrelated jobs left running.",
-  "remaining": "Commit/push/verify/freeze planner and queue read-only preparation after existing comparison stage. Inspect complete actual pilot admission and resulting original eligibility before implementing/finalizing transfer execution and independent full-vector validation. No extra dataset inference before required code/tests/freeze and original gates. Complete remaining confirmation/recommendation/table/remote audit requirements before goal closure.",
+  "frozen_preparation": {
+    "revision": "98e05ee6d4ce11fad138eb59f1fcd8fcce2a994e",
+    "push": "git ls-remote origin refs/heads/main independently matched exact revision before submission",
+    "source": "benchmarks/work/projection_followup_plan_v1_20261019",
+    "verification": "All1228 source/protocol records matched committed bytes; original three native library hashes unchanged. Actual frozen authenticate() rejected pending24515 with the expected uniquely-terminal-successful guard before output creation.",
+    "job": {"job_id": "24517", "last_observed_state": "PENDING", "dependency": "afterany:24516", "cpus": 1, "memory_allocation": "16G", "wall_limit": "02:00:00", "log": "benchmarks/results/projection_followup_inputs_v1_20261019-24517.out", "receipt": "benchmarks/results/projection_followup_inputs_v1_20261019/prepared_inputs.json"},
+    "command": "From frozen98e05ee6 source: env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMBA_NUM_THREADS=1 PYTHONHASHSEED=0 /home/bizon/anaconda3/bin/python -m benchmark_tools.plan_projection_followup --repo <primary repo> --driver <frozen source> --output <primary repo>/benchmarks/results/projection_followup_inputs_v1_20261019",
+    "scheduler_verification": "scontrol confirms original frozen working directory, pending afterany24516, oneCPU/16G/two hours and zero restarts. This input-only job cannot submit inference; afterany scheduling never waives successful original parent/reader admission."
+  },
+  "remaining": "Monitor original science24514/readers24515/24516/input preparation24517 without duplication. Inspect complete actual pilot admission and resulting original eligibility before implementing/finalizing transfer execution and independent full-vector validation. No extra dataset inference before required code/tests/freeze and original gates. Complete remaining confirmation/recommendation/table/remote audit requirements before goal closure.",
   "defaults_promoted": false,
   "goal_completed": false
 }
