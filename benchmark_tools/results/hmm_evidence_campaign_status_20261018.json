@@ -392,17 +392,20 @@
     "implementation": "benchmark_tools/plan_projection_followup.py --campaign stockholm_annotation",
     "protocol": "benchmark_tools/hmm_stockholm_projection_followup_20261019.json",
     "milestone": "benchmark_tools/results/stockholm_projection_followup_plan_milestone_20261019.json",
-    "state": "explicit_new_input_planner_tested1199_awaiting_push_freeze",
+    "state": "explicit_new_input_planner_tested1199_pushed_frozen01724598_preparation24521_pending",
+    "runner_commit": "017245981e62d6ca4955ba6acf08387f541ed9da",
+    "source": "benchmarks/work/stockholm_projection_followup_plan_v1_20261019",
     "scientific_revision": "8f0cd5605842e470e64f40c31bc608c37945b8b3",
     "pilot_launch": "8731d0730fc38c1cdedcb81eef269aecf653afd4",
     "reader_submission_launch": "17706a85e78105512fd957419e607a24d1cbd09d",
-    "job": {"submitted": false, "planned_cpus": 1, "planned_memory": "16G", "planned_wall_limit": "02:00:00"},
-    "scope": "Read-only new preparation binding; default old planner and all frozen failed sources/jobs untouched. Actual launch probe binds24519/24520 then correctly rejects pending reader. Original candidate/control/inactivity gates unchanged. No transfer inference or accuracy admission; explicitly rebound execution driver/full-vector reader still required."
+    "job": {"submitted": true, "job_id": "24521", "last_observed_state": "PENDING", "dependency": "afterany:24520", "cpus": 1, "memory_allocation": "16G", "wall_limit": "02:00:00", "log": "benchmarks/results/stockholm_projection_followup_inputs_v1_20261019-24521.out", "receipt": "benchmarks/results/stockholm_projection_followup_inputs_v1_20261019/prepared_inputs.json"},
+    "verification": "Exact01724598 remote revision independently verified before freeze. All1232 frozen source/protocol records match committed bytes, native libraries unchanged. Actual frozen prepare() correctly rejects pending24520 before output creation; scontrol confirms correct frozen working directory/resources/dependency and zero restarts.",
+    "scope": "Read-only new preparation binding; default old planner and all frozen failed sources/jobs untouched. Original candidate/control/inactivity gates unchanged. No transfer inference or accuracy admission; explicitly rebound execution driver/full-vector reader still required."
   },
   "remaining": [
     "Completed weighting/local source-bound evidence and comparison integrated after464691 unique-record readback; retain mixed weighting candidates without default promotion and stop fixed neutral local branch. Original HMMER24493/reader24498/collator24501 failures preserved; prepare a new recovery/report namespace rather than retargeting old immutable bindings.",
     "Extend only advancing arms to corrected QfO and Three Kingdoms; retain all eight endpoint slots and denominator/resource diagnostics, including explicit NA for stopped branches.",
-    "Monitor new original science24519 and separately frozen reader24520 without duplication; exact8731d073 Stockholm launch/plan/source binding verified. Original24514-24517 remain terminal FAILED1:0, not negative HMMER accuracy. After complete successful new panel/24-contrast uncertainty/original gates, create explicitly new planner/driver/full-vector reader bindings and fresh QfO/TK transfer namespaces. Preserve failed old7f82be69/a884d9c0 and98e05ee6/80974fba/f491275c orchestration rather than retargeting jobs or silently changing prerequisites; never admit partial producer scores.",
+    "Monitor new original science24519, separately frozen reader24520 and read-only preparation24521 without duplication. Exact8731d073 Stockholm launch/plan/source and17706a85 reader submission bind the tested1199/pushed/frozen01724598 planner. Original24514-24517 remain terminal FAILED1:0, not negative HMMER accuracy. After complete successful panel/24-contrast uncertainty/original gates, use explicitly new execution driver/full-vector reader bindings and fresh QfO/TK namespaces. Preserve failed old7f82be69/a884d9c0 and98e05ee6/80974fba/f491275c orchestration rather than retargeting jobs or silently changing prerequisites; never admit partial producer scores.",
     "Evaluate justified combinations, seek post-freeze confirmation if available, update the full comparator table and final recommendation, and verify all intended milestones committed/pushed."
   ],
   "defaults_promoted": false,

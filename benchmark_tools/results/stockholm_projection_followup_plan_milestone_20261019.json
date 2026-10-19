@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "explicit_stockholm_input_planner_tested1199_awaiting_push_freeze",
+  "status": "explicit_stockholm_input_planner_tested1199_pushed_frozen_preparation24521_pending",
   "parent_revision": "17706a85e78105512fd957419e607a24d1cbd09d",
   "implementation": "benchmark_tools/plan_projection_followup.py",
   "protocol": "benchmark_tools/hmm_stockholm_projection_followup_20261019.json",
@@ -27,7 +27,17 @@
   },
   "actual_readiness_probe": {"science_job": "24519", "reader_job": "24520", "reader_observed_state": "PENDING", "result": "correctly_not_ready", "guard": "Follow-up prerequisite job is not uniquely terminal successful", "scope": "Read-only launch/authenticate against real immutable Git snapshots and current scheduler binds correct new jobs, then rejects pending reader before creating output or preparing datasets. Expected readiness guard, not a failed biological measurement."},
   "preservation": {"sample_status_sha256": "5a72884464c7a52298571745329d080e86722b69658902b096d4f10c4574d0a7", "sample_diff_sha256": "91643349c94c9b543fdbb3f33297c5486b8eac916fc5b86e397bdfc07776bcca", "native_libraries": "All three original library hashes unchanged; no rebuild. Live24519/24520 and unrelated analyses untouched."},
-  "remaining": "Push/freeze this tested planner, verify actual frozen committed inventory and pending-parent guard, then queue only read-only input preparation after24520. New explicit transfer execution and full-vector reader bindings must be tested/pushed/frozen before inference. Actual successful panel, selection, eight-endpoint transfer, justified combinations, candidate freeze/confirmation limits and final recommendation/table/remote audit remain required.",
+  "frozen_preparation": {
+    "revision": "017245981e62d6ca4955ba6acf08387f541ed9da",
+    "source": "benchmarks/work/stockholm_projection_followup_plan_v1_20261019",
+    "push": "git push origin main succeeded and git ls-remote independently matched exact01724598 before freezing/submission",
+    "verification": "All1232 frozen source/protocol records match committed bytes; original three CPU libraries copied without rebuilding and hashes unchanged. Actual frozen prepare() binds new immutable launches and rejects pending24520 with the expected uniquely-terminal-successful guard before output creation.",
+    "job": {"submitted": true, "job_id": "24521", "last_observed_state": "PENDING", "dependency": "afterany:24520", "cpus": 1, "memory_allocation": "16G", "wall_limit": "02:00:00", "log": "benchmarks/results/stockholm_projection_followup_inputs_v1_20261019-24521.out", "receipt": "benchmarks/results/stockholm_projection_followup_inputs_v1_20261019/prepared_inputs.json"},
+    "command": ["/home/bizon/anaconda3/bin/python", "-m", "benchmark_tools.plan_projection_followup", "--campaign", "stockholm_annotation", "--repo", "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm", "--driver", "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/stockholm_projection_followup_plan_v1_20261019", "--output", "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/stockholm_projection_followup_inputs_v1_20261019"],
+    "environment": {"CUDA_VISIBLE_DEVICES": "", "OMP_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1", "NUMBA_NUM_THREADS": "1", "PYTHONHASHSEED": "0"},
+    "scheduler_verification": "scontrol confirms pending afterany24520, exact frozen working directory,1CPU16G/two hours and zero restarts. Science24519 RUNNING and reader24520 PENDING reverified before submission; no duplicate preparation name was present. afterany never waives terminal-success/source/content requirements. No QfO/TK inference submitted."
+  },
+  "remaining": "Monitor original new science24519/reader24520/preparation24521 without duplication. Create explicit new transfer execution and full-vector reader bindings, tested/pushed/frozen before inference; old failed-pilot-bound drivers/readers must not run unchanged against new data. Actual successful panel, selection, eight-endpoint transfer, justified combinations, candidate freeze/confirmation limits and final recommendation/table/remote audit remain required.",
   "defaults_promoted": false,
   "goal_completed": false
 }
