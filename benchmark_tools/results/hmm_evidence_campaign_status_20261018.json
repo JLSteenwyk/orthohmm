@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "active_weighting_full_vector_and_local_readers_complete_hmmer_projection_recovery_required",
+  "status": "active_five_arm_projection_recovery_running_original_failed_namespaces_preserved",
   "objective": "/home/bizon/.codex/attachments/be402858-3414-45ba-9a1b-323a1b394ab1/pasted-text-1.txt",
   "protocol": "benchmark_tools/hmm_evidence_campaign_20261018.json",
   "protocol_commit": "d2ccfd44",
@@ -313,7 +313,21 @@
     "preparation": {"job_id": "24512", "state": "COMPLETED", "exit_code": "0:0", "elapsed": "00:00:24", "cpus": 1, "memory_allocation": "16G", "wall_limit": "00:20:00", "log": {"path": "benchmarks/results/projection_recovery_prepare_v1_20261019-24512.out", "bytes": 15, "sha256": "4a2e93d237e7016e575c7d83e18bbaf01ad7a821d9f02c7cfe2dea04767f2c8e"}, "scope": "Read-only source/input/tool/runtime fingerprints plus tiny profile runtime check. Original three native libraries copied without rebuilding and hashes rechecked. Source HEAD, five arm/policy mappings,16CPU native/graph commands, inferred species-tree settings and fresh plan-only namespace separately verified. No biological pilot or scoring."},
     "preparation_command": "From frozen scientific source: env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMBA_NUM_THREADS=1 PYTHONHASHSEED=0 /home/bizon/anaconda3/bin/python -m benchmark_tools.run_profile_weighting_pilot prepare --experiment projection_recovery --repo <primary repo> --source <scientific source> --output <primary repo>/benchmarks/results/projection_recovery_pilot_v1_20261019",
     "arms": ["legacy_off", "projection_off", "projection_builtin_reselect", "projection_hmmer_score_only", "projection_hmmer_reselect"],
-    "inference": {"submitted": false, "reason": "Complete/test/freeze independent five-arm reader before biological submission; bind new immutable launch revision instead of retargeting failed originals.", "planned_cpus": 16, "planned_memory": "128G", "planned_wall_limit": "1-00:00:00"},
+    "independent_reader": {"runner_commit": "84ac3933a759e8cf30251c173b74b848b6512961", "runner_push": "git push origin main succeeded; git ls-remote verified exact origin/main before reader freeze and science submission", "scientific_reader_source": "benchmarks/work/projection_recovery_readback_v1_20261019", "milestone": "benchmark_tools/results/projection_recovery_reader_milestone_20261019.json", "actual_inventory_verification": "Frozen reader reporter_inventory verified1228 records against committed bytes before biological submission; three original native library hashes unchanged."},
+    "inference": {"submitted": true, "job_id": "24514", "last_observed_state": "RUNNING", "restarts": 0, "planned_cpus": 16, "planned_memory": "128G", "planned_wall_limit": "1-00:00:00", "node": "bizon", "log": "benchmarks/results/projection_recovery_pilot_v1_20261019-24514.out", "results": "benchmarks/results/projection_recovery_pilot_v1_20261019/results.json", "dependency": null, "status_scope": "scontrol confirms actual first scientific process, original frozen a6a56ac5 script/plan,16CPU128G/one-day allocation and zero restarts. Preparation24512 remains terminal successful in accounting; no other scientific campaign job running. Unrelated jobs untouched."},
+    "submission": "sbatch --parsable --job-name=ohmm-projection-ob --output=<primary repo>/benchmarks/results/projection_recovery_pilot_v1_20261019-%j.out <scientific source>/benchmark_tools/run_profile_weighting_pilot.slurm <scientific source> <execution plan>",
+    "submission_history": "Initial afterok:24512 submission rejected with 'Job dependency problem' and no returned job handle. sacct reverified preparation24512 COMPLETED0:0,1CPU16G/24s; scontrol no longer retained24512, and immediate squeue contained no projection job. Rechecked unchanged plan checksum. Submitted once without expired dependency, yielding24514 RUNNING with zero restarts. No live process restarted, original failed prefix reused or scientific setting changed.",
+    "accuracy_result_admitted": false,
+    "defaults_promoted": false,
+    "goal_completed": false
+  },
+  "projection_recovery_postrun_readback": {
+    "runner_commit": "84ac3933a759e8cf30251c173b74b848b6512961",
+    "scientific_reader_source": "benchmarks/work/projection_recovery_readback_v1_20261019",
+    "protocol": "benchmark_tools/hmm_projection_recovery_readback_20261019.json",
+    "milestone": "benchmark_tools/results/projection_recovery_reader_milestone_20261019.json",
+    "job": {"submitted": false, "planned_dependency": "afterany:24514", "planned_cpus": 1, "planned_memory": "16G", "planned_wall_limit": "02:00:00", "summary": "benchmarks/results/projection_recovery_readback_v1_20261019/summary.json"},
+    "scope": "Reader implemented/tested/pushed/frozen and inventory-verified before science launch. Bind this launch commit explicitly when submitting reader. Runtime requires original parent uniquely terminal successful and complete five-arm content/native/score/control/uncertainty validation; failed/partial biology cannot enter accuracy admission.",
     "accuracy_result_admitted": false,
     "defaults_promoted": false,
     "goal_completed": false
@@ -322,7 +336,7 @@
   "remaining": [
     "Completed weighting/local source-bound evidence and comparison integrated after464691 unique-record readback; retain mixed weighting candidates without default promotion and stop fixed neutral local branch. Original HMMER24493/reader24498/collator24501 failures preserved; prepare a new recovery/report namespace rather than retargeting old immutable bindings.",
     "Extend only advancing arms to corrected QfO and Three Kingdoms; retain all eight endpoint slots and denominator/resource diagnostics, including explicit NA for stopped branches.",
-    "HMMER projection propagation, controlled five-arm runner and independent reader are implemented/tested through complete small native inference/content admission and920 selected tests across27 modules. Reader milestone: benchmark_tools/results/projection_recovery_reader_milestone_20261019.json. Commit/push/freeze reader, verify actual source inventory, then submit prepared a6a56ac5 science and bind its new job plus frozen reader to a new immutable launch. Preserve old failed bindings. Separate repair/decision/backend effects and original gates before unchanged extensions; tests are not biological accuracy.",
+    "Monitor original projection-recovery science24514 without duplication; frozen a6a56ac5 source and original prepared plan unchanged. Reader84ac3933 is tested/pushed/frozen and actual1228-record inventory verified. Commit this new immutable science/reader launch and submit separate reader afterany24514; its runtime success/content gate remains strict. Verify actual full biology, repair/decision/backend contrasts and original gates before unchanged extensions. Original failed HMMER/reader/collator bindings remain preserved;920 tests are not biological accuracy.",
     "Evaluate justified combinations, seek post-freeze confirmation if available, update the full comparator table and final recommendation, and verify all intended milestones committed/pushed."
   ],
   "defaults_promoted": false,
