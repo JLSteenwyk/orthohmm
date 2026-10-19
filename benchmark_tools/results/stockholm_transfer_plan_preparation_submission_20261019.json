@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "job_id": "24522",
+  "source_revision": "abe393ded90143880378136bf60691581ed24061",
+  "argv": [
+    "sbatch",
+    "--parsable",
+    "--job-name=ohmm-stockholm-plans",
+    "--partition=gpu",
+    "--nodelist=bizon",
+    "--cpus-per-task=1",
+    "--mem=16G",
+    "--time=02:00:00",
+    "--dependency=afterok:24521",
+    "--chdir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/stockholm_projection_followup_driver_v1_20261019",
+    "--output=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/stockholm_projection_followup_prepare_v1_20261019-%j.out",
+    "--wrap=exec env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMBA_NUM_THREADS=1 PYTHONHASHSEED=0 /home/bizon/anaconda3/bin/python -c 'import pathlib,subprocess,sys\nrepo=pathlib.Path(\"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\")\ndriver=pathlib.Path(\"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/stockholm_projection_followup_driver_v1_20261019\")\nfor dataset,slug in ((\"QfO\",\"qfo\"),(\"ThreeKingdoms\",\"three_kingdoms\")):\n    subprocess.run([sys.executable,str(driver/\"benchmark_tools/run_projection_followup.py\"),\"prepare\",\"--campaign\",\"stockholm_annotation\",\"--repo\",str(repo),\"--driver\",str(driver),\"--output\",str(repo/\"benchmarks/results\"/(\"stockholm_projection_followup_\"+slug+\"_v1_20261019\")),\"--dataset\",dataset],check=True)\n'"
+  ],
+  "python_dispatch": "import pathlib,subprocess,sys\nrepo=pathlib.Path(\"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\")\ndriver=pathlib.Path(\"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/stockholm_projection_followup_driver_v1_20261019\")\nfor dataset,slug in ((\"QfO\",\"qfo\"),(\"ThreeKingdoms\",\"three_kingdoms\")):\n    subprocess.run([sys.executable,str(driver/\"benchmark_tools/run_projection_followup.py\"),\"prepare\",\"--campaign\",\"stockholm_annotation\",\"--repo\",str(repo),\"--driver\",str(driver),\"--output\",str(repo/\"benchmarks/results\"/(\"stockholm_projection_followup_\"+slug+\"_v1_20261019\")),\"--dataset\",dataset],check=True)\n",
+  "scope": "Exact submitted read-only preparation command. Two separate standalone frozen-driver processes; no biological inference or scoring. Child drivers enforce successful original pilot/preparation, source/runtime/data inventory and original selection."
+}

@@ -449,10 +449,23 @@
     "unique_content_records_checked": 1925,
     "scope": "Actual frozen reader verifies source/annotation/raw HMMER/decision evidence and exact repaired graph/candidate identity. Two query decisions conservatively preserved due absent source-member score, not failed scoring or zero activation. Measurement mode changes no anchors. Native equivalence, full five-arm accuracy/uncertainty, independent24520 admission and original transfer selection remain required. No scientific changes, benchmark-score claim or goal closure."
   },
+  "stockholm_five_arm_admission": {
+    "milestone": "benchmark_tools/results/stockholm_pilot_admission_20261019.json",
+    "state": "science24519_reader24520_preparation24521_completed_only_projection_off_advances_plans24522_running",
+    "scientific_revision": "8f0cd5605842e470e64f40c31bc608c37945b8b3",
+    "jobs": {"24519": "COMPLETED0:0,02:06:50,16CPU128G", "24520": "COMPLETED0:0,00:03:15,1CPU16G", "24521": "COMPLETED0:0,00:03:15,1CPU16G"},
+    "readback": {"path": "benchmarks/results/stockholm_annotation_recovery_readback_v1_20261019/summary.json", "bytes": 20264972, "sha256": "c8a260b7d71e12d4fb7b12a6c6a952a665551ad36975dfff7eafeddc65c346bc"},
+    "advancing_candidates": ["projection_off"],
+    "stopped_candidates": ["projection_builtin_reselect", "projection_hmmer_reselect"],
+    "execution_arms": ["legacy_off", "projection_off"],
+    "applicability_candidates": [],
+    "comparison": "benchmark_tools/results/hmm_campaign_comparison_stockholm_pilot_20261019.tsv",
+    "scope": "Authoritative completion supersedes historical RUNNING/PENDING/accuracy-unadmitted launch observations above; immutable original launches and all failed sources remain unchanged. Complete source/native/score/measurement/24-contrast readback now admitted. Only repair passes tiny development point gain with intervals including zero. Stop both fixed reselection policies for recall loss; no retuning, inactivity relabeling or QfO/TK extension of failed candidates. New driver/reader already tested/pushed/frozen; plan preparation24522 is read-only. Full repair vectors, justified combinations and final recommendation/confirmation limits/remote audit remain required."
+  },
   "remaining": [
     "Completed weighting/local source-bound evidence and comparison integrated after464691 unique-record readback; retain mixed weighting candidates without default promotion and stop fixed neutral local branch. Original HMMER24493/reader24498/collator24501 failures preserved; prepare a new recovery/report namespace rather than retargeting old immutable bindings.",
     "Extend only advancing arms to corrected QfO and Three Kingdoms; retain all eight endpoint slots and denominator/resource diagnostics, including explicit NA for stopped branches.",
-    "Monitor new original science24519, separately frozen reader24520 and read-only preparation24521 without duplication. Exact8731d073 Stockholm launch/plan/source and17706a85 reader submission bind new planner01724598. New driverabe393de and independent full-vector reader84074667 are tested1286/pushed/frozen; actual source inventories and pending/unsubmitted guards pass. Only complete successful panel/24-contrast uncertainty/preparation/original eligibility can authorize sequential fresh QfO/TK namespaces and a new immutable two-job launch. Original24514-24517 remain terminal FAILED1:0, not negative HMMER accuracy. Preserve failed old7f82be69/a884d9c0 and98e05ee6/80974fba/f491275c orchestration; never retarget old jobs, silently change prerequisites or admit partial producer scores.",
+    "New complete science24519, independent reader24520 and input preparation24521 are COMPLETED0:0. Only projection_off passes original pilot gate; both active builtin/HMMER reselection policies fail recall/F1 and stop without retuning or applicability fallback. Monitor read-only24522, verify both fresh plans, then run original legacy/projection arms sequentially on corrected QfO and Three Kingdoms. New driverabe393de/reader84074667 tested/pushed/frozen; bind actual two jobs/plans and reader in a new immutable launch. Preserve all old failed7f82be69/a884d9c0 and98e05ee6/80974fba/f491275c sources/jobs, never retarget or loosen gates. Repair's tiny development gain is not significance, generalizability or default promotion.",
     "Evaluate justified combinations, seek post-freeze confirmation if available, update the full comparator table and final recommendation, and verify all intended milestones committed/pushed."
   ],
   "defaults_promoted": false,

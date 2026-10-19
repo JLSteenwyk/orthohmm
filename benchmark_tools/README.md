@@ -22,6 +22,12 @@ neither is a default recommendation. Local rescue leaves all 70 reference-family
 scores unchanged and stops at its original gate. The failed original HMMER panel
 is explicitly unadmitted, not a negative accuracy result. This interim table does
 not replace the required controlled recovery or final campaign report.
+The [admitted Stockholm pilot comparison](results/hmm_campaign_comparison_stockholm_pilot_20261019.tsv)
+and [admission record](results/stockholm_pilot_admission_20261019.json) add the
+complete five-arm recovery without overwriting earlier results. Only projection
+repair passes the original pilot gate; both reselection policies stop for recall
+loss without retuning. The repair gain has uncertainty spanning zero and requires
+unchanged full-vector follow-up, not default promotion. Missing endpoints stay NA.
 
 `report_completed_hmm_resources.py --repo <repo> --output <fresh directory>`
 exports phase-specific costs from the immutable completed weighting/local
