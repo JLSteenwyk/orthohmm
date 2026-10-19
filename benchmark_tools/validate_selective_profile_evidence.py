@@ -7,7 +7,7 @@ from pathlib import Path
 from Bio import SeqIO
 
 from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
-from orthohmm.search.selective_hmmer import read_hmmer_tables
+from orthohmm.search.selective_hmmer import read_hmmer_tables, validate_annotated_alignment
 from orthohmm.search.selective_profiles import decide_query, query_list_digest
 
 
@@ -123,6 +123,11 @@ def validate(graph, mode, folder, gene_names, expected_tools=None):
                     or data["parameters"]["sequence_weighting"] != "none"
                     or data["parameters"]["effective_sequence_number"] != len(groups[family])):
                 raise ValueError("HMMER construction/search controls differ from frozen protocol")
+            annotation = validate_annotated_alignment(directory / "source.sto", directory / "hmmer_source.sto",
+                data["token_to_gene"], data["members"], data["model_length"])
+            if "annotated_alignment_validation" in data and data["annotated_alignment_validation"] != annotation:
+                raise ValueError("Annotated HMMER source preservation receipt differs")
+            checked += [record(directory / name) for name in ("source.sto", "hmmer_source.sto")]
             targets = {sequence.id: len(sequence) for sequence in SeqIO.parse(path.parent / "targets.faa", "fasta")}
             parsed = read_hmmer_tables(path.parent / "sequence.tbl", path.parent / "domain.tbl",
                 data["token_to_gene"], targets, data["model_length"])

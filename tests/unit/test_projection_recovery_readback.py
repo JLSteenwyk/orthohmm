@@ -101,6 +101,25 @@ def test_launch_requires_a_full_immutable_commit_before_git_lookup(tmp_path, mon
         reader.launch(tmp_path, revision)
 
 
+def test_stockholm_recovery_has_explicit_separate_launch_entry_without_retargeting_original(tmp_path, monkeypatch):
+    entry = {"execution_plan": {"path": "new/plan.json", "bytes": 3, "sha256": "new"},
+        "arms": list(reader.ARMS), "inference": {"submitted": True, "job_id": "24600", "planned_cpus": 16,
+        "planned_memory": "128G", "planned_wall_limit": "1-00:00:00"},
+        "independent_reader": {"runner_commit": "b" * 40, "scientific_reader_source": "reader"}}
+    original = deepcopy(entry)
+    original["inference"]["job_id"] = "24514"
+    payload = {"projection_recovery_pilot": original, "stockholm_annotation_recovery_pilot": entry}
+    monkeypatch.setattr(reader.subprocess, "check_output", lambda command, **kwargs:
+        "commit" if command[1] == "cat-file" else json.dumps(payload).encode())
+    observed, pin, binding = reader.launch(tmp_path, "f" * 40, entry_key="stockholm_annotation_recovery_pilot")
+    assert observed["inference"]["job_id"] == "24600" and pin["sha256"] == "new"
+    assert binding["entry_key"] == "stockholm_annotation_recovery_pilot"
+    old, _, old_binding = reader.launch(tmp_path, "f" * 40)
+    assert old["inference"]["job_id"] == "24514" and "entry_key" not in old_binding
+    with pytest.raises(ValueError, match="Unknown explicit"):
+        reader.launch(tmp_path, "f" * 40, entry_key="other")
+
+
 @pytest.mark.parametrize("change", [None, "unsubmitted", "job", "arms", "cpu", "memory", "wall", "blob",
                                     "reader_revision", "reader_absolute", "reader_escape"])
 def test_original_launch_snapshot_and_resources_are_bound(tmp_path, monkeypatch, change):

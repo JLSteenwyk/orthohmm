@@ -172,6 +172,41 @@ def read_hmmer_tables(sequence_table, domain_table, token_to_gene, target_length
             for token, gene in token_to_gene.items()}
 
 
+def validate_annotated_alignment(source_path, annotated_path, token_to_gene, members, model_length, *, expected_residues=None):
+    """Check sequence ownership across HMMER's Stockholm re-save conventions.
+
+    HMMER may mark terminal missing data with '~', rearrange insert columns,
+    and remove empty insert columns. Residues (including X) must remain exact.
+    """
+    if (len(set(members)) != len(members) or len(set(token_to_gene.values())) != len(token_to_gene)
+            or not set(members) <= set(token_to_gene.values())
+            or type(model_length) is not int or model_length <= 0):
+        raise ValueError("Invalid annotated HMMER source ownership or model length")
+    expected = {token for token, gene in token_to_gene.items() if gene in set(members)}
+    source = AlignIO.read(source_path, "stockholm")
+    annotated = AlignIO.read(annotated_path, "stockholm")
+    rows = []
+    for alignment in (source, annotated):
+        if len(alignment) != len(expected) or {row.id for row in alignment} != expected:
+            raise ValueError("HMMER annotated source alignment changed sequence ownership")
+        rf = alignment.column_annotations.get("reference_annotation", "").lower()
+        if len(rf) != alignment.get_alignment_length() or set(rf) - set("x.") or rf.count("x") != model_length:
+            raise ValueError("HMMER annotated source match-column count changed")
+        values = {}
+        for row in alignment:
+            sequence = str(row.seq).upper()
+            if set(sequence) - set(ALPHABET + "X-._~"):
+                raise ValueError("Unexpected annotated HMMER source residue symbol")
+            values[row.id] = sequence.translate(str.maketrans("", "", "-._~"))
+        rows.append(values)
+    if rows[0] != rows[1] or expected_residues is not None and rows[0] != expected_residues:
+        raise ValueError("HMMER annotated source alignment changed sequence ownership")
+    return {"members": len(members), "source_columns": source.get_alignment_length(),
+        "annotated_columns": annotated.get_alignment_length(), "match_columns": model_length,
+        "missing_data_symbols": sum(str(row.seq).count("~") for row in annotated),
+        "all_source_residues_and_owners_preserved": True}
+
+
 def score_family_hmmer(profile, member_sequences, query_sequences, full_database_genes,
                       output_directory, *, hmmbuild="hmmbuild", hmmsearch="hmmsearch"):
     """Measure one original family and its selected query targets with HMMER.
@@ -267,11 +302,9 @@ def score_family_hmmer(profile, member_sequences, query_sequences, full_database
         result["commands"].update(build=build, search=search)
         _atomic_write(receipt, json.dumps(result, indent=2, sort_keys=True, allow_nan=False) + "\n")
         result["build_execution"] = _run_tool(build, directory, "build", environment, 600)
-        annotated = AlignIO.read(directory / "hmmer_source.sto", "stockholm")
-        if (len(annotated) != len(members) or {record.id for record in annotated} != {gene_to_token[gene] for gene in members}
-                or any(str(record.seq).replace("-", "").replace(".", "").upper() != aligned_residues[token_to_gene[record.id]]
-                       for record in annotated)):
-            raise ValueError("HMMER annotated source alignment changed sequence ownership")
+        result["annotated_alignment_validation"] = validate_annotated_alignment(
+            directory / "source.sto", directory / "hmmer_source.sto", token_to_gene, members, int(profile.length),
+            expected_residues={gene_to_token[gene]: aligned_residues[gene] for gene in members})
         header = {}
         model_text = (directory / "profile.hmm").read_text()
         for line in model_text.splitlines():

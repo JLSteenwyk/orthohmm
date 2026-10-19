@@ -134,6 +134,9 @@ def prepare(repo, source, output, experiment="weighting"):
     inputs = [record(protocol), *case["evidence"], *case["fastas"], case["candidate"],
               case["constraints"], *case["golden"].values(), *scoring_records(repo, "OrthoBench"),
               *[record(path) for path in sorted(Path(case["checkpoint"]).iterdir()) if path.is_file()]]
+    annotation_protocol = source / "benchmark_tools/hmm_stockholm_annotation_recovery_20261019.json"
+    if experiment == "projection_recovery" and annotation_protocol.is_file():
+        inputs.append(record(annotation_protocol))
     phylo = Path(case["baseline_output"]) / "orthohmm_phylogeny"
     for directory in ("alignments", "gene_trees", "checkpoints", "species_tree_inference"):
         inputs.extend(record(path) for path in sorted((phylo / directory).rglob("*")) if path.is_file())

@@ -48,6 +48,17 @@ revision to the separately frozen reader. The original failed HMMER/collator
 bindings are never redirected. This is not a validated accuracy improvement or
 a new production recommendation.
 
+The [Stockholm annotation recovery](hmm_stockholm_annotation_recovery_20261019.json)
+addresses a separate post-build validation error: HMMER's annotated re-save can
+represent fragment-end missing data with `~` and remove empty insertion columns.
+Validation now preserves exact source ownership, every residue including `X`,
+and model match-column count while interpreting documented nonresidue symbols.
+The independent reader repeats this check from raw alignments. Construction,
+scoring, fragment settings and original advancement gates remain unchanged.
+Use a fresh complete five-arm pilot and explicit reader
+`--launch-entry stockholm_annotation_recovery_pilot`; do not retarget or admit
+the failed original recovery or its dependent jobs.
+
 | Workflow | Execution | Separate result validation |
 | --- | --- | --- |
 | Weighted-profile and alignment-guard OrthoBench pilots | `run_profile_weighting_pilot.py` | `report_profile_evidence_pilot.py` |

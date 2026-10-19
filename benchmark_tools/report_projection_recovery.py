@@ -27,13 +27,15 @@ UNIVERSE = (251378, 12)
 ARMS = experiment_settings("projection_recovery")[0]
 
 
-def launch(repo, revision):
+def launch(repo, revision, *, entry_key="projection_recovery_pilot"):
     if not isinstance(revision, str) or re.fullmatch(r"[0-9a-f]{40}", revision) is None:
         raise ValueError("Require an explicit immutable full launch revision")
     if subprocess.check_output(["git", "cat-file", "-t", revision], cwd=repo, text=True).strip() != "commit":
         raise ValueError("Launch revision is not a commit")
     blob = subprocess.check_output(["git", "show", revision + ":" + LEDGER], cwd=repo)
-    entry = json.loads(blob)["projection_recovery_pilot"]
+    if entry_key not in ("projection_recovery_pilot", "stockholm_annotation_recovery_pilot"):
+        raise ValueError("Unknown explicit recovery launch entry")
+    entry = json.loads(blob)[entry_key]
     inference = entry["inference"]
     if (inference.get("submitted") is not True or not str(inference.get("job_id", "")).isdigit()
             or tuple(entry["arms"]) != ARMS or inference.get("planned_cpus") != 16
@@ -47,8 +49,9 @@ def launch(repo, revision):
         raise ValueError("Recovery launch must bind the separately frozen reader revision and repository path")
     pin = {key: entry["execution_plan"][key] for key in ("path", "bytes", "sha256")}
     pin["path"] = str((repo / pin["path"]).resolve())
-    return entry, pin, {"revision": revision, "path": LEDGER,
-                        "git_blob_sha256": hashlib.sha256(blob).hexdigest()}
+    binding = {"revision": revision, "path": LEDGER, "git_blob_sha256": hashlib.sha256(blob).hexdigest()}
+    if entry_key != "projection_recovery_pilot": binding["entry_key"] = entry_key
+    return entry, pin, binding
 
 
 def point(cell):
@@ -157,10 +160,11 @@ def next_actions(cells):
     return result
 
 
-def run(repo, revision, output):
+def run(repo, revision, output, *, entry_key="projection_recovery_pilot"):
     if output.exists():
         raise FileExistsError("Preserve every recovery readback attempt")
-    entry, plan_pin, binding = launch(repo, revision)
+    entry, plan_pin, binding = (launch(repo, revision) if entry_key == "projection_recovery_pilot"
+                                else launch(repo, revision, entry_key=entry_key))
     check(plan_pin)
     plan = json.loads(Path(plan_pin["path"]).read_text())
     root, source = Path(plan["output"]), Path(plan["source_root"])
@@ -232,5 +236,7 @@ if __name__ == "__main__":
     parser.add_argument("--repo", required=True, type=Path)
     parser.add_argument("--launch-revision", required=True)
     parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument("--launch-entry", choices=("projection_recovery_pilot", "stockholm_annotation_recovery_pilot"),
+                        default="projection_recovery_pilot")
     args = parser.parse_args()
-    print(run(args.repo.resolve(), args.launch_revision, args.output.resolve())["status"])
+    print(run(args.repo.resolve(), args.launch_revision, args.output.resolve(), entry_key=args.launch_entry)["status"])
