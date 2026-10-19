@@ -23,6 +23,14 @@ scores unchanged and stops at its original gate. The failed original HMMER panel
 is explicitly unadmitted, not a negative accuracy result. This interim table does
 not replace the required controlled recovery or final campaign report.
 
+`report_completed_hmm_resources.py --repo <repo> --output <fresh directory>`
+exports phase-specific costs from the immutable completed weighting/local
+admission. It rehashes and reparses saved GNU-time/log receipts, keeps producer
+candidate/arm metadata explicitly distinct, and never adds arm totals to their
+components or sums RSS values. Local final-pilot native time excludes earlier
+nomination and joint-tree preparation. These cached shared-host costs are not
+fresh end-to-end tool runtimes or a timing leaderboard; missing phases stay NA.
+
 The first selective HMMER biological pilot failed a source-residue integrity
 check, rather than producing an admissible negative accuracy result. The
 [projection recovery protocol](hmm_projection_integrity_recovery_20261018.json)
