@@ -58,6 +58,7 @@ a new production recommendation.
 | Combined admitted results and explicit follow-up decisions | No new inference | `report_hmm_evidence_campaign.py` |
 | Separately bound recovery campaign comparison | No new inference | `report_hmm_recovery_campaign.py` |
 | Gated projection transfer input preparation | `plan_projection_followup.py` after independent pilot admission | Inputs only; execution driver/full-vector reader required before launch |
+| Fixed projection transfer execution | Standalone `run_projection_followup.py prepare`, then its frozen Slurm driver | Independent full-vector reader still required before biological submission |
 
 The [recovery report protocol](hmm_recovery_campaign_report_20261019.json)
 retains the original successful weighting/local reader bindings and separately
@@ -76,6 +77,17 @@ fallback, with matched construction/decision/measurement controls explicitly
 separated from advancement. A failed-gate arm can be required as a control but
 cannot thereby become an advancing candidate. If nothing qualifies, preparation
 records no follow-up rather than searching additional datasets for a pass.
+
+The projection execution driver reauthenticates the original successful
+preparation job and independently admitted pilot in a separate frozen-planner
+process. It reconstructs the complete original input/source/cache inventory,
+preserves the original scientific namespace, and enforces matched-control
+dependencies even when a control is also an advancing candidate. Measurement-only
+arms must reproduce repaired graph/candidate/native/tree products and reuse the
+exact repaired assessment with fresh score readback; QfO FAS is not resampled for
+this control. Preparation and execution preserve previous attempts and use short,
+distinct fresh scoring identifiers. This driver does not replace an independent
+post-run reader, authorize a new biological submission, or promote defaults.
 
 Use the ledger's immutable execution plans and frozen source revisions rather
 than rerunning these scripts with current modules or reusing an output folder.

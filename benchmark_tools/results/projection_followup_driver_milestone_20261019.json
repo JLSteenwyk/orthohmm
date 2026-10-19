@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "status": "fixed_projection_transfer_driver_tested_not_submitted_independent_transfer_reader_required",
+  "parent_revision": "ebff5d15ddd9a1ff83c43c38fd0f1b3a10708920",
+  "protocol": "benchmark_tools/hmm_projection_followup_20261019.json",
+  "implementation": ["benchmark_tools/run_projection_followup.py", "benchmark_tools/run_projection_followup.slurm"],
+  "tests": "tests/unit/test_projection_followup.py",
+  "scientific_revision_unchanged": "a6a56ac50ef7d89a2b70428b28914f8bcdce876d",
+  "input_preparer_revision_unchanged": "98e05ee6d4ce11fad138eb59f1fcd8fcce2a994e",
+  "scope": "Transfer orchestration only, not changed biological science, admitted new accuracy, production default promotion, or permission to bypass independent post-run validation. No transfer inference submitted.",
+  "contracts": [
+    "Execute standalone: only standard-library imports until the scientific namespace binds to original a6a56ac5. Actual subprocess integration checks all seven scientific helper origins against the retained immutable checkout; mixed current/original modules rejected.",
+    "Require original input-preparation24517 uniquely terminal successful on1CPU16G. Reauthenticate original science24514/reader24515 and fixed original eligibility in the frozen98e05ee6 planner subprocess. Reconstruct the complete original data/source/checkpoint/cache inventory and compare canonical structured evidence digests, not only a selection summary.",
+    "Bind every and only selected candidate plus required matched-control closure. Enforce explicit dependencies even for dual-role advancing controls. Failed canonical control blocks all dependents; failed repaired/builtin/measurement controls cannot be bypassed. Failed original pilot arms remain controls, not newly promoted candidates.",
+    "Preserve original five-arm subsequence and legacy/residue-preserving/off/builtin/HMMER flags. Use original fixed graph/native APIs, complete FASTA/checkpoint ownership, source/runtime/tool pins and unchanged libraries. Rehash inputs before each arm and afterward; retain explicit failed/blocked rows.",
+    "Measurement-only arm must reproduce repaired graph stages, candidate partition/constraints and all native products/rooted tree. Reuse exact repaired assessment and freshly read back its scores/details/vector, with pinned reuse receipt; do not rerun unseeded QfO FAS for this control. Distinct advancing/control inference arms use fresh short scoring IDs.",
+    "Preserve every existing output/assessment attempt, record exact commands/resources/activation/pair-confidence turnover, and keep candidate/control roles in producer results. Timings remain cached incremental/shared-host descriptions, not isolated fresh-pipeline measurements."
+  ],
+  "validation": {
+    "combined": {"path": "benchmark_tools/results/projection_followup_driver_combined_tests_20261019.xml", "bytes": 161079, "sha256": "336aaa72ed3b9a8606f56a6dfabb5bfc0e84e5418e2a0e54e012abc260935c86", "passed": 1043, "failures": 0, "errors": 0, "skipped": 0, "pytest_wall_seconds": 187.07},
+    "focused_final": {"path": "benchmark_tools/results/projection_followup_driver_tests_v4_20261019.xml", "bytes": 7980, "sha256": "108bda4c3b2d4a8da97d70f0c35fd2053df9fc16e6213064d4531640282f3e54", "passed": 49, "failures": 0, "errors": 0, "skipped": 0, "pytest_wall_seconds": 2.63},
+    "coverage": "30 overlapping modules; counts are not additive. New control-flow/scoring fixtures mock biological inference and reference scoring and do not establish accuracy. They exercise both datasets, all minimal control closures, failures, candidate-digest/graph/tree/assessment changes, full preparation/run wrappers, ownership/source/runtime/CUDA guards, committed-driver checks and real frozen-module binding. Final focused run additionally compiles the isolated authentication program. Existing real profile/native/HMMER tests remain in the combined selection.",
+    "history": [
+      {"path": "benchmark_tools/results/projection_followup_driver_tests_20261019.xml", "bytes": 64300, "sha256": "3d96a556402bb5167a42ac61ab267544452d5624bf78b274c8dd483296635f3d", "passed": 3, "failures": 26, "cause": "New reused fixture omitted required explicit defaults_promoted=false/goal_completed=false fields; corrected fixture, not a relaxed production guard or failed biological experiment."},
+      {"path": "benchmark_tools/results/projection_followup_driver_tests_v2_20261019.xml", "bytes": 4813, "sha256": "cf21e5fe863d6dc910cb81bae35c09b2bba5912adba87b1c237cb9a76b60d5cd", "passed": 29, "failures": 0},
+      {"path": "benchmark_tools/results/projection_followup_driver_tests_v3_20261019.xml", "bytes": 7980, "sha256": "7677b9331101e05c37946f0e540dae6ee0e2aa470b8ce7598871bf87ae315dfd", "passed": 49, "failures": 0}
+    ],
+    "history_storage": "Earlier focused XML retained outside Git and checksummed. Combined final XML committed; focused final reruns overlap and are not independent evidence.",
+    "other_checks": "bash -n accepts Slurm wrapper; AST parsing and scoped git diff --check pass. Sample status/diff hashes and all three native library hashes unchanged."
+  },
+  "live_pilot_observation": {
+    "job": "24514",
+    "state": "RUNNING",
+    "restarts": 0,
+    "allocation": "16CPU/128G/one day, original frozen a6a56ac5 script and execution plan",
+    "legacy_off_f1": 0.7410607351873405,
+    "projection_off_producer_f1": 0.7414241488273605,
+    "projection_off_producer_precision": 0.81859000737429,
+    "projection_off_producer_recall": 0.6775533630827973,
+    "producer_original_gate": {"eligible": true, "f1_delta": 0.0003634136400200161, "precision_delta": 0.0008854693561033411, "recall_delta": 0.0},
+    "graph_report": {"path": "benchmarks/results/projection_recovery_pilot_v1_20261019/projection_off/graph_metrics.json", "bytes": 6254, "sha256": "ee8c5cb4e69a302c0cb489ad3ec1efcd0f510dfabb7ddab77a8bcd43032c3b45"},
+    "scope": "Observation of completed producer arm only; builtin reselect now running. Separate complete-panel reader24515, comparison24516, uncertainty and original transfer selection remain pending. Do not substitute this provisional observation for admitted accuracy, automatic extension or generalizable improvement."
+  },
+  "remaining": "Commit/push/freeze verified driver. Continue original pilot/readers/input-preparation handles without duplication. Implement/test/freeze independently bound full-vector reader and inspect actual complete pilot eligibility before preparing/submitting sequential QfO then Three Kingdoms inference. Preserve original gates, failed/stopped branches, denominators, confirmation limitations and final recommendation/remote audit requirements.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}
