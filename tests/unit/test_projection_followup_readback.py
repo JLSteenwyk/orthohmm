@@ -120,6 +120,20 @@ def test_all_five_arms_are_independently_checked_with_exact_measurement_reuse(tm
     else: assert all(call[2] is None for call in calls)
 
 
+@pytest.mark.parametrize("campaign_name", ["projection", "stockholm_annotation"])
+@pytest.mark.parametrize("mixed_source", [False, True])
+def test_dataset_source_guard_uses_explicit_campaign_not_any_consistent_revision(tmp_path, monkeypatch, campaign_name, mixed_source):
+    plan, _, cells, _ = admitted_panel(tmp_path, monkeypatch)
+    for cell in cells: cell["source_revision"] = followup.configuration(campaign_name)["science"]
+    if mixed_source:
+        opposite = "stockholm_annotation" if campaign_name == "projection" else "projection"
+        cells[-1]["source_revision"] = followup.configuration(opposite)["science"]
+        with pytest.raises(ValueError, match="source-bound"):
+            reader.verify_dataset(cells, plan["selection"], campaign_name=campaign_name)
+    else:
+        assert len(reader.verify_dataset(cells, plan["selection"], campaign_name=campaign_name)) == 4
+
+
 @pytest.mark.parametrize("mutation", ["command", "activation", "graph", "signature", "candidate", "seed", "coverage", "tree", "summary", "universe", "scores", "details", "vector", "turnover", "receipt", "role", "reuse"])
 def test_mutated_arm_evidence_cannot_be_admitted(tmp_path, monkeypatch, mutation):
     plan, rows, _ = panel_fixture(tmp_path, monkeypatch)
@@ -247,18 +261,22 @@ def test_launch_requires_full_immutable_revision_before_git_lookup(tmp_path, mon
     with pytest.raises(ValueError, match="immutable"): reader.launch(tmp_path, revision)
 
 
-def launch_fixture():
-    return {"runner_commit": reader.DRIVER, "scientific_revision": followup.SCIENCE, "source": "driver",
-        "prepared_inputs": {"path": followup.PREPARED, "bytes": 42, "sha256": "fixed"},
+def launch_fixture(campaign_name="projection"):
+    config, transfer = reader.configuration(campaign_name), followup.configuration(campaign_name)
+    entry = {"runner_commit": config["driver"], "scientific_revision": transfer["science"], "source": "driver",
+        "prepared_inputs": {"path": transfer["prepared"], "bytes": 42, "sha256": "fixed"},
         "independent_reader": {"runner_commit": "a" * 40, "scientific_reader_source": "reader"},
         "datasets": [{"dataset": dataset, "execution_plan": {"path": dataset + "/execution_plan.json", "bytes": 42, "sha256": "fixed"},
             "inference": {"submitted": True, "job_id": str(25000 + i), "planned_cpus": 16, "planned_memory": "128G", "planned_wall_limit": "1-00:00:00"}}
             for i, dataset in enumerate(reader.DATASETS)]}
+    if campaign_name != "projection": entry["campaign"] = campaign_name
+    return entry
 
 
-@pytest.mark.parametrize("mutation", [None, "blob", "science", "driver", "datasets", "unsubmitted", "cpu", "memory", "wall", "job", "duplicate", "prepared", "escape", "reader"])
-def test_immutable_launch_binds_two_actual_jobs_resources_paths_and_reader(tmp_path, monkeypatch, mutation):
-    entry = launch_fixture()
+@pytest.mark.parametrize("campaign_name", ["projection", "stockholm_annotation"])
+@pytest.mark.parametrize("mutation", [None, "blob", "science", "driver", "datasets", "unsubmitted", "cpu", "memory", "wall", "job", "duplicate", "prepared", "escape", "reader", "campaign", "cross_campaign"])
+def test_immutable_launch_binds_two_actual_jobs_resources_paths_and_reader(tmp_path, monkeypatch, mutation, campaign_name):
+    entry = launch_fixture(campaign_name)
     if mutation == "science": entry["scientific_revision"] = "other"
     elif mutation == "driver": entry["runner_commit"] = "other"
     elif mutation == "datasets": entry["datasets"].reverse()
@@ -271,25 +289,31 @@ def test_immutable_launch_binds_two_actual_jobs_resources_paths_and_reader(tmp_p
     elif mutation == "prepared": entry["prepared_inputs"]["path"] = "other.json"
     elif mutation == "escape": entry["source"] = "../outside"
     elif mutation == "reader": entry["independent_reader"]["runner_commit"] = "HEAD"
+    elif mutation == "campaign": entry["campaign"] = "unknown"
+    elif mutation == "cross_campaign": entry = launch_fixture("stockholm_annotation" if campaign_name == "projection" else "projection")
     def git(command, **kwargs):
         if command[1] == "cat-file": return "blob" if mutation == "blob" else "commit"
-        return json.dumps({"projection_followup_execution": entry}).encode()
+        return json.dumps({reader.configuration(campaign_name)["entry"]: entry}).encode()
     monkeypatch.setattr(reader.subprocess, "check_output", git)
     if mutation:
-        with pytest.raises(ValueError): reader.launch(tmp_path, "f" * 40)
+        with pytest.raises(ValueError): reader.launch(tmp_path, "f" * 40, campaign_name=campaign_name)
     else:
-        actual, binding = reader.launch(tmp_path, "f" * 40)
+        actual, binding = reader.launch(tmp_path, "f" * 40, campaign_name=campaign_name)
         assert actual == entry and binding["revision"] == "f" * 40
+        if campaign_name != "projection": assert binding["entry_key"] == reader.configuration(campaign_name)["entry"]
 
 
-@pytest.mark.parametrize("mutation", [None, "partial", "job", "source", "missing", "role", "failed", "promoted"])
-def test_require_complete_ordered_producer_and_original_roles(monkeypatch, mutation):
+@pytest.mark.parametrize("campaign_name", ["projection", "stockholm_annotation"])
+@pytest.mark.parametrize("mutation", [None, "partial", "job", "source", "missing", "role", "failed", "promoted", "campaign", "driver"])
+def test_require_complete_ordered_producer_and_original_roles(monkeypatch, mutation, campaign_name):
     selected = chosen()
-    plan = {"selection": selected, "driver_revision": reader.DRIVER, "dataset": "QfO"}
-    report = {"status": "all_projection_followup_arms_scored", "job_id": "25000", "source_revision": followup.SCIENCE,
-        "driver_revision": reader.DRIVER, "dataset": "QfO", "selection": selected,
+    config, transfer = reader.configuration(campaign_name), followup.configuration(campaign_name)
+    plan = {"selection": selected, "driver_revision": config["driver"], "dataset": "QfO"}
+    report = {"status": "all_projection_followup_arms_scored", "job_id": "25000", "source_revision": transfer["science"],
+        "driver_revision": config["driver"], "dataset": "QfO", "selection": selected,
         "arms": [{"label": label, "dataset": "QfO", "role": selected["roles"][label], "status": followup.SUCCESS} for label in selected["execution_arms"]],
         "defaults_promoted": False, "goal_completed": False}
+    if campaign_name != "projection": plan["campaign"] = report["campaign"] = campaign_name
     entry = {"dataset": "QfO", "inference": {"job_id": "25000"}}
     monkeypatch.setattr(reader.followup, "validate_plan", lambda _: None)
     if mutation == "partial": report["status"] = "running"
@@ -299,6 +323,8 @@ def test_require_complete_ordered_producer_and_original_roles(monkeypatch, mutat
     elif mutation == "role": report["arms"][2]["role"] = "new_winner"
     elif mutation == "failed": report["arms"][2]["status"] = "failed"
     elif mutation == "promoted": report["defaults_promoted"] = True
+    elif mutation == "campaign": report["campaign"] = "unknown"
+    elif mutation == "driver": report["driver_revision"] = "other"
     if mutation:
         with pytest.raises(ValueError): reader.require_completed(plan, report, entry, selected)
     else: reader.require_completed(plan, report, entry, selected)
@@ -339,40 +365,51 @@ def test_existing_reader_output_is_preserved_before_any_launch_lookup(tmp_path):
 
 
 @pytest.mark.parametrize("changed", [False, True])
-def test_reader_inventory_rejects_uncommitted_source(tmp_path, monkeypatch, changed):
+@pytest.mark.parametrize("campaign_name", ["projection", "stockholm_annotation"])
+def test_reader_inventory_rejects_uncommitted_source(tmp_path, monkeypatch, changed, campaign_name):
     (tmp_path / "benchmark_tools").mkdir()
-    files = [tmp_path / "benchmark_tools" / name for name in ("fixture.py", reader.PROTOCOL, "hmm_projection_followup_20261019.json")]
+    names = ("fixture.py", reader.configuration(campaign_name)["protocol"], Path(followup.configuration(campaign_name)["protocol"]).name)
+    if campaign_name != "projection": names += (reader.PROTOCOL, Path(followup.PROTOCOL).name, "hmm_stockholm_annotation_recovery_20261019.json")
+    files = [tmp_path / "benchmark_tools" / name for name in names]
     for path in files: path.write_text("frozen\n")
     monkeypatch.setattr(reader, "sources", lambda _: [record(files[0])])
     monkeypatch.setattr(reader.subprocess, "check_output", lambda command, **kwargs: "a" * 40 if command[1] == "rev-parse" else b"changed\n" if changed else b"frozen\n")
     if changed:
-        with pytest.raises(ValueError, match="committed"): reader.reporter_inventory(tmp_path)
+        with pytest.raises(ValueError, match="committed"): reader.reporter_inventory(tmp_path, campaign_name=campaign_name)
     else:
-        revision, pins = reader.reporter_inventory(tmp_path)
-        assert revision == "a" * 40 and len(pins) == 3
+        revision, pins = reader.reporter_inventory(tmp_path, campaign_name=campaign_name)
+        assert revision == "a" * 40 and len(pins) == len(names)
 
 
-def run_fixture(tmp_path, monkeypatch, mutation):
+def run_fixture(tmp_path, monkeypatch, mutation, *, campaign_name="projection"):
     selected = chosen()
+    config, transfer = reader.configuration(campaign_name), followup.configuration(campaign_name)
+    driver_files = reader.DRIVER_FILES if campaign_name == "projection" else followup.driver_paths(campaign_name)
     science, driver, reporter = (tmp_path / name for name in ("science", "driver", "reader"))
     for root in (science, driver, reporter): (root / "benchmark_tools").mkdir(parents=True)
     slurm = science / "benchmark_tools/run_profile_weighting_pilot.slurm"
     slurm.write_text("frozen science\n")
-    for path in reader.DRIVER_FILES: (driver / path).write_text("frozen driver\n")
+    for path in driver_files: (driver / path).write_text("frozen driver\n")
     reader_file = reporter / "benchmark_tools/report_projection_followup.py"
     reader_file.write_text("frozen reader\n")
-    protocol = json.loads(Path(reader.__file__).with_name(reader.PROTOCOL).read_text())
-    write_json(reporter / "benchmark_tools" / reader.PROTOCOL, protocol)
-    prepared_path = tmp_path / followup.PREPARED
+    protocol = json.loads(Path(reader.__file__).with_name(config["protocol"]).read_text())
+    if mutation == "protocol": protocol["screen"]["maximum_endpoint_point_decline"] = .01
+    write_json(reporter / "benchmark_tools" / config["protocol"], protocol)
+    prepared_path = tmp_path / transfer["prepared"]
     prepared_path.parent.mkdir(parents=True)
-    write_json(prepared_path, {"runtime": {"files": []}, "inputs": []})
+    prepared = {"runtime": {"files": []}, "inputs": []}
+    if campaign_name != "projection": prepared["campaign"] = campaign_name
+    if mutation == "prepared_campaign": prepared["campaign"] = "unknown"
+    write_json(prepared_path, prepared)
     prepared_pin = record(prepared_path)
     audit = {"selection": selected, "pilot_readback": record(reader_file), "pilot_plan": record(reader_file),
         "scientific_source": str(science), "runtime": {"files": []}, "tool_path": "/tools",
         "scientific_sources": [record(slurm)], "hmmer_tools": {}}
-    entry = {"runner_commit": reader.DRIVER, "scientific_revision": followup.SCIENCE, "source": "driver",
-        "selection": selected, "prepared_inputs": {**prepared_pin, "path": followup.PREPARED},
+    if campaign_name != "projection": audit["campaign"] = campaign_name
+    entry = {"runner_commit": config["driver"], "scientific_revision": transfer["science"], "source": "driver",
+        "selection": selected, "prepared_inputs": {**prepared_pin, "path": transfer["prepared"]},
         "independent_reader": {"runner_commit": "a" * 40, "scientific_reader_source": "reader"}, "datasets": []}
+    if campaign_name != "projection": entry["campaign"] = campaign_name
     plans, native_callbacks, activation_callbacks, score_callbacks = {}, {}, {}, {}
     for i, dataset in enumerate(reader.DATASETS):
         folder = tmp_path / dataset
@@ -381,8 +418,8 @@ def run_fixture(tmp_path, monkeypatch, mutation):
         native_callbacks[dataset] = reader.replay_native
         activation_callbacks[dataset] = reader.validate_activation
         score_callbacks[dataset] = reader.readback_scores
-        plan.update(**audit, driver_revision=reader.DRIVER, repo=str(tmp_path), driver_root=str(driver),
-            driver_sources=[record(driver / path) for path in reader.DRIVER_FILES], prepared_inputs=prepared_pin)
+        plan.update(**audit, driver_revision=config["driver"], scientific_revision=transfer["science"], repo=str(tmp_path), driver_root=str(driver),
+            driver_sources=[record(driver / path) for path in driver_files], prepared_inputs=prepared_pin)
         plan["inputs"].append(prepared_pin)
         if dataset == "QfO":
             relative = "benchmarks/results/canonical_qfo_scoring_recovery_r1_v1_20261014"
@@ -402,8 +439,10 @@ def run_fixture(tmp_path, monkeypatch, mutation):
         path = Path(plan["output"]) / "execution_plan.json"
         write_json(path, plan)
         producer = {"status": "all_projection_followup_arms_scored", "execution_plan": record(path), "job_id": str(25000 + i),
-            "source_revision": followup.SCIENCE, "driver_revision": reader.DRIVER, "dataset": dataset,
+            "source_revision": transfer["science"], "driver_revision": config["driver"], "dataset": dataset,
             "selection": selected, "arms": rows, "defaults_promoted": False, "goal_completed": False}
+        if campaign_name != "projection": producer["campaign"] = campaign_name
+        if mutation == "producer_campaign" and i == 0: producer["campaign"] = "unknown"
         if mutation == "partial" and i == 0 or mutation == "second_failed" and i == 1: producer["status"] = "running"
         if mutation == "measurement" and i == 0: producer["arms"][3]["metric_vector"][reader.ENDPOINTS[1]] += .01
         write_json(Path(plan["output"]) / "results.json", producer)
@@ -413,10 +452,10 @@ def run_fixture(tmp_path, monkeypatch, mutation):
     pilot, _, _ = vector_fixture()
     pilot["uncertainty"] = {"scope": "mocked provenance; no new uncertainty inferred"}
     monkeypatch.setattr(reader, "__file__", str(reader_file))
-    monkeypatch.setattr(reader, "launch", lambda *args: (entry, {"revision": "f" * 40}))
-    monkeypatch.setattr(reader, "reporter_inventory", lambda *args: ("a" * 40, [record(reader_file)]))
+    monkeypatch.setattr(reader, "launch", lambda *args, **kwargs: (entry, {"revision": "f" * 40}))
+    monkeypatch.setattr(reader, "reporter_inventory", lambda *args, **kwargs: ("a" * 40, [record(reader_file)]))
     monkeypatch.setattr(reader.followup, "authenticate_prepared", lambda *args: audit)
-    monkeypatch.setattr(reader.planner, "authenticate", lambda *args: (pilot, {}, selected, [], {"fixture": "authenticated"}))
+    monkeypatch.setattr(reader.planner, "authenticate", lambda *args, **kwargs: (pilot, {}, selected, [], {"fixture": "authenticated"}))
     monkeypatch.setattr(reader.pilot_reader, "retained_context", lambda *args: ([], []))
     monkeypatch.setattr(reader.pilot_reader, "terminal", lambda job: {"job_id": job, "state": "COMPLETED"})
     monkeypatch.setattr(reader, "sequential_science", lambda entries: {"scope": "mocked ordered accounting; separate tests use raw sacct"})
@@ -428,7 +467,7 @@ def run_fixture(tmp_path, monkeypatch, mutation):
     monkeypatch.setattr(reader, "replay_native", lambda row, *args: native_callbacks[row["dataset"]](row, *args))
     monkeypatch.setattr(reader, "validate_activation", lambda graph, label, *args, **kwargs: activation_callbacks["QfO"](graph, label, *args, **kwargs))
     monkeypatch.setattr(reader, "readback_scores", lambda repo, dataset, *args: score_callbacks[dataset](repo, dataset, *args))
-    monkeypatch.setattr(reader.subprocess, "check_output", lambda command, **kwargs: followup.SCIENCE if kwargs["cwd"] == science else reader.DRIVER)
+    monkeypatch.setattr(reader.subprocess, "check_output", lambda command, **kwargs: transfer["science"] if kwargs["cwd"] == science else config["driver"])
     if mutation == "reader": entry["independent_reader"]["runner_commit"] = "b" * 40
     elif mutation == "selection":
         entry["selection"] = deepcopy(selected)
@@ -436,24 +475,26 @@ def run_fixture(tmp_path, monkeypatch, mutation):
     return tmp_path / "readback"
 
 
-@pytest.mark.parametrize("mutation", [None, "partial", "second_failed", "runtime", "reader", "selection", "measurement"])
-def test_full_reader_lifecycle_admits_only_complete_verified_vectors_and_preserves_failures(tmp_path, monkeypatch, mutation):
-    output = run_fixture(tmp_path, monkeypatch, mutation)
+@pytest.mark.parametrize("campaign_name", ["projection", "stockholm_annotation"])
+@pytest.mark.parametrize("mutation", [None, "partial", "second_failed", "runtime", "reader", "selection", "measurement", "protocol", "prepared_campaign", "producer_campaign"])
+def test_full_reader_lifecycle_admits_only_complete_verified_vectors_and_preserves_failures(tmp_path, monkeypatch, mutation, campaign_name):
+    output = run_fixture(tmp_path, monkeypatch, mutation, campaign_name=campaign_name)
     if mutation:
-        with pytest.raises(ValueError): reader.run(tmp_path, "f" * 40, output)
+        with pytest.raises(ValueError): reader.run(tmp_path, "f" * 40, output, campaign_name=campaign_name)
         if output.exists():
             report = json.loads((output / "summary.json").read_text())
             assert report["status"] == "failed" and not report["accuracy_result_admitted"]
             if mutation == "second_failed": assert len(report["cells"]) == 5
     else:
-        report = reader.run(tmp_path, "f" * 40, output)
+        report = reader.run(tmp_path, "f" * 40, output, campaign_name=campaign_name)
         assert report["status"] == "projection_full_vectors_independently_read_back" and report["accuracy_result_admitted"]
         assert len(report["cells"]) == 10 and len(report["datasets"]) == 2
         assert len(report["methods"]) == 5 and all(len(method["scores"]) == 8 for method in report["methods"])
         assert not report["defaults_promoted"] and not report["goal_completed"]
+        if campaign_name != "projection": assert report["campaign"] == campaign_name
         assert record(output / "scores.tsv") == report["score_table"]
     if output.exists():
-        with pytest.raises(FileExistsError): reader.run(tmp_path, "f" * 40, output)
+        with pytest.raises(FileExistsError): reader.run(tmp_path, "f" * 40, output, campaign_name=campaign_name)
 
 
 @pytest.mark.parametrize("mutation", [None, "overlap", "reversed", "missing", "failed", "unknown_time"])

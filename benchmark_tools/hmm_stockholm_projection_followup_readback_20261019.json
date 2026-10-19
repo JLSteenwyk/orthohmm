@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "explicit_stockholm_readback_binding_before_transfer_submission",
+  "campaign": "stockholm_annotation",
+  "parent": "hmm_projection_followup_readback_20261019.json",
+  "transfer_contract": "hmm_stockholm_projection_followup_20261019.json",
+  "scientific_revision": "8f0cd5605842e470e64f40c31bc608c37945b8b3",
+  "driver_revision": "abe393ded90143880378136bf60691581ed24061",
+  "preparer_revision": "017245981e62d6ca4955ba6acf08387f541ed9da",
+  "launch": "Require explicit full immutable commit containing separately named stockholm_projection_followup_execution entry, campaign tag, both actual submitted dataset jobs/plans, new prepared-input pin, original selection/roles/resources and separately frozen reader. No mutable current ledger or redirected historical launch.",
+  "datasets": ["QfO", "ThreeKingdoms"],
+  "admission": "Repeat unchanged original independent full-vector reader: complete successful24519/24520 pilot admission and24521 preparation; exact source/runtime/driver/tool inventories; nonoverlapping sequential terminal-successful16CPU128G QfO-before-ThreeKingdoms jobs; complete ownership; fixed commands/resources; actual activation/backend/raw Stockholm validation; partitions, constraints, native products/trees; raw score/reference and assessment receipts; pair/confidence turnover. Old source/preparation/campaign or partial output cannot substitute.",
+  "measurement_control": "Require exact repaired graph/candidate/native/tree/coverage and exact saved assessment reuse with fresh readback. Never resample FAS for the measurement control or call reuse an independent replicate. Canonical assessment reuse remains byte-exact and freshly read back.",
+  "populations": "Independently recount raw EC/GO numeric populations and rounded means; separately report FAS scored sample versus eligible pool, repeated proteins and native sample arithmetic. Functional means remain conditional annotation/sampling statistics, not orthology accuracy or matched-population inference.",
+  "screen": {"require_complete_eight_endpoints": true, "primary_f1_endpoints": ["OrthoBench: OrthoBench F1", "QfO: VGNC F", "QfO: SwissTrees F"], "require_at_least_one_primary_f1_improvement": true, "maximum_endpoint_point_decline": 0.005, "preserve_original_pilot_eligibility": true, "interpretation": "Unchanged original development point screen; no significance, independent confirmation or default promotion. Control/applicability-only roles cannot become advancing candidates by relabeling."},
+  "contrasts": "Retain all five pilot rows and all eight endpoint slots, explicit unrun NA and original stopped roles. Distinguish legacy-relative, projection-relative and HMMER-minus-builtin effects. Preserve original paired OrthoBench uncertainty and contextual competitors including OrthoFinder3.1.5 full; do not invent QfO family/IID intervals or combine heterogeneous means.",
+  "resources": {"cpus": 1, "memory_gib": 16, "wall_limit": "02:00:00", "new_initial_search": false, "new_tree_inference": false, "host": "local shared Threadripper", "dgx_required": false, "quiet_window_required": false},
+  "delivery": "Test/commit/push/freeze new reader before any transfer inference. Record exact source/launch/plan/runtime/resource bindings and preserve all previous failed namespaces. Missing independent confirmation and shared-host cached timing limit claims, not completion. This transfer report alone does not complete the campaign.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}

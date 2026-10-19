@@ -44,6 +44,16 @@ DRIVER_FILES = ("benchmark_tools/run_projection_followup.py", "benchmark_tools/r
                 "benchmark_tools/run_profile_weighting_followup.py", followup.PROTOCOL)
 
 
+def configuration(campaign_name="projection"):
+    if campaign_name == "projection":
+        return {"driver": DRIVER, "protocol": PROTOCOL, "entry": "projection_followup_execution"}
+    if campaign_name == "stockholm_annotation":
+        return {"driver": "abe393ded90143880378136bf60691581ed24061",
+            "protocol": "hmm_stockholm_projection_followup_readback_20261019.json",
+            "entry": "stockholm_projection_followup_execution"}
+    raise ValueError("Unknown explicit projection readback campaign")
+
+
 def relative_path(repo, value):
     path = Path(value)
     if path.is_absolute() or not (repo / path).resolve().is_relative_to(repo.resolve()):
@@ -51,14 +61,16 @@ def relative_path(repo, value):
     return (repo / path).resolve()
 
 
-def launch(repo, revision):
+def launch(repo, revision, *, campaign_name="projection"):
     if not isinstance(revision, str) or re.fullmatch(r"[0-9a-f]{40}", revision) is None:
         raise ValueError("Require explicit full immutable transfer launch revision")
     if subprocess.check_output(["git", "cat-file", "-t", revision], cwd=repo, text=True).strip() != "commit":
         raise ValueError("Transfer launch must be a commit")
+    binding, transfer = configuration(campaign_name), followup.configuration(campaign_name)
     blob = subprocess.check_output(["git", "show", revision + ":" + LEDGER], cwd=repo)
-    entry = json.loads(blob)["projection_followup_execution"]
-    if (entry.get("runner_commit") != DRIVER or entry.get("scientific_revision") != followup.SCIENCE
+    entry = json.loads(blob)[binding["entry"]]
+    if (entry.get("runner_commit") != binding["driver"] or entry.get("scientific_revision") != transfer["science"]
+            or entry.get("campaign", "projection") != campaign_name
             or tuple(row["dataset"] for row in entry.get("datasets", [])) != DATASETS):
         raise ValueError("Changed original transfer driver/science or dataset inventory")
     relative_path(repo, entry["source"])
@@ -66,7 +78,7 @@ def launch(repo, revision):
     if re.fullmatch(r"[0-9a-f]{40}", reader.get("runner_commit", "")) is None:
         raise ValueError("Require separately frozen transfer reader revision")
     relative_path(repo, reader["scientific_reader_source"])
-    if relative_path(repo, entry["prepared_inputs"]["path"]) != repo / followup.PREPARED:
+    if relative_path(repo, entry["prepared_inputs"]["path"]) != repo / transfer["prepared"]:
         raise ValueError("Changed original transfer preparation namespace")
     jobs = []
     for row in entry["datasets"]:
@@ -78,15 +90,20 @@ def launch(repo, revision):
         relative_path(repo, row["execution_plan"]["path"])
         jobs.append(str(inference["job_id"]))
     if len(set(jobs)) != len(jobs): raise ValueError("Transfer datasets cannot share a scientific job")
-    return entry, {"revision": revision, "path": LEDGER, "git_blob_sha256": hashlib.sha256(blob).hexdigest()}
+    receipt = {"revision": revision, "path": LEDGER, "git_blob_sha256": hashlib.sha256(blob).hexdigest()}
+    if campaign_name != "projection": receipt["entry_key"] = binding["entry"]
+    return entry, receipt
 
 
 def require_completed(plan, report, entry, chosen):
     followup.validate_plan(plan)
-    if (plan["driver_revision"] != DRIVER or plan["selection"] != chosen
+    campaign_name = plan.get("campaign", "projection")
+    binding, transfer = configuration(campaign_name), followup.configuration(campaign_name)
+    if (plan["driver_revision"] != binding["driver"] or plan["selection"] != chosen
             or report.get("status") != "all_projection_followup_arms_scored"
             or report.get("job_id") != entry["inference"]["job_id"]
-            or report.get("source_revision") != followup.SCIENCE or report.get("driver_revision") != DRIVER
+            or report.get("source_revision") != transfer["science"] or report.get("driver_revision") != binding["driver"]
+            or report.get("campaign", "projection") != campaign_name
             or report.get("dataset") != entry["dataset"] or plan["dataset"] != entry["dataset"]
             or report.get("selection") != chosen or [row["label"] for row in report.get("arms", [])] != chosen["execution_arms"]
             or any(row.get("status") != followup.SUCCESS or row.get("dataset") != plan["dataset"]
@@ -269,9 +286,10 @@ def admit_arm(repo, plan, row, names, projection=None):
         "checked": checked}
 
 
-def verify_dataset(cells, chosen):
+def verify_dataset(cells, chosen, *, campaign_name="projection"):
+    scientific_revision = followup.configuration(campaign_name)["science"]
     if ([cell["label"] for cell in cells] != chosen["execution_arms"] or len({cell["dataset"] for cell in cells}) != 1
-            or any(cell.get("status") != "independent_content_readback_verified" or cell.get("source_revision") != followup.SCIENCE
+            or any(cell.get("status") != "independent_content_readback_verified" or cell.get("source_revision") != scientific_revision
                    or cell.get("role") != chosen["roles"][cell["label"]] or set(cell["scores"]) != set(cells[0]["scores"])
                    or cell["activation"].get("arm") != cell["label"]
                    or cell["activation"].get("projection_policy") != recovery_configuration(cell["label"])[0] for cell in cells)):
@@ -330,9 +348,13 @@ def assemble(pilot, cells, chosen):
     return methods, contrasts
 
 
-def reporter_inventory(driver):
+def reporter_inventory(driver, *, campaign_name="projection"):
     revision = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=driver, text=True).strip()
-    files = sources(driver) + [record(driver / "benchmark_tools" / PROTOCOL), record(driver / followup.PROTOCOL)]
+    files = sources(driver) + [record(driver / "benchmark_tools" / configuration(campaign_name)["protocol"]),
+                              record(driver / followup.configuration(campaign_name)["protocol"])]
+    if campaign_name != "projection":
+        files += [record(driver / path) for path in ("benchmark_tools/" + PROTOCOL, followup.PROTOCOL,
+                                                    "benchmark_tools/hmm_stockholm_annotation_recovery_20261019.json")]
     for pin in files:
         relative = Path(pin["path"]).relative_to(driver)
         if relative.suffix != ".so" and hashlib.sha256(subprocess.check_output(["git", "show", revision + ":" + str(relative)], cwd=driver)).hexdigest() != pin["sha256"]:
@@ -348,37 +370,46 @@ def write_table(path, methods, context):
             writer.writerow([method["label"], method.get("role", "contextual_comparator"), method["status"], *[method["scores"].get(key, "NA") for key in ENDPOINTS]])
 
 
-def run(repo, revision, output):
+def run(repo, revision, output, *, campaign_name="projection"):
     if output.exists(): raise FileExistsError("Preserve every projection transfer readback")
-    entry, binding = launch(repo, revision)
+    config, transfer = configuration(campaign_name), followup.configuration(campaign_name)
+    entry, binding = (launch(repo, revision) if campaign_name == "projection"
+        else launch(repo, revision, campaign_name=campaign_name))
     driver = Path(__file__).resolve().parents[1]
-    reader_revision, reader_files = reporter_inventory(driver)
+    reader_revision, reader_files = (reporter_inventory(driver) if campaign_name == "projection"
+        else reporter_inventory(driver, campaign_name=campaign_name))
     if (reader_revision != entry["independent_reader"]["runner_commit"]
             or driver != relative_path(repo, entry["independent_reader"]["scientific_reader_source"])):
         raise ValueError("Actual transfer reader differs from immutable launch")
-    spec = json.loads((driver / "benchmark_tools" / PROTOCOL).read_text())
-    if (spec["scientific_revision"] != followup.SCIENCE or spec["driver_revision"] != DRIVER
-            or spec["preparer_revision"] != followup.PREPARER or spec["datasets"] != list(DATASETS)
+    spec = json.loads((driver / "benchmark_tools" / config["protocol"]).read_text())
+    if (spec["scientific_revision"] != transfer["science"] or spec["driver_revision"] != config["driver"]
+            or spec["preparer_revision"] != transfer["preparer"] or spec["datasets"] != list(DATASETS)
             or spec["screen"] != {"require_complete_eight_endpoints": True, "primary_f1_endpoints": list(ENDPOINTS[:3]),
                 "require_at_least_one_primary_f1_improvement": True, "maximum_endpoint_point_decline": .005,
                 "preserve_original_pilot_eligibility": True, "interpretation": spec["screen"]["interpretation"]}):
         raise ValueError("Changed prespecified transfer readback protocol")
+    if campaign_name != "projection" and (spec.get("campaign") != campaign_name or spec.get("parent") != PROTOCOL):
+        raise ValueError("Changed explicit Stockholm readback contract or original parent")
     prepared_pin = {key: entry["prepared_inputs"][key] for key in ("path", "bytes", "sha256")}
     prepared_pin["path"] = str(relative_path(repo, prepared_pin["path"]))
     check(prepared_pin)
     prepared = json.loads(Path(prepared_pin["path"]).read_text())
+    if prepared.get("campaign", "projection") != campaign_name:
+        raise ValueError("Transfer readback and preparation belong to different explicit campaigns")
     audit = followup.authenticate_prepared(repo, prepared)
-    pilot, _, chosen, checked, provenance = planner.authenticate(repo)
+    pilot, _, chosen, checked, provenance = (planner.authenticate(repo) if campaign_name == "projection"
+        else planner.authenticate(repo, campaign_name=campaign_name))
     if audit["selection"] != chosen or chosen != entry["selection"]: raise ValueError("Transfer launch changes original eligibility/control roles")
     context, context_pins = pilot_reader.retained_context(repo)
     checked += [prepared_pin, *prepared["inputs"], *reader_files, *context_pins]
     output.mkdir(parents=True)
     result = {"status": "running", "launch_ledger": binding, "reporter_revision": reader_revision,
-        "reporter_files": reader_files, "protocol": record(driver / "benchmark_tools" / PROTOCOL),
+        "reporter_files": reader_files, "protocol": record(driver / "benchmark_tools" / config["protocol"]),
         "prepared_inputs": prepared_pin, "pilot_provenance": provenance, "selection": chosen, "datasets": [], "cells": [],
         "context": context, "orthobench_uncertainty": pilot["uncertainty"], "accuracy_result_admitted": False,
         "defaults_promoted": False, "goal_completed": False,
         "scope": "Independent content/score readback using shared tested helpers, not independent biological confirmation. Development-exposed panels; TreeFam supporting, Three Kingdoms supplementary. Conditional GO/EC/FAS populations and unseeded FAS limit claims. No fabricated QfO family or IID pair intervals. Cached shared-host incremental timings are not isolated fresh-pipeline costs or aggregate memory. Other campaign mechanisms and original failures remain retained in their separate source-bound reports; this transfer report alone does not close the goal."}
+    if campaign_name != "projection": result["campaign"] = campaign_name
     write_json(output / "summary.json", result)
     try:
         for case_entry in entry["datasets"]:
@@ -401,7 +432,8 @@ def run(repo, revision, output):
                     raise ValueError("Frozen transfer source moved")
             source = Path(plan["scientific_source"])
             if (sources(source) + [record(source / "benchmark_tools/run_profile_weighting_pilot.slurm")] != plan["scientific_sources"]
-                    or [record(Path(plan["driver_root"]) / path) for path in DRIVER_FILES] != plan["driver_sources"]
+                    or [record(Path(plan["driver_root"]) / path) for path in (
+                        DRIVER_FILES if campaign_name == "projection" else followup.driver_paths(campaign_name))] != plan["driver_sources"]
                     or runtime() != plan["runtime"]):
                 raise ValueError("Frozen transfer source/runtime inventory differs")
             expected_case, _ = planner.selected_case(SimpleNamespace(record=record, check=check,
@@ -414,7 +446,7 @@ def run(repo, revision, output):
             for row in report["arms"]:
                 projection = next((cell for cell in cells if cell["label"] == "projection_off"), None)
                 cells.append(admit_arm(repo, plan, row, names, projection))
-            deltas = verify_dataset(cells, chosen)
+            deltas = verify_dataset(cells, chosen, campaign_name=campaign_name)
             result["cells"] += cells
             result["datasets"].append({"dataset": plan["dataset"], "execution_plan": plan_pin, "producer": producer,
                 "scheduler": accounting, "deltas": deltas})
@@ -444,5 +476,6 @@ if __name__ == "__main__":
     parser.add_argument("--repo", required=True, type=Path)
     parser.add_argument("--launch-revision", required=True)
     parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument("--campaign", choices=("projection", "stockholm_annotation"), default="projection")
     args = parser.parse_args()
-    print(run(args.repo.resolve(), args.launch_revision, args.output.resolve())["status"])
+    print(run(args.repo.resolve(), args.launch_revision, args.output.resolve(), campaign_name=args.campaign)["status"])

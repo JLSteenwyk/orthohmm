@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "explicit_stockholm_driver_tested1237_awaiting_push_freeze_no_transfer_submitted",
+  "status": "explicit_stockholm_driver_tested1237_pushed_frozen_abe393de_no_transfer_submitted",
   "parent_revision": "b30f2d148cf3eaf5cb1fd135d2147b473e1024e1",
   "implementation": "benchmark_tools/run_projection_followup.py",
   "protocol": "benchmark_tools/hmm_stockholm_projection_followup_20261019.json",
@@ -21,7 +21,15 @@
     "coverage": "38 new cases plus1199 preceding cases. Both datasets and minimal control closures; failed controls; old/missing campaign/source/preparer/namespace; full isolated authentication; committed-driver preparation; standalone run guards; actual corrected-source helper origins including annotated-alignment validator. Fixtures mock biological inference/scoring and do not establish accuracy.",
     "preservation": "Sample status/diff hashes and all three native-library hashes unchanged; no native rebuild, no changed live jobs or unrelated analyses. Scoped diff --check passes."
   },
-  "remaining": "Push/freeze and verify this tested driver, then bind/test/push/freeze a new independent full-vector reader. Do not submit QfO/TK inference until complete24519/24520 admission, successful24521 preparation and original eligibility are verified. Eight-endpoint readback, justified combinations, candidate freeze/confirmation limits and final campaign table/recommendation/remote audit remain required.",
+  "frozen_execution": {
+    "revision": "abe393ded90143880378136bf60691581ed24061",
+    "source": "benchmarks/work/stockholm_projection_followup_driver_v1_20261019",
+    "push": "git push succeeded; git ls-remote independently matched exactabe393de before freeze",
+    "verification": "All1233 unique frozen source/driver/protocol records match committed bytes. Original three native libraries copied without rebuilding and hashes unchanged. Fresh standalone probe binds all seven scientific helpers and corrected annotated-alignment validator exclusively to8f0cd560 source; actual24521 pending prerequisite correctly rejected before receipt/output/inference access.",
+    "submitted": false,
+    "scope": "Tested executable binding, not actual transfer admission or permission to bypass complete original pilot/preparation gates and separately frozen independent reader."
+  },
+  "remaining": "Bind/test/push/freeze the new independent full-vector reader. Do not submit QfO/TK inference until complete24519/24520 admission, successful24521 preparation and original eligibility are verified. Eight-endpoint readback, justified combinations, candidate freeze/confirmation limits and final campaign table/recommendation/remote audit remain required.",
   "defaults_promoted": false,
   "goal_completed": false
 }

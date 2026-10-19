@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "status": "explicit_stockholm_full_vector_reader_tested1286_awaiting_push_freeze",
+  "parent_revision": "abe393ded90143880378136bf60691581ed24061",
+  "implementation": "benchmark_tools/report_projection_followup.py --campaign stockholm_annotation",
+  "protocol": "benchmark_tools/hmm_stockholm_projection_followup_readback_20261019.json",
+  "scientific_revision": "8f0cd5605842e470e64f40c31bc608c37945b8b3",
+  "driver_revision": "abe393ded90143880378136bf60691581ed24061",
+  "preparer_revision": "017245981e62d6ca4955ba6acf08387f541ed9da",
+  "scope": "Explicit new independent reader binding, not completed transfer admission, independent biological confirmation, new accuracy evidence or goal closure. Default original reader and all frozen old sources/jobs remain unchanged.",
+  "contracts": [
+    "Require full immutable launch revision and explicitly named stockholm_projection_followup_execution with matching campaign, corrected science, frozen new driver, actual two ordered submitted jobs/resources/plans, exact new preparation and separate frozen reader identity. Reject cross-campaign/stale/partial evidence.",
+    "Reauthenticate new pilot/preparation and original selection/roles through tested planner/driver. Retain original fixed source/runtime/ownership/command/activation/native/score/assessment checks and raw sequential job accounting. No new inference or scoring is performed by readback.",
+    "Keep exact canonical/measurement assessment reuse and graph/candidate/native/tree equivalence; no measurement FAS resampling. Recount saved EC/GO and FAS numeric populations, qualifying eligibility pools, repeated proteins and unseeded means.",
+    "Retain all five pilot rows and all eight endpoint slots, original strict full-vector screen and original role restrictions, stopped NA, projection-relative and HMMER-minus-builtin contrasts, paired OrthoBench uncertainty and contextual competitors. No heterogeneous average, fabricated QfO IID uncertainty or default promotion."
+  ],
+  "validation": {
+    "combined": {"path": "benchmark_tools/results/stockholm_projection_followup_readback_combined_tests_20261019.xml", "bytes": 203632, "sha256": "39200328144303bc1f10c25c9624cd80136dd37f340aa6bcd6d4feb8c08e9790", "passed": 1286, "failures": 0, "errors": 0, "skipped": 0, "pytest_wall_seconds": 176.18, "modules": 34},
+    "focused": {"path": "benchmark_tools/results/stockholm_projection_followup_readback_tests_v2_20261019.xml", "bytes": 40460, "sha256": "496df4305ece45f3e558f7f45429bbb60566fedfa3625a559babb52ec31065bb", "passed": 228, "pytest_wall_seconds": 8.34},
+    "initial_history": {"path": "benchmark_tools/results/stockholm_projection_followup_readback_tests_20261019.xml", "bytes": 44297, "sha256": "47e1f8b648c2ea5f8562d1173c41982d68f76ee46e4192f14b1d73dc05c8dbaa", "passed": 222, "failures": 2, "cause": "New-mode lifecycle correctly exposed one remaining legacy constant in dataset-level source validation. Replaced with explicit campaign-specific expected revision and added positive/mixed-source rejection cases. No gate was relaxed and no scientific run failed."},
+    "coverage": "49 additional readback cases plus1237 preceding cases. Both immutable launch bindings, source/driver/preparation/campaign/resources, complete producer roles, committed inventories, successful/failing lifecycle for both modes, all eight endpoints, partial-result preservation, mixed-source rejection and unchanged score/population/control/sequential checks. Biological inference/scoring in lifecycle fixtures is mocked; these are not accuracy results.",
+    "unchanged_ast_functions": ["sequential_science", "arm_commands", "scoring_context", "functional_populations", "admit_arm", "assemble", "write_table"],
+    "ast_comparison": "Compared parsed function ASTs against abe393ded90143880378136bf60691581ed24061; all listed functions identical, not merely passing altered tests.",
+    "history_storage": "Focused/history XML retained outside Git with hashes; final combined XML committed. Overlapping counts are not additive independent evidence."
+  },
+  "remaining": "Push/freeze/verify new independent reader and actual unsubmitted-launch rejection before transfer. Monitor24519/24520/24521 without duplication; only complete successful admission and original selection can authorize sequential fresh-namespace QfO/TK inference. Actual full-vector readback, justified combinations, candidate freeze/confirmation limits and final campaign comparison/recommendation/remote audit remain required.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}

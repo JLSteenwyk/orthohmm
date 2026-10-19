@@ -72,6 +72,14 @@ preserves all original scientific settings, control dependencies and exact
 measurement-assessment reuse. Its default remains the original recovery.
 Separately frozen, tested and committed/pushed execution and full-vector reader
 bindings remain required before new QfO/Three Kingdoms inference.
+The [new full-vector reader contract](hmm_stockholm_projection_followup_readback_20261019.json)
+uses `report_projection_followup.py --campaign stockholm_annotation
+--launch-revision <full immutable commit>`. It requires the explicitly named new
+execution entry with both submitted dataset jobs, exact new preparation and
+separate reader bindings. Default reader behavior remains the original campaign;
+old/partial/cross-campaign evidence cannot enter the new report. Native/score,
+functional-population, matched-control and sequential-accounting checks are
+unchanged, and this report alone cannot close the campaign or promote defaults.
 
 | Workflow | Execution | Separate result validation |
 | --- | --- | --- |
