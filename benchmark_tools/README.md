@@ -14,6 +14,15 @@ HMMER are experimental package/workflow integrations; promising results
 require complete-dataset follow-up and a tested production opt-in interface
 before recommendation. HMM similarity alone does not establish orthology.
 
+The [completed weighting/local comparison](results/hmm_completed_method_comparison_20261019.tsv)
+and [readback summary](results/completed_weighting_local_readback_20261019.json)
+retain all eight endpoints and the contextual tools. Both weighting variants
+pass the original development screen but have mixed primary-benchmark effects;
+neither is a default recommendation. Local rescue leaves all 70 reference-family
+scores unchanged and stops at its original gate. The failed original HMMER panel
+is explicitly unadmitted, not a negative accuracy result. This interim table does
+not replace the required controlled recovery or final campaign report.
+
 The first selective HMMER biological pilot failed a source-residue integrity
 check, rather than producing an admissible negative accuracy result. The
 [projection recovery protocol](hmm_projection_integrity_recovery_20261018.json)
