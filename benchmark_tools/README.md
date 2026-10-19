@@ -114,6 +114,9 @@ from producer metadata and excludes unmeasured contextual-tool costs. No new
 inference, scoring or sampling occurs. This individual-effects compilation
 still requires justified-combination assessment, a final candidate freeze,
 confirmation or documented data limits, and final recommendation/remote audit.
+Its [frozen submission record](results/hmm_transfer_campaign_report_submission_20261019.json)
+binds compiler `d21d076c` and read-only job24527 to prerequisite reader24525;
+the expected pending-reader rejection creates no output or accuracy admission.
 
 | Workflow | Execution | Separate result validation |
 | --- | --- | --- |
