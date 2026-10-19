@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "status": "two_original_projection_transfer_jobs_submitted_independent_reader_binding_next",
+  "campaign": "stockholm_annotation",
+  "scientific_revision": "8f0cd5605842e470e64f40c31bc608c37945b8b3",
+  "driver_revision": "abe393ded90143880378136bf60691581ed24061",
+  "reader_revision": "840746675e9dc1e953c0adee7dba158182922b19",
+  "pilot_admission": "benchmark_tools/results/stockholm_pilot_admission_20261019.json",
+  "plan_preparation": {
+    "job_id": "24522",
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed": "00:06:22",
+    "cpus": 1,
+    "memory_allocation": "16G",
+    "log": "benchmarks/results/stockholm_projection_followup_prepare_v1_20261019-24522.out",
+    "submission": "benchmark_tools/results/stockholm_transfer_plan_preparation_submission_20261019.json"
+  },
+  "prepared_inputs": {
+    "path": "benchmarks/results/stockholm_projection_followup_inputs_v1_20261019/prepared_inputs.json",
+    "bytes": 114666459,
+    "sha256": "9b290818ccee792333a57519725b11a758597f26d00ed6568d54ff99444e0799"
+  },
+  "selection": {
+    "advancing_candidates": [
+      "projection_off"
+    ],
+    "applicability_candidates": [],
+    "backend_contrast": {
+      "f1": -0.00008412401001367531,
+      "precision": 0.001541632345868682,
+      "recall": -0.0011740571622299578,
+      "scope": "HMMER-minus-builtin under matched repaired construction and decision rules. Legacy-relative gains alone cannot establish HMMER-specific benefit; development point contrast, not independent confirmation."
+    },
+    "control_dependencies": {
+      "legacy_off": [],
+      "projection_off": [
+        "legacy_off"
+      ]
+    },
+    "execution_arms": [
+      "legacy_off",
+      "projection_off"
+    ],
+    "matched_projection_gates": {
+      "projection_builtin_reselect": {
+        "deltas": {
+          "f1": -0.005212080651192164,
+          "precision": -0.002010208045898576,
+          "recall": -0.007306907783114935
+        },
+        "eligible": false,
+        "scope": "Development point gate, not equivalence or independent confirmation"
+      },
+      "projection_hmmer_reselect": {
+        "deltas": {
+          "f1": -0.005296204661205839,
+          "precision": -0.000468575700029894,
+          "recall": -0.008480964945344893
+        },
+        "eligible": false,
+        "scope": "Development point gate, not equivalence or independent confirmation"
+      }
+    },
+    "original_gates": {
+      "projection_builtin_reselect": {
+        "deltas": {
+          "f1": -0.0048486670111721475,
+          "precision": -0.001124738689795235,
+          "recall": -0.007306907783114935
+        },
+        "eligible": false,
+        "scope": "Development point gate, not equivalence or independent confirmation"
+      },
+      "projection_hmmer_reselect": {
+        "deltas": {
+          "f1": -0.004932791021185823,
+          "precision": 0.0004168936560734471,
+          "recall": -0.008480964945344893
+        },
+        "eligible": false,
+        "scope": "Development point gate, not equivalence or independent confirmation"
+      },
+      "projection_off": {
+        "deltas": {
+          "f1": 0.0003634136400200161,
+          "precision": 0.0008854693561033411,
+          "recall": 0
+        },
+        "eligible": true,
+        "scope": "Development point gate, not equivalence or independent confirmation"
+      }
+    },
+    "roles": {
+      "legacy_off": "canonical_control",
+      "projection_off": "advancing_candidate"
+    },
+    "scope": "Original fixed pilot gates and declared inactivity only; required controls do not become advancing candidates.",
+    "stopped_candidates": [
+      "projection_builtin_reselect",
+      "projection_hmmer_reselect"
+    ]
+  },
+  "datasets": [
+    {
+      "dataset": "QfO",
+      "execution_plan": {
+        "path": "benchmarks/results/stockholm_projection_followup_qfo_v1_20261019/execution_plan.json",
+        "bytes": 114630317,
+        "sha256": "7870322150755c11464e08a31997a18f9a91eb12cd6baf9138f272005cea8bd9"
+      },
+      "inference": {
+        "submitted": true,
+        "job_id": "24523",
+        "last_observed_state": "RUNNING",
+        "restarts": 0,
+        "planned_cpus": 16,
+        "planned_memory": "128G",
+        "planned_wall_limit": "1-00:00:00",
+        "dependency": null,
+        "log": "benchmarks/results/stockholm_projection_followup_qfo_v1_20261019-24523.out"
+      }
+    },
+    {
+      "dataset": "ThreeKingdoms",
+      "execution_plan": {
+        "path": "benchmarks/results/stockholm_projection_followup_three_kingdoms_v1_20261019/execution_plan.json",
+        "bytes": 114406730,
+        "sha256": "f7c5921a524a5f1a287a8293f947c466c1a9bcac7c94bc020ec502986b0a0746"
+      },
+      "inference": {
+        "submitted": true,
+        "job_id": "24524",
+        "last_observed_state": "PENDING",
+        "restarts": 0,
+        "planned_cpus": 16,
+        "planned_memory": "128G",
+        "planned_wall_limit": "1-00:00:00",
+        "dependency": "afterok:24523",
+        "log": "benchmarks/results/stockholm_projection_followup_three_kingdoms_v1_20261019-24524.out"
+      }
+    }
+  ],
+  "submitted_argv": [
+    {
+      "dataset": "QfO",
+      "argv": [
+        "sbatch",
+        "--parsable",
+        "--job-name=ohmm-stockholm-qfo",
+        "--output=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/stockholm_projection_followup_qfo_v1_20261019-%j.out",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/stockholm_projection_followup_driver_v1_20261019/benchmark_tools/run_projection_followup.slurm",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/stockholm_projection_followup_driver_v1_20261019",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/stockholm_projection_followup_qfo_v1_20261019/execution_plan.json"
+      ]
+    },
+    {
+      "dataset": "ThreeKingdoms",
+      "argv": [
+        "sbatch",
+        "--parsable",
+        "--job-name=ohmm-stockholm-tk",
+        "--output=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/stockholm_projection_followup_three_kingdoms_v1_20261019-%j.out",
+        "--dependency=afterok:24523",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/stockholm_projection_followup_driver_v1_20261019/benchmark_tools/run_projection_followup.slurm",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/stockholm_projection_followup_driver_v1_20261019",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/stockholm_projection_followup_three_kingdoms_v1_20261019/execution_plan.json"
+      ]
+    }
+  ],
+  "preflight": "Successful24522 preparation reverified. Both plans validate exact source8f0cd560/driverabe393de/campaign, complete universes, original legacy/projection order/roles,349650 input records and six driver/protocol source records. Original graph/native commands verified16CPU, inferred phylogeny and residue-preserving flag only for projection_off; no HMMER or weighting combinations. All scientific/driver/runtime/tool pins rechecked. Independent reader84074667 source inventory verified1234 records. scontrol confirms correct frozen scripts,16CPU128G/one-day limits, zero restarts and sequential afterok24523 dependency.",
+  "scope": "Original independently admitted projection repair candidate and canonical control only. No reselection branch revived or thresholds retuned. Shared local Threadripper cached incremental costs, not isolated timing. Submitted jobs are not admitted transferred scores; require terminal-successful source/content/native/assessment/population/full-vector readback before conclusions.",
+  "accuracy_result_admitted": false,
+  "defaults_promoted": false,
+  "goal_completed": false
+}

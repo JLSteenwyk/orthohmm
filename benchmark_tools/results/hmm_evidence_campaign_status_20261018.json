@@ -406,7 +406,7 @@
     "implementation": "benchmark_tools/run_projection_followup.py prepare --campaign stockholm_annotation",
     "protocol": "benchmark_tools/hmm_stockholm_projection_followup_20261019.json",
     "milestone": "benchmark_tools/results/stockholm_projection_followup_driver_milestone_20261019.json",
-    "state": "new_driver_abe393de_and_reader84074667_tested_pushed_frozen_actual_pilot_admission_required",
+    "state": "source_bound_qfo24523_running_three_kingdoms24524_pending_original_two_arms",
     "campaign": "stockholm_annotation",
     "runner_commit": "abe393ded90143880378136bf60691581ed24061",
     "source": "benchmarks/work/stockholm_projection_followup_driver_v1_20261019",
@@ -415,21 +415,158 @@
     "preparer_revision": "017245981e62d6ca4955ba6acf08387f541ed9da",
     "preparation_job": "24521",
     "verification": "Exactabe393de remote verified, all1233 unique frozen source/driver/protocol records match committed bytes, native libraries unchanged. Standalone actual helper origins and Stockholm validator bind8f0cd560; actual24521 pending prerequisite rejected before inference.",
-    "submitted": false,
-    "scope": "Same original settings and gates; explicit new namespace/source/preparer binding, isolated full-inventory reauthentication and unchanged exact measurement reuse. Default old mode and frozen historical sources untouched. New driver and separate independent reader are tested/pushed/frozen; actual complete successful panel/preparation admission and original eligibility still required before inference."
+    "submitted": true,
+    "prepared_inputs": {
+      "path": "benchmarks/results/stockholm_projection_followup_inputs_v1_20261019/prepared_inputs.json",
+      "bytes": 114666459,
+      "sha256": "9b290818ccee792333a57519725b11a758597f26d00ed6568d54ff99444e0799"
+    },
+    "selection": {
+      "advancing_candidates": [
+        "projection_off"
+      ],
+      "applicability_candidates": [],
+      "backend_contrast": {
+        "f1": -0.00008412401001367531,
+        "precision": 0.001541632345868682,
+        "recall": -0.0011740571622299578,
+        "scope": "HMMER-minus-builtin under matched repaired construction and decision rules. Legacy-relative gains alone cannot establish HMMER-specific benefit; development point contrast, not independent confirmation."
+      },
+      "control_dependencies": {
+        "legacy_off": [],
+        "projection_off": [
+          "legacy_off"
+        ]
+      },
+      "execution_arms": [
+        "legacy_off",
+        "projection_off"
+      ],
+      "matched_projection_gates": {
+        "projection_builtin_reselect": {
+          "deltas": {
+            "f1": -0.005212080651192164,
+            "precision": -0.002010208045898576,
+            "recall": -0.007306907783114935
+          },
+          "eligible": false,
+          "scope": "Development point gate, not equivalence or independent confirmation"
+        },
+        "projection_hmmer_reselect": {
+          "deltas": {
+            "f1": -0.005296204661205839,
+            "precision": -0.000468575700029894,
+            "recall": -0.008480964945344893
+          },
+          "eligible": false,
+          "scope": "Development point gate, not equivalence or independent confirmation"
+        }
+      },
+      "original_gates": {
+        "projection_builtin_reselect": {
+          "deltas": {
+            "f1": -0.0048486670111721475,
+            "precision": -0.001124738689795235,
+            "recall": -0.007306907783114935
+          },
+          "eligible": false,
+          "scope": "Development point gate, not equivalence or independent confirmation"
+        },
+        "projection_hmmer_reselect": {
+          "deltas": {
+            "f1": -0.004932791021185823,
+            "precision": 0.0004168936560734471,
+            "recall": -0.008480964945344893
+          },
+          "eligible": false,
+          "scope": "Development point gate, not equivalence or independent confirmation"
+        },
+        "projection_off": {
+          "deltas": {
+            "f1": 0.0003634136400200161,
+            "precision": 0.0008854693561033411,
+            "recall": 0
+          },
+          "eligible": true,
+          "scope": "Development point gate, not equivalence or independent confirmation"
+        }
+      },
+      "roles": {
+        "legacy_off": "canonical_control",
+        "projection_off": "advancing_candidate"
+      },
+      "scope": "Original fixed pilot gates and declared inactivity only; required controls do not become advancing candidates.",
+      "stopped_candidates": [
+        "projection_builtin_reselect",
+        "projection_hmmer_reselect"
+      ]
+    },
+    "datasets": [
+      {
+        "dataset": "QfO",
+        "execution_plan": {
+          "path": "benchmarks/results/stockholm_projection_followup_qfo_v1_20261019/execution_plan.json",
+          "bytes": 114630317,
+          "sha256": "7870322150755c11464e08a31997a18f9a91eb12cd6baf9138f272005cea8bd9"
+        },
+        "inference": {
+          "submitted": true,
+          "job_id": "24523",
+          "last_observed_state": "RUNNING",
+          "restarts": 0,
+          "planned_cpus": 16,
+          "planned_memory": "128G",
+          "planned_wall_limit": "1-00:00:00",
+          "dependency": null,
+          "log": "benchmarks/results/stockholm_projection_followup_qfo_v1_20261019-24523.out"
+        }
+      },
+      {
+        "dataset": "ThreeKingdoms",
+        "execution_plan": {
+          "path": "benchmarks/results/stockholm_projection_followup_three_kingdoms_v1_20261019/execution_plan.json",
+          "bytes": 114406730,
+          "sha256": "f7c5921a524a5f1a287a8293f947c466c1a9bcac7c94bc020ec502986b0a0746"
+        },
+        "inference": {
+          "submitted": true,
+          "job_id": "24524",
+          "last_observed_state": "PENDING",
+          "restarts": 0,
+          "planned_cpus": 16,
+          "planned_memory": "128G",
+          "planned_wall_limit": "1-00:00:00",
+          "dependency": "afterok:24523",
+          "log": "benchmarks/results/stockholm_projection_followup_three_kingdoms_v1_20261019-24524.out"
+        }
+      }
+    ],
+    "plan_preparation": {
+      "job_id": "24522",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed": "00:06:22",
+      "cpus": 1,
+      "memory_allocation": "16G",
+      "log": "benchmarks/results/stockholm_projection_followup_prepare_v1_20261019-24522.out",
+      "submission": "benchmark_tools/results/stockholm_transfer_plan_preparation_submission_20261019.json"
+    },
+    "launch_manifest": "benchmark_tools/results/stockholm_projection_transfer_launch_20261019.json",
+    "accuracy_result_admitted": false,
+    "scope": "Complete original pilot and preparation are admitted; only legacy/projection repair arms are now submitted on QfO then Three Kingdoms with an explicit afterok dependency. Driverabe393de and reader84074667 tested/pushed/frozen, sources/runtime/tools and unchanged commands reverified before submission. Old default mode/frozen failures and all original gates preserved. This immutable launch must bind both actual jobs/plans and separate reader; no transferred accuracy admission or goal closure before complete independent full-vector readback."
   },
   "stockholm_projection_followup_postrun_readback": {
     "implementation": "benchmark_tools/report_projection_followup.py --campaign stockholm_annotation",
     "protocol": "benchmark_tools/hmm_stockholm_projection_followup_readback_20261019.json",
     "milestone": "benchmark_tools/results/stockholm_projection_followup_reader_milestone_20261019.json",
-    "state": "new_explicit_full_vector_reader_tested1286_pushed_frozen84074667_no_transfer_submitted",
+    "state": "reader84074667_frozen_science24523_24524_submitted_immutable_launch_binding_next",
     "runner_commit": "840746675e9dc1e953c0adee7dba158182922b19",
     "scientific_reader_source": "benchmarks/work/stockholm_projection_followup_readback_v1_20261019",
     "scientific_revision": "8f0cd5605842e470e64f40c31bc608c37945b8b3",
     "driver_revision": "abe393ded90143880378136bf60691581ed24061",
     "preparer_revision": "017245981e62d6ca4955ba6acf08387f541ed9da",
     "job": {"submitted": false, "planned_cpus": 1, "planned_memory": "16G", "planned_wall_limit": "02:00:00"},
-    "verification": "Exact84074667 remote revision verified before freeze; actual frozen reporter_inventory verifies1234 source/protocol records and unchanged three native hashes. Frozen run() correctly rejects unsubmitted new launch before output creation. No transfer biological job or reader submitted.",
+    "verification": "Exact84074667 remote revision verified before freeze; actual frozen reporter_inventory reverified1234 source/protocol records immediately before transfer submission. Frozen unsubmitted-launch guard passed earlier. Scientific jobs24523/24524 now submitted after complete original admission/preparation and preflight; immutable launch binding and reader submission follow, not transferred accuracy admission.",
     "scope": "Explicit new immutable-launch/campaign binding only. Original score/native/population/assessment/full-vector and sequential checks preserved; seven scientific/evaluation function ASTs unchanged. Old reader/default/frozen failures untouched. Complete new panel/preparation/original eligibility and actual two submitted transfer jobs/plans are still required; no accuracy admission or goal closure."
   },
   "completed_hmm_incremental_resource_readback": {
@@ -451,7 +588,7 @@
   },
   "stockholm_five_arm_admission": {
     "milestone": "benchmark_tools/results/stockholm_pilot_admission_20261019.json",
-    "state": "science24519_reader24520_preparation24521_completed_only_projection_off_advances_plans24522_running",
+    "state": "science_reader_preparation_completed_only_projection_off_advances_plans24522_completed_transfers24523_24524_submitted",
     "scientific_revision": "8f0cd5605842e470e64f40c31bc608c37945b8b3",
     "jobs": {"24519": "COMPLETED0:0,02:06:50,16CPU128G", "24520": "COMPLETED0:0,00:03:15,1CPU16G", "24521": "COMPLETED0:0,00:03:15,1CPU16G"},
     "readback": {"path": "benchmarks/results/stockholm_annotation_recovery_readback_v1_20261019/summary.json", "bytes": 20264972, "sha256": "c8a260b7d71e12d4fb7b12a6c6a952a665551ad36975dfff7eafeddc65c346bc"},
@@ -465,7 +602,7 @@
   "remaining": [
     "Completed weighting/local source-bound evidence and comparison integrated after464691 unique-record readback; retain mixed weighting candidates without default promotion and stop fixed neutral local branch. Original HMMER24493/reader24498/collator24501 failures preserved; prepare a new recovery/report namespace rather than retargeting old immutable bindings.",
     "Extend only advancing arms to corrected QfO and Three Kingdoms; retain all eight endpoint slots and denominator/resource diagnostics, including explicit NA for stopped branches.",
-    "New complete science24519, independent reader24520 and input preparation24521 are COMPLETED0:0. Only projection_off passes original pilot gate; both active builtin/HMMER reselection policies fail recall/F1 and stop without retuning or applicability fallback. Monitor read-only24522, verify both fresh plans, then run original legacy/projection arms sequentially on corrected QfO and Three Kingdoms. New driverabe393de/reader84074667 tested/pushed/frozen; bind actual two jobs/plans and reader in a new immutable launch. Preserve all old failed7f82be69/a884d9c0 and98e05ee6/80974fba/f491275c sources/jobs, never retarget or loosen gates. Repair's tiny development gain is not significance, generalizability or default promotion.",
+    "Complete science24519, independent reader24520, input preparation24521 and two-plan preparation24522 are COMPLETED0:0. Only projection_off passes original pilot gate; both active builtin/HMMER reselection policies fail recall/F1 and stop without retuning or applicability fallback. Monitor new QfO24523 and sequential afterok24523 ThreeKingdoms24524 without duplication. Driverabe393de/reader84074667 tested/pushed/frozen and exact sources/runtime/tool/plan/role preflight passed. Bind actual two jobs/plans and reader in a new immutable launch, queue separate reader and require complete full-vector admission. Preserve all old failed7f82be69/a884d9c0 and98e05ee6/80974fba/f491275c sources/jobs; never retarget or loosen gates. Repair's tiny development gain is not significance, generalizability or default promotion.",
     "Evaluate justified combinations, seek post-freeze confirmation if available, update the full comparator table and final recommendation, and verify all intended milestones committed/pushed."
   ],
   "defaults_promoted": false,
