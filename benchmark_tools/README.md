@@ -100,6 +100,21 @@ old/partial/cross-campaign evidence cannot enter the new report. Native/score,
 functional-population, matched-control and sequential-accounting checks are
 unchanged, and this report alone cannot close the campaign or promote defaults.
 
+The [complete individual-effects report contract](hmm_transfer_campaign_report_20261019.json)
+uses `report_hmm_transfer_campaign.py --repo <repo> --output <fresh directory>`.
+It binds the immutable `4db33200` reader submission to the exact `83ac596e`
+two-dataset launch and refuses pending or failed transfer readback before
+creating report output. It joins the original weighting/local admissions and
+complete five-arm pilot with independently admitted projection transfers,
+preserving all original cells, gates, control roles, uncertainty and stopped
+branches. Both earlier execution failures remain all-NA history rows, not
+negative accuracy. The score table retains contextual tools and all eight
+endpoint slots; a separate resource table distinguishes raw phase receipts
+from producer metadata and excludes unmeasured contextual-tool costs. No new
+inference, scoring or sampling occurs. This individual-effects compilation
+still requires justified-combination assessment, a final candidate freeze,
+confirmation or documented data limits, and final recommendation/remote audit.
+
 | Workflow | Execution | Separate result validation |
 | --- | --- | --- |
 | Weighted-profile and alignment-guard OrthoBench pilots | `run_profile_weighting_pilot.py` | `report_profile_evidence_pilot.py` |
@@ -111,6 +126,7 @@ unchanged, and this report alone cannot close the campaign or promote defaults.
 | Separately bound recovery campaign comparison | No new inference | `report_hmm_recovery_campaign.py` |
 | Gated projection transfer input preparation | `plan_projection_followup.py` after independent pilot admission | Inputs only; separately frozen execution/reader and original gates required |
 | Fixed projection transfer execution | Standalone `run_projection_followup.py prepare`, then its frozen Slurm driver | `report_projection_followup.py --launch-revision <full immutable commit>` |
+| Complete admitted individual mechanisms and projection transfers | No new inference; immutable successful input-reader bindings required | `report_hmm_transfer_campaign.py` |
 
 The [recovery report protocol](hmm_recovery_campaign_report_20261019.json)
 retains the original successful weighting/local reader bindings and separately
