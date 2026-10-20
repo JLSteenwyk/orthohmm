@@ -21,6 +21,20 @@
     "defaults_promoted": false,
     "goal_completed": false
   },
+  "weighted_projection_followup_selection": {
+    "implementation": "benchmark_tools/plan_weighted_projection_followup.py",
+    "launcher": "benchmark_tools/plan_weighted_projection_followup.slurm",
+    "milestone": "benchmark_tools/results/weighted_projection_selection_milestone_20261019.json",
+    "state": "tested1647_in43modules_ready_for_commit_push_freeze_and_dependent_readonly_submission",
+    "reader_submission_revision": "ddabca65c610855d86fa21402296e8920a9ad35b",
+    "scientific_launch_revision": "73a26cb8ecc5deb19319aa988bb0f3ecf363f99f",
+    "scientific_revision": "86e39314ba462698b726f569a5d98a144c8d0086",
+    "dependency": "afterany:24539",
+    "resources": {"cpus": 1, "memory_allocation": "16G", "wall_limit": "02:00:00"},
+    "scope": "Selection-only planner; actual complete terminal-successful original reader admission and unchanged gates required. Retain every passing combination and exact0/4/6 matched closure; no fallback, retuning, winner suppression or control promotion. No scientific case/evaluation prepared or submitted. Full-dataset driver/readback remain required only for admitted passes.",
+    "defaults_promoted": false,
+    "goal_completed": false
+  },
   "weighted_projection_postrun_readback": {
     "runner_commit": "86e39314ba462698b726f569a5d98a144c8d0086",
     "scientific_reader_source": "benchmarks/work/weighted_projection_readback_v1_20261019",

@@ -76,6 +76,19 @@ scientific execution retains16CPU/128G/day, one new scientific job at a time.
 The tested runner and reader must be pushed and frozen before a new launch;
 code/unit-fixture readiness is not evidence of joint biological accuracy gains.
 
+`plan_weighted_projection_followup.py --repo <repo> --driver <frozen planner>
+--output <fresh directory>` authenticates the exact submitted pilot/reader
+bindings and requires complete terminal-successful source/native/score admission
+before reproducing the original three-control gates. It retains every passing
+combination and its matched closure: no arms if neither passes, four arms if one
+passes, six if both pass. Controls retain their registered roles; stopped
+combinations receive no fallback or retuning. Its1CPU/16G/two-hour Slurm wrapper
+can wait for the original reader without launching new scientific work.
+This planner produces selection only. A passing panel still needs the tested,
+frozen full-dataset execution/assessment reader with recomputed controls,
+unchanged settings and source-bound conditional assessment reuse. It is not an
+execution-ready QfO/Three Kingdoms plan or an accuracy/default recommendation.
+
 `report_completed_hmm_resources.py --repo <repo> --output <fresh directory>`
 exports phase-specific costs from the immutable completed weighting/local
 admission. It rehashes and reparses saved GNU-time/log receipts, keeps producer
