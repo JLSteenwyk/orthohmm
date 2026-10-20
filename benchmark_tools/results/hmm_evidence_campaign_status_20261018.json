@@ -9,8 +9,9 @@
   "weighted_projection_ablation": {
     "protocol": "benchmark_tools/hmm_weighted_projection_ablation_20261019.json",
     "planning_revision": "0e9f87c31995082babbb751f0f85584c29d98995",
-    "state": "canonical_control_exactly_reproduced_checkpoint24542_completed_science24538_continues_other_controls_and_combinations_no_panel_admission",
+    "state": "four_controls_reproduced_first_combination_fixed_gate_failure_rechecked24543_second_combination_running24538_no_panel_admission",
     "canonical_reproduction_checkpoint": "benchmark_tools/results/weighted_projection_canonical_checkpoint_20261019.json",
+    "first_combination_checkpoint": "benchmark_tools/results/weighted_projection_first_combination_checkpoint_20261020.json",
     "workflow_milestone": "benchmark_tools/results/weighted_projection_workflow_milestone_20261019.json",
     "scientific_core_commit": "e33fac1300552f0377b758ca135e7e5da22a1e4a",
     "scientific_core_source": "benchmarks/work/weighted_projection_core_v1_20261019",
@@ -39,6 +40,21 @@
       "job_id": "24541", "state": "FAILED", "exit_code": "1:0",
       "reason": "Checkpoint exact-byte assertion rejected JSON-reserialized snapshot after numeric species keys reordered. Actual control checks had passed. Failed snapshot/log/script retained; corrected v2 uses existing raw-byte snapshot helper in a fresh namespace. Original scientific run and all gates untouched; not negative biology."
     },
+    "accuracy_result_admitted": false,
+    "defaults_promoted": false,
+    "goal_completed": false
+  },
+  "weighted_projection_first_combination_checkpoint": {
+    "summary": "benchmark_tools/results/weighted_projection_first_combination_checkpoint_20261020.json",
+    "state": "completed_first_combination_separately_rechecked_fixed_gate_failed_pending_terminal_whole_panel_admission",
+    "job_id": "24543", "job_state": "COMPLETED", "exit_code": "0:0",
+    "cpus": 1, "memory_allocation": "16G", "wall_limit": "02:00:00",
+    "scientific_job": "24538", "scientific_revision": "86e39314ba462698b726f569a5d98a144c8d0086",
+    "source": "benchmarks/work/weighted_projection_readback_v1_20261019",
+    "label": "repair_henikoff",
+    "f1": 0.7417835808701916, "precision": 0.8199309961355757, "recall": 0.6772363555996516,
+    "original_gate_eligible": false,
+    "scope": "Read-only frozen shared-helper source/runtime/command/actual joint construction/native ownership/pair/confidence/rooted-tree/official-score recheck of the completed first combination. All15901 profiles actually used Henikoff weighting and residue-preserving projection; original three-control gate recomputed unchanged. Higher F1 than canonical and repair solo but lower than Henikoff solo, so no retuning or QfO/Three Kingdoms extension of this fixed candidate. Original science24538 continues the second combination; terminal reader24539/selection24540 and all original gates remain required. Not whole-panel admission, significance, statistical inferiority or independent biological confirmation.",
     "accuracy_result_admitted": false,
     "defaults_promoted": false,
     "goal_completed": false

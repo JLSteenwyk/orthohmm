@@ -136,7 +136,14 @@ The default remains `legacy`. It can be paired with `henikoff` or
 weighting and alignment guards remain unsupported with projection repair.
 Joint runs record both actual per-profile policies and effective counts in the
 weighting diagnostics. These joint settings are computationally tested but
-still await their registered biological pilot; they are not recommended defaults.
+their registered six-arm biological pilot is not yet fully admitted. A separate
+frozen readback confirmed that `henikoff` plus projection repair has OrthoBench
+F1 0.741784, above canonical (0.741061) but below `henikoff` alone (0.741965).
+It therefore fails the fixed stronger-constituent advancement gate; no retuning
+or full-dataset extension of that candidate is planned. The second combination
+and terminal whole-panel validation remain pending. See the
+[provisional checkpoint](benchmark_tools/results/weighted_projection_first_combination_checkpoint_20261020.json).
+Neither joint setting is a recommended default.
 
 The separate `--profile-alignment-policy strict_span_guard` experiment also
 requires fresh built-in high-sensitivity inference and cannot be combined
