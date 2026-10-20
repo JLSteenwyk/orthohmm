@@ -112,3 +112,23 @@ def test_citation_rendering_and_rejection(tmp_path, case):
     assert 'id="ref-method"' in output.read_text()
     assert "Test Method" in output.read_text()
     assert any(Path(s["path"]) == bibliography for s in result["sources"])
+
+
+@pytest.mark.skipif(shutil.which("pandoc") is None, reason="pandoc required")
+def test_explicit_stylesheet_is_linked_and_hash_checked(tmp_path):
+    subprocess.run(["git", "init", "-q", str(tmp_path)], check=True)
+    draft = tmp_path / "draft.md"; draft.write_text("# Styled review\n")
+    stylesheet = tmp_path / "paper.css"; stylesheet.write_text(".figure-sheet { break-before: page; }\n")
+    result = render(tmp_path, draft, tmp_path / "review.html", tmp_path / "receipt.json", stylesheet=stylesheet)
+    assert 'href="paper.css"' in (tmp_path / "review.html").read_text()
+    assert any(Path(p["path"]) == stylesheet for p in result["sources"])
+    assert "--css" in result["render_command"]
+
+
+@pytest.mark.skipif(shutil.which("pandoc") is None, reason="pandoc required")
+def test_stylesheet_cannot_escape_repository(tmp_path):
+    repo = tmp_path / "repo"; repo.mkdir()
+    draft = repo / "draft.md"; draft.write_text("# Review\n")
+    stylesheet = tmp_path / "outside.css"; stylesheet.write_text("body { color: black; }")
+    with pytest.raises(ValueError, match="Stylesheet escapes"):
+        render(repo, draft, repo / "review.html", repo / "receipt.json", stylesheet=stylesheet)

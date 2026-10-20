@@ -2,6 +2,7 @@
 
 import argparse
 import json
+from os.path import relpath
 from pathlib import Path
 import shutil
 import subprocess
@@ -56,7 +57,7 @@ def citation_ids(document):
     return identifiers
 
 
-def render(repo, manuscript, output, report, bibliography=None):
+def render(repo, manuscript, output, report, bibliography=None, stylesheet=None):
     repo, manuscript = repo.resolve(), manuscript.resolve()
     output, report = output.absolute(), report.absolute()
     if output.parent.resolve() != manuscript.parent or output == report:
@@ -69,6 +70,13 @@ def render(repo, manuscript, output, report, bibliography=None):
         raise FileNotFoundError("pandoc")
     print_header = Path(__file__).with_name("manuscript_review_print.html")
     sources = [record(p) for p in (manuscript, binary, __file__, print_header)]
+    stylesheet_args = []
+    if stylesheet is not None:
+        stylesheet = stylesheet.resolve()
+        if not stylesheet.is_relative_to(repo):
+            raise ValueError("Stylesheet escapes repository")
+        sources.append(record(stylesheet))
+        stylesheet_args = ["--css", relpath(stylesheet, output.parent)]
     parse_command = [binary, "--from=markdown", "--to=json", str(manuscript)]
     parsed = subprocess.run(parse_command, capture_output=True, text=True, check=True, timeout=60)
     document = json.loads(parsed.stdout)
@@ -94,7 +102,8 @@ def render(repo, manuscript, output, report, bibliography=None):
     tracked = set(subprocess.check_output(["git", "ls-files", "-z"], cwd=repo, text=True).split("\0"))
     command = [binary, "--from=markdown", "--to=html5", "--standalone",
                "--metadata=pagetitle:OrthoHMM publication working draft",
-               "--include-in-header", str(print_header), *bibliography_args, str(manuscript)]
+               "--include-in-header", str(print_header), *stylesheet_args,
+               *bibliography_args, str(manuscript)]
     rendered = subprocess.run(command, capture_output=True, text=True, check=True, timeout=60)
     for item in [*sources, *targets.values()]:
         check(item)
@@ -123,5 +132,6 @@ if __name__ == "__main__":
     for name in ("repo", "manuscript", "output", "report"):
         parser.add_argument("--" + name, required=True, type=Path)
     parser.add_argument("--bibliography", type=Path)
+    parser.add_argument("--stylesheet", type=Path)
     args = parser.parse_args()
-    render(args.repo, args.manuscript, args.output, args.report, args.bibliography)
+    render(args.repo, args.manuscript, args.output, args.report, args.bibliography, args.stylesheet)

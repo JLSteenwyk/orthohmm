@@ -305,7 +305,8 @@ def orthobench(data):
     axes[1].set(xlim=(0, 1.02), ylim=(0, 1.02), xlabel="Weighted recall", ylabel="Weighted precision", title="B  Precision-recall trade-off")
     for m in methods:
         if m["short"] in ("OH-C", "OF-F"):
-            axes[1].annotate(m["short"], (number(m["diagnostics"]["OB"]["recall"]), number(m["diagnostics"]["OB"]["precision"])), xytext=(5, 8), textcoords="offset points", fontsize=8)
+            label = "OH-C/P" if m["short"] == "OH-C" else m["short"]
+            axes[1].annotate(label, (number(m["diagnostics"]["OB"]["recall"]), number(m["diagnostics"]["OB"]["precision"])), xytext=(5, 8), textcoords="offset points", fontsize=8)
     for ax in axes: style(ax)
     legend(fig, methods)
     fig.subplots_adjust(left=.07, right=.98, top=.94, bottom=.26, wspace=.30)
@@ -321,7 +322,10 @@ def pareto_plot(data):
         ax.set(xlim=(0, 1.02), ylim=(0, 1.02), xlabel=a + " F1", ylabel=b + " F1", title=letter + "  Pairwise point-estimate frontier")
         for m in methods:
             if m["short"] in ("OF-F", "OH-C"):
-                ax.annotate(m["short"], (m["scores"][a], m["scores"][b]), xytext=(-35, -14), textcoords="offset points", fontsize=8,
+                offset = (-45, 10) if m["short"] == "OF-F" else (-45, -23)
+                if letter == "A" and m["short"] == "OF-F":
+                    offset = (-45, -13)
+                ax.annotate(m["short"], (m["scores"][a], m["scores"][b]), xytext=offset, textcoords="offset points", fontsize=8,
                     arrowprops=dict(arrowstyle="-", linewidth=.5, color=m["color"]))
         style(ax)
     ax = axes[1, 1]
@@ -333,6 +337,8 @@ def pareto_plot(data):
     front_line(ax, methods, lambda m: (m["scores"]["OB"], m["scores"]["VGNC"]))
     ax.set(xlim=(.74095, .7422), ylim=(.90065, .9023), xlabel="OB F1 (magnified)", ylabel="VGNC F1 (magnified)", title="D  Small development differences")
     ax.ticklabel_format(useOffset=False, axis="both"); style(ax)
+    members = {r["key"] for r in data["pareto"]["primary_three_F1"] if r["nondominated"]}
+    fig.suptitle("Primary three-objective frontier: " + ", ".join(m["short"] for m in methods if m["key"] in members), fontsize=10, y=.992)
     legend(fig, methods)
     fig.subplots_adjust(left=.075, right=.98, top=.95, bottom=.20, hspace=.40, wspace=.32)
     return fig
