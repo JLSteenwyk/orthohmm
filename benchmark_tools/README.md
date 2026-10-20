@@ -14,6 +14,10 @@ consolidate all four mechanisms and the stopped interaction. Defaults remain
 unchanged: standalone effects are mixed and neither combination beats its
 weighting-only constituent. Missing independent confirmation is an explicit
 claim limitation, not an unfinished scientific execution.
+The [concise manuscript package](../manuscript/hmm_frontier_20261020/README.md)
+adds original figures, exact three- and five-F1 frontier membership, full source
+tables and standalone snapshot-based plotting. It reuses the completed evidence
+without new inference, functional sampling or default promotion.
 The [dated scheduler reconciliation](results/hmm_campaign_scheduler_reconciliation_20261020.json)
 records accounting for all48 unique campaign jobs and corrects15 stale scheduler
 states in the mutable ledger. Older submission/progress prose is historical;

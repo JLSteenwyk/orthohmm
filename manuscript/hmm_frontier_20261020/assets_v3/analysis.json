@@ -1,0 +1,2867 @@
+{
+  "all_scores_tsv": "method\tevidence\tOrthoBench: OrthoBench F1\tQfO: VGNC F\tQfO: SwissTrees F\tQfO: TreeFam-A F\tQfO: EC\tQfO: GO\tQfO: FAS\tThreeKingdoms: Three Kingdoms F1\nOrthoHMM high sensitivity\tretained_context_not_reaudited_here\t0.7035899765495244\t0.6659331499541553\t0.6854977808857662\t0.6050078839081693\t0.93203769\t0.4722711\t0.7765850417998846\t0.8263090676883781\nOrthoHMM phylogeny satellite_v2\tretained_context_not_reaudited_here\t0.7410607351873405\t0.9016900956268489\t0.8335132205147882\t0.614863704412014\t0.9656505\t0.49034928\t0.7629933121004577\t0.872133159469203\nOrthoFinder 3.1.5 full\tretained_context_not_reaudited_here\t0.7273648000422167\t0.9885463295714856\t0.8484132682382873\t0.7919177591512453\t0.93613021\t0.46954797\t0.6914221332471376\t0.9885816480946485\nOrthoFinder 3.1.5 sequence-only checkpoint\tretained_context_not_reaudited_here\t0.58705963184\t0.1427548455331809\t0.6905148246056576\t0.7344069307487682\t0.7536416\t0.40704311\t0.5617530837830421\t0.9894507588647655\nSonicParanoid 2.0.9\tretained_context_not_reaudited_here\t0.4675760912\t0.9827943352356794\t0.798459422080563\t0.7719558753542073\t0.87276097\t0.45438453\t0.736680187140205\t0.9912758996728462\nProteinOrtho 6.3.6\tretained_context_not_reaudited_here\t0.45057346674000004\t0.9548962442119706\t0.7181110000474794\t0.6431874339159368\t0.96316811\t0.4863364\t0.8135948641193668\t0.9304626127436718\nFastOMA 0.3.5 final orthologous groups\tretained_context_not_reaudited_here\t0.30906942172\t0.9500961370389792\t0.7802191344441686\t0.6579015590472269\t0.89716752\t0.43689352\t0.6543663364244952\t0.8616551830920492\nOrthoMCL 1.4\tretained_context_not_reaudited_here\t0.55065342292\t0.6420265327291587\t0.7666097433127044\t0.7536851790190046\t0.92132599\t0.46375473\t0.7337522155738428\t0.9889293818331844\nOrthoHMM canonical collection (experimental)\tretained_context_not_reaudited_here\t0.7410607351873405\t0.9020677639723076\t0.831347705694284\t0.6157780611844207\t0.96538176\t0.49023637\t0.7637247098243404\t0.872133159469203\nOrthoHMM profile weighting none\tcomplete_development_vector\t0.7410607351873405\t0.9020677639723076\t0.831347705694284\t0.6157780611844207\t0.96538176\t0.49023637\t0.7637247098243404\t0.872133159469203\nOrthoHMM profile weighting henikoff\tcomplete_development_vector\t0.7419645219079308\t0.9009087571140076\t0.8292184762768233\t0.6157277404715209\t0.96768396\t0.48988675\t0.762825030275764\t0.8717870022251208\nOrthoHMM profile weighting henikoff_cluster\tcomplete_development_vector\t0.7419468378090919\t0.9010257704752508\t0.831347705694284\t0.6132308395434054\t0.96758148\t0.48982646\t0.7624683130297215\t0.8691840344535876\nOrthoHMM profile weighting species_henikoff_cluster\tstopped_after_orthobench_point_gate\t0.7379797569038284\tNA\tNA\tNA\tNA\tNA\tNA\tNA\nOrthoHMM alignment guard\tstopped_after_orthobench_point_gate\t0.7391503919942537\tNA\tNA\tNA\tNA\tNA\tNA\tNA\nOrthoHMM local off\tunchanged_control\t0.7410607351873405\tNA\tNA\tNA\tNA\tNA\tNA\tNA\nOrthoHMM local local_joint_v1\tstopped_after_orthobench_point_gate\t0.7410607351873405\tNA\tNA\tNA\tNA\tNA\tNA\tNA\nOrthoHMM projection legacy_off\tcomplete_development_vector\t0.7410607351873405\t0.9020677639723076\t0.831347705694284\t0.6157780611844207\t0.96538176\t0.49023637\t0.7637247098243404\t0.872133159469203\nOrthoHMM projection projection_off\tcomplete_development_vector\t0.7414241488273605\t0.9013877738272739\t0.8335132205147882\t0.6163751436840722\t0.96583455\t0.48958961\t0.763292288871938\t0.8702266615443719\nOrthoHMM projection projection_builtin_reselect\tnot_extended_after_original_pilot\t0.7362120681761684\tNA\tNA\tNA\tNA\tNA\tNA\tNA\nOrthoHMM projection projection_hmmer_score_only\tnot_extended_after_original_pilot\t0.7414241488273605\tNA\tNA\tNA\tNA\tNA\tNA\tNA\nOrthoHMM projection projection_hmmer_reselect\tnot_extended_after_original_pilot\t0.7361279441661547\tNA\tNA\tNA\tNA\tNA\tNA\tNA\nOrthoHMM selective HMMER original pilot (unadmitted)\tfailed_incomplete_panel_not_accuracy_evidence\tNA\tNA\tNA\tNA\tNA\tNA\tNA\tNA\nOrthoHMM prior projection recovery (failed execution)\tfailed_incomplete_panel_not_accuracy_evidence\tNA\tNA\tNA\tNA\tNA\tNA\tNA\tNA\nOrthoHMM weighting/projection legacy_none\tinteraction_control_reproduced\t0.7410607351873405\tNA\tNA\tNA\tNA\tNA\tNA\tNA\nOrthoHMM weighting/projection legacy_henikoff\tinteraction_control_reproduced\t0.7419645219079308\tNA\tNA\tNA\tNA\tNA\tNA\tNA\nOrthoHMM weighting/projection legacy_henikoff_cluster\tinteraction_control_reproduced\t0.7419468378090919\tNA\tNA\tNA\tNA\tNA\tNA\tNA\nOrthoHMM weighting/projection repair_none\tinteraction_control_reproduced\t0.7414241488273605\tNA\tNA\tNA\tNA\tNA\tNA\tNA\nOrthoHMM weighting/projection repair_henikoff\tstopped_after_stronger_constituent_point_gate\t0.7417835808701916\tNA\tNA\tNA\tNA\tNA\tNA\tNA\nOrthoHMM weighting/projection repair_henikoff_cluster\tstopped_after_stronger_constituent_point_gate\t0.7416275247034139\tNA\tNA\tNA\tNA\tNA\tNA\tNA\n",
+  "collapsed_aliases": {
+    "profile_weighting:none": [
+      "canonical_collection:canonical",
+      "projection_recovery:legacy_off"
+    ]
+  },
+  "defaults_promoted": false,
+  "endpoint_names": {
+    "EC": "QfO: EC",
+    "FAS": "QfO: FAS",
+    "GO": "QfO: GO",
+    "OB": "OrthoBench: OrthoBench F1",
+    "SwissTrees": "QfO: SwissTrees F",
+    "TK": "ThreeKingdoms: Three Kingdoms F1",
+    "TreeFam": "QfO: TreeFam-A F",
+    "VGNC": "QfO: VGNC F"
+  },
+  "independent_confirmation_established": false,
+  "limitations": [
+    "Point-estimate dominance is not statistical superiority.",
+    "Functional means use different conditional populations and are excluded from accuracy frontiers.",
+    "Timing revisions differ from current experimental configurations; no joint accuracy-runtime frontier.",
+    "TreeFam supporting; Three Kingdoms limited marker co-membership, not genome-wide orthology truth."
+  ],
+  "methods": [
+    {
+      "color": "#0072B2",
+      "diagnostics": {
+        "EC": {
+          "assessed_relations": "118067",
+          "native_genes": "984137",
+          "native_species": "78",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        },
+        "FAS": {
+          "assessed_relations": "5953050.0",
+          "native_genes": "984137",
+          "native_species": "78",
+          "numeric_scored_pairs": "176307",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        },
+        "GO": {
+          "assessed_relations": "84021",
+          "native_genes": "984137",
+          "native_species": "78",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        },
+        "OB": {
+          "assessed_relations": "NA",
+          "native_genes": "251378",
+          "native_species": "12",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.8177045380181867",
+          "recall": "0.6775533630827973",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        },
+        "SwissTrees": {
+          "assessed_relations": "NA",
+          "native_genes": "984137",
+          "native_species": "78",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.95464765",
+          "recall": "0.73625484",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        },
+        "TK": {
+          "assessed_relations": "NA",
+          "native_genes": "443217",
+          "native_species": "12",
+          "numeric_scored_pairs": "NA",
+          "precision": "1.0",
+          "recall": "0.7732589771490751",
+          "reference_gene_coverage": "1.0",
+          "semantics": "NA"
+        },
+        "TreeFam": {
+          "assessed_relations": "NA",
+          "native_genes": "984137",
+          "native_species": "78",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.95933142",
+          "recall": "0.45340559",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        },
+        "VGNC": {
+          "assessed_relations": "NA",
+          "native_genes": "984137",
+          "native_species": "78",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.9993396993092238",
+          "recall": "0.8220523105205984",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        }
+      },
+      "evidence": "complete_development_vector",
+      "key": "profile_weighting:none",
+      "label": "OrthoHMM canonical",
+      "marker": "o",
+      "scores": {
+        "EC": 0.96538176,
+        "FAS": 0.7637247098243404,
+        "GO": 0.49023637,
+        "OB": 0.7410607351873405,
+        "SwissTrees": 0.831347705694284,
+        "TK": 0.872133159469203,
+        "TreeFam": 0.6157780611844207,
+        "VGNC": 0.9020677639723076
+      },
+      "short": "OH-C"
+    },
+    {
+      "color": "#117733",
+      "diagnostics": {
+        "EC": {
+          "assessed_relations": "116182",
+          "native_genes": "984137",
+          "native_species": "78",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        },
+        "FAS": {
+          "assessed_relations": "5950178.0",
+          "native_genes": "984137",
+          "native_species": "78",
+          "numeric_scored_pairs": "176709",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        },
+        "GO": {
+          "assessed_relations": "84223",
+          "native_genes": "984137",
+          "native_species": "78",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        },
+        "OB": {
+          "assessed_relations": "NA",
+          "native_genes": "251378",
+          "native_species": "12",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.8185134704695101",
+          "recall": "0.6785090546528878",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        },
+        "SwissTrees": {
+          "assessed_relations": "NA",
+          "native_genes": "984137",
+          "native_species": "78",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.95462812",
+          "recall": "0.73293296",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        },
+        "TK": {
+          "assessed_relations": "NA",
+          "native_genes": "443217",
+          "native_species": "12",
+          "numeric_scored_pairs": "NA",
+          "precision": "1.0",
+          "recall": "0.7727149075081611",
+          "reference_gene_coverage": "1.0",
+          "semantics": "NA"
+        },
+        "TreeFam": {
+          "assessed_relations": "NA",
+          "native_genes": "984137",
+          "native_species": "78",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.95960136",
+          "recall": "0.45329077",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        },
+        "VGNC": {
+          "assessed_relations": "NA",
+          "native_genes": "984137",
+          "native_species": "78",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.9993381529375828",
+          "recall": "0.820130358485836",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        }
+      },
+      "evidence": "complete_development_vector",
+      "key": "profile_weighting:henikoff",
+      "label": "OrthoHMM Henikoff",
+      "marker": ">",
+      "scores": {
+        "EC": 0.96768396,
+        "FAS": 0.762825030275764,
+        "GO": 0.48988675,
+        "OB": 0.7419645219079308,
+        "SwissTrees": 0.8292184762768233,
+        "TK": 0.8717870022251208,
+        "TreeFam": 0.6157277404715209,
+        "VGNC": 0.9009087571140076
+      },
+      "short": "OH-W"
+    },
+    {
+      "color": "#44AA99",
+      "diagnostics": {
+        "EC": {
+          "assessed_relations": "116167",
+          "native_genes": "984137",
+          "native_species": "78",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        },
+        "FAS": {
+          "assessed_relations": "5954794.0",
+          "native_genes": "984137",
+          "native_species": "78",
+          "numeric_scored_pairs": "175092",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        },
+        "GO": {
+          "assessed_relations": "84443",
+          "native_genes": "984137",
+          "native_species": "78",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        },
+        "OB": {
+          "assessed_relations": "NA",
+          "native_genes": "251378",
+          "native_species": "12",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.8184704291253194",
+          "recall": "0.6785090546528878",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        },
+        "SwissTrees": {
+          "assessed_relations": "NA",
+          "native_genes": "984137",
+          "native_species": "78",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.95464765",
+          "recall": "0.73625484",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        },
+        "TK": {
+          "assessed_relations": "NA",
+          "native_genes": "443217",
+          "native_species": "12",
+          "numeric_scored_pairs": "NA",
+          "precision": "1.0",
+          "recall": "0.7686343852013058",
+          "reference_gene_coverage": "1.0",
+          "semantics": "NA"
+        },
+        "TreeFam": {
+          "assessed_relations": "NA",
+          "native_genes": "984137",
+          "native_species": "78",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.95932734",
+          "recall": "0.45064989",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        },
+        "VGNC": {
+          "assessed_relations": "NA",
+          "native_genes": "984137",
+          "native_species": "78",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.9994400040726976",
+          "recall": "0.8202557031837553",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        }
+      },
+      "evidence": "complete_development_vector",
+      "key": "profile_weighting:henikoff_cluster",
+      "label": "OrthoHMM clustered Henikoff",
+      "marker": "<",
+      "scores": {
+        "EC": 0.96758148,
+        "FAS": 0.7624683130297215,
+        "GO": 0.48982646,
+        "OB": 0.7419468378090919,
+        "SwissTrees": 0.831347705694284,
+        "TK": 0.8691840344535876,
+        "TreeFam": 0.6132308395434054,
+        "VGNC": 0.9010257704752508
+      },
+      "short": "OH-N"
+    },
+    {
+      "color": "#882255",
+      "diagnostics": {
+        "EC": {
+          "assessed_relations": "117194",
+          "native_genes": "984137",
+          "native_species": "78",
+          "numeric_scored_pairs": "117194",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        },
+        "FAS": {
+          "assessed_relations": "5944182.0",
+          "native_genes": "984137",
+          "native_species": "78",
+          "numeric_scored_pairs": "174361",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        },
+        "GO": {
+          "assessed_relations": "84269",
+          "native_genes": "984137",
+          "native_species": "78",
+          "numeric_scored_pairs": "84269",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        },
+        "OB": {
+          "assessed_relations": "NA",
+          "native_genes": "251378",
+          "native_species": "12",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.81859000737429",
+          "recall": "0.6775533630827973",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        },
+        "SwissTrees": {
+          "assessed_relations": "NA",
+          "native_genes": "984137",
+          "native_species": "78",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.95517675",
+          "recall": "0.73934126",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        },
+        "TK": {
+          "assessed_relations": "NA",
+          "native_genes": "443217",
+          "native_species": "12",
+          "numeric_scored_pairs": "NA",
+          "precision": "1.0",
+          "recall": "0.7702665941240479",
+          "reference_gene_coverage": "1.0",
+          "semantics": "NA"
+        },
+        "TreeFam": {
+          "assessed_relations": "NA",
+          "native_genes": "984137",
+          "native_species": "78",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.95966019",
+          "recall": "0.4539797",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        },
+        "VGNC": {
+          "assessed_relations": "NA",
+          "native_genes": "984137",
+          "native_species": "78",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.9993387925334418",
+          "recall": "0.8209242082393248",
+          "reference_gene_coverage": "NA",
+          "semantics": "NA"
+        }
+      },
+      "evidence": "complete_development_vector",
+      "key": "projection_recovery:projection_off",
+      "label": "OrthoHMM projection repair",
+      "marker": "h",
+      "scores": {
+        "EC": 0.96583455,
+        "FAS": 0.763292288871938,
+        "GO": 0.48958961,
+        "OB": 0.7414241488273605,
+        "SwissTrees": 0.8335132205147882,
+        "TK": 0.8702266615443719,
+        "TreeFam": 0.6163751436840722,
+        "VGNC": 0.9013877738272739
+      },
+      "short": "OH-R"
+    },
+    {
+      "color": "#56B4E9",
+      "diagnostics": {
+        "EC": {
+          "assessed_relations": "185664",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "cross-species group-derived clique pairs"
+        },
+        "FAS": {
+          "assessed_relations": "9032719.0",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "cross-species group-derived clique pairs"
+        },
+        "GO": {
+          "assessed_relations": "145619",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "cross-species group-derived clique pairs"
+        },
+        "OB": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.7894954395226098",
+          "recall": "0.6345447853618141",
+          "reference_gene_coverage": "NA",
+          "semantics": "refined orthogroups"
+        },
+        "SwissTrees": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.6409985",
+          "recall": "0.73663642",
+          "reference_gene_coverage": "NA",
+          "semantics": "cross-species group-derived clique pairs"
+        },
+        "TK": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "1.0",
+          "recall": "0.7040261153427638",
+          "reference_gene_coverage": "1.0",
+          "semantics": "reference-gene group co-membership, including within-species pairs"
+        },
+        "TreeFam": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.79287496",
+          "recall": "0.48911496",
+          "reference_gene_coverage": "NA",
+          "semantics": "cross-species group-derived clique pairs"
+        },
+        "VGNC": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.5540206929072703",
+          "recall": "0.83450321718058",
+          "reference_gene_coverage": "NA",
+          "semantics": "cross-species group-derived clique pairs"
+        }
+      },
+      "evidence": "retained_context_not_reaudited_here",
+      "key": "orthohmm_high_sensitivity",
+      "label": "OrthoHMM sensitive (retained)",
+      "marker": "D",
+      "scores": {
+        "EC": 0.93203769,
+        "FAS": 0.7765850417998846,
+        "GO": 0.4722711,
+        "OB": 0.7035899765495244,
+        "SwissTrees": 0.6854977808857662,
+        "TK": 0.8263090676883781,
+        "TreeFam": 0.6050078839081693,
+        "VGNC": 0.6659331499541553
+      },
+      "short": "OH-S"
+    },
+    {
+      "color": "#009E73",
+      "diagnostics": {
+        "EC": {
+          "assessed_relations": "117460",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "native phylogenetically inferred pairs"
+        },
+        "FAS": {
+          "assessed_relations": "5959560.0",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "native phylogenetically inferred pairs"
+        },
+        "GO": {
+          "assessed_relations": "84211",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "native phylogenetically inferred pairs"
+        },
+        "OB": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.8177045380181867",
+          "recall": "0.6775533630827973",
+          "reference_gene_coverage": "NA",
+          "semantics": "post-membership-filter root HOGs"
+        },
+        "SwissTrees": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.95517675",
+          "recall": "0.73934126",
+          "reference_gene_coverage": "NA",
+          "semantics": "native phylogenetically inferred pairs"
+        },
+        "TK": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "1.0",
+          "recall": "0.7732589771490751",
+          "reference_gene_coverage": "1.0",
+          "semantics": "reference-gene group co-membership, including within-species pairs"
+        },
+        "TreeFam": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.95911016",
+          "recall": "0.45246406",
+          "reference_gene_coverage": "NA",
+          "semantics": "native phylogenetically inferred pairs"
+        },
+        "VGNC": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.9993391958521832",
+          "recall": "0.8214255870310019",
+          "reference_gene_coverage": "NA",
+          "semantics": "native phylogenetically inferred pairs"
+        }
+      },
+      "evidence": "retained_context_not_reaudited_here",
+      "key": "orthohmm_phylogeny_satellite_v2",
+      "label": "OrthoHMM phylogeny (retained)",
+      "marker": "s",
+      "scores": {
+        "EC": 0.9656505,
+        "FAS": 0.7629933121004577,
+        "GO": 0.49034928,
+        "OB": 0.7410607351873405,
+        "SwissTrees": 0.8335132205147882,
+        "TK": 0.872133159469203,
+        "TreeFam": 0.614863704412014,
+        "VGNC": 0.9016900956268489
+      },
+      "short": "OH-P"
+    },
+    {
+      "color": "#D55E00",
+      "diagnostics": {
+        "EC": {
+          "assessed_relations": "175361",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "native phylogenetically inferred pairs"
+        },
+        "FAS": {
+          "assessed_relations": "14215382.0",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "native phylogenetically inferred pairs"
+        },
+        "GO": {
+          "assessed_relations": "163557",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "native phylogenetically inferred pairs"
+        },
+        "OB": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.6606510299607791",
+          "recall": "0.8090657663112891",
+          "reference_gene_coverage": "NA",
+          "semantics": "Official post-phylogenetic orthogroups, not the later debug N0.ids partition"
+        },
+        "SwissTrees": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.93785283",
+          "recall": "0.77454753",
+          "reference_gene_coverage": "NA",
+          "semantics": "native phylogenetically inferred pairs"
+        },
+        "TK": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "1.0",
+          "recall": "0.9774211099020674",
+          "reference_gene_coverage": "1.0",
+          "semantics": "reference-gene group co-membership, including within-species pairs"
+        },
+        "TreeFam": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.92452715",
+          "recall": "0.69257796",
+          "reference_gene_coverage": "NA",
+          "semantics": "native phylogenetically inferred pairs"
+        },
+        "VGNC": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.9945029388134805",
+          "recall": "0.9826606501211665",
+          "reference_gene_coverage": "NA",
+          "semantics": "native phylogenetically inferred pairs"
+        }
+      },
+      "evidence": "retained_context_not_reaudited_here",
+      "key": "orthofinder_3_1_5_full",
+      "label": "OrthoFinder 3.1.5 full",
+      "marker": "^",
+      "scores": {
+        "EC": 0.93613021,
+        "FAS": 0.6914221332471376,
+        "GO": 0.46954797,
+        "OB": 0.7273648000422167,
+        "SwissTrees": 0.8484132682382873,
+        "TK": 0.9885816480946485,
+        "TreeFam": 0.7919177591512453,
+        "VGNC": 0.9885463295714856
+      },
+      "short": "OF-F"
+    },
+    {
+      "color": "#E69F00",
+      "diagnostics": {
+        "EC": {
+          "assessed_relations": "1660940",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)"
+        },
+        "FAS": {
+          "assessed_relations": "163277439.0",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)"
+        },
+        "GO": {
+          "assessed_relations": "1979084",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)"
+        },
+        "OB": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.45706162743",
+          "recall": "0.8203982706799999",
+          "reference_gene_coverage": "NA",
+          "semantics": "pre-phylogeny clustering checkpoint"
+        },
+        "SwissTrees": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.56906785",
+          "recall": "0.87786296",
+          "reference_gene_coverage": "NA",
+          "semantics": "cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)"
+        },
+        "TK": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.9901920719248059",
+          "recall": "0.9887105549510338",
+          "reference_gene_coverage": "1.0",
+          "semantics": "reference-gene group co-membership, including within-species pairs"
+        },
+        "TreeFam": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.6204701",
+          "recall": "0.89960042",
+          "reference_gene_coverage": "NA",
+          "semantics": "cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)"
+        },
+        "VGNC": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.07689129740145306",
+          "recall": "0.9953622461769868",
+          "reference_gene_coverage": "NA",
+          "semantics": "cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)"
+        }
+      },
+      "evidence": "retained_context_not_reaudited_here",
+      "key": "orthofinder_3_1_5_sequence_only",
+      "label": "OrthoFinder sequence checkpoint",
+      "marker": "v",
+      "scores": {
+        "EC": 0.7536416,
+        "FAS": 0.5617530837830421,
+        "GO": 0.40704311,
+        "OB": 0.58705963184,
+        "SwissTrees": 0.6905148246056576,
+        "TK": 0.9894507588647655,
+        "TreeFam": 0.7344069307487682,
+        "VGNC": 0.1427548455331809
+      },
+      "short": "OF-S"
+    },
+    {
+      "color": "#CC79A7",
+      "diagnostics": {
+        "EC": {
+          "assessed_relations": "244356",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "native species-pair relations"
+        },
+        "FAS": {
+          "assessed_relations": "15248739.0",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "native species-pair relations"
+        },
+        "GO": {
+          "assessed_relations": "197930",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "native species-pair relations"
+        },
+        "OB": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.36535179568",
+          "recall": "0.6492280907",
+          "reference_gene_coverage": "NA",
+          "semantics": "native groups plus explicit singleton padding"
+        },
+        "SwissTrees": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.87227877",
+          "recall": "0.73615959",
+          "reference_gene_coverage": "NA",
+          "semantics": "native species-pair relations"
+        },
+        "TK": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.9934426229508196",
+          "recall": "0.9891186071817193",
+          "reference_gene_coverage": "0.9980343980343981",
+          "semantics": "reference-gene group co-membership, including within-species pairs"
+        },
+        "TreeFam": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.9132317",
+          "recall": "0.66853442",
+          "reference_gene_coverage": "NA",
+          "semantics": "native species-pair relations"
+        },
+        "VGNC": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.9945242984257358",
+          "recall": "0.9713378457424584",
+          "reference_gene_coverage": "NA",
+          "semantics": "native species-pair relations"
+        }
+      },
+      "evidence": "retained_context_not_reaudited_here",
+      "key": "sonicparanoid_2_0_9",
+      "label": "SonicParanoid 2.0.9",
+      "marker": "P",
+      "scores": {
+        "EC": 0.87276097,
+        "FAS": 0.736680187140205,
+        "GO": 0.45438453,
+        "OB": 0.4675760912,
+        "SwissTrees": 0.798459422080563,
+        "TK": 0.9912758996728462,
+        "TreeFam": 0.7719558753542073,
+        "VGNC": 0.9827943352356794
+      },
+      "short": "SP"
+    },
+    {
+      "color": "#666666",
+      "diagnostics": {
+        "EC": {
+          "assessed_relations": "143135",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "native post-clustering graph"
+        },
+        "FAS": {
+          "assessed_relations": "4695385.0",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "native post-clustering graph"
+        },
+        "GO": {
+          "assessed_relations": "89609",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "native post-clustering graph"
+        },
+        "OB": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.97056207735",
+          "recall": "0.29338788906",
+          "reference_gene_coverage": "NA",
+          "semantics": "native groups plus explicit singleton padding"
+        },
+        "SwissTrees": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.95217994",
+          "recall": "0.57641436",
+          "reference_gene_coverage": "NA",
+          "semantics": "native post-clustering graph"
+        },
+        "TK": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "1.0",
+          "recall": "0.8699673558215452",
+          "reference_gene_coverage": "0.9597051597051597",
+          "semantics": "reference-gene group co-membership, including within-species pairs"
+        },
+        "TreeFam": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.94641503",
+          "recall": "0.48711707",
+          "reference_gene_coverage": "NA",
+          "semantics": "native post-clustering graph"
+        },
+        "VGNC": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.980540635731267",
+          "recall": "0.9305590373527199",
+          "reference_gene_coverage": "NA",
+          "semantics": "native post-clustering graph"
+        }
+      },
+      "evidence": "retained_context_not_reaudited_here",
+      "key": "proteinortho_6_3_6",
+      "label": "ProteinOrtho 6.3.6",
+      "marker": "X",
+      "scores": {
+        "EC": 0.96316811,
+        "FAS": 0.8135948641193668,
+        "GO": 0.4863364,
+        "OB": 0.45057346674000004,
+        "SwissTrees": 0.7181110000474794,
+        "TK": 0.9304626127436718,
+        "TreeFam": 0.6431874339159368,
+        "VGNC": 0.9548962442119706
+      },
+      "short": "PO"
+    },
+    {
+      "color": "#332288",
+      "diagnostics": {
+        "EC": {
+          "assessed_relations": "178598",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree"
+        },
+        "FAS": {
+          "assessed_relations": "15008180.0",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree"
+        },
+        "GO": {
+          "assessed_relations": "171132",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree"
+        },
+        "OB": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.93631476193",
+          "recall": "0.18508163621",
+          "reference_gene_coverage": "NA",
+          "semantics": "final orthologous groups, not root-HOG diagnostic"
+        },
+        "SwissTrees": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.92360055",
+          "recall": "0.67537301",
+          "reference_gene_coverage": "NA",
+          "semantics": "native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree"
+        },
+        "TK": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "1.0",
+          "recall": "0.7569368879216539",
+          "reference_gene_coverage": "0.8943488943488943",
+          "semantics": "reference-gene group co-membership, including within-species pairs"
+        },
+        "TreeFam": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.88210534",
+          "recall": "0.52457172",
+          "reference_gene_coverage": "NA",
+          "semantics": "native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree"
+        },
+        "VGNC": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.9957863882018869",
+          "recall": "0.9084148073869809",
+          "reference_gene_coverage": "NA",
+          "semantics": "native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree"
+        }
+      },
+      "evidence": "retained_context_not_reaudited_here",
+      "key": "fastoma_0_3_5",
+      "label": "FastOMA 0.3.5",
+      "marker": "d",
+      "scores": {
+        "EC": 0.89716752,
+        "FAS": 0.6543663364244952,
+        "GO": 0.43689352,
+        "OB": 0.30906942172,
+        "SwissTrees": 0.7802191344441686,
+        "TK": 0.8616551830920492,
+        "TreeFam": 0.6579015590472269,
+        "VGNC": 0.9500961370389792
+      },
+      "short": "FA"
+    },
+    {
+      "color": "#111111",
+      "diagnostics": {
+        "EC": {
+          "assessed_relations": "220622",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "cross_species_final_group_cliques"
+        },
+        "FAS": {
+          "assessed_relations": "14378089.0",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "cross_species_final_group_cliques"
+        },
+        "GO": {
+          "assessed_relations": "175181",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "NA",
+          "recall": "NA",
+          "reference_gene_coverage": "NA",
+          "semantics": "cross_species_final_group_cliques"
+        },
+        "OB": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.59078055333",
+          "recall": "0.5156306418100001",
+          "reference_gene_coverage": "NA",
+          "semantics": "July 2025 native OrthoMCL groups"
+        },
+        "SwissTrees": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.87412806",
+          "recall": "0.68264408",
+          "reference_gene_coverage": "NA",
+          "semantics": "cross_species_final_group_cliques"
+        },
+        "TK": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "1.0",
+          "recall": "0.97810119695321",
+          "reference_gene_coverage": "0.9965601965601966",
+          "semantics": "reference-gene group co-membership, including within-species pairs"
+        },
+        "TreeFam": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.85198483",
+          "recall": "0.67572222",
+          "reference_gene_coverage": "NA",
+          "semantics": "cross_species_final_group_cliques"
+        },
+        "VGNC": {
+          "assessed_relations": "NA",
+          "native_genes": "NA",
+          "native_species": "NA",
+          "numeric_scored_pairs": "NA",
+          "precision": "0.47675031418494346",
+          "recall": "0.9827024316871397",
+          "reference_gene_coverage": "NA",
+          "semantics": "cross_species_final_group_cliques"
+        }
+      },
+      "evidence": "retained_context_not_reaudited_here",
+      "key": "orthomcl_1_4",
+      "label": "OrthoMCL 1.4",
+      "marker": "*",
+      "scores": {
+        "EC": 0.92132599,
+        "FAS": 0.7337522155738428,
+        "GO": 0.46375473,
+        "OB": 0.55065342292,
+        "SwissTrees": 0.7666097433127044,
+        "TK": 0.9889293818331844,
+        "TreeFam": 0.7536851790190046,
+        "VGNC": 0.6420265327291587
+      },
+      "short": "OM"
+    }
+  ],
+  "pareto": {
+    "all_five_F1": [
+      {
+        "dominators": [],
+        "key": "profile_weighting:none",
+        "nondominated": true,
+        "objectives": [
+          "OB",
+          "VGNC",
+          "SwissTrees",
+          "TreeFam",
+          "TK"
+        ]
+      },
+      {
+        "dominators": [],
+        "key": "profile_weighting:henikoff",
+        "nondominated": true,
+        "objectives": [
+          "OB",
+          "VGNC",
+          "SwissTrees",
+          "TreeFam",
+          "TK"
+        ]
+      },
+      {
+        "dominators": [],
+        "key": "profile_weighting:henikoff_cluster",
+        "nondominated": true,
+        "objectives": [
+          "OB",
+          "VGNC",
+          "SwissTrees",
+          "TreeFam",
+          "TK"
+        ]
+      },
+      {
+        "dominators": [],
+        "key": "projection_recovery:projection_off",
+        "nondominated": true,
+        "objectives": [
+          "OB",
+          "VGNC",
+          "SwissTrees",
+          "TreeFam",
+          "TK"
+        ]
+      },
+      {
+        "dominators": [
+          "profile_weighting:none",
+          "profile_weighting:henikoff",
+          "profile_weighting:henikoff_cluster",
+          "projection_recovery:projection_off",
+          "orthohmm_phylogeny_satellite_v2",
+          "orthofinder_3_1_5_full"
+        ],
+        "key": "orthohmm_high_sensitivity",
+        "nondominated": false,
+        "objectives": [
+          "OB",
+          "VGNC",
+          "SwissTrees",
+          "TreeFam",
+          "TK"
+        ]
+      },
+      {
+        "dominators": [],
+        "key": "orthohmm_phylogeny_satellite_v2",
+        "nondominated": true,
+        "objectives": [
+          "OB",
+          "VGNC",
+          "SwissTrees",
+          "TreeFam",
+          "TK"
+        ]
+      },
+      {
+        "dominators": [],
+        "key": "orthofinder_3_1_5_full",
+        "nondominated": true,
+        "objectives": [
+          "OB",
+          "VGNC",
+          "SwissTrees",
+          "TreeFam",
+          "TK"
+        ]
+      },
+      {
+        "dominators": [],
+        "key": "orthofinder_3_1_5_sequence_only",
+        "nondominated": true,
+        "objectives": [
+          "OB",
+          "VGNC",
+          "SwissTrees",
+          "TreeFam",
+          "TK"
+        ]
+      },
+      {
+        "dominators": [],
+        "key": "sonicparanoid_2_0_9",
+        "nondominated": true,
+        "objectives": [
+          "OB",
+          "VGNC",
+          "SwissTrees",
+          "TreeFam",
+          "TK"
+        ]
+      },
+      {
+        "dominators": [
+          "orthofinder_3_1_5_full",
+          "sonicparanoid_2_0_9"
+        ],
+        "key": "proteinortho_6_3_6",
+        "nondominated": false,
+        "objectives": [
+          "OB",
+          "VGNC",
+          "SwissTrees",
+          "TreeFam",
+          "TK"
+        ]
+      },
+      {
+        "dominators": [
+          "orthofinder_3_1_5_full",
+          "sonicparanoid_2_0_9"
+        ],
+        "key": "fastoma_0_3_5",
+        "nondominated": false,
+        "objectives": [
+          "OB",
+          "VGNC",
+          "SwissTrees",
+          "TreeFam",
+          "TK"
+        ]
+      },
+      {
+        "dominators": [],
+        "key": "orthomcl_1_4",
+        "nondominated": true,
+        "objectives": [
+          "OB",
+          "VGNC",
+          "SwissTrees",
+          "TreeFam",
+          "TK"
+        ]
+      }
+    ],
+    "pair_OB_SwissTrees": [
+      {
+        "dominators": [
+          "profile_weighting:henikoff_cluster",
+          "projection_recovery:projection_off",
+          "orthohmm_phylogeny_satellite_v2"
+        ],
+        "key": "profile_weighting:none",
+        "nondominated": false,
+        "objectives": [
+          "OB",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [],
+        "key": "profile_weighting:henikoff",
+        "nondominated": true,
+        "objectives": [
+          "OB",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [],
+        "key": "profile_weighting:henikoff_cluster",
+        "nondominated": true,
+        "objectives": [
+          "OB",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [],
+        "key": "projection_recovery:projection_off",
+        "nondominated": true,
+        "objectives": [
+          "OB",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [
+          "profile_weighting:none",
+          "profile_weighting:henikoff",
+          "profile_weighting:henikoff_cluster",
+          "projection_recovery:projection_off",
+          "orthohmm_phylogeny_satellite_v2",
+          "orthofinder_3_1_5_full"
+        ],
+        "key": "orthohmm_high_sensitivity",
+        "nondominated": false,
+        "objectives": [
+          "OB",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [
+          "projection_recovery:projection_off"
+        ],
+        "key": "orthohmm_phylogeny_satellite_v2",
+        "nondominated": false,
+        "objectives": [
+          "OB",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [],
+        "key": "orthofinder_3_1_5_full",
+        "nondominated": true,
+        "objectives": [
+          "OB",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [
+          "profile_weighting:none",
+          "profile_weighting:henikoff",
+          "profile_weighting:henikoff_cluster",
+          "projection_recovery:projection_off",
+          "orthohmm_phylogeny_satellite_v2",
+          "orthofinder_3_1_5_full"
+        ],
+        "key": "orthofinder_3_1_5_sequence_only",
+        "nondominated": false,
+        "objectives": [
+          "OB",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [
+          "profile_weighting:none",
+          "profile_weighting:henikoff",
+          "profile_weighting:henikoff_cluster",
+          "projection_recovery:projection_off",
+          "orthohmm_phylogeny_satellite_v2",
+          "orthofinder_3_1_5_full"
+        ],
+        "key": "sonicparanoid_2_0_9",
+        "nondominated": false,
+        "objectives": [
+          "OB",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [
+          "profile_weighting:none",
+          "profile_weighting:henikoff",
+          "profile_weighting:henikoff_cluster",
+          "projection_recovery:projection_off",
+          "orthohmm_phylogeny_satellite_v2",
+          "orthofinder_3_1_5_full",
+          "sonicparanoid_2_0_9",
+          "orthomcl_1_4"
+        ],
+        "key": "proteinortho_6_3_6",
+        "nondominated": false,
+        "objectives": [
+          "OB",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [
+          "profile_weighting:none",
+          "profile_weighting:henikoff",
+          "profile_weighting:henikoff_cluster",
+          "projection_recovery:projection_off",
+          "orthohmm_phylogeny_satellite_v2",
+          "orthofinder_3_1_5_full",
+          "sonicparanoid_2_0_9"
+        ],
+        "key": "fastoma_0_3_5",
+        "nondominated": false,
+        "objectives": [
+          "OB",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [
+          "profile_weighting:none",
+          "profile_weighting:henikoff",
+          "profile_weighting:henikoff_cluster",
+          "projection_recovery:projection_off",
+          "orthohmm_phylogeny_satellite_v2",
+          "orthofinder_3_1_5_full"
+        ],
+        "key": "orthomcl_1_4",
+        "nondominated": false,
+        "objectives": [
+          "OB",
+          "SwissTrees"
+        ]
+      }
+    ],
+    "pair_OB_VGNC": [
+      {
+        "dominators": [],
+        "key": "profile_weighting:none",
+        "nondominated": true,
+        "objectives": [
+          "OB",
+          "VGNC"
+        ]
+      },
+      {
+        "dominators": [],
+        "key": "profile_weighting:henikoff",
+        "nondominated": true,
+        "objectives": [
+          "OB",
+          "VGNC"
+        ]
+      },
+      {
+        "dominators": [],
+        "key": "profile_weighting:henikoff_cluster",
+        "nondominated": true,
+        "objectives": [
+          "OB",
+          "VGNC"
+        ]
+      },
+      {
+        "dominators": [],
+        "key": "projection_recovery:projection_off",
+        "nondominated": true,
+        "objectives": [
+          "OB",
+          "VGNC"
+        ]
+      },
+      {
+        "dominators": [
+          "profile_weighting:none",
+          "profile_weighting:henikoff",
+          "profile_weighting:henikoff_cluster",
+          "projection_recovery:projection_off",
+          "orthohmm_phylogeny_satellite_v2",
+          "orthofinder_3_1_5_full"
+        ],
+        "key": "orthohmm_high_sensitivity",
+        "nondominated": false,
+        "objectives": [
+          "OB",
+          "VGNC"
+        ]
+      },
+      {
+        "dominators": [
+          "profile_weighting:none"
+        ],
+        "key": "orthohmm_phylogeny_satellite_v2",
+        "nondominated": false,
+        "objectives": [
+          "OB",
+          "VGNC"
+        ]
+      },
+      {
+        "dominators": [],
+        "key": "orthofinder_3_1_5_full",
+        "nondominated": true,
+        "objectives": [
+          "OB",
+          "VGNC"
+        ]
+      },
+      {
+        "dominators": [
+          "profile_weighting:none",
+          "profile_weighting:henikoff",
+          "profile_weighting:henikoff_cluster",
+          "projection_recovery:projection_off",
+          "orthohmm_high_sensitivity",
+          "orthohmm_phylogeny_satellite_v2",
+          "orthofinder_3_1_5_full"
+        ],
+        "key": "orthofinder_3_1_5_sequence_only",
+        "nondominated": false,
+        "objectives": [
+          "OB",
+          "VGNC"
+        ]
+      },
+      {
+        "dominators": [
+          "orthofinder_3_1_5_full"
+        ],
+        "key": "sonicparanoid_2_0_9",
+        "nondominated": false,
+        "objectives": [
+          "OB",
+          "VGNC"
+        ]
+      },
+      {
+        "dominators": [
+          "orthofinder_3_1_5_full",
+          "sonicparanoid_2_0_9"
+        ],
+        "key": "proteinortho_6_3_6",
+        "nondominated": false,
+        "objectives": [
+          "OB",
+          "VGNC"
+        ]
+      },
+      {
+        "dominators": [
+          "orthofinder_3_1_5_full",
+          "sonicparanoid_2_0_9",
+          "proteinortho_6_3_6"
+        ],
+        "key": "fastoma_0_3_5",
+        "nondominated": false,
+        "objectives": [
+          "OB",
+          "VGNC"
+        ]
+      },
+      {
+        "dominators": [
+          "profile_weighting:none",
+          "profile_weighting:henikoff",
+          "profile_weighting:henikoff_cluster",
+          "projection_recovery:projection_off",
+          "orthohmm_high_sensitivity",
+          "orthohmm_phylogeny_satellite_v2",
+          "orthofinder_3_1_5_full"
+        ],
+        "key": "orthomcl_1_4",
+        "nondominated": false,
+        "objectives": [
+          "OB",
+          "VGNC"
+        ]
+      }
+    ],
+    "pair_VGNC_SwissTrees": [
+      {
+        "dominators": [
+          "orthofinder_3_1_5_full"
+        ],
+        "key": "profile_weighting:none",
+        "nondominated": false,
+        "objectives": [
+          "VGNC",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [
+          "profile_weighting:none",
+          "profile_weighting:henikoff_cluster",
+          "projection_recovery:projection_off",
+          "orthohmm_phylogeny_satellite_v2",
+          "orthofinder_3_1_5_full"
+        ],
+        "key": "profile_weighting:henikoff",
+        "nondominated": false,
+        "objectives": [
+          "VGNC",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [
+          "profile_weighting:none",
+          "projection_recovery:projection_off",
+          "orthohmm_phylogeny_satellite_v2",
+          "orthofinder_3_1_5_full"
+        ],
+        "key": "profile_weighting:henikoff_cluster",
+        "nondominated": false,
+        "objectives": [
+          "VGNC",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [
+          "orthohmm_phylogeny_satellite_v2",
+          "orthofinder_3_1_5_full"
+        ],
+        "key": "projection_recovery:projection_off",
+        "nondominated": false,
+        "objectives": [
+          "VGNC",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [
+          "profile_weighting:none",
+          "profile_weighting:henikoff",
+          "profile_weighting:henikoff_cluster",
+          "projection_recovery:projection_off",
+          "orthohmm_phylogeny_satellite_v2",
+          "orthofinder_3_1_5_full",
+          "sonicparanoid_2_0_9",
+          "proteinortho_6_3_6",
+          "fastoma_0_3_5"
+        ],
+        "key": "orthohmm_high_sensitivity",
+        "nondominated": false,
+        "objectives": [
+          "VGNC",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [
+          "orthofinder_3_1_5_full"
+        ],
+        "key": "orthohmm_phylogeny_satellite_v2",
+        "nondominated": false,
+        "objectives": [
+          "VGNC",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [],
+        "key": "orthofinder_3_1_5_full",
+        "nondominated": true,
+        "objectives": [
+          "VGNC",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [
+          "profile_weighting:none",
+          "profile_weighting:henikoff",
+          "profile_weighting:henikoff_cluster",
+          "projection_recovery:projection_off",
+          "orthohmm_phylogeny_satellite_v2",
+          "orthofinder_3_1_5_full",
+          "sonicparanoid_2_0_9",
+          "proteinortho_6_3_6",
+          "fastoma_0_3_5",
+          "orthomcl_1_4"
+        ],
+        "key": "orthofinder_3_1_5_sequence_only",
+        "nondominated": false,
+        "objectives": [
+          "VGNC",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [
+          "orthofinder_3_1_5_full"
+        ],
+        "key": "sonicparanoid_2_0_9",
+        "nondominated": false,
+        "objectives": [
+          "VGNC",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [
+          "orthofinder_3_1_5_full",
+          "sonicparanoid_2_0_9"
+        ],
+        "key": "proteinortho_6_3_6",
+        "nondominated": false,
+        "objectives": [
+          "VGNC",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [
+          "orthofinder_3_1_5_full",
+          "sonicparanoid_2_0_9"
+        ],
+        "key": "fastoma_0_3_5",
+        "nondominated": false,
+        "objectives": [
+          "VGNC",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [
+          "profile_weighting:none",
+          "profile_weighting:henikoff",
+          "profile_weighting:henikoff_cluster",
+          "projection_recovery:projection_off",
+          "orthohmm_phylogeny_satellite_v2",
+          "orthofinder_3_1_5_full",
+          "sonicparanoid_2_0_9",
+          "fastoma_0_3_5"
+        ],
+        "key": "orthomcl_1_4",
+        "nondominated": false,
+        "objectives": [
+          "VGNC",
+          "SwissTrees"
+        ]
+      }
+    ],
+    "primary_three_F1": [
+      {
+        "dominators": [],
+        "key": "profile_weighting:none",
+        "nondominated": true,
+        "objectives": [
+          "OB",
+          "VGNC",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [],
+        "key": "profile_weighting:henikoff",
+        "nondominated": true,
+        "objectives": [
+          "OB",
+          "VGNC",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [],
+        "key": "profile_weighting:henikoff_cluster",
+        "nondominated": true,
+        "objectives": [
+          "OB",
+          "VGNC",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [],
+        "key": "projection_recovery:projection_off",
+        "nondominated": true,
+        "objectives": [
+          "OB",
+          "VGNC",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [
+          "profile_weighting:none",
+          "profile_weighting:henikoff",
+          "profile_weighting:henikoff_cluster",
+          "projection_recovery:projection_off",
+          "orthohmm_phylogeny_satellite_v2",
+          "orthofinder_3_1_5_full"
+        ],
+        "key": "orthohmm_high_sensitivity",
+        "nondominated": false,
+        "objectives": [
+          "OB",
+          "VGNC",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [],
+        "key": "orthohmm_phylogeny_satellite_v2",
+        "nondominated": true,
+        "objectives": [
+          "OB",
+          "VGNC",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [],
+        "key": "orthofinder_3_1_5_full",
+        "nondominated": true,
+        "objectives": [
+          "OB",
+          "VGNC",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [
+          "profile_weighting:none",
+          "profile_weighting:henikoff",
+          "profile_weighting:henikoff_cluster",
+          "projection_recovery:projection_off",
+          "orthohmm_phylogeny_satellite_v2",
+          "orthofinder_3_1_5_full"
+        ],
+        "key": "orthofinder_3_1_5_sequence_only",
+        "nondominated": false,
+        "objectives": [
+          "OB",
+          "VGNC",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [
+          "orthofinder_3_1_5_full"
+        ],
+        "key": "sonicparanoid_2_0_9",
+        "nondominated": false,
+        "objectives": [
+          "OB",
+          "VGNC",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [
+          "orthofinder_3_1_5_full",
+          "sonicparanoid_2_0_9"
+        ],
+        "key": "proteinortho_6_3_6",
+        "nondominated": false,
+        "objectives": [
+          "OB",
+          "VGNC",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [
+          "orthofinder_3_1_5_full",
+          "sonicparanoid_2_0_9"
+        ],
+        "key": "fastoma_0_3_5",
+        "nondominated": false,
+        "objectives": [
+          "OB",
+          "VGNC",
+          "SwissTrees"
+        ]
+      },
+      {
+        "dominators": [
+          "profile_weighting:none",
+          "profile_weighting:henikoff",
+          "profile_weighting:henikoff_cluster",
+          "projection_recovery:projection_off",
+          "orthohmm_phylogeny_satellite_v2",
+          "orthofinder_3_1_5_full"
+        ],
+        "key": "orthomcl_1_4",
+        "nondominated": false,
+        "objectives": [
+          "OB",
+          "VGNC",
+          "SwissTrees"
+        ]
+      }
+    ]
+  },
+  "schema_version": 1,
+  "scopes": {
+    "all_five_F1": [
+      "OB",
+      "VGNC",
+      "SwissTrees",
+      "TreeFam",
+      "TK"
+    ],
+    "pair_OB_SwissTrees": [
+      "OB",
+      "SwissTrees"
+    ],
+    "pair_OB_VGNC": [
+      "OB",
+      "VGNC"
+    ],
+    "pair_VGNC_SwissTrees": [
+      "VGNC",
+      "SwissTrees"
+    ],
+    "primary_three_F1": [
+      "OB",
+      "VGNC",
+      "SwissTrees"
+    ]
+  },
+  "sources": [
+    {
+      "bytes": 109376,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hmm_campaign_final_20261020/summary.json",
+      "sha256": "d6b6a0d43d661db6c5822b625abc576cc8cb1f094c6a304729f7b5d69eedd47d"
+    },
+    {
+      "bytes": 4679,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hmm_campaign_final_20261020/scores.tsv",
+      "sha256": "4862010db93cf45cc6e9c1894e232d9cef709736ee6152b730a36fe1758eceb1"
+    },
+    {
+      "bytes": 147692,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hmm_campaign_final_20261020/endpoint_diagnostics.tsv",
+      "sha256": "2be9fa4bfbd1589798261d8d7e00659729e8e400a77ff3efc14bc0d993df2468"
+    },
+    {
+      "bytes": 378715,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v27/panel.json",
+      "sha256": "1a586d5d85262267ddfbdd4fccc43a2d43208dae5b028368964d710d2b587187"
+    }
+  ],
+  "status": "descriptive_posthoc_manuscript_analysis",
+  "timing": {
+    "cells": [
+      {
+        "eligible_repeats": 2,
+        "excluded_indices": [
+          0
+        ],
+        "method": "orthohmm_high_sensitivity",
+        "pending_indices": [],
+        "planned_repeats": 3,
+        "pre_native_aborted_indices": [],
+        "proteomes": 4,
+        "resources": {
+          "cpu_seconds": null,
+          "peak_memory_bytes": null,
+          "wall_seconds": null
+        },
+        "reviewed_repeats": 3,
+        "summary_status": "incomplete_eligible_repeats"
+      },
+      {
+        "eligible_repeats": 3,
+        "excluded_indices": [],
+        "method": "orthohmm_high_sensitivity",
+        "pending_indices": [],
+        "planned_repeats": 3,
+        "pre_native_aborted_indices": [],
+        "proteomes": 8,
+        "resources": {
+          "cpu_seconds": {
+            "maximum": 36610.569612,
+            "median": 34395.748088,
+            "minimum": 33878.994558
+          },
+          "peak_memory_bytes": {
+            "maximum": 8517451776,
+            "median": 8293474304,
+            "minimum": 8284278784
+          },
+          "wall_seconds": {
+            "maximum": 1303.633011611,
+            "median": 1238.935206005,
+            "minimum": 1221.444435089
+          }
+        },
+        "reviewed_repeats": 3,
+        "summary_status": "three_eligible_repeats"
+      },
+      {
+        "eligible_repeats": 3,
+        "excluded_indices": [],
+        "method": "orthohmm_high_sensitivity",
+        "pending_indices": [],
+        "planned_repeats": 3,
+        "pre_native_aborted_indices": [],
+        "proteomes": 12,
+        "resources": {
+          "cpu_seconds": {
+            "maximum": 86415.319181,
+            "median": 78335.830623,
+            "minimum": 75126.858767
+          },
+          "peak_memory_bytes": {
+            "maximum": 11521089536,
+            "median": 11333189632,
+            "minimum": 11309355008
+          },
+          "wall_seconds": {
+            "maximum": 3027.060520509,
+            "median": 2720.077391309,
+            "minimum": 2621.49764478
+          }
+        },
+        "reviewed_repeats": 3,
+        "summary_status": "three_eligible_repeats"
+      },
+      {
+        "eligible_repeats": 2,
+        "excluded_indices": [
+          20
+        ],
+        "method": "orthohmm_satellite_v2",
+        "pending_indices": [],
+        "planned_repeats": 3,
+        "pre_native_aborted_indices": [
+          20
+        ],
+        "proteomes": 4,
+        "resources": {
+          "cpu_seconds": null,
+          "peak_memory_bytes": null,
+          "wall_seconds": null
+        },
+        "reviewed_repeats": 3,
+        "summary_status": "incomplete_eligible_repeats"
+      },
+      {
+        "eligible_repeats": 3,
+        "excluded_indices": [],
+        "method": "orthohmm_satellite_v2",
+        "pending_indices": [],
+        "planned_repeats": 3,
+        "pre_native_aborted_indices": [],
+        "proteomes": 8,
+        "resources": {
+          "cpu_seconds": {
+            "maximum": 58240.723374,
+            "median": 56008.34709,
+            "minimum": 52911.781894
+          },
+          "peak_memory_bytes": {
+            "maximum": 8269803520,
+            "median": 8247656448,
+            "minimum": 8243466240
+          },
+          "wall_seconds": {
+            "maximum": 2086.947282256,
+            "median": 1999.550829241,
+            "minimum": 1888.884734679
+          }
+        },
+        "reviewed_repeats": 3,
+        "summary_status": "three_eligible_repeats"
+      },
+      {
+        "eligible_repeats": 3,
+        "excluded_indices": [],
+        "method": "orthohmm_satellite_v2",
+        "pending_indices": [],
+        "planned_repeats": 3,
+        "pre_native_aborted_indices": [],
+        "proteomes": 12,
+        "resources": {
+          "cpu_seconds": {
+            "maximum": 136293.332246,
+            "median": 125264.737465,
+            "minimum": 116000.996415
+          },
+          "peak_memory_bytes": {
+            "maximum": 11384778752,
+            "median": 11285721088,
+            "minimum": 11277897728
+          },
+          "wall_seconds": {
+            "maximum": 4809.292429717,
+            "median": 4392.871580988,
+            "minimum": 4042.426197872
+          }
+        },
+        "reviewed_repeats": 3,
+        "summary_status": "three_eligible_repeats"
+      },
+      {
+        "eligible_repeats": 3,
+        "excluded_indices": [],
+        "method": "orthofinder_3_1_5_full",
+        "pending_indices": [],
+        "planned_repeats": 3,
+        "pre_native_aborted_indices": [],
+        "proteomes": 4,
+        "resources": {
+          "cpu_seconds": {
+            "maximum": 5008.896961,
+            "median": 4602.758499,
+            "minimum": 4455.373716
+          },
+          "peak_memory_bytes": {
+            "maximum": 7438495744,
+            "median": 7274196992,
+            "minimum": 7268642816
+          },
+          "wall_seconds": {
+            "maximum": 474.299930051,
+            "median": 441.2889663,
+            "minimum": 420.740000613
+          }
+        },
+        "reviewed_repeats": 3,
+        "summary_status": "three_eligible_repeats"
+      },
+      {
+        "eligible_repeats": 3,
+        "excluded_indices": [],
+        "method": "orthofinder_3_1_5_full",
+        "pending_indices": [],
+        "planned_repeats": 3,
+        "pre_native_aborted_indices": [],
+        "proteomes": 8,
+        "resources": {
+          "cpu_seconds": {
+            "maximum": 18787.311821,
+            "median": 17734.408768,
+            "minimum": 17232.284253
+          },
+          "peak_memory_bytes": {
+            "maximum": 10987712512,
+            "median": 10979917824,
+            "minimum": 10967740416
+          },
+          "wall_seconds": {
+            "maximum": 1179.970330278,
+            "median": 1139.939834238,
+            "minimum": 1120.254785285
+          }
+        },
+        "reviewed_repeats": 3,
+        "summary_status": "three_eligible_repeats"
+      },
+      {
+        "eligible_repeats": 2,
+        "excluded_indices": [
+          17
+        ],
+        "method": "orthofinder_3_1_5_full",
+        "pending_indices": [],
+        "planned_repeats": 3,
+        "pre_native_aborted_indices": [
+          17
+        ],
+        "proteomes": 12,
+        "resources": {
+          "cpu_seconds": null,
+          "peak_memory_bytes": null,
+          "wall_seconds": null
+        },
+        "reviewed_repeats": 3,
+        "summary_status": "incomplete_eligible_repeats"
+      }
+    ],
+    "eligible_attempts": 24,
+    "excluded_attempts": [
+      0,
+      17,
+      20
+    ],
+    "execution_scope": "shared_host_matched_resources",
+    "limitations": [
+      "Matched-resource, shared-host observations: contention distortion is unknown and potentially method dependent.",
+      "Not-yet-reviewed rows can include live or unrun attempts; this offline report is not a scheduler observation.",
+      "Excluded raw measurements are retained in the per-attempt table, not pooled into eligible summaries.",
+      "Cell medians/ranges require all three eligible repeats; blanks are missing coverage, never zeros.",
+      "Observed ranges are descriptive, not confidence intervals; no fastest-repeat selection, overhead subtraction or speedup ranking.",
+      "Native CPU includes wrapper bracket work; step peak includes launcher memory, not pure algorithm RSS.",
+      "One nested taxon series; proteome count and taxon composition co-vary.",
+      "Historical DGX/ARM/shared-host times are not pooled; completed resources do not prove full publication readiness.",
+      "Pre-native aborts are reviewed failed attempts with null endpoints, not zero timings or unattempted identities.",
+      "The resource-reviewed count excludes pre-native aborts; exclusions retain both missing and measured failures."
+    ],
+    "planned_attempts": 27,
+    "pre_native_aborted_indices": [
+      17,
+      20
+    ],
+    "primary_scopes": {
+      "cpu_seconds": "native_task_subtree_cpu_stat_bracket_including_wrapper",
+      "peak_memory_bytes": "native_step_lifetime_memory_peak_including_launcher",
+      "wall_seconds": "native_command_monotonic_interval"
+    },
+    "resource_reviewed_attempts": 25,
+    "reviewed_attempts": 27,
+    "runs": [
+      {
+        "comparative_timing_eligible": false,
+        "index": 0,
+        "job_id": 22396,
+        "method": "orthohmm_high_sensitivity",
+        "preflight_foreign_average_cores": 56.00247883491069,
+        "proteomes": 4,
+        "repeat": 0,
+        "resources": {
+          "cpu_seconds": 9315.218632,
+          "peak_memory_bytes": 3382607872,
+          "wall_seconds": 369.748703027
+        },
+        "status": "reviewed_excluded_attempt",
+        "whole_run_maximum_foreign_average_cores": 54.14074366759688
+      },
+      {
+        "comparative_timing_eligible": true,
+        "index": 1,
+        "job_id": 22397,
+        "method": "orthohmm_satellite_v2",
+        "preflight_foreign_average_cores": 53.24947790450629,
+        "proteomes": 4,
+        "repeat": 0,
+        "resources": {
+          "cpu_seconds": 17154.043256,
+          "peak_memory_bytes": 3380301824,
+          "wall_seconds": 797.657552818
+        },
+        "status": "reviewed_shared_observation",
+        "whole_run_maximum_foreign_average_cores": 53.89881178641306
+      },
+      {
+        "comparative_timing_eligible": true,
+        "index": 2,
+        "job_id": 22398,
+        "method": "orthofinder_3_1_5_full",
+        "preflight_foreign_average_cores": 57.39565673776895,
+        "proteomes": 4,
+        "repeat": 0,
+        "resources": {
+          "cpu_seconds": 4602.758499,
+          "peak_memory_bytes": 7438495744,
+          "wall_seconds": 441.2889663
+        },
+        "status": "reviewed_shared_observation",
+        "whole_run_maximum_foreign_average_cores": 55.380644918606684
+      },
+      {
+        "comparative_timing_eligible": true,
+        "index": 3,
+        "job_id": 22399,
+        "method": "orthohmm_satellite_v2",
+        "preflight_foreign_average_cores": 54.984429027159464,
+        "proteomes": 8,
+        "repeat": 0,
+        "resources": {
+          "cpu_seconds": 56008.34709,
+          "peak_memory_bytes": 8243466240,
+          "wall_seconds": 1999.550829241
+        },
+        "status": "reviewed_shared_observation",
+        "whole_run_maximum_foreign_average_cores": 55.75292737783375
+      },
+      {
+        "comparative_timing_eligible": true,
+        "index": 4,
+        "job_id": 22400,
+        "method": "orthofinder_3_1_5_full",
+        "preflight_foreign_average_cores": 52.12885978461151,
+        "proteomes": 8,
+        "repeat": 0,
+        "resources": {
+          "cpu_seconds": 17734.408768,
+          "peak_memory_bytes": 10987712512,
+          "wall_seconds": 1139.939834238
+        },
+        "status": "reviewed_shared_observation",
+        "whole_run_maximum_foreign_average_cores": 53.623993782105
+      },
+      {
+        "comparative_timing_eligible": true,
+        "index": 5,
+        "job_id": 22401,
+        "method": "orthohmm_high_sensitivity",
+        "preflight_foreign_average_cores": 52.02020089832915,
+        "proteomes": 8,
+        "repeat": 0,
+        "resources": {
+          "cpu_seconds": 34395.748088,
+          "peak_memory_bytes": 8293474304,
+          "wall_seconds": 1238.935206005
+        },
+        "status": "reviewed_shared_observation",
+        "whole_run_maximum_foreign_average_cores": 52.980809254356686
+      },
+      {
+        "comparative_timing_eligible": true,
+        "index": 6,
+        "job_id": 22402,
+        "method": "orthofinder_3_1_5_full",
+        "preflight_foreign_average_cores": 52.745202765156385,
+        "proteomes": 12,
+        "repeat": 0,
+        "resources": {
+          "cpu_seconds": 39246.594856,
+          "peak_memory_bytes": 11897724928,
+          "wall_seconds": 1896.732060134
+        },
+        "status": "reviewed_shared_observation",
+        "whole_run_maximum_foreign_average_cores": 60.815299033584225
+      },
+      {
+        "comparative_timing_eligible": true,
+        "index": 7,
+        "job_id": 22403,
+        "method": "orthohmm_high_sensitivity",
+        "preflight_foreign_average_cores": 58.819447196255695,
+        "proteomes": 12,
+        "repeat": 0,
+        "resources": {
+          "cpu_seconds": 86415.319181,
+          "peak_memory_bytes": 11309355008,
+          "wall_seconds": 3027.060520509
+        },
+        "status": "reviewed_shared_observation",
+        "whole_run_maximum_foreign_average_cores": 60.35316424514852
+      },
+      {
+        "comparative_timing_eligible": true,
+        "index": 8,
+        "job_id": 22404,
+        "method": "orthohmm_satellite_v2",
+        "preflight_foreign_average_cores": 59.99506007784335,
+        "proteomes": 12,
+        "repeat": 0,
+        "resources": {
+          "cpu_seconds": 136293.332246,
+          "peak_memory_bytes": 11285721088,
+          "wall_seconds": 4809.292429717
+        },
+        "status": "reviewed_shared_observation",
+        "whole_run_maximum_foreign_average_cores": 61.1453857479534
+      },
+      {
+        "comparative_timing_eligible": true,
+        "index": 9,
+        "job_id": 22405,
+        "method": "orthohmm_satellite_v2",
+        "preflight_foreign_average_cores": 62.20918865271648,
+        "proteomes": 4,
+        "repeat": 1,
+        "resources": {
+          "cpu_seconds": 20678.338812,
+          "peak_memory_bytes": 3491352576,
+          "wall_seconds": 986.109450535
+        },
+        "status": "reviewed_shared_observation",
+        "whole_run_maximum_foreign_average_cores": 61.3543514535785
+      },
+      {
+        "comparative_timing_eligible": true,
+        "index": 10,
+        "job_id": 22406,
+        "method": "orthofinder_3_1_5_full",
+        "preflight_foreign_average_cores": 53.026671609908135,
+        "proteomes": 4,
+        "repeat": 1,
+        "resources": {
+          "cpu_seconds": 5008.896961,
+          "peak_memory_bytes": 7268642816,
+          "wall_seconds": 474.299930051
+        },
+        "status": "reviewed_shared_observation",
+        "whole_run_maximum_foreign_average_cores": 53.97754424957365
+      },
+      {
+        "comparative_timing_eligible": true,
+        "index": 11,
+        "job_id": 22407,
+        "method": "orthohmm_high_sensitivity",
+        "preflight_foreign_average_cores": 54.49963490950133,
+        "proteomes": 4,
+        "repeat": 1,
+        "resources": {
+          "cpu_seconds": 9377.291271,
+          "peak_memory_bytes": 3387318272,
+          "wall_seconds": 377.661928371
+        },
+        "status": "reviewed_shared_observation",
+        "whole_run_maximum_foreign_average_cores": 54.55057744551471
+      },
+      {
+        "comparative_timing_eligible": true,
+        "index": 12,
+        "job_id": 22408,
+        "method": "orthofinder_3_1_5_full",
+        "preflight_foreign_average_cores": 54.29860481286806,
+        "proteomes": 8,
+        "repeat": 1,
+        "resources": {
+          "cpu_seconds": 18787.311821,
+          "peak_memory_bytes": 10967740416,
+          "wall_seconds": 1179.970330278
+        },
+        "status": "reviewed_shared_observation",
+        "whole_run_maximum_foreign_average_cores": 55.0811204186784
+      },
+      {
+        "comparative_timing_eligible": true,
+        "index": 13,
+        "job_id": 22409,
+        "method": "orthohmm_high_sensitivity",
+        "preflight_foreign_average_cores": 53.0506094481834,
+        "proteomes": 8,
+        "repeat": 1,
+        "resources": {
+          "cpu_seconds": 36610.569612,
+          "peak_memory_bytes": 8284278784,
+          "wall_seconds": 1303.633011611
+        },
+        "status": "reviewed_shared_observation",
+        "whole_run_maximum_foreign_average_cores": 54.16739068807631
+      },
+      {
+        "comparative_timing_eligible": true,
+        "index": 14,
+        "job_id": 22410,
+        "method": "orthohmm_satellite_v2",
+        "preflight_foreign_average_cores": 53.99052887381435,
+        "proteomes": 8,
+        "repeat": 1,
+        "resources": {
+          "cpu_seconds": 58240.723374,
+          "peak_memory_bytes": 8269803520,
+          "wall_seconds": 2086.947282256
+        },
+        "status": "reviewed_shared_observation",
+        "whole_run_maximum_foreign_average_cores": 54.80759732128074
+      },
+      {
+        "comparative_timing_eligible": true,
+        "index": 15,
+        "job_id": 22411,
+        "method": "orthohmm_high_sensitivity",
+        "preflight_foreign_average_cores": 54.088758024190476,
+        "proteomes": 12,
+        "repeat": 1,
+        "resources": {
+          "cpu_seconds": 78335.830623,
+          "peak_memory_bytes": 11521089536,
+          "wall_seconds": 2720.077391309
+        },
+        "status": "reviewed_shared_observation",
+        "whole_run_maximum_foreign_average_cores": 54.003228514276124
+      },
+      {
+        "comparative_timing_eligible": true,
+        "index": 16,
+        "job_id": 22412,
+        "method": "orthohmm_satellite_v2",
+        "preflight_foreign_average_cores": 53.29699614044061,
+        "proteomes": 12,
+        "repeat": 1,
+        "resources": {
+          "cpu_seconds": 116000.996415,
+          "peak_memory_bytes": 11384778752,
+          "wall_seconds": 4042.426197872
+        },
+        "status": "reviewed_shared_observation",
+        "whole_run_maximum_foreign_average_cores": 54.767255918826756
+      },
+      {
+        "comparative_timing_eligible": false,
+        "index": 17,
+        "job_id": 22413,
+        "method": "orthofinder_3_1_5_full",
+        "preflight_foreign_average_cores": 42.05447142355838,
+        "proteomes": 12,
+        "repeat": 1,
+        "resources": null,
+        "status": "reviewed_pre_native_abort",
+        "whole_run_maximum_foreign_average_cores": null
+      },
+      {
+        "comparative_timing_eligible": true,
+        "index": 18,
+        "job_id": 22414,
+        "method": "orthofinder_3_1_5_full",
+        "preflight_foreign_average_cores": 41.269429449834206,
+        "proteomes": 4,
+        "repeat": 2,
+        "resources": {
+          "cpu_seconds": 4455.373716,
+          "peak_memory_bytes": 7274196992,
+          "wall_seconds": 420.740000613
+        },
+        "status": "reviewed_shared_observation",
+        "whole_run_maximum_foreign_average_cores": 42.775953797936005
+      },
+      {
+        "comparative_timing_eligible": true,
+        "index": 19,
+        "job_id": 22415,
+        "method": "orthohmm_high_sensitivity",
+        "preflight_foreign_average_cores": 41.15059080560171,
+        "proteomes": 4,
+        "repeat": 2,
+        "resources": {
+          "cpu_seconds": 8974.765381,
+          "peak_memory_bytes": 3379163136,
+          "wall_seconds": 359.295812268
+        },
+        "status": "reviewed_shared_observation",
+        "whole_run_maximum_foreign_average_cores": 42.398209250944774
+      },
+      {
+        "comparative_timing_eligible": false,
+        "index": 20,
+        "job_id": 22416,
+        "method": "orthohmm_satellite_v2",
+        "preflight_foreign_average_cores": 40.384906938755535,
+        "proteomes": 4,
+        "repeat": 2,
+        "resources": null,
+        "status": "reviewed_pre_native_abort",
+        "whole_run_maximum_foreign_average_cores": null
+      },
+      {
+        "comparative_timing_eligible": true,
+        "index": 21,
+        "job_id": 22417,
+        "method": "orthohmm_high_sensitivity",
+        "preflight_foreign_average_cores": 42.96931811331348,
+        "proteomes": 8,
+        "repeat": 2,
+        "resources": {
+          "cpu_seconds": 33878.994558,
+          "peak_memory_bytes": 8517451776,
+          "wall_seconds": 1221.444435089
+        },
+        "status": "reviewed_shared_observation",
+        "whole_run_maximum_foreign_average_cores": 42.14235434961833
+      },
+      {
+        "comparative_timing_eligible": true,
+        "index": 22,
+        "job_id": 22418,
+        "method": "orthohmm_satellite_v2",
+        "preflight_foreign_average_cores": 39.28366919480778,
+        "proteomes": 8,
+        "repeat": 2,
+        "resources": {
+          "cpu_seconds": 52911.781894,
+          "peak_memory_bytes": 8247656448,
+          "wall_seconds": 1888.884734679
+        },
+        "status": "reviewed_shared_observation",
+        "whole_run_maximum_foreign_average_cores": 47.19990755255021
+      },
+      {
+        "comparative_timing_eligible": true,
+        "index": 23,
+        "job_id": 22419,
+        "method": "orthofinder_3_1_5_full",
+        "preflight_foreign_average_cores": 45.53907964847382,
+        "proteomes": 8,
+        "repeat": 2,
+        "resources": {
+          "cpu_seconds": 17232.284253,
+          "peak_memory_bytes": 10979917824,
+          "wall_seconds": 1120.254785285
+        },
+        "status": "reviewed_shared_observation",
+        "whole_run_maximum_foreign_average_cores": 53.87127552791933
+      },
+      {
+        "comparative_timing_eligible": true,
+        "index": 24,
+        "job_id": 22420,
+        "method": "orthohmm_satellite_v2",
+        "preflight_foreign_average_cores": 62.10478741232914,
+        "proteomes": 12,
+        "repeat": 2,
+        "resources": {
+          "cpu_seconds": 125264.737465,
+          "peak_memory_bytes": 11277897728,
+          "wall_seconds": 4392.871580988
+        },
+        "status": "reviewed_shared_observation",
+        "whole_run_maximum_foreign_average_cores": 72.87075385829765
+      },
+      {
+        "comparative_timing_eligible": true,
+        "index": 25,
+        "job_id": 22422,
+        "method": "orthofinder_3_1_5_full",
+        "preflight_foreign_average_cores": 55.73295974725575,
+        "proteomes": 12,
+        "repeat": 2,
+        "resources": {
+          "cpu_seconds": 34290.331463,
+          "peak_memory_bytes": 13647224832,
+          "wall_seconds": 1580.470034134
+        },
+        "status": "reviewed_shared_observation",
+        "whole_run_maximum_foreign_average_cores": 56.87225366211244
+      },
+      {
+        "comparative_timing_eligible": true,
+        "index": 26,
+        "job_id": 22424,
+        "method": "orthohmm_high_sensitivity",
+        "preflight_foreign_average_cores": 48.115459310348555,
+        "proteomes": 12,
+        "repeat": 2,
+        "resources": {
+          "cpu_seconds": 75126.858767,
+          "peak_memory_bytes": 11333189632,
+          "wall_seconds": 2621.49764478
+        },
+        "status": "reviewed_shared_observation",
+        "whole_run_maximum_foreign_average_cores": 51.12370945720034
+      }
+    ],
+    "scientific_timings_admitted": false,
+    "uncontended_timing": false
+  },
+  "uncertainty": {
+    "interaction": [
+      {
+        "bonferroni_percentile_ci": [
+          -0.1457588056087003,
+          0.49091331142122857
+        ],
+        "difference": 0.07228456828511298,
+        "label": "repair_henikoff vs legacy_none",
+        "paired_percentile_ci": [
+          -0.08531670295362516,
+          0.31782747519767285
+        ]
+      },
+      {
+        "bonferroni_percentile_ci": [
+          -0.15251041095020001,
+          0.07190616985966669
+        ],
+        "difference": -0.018094103773918846,
+        "label": "repair_henikoff vs legacy_henikoff",
+        "paired_percentile_ci": [
+          -0.0927198388684399,
+          0.040281582763855815
+        ]
+      },
+      {
+        "bonferroni_percentile_ci": [
+          -0.3577209761205721,
+          0.4800298968612431
+        ],
+        "difference": 0.035943204283128694,
+        "label": "repair_henikoff vs repair_none",
+        "paired_percentile_ci": [
+          -0.21121182297141877,
+          0.31203000143656556
+        ]
+      },
+      {
+        "bonferroni_percentile_ci": [
+          -0.1675169524917104,
+          0.4817747694045468
+        ],
+        "difference": 0.0566789516073527,
+        "label": "repair_henikoff_cluster vs legacy_none",
+        "paired_percentile_ci": [
+          -0.10830351916498877,
+          0.3082058966158367
+        ]
+      },
+      {
+        "bonferroni_percentile_ci": [
+          -0.15939978815100134,
+          0.019059150736513607
+        ],
+        "difference": -0.0319313105678134,
+        "label": "repair_henikoff_cluster vs legacy_henikoff_cluster",
+        "paired_percentile_ci": [
+          -0.10118600959708886,
+          0.008249564119501672
+        ]
+      },
+      {
+        "bonferroni_percentile_ci": [
+          -0.37608829977169655,
+          0.4711807421374438
+        ],
+        "difference": 0.020337587605368412,
+        "label": "repair_henikoff_cluster vs repair_none",
+        "paired_percentile_ci": [
+          -0.2275816521955562,
+          0.2985504489240633
+        ]
+      }
+    ],
+    "replicates": 100000,
+    "scope": "Original phase-specific paired/Bonferroni intervals; development-exposed, not campaign-wide or independent confirmation.",
+    "standalone": [
+      {
+        "bonferroni_percentile_ci": [
+          -0.0767943741476003,
+          0.46534043428476757
+        ],
+        "difference": 0.09037867205903183,
+        "label": "Henikoff",
+        "paired_percentile_ci": [
+          -0.05012263147416966,
+          0.3317709215086232
+        ]
+      },
+      {
+        "bonferroni_percentile_ci": [
+          -0.09910894997129667,
+          0.470803784713598
+        ],
+        "difference": 0.0886102621751661,
+        "label": "Clustered Henikoff",
+        "paired_percentile_ci": [
+          -0.062644842094711,
+          0.33586564706968464
+        ]
+      },
+      {
+        "bonferroni_percentile_ci": [
+          -0.0680023879192174,
+          0.25427500383422513
+        ],
+        "difference": 0.03634136400198429,
+        "label": "Projection repair",
+        "paired_percentile_ci": [
+          -0.03621550280883134,
+          0.15418927062654106
+        ]
+      }
+    ]
+  }
+}

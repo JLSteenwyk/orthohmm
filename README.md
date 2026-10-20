@@ -160,6 +160,10 @@ tools, with precision/recall, coverage, uncertainty and resource limitations.
 All four mechanisms and the registered interaction are evaluated. The bounded
 result supports retaining experimental options, not changing defaults or
 claiming generalizable superiority over OrthoFinder.
+The [concise comparative manuscript](manuscript/hmm_frontier_20261020/README.md)
+packages these results with original workflow, accuracy, Pareto-frontier,
+resource and QfO figures. Frontier membership is descriptive, not independent
+confirmation or statistical superiority; author declarations remain pending.
 
 **Protected candidate union (experimental).** The development checkout also
 provides `--search-candidate-policy protected_union` for fresh built-in

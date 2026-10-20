@@ -1,0 +1,101 @@
+{
+  "archive": {
+    "bytes": 3630098,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/OrthoHMM_manuscript_20261020.zip",
+    "sha256": "3123c2a3e3c8035aa5b0f69ccdd7e9b551fc39e6f0936beefd3f1e10fe84e01b"
+  },
+  "author_declarations_pending": true,
+  "base_revision": "73ff345b88aa5d79967d8e86639130cec72c54a3",
+  "created_at_utc": "2026-10-20T18:12:21.745858+00:00",
+  "defaults_promoted": false,
+  "docx": {
+    "bytes": 1187818,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/manuscript_v2.docx",
+    "sha256": "951aaeaef4e3c6f632295a30180802318a2452d4d244ebde6bfe2b1a3708c8d8"
+  },
+  "manifest": {
+    "bytes": 7373,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/PACKAGE_MANIFEST.json",
+    "sha256": "28a05009433abb2c7d5fe8da32bc80d4450e679c01059bd6402c3808aa5462c4"
+  },
+  "package_files": 43,
+  "pareto_figure": {
+    "bytes": 22018,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/assets_v3/fig3_pareto.pdf",
+    "sha256": "8fb044a0b9317aea22129eda883ded78008ee42c792c999502e0fc8ea8ca0aec"
+  },
+  "pdf": {
+    "bytes": 1342039,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/manuscript.pdf",
+    "sha256": "ee96acbe9b60e61349db4f33c9218f5970d8ca55c127ead20bcc72262e3d2cb9"
+  },
+  "required_delivery_gate": "Stage only this package plus task-owned README indexes and this receipt; commit, push origin/main and verify final actual local HEAD equals remote main before reporting delivery.",
+  "staged_file_candidates": [
+    "manuscript/hmm_frontier_20261020/README.md",
+    "manuscript/hmm_frontier_20261020/FIGURE_PLAN.md",
+    "manuscript/hmm_frontier_20261020/manuscript.md",
+    "manuscript/hmm_frontier_20261020/paper.css",
+    "manuscript/hmm_frontier_20261020/references.csl.json",
+    "manuscript/hmm_frontier_20261020/additional_references.csl.json",
+    "manuscript/hmm_frontier_20261020/manuscript_final.html",
+    "manuscript/hmm_frontier_20261020/manuscript_v2.docx",
+    "manuscript/hmm_frontier_20261020/manuscript.pdf",
+    "manuscript/hmm_frontier_20261020/render_receipt_final.json",
+    "manuscript/hmm_frontier_20261020/REPRODUCIBILITY.json",
+    "manuscript/hmm_frontier_20261020/requirements-figures.txt",
+    "manuscript/hmm_frontier_20261020/code/build_hmm_frontier_manuscript.py",
+    "manuscript/hmm_frontier_20261020/validation/tests.xml",
+    "manuscript/hmm_frontier_20261020/validation/verification.json",
+    "manuscript/hmm_frontier_20261020/assets_v3/analysis.json",
+    "manuscript/hmm_frontier_20261020/assets_v3/build_manifest.json",
+    "manuscript/hmm_frontier_20261020/assets_v3/fig1_workflow.pdf",
+    "manuscript/hmm_frontier_20261020/assets_v3/fig1_workflow.png",
+    "manuscript/hmm_frontier_20261020/assets_v3/fig1_workflow.svg",
+    "manuscript/hmm_frontier_20261020/assets_v3/fig2_orthobench.pdf",
+    "manuscript/hmm_frontier_20261020/assets_v3/fig2_orthobench.png",
+    "manuscript/hmm_frontier_20261020/assets_v3/fig2_orthobench.svg",
+    "manuscript/hmm_frontier_20261020/assets_v3/fig3_pareto.pdf",
+    "manuscript/hmm_frontier_20261020/assets_v3/fig3_pareto.png",
+    "manuscript/hmm_frontier_20261020/assets_v3/fig3_pareto.svg",
+    "manuscript/hmm_frontier_20261020/assets_v3/fig4_resources.pdf",
+    "manuscript/hmm_frontier_20261020/assets_v3/fig4_resources.png",
+    "manuscript/hmm_frontier_20261020/assets_v3/fig4_resources.svg",
+    "manuscript/hmm_frontier_20261020/assets_v3/fig5_qfo.pdf",
+    "manuscript/hmm_frontier_20261020/assets_v3/fig5_qfo.png",
+    "manuscript/hmm_frontier_20261020/assets_v3/fig5_qfo.svg",
+    "manuscript/hmm_frontier_20261020/assets_v3/figS1_all_scores.pdf",
+    "manuscript/hmm_frontier_20261020/assets_v3/figS1_all_scores.png",
+    "manuscript/hmm_frontier_20261020/assets_v3/figS1_all_scores.svg",
+    "manuscript/hmm_frontier_20261020/assets_v3/figS2_uncertainty.pdf",
+    "manuscript/hmm_frontier_20261020/assets_v3/figS2_uncertainty.png",
+    "manuscript/hmm_frontier_20261020/assets_v3/figS2_uncertainty.svg",
+    "manuscript/hmm_frontier_20261020/assets_v3/pareto_membership.tsv",
+    "manuscript/hmm_frontier_20261020/assets_v3/plot_coordinates.tsv",
+    "manuscript/hmm_frontier_20261020/assets_v3/scores_all_29.tsv",
+    "manuscript/hmm_frontier_20261020/assets_v3/timing_attempts.tsv",
+    "manuscript/hmm_frontier_20261020/PACKAGE_MANIFEST.json",
+    "manuscript/hmm_frontier_20261020/OrthoHMM_manuscript_20261020.zip"
+  ],
+  "status": "manuscript_package_built_and_verified_before_final_commit_push",
+  "validation": {
+    "bytes": 4207,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/validation/verification.json",
+    "sha256": "9774a41a91f3b5fd9fcd65e841764351f3ff0e221428fb60e7403bc38fa834dc"
+  },
+  "whitespace_review": {
+    "generated_files_with_native_formatting": [
+      "manuscript/hmm_frontier_20261020/assets_v3/fig1_workflow.svg",
+      "manuscript/hmm_frontier_20261020/assets_v3/fig2_orthobench.svg",
+      "manuscript/hmm_frontier_20261020/assets_v3/fig3_pareto.svg",
+      "manuscript/hmm_frontier_20261020/assets_v3/fig4_resources.svg",
+      "manuscript/hmm_frontier_20261020/assets_v3/fig5_qfo.svg",
+      "manuscript/hmm_frontier_20261020/assets_v3/figS1_all_scores.svg",
+      "manuscript/hmm_frontier_20261020/assets_v3/figS2_uncertainty.svg",
+      "manuscript/hmm_frontier_20261020/assets_v3/pareto_membership.tsv",
+      "manuscript/hmm_frontier_20261020/assets_v3/plot_coordinates.tsv",
+      "manuscript/hmm_frontier_20261020/assets_v3/timing_attempts.tsv"
+    ],
+    "manual_source_and_prose_check": "passed",
+    "scope": "Matplotlib SVG path continuations and CSV dialect CRLF/missing TSV cells have native whitespace. Preserve exact validated exporter bytes and source-table fingerprints; no prose/code whitespace errors accepted."
+  }
+}

@@ -1,0 +1,97 @@
+key	short	endpoint	score	precision	recall	assessed_relations	numeric_scored_pairs	semantics
+profile_weighting:none	OH-C	OB	0.7410607351873405	0.8177045380181867	0.6775533630827973	NA	NA	NA
+profile_weighting:none	OH-C	VGNC	0.9020677639723076	0.9993396993092238	0.8220523105205984	NA	NA	NA
+profile_weighting:none	OH-C	SwissTrees	0.831347705694284	0.95464765	0.73625484	NA	NA	NA
+profile_weighting:none	OH-C	TreeFam	0.6157780611844207	0.95933142	0.45340559	NA	NA	NA
+profile_weighting:none	OH-C	EC	0.96538176	NA	NA	118067	NA	NA
+profile_weighting:none	OH-C	GO	0.49023637	NA	NA	84021	NA	NA
+profile_weighting:none	OH-C	FAS	0.7637247098243404	NA	NA	5953050.0	176307	NA
+profile_weighting:none	OH-C	TK	0.872133159469203	1.0	0.7732589771490751	NA	NA	NA
+profile_weighting:henikoff	OH-W	OB	0.7419645219079308	0.8185134704695101	0.6785090546528878	NA	NA	NA
+profile_weighting:henikoff	OH-W	VGNC	0.9009087571140076	0.9993381529375828	0.820130358485836	NA	NA	NA
+profile_weighting:henikoff	OH-W	SwissTrees	0.8292184762768233	0.95462812	0.73293296	NA	NA	NA
+profile_weighting:henikoff	OH-W	TreeFam	0.6157277404715209	0.95960136	0.45329077	NA	NA	NA
+profile_weighting:henikoff	OH-W	EC	0.96768396	NA	NA	116182	NA	NA
+profile_weighting:henikoff	OH-W	GO	0.48988675	NA	NA	84223	NA	NA
+profile_weighting:henikoff	OH-W	FAS	0.762825030275764	NA	NA	5950178.0	176709	NA
+profile_weighting:henikoff	OH-W	TK	0.8717870022251208	1.0	0.7727149075081611	NA	NA	NA
+profile_weighting:henikoff_cluster	OH-N	OB	0.7419468378090919	0.8184704291253194	0.6785090546528878	NA	NA	NA
+profile_weighting:henikoff_cluster	OH-N	VGNC	0.9010257704752508	0.9994400040726976	0.8202557031837553	NA	NA	NA
+profile_weighting:henikoff_cluster	OH-N	SwissTrees	0.831347705694284	0.95464765	0.73625484	NA	NA	NA
+profile_weighting:henikoff_cluster	OH-N	TreeFam	0.6132308395434054	0.95932734	0.45064989	NA	NA	NA
+profile_weighting:henikoff_cluster	OH-N	EC	0.96758148	NA	NA	116167	NA	NA
+profile_weighting:henikoff_cluster	OH-N	GO	0.48982646	NA	NA	84443	NA	NA
+profile_weighting:henikoff_cluster	OH-N	FAS	0.7624683130297215	NA	NA	5954794.0	175092	NA
+profile_weighting:henikoff_cluster	OH-N	TK	0.8691840344535876	1.0	0.7686343852013058	NA	NA	NA
+projection_recovery:projection_off	OH-R	OB	0.7414241488273605	0.81859000737429	0.6775533630827973	NA	NA	NA
+projection_recovery:projection_off	OH-R	VGNC	0.9013877738272739	0.9993387925334418	0.8209242082393248	NA	NA	NA
+projection_recovery:projection_off	OH-R	SwissTrees	0.8335132205147882	0.95517675	0.73934126	NA	NA	NA
+projection_recovery:projection_off	OH-R	TreeFam	0.6163751436840722	0.95966019	0.4539797	NA	NA	NA
+projection_recovery:projection_off	OH-R	EC	0.96583455	NA	NA	117194	117194	NA
+projection_recovery:projection_off	OH-R	GO	0.48958961	NA	NA	84269	84269	NA
+projection_recovery:projection_off	OH-R	FAS	0.763292288871938	NA	NA	5944182.0	174361	NA
+projection_recovery:projection_off	OH-R	TK	0.8702266615443719	1.0	0.7702665941240479	NA	NA	NA
+orthohmm_high_sensitivity	OH-S	OB	0.7035899765495244	0.7894954395226098	0.6345447853618141	NA	NA	refined orthogroups
+orthohmm_high_sensitivity	OH-S	VGNC	0.6659331499541553	0.5540206929072703	0.83450321718058	NA	NA	cross-species group-derived clique pairs
+orthohmm_high_sensitivity	OH-S	SwissTrees	0.6854977808857662	0.6409985	0.73663642	NA	NA	cross-species group-derived clique pairs
+orthohmm_high_sensitivity	OH-S	TreeFam	0.6050078839081693	0.79287496	0.48911496	NA	NA	cross-species group-derived clique pairs
+orthohmm_high_sensitivity	OH-S	EC	0.93203769	NA	NA	185664	NA	cross-species group-derived clique pairs
+orthohmm_high_sensitivity	OH-S	GO	0.4722711	NA	NA	145619	NA	cross-species group-derived clique pairs
+orthohmm_high_sensitivity	OH-S	FAS	0.7765850417998846	NA	NA	9032719.0	NA	cross-species group-derived clique pairs
+orthohmm_high_sensitivity	OH-S	TK	0.8263090676883781	1.0	0.7040261153427638	NA	NA	reference-gene group co-membership, including within-species pairs
+orthohmm_phylogeny_satellite_v2	OH-P	OB	0.7410607351873405	0.8177045380181867	0.6775533630827973	NA	NA	post-membership-filter root HOGs
+orthohmm_phylogeny_satellite_v2	OH-P	VGNC	0.9016900956268489	0.9993391958521832	0.8214255870310019	NA	NA	native phylogenetically inferred pairs
+orthohmm_phylogeny_satellite_v2	OH-P	SwissTrees	0.8335132205147882	0.95517675	0.73934126	NA	NA	native phylogenetically inferred pairs
+orthohmm_phylogeny_satellite_v2	OH-P	TreeFam	0.614863704412014	0.95911016	0.45246406	NA	NA	native phylogenetically inferred pairs
+orthohmm_phylogeny_satellite_v2	OH-P	EC	0.9656505	NA	NA	117460	NA	native phylogenetically inferred pairs
+orthohmm_phylogeny_satellite_v2	OH-P	GO	0.49034928	NA	NA	84211	NA	native phylogenetically inferred pairs
+orthohmm_phylogeny_satellite_v2	OH-P	FAS	0.7629933121004577	NA	NA	5959560.0	NA	native phylogenetically inferred pairs
+orthohmm_phylogeny_satellite_v2	OH-P	TK	0.872133159469203	1.0	0.7732589771490751	NA	NA	reference-gene group co-membership, including within-species pairs
+orthofinder_3_1_5_full	OF-F	OB	0.7273648000422167	0.6606510299607791	0.8090657663112891	NA	NA	Official post-phylogenetic orthogroups, not the later debug N0.ids partition
+orthofinder_3_1_5_full	OF-F	VGNC	0.9885463295714856	0.9945029388134805	0.9826606501211665	NA	NA	native phylogenetically inferred pairs
+orthofinder_3_1_5_full	OF-F	SwissTrees	0.8484132682382873	0.93785283	0.77454753	NA	NA	native phylogenetically inferred pairs
+orthofinder_3_1_5_full	OF-F	TreeFam	0.7919177591512453	0.92452715	0.69257796	NA	NA	native phylogenetically inferred pairs
+orthofinder_3_1_5_full	OF-F	EC	0.93613021	NA	NA	175361	NA	native phylogenetically inferred pairs
+orthofinder_3_1_5_full	OF-F	GO	0.46954797	NA	NA	163557	NA	native phylogenetically inferred pairs
+orthofinder_3_1_5_full	OF-F	FAS	0.6914221332471376	NA	NA	14215382.0	NA	native phylogenetically inferred pairs
+orthofinder_3_1_5_full	OF-F	TK	0.9885816480946485	1.0	0.9774211099020674	NA	NA	reference-gene group co-membership, including within-species pairs
+orthofinder_3_1_5_sequence_only	OF-S	OB	0.58705963184	0.45706162743	0.8203982706799999	NA	NA	pre-phylogeny clustering checkpoint
+orthofinder_3_1_5_sequence_only	OF-S	VGNC	0.1427548455331809	0.07689129740145306	0.9953622461769868	NA	NA	cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+orthofinder_3_1_5_sequence_only	OF-S	SwissTrees	0.6905148246056576	0.56906785	0.87786296	NA	NA	cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+orthofinder_3_1_5_sequence_only	OF-S	TreeFam	0.7344069307487682	0.6204701	0.89960042	NA	NA	cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+orthofinder_3_1_5_sequence_only	OF-S	EC	0.7536416	NA	NA	1660940	NA	cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+orthofinder_3_1_5_sequence_only	OF-S	GO	0.40704311	NA	NA	1979084	NA	cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+orthofinder_3_1_5_sequence_only	OF-S	FAS	0.5617530837830421	NA	NA	163277439.0	NA	cross-species pre-phylogenetic MCL group-derived clique pairs (diagnostic)
+orthofinder_3_1_5_sequence_only	OF-S	TK	0.9894507588647655	0.9901920719248059	0.9887105549510338	NA	NA	reference-gene group co-membership, including within-species pairs
+sonicparanoid_2_0_9	SP	OB	0.4675760912	0.36535179568	0.6492280907	NA	NA	native groups plus explicit singleton padding
+sonicparanoid_2_0_9	SP	VGNC	0.9827943352356794	0.9945242984257358	0.9713378457424584	NA	NA	native species-pair relations
+sonicparanoid_2_0_9	SP	SwissTrees	0.798459422080563	0.87227877	0.73615959	NA	NA	native species-pair relations
+sonicparanoid_2_0_9	SP	TreeFam	0.7719558753542073	0.9132317	0.66853442	NA	NA	native species-pair relations
+sonicparanoid_2_0_9	SP	EC	0.87276097	NA	NA	244356	NA	native species-pair relations
+sonicparanoid_2_0_9	SP	GO	0.45438453	NA	NA	197930	NA	native species-pair relations
+sonicparanoid_2_0_9	SP	FAS	0.736680187140205	NA	NA	15248739.0	NA	native species-pair relations
+sonicparanoid_2_0_9	SP	TK	0.9912758996728462	0.9934426229508196	0.9891186071817193	NA	NA	reference-gene group co-membership, including within-species pairs
+proteinortho_6_3_6	PO	OB	0.45057346674000004	0.97056207735	0.29338788906	NA	NA	native groups plus explicit singleton padding
+proteinortho_6_3_6	PO	VGNC	0.9548962442119706	0.980540635731267	0.9305590373527199	NA	NA	native post-clustering graph
+proteinortho_6_3_6	PO	SwissTrees	0.7181110000474794	0.95217994	0.57641436	NA	NA	native post-clustering graph
+proteinortho_6_3_6	PO	TreeFam	0.6431874339159368	0.94641503	0.48711707	NA	NA	native post-clustering graph
+proteinortho_6_3_6	PO	EC	0.96316811	NA	NA	143135	NA	native post-clustering graph
+proteinortho_6_3_6	PO	GO	0.4863364	NA	NA	89609	NA	native post-clustering graph
+proteinortho_6_3_6	PO	FAS	0.8135948641193668	NA	NA	4695385.0	NA	native post-clustering graph
+proteinortho_6_3_6	PO	TK	0.9304626127436718	1.0	0.8699673558215452	NA	NA	reference-gene group co-membership, including within-species pairs
+fastoma_0_3_5	FA	OB	0.30906942172	0.93631476193	0.18508163621	NA	NA	final orthologous groups, not root-HOG diagnostic
+fastoma_0_3_5	FA	VGNC	0.9500961370389792	0.9957863882018869	0.9084148073869809	NA	NA	native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+fastoma_0_3_5	FA	SwissTrees	0.7802191344441686	0.92360055	0.67537301	NA	NA	native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+fastoma_0_3_5	FA	TreeFam	0.6579015590472269	0.88210534	0.52457172	NA	NA	native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+fastoma_0_3_5	FA	EC	0.89716752	NA	NA	178598	NA	native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+fastoma_0_3_5	FA	GO	0.43689352	NA	NA	171132	NA	native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+fastoma_0_3_5	FA	FAS	0.6543663364244952	NA	NA	15008180.0	NA	native phylogenetically inferred pairs; supplied corrected OrthoFinder species tree
+fastoma_0_3_5	FA	TK	0.8616551830920492	1.0	0.7569368879216539	NA	NA	reference-gene group co-membership, including within-species pairs
+orthomcl_1_4	OM	OB	0.55065342292	0.59078055333	0.5156306418100001	NA	NA	July 2025 native OrthoMCL groups
+orthomcl_1_4	OM	VGNC	0.6420265327291587	0.47675031418494346	0.9827024316871397	NA	NA	cross_species_final_group_cliques
+orthomcl_1_4	OM	SwissTrees	0.7666097433127044	0.87412806	0.68264408	NA	NA	cross_species_final_group_cliques
+orthomcl_1_4	OM	TreeFam	0.7536851790190046	0.85198483	0.67572222	NA	NA	cross_species_final_group_cliques
+orthomcl_1_4	OM	EC	0.92132599	NA	NA	220622	NA	cross_species_final_group_cliques
+orthomcl_1_4	OM	GO	0.46375473	NA	NA	175181	NA	cross_species_final_group_cliques
+orthomcl_1_4	OM	FAS	0.7337522155738428	NA	NA	14378089.0	NA	cross_species_final_group_cliques
+orthomcl_1_4	OM	TK	0.9889293818331844	1.0	0.97810119695321	NA	NA	reference-gene group co-membership, including within-species pairs
