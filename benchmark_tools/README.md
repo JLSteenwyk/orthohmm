@@ -7,6 +7,12 @@ The [campaign protocol](hmm_evidence_campaign_20261018.json) and
 the bounded investigation of weighted profiles, alignment-aware recruitment,
 local joint-tree rescue and selective HMMER validation. This is development
 work, not a new validated default or a completed publication release.
+The [dated scheduler reconciliation](results/hmm_campaign_scheduler_reconciliation_20261020.json)
+records accounting for all48 unique campaign jobs and corrects15 stale scheduler
+states in the mutable ledger. Older submission/progress prose is historical;
+do not restart jobs because of it. Historical launch commits and scientific
+admission decisions are unchanged. Scheduler completion alone is not accuracy
+admission; the separate source/native/score readers remain required.
 
 Weighting and the standalone alignment guard have production opt-in flags
 described in the [main README](../README.md). Local rescue and selective
