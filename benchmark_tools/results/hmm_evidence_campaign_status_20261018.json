@@ -5,7 +5,7 @@
   "weighted_projection_ablation": {
     "protocol": "benchmark_tools/hmm_weighted_projection_ablation_20261019.json",
     "planning_revision": "0e9f87c31995082babbb751f0f85584c29d98995",
-    "state": "registered_six_arm_scientific_job24538_submitted_after_pushed_frozen_readiness_separate_readback_submission_next",
+    "state": "registered_six_arm_scientific_job24538_running_reader24539_pending_afterany24538_no_new_accuracy_admitted",
     "workflow_milestone": "benchmark_tools/results/weighted_projection_workflow_milestone_20261019.json",
     "scientific_core_commit": "e33fac1300552f0377b758ca135e7e5da22a1e4a",
     "scientific_core_source": "benchmarks/work/weighted_projection_core_v1_20261019",
@@ -17,7 +17,33 @@
     "design": "One2x3 OrthoBench pilot with four exact constituent controls and two weighted/residue-preserving combinations. Both independently passing weighting modes retained; no per-endpoint winner selection.",
     "hypothesis": "Position-based weighting depends on actual MSA-column distributions; test it on residue-preserving geometry rather than assuming additive standalone gains.",
     "advancement": "Candidate F1 must strictly exceed canonical and both corresponding solo constituents; precision and recall may not decline by more than0.005 against any matched control. All six arms require actual activation/native/score admission. No retuning; original stopped branches stay stopped.",
-    "next": "Science24538 submitted once after readiness0a6edb0d push/remote verification, preparation24536/readiness24537 completed. Commit/push exact submitted job/plan/source binding, then submit separately frozen reader afterany24538 using that immutable revision. Preserve live handle, never duplicate/restart because observation expires. All six controlled scores and original gates must be admitted before any full QfO/Three Kingdoms extension.",
+    "next": "Science24538 running and separate reader24539 queued afterany24538 with immutable science-launch73a26cb8. Preserve these exact handles and source/plan bindings; never duplicate/restart because observation expires. Admit all six source/native/score-controlled arms and original stronger-constituent gates before full QfO/Three Kingdoms closure for every passing combination. Stop failed fixed candidates without retuning; later final freeze/confirmation or data limits, comparison/recommendation and remote audit remain required.",
+    "defaults_promoted": false,
+    "goal_completed": false
+  },
+  "weighted_projection_postrun_readback": {
+    "runner_commit": "86e39314ba462698b726f569a5d98a144c8d0086",
+    "scientific_reader_source": "benchmarks/work/weighted_projection_readback_v1_20261019",
+    "implementation": "benchmark_tools/report_weighted_projection.py",
+    "protocol": "benchmark_tools/hmm_weighted_projection_ablation_20261019.json",
+    "milestone": "benchmark_tools/results/weighted_projection_workflow_milestone_20261019.json",
+    "job": {
+      "submitted": true, "job_id": "24539", "last_observed_state": "PENDING",
+      "dependency": "afterany:24538", "cpus": 1, "memory_allocation": "16G", "wall_limit": "02:00:00",
+      "restarts": 0, "requeue": false,
+      "log": "benchmarks/results/weighted_projection_readback_v1_20261019-24539.out",
+      "summary": "benchmarks/results/weighted_projection_readback_v1_20261019/summary.json"
+    },
+    "launch_binding": {
+      "revision": "73a26cb8ecc5deb19319aa988bb0f3ecf363f99f",
+      "path": "benchmark_tools/results/hmm_evidence_campaign_status_20261018.json",
+      "entry_key": "weighted_projection_pilot",
+      "git_blob_sha256": "9d83fb676e15a7705bf43f5d1cfbd8ea00b5c422b58f42522021532e054f1591"
+    },
+    "submission": "sbatch --parsable --no-requeue --dependency=afterany:24538 --chdir=<separate frozen reader> --output=<primary repo>/benchmarks/results/weighted_projection_readback_v1_20261019-%j.out <frozen reader>/benchmark_tools/report_weighted_projection.slurm <frozen reader> <primary repo> 73a26cb8ecc5deb19319aa988bb0f3ecf363f99f <primary repo>/benchmarks/results/weighted_projection_readback_v1_20261019",
+    "verification": "Exact73a26cb8 science-launch commit pushed and remotely verified before submission. Actual frozen reader launch() authenticated that ledger blob/entry, scientific job24538, plan hash and separate reader source binding. scontrol confirms frozen script/cwd, pending afterany24538,1CPU16G/two-hour budget, no automatic requeue and zero restarts. Complete terminal-successful scientific panel and original reference/gate/raw-score admission remain runtime requirements.",
+    "scope": "Separate shared-helper verification, not independent biological confirmation. Do not admit partial or failed panels, treat execution errors as negative biology, relax original gates, or silently overwrite prior attempts. All old science/reader/report bindings preserved.",
+    "accuracy_result_admitted": false,
     "defaults_promoted": false,
     "goal_completed": false
   },
