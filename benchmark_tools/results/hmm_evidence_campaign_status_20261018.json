@@ -28,7 +28,17 @@
     "readiness": "benchmark_tools/results/hmm_campaign_plateau_readiness_20261020.json",
     "tests": "benchmark_tools/results/hmm_campaign_plateau_tests_20261020.xml",
     "preflight": "benchmark_tools/results/hmm_campaign_plateau_preflight_20261020.json",
-    "state": "tested163_actual_data_preflight_and_frozen1239_source_records_verified_compilation_not_submitted",
+    "state": "frozen_final_compilation24547_running_no_new_science_or_goal_closure",
+    "submission_record": "benchmark_tools/results/hmm_campaign_plateau_submission_20261020.json",
+    "job": {
+      "submitted": true, "job_id": "24547", "last_observed_state": "RUNNING",
+      "cpus": 1, "memory_allocation": "16G", "wall_limit": "02:00:00",
+      "requeue": false, "restarts": 0,
+      "log": "benchmarks/results/hmm_campaign_plateau_v1_20261020-24547.out",
+      "summary": "benchmarks/results/hmm_campaign_plateau_v1_20261020/summary.json",
+      "actual_batch_script": "benchmarks/results/hmm_campaign_plateau_v1_20261020-24547.batch.sh"
+    },
+    "verification": "Pushed fcd95d09 source and ada66871 readiness remotely verified before submission. All1239 actual source/launcher/freeze/review records match frozen committed bytes; original CPU extensions copied unchanged. scontrol confirms actual frozen script/cwd,1CPU16G/two hours, no dependency/requeue/restarts. Actual scheduler batch script exported while live; preserve this handle and namespace until terminal success/failure. No new inference, scores or functional sampling.",
     "scope": "Read-only collation of all individual mechanisms and the admitted negative interaction, preserving29 configuration/control/history rows,232 endpoint slots,125 scored observations and106 phase-cost rows. Existing generic diagnostic helpers and actual saved cost receipts verified on complete source admissions. No new inference, scores, functional resampling or scientific gate changes. Full frozen execution, final documentation and requirement/remote audit remain required.",
     "defaults_promoted": false,
     "goal_completed": false
