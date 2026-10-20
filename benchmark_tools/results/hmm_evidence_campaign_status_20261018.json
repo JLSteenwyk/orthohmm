@@ -17,7 +17,7 @@
     "design": "One2x3 OrthoBench pilot with four exact constituent controls and two weighted/residue-preserving combinations. Both independently passing weighting modes retained; no per-endpoint winner selection.",
     "hypothesis": "Position-based weighting depends on actual MSA-column distributions; test it on residue-preserving geometry rather than assuming additive standalone gains.",
     "advancement": "Candidate F1 must strictly exceed canonical and both corresponding solo constituents; precision and recall may not decline by more than0.005 against any matched control. All six arms require actual activation/native/score admission. No retuning; original stopped branches stay stopped.",
-    "next": "Science24538 running and separate reader24539 queued afterany24538 with immutable science-launch73a26cb8. Preserve these exact handles and source/plan bindings; never duplicate/restart because observation expires. Admit all six source/native/score-controlled arms and original stronger-constituent gates before full QfO/Three Kingdoms closure for every passing combination. Stop failed fixed candidates without retuning; later final freeze/confirmation or data limits, comparison/recommendation and remote audit remain required.",
+    "next": "Science24538 running, separate reader24539 queued afterany24538 with immutable science-launch73a26cb8, and selection-only planner24540 queued afterany24539. Preserve these exact handles and source/plan bindings; never duplicate/restart because observation expires. Admit all six source/native/score-controlled arms and original stronger-constituent gates before any full QfO/Three Kingdoms closure for every passing combination. The planner creates no scientific case or evaluation; tested/frozen full-dataset execution/readback remain required only for admitted passes. Stop failed fixed candidates without retuning; later final freeze/confirmation or data limits, comparison/recommendation and remote audit remain required.",
     "defaults_promoted": false,
     "goal_completed": false
   },
@@ -25,12 +25,29 @@
     "implementation": "benchmark_tools/plan_weighted_projection_followup.py",
     "launcher": "benchmark_tools/plan_weighted_projection_followup.slurm",
     "milestone": "benchmark_tools/results/weighted_projection_selection_milestone_20261019.json",
-    "state": "tested1647_in43modules_ready_for_commit_push_freeze_and_dependent_readonly_submission",
+    "state": "tested1647_pushed_frozen_verified_planner24540_pending_afterany_original_reader24539",
+    "runner_commit": "70063b31a9ff5c62705b6f4f2ab06d743842ba55",
+    "source": "benchmarks/work/weighted_projection_selection_v1_20261019",
+    "readiness": {
+      "path": "benchmark_tools/results/weighted_projection_selection_readiness_20261019.json",
+      "bytes": 372771,
+      "sha256": "6f6e35e3a82a96b63b98af59369f1653b8b4468bba60bbf165bf8b1f8587f567",
+      "source_records": 1237
+    },
     "reader_submission_revision": "ddabca65c610855d86fa21402296e8920a9ad35b",
     "scientific_launch_revision": "73a26cb8ecc5deb19319aa988bb0f3ecf363f99f",
     "scientific_revision": "86e39314ba462698b726f569a5d98a144c8d0086",
     "dependency": "afterany:24539",
     "resources": {"cpus": 1, "memory_allocation": "16G", "wall_limit": "02:00:00"},
+    "job": {
+      "submitted": true, "job_id": "24540", "last_observed_state": "PENDING",
+      "dependency": "afterany:24539", "cpus": 1, "memory_allocation": "16G", "wall_limit": "02:00:00",
+      "restarts": 0, "requeue": false,
+      "log": "benchmarks/results/weighted_projection_followup_selection_v1_20261019-24540.out",
+      "selection": "benchmarks/results/weighted_projection_followup_selection_v1_20261019/selection.json"
+    },
+    "submission": "sbatch --parsable --no-requeue --dependency=afterany:24539 --chdir=<frozen planner> --output=<primary repo>/benchmarks/results/weighted_projection_followup_selection_v1_20261019-%j.out <frozen planner>/benchmark_tools/plan_weighted_projection_followup.slurm <frozen planner> <primary repo> <primary repo>/benchmarks/results/weighted_projection_followup_selection_v1_20261019",
+    "verification": "Exact70063b31 pushed and remotely verified before freeze and submission. All1237 actual frozen planner/source/launcher/protocol records matched committed Git bytes; unchanged scientific core, copied original CPU libraries and immutable ddabca65/73a26cb8 launch bindings verified. scontrol confirms original frozen script/cwd, pending afterany24539,1CPU16G/two-hour budget, zero restarts and no automatic requeue. Original science24538 remains running; no new scientific job or accuracy admission.",
     "scope": "Selection-only planner; actual complete terminal-successful original reader admission and unchanged gates required. Retain every passing combination and exact0/4/6 matched closure; no fallback, retuning, winner suppression or control promotion. No scientific case/evaluation prepared or submitted. Full-dataset driver/readback remain required only for admitted passes.",
     "defaults_promoted": false,
     "goal_completed": false
