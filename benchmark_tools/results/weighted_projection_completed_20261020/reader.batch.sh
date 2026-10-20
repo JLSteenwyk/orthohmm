@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --job-name=ohmm-weighted-repair-readback
+#SBATCH --partition=gpu
+#SBATCH --nodelist=bizon
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=16G
+#SBATCH --time=02:00:00
+
+set -euo pipefail
+export CUDA_VISIBLE_DEVICES=""
+export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
+export NUMBA_NUM_THREADS=1 PYTHONHASHSEED=0
+exec /home/bizon/anaconda3/bin/python "$1/benchmark_tools/report_weighted_projection.py" \
+    --repo "$2" --launch-revision "$3" --output "$4"

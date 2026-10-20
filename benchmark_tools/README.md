@@ -49,8 +49,9 @@ repair pass original development screens with mixed effects; OrthoBench paired
 intervals span zero. Failed executions remain distinct from biological gate
 failures. Functional means use different eligible/numeric populations, and
 cached shared-host phase costs are not full-tool timing comparisons. Original
-stopped branches stay stopped. Joint weighting/projection combinations are
-still untested; this archive does not close the goal or promote defaults.
+stopped branches stay stopped. This individual-effects archive remains an
+unchanged historical source; the later interaction admission below adds the
+joint results without overwriting it or promoting defaults.
 
 The [registered weighting/projection ablation](hmm_weighted_projection_ablation_20261019.json)
 tests the dependence of position-based weights on residue-preserving alignment
@@ -83,9 +84,37 @@ The tested runner and reader must be pushed and frozen before a new launch;
 code/unit-fixture readiness is not evidence of joint biological accuracy gains.
 The [canonical reproduction checkpoint](results/weighted_projection_canonical_checkpoint_20261019.json)
 records exact graph/candidate/native/rooted-tree identity and a separate frozen
-official-score recheck for the first completed control. Other arms remain
-pending; this checkpoint is not terminal whole-panel admission, a new accuracy
-improvement or a substitute for the original complete six-arm reader.
+official-score recheck for the first completed control. It is a historical
+partial checkpoint, not a substitute for the completed six-arm admission.
+
+The [complete interaction archive](results/weighted_projection_completed_20261020/summary.json)
+now admits all six arms, reproduces all four original controls and retains the
+six paired-family contrasts with the registered 18-metric adjustment.
+
+| OrthoBench Configuration | F1 | Precision | Recall | Fixed Advancement Gate |
+| --- | ---: | ---: | ---: | --- |
+| Canonical | 0.741061 | 0.817705 | 0.677553 | Control |
+| Henikoff alone | 0.741965 | 0.818513 | 0.678509 | Control |
+| Clustered Henikoff alone | 0.741947 | 0.818470 | 0.678509 | Control |
+| Projection repair alone | 0.741424 | 0.818590 | 0.677553 | Control |
+| Henikoff + repair | 0.741784 | 0.819931 | 0.677236 | Fail |
+| Clustered Henikoff + repair | 0.741628 | 0.819550 | 0.677236 | Fail |
+
+Both combinations improve on canonical but not their corresponding weighting
+solo, so neither advances. The original planner returned no follow-up arms;
+do not implement or launch QfO/Three Kingdoms extensions for these stopped
+configurations. Their unrun endpoints stay NA in the [score table](results/weighted_projection_completed_20261020/scores.tsv).
+The [24 phase-cost rows](results/weighted_projection_completed_20261020/resources.tsv)
+are shared-host cached costs, not fresh end-to-end timing comparisons. All 1647
+tests passed across 43 goal-related modules on one inherited logical CPU;
+the [JUnit report](results/weighted_projection_completed_20261020/tests.xml)
+and exact scheduler scripts are retained. The initial archive-only failure
+assumed an optional pair-turnover field existed for canonical. Its failed
+script/log and partial tables remain preserved; the corrected export leaves
+that diagnostic null and reproduces the same score/cost table bytes. No
+scientific rerun, gate change or statistical-inferiority claim is involved.
+Final candidate freezing, confirmation or documented data limits, the overall
+comparison/recommendation and requirement/remote audit remain unfinished.
 
 `plan_weighted_projection_followup.py --repo <repo> --driver <frozen planner>
 --output <fresh directory>` authenticates the exact submitted pilot/reader

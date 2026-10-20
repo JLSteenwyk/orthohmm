@@ -1,0 +1,104 @@
+{
+  "exports": [
+    {
+      "command": [
+        "scontrol",
+        "write",
+        "batch_script",
+        "24538",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_campaign_terminal_science_24538_20261020.batch.sh"
+      ],
+      "fallback": {
+        "scope": "Scheduler export unavailable after controller job retention; original frozen source/immutable launch/plan and admitted actual child commands/logs remain authoritative. No exported-script claim or scientific rerun.",
+        "source": {
+          "bytes": 453,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/weighted_projection_pilot_v1_20261019/benchmark_tools/run_profile_weighting_pilot.slurm",
+          "sha256": "75e79abc809577a86def2e9a2d20a935ed965aa952807a0dde7a1d5c67efc5f9"
+        }
+      },
+      "job_id": "24538",
+      "returncode": 0,
+      "role": "science",
+      "script": null,
+      "stderr": "job script retrieval failed: Invalid job id specified\n",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "scontrol",
+        "write",
+        "batch_script",
+        "24539",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_campaign_terminal_reader_24539_20261020.batch.sh"
+      ],
+      "job_id": "24539",
+      "returncode": 0,
+      "role": "reader",
+      "script": {
+        "bytes": 482,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_campaign_terminal_reader_24539_20261020.batch.sh",
+        "sha256": "2e98fe36f0ef93cecd58f6a130c78f2208348cc95693596df332ff3f01ea5edb"
+      },
+      "stderr": "",
+      "stdout": "batch script for job 24539 written to /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_campaign_terminal_reader_24539_20261020.batch.sh\n"
+    },
+    {
+      "command": [
+        "scontrol",
+        "write",
+        "batch_script",
+        "24540",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_campaign_terminal_selection_24540_20261020.batch.sh"
+      ],
+      "job_id": "24540",
+      "returncode": 0,
+      "role": "selection",
+      "script": {
+        "bytes": 481,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_campaign_terminal_selection_24540_20261020.batch.sh",
+        "sha256": "899d871dbea5e953cf0a76e5868d3cf6831d9531623568a923b8c5fd7d3a75df"
+      },
+      "stderr": "",
+      "stdout": "batch script for job 24540 written to /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_campaign_terminal_selection_24540_20261020.batch.sh\n"
+    },
+    {
+      "command": [
+        "scontrol",
+        "write",
+        "batch_script",
+        "24544",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_campaign_terminal_regression_24544_20261020.batch.sh"
+      ],
+      "job_id": "24544",
+      "returncode": 0,
+      "role": "regression",
+      "script": {
+        "bytes": 3315,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_campaign_terminal_regression_24544_20261020.batch.sh",
+        "sha256": "b10e0fe2d507c5188cf0f365010d1cfdca6f415f50d9b1917ab1811dea66ebf1"
+      },
+      "stderr": "",
+      "stdout": "batch script for job 24544 written to /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_campaign_terminal_regression_24544_20261020.batch.sh\n"
+    },
+    {
+      "command": [
+        "scontrol",
+        "write",
+        "batch_script",
+        "24545",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_campaign_terminal_archive_24545_20261020.batch.sh"
+      ],
+      "job_id": "24545",
+      "returncode": 0,
+      "role": "archive",
+      "script": {
+        "bytes": 8815,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_campaign_terminal_archive_24545_20261020.batch.sh",
+        "sha256": "6ad63556fe425135877cdab8c85209a5054c6f4a2f88170b844239af0d08bce3"
+      },
+      "stderr": "",
+      "stdout": "batch script for job 24545 written to /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_campaign_terminal_archive_24545_20261020.batch.sh\n"
+    }
+  ],
+  "scope": "Actual scheduler export observations; file existence and hashes checked, not return code alone. Missing older completed job script is not a biological failure."
+}

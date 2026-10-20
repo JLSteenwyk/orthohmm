@@ -1,15 +1,17 @@
 {
   "schema_version": 1,
-  "status": "active_all_individual_effects_admitted_bounded_combination_assessment_pending",
+  "status": "active_individual_effects_and_negative_interaction_admitted_final_freeze_confirmation_limits_comparison_audit_pending",
   "latest_individual_effects_admission": "benchmark_tools/results/hmm_individual_effects_20261019/summary.json",
+  "latest_interaction_admission": "benchmark_tools/results/weighted_projection_completed_20261020/summary.json",
   "scheduler_reconciliation": {
     "snapshot": "benchmark_tools/results/hmm_campaign_scheduler_reconciliation_20261020.json",
-    "scope": "Dated read-only accounting for all48 unique recorded jobs. Fifteen stale live-ledger scheduler states and their exit codes corrected; immutable Git launch blobs, scientific settings, result/admission flags and original failures remain unchanged. Other submission/progress prose is retained as historical observation, not an instruction to restart old jobs. Use the complete individual-effects admission for scientific results and Slurm for current live handles. Current science24538 and dependent24539/24540 are unchanged."
+    "scope": "Historical read-only accounting for all48 unique jobs then recorded. Fifteen stale scheduler states and exit codes corrected without changing immutable launches or scientific decisions. Older submission/progress prose is historical, never an instruction to restart jobs. Later terminal science24538/reader24539/selection24540 and archive24546 are recorded in latest_interaction_admission; use Slurm for current handles."
   },
   "weighted_projection_ablation": {
     "protocol": "benchmark_tools/hmm_weighted_projection_ablation_20261019.json",
     "planning_revision": "0e9f87c31995082babbb751f0f85584c29d98995",
-    "state": "four_controls_reproduced_first_combination_fixed_gate_failure_rechecked24543_second_combination_running24538_no_panel_admission",
+    "state": "all_six_arms_independently_admitted_both_stronger_constituent_point_gates_failed_no_followup",
+    "complete_admission": "benchmark_tools/results/weighted_projection_completed_20261020/summary.json",
     "canonical_reproduction_checkpoint": "benchmark_tools/results/weighted_projection_canonical_checkpoint_20261019.json",
     "first_combination_checkpoint": "benchmark_tools/results/weighted_projection_first_combination_checkpoint_20261020.json",
     "workflow_milestone": "benchmark_tools/results/weighted_projection_workflow_milestone_20261019.json",
@@ -23,12 +25,33 @@
     "design": "One2x3 OrthoBench pilot with four exact constituent controls and two weighted/residue-preserving combinations. Both independently passing weighting modes retained; no per-endpoint winner selection.",
     "hypothesis": "Position-based weighting depends on actual MSA-column distributions; test it on residue-preserving geometry rather than assuming additive standalone gains.",
     "advancement": "Candidate F1 must strictly exceed canonical and both corresponding solo constituents; precision and recall may not decline by more than0.005 against any matched control. All six arms require actual activation/native/score admission. No retuning; original stopped branches stay stopped.",
-    "next": "Science24538 running, separate reader24539 queued afterany24538 with immutable science-launch73a26cb8, and selection-only planner24540 queued afterany24539. Preserve these exact handles and source/plan bindings; never duplicate/restart because observation expires. Admit all six source/native/score-controlled arms and original stronger-constituent gates before any full QfO/Three Kingdoms closure for every passing combination. The planner creates no scientific case or evaluation; tested/frozen full-dataset execution/readback remain required only for admitted passes. Stop failed fixed candidates without retuning; later final freeze/confirmation or data limits, comparison/recommendation and remote audit remain required.",
+    "next": "Science24538, original separate reader24539 and selection24540 completed successfully. Both fixed combinations fail their original stronger-constituent gates; planner selected zero follow-up arms. Do not retune, duplicate inference, implement a full-dataset driver or extend these stopped combinations to QfO/Three Kingdoms. Complete final candidate freeze, confirmation or documented data limits, overall comparison/recommendation and requirement/remote audit. Preserve every immutable launch, old failure and negative decision.",
+    "defaults_promoted": false,
+    "goal_completed": false
+  },
+  "weighted_projection_complete_admission": {
+    "summary": "benchmark_tools/results/weighted_projection_completed_20261020/summary.json",
+    "state": "complete_six_arm_interaction_admitted_no_combination_advances",
+    "scientific_job": {"job_id": "24538", "state": "COMPLETED", "exit_code": "0:0", "elapsed": "01:52:05", "cpus": 16, "memory_allocation": "128G"},
+    "reader_job": {"job_id": "24539", "state": "COMPLETED", "exit_code": "0:0", "elapsed": "00:05:01", "cpus": 1, "memory_allocation": "16G"},
+    "selection_job": {"job_id": "24540", "state": "COMPLETED", "exit_code": "0:0", "elapsed": "00:02:47", "cpus": 1, "memory_allocation": "16G"},
+    "regression_job": {"job_id": "24544", "state": "COMPLETED", "exit_code": "0:0", "elapsed": "00:04:42", "cpus": 1, "memory_allocation": "16G", "passed": 1647, "modules": 43, "inherited_logical_cpu_affinity": [100]},
+    "archive_job": {"job_id": "24546", "state": "COMPLETED", "exit_code": "0:0", "elapsed": "00:01:34", "cpus": 1, "memory_allocation": "16G"},
+    "source_content_records_rechecked": 283803,
+    "planner_source_records_rechecked": 1237,
+    "advancing_candidates": [],
+    "execution_arms": [],
+    "original_gate_eligible": {"repair_henikoff": false, "repair_henikoff_cluster": false},
+    "resource_rows": 24,
+    "archive_failure_history": {"job_id": "24545", "state": "FAILED", "exit_code": "1:0", "reason": "Archive-only optional native_pair_turnover field absent for canonical. Fresh v2 preserves null rather than inventing zero; actual six-cell extraction and unchanged remaining execution AST verified. Failed script/log/partial tables preserved, with byte-identical v2 score/cost tables. No scientific rerun or gate change."},
+    "scope": "All four controls reproduce exact original graph/candidate/native/rooted-tree products and unrounded P/R/F. Both15901-profile combinations improve F1 over canonical and repair solo, but not the corresponding weighting solo. Complete separate source/native/official-score admission and original six paired contrasts retained. This closes only the bounded interaction branch, not final candidate freeze, confirmation limitations, overall recommendation or goal audit. Shared-host cached phases are not fresh end-to-end tool timings. Older checkpoint/submission prose below remains historical.",
+    "accuracy_result_admitted": true,
     "defaults_promoted": false,
     "goal_completed": false
   },
   "weighted_projection_canonical_checkpoint": {
     "summary": "benchmark_tools/results/weighted_projection_canonical_checkpoint_20261019.json",
+    "superseded_by": "benchmark_tools/results/weighted_projection_completed_20261020/summary.json",
     "state": "first_control_separately_rechecked_while_original_science_continues_not_terminal_panel_admission",
     "job_id": "24542", "job_state": "COMPLETED", "exit_code": "0:0",
     "cpus": 1, "memory_allocation": "16G", "wall_limit": "02:00:00",
@@ -46,6 +69,7 @@
   },
   "weighted_projection_first_combination_checkpoint": {
     "summary": "benchmark_tools/results/weighted_projection_first_combination_checkpoint_20261020.json",
+    "superseded_by": "benchmark_tools/results/weighted_projection_completed_20261020/summary.json",
     "state": "completed_first_combination_separately_rechecked_fixed_gate_failed_pending_terminal_whole_panel_admission",
     "job_id": "24543", "job_state": "COMPLETED", "exit_code": "0:0",
     "cpus": 1, "memory_allocation": "16G", "wall_limit": "02:00:00",
@@ -63,7 +87,9 @@
     "implementation": "benchmark_tools/plan_weighted_projection_followup.py",
     "launcher": "benchmark_tools/plan_weighted_projection_followup.slurm",
     "milestone": "benchmark_tools/results/weighted_projection_selection_milestone_20261019.json",
-    "state": "tested1647_pushed_frozen_verified_planner24540_pending_afterany_original_reader24539",
+    "state": "completed24540_no_weighted_projection_followup_required",
+    "selection_status": "no_weighted_projection_followup_required",
+    "execution_arms": [],
     "runner_commit": "70063b31a9ff5c62705b6f4f2ab06d743842ba55",
     "source": "benchmarks/work/weighted_projection_selection_v1_20261019",
     "readiness": {
@@ -78,7 +104,7 @@
     "dependency": "afterany:24539",
     "resources": {"cpus": 1, "memory_allocation": "16G", "wall_limit": "02:00:00"},
     "job": {
-      "submitted": true, "job_id": "24540", "last_observed_state": "PENDING",
+      "submitted": true, "job_id": "24540", "last_observed_state": "COMPLETED", "exit_code": "0:0",
       "dependency": "afterany:24539", "cpus": 1, "memory_allocation": "16G", "wall_limit": "02:00:00",
       "restarts": 0, "requeue": false,
       "log": "benchmarks/results/weighted_projection_followup_selection_v1_20261019-24540.out",
@@ -97,7 +123,7 @@
     "protocol": "benchmark_tools/hmm_weighted_projection_ablation_20261019.json",
     "milestone": "benchmark_tools/results/weighted_projection_workflow_milestone_20261019.json",
     "job": {
-      "submitted": true, "job_id": "24539", "last_observed_state": "PENDING",
+      "submitted": true, "job_id": "24539", "last_observed_state": "COMPLETED", "exit_code": "0:0",
       "dependency": "afterany:24538", "cpus": 1, "memory_allocation": "16G", "wall_limit": "02:00:00",
       "restarts": 0, "requeue": false,
       "log": "benchmarks/results/weighted_projection_readback_v1_20261019-24539.out",
@@ -112,7 +138,8 @@
     "submission": "sbatch --parsable --no-requeue --dependency=afterany:24538 --chdir=<separate frozen reader> --output=<primary repo>/benchmarks/results/weighted_projection_readback_v1_20261019-%j.out <frozen reader>/benchmark_tools/report_weighted_projection.slurm <frozen reader> <primary repo> 73a26cb8ecc5deb19319aa988bb0f3ecf363f99f <primary repo>/benchmarks/results/weighted_projection_readback_v1_20261019",
     "verification": "Exact73a26cb8 science-launch commit pushed and remotely verified before submission. Actual frozen reader launch() authenticated that ledger blob/entry, scientific job24538, plan hash and separate reader source binding. scontrol confirms frozen script/cwd, pending afterany24538,1CPU16G/two-hour budget, no automatic requeue and zero restarts. Complete terminal-successful scientific panel and original reference/gate/raw-score admission remain runtime requirements.",
     "scope": "Separate shared-helper verification, not independent biological confirmation. Do not admit partial or failed panels, treat execution errors as negative biology, relax original gates, or silently overwrite prior attempts. All old science/reader/report bindings preserved.",
-    "accuracy_result_admitted": false,
+    "accuracy_result_admitted": true,
+    "complete_admission": "benchmark_tools/results/weighted_projection_completed_20261020/summary.json",
     "defaults_promoted": false,
     "goal_completed": false
   },
@@ -151,7 +178,7 @@
       "launcher": "benchmark_tools/report_weighted_projection.slurm"
     },
     "inference": {
-      "submitted": true, "job_id": "24538", "last_observed_state": "RUNNING", "restarts": 0,
+      "submitted": true, "job_id": "24538", "last_observed_state": "COMPLETED", "exit_code": "0:0", "restarts": 0,
       "planned_cpus": 16, "planned_memory": "128G",
       "planned_wall_limit": "1-00:00:00", "node": "bizon",
       "log": "benchmarks/results/weighted_projection_pilot_v1_20261019-24538.out",
@@ -161,7 +188,8 @@
       "submission": "sbatch --parsable --no-requeue --job-name=ohmm-weighted-repair-ob --chdir=<frozen science> --output=<primary repo>/benchmarks/results/weighted_projection_pilot_v1_20261019-%j.out <frozen science>/benchmark_tools/run_profile_weighting_pilot.slurm <frozen science> <primary repo>/benchmarks/results/weighted_projection_pilot_v1_20261019/execution_plan.json",
       "scope": "One fresh fixed six-arm panel after both preparatory jobs completed and readiness commit0a6edb0d48c1e238a095c32e0bf5f569c982f3e2 was pushed and remotely verified. scontrol confirms frozen86e39314 script/cwd/plan,16CPU128G/day, zero restarts and no automatic requeue. No other new campaign science live at submission; unrelated jobs untouched. No accuracy admission."
     },
-    "accuracy_result_admitted": false,
+    "accuracy_result_admitted": true,
+    "complete_admission": "benchmark_tools/results/weighted_projection_completed_20261020/summary.json",
     "defaults_promoted": false,
     "goal_completed": false
   },

@@ -135,15 +135,16 @@ The default remains `legacy`. It can be paired with `henikoff` or
 `henikoff_cluster` weighting in fresh built-in high-sensitivity runs; species
 weighting and alignment guards remain unsupported with projection repair.
 Joint runs record both actual per-profile policies and effective counts in the
-weighting diagnostics. These joint settings are computationally tested but
-their registered six-arm biological pilot is not yet fully admitted. A separate
-frozen readback confirmed that `henikoff` plus projection repair has OrthoBench
-F1 0.741784, above canonical (0.741061) but below `henikoff` alone (0.741965).
-It therefore fails the fixed stronger-constituent advancement gate; no retuning
-or full-dataset extension of that candidate is planned. The second combination
-and terminal whole-panel validation remain pending. See the
-[provisional checkpoint](benchmark_tools/results/weighted_projection_first_combination_checkpoint_20261020.json).
-Neither joint setting is a recommended default.
+weighting diagnostics. The registered six-arm biological pilot is now fully
+admitted by its separate frozen reader. OrthoBench F1 is 0.741784 for `henikoff`
+plus repair and 0.741628 for `henikoff_cluster` plus repair. Both exceed canonical
+(0.741061) but score below their weighting-only controls (0.741965 and 0.741947).
+Both therefore fail the fixed stronger-constituent advancement gate: no retuning
+or QfO/Three Kingdoms extension is planned. See the
+[complete interaction admission](benchmark_tools/results/weighted_projection_completed_20261020/summary.json)
+for precision, recall, uncertainty, provenance and qualified phase costs.
+Neither joint setting is a recommended default; these point comparisons do not
+establish statistical inferiority or independent generalization.
 
 The separate `--profile-alignment-policy strict_span_guard` experiment also
 requires fresh built-in high-sensitivity inference and cannot be combined
