@@ -26,8 +26,25 @@ The [admitted Stockholm pilot comparison](results/hmm_campaign_comparison_stockh
 and [admission record](results/stockholm_pilot_admission_20261019.json) add the
 complete five-arm recovery without overwriting earlier results. Only projection
 repair passes the original pilot gate; both reselection policies stop for recall
-loss without retuning. The repair gain has uncertainty spanning zero and requires
-unchanged full-vector follow-up, not default promotion. Missing endpoints stay NA.
+loss without retuning. The repair gain has uncertainty spanning zero; its now
+completed full-vector follow-up remains mixed, not a default recommendation.
+Stopped endpoints stay NA.
+
+The [complete individual-effects archive](results/hmm_individual_effects_20261019/summary.json)
+joins all four required mechanisms and the completed repair transfers. Its
+[scores](results/hmm_individual_effects_20261019/scores.tsv),
+[endpoint diagnostics](results/hmm_individual_effects_20261019/endpoint_diagnostics.tsv),
+[historical observations](results/hmm_individual_effects_20261019/historical_cell_diagnostics.tsv)
+and [phase costs](results/hmm_individual_effects_20261019/resources.tsv) are
+byte-identical copies of separately completed source-bound reports. There are
+23 configuration/control/history rows, not 23 distinct tools, and 184 endpoint
+slots with 119 scored observations. Both weighting candidates and projection
+repair pass original development screens with mixed effects; OrthoBench paired
+intervals span zero. Failed executions remain distinct from biological gate
+failures. Functional means use different eligible/numeric populations, and
+cached shared-host phase costs are not full-tool timing comparisons. Original
+stopped branches stay stopped. Joint weighting/projection combinations are
+still untested; this archive does not close the goal or promote defaults.
 
 `report_completed_hmm_resources.py --repo <repo> --output <fresh directory>`
 exports phase-specific costs from the immutable completed weighting/local
