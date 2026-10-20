@@ -5,7 +5,7 @@
   "weighted_projection_ablation": {
     "protocol": "benchmark_tools/hmm_weighted_projection_ablation_20261019.json",
     "planning_revision": "0e9f87c31995082babbb751f0f85584c29d98995",
-    "state": "core_pushed_frozen_runner_and_reader_tested1599_ready_to_commit_freeze_and_launch_no_joint_biological_job",
+    "state": "runner_and_reader86e39314_pushed_frozen_verified_preparation24536_and_readiness24537_completed_no_scientific_job_submitted",
     "workflow_milestone": "benchmark_tools/results/weighted_projection_workflow_milestone_20261019.json",
     "scientific_core_commit": "e33fac1300552f0377b758ca135e7e5da22a1e4a",
     "scientific_core_source": "benchmarks/work/weighted_projection_core_v1_20261019",
@@ -17,7 +17,50 @@
     "design": "One2x3 OrthoBench pilot with four exact constituent controls and two weighted/residue-preserving combinations. Both independently passing weighting modes retained; no per-endpoint winner selection.",
     "hypothesis": "Position-based weighting depends on actual MSA-column distributions; test it on residue-preserving geometry rather than assuming additive standalone gains.",
     "advancement": "Candidate F1 must strictly exceed canonical and both corresponding solo constituents; precision and recall may not decline by more than0.005 against any matched control. All six arms require actual activation/native/score admission. No retuning; original stopped branches stay stopped.",
-    "next": "Final42-module1599-test workflow regression and315 focused tests pass, four actual constituent controls authenticated. Commit/push/freeze runner/science and separate reader, verify frozen inventories, prepare immutable six-arm plan, then submit one16CPU128G/day pilot and dependent1CPU16G/two-hour readback. No joint accuracy claim. Full QfO/Three Kingdoms only after unchanged admitted pilot gates with registered matched controls.",
+    "next": "Final42-module1599-test workflow regression and315 focused tests pass. Source86e39314 pushed, remote-verified and separately frozen; all original native hashes and384-profile digest unchanged. Preparation24536 and readiness24537 completed successfully. Push readiness/plan fingerprint, then submit one16CPU128G/day pilot and dependent1CPU16G/two-hour readback with immutable launch binding. Full QfO/Three Kingdoms only after unchanged admitted pilot gates with registered matched controls.",
+    "defaults_promoted": false,
+    "goal_completed": false
+  },
+  "weighted_projection_pilot": {
+    "runner_commit": "86e39314ba462698b726f569a5d98a144c8d0086",
+    "runner_push": "git push origin main succeeded and git ls-remote verified exact86e39314 before both frozen checkouts and preparation",
+    "scientific_source": "benchmarks/work/weighted_projection_pilot_v1_20261019",
+    "protocol": "benchmark_tools/hmm_weighted_projection_ablation_20261019.json",
+    "protocol_commit": "7f51f99f7654c9532af20145072897fbe664b703",
+    "readiness": "benchmark_tools/results/weighted_projection_launch_readiness_20261019.json",
+    "milestone": "benchmark_tools/results/weighted_projection_workflow_milestone_20261019.json",
+    "execution_plan": {
+      "path": "benchmarks/results/weighted_projection_pilot_v1_20261019/execution_plan.json",
+      "bytes": 91794205,
+      "sha256": "6bb52ec4de85753ed2496eb75b480390610a80f88fc310a71a2404704580eb22",
+      "input_records": 281203,
+      "source_records": 1235
+    },
+    "preparation": {
+      "job_id": "24536", "state": "COMPLETED", "exit_code": "0:0",
+      "cpus": 1, "memory_allocation": "16G", "wall_limit": "00:20:00",
+      "log": "benchmarks/results/weighted_projection_prepare_v1_20261019-24536.out",
+      "scope": "All original complete-proteome/checkpoint/constituent control caches and official evaluation/runtime/tool/source fingerprints; no biological inference."
+    },
+    "readiness_job": {
+      "job_id": "24537", "state": "COMPLETED", "exit_code": "0:0",
+      "dependency": "afterok:24536", "cpus": 1, "memory_allocation": "16G", "wall_limit": "00:20:00",
+      "log": "benchmarks/results/weighted_projection_readiness_v1_20261019-24537.out",
+      "scope": "Actual separately frozen reader inventory1237 records, scientific inventory1235 records, runtime/protocol/six commands,384 constituent profile outputs and two joint constructor probes verified; native libraries copied unchanged, never rebuilt. No biological accuracy evidence."
+    },
+    "arms": ["legacy_none", "legacy_henikoff", "legacy_henikoff_cluster", "repair_none", "repair_henikoff", "repair_henikoff_cluster"],
+    "independent_reader": {
+      "runner_commit": "86e39314ba462698b726f569a5d98a144c8d0086",
+      "scientific_reader_source": "benchmarks/work/weighted_projection_readback_v1_20261019",
+      "implementation": "benchmark_tools/report_weighted_projection.py",
+      "launcher": "benchmark_tools/report_weighted_projection.slurm"
+    },
+    "inference": {
+      "submitted": false, "planned_cpus": 16, "planned_memory": "128G",
+      "planned_wall_limit": "1-00:00:00", "node": "bizon",
+      "scope": "One fresh fixed six-arm panel only after successful source/reader preparation and verified push; no other new campaign scientific job may overlap."
+    },
+    "accuracy_result_admitted": false,
     "defaults_promoted": false,
     "goal_completed": false
   },
