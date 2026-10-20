@@ -46,6 +46,15 @@ cached shared-host phase costs are not full-tool timing comparisons. Original
 stopped branches stay stopped. Joint weighting/projection combinations are
 still untested; this archive does not close the goal or promote defaults.
 
+The [registered weighting/projection ablation](hmm_weighted_projection_ablation_20261019.json)
+tests the dependence of position-based weights on residue-preserving alignment
+columns. Its one bounded 2x3 OrthoBench panel has four exact constituent controls
+and two new combinations. A candidate must improve F1 over both solo components
+and canonical while respecting every matched precision/recall decline bound.
+Only independently admitted passes can advance to unchanged QfO/Three Kingdoms.
+Joint implementation and biological evaluation are still pending; existing
+public guards and all frozen jobs remain unchanged at preregistration.
+
 `report_completed_hmm_resources.py --repo <repo> --output <fresh directory>`
 exports phase-specific costs from the immutable completed weighting/local
 admission. It rehashes and reparses saved GNU-time/log receipts, keeps producer

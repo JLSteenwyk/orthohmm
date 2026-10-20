@@ -2,6 +2,17 @@
   "schema_version": 1,
   "status": "active_all_individual_effects_admitted_bounded_combination_assessment_pending",
   "latest_individual_effects_admission": "benchmark_tools/results/hmm_individual_effects_20261019/summary.json",
+  "weighted_projection_ablation": {
+    "protocol": "benchmark_tools/hmm_weighted_projection_ablation_20261019.json",
+    "planning_revision": "0e9f87c31995082babbb751f0f85584c29d98995",
+    "state": "prespecified_before_joint_implementation_or_evaluation_no_joint_job_submitted",
+    "design": "One2x3 OrthoBench pilot with four exact constituent controls and two weighted/residue-preserving combinations. Both independently passing weighting modes retained; no per-endpoint winner selection.",
+    "hypothesis": "Position-based weighting depends on actual MSA-column distributions; test it on residue-preserving geometry rather than assuming additive standalone gains.",
+    "advancement": "Candidate F1 must strictly exceed canonical and both corresponding solo constituents; precision and recall may not decline by more than0.005 against any matched control. All six arms require actual activation/native/score admission. No retuning; original stopped branches stay stopped.",
+    "next": "Commit/push protocol before enabling the two opt-in combinations; test and push scoped compatibility/activation propagation, runner and separately frozen reader before any biological submission. Full QfO/Three Kingdoms only after pilot gates, with registered matched controls.",
+    "defaults_promoted": false,
+    "goal_completed": false
+  },
   "objective": "/home/bizon/.codex/attachments/be402858-3414-45ba-9a1b-323a1b394ab1/pasted-text-1.txt",
   "protocol": "benchmark_tools/hmm_evidence_campaign_20261018.json",
   "protocol_commit": "d2ccfd44",
