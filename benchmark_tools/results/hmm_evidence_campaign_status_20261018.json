@@ -5,7 +5,7 @@
   "weighted_projection_ablation": {
     "protocol": "benchmark_tools/hmm_weighted_projection_ablation_20261019.json",
     "planning_revision": "0e9f87c31995082babbb751f0f85584c29d98995",
-    "state": "runner_and_reader86e39314_pushed_frozen_verified_preparation24536_and_readiness24537_completed_no_scientific_job_submitted",
+    "state": "registered_six_arm_scientific_job24538_submitted_after_pushed_frozen_readiness_separate_readback_submission_next",
     "workflow_milestone": "benchmark_tools/results/weighted_projection_workflow_milestone_20261019.json",
     "scientific_core_commit": "e33fac1300552f0377b758ca135e7e5da22a1e4a",
     "scientific_core_source": "benchmarks/work/weighted_projection_core_v1_20261019",
@@ -17,7 +17,7 @@
     "design": "One2x3 OrthoBench pilot with four exact constituent controls and two weighted/residue-preserving combinations. Both independently passing weighting modes retained; no per-endpoint winner selection.",
     "hypothesis": "Position-based weighting depends on actual MSA-column distributions; test it on residue-preserving geometry rather than assuming additive standalone gains.",
     "advancement": "Candidate F1 must strictly exceed canonical and both corresponding solo constituents; precision and recall may not decline by more than0.005 against any matched control. All six arms require actual activation/native/score admission. No retuning; original stopped branches stay stopped.",
-    "next": "Final42-module1599-test workflow regression and315 focused tests pass. Source86e39314 pushed, remote-verified and separately frozen; all original native hashes and384-profile digest unchanged. Preparation24536 and readiness24537 completed successfully. Push readiness/plan fingerprint, then submit one16CPU128G/day pilot and dependent1CPU16G/two-hour readback with immutable launch binding. Full QfO/Three Kingdoms only after unchanged admitted pilot gates with registered matched controls.",
+    "next": "Science24538 submitted once after readiness0a6edb0d push/remote verification, preparation24536/readiness24537 completed. Commit/push exact submitted job/plan/source binding, then submit separately frozen reader afterany24538 using that immutable revision. Preserve live handle, never duplicate/restart because observation expires. All six controlled scores and original gates must be admitted before any full QfO/Three Kingdoms extension.",
     "defaults_promoted": false,
     "goal_completed": false
   },
@@ -56,9 +56,15 @@
       "launcher": "benchmark_tools/report_weighted_projection.slurm"
     },
     "inference": {
-      "submitted": false, "planned_cpus": 16, "planned_memory": "128G",
+      "submitted": true, "job_id": "24538", "last_observed_state": "RUNNING", "restarts": 0,
+      "planned_cpus": 16, "planned_memory": "128G",
       "planned_wall_limit": "1-00:00:00", "node": "bizon",
-      "scope": "One fresh fixed six-arm panel only after successful source/reader preparation and verified push; no other new campaign scientific job may overlap."
+      "log": "benchmarks/results/weighted_projection_pilot_v1_20261019-24538.out",
+      "results": "benchmarks/results/weighted_projection_pilot_v1_20261019/results.json",
+      "dependency": null,
+      "requeue": false,
+      "submission": "sbatch --parsable --no-requeue --job-name=ohmm-weighted-repair-ob --chdir=<frozen science> --output=<primary repo>/benchmarks/results/weighted_projection_pilot_v1_20261019-%j.out <frozen science>/benchmark_tools/run_profile_weighting_pilot.slurm <frozen science> <primary repo>/benchmarks/results/weighted_projection_pilot_v1_20261019/execution_plan.json",
+      "scope": "One fresh fixed six-arm panel after both preparatory jobs completed and readiness commit0a6edb0d48c1e238a095c32e0bf5f569c982f3e2 was pushed and remotely verified. scontrol confirms frozen86e39314 script/cwd/plan,16CPU128G/day, zero restarts and no automatic requeue. No other new campaign science live at submission; unrelated jobs untouched. No accuracy admission."
     },
     "accuracy_result_admitted": false,
     "defaults_promoted": false,
