@@ -23,9 +23,12 @@
   "final_plateau_reporter": {
     "implementation": "benchmark_tools/report_hmm_campaign_plateau.py",
     "launcher": "benchmark_tools/report_hmm_campaign_plateau.slurm",
+    "runner_commit": "fcd95d092cfa72fc109aa51fba637c2af5d401e5",
+    "scientific_reader_source": "benchmarks/work/hmm_campaign_plateau_v1_20261020",
+    "readiness": "benchmark_tools/results/hmm_campaign_plateau_readiness_20261020.json",
     "tests": "benchmark_tools/results/hmm_campaign_plateau_tests_20261020.xml",
     "preflight": "benchmark_tools/results/hmm_campaign_plateau_preflight_20261020.json",
-    "state": "tested163_actual_data_preflight_passed_frozen_compilation_and_final_audit_pending",
+    "state": "tested163_actual_data_preflight_and_frozen1239_source_records_verified_compilation_not_submitted",
     "scope": "Read-only collation of all individual mechanisms and the admitted negative interaction, preserving29 configuration/control/history rows,232 endpoint slots,125 scored observations and106 phase-cost rows. Existing generic diagnostic helpers and actual saved cost receipts verified on complete source admissions. No new inference, scores, functional resampling or scientific gate changes. Full frozen execution, final documentation and requirement/remote audit remain required.",
     "defaults_promoted": false,
     "goal_completed": false
