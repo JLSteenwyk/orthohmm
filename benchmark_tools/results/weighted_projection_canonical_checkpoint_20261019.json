@@ -1,0 +1,151 @@
+{
+  "accuracy_result_admitted": false,
+  "activation": {
+    "arm": "legacy_none",
+    "joint_profiles": 0,
+    "mode": "none",
+    "profiles_built": 15901,
+    "projection_policy": "legacy",
+    "role": "canonical_control",
+    "strict_profile_edges": 24738,
+    "weighted_profiles": 0
+  },
+  "canonical_reproduction_verified": true,
+  "cell": {
+    "bytes": 55280,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/weighted_projection_canonical_checkpoint_v2_20261019/cell.json",
+    "sha256": "3aa2cd2cd2d40a56b8d72979848a0caf7d7d78b0a15aa160f0c03f4faeba6348"
+  },
+  "checkpoint_log": {
+    "bytes": 311,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/weighted_projection_canonical_checkpoint_v2_20261019-24542.out",
+    "sha256": "2ed73b33aa8803ef1d988c5997d21a04d1ac2e11f4a140a02a5bde57d80330ca"
+  },
+  "coverage": {
+    "genes": 251378,
+    "groups": 59770,
+    "pairs": 966439,
+    "species": 12
+  },
+  "defaults_promoted": false,
+  "execution_plan": {
+    "bytes": 91794205,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/weighted_projection_pilot_v1_20261019/execution_plan.json",
+    "sha256": "6bb52ec4de85753ed2496eb75b480390610a80f88fc310a71a2404704580eb22"
+  },
+  "failed_checkpoint_history": {
+    "files": [
+      {
+        "bytes": 90,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/weighted_projection_canonical_checkpoint_v1_20261019-24541.out",
+        "sha256": "3fd7ce923ae9268a64ec0a104f3f60600765ac4973907a004d7316e35a348f4d"
+      },
+      {
+        "bytes": 158672,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/weighted_projection_canonical_checkpoint_v1_20261019/producer_snapshot.json",
+        "sha256": "693ed2ad770344d04ddc72ca0bafec811e5ac32e1924579d8c0889dd7eec8629"
+      }
+    ],
+    "job_id": "24541",
+    "reason": "Checkpoint-only exact-byte assertion failed after JSON reserialization sorted numeric species keys lexically. Native/official-score check had passed; snapshot was never admitted as exact bytes. Original science/reader unchanged. This v2 uses the existing frozen raw-byte snapshot helper, not JSON reserialization."
+  },
+  "frozen_reader_readiness": {
+    "bytes": 391718,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/weighted_projection_launch_readiness_20261019.json",
+    "sha256": "1d36291637d2477dda73a894f748addee00762ed9f65c1c5e6393ccc828872f2"
+  },
+  "goal_completed": false,
+  "helper_sources": [
+    {
+      "bytes": 25998,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/weighted_projection_readback_v1_20261019/benchmark_tools/report_profile_evidence_pilot.py",
+      "sha256": "b500c7de85cb2aa5dfe45e874e4c73f58abfc490046f8d3ed2be9be56f53d416"
+    },
+    {
+      "bytes": 12390,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/weighted_projection_readback_v1_20261019/benchmark_tools/report_weighted_projection.py",
+      "sha256": "a3d264650c3cf8070e5aae75d96dd722004c8a2577ccafe3951f8e9c9049c5f3"
+    },
+    {
+      "bytes": 27033,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/weighted_projection_readback_v1_20261019/benchmark_tools/report_hillclimb.py",
+      "sha256": "1f9f93d2adde242e6e4132ef9b1cc25bc58572409652bbc5badd64c395be6b97"
+    }
+  ],
+  "jobs": [
+    {
+      "AllocCPUS": "1",
+      "Elapsed": "00:00:22",
+      "ExitCode": "1:0",
+      "JobIDRaw": "24541",
+      "NodeList": "bizon",
+      "ReqMem": "16G",
+      "State": "FAILED"
+    },
+    {
+      "AllocCPUS": "1",
+      "Elapsed": "00:00:22",
+      "ExitCode": "0:0",
+      "JobIDRaw": "24542",
+      "NodeList": "bizon",
+      "ReqMem": "16G",
+      "State": "COMPLETED"
+    }
+  ],
+  "launch_binding": {
+    "entry_key": "weighted_projection_pilot",
+    "git_blob_sha256": "9d83fb676e15a7705bf43f5d1cfbd8ea00b5c422b58f42522021532e054f1591",
+    "path": "benchmark_tools/results/hmm_evidence_campaign_status_20261018.json",
+    "revision": "73a26cb8ecc5deb19319aa988bb0f3ecf363f99f"
+  },
+  "original_candidate_constraint_matches": 2,
+  "original_graph_stage_matches": 4,
+  "original_native_product_matches": 4,
+  "point": {
+    "f1": 0.7410607351873405,
+    "precision": 0.8177045380181867,
+    "recall": 0.6775533630827973
+  },
+  "preservation": {
+    "native_libraries": {
+      "hmm_viterbi.so": "f21d902852d727d6270b65ba900db52e7216cd874ee2d2b89fa72b6f16dcd5c0",
+      "kmer_prefilter.so": "348b1c715e2e305dae7e889bae1d2498e609e48ce5d50cd668db71b548c60b88",
+      "pair_align.so": "81c26c6ce92b1da37285824ea1b8dcea007a7fc18a11ee5fa3d150628fa800c7"
+    },
+    "sample_diff_sha256": "91643349c94c9b543fdbb3f33297c5486b8eac916fc5b86e397bdfc07776bcca",
+    "sample_status_sha256": "5a72884464c7a52298571745329d080e86722b69658902b096d4f10c4574d0a7"
+  },
+  "producer_capture": {
+    "snapshot": {
+      "bytes": 158672,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/weighted_projection_canonical_checkpoint_v2_20261019/producer_snapshot.json",
+      "sha256": "74a03f7fd48fa8ff17c09a389418fdce9aa4a72e56033ef7bc45d1617340fb80"
+    },
+    "source_bytes": 158672,
+    "source_path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/weighted_projection_pilot_v1_20261019/results.json",
+    "source_sha256": "74a03f7fd48fa8ff17c09a389418fdce9aa4a72e56033ef7bc45d1617340fb80"
+  },
+  "readback_checked_records": 113,
+  "receipt": {
+    "bytes": 4165,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/weighted_projection_canonical_checkpoint_v2_20261019/receipt.json",
+    "sha256": "4f7d7bc51f757fe7b29ba8a37eb96888d90b7111a728552a222b22914d637093"
+  },
+  "scheduler_scripts": [
+    {
+      "bytes": 3678,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/weighted_projection_canonical_checkpoint_v1_20261019/checkpoint.batch.sh",
+      "sha256": "62829cc0e2ac353de105daae762d0a32032d0cd0960236d6fe4ecb9734022417"
+    },
+    {
+      "bytes": 4510,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/weighted_projection_canonical_checkpoint_v2_20261019/checkpoint.batch.sh",
+      "sha256": "5a7d6d7d216c703aa38a83ed1bbf5e4cd110b3a71be0ba62fc93988ddda3f91f"
+    }
+  ],
+  "schema_version": 1,
+  "scientific_job": "24538",
+  "scope": "Completed first control only. Separately frozen shared-helper raw/source/runtime/command/native/official-score recheck passed; all original graph/candidate/native products and unrounded point match. Original six-arm science remains live with remaining controls/combinations pending. The byte-exact snapshot is retained outside Git; the initial serialization-only checkpoint failure is preserved, not negative biology. No new method accuracy claim, original terminal whole-panel reader24539 and conditional planner24540 remain required.",
+  "source_revision": "86e39314ba462698b726f569a5d98a144c8d0086",
+  "status": "canonical_control_exact_reproduction_checkpoint_not_complete_panel_admission"
+}

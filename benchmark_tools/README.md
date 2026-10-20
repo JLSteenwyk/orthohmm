@@ -75,6 +75,11 @@ registered in the protocol. The read-only Slurm wrapper uses1CPU/16G/2h;
 scientific execution retains16CPU/128G/day, one new scientific job at a time.
 The tested runner and reader must be pushed and frozen before a new launch;
 code/unit-fixture readiness is not evidence of joint biological accuracy gains.
+The [canonical reproduction checkpoint](results/weighted_projection_canonical_checkpoint_20261019.json)
+records exact graph/candidate/native/rooted-tree identity and a separate frozen
+official-score recheck for the first completed control. Other arms remain
+pending; this checkpoint is not terminal whole-panel admission, a new accuracy
+improvement or a substitute for the original complete six-arm reader.
 
 `plan_weighted_projection_followup.py --repo <repo> --driver <frozen planner>
 --output <fresh directory>` authenticates the exact submitted pilot/reader

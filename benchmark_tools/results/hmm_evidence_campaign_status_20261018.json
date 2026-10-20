@@ -5,7 +5,8 @@
   "weighted_projection_ablation": {
     "protocol": "benchmark_tools/hmm_weighted_projection_ablation_20261019.json",
     "planning_revision": "0e9f87c31995082babbb751f0f85584c29d98995",
-    "state": "registered_six_arm_scientific_job24538_running_reader24539_pending_afterany24538_no_new_accuracy_admitted",
+    "state": "canonical_control_exactly_reproduced_checkpoint24542_completed_science24538_continues_other_controls_and_combinations_no_panel_admission",
+    "canonical_reproduction_checkpoint": "benchmark_tools/results/weighted_projection_canonical_checkpoint_20261019.json",
     "workflow_milestone": "benchmark_tools/results/weighted_projection_workflow_milestone_20261019.json",
     "scientific_core_commit": "e33fac1300552f0377b758ca135e7e5da22a1e4a",
     "scientific_core_source": "benchmarks/work/weighted_projection_core_v1_20261019",
@@ -18,6 +19,23 @@
     "hypothesis": "Position-based weighting depends on actual MSA-column distributions; test it on residue-preserving geometry rather than assuming additive standalone gains.",
     "advancement": "Candidate F1 must strictly exceed canonical and both corresponding solo constituents; precision and recall may not decline by more than0.005 against any matched control. All six arms require actual activation/native/score admission. No retuning; original stopped branches stay stopped.",
     "next": "Science24538 running, separate reader24539 queued afterany24538 with immutable science-launch73a26cb8, and selection-only planner24540 queued afterany24539. Preserve these exact handles and source/plan bindings; never duplicate/restart because observation expires. Admit all six source/native/score-controlled arms and original stronger-constituent gates before any full QfO/Three Kingdoms closure for every passing combination. The planner creates no scientific case or evaluation; tested/frozen full-dataset execution/readback remain required only for admitted passes. Stop failed fixed candidates without retuning; later final freeze/confirmation or data limits, comparison/recommendation and remote audit remain required.",
+    "defaults_promoted": false,
+    "goal_completed": false
+  },
+  "weighted_projection_canonical_checkpoint": {
+    "summary": "benchmark_tools/results/weighted_projection_canonical_checkpoint_20261019.json",
+    "state": "first_control_separately_rechecked_while_original_science_continues_not_terminal_panel_admission",
+    "job_id": "24542", "job_state": "COMPLETED", "exit_code": "0:0",
+    "cpus": 1, "memory_allocation": "16G", "wall_limit": "02:00:00",
+    "scientific_job": "24538", "scientific_revision": "86e39314ba462698b726f569a5d98a144c8d0086",
+    "source": "benchmarks/work/weighted_projection_readback_v1_20261019",
+    "f1": 0.7410607351873405, "precision": 0.8177045380181867, "recall": 0.6775533630827973,
+    "scope": "All four canonical graph stages, candidate and constraints, three native HOG/pair/confidence files and rooted species tree exactly match original control. Frozen shared-helper command/source/runtime/native/official-score readback independently repeated for this completed arm only; exact producer snapshot retained. Remaining five arms and terminal reader24539/selection24540 still pending. No scientific restart, new inference setting or accuracy improvement.",
+    "failed_checkpoint_attempt": {
+      "job_id": "24541", "state": "FAILED", "exit_code": "1:0",
+      "reason": "Checkpoint exact-byte assertion rejected JSON-reserialized snapshot after numeric species keys reordered. Actual control checks had passed. Failed snapshot/log/script retained; corrected v2 uses existing raw-byte snapshot helper in a fresh namespace. Original scientific run and all gates untouched; not negative biology."
+    },
+    "accuracy_result_admitted": false,
     "defaults_promoted": false,
     "goal_completed": false
   },
