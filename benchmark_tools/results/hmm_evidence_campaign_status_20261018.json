@@ -1,12 +1,14 @@
 {
   "schema_version": 1,
-  "status": "bounded_science_documentation_and_requirement_audit_complete_final_delivery_verification_pending",
+  "status": "complete_bounded_hmm_campaign_informative_development_result",
   "final_campaign_report": "benchmark_tools/results/hmm_campaign_final_20261020/README.md",
   "final_campaign_admission": "benchmark_tools/results/hmm_campaign_final_20261020/summary.json",
   "final_requirement_audit": "benchmark_tools/results/hmm_campaign_final_20261020/completion_audit.json",
   "final_resource_audit": "benchmark_tools/results/hmm_campaign_final_20261020/resource_audit.json",
+  "final_delivery_verification": "benchmark_tools/results/hmm_campaign_final_20261020/delivery_verification.json",
+  "verified_scientific_delivery_revision": "f4e7bc4c72dc64e51586978e3a22a21487d0c1b5",
   "historical_pending_snapshot_revision": "4eb5682e2bfd1896e2050f7460825c3f88fea90e",
-  "completion_scope": "All four mechanisms, individual full-vector follow-ups and the registered six-arm interaction are admitted. Both combinations stop at their original gate; no scientific follow-up or retuning remains. All three standalone passes remain experimental with mixed effects and no independent confirmation. This mutable status supersedes older progress prose below, not immutable original launch inputs or historical goal_completed flags. Final task-owned commit, push and actual remote equality remain required before closing the goal.",
+  "completion_scope": "All four mechanisms, individual full-vector follow-ups and the registered six-arm interaction are admitted. Both combinations stop at their original gate; no scientific follow-up or retuning remains. All three standalone passes remain experimental with mixed effects and no independent confirmation. Scientific delivery f4e7bc4c was committed, pushed and verified equal to origin/main;21 requirements, unchanged user samples/native libraries and no required live jobs verified. A fresh delivery regression passed290 tests. This mutable completion status supersedes older progress prose and pre-delivery goal_completed:false observations, not immutable launch inputs or scientific decisions. The closure-only commit containing this status and receipt must also be pushed and remotely verified before the thread goal is closed.",
   "latest_individual_effects_admission": "benchmark_tools/results/hmm_individual_effects_20261019/summary.json",
   "latest_interaction_admission": "benchmark_tools/results/weighted_projection_completed_20261020/summary.json",
   "final_candidate_freeze": {
@@ -901,7 +903,7 @@
     "scope": "Authoritative completion supersedes historical RUNNING/PENDING/accuracy-unadmitted launch observations above; immutable original launches and all failed sources remain unchanged. Complete source/native/score/measurement/24-contrast readback now admitted. Only repair passes tiny development point gain with intervals including zero. Stop both fixed reselection policies for recall loss; no retuning, inactivity relabeling or QfO/TK extension of failed candidates. New driver/reader already tested/pushed/frozen; plan preparation24522 is read-only. Full repair vectors, justified combinations and final recommendation/confirmation limits/remote audit remain required."
   },
   "remaining_scientific_work": [],
-  "remaining": ["Commit and push the final task-owned report, documentation and ledger; verify exact remote synchronization, preserved user sample/native-library fingerprints and no required live jobs before goal completion."],
+  "remaining": [],
   "defaults_promoted": false,
-  "goal_completed": false
+  "goal_completed": true
 }
