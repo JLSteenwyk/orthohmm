@@ -1,6 +1,12 @@
 {
   "schema_version": 1,
-  "status": "active_science_admitted_portfolio_frozen_confirmation_limits_documented_final_consolidation_audit_pending",
+  "status": "bounded_science_documentation_and_requirement_audit_complete_final_delivery_verification_pending",
+  "final_campaign_report": "benchmark_tools/results/hmm_campaign_final_20261020/README.md",
+  "final_campaign_admission": "benchmark_tools/results/hmm_campaign_final_20261020/summary.json",
+  "final_requirement_audit": "benchmark_tools/results/hmm_campaign_final_20261020/completion_audit.json",
+  "final_resource_audit": "benchmark_tools/results/hmm_campaign_final_20261020/resource_audit.json",
+  "historical_pending_snapshot_revision": "4eb5682e2bfd1896e2050f7460825c3f88fea90e",
+  "completion_scope": "All four mechanisms, individual full-vector follow-ups and the registered six-arm interaction are admitted. Both combinations stop at their original gate; no scientific follow-up or retuning remains. All three standalone passes remain experimental with mixed effects and no independent confirmation. This mutable status supersedes older progress prose below, not immutable original launch inputs or historical goal_completed flags. Final task-owned commit, push and actual remote equality remain required before closing the goal.",
   "latest_individual_effects_admission": "benchmark_tools/results/hmm_individual_effects_20261019/summary.json",
   "latest_interaction_admission": "benchmark_tools/results/weighted_projection_completed_20261020/summary.json",
   "final_candidate_freeze": {
@@ -28,18 +34,19 @@
     "readiness": "benchmark_tools/results/hmm_campaign_plateau_readiness_20261020.json",
     "tests": "benchmark_tools/results/hmm_campaign_plateau_tests_20261020.xml",
     "preflight": "benchmark_tools/results/hmm_campaign_plateau_preflight_20261020.json",
-    "state": "frozen_final_compilation24547_running_no_new_science_or_goal_closure",
+    "state": "completed24547_source_bound_science_and_consolidation_admitted",
     "submission_record": "benchmark_tools/results/hmm_campaign_plateau_submission_20261020.json",
     "job": {
-      "submitted": true, "job_id": "24547", "last_observed_state": "RUNNING",
+      "submitted": true, "job_id": "24547", "last_observed_state": "COMPLETED",
+      "exit_code": "0:0", "elapsed": "00:07:16",
       "cpus": 1, "memory_allocation": "16G", "wall_limit": "02:00:00",
       "requeue": false, "restarts": 0,
       "log": "benchmarks/results/hmm_campaign_plateau_v1_20261020-24547.out",
       "summary": "benchmarks/results/hmm_campaign_plateau_v1_20261020/summary.json",
       "actual_batch_script": "benchmarks/results/hmm_campaign_plateau_v1_20261020-24547.batch.sh"
     },
-    "verification": "Pushed fcd95d09 source and ada66871 readiness remotely verified before submission. All1239 actual source/launcher/freeze/review records match frozen committed bytes; original CPU extensions copied unchanged. scontrol confirms actual frozen script/cwd,1CPU16G/two hours, no dependency/requeue/restarts. Actual scheduler batch script exported while live; preserve this handle and namespace until terminal success/failure. No new inference, scores or functional sampling.",
-    "scope": "Read-only collation of all individual mechanisms and the admitted negative interaction, preserving29 configuration/control/history rows,232 endpoint slots,125 scored observations and106 phase-cost rows. Existing generic diagnostic helpers and actual saved cost receipts verified on complete source admissions. No new inference, scores, functional resampling or scientific gate changes. Full frozen execution, final documentation and requirement/remote audit remain required.",
+    "verification": "Terminal COMPLETED0:0 confirmed in sacct. Pushed fcd95d09 source and ada66871 readiness remotely verified before submission. All1239 source/launcher/freeze/review records and715967 source/content records verified; original CPU extensions unchanged. Actual scheduler script exported while live. Raw236636436-byte report SHA256 e7dd9655c2d720cb9df5d40182a290300762f8dae6ea042459fcb49299926bd4 authenticated against immutable launch4eb5682e. Final archive retains exact four TSV bytes and source pointers. No new inference, scores or functional sampling.",
+    "scope": "Completed read-only collation of all individual mechanisms and the admitted negative interaction:29 configuration/control/history rows,232 endpoint slots,125 scored observations and106 phase-cost rows. Existing diagnostic helpers and saved cost receipts verified on complete source admissions. Final local requirement audit verifies21 requirements; final commit/push/equality remains an explicit delivery gate. Historical source-admission goal_completed flags remain false because those artifacts alone never closed the goal.",
     "defaults_promoted": false,
     "goal_completed": false
   },
@@ -893,12 +900,8 @@
     "comparison": "benchmark_tools/results/hmm_campaign_comparison_stockholm_pilot_20261019.tsv",
     "scope": "Authoritative completion supersedes historical RUNNING/PENDING/accuracy-unadmitted launch observations above; immutable original launches and all failed sources remain unchanged. Complete source/native/score/measurement/24-contrast readback now admitted. Only repair passes tiny development point gain with intervals including zero. Stop both fixed reselection policies for recall loss; no retuning, inactivity relabeling or QfO/TK extension of failed candidates. New driver/reader already tested/pushed/frozen; plan preparation24522 is read-only. Full repair vectors, justified combinations and final recommendation/confirmation limits/remote audit remain required."
   },
-  "remaining": [
-    "Completed weighting/local source-bound evidence and comparison integrated after464691 unique-record readback; retain mixed weighting candidates without default promotion and stop fixed neutral local branch. Original HMMER24493/reader24498/collator24501 failures preserved; prepare a new recovery/report namespace rather than retargeting old immutable bindings.",
-    "Extend only advancing arms to corrected QfO and Three Kingdoms; retain all eight endpoint slots and denominator/resource diagnostics, including explicit NA for stopped branches.",
-    "Complete science24519, independent reader24520, input preparation24521 and two-plan preparation24522 are COMPLETED0:0. Only projection_off passes original pilot gate; both active builtin/HMMER reselection policies fail recall/F1 and stop without retuning or applicability fallback. Monitor QfO24523, sequential afterok24523 ThreeKingdoms24524 and reader24525 pending afterany24524 without duplication. Driverabe393de/reader84074667 tested/pushed/frozen; exact sources/runtime/tool/plan/role preflight and actual frozen immutable83ac596e launch binding pass. Require terminal-successful source/content/full-vector admission before transferred conclusions. Preserve all old failed7f82be69/a884d9c0 and98e05ee6/80974fba/f491275c sources/jobs; never retarget or loosen gates. Repair's tiny development gain is not significance, generalizability or default promotion.",
-    "Evaluate justified combinations, seek post-freeze confirmation if available, update the full comparator table and final recommendation, and verify all intended milestones committed/pushed."
-  ],
+  "remaining_scientific_work": [],
+  "remaining": ["Commit and push the final task-owned report, documentation and ledger; verify exact remote synchronization, preserved user sample/native-library fingerprints and no required live jobs before goal completion."],
   "defaults_promoted": false,
   "goal_completed": false
 }

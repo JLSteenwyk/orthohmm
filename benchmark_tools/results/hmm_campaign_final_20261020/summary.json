@@ -1,0 +1,3234 @@
+{
+  "accuracy_result_admitted": true,
+  "alignment_uncertainty": {
+    "admission": {
+      "bytes": 3019,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/aligned_profile_guard_admission_20261018.json",
+      "sha256": "78d872e8c3f612a3ea8cba47a95a59d94af07c09cff70407112558d65cea059b"
+    },
+    "result": {
+      "alpha": 0.05,
+      "bonferroni_percentile_ci": [
+        -1.9935521935898357,
+        0.8632335153029675
+      ],
+      "f1_difference_percentage_points": -0.19103431930868453,
+      "family_wins_ties_losses": [
+        5,
+        62,
+        3
+      ],
+      "multiplicity_endpoints": 3,
+      "paired_percentile_ci": [
+        -1.580553382794376,
+        0.7237764185036545
+      ],
+      "qualification": "Intervals include zero. Post hoc descriptive uncertainty on development-exposed families does not change the original point gate or establish independent biological harm. Full precision/recall intervals and dependence limitations remain in the pinned readback.",
+      "replicates": 100000,
+      "seed": 20261018
+    },
+    "scope": "Original separately admitted fixed alignment-guard interval, unchanged; not a new bootstrap or gate amendment."
+  },
+  "archive_validation": {
+    "all_four_tables_byte_identical": true,
+    "score_table_endpoint_slots_checked": 232,
+    "scored_source_and_detail_and_numeric_population_pointers": 250,
+    "source_input_admission": "Complete terminal-successful frozen compiler freshly checked715967 source/content records. This archive inherits those admissions and freshly checks report/table/source ownership; it does not rerun biological scoring or independently implement the estimators."
+  },
+  "candidate_freeze": {
+    "bytes": 6019,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hmm_campaign_candidate_freeze_20261020.json",
+    "sha256": "8a2f74c09a682a5ade50ceb736eef59bdd56947898964d296045892e8d4c48b4"
+  },
+  "canonical_checkpoint_history": {
+    "bytes": 7282,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/weighted_projection_canonical_checkpoint_20261019.json",
+    "sha256": "0df364a2e0de328b53937f1742381135e7e9c34cdb70a413368e726eb061575e"
+  },
+  "configurations": 29,
+  "confirmation_review": {
+    "bytes": 13620,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hmm_confirmation_review_20261020.json",
+    "sha256": "94489bb92ae208622254f471ee69f853659d1e1734af45dbb95ef0508f3786a1"
+  },
+  "content_records_rechecked_by_completed_frozen_compiler": 715967,
+  "context": [
+    {
+      "key": "orthohmm_high_sensitivity",
+      "label": "OrthoHMM high sensitivity",
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7035899765495244,
+        "QfO: EC": 0.93203769,
+        "QfO: FAS": 0.7765850417998846,
+        "QfO: GO": 0.4722711,
+        "QfO: SwissTrees F": 0.6854977808857662,
+        "QfO: TreeFam-A F": 0.6050078839081693,
+        "QfO: VGNC F": 0.6659331499541553,
+        "ThreeKingdoms: Three Kingdoms F1": 0.8263090676883781
+      },
+      "source_location": [
+        "context",
+        0
+      ],
+      "status": "retained_context_not_reaudited_here"
+    },
+    {
+      "key": "orthohmm_phylogeny_satellite_v2",
+      "label": "OrthoHMM phylogeny satellite_v2",
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7410607351873405,
+        "QfO: EC": 0.9656505,
+        "QfO: FAS": 0.7629933121004577,
+        "QfO: GO": 0.49034928,
+        "QfO: SwissTrees F": 0.8335132205147882,
+        "QfO: TreeFam-A F": 0.614863704412014,
+        "QfO: VGNC F": 0.9016900956268489,
+        "ThreeKingdoms: Three Kingdoms F1": 0.872133159469203
+      },
+      "source_location": [
+        "context",
+        1
+      ],
+      "status": "retained_context_not_reaudited_here"
+    },
+    {
+      "key": "orthofinder_3_1_5_full",
+      "label": "OrthoFinder 3.1.5 full",
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7273648000422167,
+        "QfO: EC": 0.93613021,
+        "QfO: FAS": 0.6914221332471376,
+        "QfO: GO": 0.46954797,
+        "QfO: SwissTrees F": 0.8484132682382873,
+        "QfO: TreeFam-A F": 0.7919177591512453,
+        "QfO: VGNC F": 0.9885463295714856,
+        "ThreeKingdoms: Three Kingdoms F1": 0.9885816480946485
+      },
+      "source_location": [
+        "context",
+        2
+      ],
+      "status": "retained_context_not_reaudited_here"
+    },
+    {
+      "key": "orthofinder_3_1_5_sequence_only",
+      "label": "OrthoFinder 3.1.5 sequence-only checkpoint",
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.58705963184,
+        "QfO: EC": 0.7536416,
+        "QfO: FAS": 0.5617530837830421,
+        "QfO: GO": 0.40704311,
+        "QfO: SwissTrees F": 0.6905148246056576,
+        "QfO: TreeFam-A F": 0.7344069307487682,
+        "QfO: VGNC F": 0.1427548455331809,
+        "ThreeKingdoms: Three Kingdoms F1": 0.9894507588647655
+      },
+      "source_location": [
+        "context",
+        3
+      ],
+      "status": "retained_context_not_reaudited_here"
+    },
+    {
+      "key": "sonicparanoid_2_0_9",
+      "label": "SonicParanoid 2.0.9",
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.4675760912,
+        "QfO: EC": 0.87276097,
+        "QfO: FAS": 0.736680187140205,
+        "QfO: GO": 0.45438453,
+        "QfO: SwissTrees F": 0.798459422080563,
+        "QfO: TreeFam-A F": 0.7719558753542073,
+        "QfO: VGNC F": 0.9827943352356794,
+        "ThreeKingdoms: Three Kingdoms F1": 0.9912758996728462
+      },
+      "source_location": [
+        "context",
+        4
+      ],
+      "status": "retained_context_not_reaudited_here"
+    },
+    {
+      "key": "proteinortho_6_3_6",
+      "label": "ProteinOrtho 6.3.6",
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.45057346674000004,
+        "QfO: EC": 0.96316811,
+        "QfO: FAS": 0.8135948641193668,
+        "QfO: GO": 0.4863364,
+        "QfO: SwissTrees F": 0.7181110000474794,
+        "QfO: TreeFam-A F": 0.6431874339159368,
+        "QfO: VGNC F": 0.9548962442119706,
+        "ThreeKingdoms: Three Kingdoms F1": 0.9304626127436718
+      },
+      "source_location": [
+        "context",
+        5
+      ],
+      "status": "retained_context_not_reaudited_here"
+    },
+    {
+      "key": "fastoma_0_3_5",
+      "label": "FastOMA 0.3.5 final orthologous groups",
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.30906942172,
+        "QfO: EC": 0.89716752,
+        "QfO: FAS": 0.6543663364244952,
+        "QfO: GO": 0.43689352,
+        "QfO: SwissTrees F": 0.7802191344441686,
+        "QfO: TreeFam-A F": 0.6579015590472269,
+        "QfO: VGNC F": 0.9500961370389792,
+        "ThreeKingdoms: Three Kingdoms F1": 0.8616551830920492
+      },
+      "source_location": [
+        "context",
+        6
+      ],
+      "status": "retained_context_not_reaudited_here"
+    },
+    {
+      "key": "orthomcl_1_4",
+      "label": "OrthoMCL 1.4",
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.55065342292,
+        "QfO: EC": 0.92132599,
+        "QfO: FAS": 0.7337522155738428,
+        "QfO: GO": 0.46375473,
+        "QfO: SwissTrees F": 0.7666097433127044,
+        "QfO: TreeFam-A F": 0.7536851790190046,
+        "QfO: VGNC F": 0.6420265327291587,
+        "ThreeKingdoms: Three Kingdoms F1": 0.9889293818331844
+      },
+      "source_location": [
+        "context",
+        7
+      ],
+      "status": "retained_context_not_reaudited_here"
+    },
+    {
+      "key": "canonical_collection:canonical",
+      "label": "OrthoHMM canonical collection (experimental)",
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7410607351873405,
+        "QfO: EC": 0.96538176,
+        "QfO: FAS": 0.7637247098243404,
+        "QfO: GO": 0.49023637,
+        "QfO: SwissTrees F": 0.831347705694284,
+        "QfO: TreeFam-A F": 0.6157780611844207,
+        "QfO: VGNC F": 0.9020677639723076,
+        "ThreeKingdoms: Three Kingdoms F1": 0.872133159469203
+      },
+      "source_location": [
+        "context",
+        8
+      ],
+      "status": "retained_context_not_reaudited_here"
+    }
+  ],
+  "defaults_promoted": false,
+  "endpoint_slots": 232,
+  "functional_population_comparisons": [
+    {
+      "candidate_assessed_relations": 116182,
+      "candidate_mean": 0.96768396,
+      "control_assessed_relations": 118067,
+      "control_mean": 0.96538176,
+      "endpoint": "QfO: EC",
+      "method": "profile_weighting:henikoff",
+      "scope": "Conditional similarities over assessed relation populations, not orthology F1 or matched-population causal effects."
+    },
+    {
+      "candidate_assessed_relations": 84223,
+      "candidate_mean": 0.48988675,
+      "control_assessed_relations": 84021,
+      "control_mean": 0.49023637,
+      "endpoint": "QfO: GO",
+      "method": "profile_weighting:henikoff",
+      "scope": "Conditional similarities over assessed relation populations, not orthology F1 or matched-population causal effects."
+    },
+    {
+      "candidate_assessed_relations": 5950178.0,
+      "candidate_mean": 0.762825030275764,
+      "control_assessed_relations": 5953050.0,
+      "control_mean": 0.7637247098243404,
+      "endpoint": "QfO: FAS",
+      "method": "profile_weighting:henikoff",
+      "population_count_semantics": "Native NR_ORTHOLOGS eligible pool, not the numeric scored-sample count. FAS means use saved unseeded samples with repeated proteins; no matched-population or pair-independent inference.",
+      "scope": "Conditional similarities over assessed relation populations, not orthology F1 or matched-population causal effects."
+    },
+    {
+      "candidate_assessed_relations": 116167,
+      "candidate_mean": 0.96758148,
+      "control_assessed_relations": 118067,
+      "control_mean": 0.96538176,
+      "endpoint": "QfO: EC",
+      "method": "profile_weighting:henikoff_cluster",
+      "scope": "Conditional similarities over assessed relation populations, not orthology F1 or matched-population causal effects."
+    },
+    {
+      "candidate_assessed_relations": 84443,
+      "candidate_mean": 0.48982646,
+      "control_assessed_relations": 84021,
+      "control_mean": 0.49023637,
+      "endpoint": "QfO: GO",
+      "method": "profile_weighting:henikoff_cluster",
+      "scope": "Conditional similarities over assessed relation populations, not orthology F1 or matched-population causal effects."
+    },
+    {
+      "candidate_assessed_relations": 5954794.0,
+      "candidate_mean": 0.7624683130297215,
+      "control_assessed_relations": 5953050.0,
+      "control_mean": 0.7637247098243404,
+      "endpoint": "QfO: FAS",
+      "method": "profile_weighting:henikoff_cluster",
+      "population_count_semantics": "Native NR_ORTHOLOGS eligible pool, not the numeric scored-sample count. FAS means use saved unseeded samples with repeated proteins; no matched-population or pair-independent inference.",
+      "scope": "Conditional similarities over assessed relation populations, not orthology F1 or matched-population causal effects."
+    },
+    {
+      "candidate_assessed_relations": 117194,
+      "candidate_mean": 0.96583455,
+      "candidate_numeric_scored_pairs": 117194,
+      "control_assessed_relations": 118067,
+      "control_mean": 0.96538176,
+      "control_numeric_scored_pairs": 118067,
+      "endpoint": "QfO: EC",
+      "method": "projection_recovery:projection_off",
+      "role": "advancing_candidate",
+      "scope": "Inherited independently read numeric populations; FAS eligible pools are not sample sizes. Conditional unseeded means with repeated proteins, not matched-population orthology accuracy or IID biological uncertainty."
+    },
+    {
+      "candidate_assessed_relations": 84269,
+      "candidate_mean": 0.48958961,
+      "candidate_numeric_scored_pairs": 84269,
+      "control_assessed_relations": 84021,
+      "control_mean": 0.49023637,
+      "control_numeric_scored_pairs": 84021,
+      "endpoint": "QfO: GO",
+      "method": "projection_recovery:projection_off",
+      "role": "advancing_candidate",
+      "scope": "Inherited independently read numeric populations; FAS eligible pools are not sample sizes. Conditional unseeded means with repeated proteins, not matched-population orthology accuracy or IID biological uncertainty."
+    },
+    {
+      "candidate_assessed_relations": 5944182.0,
+      "candidate_mean": 0.763292288871938,
+      "candidate_numeric_scored_pairs": 174361,
+      "control_assessed_relations": 5953050.0,
+      "control_mean": 0.7637247098243404,
+      "control_numeric_scored_pairs": 176307,
+      "endpoint": "QfO: FAS",
+      "method": "projection_recovery:projection_off",
+      "role": "advancing_candidate",
+      "scope": "Inherited independently read numeric populations; FAS eligible pools are not sample sizes. Conditional unseeded means with repeated proteins, not matched-population orthology accuracy or IID biological uncertainty."
+    }
+  ],
+  "goal_completed": false,
+  "independent_confirmation_established": false,
+  "interaction_admission": {
+    "bytes": 99462,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/weighted_projection_completed_20261020/summary.json",
+    "sha256": "e8d45924932c360b851b6887c5c7bc0b3bd862bc073179dadc93db2c6f7059ee"
+  },
+  "interaction_selection": {
+    "advancing_candidates": [],
+    "arm_parameters": [],
+    "control_dependencies": {},
+    "execution_arms": [],
+    "original_gates": {
+      "repair_henikoff": {
+        "eligible": false,
+        "matched_controls": {
+          "legacy_henikoff": {
+            "deltas": {
+              "f1": -0.0001809410377392462,
+              "precision": 0.0014175256660656776,
+              "recall": -0.001272699053236237
+            },
+            "eligible": false,
+            "scope": "Development point gate, not equivalence or independent confirmation"
+          },
+          "legacy_none": {
+            "deltas": {
+              "f1": 0.000722845682851081,
+              "precision": 0.002226458117389085,
+              "recall": -0.0003170074831457814
+            },
+            "eligible": true,
+            "scope": "Development point gate, not equivalence or independent confirmation"
+          },
+          "repair_none": {
+            "deltas": {
+              "f1": 0.0003594320428310649,
+              "precision": 0.001340988761285744,
+              "recall": -0.0003170074831457814
+            },
+            "eligible": true,
+            "scope": "Development point gate, not equivalence or independent confirmation"
+          }
+        },
+        "scope": "All three prespecified development point gates; not significance or independent confirmation"
+      },
+      "repair_henikoff_cluster": {
+        "eligible": false,
+        "matched_controls": {
+          "legacy_henikoff_cluster": {
+            "deltas": {
+              "f1": -0.00031931310567800963,
+              "precision": 0.001079325216921112,
+              "recall": -0.001272699053236237
+            },
+            "eligible": false,
+            "scope": "Development point gate, not equivalence or independent confirmation"
+          },
+          "legacy_none": {
+            "deltas": {
+              "f1": 0.0005667895160733627,
+              "precision": 0.0018452163240538777,
+              "recall": -0.0003170074831457814
+            },
+            "eligible": true,
+            "scope": "Development point gate, not equivalence or independent confirmation"
+          },
+          "repair_none": {
+            "deltas": {
+              "f1": 0.00020337587605334662,
+              "precision": 0.0009597469679505366,
+              "recall": -0.0003170074831457814
+            },
+            "eligible": true,
+            "scope": "Development point gate, not equivalence or independent confirmation"
+          }
+        },
+        "scope": "All three prespecified development point gates; not significance or independent confirmation"
+      }
+    },
+    "roles": {},
+    "scope": "Only unchanged separately admitted point-gate passes advance; all passing combinations and their matched constituent closure are retained. No fallback, retuning, apparent-winner selection or promotion of controls.",
+    "stopped_candidates": [
+      "repair_henikoff",
+      "repair_henikoff_cluster"
+    ]
+  },
+  "interaction_uncertainty": {
+    "contrasts": [
+      {
+        "candidate": "repair_henikoff",
+        "control": "legacy_none",
+        "result": {
+          "alpha": 0.05,
+          "baseline": "legacy_none",
+          "comparisons": {
+            "repair_henikoff": {
+              "family_f1_losses": 5,
+              "family_f1_ties": 63,
+              "family_f1_wins": 2,
+              "metrics": {
+                "f_score": {
+                  "bonferroni_percentile_ci": [
+                    -0.1457588056087003,
+                    0.49091331142122857
+                  ],
+                  "difference_percentage_points": 0.07228456828511298,
+                  "paired_percentile_ci": [
+                    -0.08531670295362516,
+                    0.31782747519767285
+                  ]
+                },
+                "precision": {
+                  "bonferroni_percentile_ci": [
+                    -0.06981411070729794,
+                    0.7151550692948251
+                  ],
+                  "difference_percentage_points": 0.2226458117389143,
+                  "paired_percentile_ci": [
+                    -0.02062728492492169,
+                    0.5272921180752144
+                  ]
+                },
+                "recall": {
+                  "bonferroni_percentile_ci": [
+                    -0.549385064496317,
+                    0.437659103992085
+                  ],
+                  "difference_percentage_points": -0.031700748314577254,
+                  "paired_percentile_ci": [
+                    -0.34213230428109004,
+                    0.2589669091753132
+                  ]
+                }
+              },
+              "versus": "legacy_none"
+            }
+          },
+          "families": [
+            "RefOG001.txt",
+            "RefOG002.txt",
+            "RefOG003.txt",
+            "RefOG004.txt",
+            "RefOG005.txt",
+            "RefOG006.txt",
+            "RefOG007.txt",
+            "RefOG008.txt",
+            "RefOG009.txt",
+            "RefOG010.txt",
+            "RefOG011.txt",
+            "RefOG012.txt",
+            "RefOG013.txt",
+            "RefOG014.txt",
+            "RefOG015.txt",
+            "RefOG016.txt",
+            "RefOG017.txt",
+            "RefOG018.txt",
+            "RefOG019.txt",
+            "RefOG020.txt",
+            "RefOG021.txt",
+            "RefOG022.txt",
+            "RefOG023.txt",
+            "RefOG024.txt",
+            "RefOG025.txt",
+            "RefOG026.txt",
+            "RefOG027.txt",
+            "RefOG028.txt",
+            "RefOG029.txt",
+            "RefOG030.txt",
+            "RefOG031.txt",
+            "RefOG032.txt",
+            "RefOG033.txt",
+            "RefOG034.txt",
+            "RefOG035.txt",
+            "RefOG036.txt",
+            "RefOG037.txt",
+            "RefOG038.txt",
+            "RefOG039.txt",
+            "RefOG040.txt",
+            "RefOG041.txt",
+            "RefOG042.txt",
+            "RefOG043.txt",
+            "RefOG044.txt",
+            "RefOG045.txt",
+            "RefOG046.txt",
+            "RefOG047.txt",
+            "RefOG048.txt",
+            "RefOG049.txt",
+            "RefOG050.txt",
+            "RefOG051.txt",
+            "RefOG052.txt",
+            "RefOG053.txt",
+            "RefOG054.txt",
+            "RefOG055.txt",
+            "RefOG056.txt",
+            "RefOG057.txt",
+            "RefOG058.txt",
+            "RefOG059.txt",
+            "RefOG060.txt",
+            "RefOG061.txt",
+            "RefOG062.txt",
+            "RefOG063.txt",
+            "RefOG064.txt",
+            "RefOG065.txt",
+            "RefOG066.txt",
+            "RefOG067.txt",
+            "RefOG068.txt",
+            "RefOG069.txt",
+            "RefOG070.txt"
+          ],
+          "limitations": [
+            "Development-exposed benchmark; intervals do not correct for previous method selection.",
+            "RefOG resampling assumes exchangeable families; shared histories and fused predictions can violate independence.",
+            "Percentile intervals are approximate, not a guarantee of simultaneous coverage.",
+            "Family F1 wins are descriptive; the benchmark is not a mean of family F1 values.",
+            "No gene-pair independence assumption and no bootstrap-derived p-values are used."
+          ],
+          "multiplicity": "Bonferroni tail adjustment over 18 planned endpoints",
+          "numpy_version": "2.2.6",
+          "point_estimates_percent": {
+            "legacy_none": {
+              "f_score": 74.10607351873405,
+              "precision": 81.77045380181866,
+              "recall": 67.75533630827974
+            },
+            "repair_henikoff": {
+              "f_score": 74.17835808701916,
+              "precision": 81.99309961355758,
+              "recall": 67.72363555996516
+            }
+          },
+          "replicates": 100000,
+          "rng": "numpy.default_rng PCG64 multinomial",
+          "seed": 20261019
+        }
+      },
+      {
+        "candidate": "repair_henikoff",
+        "control": "legacy_henikoff",
+        "result": {
+          "alpha": 0.05,
+          "baseline": "legacy_henikoff",
+          "comparisons": {
+            "repair_henikoff": {
+              "family_f1_losses": 3,
+              "family_f1_ties": 65,
+              "family_f1_wins": 2,
+              "metrics": {
+                "f_score": {
+                  "bonferroni_percentile_ci": [
+                    -0.15251041095020001,
+                    0.07190616985966669
+                  ],
+                  "difference_percentage_points": -0.018094103773918846,
+                  "paired_percentile_ci": [
+                    -0.0927198388684399,
+                    0.040281582763855815
+                  ]
+                },
+                "precision": {
+                  "bonferroni_percentile_ci": [
+                    -0.059473622674369155,
+                    0.5909953768850226
+                  ],
+                  "difference_percentage_points": 0.14175256660656999,
+                  "paired_percentile_ci": [
+                    -0.015123472682197913,
+                    0.39593423297337826
+                  ]
+                },
+                "recall": {
+                  "bonferroni_percentile_ci": [
+                    -0.5960462715686796,
+                    0.0
+                  ],
+                  "difference_percentage_points": -0.12726990532361526,
+                  "paired_percentile_ci": [
+                    -0.3833268782406179,
+                    0.0
+                  ]
+                }
+              },
+              "versus": "legacy_henikoff"
+            }
+          },
+          "families": [
+            "RefOG001.txt",
+            "RefOG002.txt",
+            "RefOG003.txt",
+            "RefOG004.txt",
+            "RefOG005.txt",
+            "RefOG006.txt",
+            "RefOG007.txt",
+            "RefOG008.txt",
+            "RefOG009.txt",
+            "RefOG010.txt",
+            "RefOG011.txt",
+            "RefOG012.txt",
+            "RefOG013.txt",
+            "RefOG014.txt",
+            "RefOG015.txt",
+            "RefOG016.txt",
+            "RefOG017.txt",
+            "RefOG018.txt",
+            "RefOG019.txt",
+            "RefOG020.txt",
+            "RefOG021.txt",
+            "RefOG022.txt",
+            "RefOG023.txt",
+            "RefOG024.txt",
+            "RefOG025.txt",
+            "RefOG026.txt",
+            "RefOG027.txt",
+            "RefOG028.txt",
+            "RefOG029.txt",
+            "RefOG030.txt",
+            "RefOG031.txt",
+            "RefOG032.txt",
+            "RefOG033.txt",
+            "RefOG034.txt",
+            "RefOG035.txt",
+            "RefOG036.txt",
+            "RefOG037.txt",
+            "RefOG038.txt",
+            "RefOG039.txt",
+            "RefOG040.txt",
+            "RefOG041.txt",
+            "RefOG042.txt",
+            "RefOG043.txt",
+            "RefOG044.txt",
+            "RefOG045.txt",
+            "RefOG046.txt",
+            "RefOG047.txt",
+            "RefOG048.txt",
+            "RefOG049.txt",
+            "RefOG050.txt",
+            "RefOG051.txt",
+            "RefOG052.txt",
+            "RefOG053.txt",
+            "RefOG054.txt",
+            "RefOG055.txt",
+            "RefOG056.txt",
+            "RefOG057.txt",
+            "RefOG058.txt",
+            "RefOG059.txt",
+            "RefOG060.txt",
+            "RefOG061.txt",
+            "RefOG062.txt",
+            "RefOG063.txt",
+            "RefOG064.txt",
+            "RefOG065.txt",
+            "RefOG066.txt",
+            "RefOG067.txt",
+            "RefOG068.txt",
+            "RefOG069.txt",
+            "RefOG070.txt"
+          ],
+          "limitations": [
+            "Development-exposed benchmark; intervals do not correct for previous method selection.",
+            "RefOG resampling assumes exchangeable families; shared histories and fused predictions can violate independence.",
+            "Percentile intervals are approximate, not a guarantee of simultaneous coverage.",
+            "Family F1 wins are descriptive; the benchmark is not a mean of family F1 values.",
+            "No gene-pair independence assumption and no bootstrap-derived p-values are used."
+          ],
+          "multiplicity": "Bonferroni tail adjustment over 18 planned endpoints",
+          "numpy_version": "2.2.6",
+          "point_estimates_percent": {
+            "legacy_henikoff": {
+              "f_score": 74.19645219079308,
+              "precision": 81.851347046951,
+              "recall": 67.85090546528878
+            },
+            "repair_henikoff": {
+              "f_score": 74.17835808701916,
+              "precision": 81.99309961355758,
+              "recall": 67.72363555996516
+            }
+          },
+          "replicates": 100000,
+          "rng": "numpy.default_rng PCG64 multinomial",
+          "seed": 20261019
+        }
+      },
+      {
+        "candidate": "repair_henikoff",
+        "control": "repair_none",
+        "result": {
+          "alpha": 0.05,
+          "baseline": "repair_none",
+          "comparisons": {
+            "repair_henikoff": {
+              "family_f1_losses": 5,
+              "family_f1_ties": 61,
+              "family_f1_wins": 4,
+              "metrics": {
+                "f_score": {
+                  "bonferroni_percentile_ci": [
+                    -0.3577209761205721,
+                    0.4800298968612431
+                  ],
+                  "difference_percentage_points": 0.035943204283128694,
+                  "paired_percentile_ci": [
+                    -0.21121182297141877,
+                    0.31203000143656556
+                  ]
+                },
+                "precision": {
+                  "bonferroni_percentile_ci": [
+                    -0.13986228971490428,
+                    0.5603197327603822
+                  ],
+                  "difference_percentage_points": 0.13409887612857574,
+                  "paired_percentile_ci": [
+                    -0.06506654885432077,
+                    0.3983058202385116
+                  ]
+                },
+                "recall": {
+                  "bonferroni_percentile_ci": [
+                    -0.549385064496317,
+                    0.437659103992085
+                  ],
+                  "difference_percentage_points": -0.031700748314577254,
+                  "paired_percentile_ci": [
+                    -0.34213230428109004,
+                    0.2589669091753132
+                  ]
+                }
+              },
+              "versus": "repair_none"
+            }
+          },
+          "families": [
+            "RefOG001.txt",
+            "RefOG002.txt",
+            "RefOG003.txt",
+            "RefOG004.txt",
+            "RefOG005.txt",
+            "RefOG006.txt",
+            "RefOG007.txt",
+            "RefOG008.txt",
+            "RefOG009.txt",
+            "RefOG010.txt",
+            "RefOG011.txt",
+            "RefOG012.txt",
+            "RefOG013.txt",
+            "RefOG014.txt",
+            "RefOG015.txt",
+            "RefOG016.txt",
+            "RefOG017.txt",
+            "RefOG018.txt",
+            "RefOG019.txt",
+            "RefOG020.txt",
+            "RefOG021.txt",
+            "RefOG022.txt",
+            "RefOG023.txt",
+            "RefOG024.txt",
+            "RefOG025.txt",
+            "RefOG026.txt",
+            "RefOG027.txt",
+            "RefOG028.txt",
+            "RefOG029.txt",
+            "RefOG030.txt",
+            "RefOG031.txt",
+            "RefOG032.txt",
+            "RefOG033.txt",
+            "RefOG034.txt",
+            "RefOG035.txt",
+            "RefOG036.txt",
+            "RefOG037.txt",
+            "RefOG038.txt",
+            "RefOG039.txt",
+            "RefOG040.txt",
+            "RefOG041.txt",
+            "RefOG042.txt",
+            "RefOG043.txt",
+            "RefOG044.txt",
+            "RefOG045.txt",
+            "RefOG046.txt",
+            "RefOG047.txt",
+            "RefOG048.txt",
+            "RefOG049.txt",
+            "RefOG050.txt",
+            "RefOG051.txt",
+            "RefOG052.txt",
+            "RefOG053.txt",
+            "RefOG054.txt",
+            "RefOG055.txt",
+            "RefOG056.txt",
+            "RefOG057.txt",
+            "RefOG058.txt",
+            "RefOG059.txt",
+            "RefOG060.txt",
+            "RefOG061.txt",
+            "RefOG062.txt",
+            "RefOG063.txt",
+            "RefOG064.txt",
+            "RefOG065.txt",
+            "RefOG066.txt",
+            "RefOG067.txt",
+            "RefOG068.txt",
+            "RefOG069.txt",
+            "RefOG070.txt"
+          ],
+          "limitations": [
+            "Development-exposed benchmark; intervals do not correct for previous method selection.",
+            "RefOG resampling assumes exchangeable families; shared histories and fused predictions can violate independence.",
+            "Percentile intervals are approximate, not a guarantee of simultaneous coverage.",
+            "Family F1 wins are descriptive; the benchmark is not a mean of family F1 values.",
+            "No gene-pair independence assumption and no bootstrap-derived p-values are used."
+          ],
+          "multiplicity": "Bonferroni tail adjustment over 18 planned endpoints",
+          "numpy_version": "2.2.6",
+          "point_estimates_percent": {
+            "repair_henikoff": {
+              "f_score": 74.17835808701916,
+              "precision": 81.99309961355758,
+              "recall": 67.72363555996516
+            },
+            "repair_none": {
+              "f_score": 74.14241488273603,
+              "precision": 81.859000737429,
+              "recall": 67.75533630827974
+            }
+          },
+          "replicates": 100000,
+          "rng": "numpy.default_rng PCG64 multinomial",
+          "seed": 20261019
+        }
+      },
+      {
+        "candidate": "repair_henikoff_cluster",
+        "control": "legacy_none",
+        "result": {
+          "alpha": 0.05,
+          "baseline": "legacy_none",
+          "comparisons": {
+            "repair_henikoff_cluster": {
+              "family_f1_losses": 5,
+              "family_f1_ties": 63,
+              "family_f1_wins": 2,
+              "metrics": {
+                "f_score": {
+                  "bonferroni_percentile_ci": [
+                    -0.1675169524917104,
+                    0.4817747694045468
+                  ],
+                  "difference_percentage_points": 0.0566789516073527,
+                  "paired_percentile_ci": [
+                    -0.10830351916498877,
+                    0.3082058966158367
+                  ]
+                },
+                "precision": {
+                  "bonferroni_percentile_ci": [
+                    -0.19141849599020036,
+                    0.690093487650152
+                  ],
+                  "difference_percentage_points": 0.1845216324053922,
+                  "paired_percentile_ci": [
+                    -0.08641363711834416,
+                    0.5017966700795642
+                  ]
+                },
+                "recall": {
+                  "bonferroni_percentile_ci": [
+                    -0.549385064496317,
+                    0.437659103992085
+                  ],
+                  "difference_percentage_points": -0.031700748314577254,
+                  "paired_percentile_ci": [
+                    -0.34213230428109004,
+                    0.2589669091753132
+                  ]
+                }
+              },
+              "versus": "legacy_none"
+            }
+          },
+          "families": [
+            "RefOG001.txt",
+            "RefOG002.txt",
+            "RefOG003.txt",
+            "RefOG004.txt",
+            "RefOG005.txt",
+            "RefOG006.txt",
+            "RefOG007.txt",
+            "RefOG008.txt",
+            "RefOG009.txt",
+            "RefOG010.txt",
+            "RefOG011.txt",
+            "RefOG012.txt",
+            "RefOG013.txt",
+            "RefOG014.txt",
+            "RefOG015.txt",
+            "RefOG016.txt",
+            "RefOG017.txt",
+            "RefOG018.txt",
+            "RefOG019.txt",
+            "RefOG020.txt",
+            "RefOG021.txt",
+            "RefOG022.txt",
+            "RefOG023.txt",
+            "RefOG024.txt",
+            "RefOG025.txt",
+            "RefOG026.txt",
+            "RefOG027.txt",
+            "RefOG028.txt",
+            "RefOG029.txt",
+            "RefOG030.txt",
+            "RefOG031.txt",
+            "RefOG032.txt",
+            "RefOG033.txt",
+            "RefOG034.txt",
+            "RefOG035.txt",
+            "RefOG036.txt",
+            "RefOG037.txt",
+            "RefOG038.txt",
+            "RefOG039.txt",
+            "RefOG040.txt",
+            "RefOG041.txt",
+            "RefOG042.txt",
+            "RefOG043.txt",
+            "RefOG044.txt",
+            "RefOG045.txt",
+            "RefOG046.txt",
+            "RefOG047.txt",
+            "RefOG048.txt",
+            "RefOG049.txt",
+            "RefOG050.txt",
+            "RefOG051.txt",
+            "RefOG052.txt",
+            "RefOG053.txt",
+            "RefOG054.txt",
+            "RefOG055.txt",
+            "RefOG056.txt",
+            "RefOG057.txt",
+            "RefOG058.txt",
+            "RefOG059.txt",
+            "RefOG060.txt",
+            "RefOG061.txt",
+            "RefOG062.txt",
+            "RefOG063.txt",
+            "RefOG064.txt",
+            "RefOG065.txt",
+            "RefOG066.txt",
+            "RefOG067.txt",
+            "RefOG068.txt",
+            "RefOG069.txt",
+            "RefOG070.txt"
+          ],
+          "limitations": [
+            "Development-exposed benchmark; intervals do not correct for previous method selection.",
+            "RefOG resampling assumes exchangeable families; shared histories and fused predictions can violate independence.",
+            "Percentile intervals are approximate, not a guarantee of simultaneous coverage.",
+            "Family F1 wins are descriptive; the benchmark is not a mean of family F1 values.",
+            "No gene-pair independence assumption and no bootstrap-derived p-values are used."
+          ],
+          "multiplicity": "Bonferroni tail adjustment over 18 planned endpoints",
+          "numpy_version": "2.2.6",
+          "point_estimates_percent": {
+            "legacy_none": {
+              "f_score": 74.10607351873405,
+              "precision": 81.77045380181866,
+              "recall": 67.75533630827974
+            },
+            "repair_henikoff_cluster": {
+              "f_score": 74.1627524703414,
+              "precision": 81.95497543422405,
+              "recall": 67.72363555996516
+            }
+          },
+          "replicates": 100000,
+          "rng": "numpy.default_rng PCG64 multinomial",
+          "seed": 20261019
+        }
+      },
+      {
+        "candidate": "repair_henikoff_cluster",
+        "control": "legacy_henikoff_cluster",
+        "result": {
+          "alpha": 0.05,
+          "baseline": "legacy_henikoff_cluster",
+          "comparisons": {
+            "repair_henikoff_cluster": {
+              "family_f1_losses": 3,
+              "family_f1_ties": 66,
+              "family_f1_wins": 1,
+              "metrics": {
+                "f_score": {
+                  "bonferroni_percentile_ci": [
+                    -0.15939978815100134,
+                    0.019059150736513607
+                  ],
+                  "difference_percentage_points": -0.0319313105678134,
+                  "paired_percentile_ci": [
+                    -0.10118600959708886,
+                    0.008249564119501672
+                  ]
+                },
+                "precision": {
+                  "bonferroni_percentile_ci": [
+                    -0.06507100489572455,
+                    0.5456325897132004
+                  ],
+                  "difference_percentage_points": 0.10793252169210632,
+                  "paired_percentile_ci": [
+                    -0.025589541389738454,
+                    0.35034580301213947
+                  ]
+                },
+                "recall": {
+                  "bonferroni_percentile_ci": [
+                    -0.5960462715686796,
+                    0.0
+                  ],
+                  "difference_percentage_points": -0.12726990532361526,
+                  "paired_percentile_ci": [
+                    -0.3833268782406179,
+                    0.0
+                  ]
+                }
+              },
+              "versus": "legacy_henikoff_cluster"
+            }
+          },
+          "families": [
+            "RefOG001.txt",
+            "RefOG002.txt",
+            "RefOG003.txt",
+            "RefOG004.txt",
+            "RefOG005.txt",
+            "RefOG006.txt",
+            "RefOG007.txt",
+            "RefOG008.txt",
+            "RefOG009.txt",
+            "RefOG010.txt",
+            "RefOG011.txt",
+            "RefOG012.txt",
+            "RefOG013.txt",
+            "RefOG014.txt",
+            "RefOG015.txt",
+            "RefOG016.txt",
+            "RefOG017.txt",
+            "RefOG018.txt",
+            "RefOG019.txt",
+            "RefOG020.txt",
+            "RefOG021.txt",
+            "RefOG022.txt",
+            "RefOG023.txt",
+            "RefOG024.txt",
+            "RefOG025.txt",
+            "RefOG026.txt",
+            "RefOG027.txt",
+            "RefOG028.txt",
+            "RefOG029.txt",
+            "RefOG030.txt",
+            "RefOG031.txt",
+            "RefOG032.txt",
+            "RefOG033.txt",
+            "RefOG034.txt",
+            "RefOG035.txt",
+            "RefOG036.txt",
+            "RefOG037.txt",
+            "RefOG038.txt",
+            "RefOG039.txt",
+            "RefOG040.txt",
+            "RefOG041.txt",
+            "RefOG042.txt",
+            "RefOG043.txt",
+            "RefOG044.txt",
+            "RefOG045.txt",
+            "RefOG046.txt",
+            "RefOG047.txt",
+            "RefOG048.txt",
+            "RefOG049.txt",
+            "RefOG050.txt",
+            "RefOG051.txt",
+            "RefOG052.txt",
+            "RefOG053.txt",
+            "RefOG054.txt",
+            "RefOG055.txt",
+            "RefOG056.txt",
+            "RefOG057.txt",
+            "RefOG058.txt",
+            "RefOG059.txt",
+            "RefOG060.txt",
+            "RefOG061.txt",
+            "RefOG062.txt",
+            "RefOG063.txt",
+            "RefOG064.txt",
+            "RefOG065.txt",
+            "RefOG066.txt",
+            "RefOG067.txt",
+            "RefOG068.txt",
+            "RefOG069.txt",
+            "RefOG070.txt"
+          ],
+          "limitations": [
+            "Development-exposed benchmark; intervals do not correct for previous method selection.",
+            "RefOG resampling assumes exchangeable families; shared histories and fused predictions can violate independence.",
+            "Percentile intervals are approximate, not a guarantee of simultaneous coverage.",
+            "Family F1 wins are descriptive; the benchmark is not a mean of family F1 values.",
+            "No gene-pair independence assumption and no bootstrap-derived p-values are used."
+          ],
+          "multiplicity": "Bonferroni tail adjustment over 18 planned endpoints",
+          "numpy_version": "2.2.6",
+          "point_estimates_percent": {
+            "legacy_henikoff_cluster": {
+              "f_score": 74.19468378090922,
+              "precision": 81.84704291253195,
+              "recall": 67.85090546528878
+            },
+            "repair_henikoff_cluster": {
+              "f_score": 74.1627524703414,
+              "precision": 81.95497543422405,
+              "recall": 67.72363555996516
+            }
+          },
+          "replicates": 100000,
+          "rng": "numpy.default_rng PCG64 multinomial",
+          "seed": 20261019
+        }
+      },
+      {
+        "candidate": "repair_henikoff_cluster",
+        "control": "repair_none",
+        "result": {
+          "alpha": 0.05,
+          "baseline": "repair_none",
+          "comparisons": {
+            "repair_henikoff_cluster": {
+              "family_f1_losses": 6,
+              "family_f1_ties": 60,
+              "family_f1_wins": 4,
+              "metrics": {
+                "f_score": {
+                  "bonferroni_percentile_ci": [
+                    -0.37608829977169655,
+                    0.4711807421374438
+                  ],
+                  "difference_percentage_points": 0.020337587605368412,
+                  "paired_percentile_ci": [
+                    -0.2275816521955562,
+                    0.2985504489240633
+                  ]
+                },
+                "precision": {
+                  "bonferroni_percentile_ci": [
+                    -0.23800420692890628,
+                    0.539847032726365
+                  ],
+                  "difference_percentage_points": 0.09597469679505366,
+                  "paired_percentile_ci": [
+                    -0.13681736929059127,
+                    0.37494427883599357
+                  ]
+                },
+                "recall": {
+                  "bonferroni_percentile_ci": [
+                    -0.549385064496317,
+                    0.437659103992085
+                  ],
+                  "difference_percentage_points": -0.031700748314577254,
+                  "paired_percentile_ci": [
+                    -0.34213230428109004,
+                    0.2589669091753132
+                  ]
+                }
+              },
+              "versus": "repair_none"
+            }
+          },
+          "families": [
+            "RefOG001.txt",
+            "RefOG002.txt",
+            "RefOG003.txt",
+            "RefOG004.txt",
+            "RefOG005.txt",
+            "RefOG006.txt",
+            "RefOG007.txt",
+            "RefOG008.txt",
+            "RefOG009.txt",
+            "RefOG010.txt",
+            "RefOG011.txt",
+            "RefOG012.txt",
+            "RefOG013.txt",
+            "RefOG014.txt",
+            "RefOG015.txt",
+            "RefOG016.txt",
+            "RefOG017.txt",
+            "RefOG018.txt",
+            "RefOG019.txt",
+            "RefOG020.txt",
+            "RefOG021.txt",
+            "RefOG022.txt",
+            "RefOG023.txt",
+            "RefOG024.txt",
+            "RefOG025.txt",
+            "RefOG026.txt",
+            "RefOG027.txt",
+            "RefOG028.txt",
+            "RefOG029.txt",
+            "RefOG030.txt",
+            "RefOG031.txt",
+            "RefOG032.txt",
+            "RefOG033.txt",
+            "RefOG034.txt",
+            "RefOG035.txt",
+            "RefOG036.txt",
+            "RefOG037.txt",
+            "RefOG038.txt",
+            "RefOG039.txt",
+            "RefOG040.txt",
+            "RefOG041.txt",
+            "RefOG042.txt",
+            "RefOG043.txt",
+            "RefOG044.txt",
+            "RefOG045.txt",
+            "RefOG046.txt",
+            "RefOG047.txt",
+            "RefOG048.txt",
+            "RefOG049.txt",
+            "RefOG050.txt",
+            "RefOG051.txt",
+            "RefOG052.txt",
+            "RefOG053.txt",
+            "RefOG054.txt",
+            "RefOG055.txt",
+            "RefOG056.txt",
+            "RefOG057.txt",
+            "RefOG058.txt",
+            "RefOG059.txt",
+            "RefOG060.txt",
+            "RefOG061.txt",
+            "RefOG062.txt",
+            "RefOG063.txt",
+            "RefOG064.txt",
+            "RefOG065.txt",
+            "RefOG066.txt",
+            "RefOG067.txt",
+            "RefOG068.txt",
+            "RefOG069.txt",
+            "RefOG070.txt"
+          ],
+          "limitations": [
+            "Development-exposed benchmark; intervals do not correct for previous method selection.",
+            "RefOG resampling assumes exchangeable families; shared histories and fused predictions can violate independence.",
+            "Percentile intervals are approximate, not a guarantee of simultaneous coverage.",
+            "Family F1 wins are descriptive; the benchmark is not a mean of family F1 values.",
+            "No gene-pair independence assumption and no bootstrap-derived p-values are used."
+          ],
+          "multiplicity": "Bonferroni tail adjustment over 18 planned endpoints",
+          "numpy_version": "2.2.6",
+          "point_estimates_percent": {
+            "repair_henikoff_cluster": {
+              "f_score": 74.1627524703414,
+              "precision": 81.95497543422405,
+              "recall": 67.72363555996516
+            },
+            "repair_none": {
+              "f_score": 74.14241488273603,
+              "precision": 81.859000737429,
+              "recall": 67.75533630827974
+            }
+          },
+          "replicates": 100000,
+          "rng": "numpy.default_rng PCG64 multinomial",
+          "seed": 20261019
+        }
+      }
+    ],
+    "multiplicity_endpoints": 18,
+    "scope": "Prespecified within-phase paired70-family intervals, in percentage points. Development-exposed, not campaign-wide correction, independent confirmation, equivalence or a point-gate amendment."
+  },
+  "launch": {
+    "git_blob_sha256": "b7f80edc2f1b3f8ec760dab05f3078e69d232227c6c10eb8d2237158fed44342",
+    "path": "benchmark_tools/results/hmm_evidence_campaign_status_20261018.json",
+    "revision": "4eb5682e2bfd1896e2050f7460825c3f88fea90e"
+  },
+  "methods": [
+    {
+      "key": "profile_weighting:none",
+      "label": "OrthoHMM profile weighting none",
+      "missing_endpoints": [],
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7410607351873405,
+        "QfO: EC": 0.96538176,
+        "QfO: FAS": 0.7637247098243404,
+        "QfO: GO": 0.49023637,
+        "QfO: SwissTrees F": 0.831347705694284,
+        "QfO: TreeFam-A F": 0.6157780611844207,
+        "QfO: VGNC F": 0.9020677639723076,
+        "ThreeKingdoms: Three Kingdoms F1": 0.872133159469203
+      },
+      "source_location": [
+        "methods",
+        0
+      ],
+      "status": "complete_development_vector"
+    },
+    {
+      "campaign_decision": "development_screen_pass_confirmation_required",
+      "full_vector_screen": {
+        "declines_exceeding_0_005": [],
+        "deltas": {
+          "OrthoBench: OrthoBench F1": 0.0009037867205903272,
+          "QfO: EC": 0.002302200000000032,
+          "QfO: FAS": -0.0008996795485763931,
+          "QfO: GO": -0.00034961999999999493,
+          "QfO: SwissTrees F": -0.002129229417460632,
+          "QfO: TreeFam-A F": -5.0320712899787345e-05,
+          "QfO: VGNC F": -0.001159006858299949,
+          "ThreeKingdoms: Three Kingdoms F1": -0.000346157244082157
+        },
+        "eligible": true,
+        "primary_f1_improvement": true,
+        "scope": "Original development point screen, not significance, independent generalizability or default promotion. Functional populations require separate interpretation."
+      },
+      "key": "profile_weighting:henikoff",
+      "label": "OrthoHMM profile weighting henikoff",
+      "missing_endpoints": [],
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7419645219079308,
+        "QfO: EC": 0.96768396,
+        "QfO: FAS": 0.762825030275764,
+        "QfO: GO": 0.48988675,
+        "QfO: SwissTrees F": 0.8292184762768233,
+        "QfO: TreeFam-A F": 0.6157277404715209,
+        "QfO: VGNC F": 0.9009087571140076,
+        "ThreeKingdoms: Three Kingdoms F1": 0.8717870022251208
+      },
+      "source_location": [
+        "methods",
+        1
+      ],
+      "status": "complete_development_vector"
+    },
+    {
+      "campaign_decision": "development_screen_pass_confirmation_required",
+      "full_vector_screen": {
+        "declines_exceeding_0_005": [],
+        "deltas": {
+          "OrthoBench: OrthoBench F1": 0.0008861026217513723,
+          "QfO: EC": 0.002199720000000016,
+          "QfO: FAS": -0.0012563967946188637,
+          "QfO: GO": -0.0004099099999999578,
+          "QfO: SwissTrees F": 0.0,
+          "QfO: TreeFam-A F": -0.002547221641015285,
+          "QfO: VGNC F": -0.0010419934970568034,
+          "ThreeKingdoms: Three Kingdoms F1": -0.0029491250156153948
+        },
+        "eligible": true,
+        "primary_f1_improvement": true,
+        "scope": "Original development point screen, not significance, independent generalizability or default promotion. Functional populations require separate interpretation."
+      },
+      "key": "profile_weighting:henikoff_cluster",
+      "label": "OrthoHMM profile weighting henikoff_cluster",
+      "missing_endpoints": [],
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7419468378090919,
+        "QfO: EC": 0.96758148,
+        "QfO: FAS": 0.7624683130297215,
+        "QfO: GO": 0.48982646,
+        "QfO: SwissTrees F": 0.831347705694284,
+        "QfO: TreeFam-A F": 0.6132308395434054,
+        "QfO: VGNC F": 0.9010257704752508,
+        "ThreeKingdoms: Three Kingdoms F1": 0.8691840344535876
+      },
+      "source_location": [
+        "methods",
+        2
+      ],
+      "status": "complete_development_vector"
+    },
+    {
+      "key": "profile_weighting:species_henikoff_cluster",
+      "label": "OrthoHMM profile weighting species_henikoff_cluster",
+      "missing_endpoints": [
+        "QfO: VGNC F",
+        "QfO: SwissTrees F",
+        "QfO: TreeFam-A F",
+        "QfO: EC",
+        "QfO: GO",
+        "QfO: FAS",
+        "ThreeKingdoms: Three Kingdoms F1"
+      ],
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7379797569038284
+      },
+      "source_location": [
+        "methods",
+        3
+      ],
+      "status": "stopped_after_orthobench_point_gate"
+    },
+    {
+      "key": "alignment:strict_span_guard",
+      "label": "OrthoHMM alignment guard",
+      "missing_endpoints": [
+        "QfO: VGNC F",
+        "QfO: SwissTrees F",
+        "QfO: TreeFam-A F",
+        "QfO: EC",
+        "QfO: GO",
+        "QfO: FAS",
+        "ThreeKingdoms: Three Kingdoms F1"
+      ],
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7391503919942537
+      },
+      "source_location": [
+        "methods",
+        4
+      ],
+      "status": "stopped_after_orthobench_point_gate"
+    },
+    {
+      "key": "local:off",
+      "label": "OrthoHMM local off",
+      "missing_endpoints": [
+        "QfO: VGNC F",
+        "QfO: SwissTrees F",
+        "QfO: TreeFam-A F",
+        "QfO: EC",
+        "QfO: GO",
+        "QfO: FAS",
+        "ThreeKingdoms: Three Kingdoms F1"
+      ],
+      "point_gate": null,
+      "role": "unchanged_control",
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7410607351873405
+      },
+      "source_location": [
+        "methods",
+        5
+      ],
+      "status": "unchanged_control"
+    },
+    {
+      "key": "local:local_joint_v1",
+      "label": "OrthoHMM local local_joint_v1",
+      "missing_endpoints": [
+        "QfO: VGNC F",
+        "QfO: SwissTrees F",
+        "QfO: TreeFam-A F",
+        "QfO: EC",
+        "QfO: GO",
+        "QfO: FAS",
+        "ThreeKingdoms: Three Kingdoms F1"
+      ],
+      "point_gate": {
+        "deltas": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "eligible": false,
+        "scope": "Development point gate, not equivalence or independent confirmation"
+      },
+      "role": "candidate",
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7410607351873405
+      },
+      "source_location": [
+        "methods",
+        6
+      ],
+      "status": "stopped_after_orthobench_point_gate"
+    },
+    {
+      "construction_role": "legacy_control",
+      "interpretation": "Original advancement uses legacy canonical; repair-only gain is not backend-specific benefit.",
+      "key": "projection_recovery:legacy_off",
+      "label": "OrthoHMM projection legacy_off",
+      "missing_endpoints": [],
+      "point_gate": null,
+      "role": "canonical_control",
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7410607351873405,
+        "QfO: EC": 0.96538176,
+        "QfO: FAS": 0.7637247098243404,
+        "QfO: GO": 0.49023637,
+        "QfO: SwissTrees F": 0.831347705694284,
+        "QfO: TreeFam-A F": 0.6157780611844207,
+        "QfO: VGNC F": 0.9020677639723076,
+        "ThreeKingdoms: Three Kingdoms F1": 0.872133159469203
+      },
+      "source_location": [
+        "methods",
+        7
+      ],
+      "status": "complete_development_vector"
+    },
+    {
+      "construction_role": "projection_only",
+      "full_vector_screen": {
+        "declines_exceeding_0_005": [],
+        "deltas": {
+          "OrthoBench: OrthoBench F1": 0.0003634136400200161,
+          "QfO: EC": 0.0004527899999999807,
+          "QfO: FAS": -0.0004324209524023681,
+          "QfO: GO": -0.0006467599999999685,
+          "QfO: SwissTrees F": 0.0021655148205041996,
+          "QfO: TreeFam-A F": 0.0005970824996515134,
+          "QfO: VGNC F": -0.0006799901450337265,
+          "ThreeKingdoms: Three Kingdoms F1": -0.0019064979248311076
+        },
+        "eligible": true,
+        "original_pilot_eligible": true,
+        "point_screen_pass": true,
+        "primary_f1_improvement": true,
+        "scope": "Original development screen only. Applicability/control-only roles cannot become passing candidates. Conditional functional means, unseeded FAS and development exposure prevent automatic default promotion or superiority claims."
+      },
+      "interpretation": "Original advancement uses legacy canonical; repair-only gain is not backend-specific benefit.",
+      "key": "projection_recovery:projection_off",
+      "label": "OrthoHMM projection projection_off",
+      "missing_endpoints": [],
+      "point_gate": {
+        "deltas": {
+          "f1": 0.0003634136400200161,
+          "precision": 0.0008854693561033411,
+          "recall": 0.0
+        },
+        "eligible": true,
+        "scope": "Development point gate, not equivalence or independent confirmation"
+      },
+      "role": "advancing_candidate",
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7414241488273605,
+        "QfO: EC": 0.96583455,
+        "QfO: FAS": 0.763292288871938,
+        "QfO: GO": 0.48958961,
+        "QfO: SwissTrees F": 0.8335132205147882,
+        "QfO: TreeFam-A F": 0.6163751436840722,
+        "QfO: VGNC F": 0.9013877738272739,
+        "ThreeKingdoms: Three Kingdoms F1": 0.8702266615443719
+      },
+      "source_location": [
+        "methods",
+        8
+      ],
+      "status": "complete_development_vector"
+    },
+    {
+      "construction_role": "matched_repaired_profile",
+      "interpretation": "Original advancement uses legacy canonical; repair-only gain is not backend-specific benefit.",
+      "key": "projection_recovery:projection_builtin_reselect",
+      "label": "OrthoHMM projection projection_builtin_reselect",
+      "missing_endpoints": [
+        "QfO: VGNC F",
+        "QfO: SwissTrees F",
+        "QfO: TreeFam-A F",
+        "QfO: EC",
+        "QfO: GO",
+        "QfO: FAS",
+        "ThreeKingdoms: Three Kingdoms F1"
+      ],
+      "point_gate": {
+        "deltas": {
+          "f1": -0.0048486670111721475,
+          "precision": -0.001124738689795235,
+          "recall": -0.007306907783114935
+        },
+        "eligible": false,
+        "scope": "Development point gate, not equivalence or independent confirmation"
+      },
+      "role": "stopped_candidate",
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7362120681761684
+      },
+      "source_location": [
+        "methods",
+        9
+      ],
+      "status": "not_extended_after_original_pilot"
+    },
+    {
+      "construction_role": "matched_repaired_profile",
+      "interpretation": "Original advancement uses legacy canonical; repair-only gain is not backend-specific benefit.",
+      "key": "projection_recovery:projection_hmmer_score_only",
+      "label": "OrthoHMM projection projection_hmmer_score_only",
+      "missing_endpoints": [
+        "QfO: VGNC F",
+        "QfO: SwissTrees F",
+        "QfO: TreeFam-A F",
+        "QfO: EC",
+        "QfO: GO",
+        "QfO: FAS",
+        "ThreeKingdoms: Three Kingdoms F1"
+      ],
+      "point_gate": null,
+      "role": "measurement_control",
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7414241488273605
+      },
+      "source_location": [
+        "methods",
+        10
+      ],
+      "status": "not_extended_after_original_pilot"
+    },
+    {
+      "construction_role": "matched_repaired_profile",
+      "interpretation": "Original advancement uses legacy canonical; repair-only gain is not backend-specific benefit.",
+      "key": "projection_recovery:projection_hmmer_reselect",
+      "label": "OrthoHMM projection projection_hmmer_reselect",
+      "missing_endpoints": [
+        "QfO: VGNC F",
+        "QfO: SwissTrees F",
+        "QfO: TreeFam-A F",
+        "QfO: EC",
+        "QfO: GO",
+        "QfO: FAS",
+        "ThreeKingdoms: Three Kingdoms F1"
+      ],
+      "point_gate": {
+        "deltas": {
+          "f1": -0.004932791021185823,
+          "precision": 0.0004168936560734471,
+          "recall": -0.008480964945344893
+        },
+        "eligible": false,
+        "scope": "Development point gate, not equivalence or independent confirmation"
+      },
+      "role": "stopped_candidate",
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7361279441661547
+      },
+      "source_location": [
+        "methods",
+        11
+      ],
+      "status": "not_extended_after_original_pilot"
+    },
+    {
+      "interpretation": "Original source-integrity failure, not inactivity or a negative accuracy result. Replaced only by a separately controlled recovery, not overwritten.",
+      "key": "selective_original:failed_panel",
+      "label": "OrthoHMM selective HMMER original pilot (unadmitted)",
+      "missing_endpoints": [
+        "OrthoBench: OrthoBench F1",
+        "QfO: VGNC F",
+        "QfO: SwissTrees F",
+        "QfO: TreeFam-A F",
+        "QfO: EC",
+        "QfO: GO",
+        "QfO: FAS",
+        "ThreeKingdoms: Three Kingdoms F1"
+      ],
+      "role": "failed_execution",
+      "scores": {},
+      "source_location": [
+        "methods",
+        12
+      ],
+      "status": "failed_incomplete_panel_not_accuracy_evidence"
+    },
+    {
+      "key": "projection_original:failed_panel",
+      "label": "OrthoHMM prior projection recovery (failed execution)",
+      "missing_endpoints": [
+        "OrthoBench: OrthoBench F1",
+        "QfO: VGNC F",
+        "QfO: SwissTrees F",
+        "QfO: TreeFam-A F",
+        "QfO: EC",
+        "QfO: GO",
+        "QfO: FAS",
+        "ThreeKingdoms: Three Kingdoms F1"
+      ],
+      "role": "failed_execution",
+      "scores": {},
+      "source_location": [
+        "methods",
+        13
+      ],
+      "status": "failed_incomplete_panel_not_accuracy_evidence"
+    },
+    {
+      "key": "weighted_projection:legacy_none",
+      "label": "OrthoHMM weighting/projection legacy_none",
+      "matched_point_gate": null,
+      "missing_endpoints": [
+        "QfO: VGNC F",
+        "QfO: SwissTrees F",
+        "QfO: TreeFam-A F",
+        "QfO: EC",
+        "QfO: GO",
+        "QfO: FAS",
+        "ThreeKingdoms: Three Kingdoms F1"
+      ],
+      "role": "canonical_control",
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7410607351873405
+      },
+      "source_location": [
+        "methods",
+        14
+      ],
+      "status": "interaction_control_reproduced"
+    },
+    {
+      "key": "weighted_projection:legacy_henikoff",
+      "label": "OrthoHMM weighting/projection legacy_henikoff",
+      "matched_point_gate": null,
+      "missing_endpoints": [
+        "QfO: VGNC F",
+        "QfO: SwissTrees F",
+        "QfO: TreeFam-A F",
+        "QfO: EC",
+        "QfO: GO",
+        "QfO: FAS",
+        "ThreeKingdoms: Three Kingdoms F1"
+      ],
+      "role": "constituent_control",
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7419645219079308
+      },
+      "source_location": [
+        "methods",
+        15
+      ],
+      "status": "interaction_control_reproduced"
+    },
+    {
+      "key": "weighted_projection:legacy_henikoff_cluster",
+      "label": "OrthoHMM weighting/projection legacy_henikoff_cluster",
+      "matched_point_gate": null,
+      "missing_endpoints": [
+        "QfO: VGNC F",
+        "QfO: SwissTrees F",
+        "QfO: TreeFam-A F",
+        "QfO: EC",
+        "QfO: GO",
+        "QfO: FAS",
+        "ThreeKingdoms: Three Kingdoms F1"
+      ],
+      "role": "constituent_control",
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7419468378090919
+      },
+      "source_location": [
+        "methods",
+        16
+      ],
+      "status": "interaction_control_reproduced"
+    },
+    {
+      "key": "weighted_projection:repair_none",
+      "label": "OrthoHMM weighting/projection repair_none",
+      "matched_point_gate": null,
+      "missing_endpoints": [
+        "QfO: VGNC F",
+        "QfO: SwissTrees F",
+        "QfO: TreeFam-A F",
+        "QfO: EC",
+        "QfO: GO",
+        "QfO: FAS",
+        "ThreeKingdoms: Three Kingdoms F1"
+      ],
+      "role": "constituent_control",
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7414241488273605
+      },
+      "source_location": [
+        "methods",
+        17
+      ],
+      "status": "interaction_control_reproduced"
+    },
+    {
+      "key": "weighted_projection:repair_henikoff",
+      "label": "OrthoHMM weighting/projection repair_henikoff",
+      "matched_point_gate": {
+        "eligible": false,
+        "matched_controls": {
+          "legacy_henikoff": {
+            "deltas": {
+              "f1": -0.0001809410377392462,
+              "precision": 0.0014175256660656776,
+              "recall": -0.001272699053236237
+            },
+            "eligible": false,
+            "scope": "Development point gate, not equivalence or independent confirmation"
+          },
+          "legacy_none": {
+            "deltas": {
+              "f1": 0.000722845682851081,
+              "precision": 0.002226458117389085,
+              "recall": -0.0003170074831457814
+            },
+            "eligible": true,
+            "scope": "Development point gate, not equivalence or independent confirmation"
+          },
+          "repair_none": {
+            "deltas": {
+              "f1": 0.0003594320428310649,
+              "precision": 0.001340988761285744,
+              "recall": -0.0003170074831457814
+            },
+            "eligible": true,
+            "scope": "Development point gate, not equivalence or independent confirmation"
+          }
+        },
+        "scope": "All three prespecified development point gates; not significance or independent confirmation"
+      },
+      "missing_endpoints": [
+        "QfO: VGNC F",
+        "QfO: SwissTrees F",
+        "QfO: TreeFam-A F",
+        "QfO: EC",
+        "QfO: GO",
+        "QfO: FAS",
+        "ThreeKingdoms: Three Kingdoms F1"
+      ],
+      "role": "candidate",
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7417835808701916
+      },
+      "source_location": [
+        "methods",
+        18
+      ],
+      "status": "stopped_after_stronger_constituent_point_gate"
+    },
+    {
+      "key": "weighted_projection:repair_henikoff_cluster",
+      "label": "OrthoHMM weighting/projection repair_henikoff_cluster",
+      "matched_point_gate": {
+        "eligible": false,
+        "matched_controls": {
+          "legacy_henikoff_cluster": {
+            "deltas": {
+              "f1": -0.00031931310567800963,
+              "precision": 0.001079325216921112,
+              "recall": -0.001272699053236237
+            },
+            "eligible": false,
+            "scope": "Development point gate, not equivalence or independent confirmation"
+          },
+          "legacy_none": {
+            "deltas": {
+              "f1": 0.0005667895160733627,
+              "precision": 0.0018452163240538777,
+              "recall": -0.0003170074831457814
+            },
+            "eligible": true,
+            "scope": "Development point gate, not equivalence or independent confirmation"
+          },
+          "repair_none": {
+            "deltas": {
+              "f1": 0.00020337587605334662,
+              "precision": 0.0009597469679505366,
+              "recall": -0.0003170074831457814
+            },
+            "eligible": true,
+            "scope": "Development point gate, not equivalence or independent confirmation"
+          }
+        },
+        "scope": "All three prespecified development point gates; not significance or independent confirmation"
+      },
+      "missing_endpoints": [
+        "QfO: VGNC F",
+        "QfO: SwissTrees F",
+        "QfO: TreeFam-A F",
+        "QfO: EC",
+        "QfO: GO",
+        "QfO: FAS",
+        "ThreeKingdoms: Three Kingdoms F1"
+      ],
+      "role": "candidate",
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7416275247034139
+      },
+      "source_location": [
+        "methods",
+        19
+      ],
+      "status": "stopped_after_stronger_constituent_point_gate"
+    }
+  ],
+  "original_failure_history": {
+    "files": [
+      {
+        "bytes": 316245,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/selective_hmmer_pilot_v1_20261018/results.json",
+        "sha256": "ac60369797286bd4ddb264162882ae333d138e59b362400374a77d5741543a58"
+      },
+      {
+        "bytes": 1198,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/selective_hmmer_readback_v1_20261018-24498.out",
+        "sha256": "81d59b174e3cb3304e7675825363a1fd9caf4aaa1aab4bd4e53bd6a89e4c1aa6"
+      },
+      {
+        "bytes": 1409,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_campaign_report_v1_20261018-24501.out",
+        "sha256": "403a012460c08e32718c46047fdd672aaa15da47ebcbd910187ba4387b4fa76c"
+      }
+    ],
+    "jobs": [
+      {
+        "accounting": {
+          "ExitCode": "1:0",
+          "JobIDRaw": "24493",
+          "State": "FAILED"
+        },
+        "command": [
+          "sacct",
+          "-j",
+          "24493",
+          "-X",
+          "-P",
+          "-o",
+          "JobIDRaw,State,ExitCode"
+        ]
+      },
+      {
+        "accounting": {
+          "ExitCode": "1:0",
+          "JobIDRaw": "24498",
+          "State": "FAILED"
+        },
+        "command": [
+          "sacct",
+          "-j",
+          "24498",
+          "-X",
+          "-P",
+          "-o",
+          "JobIDRaw,State,ExitCode"
+        ]
+      },
+      {
+        "accounting": {
+          "ExitCode": "1:0",
+          "JobIDRaw": "24501",
+          "State": "FAILED"
+        },
+        "command": [
+          "sacct",
+          "-j",
+          "24501",
+          "-X",
+          "-P",
+          "-o",
+          "JobIDRaw,State,ExitCode"
+        ]
+      }
+    ],
+    "status": "original_failures_preserved_not_accuracy_evidence"
+  },
+  "phase_rows": 106,
+  "projection_failure_history": {
+    "files": [
+      {
+        "bytes": 415144,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/projection_recovery_pilot_v1_20261019/results.json",
+        "sha256": "531b07e2cf227cd92d899f348f64b9c78c59150d9d5695d7f391da7103496320"
+      },
+      {
+        "bytes": 1225,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/projection_recovery_readback_v1_20261019-24515.out",
+        "sha256": "05a0a896e4b62dbe3fc3a5d511075ff231de180e38501011a059123a03730585"
+      },
+      {
+        "bytes": 1446,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_recovery_campaign_report_v1_20261019-24516.out",
+        "sha256": "b86a468cf74ea6ab77937458f9ff4a52d0a287b3e30b3ea07381c128cf906972"
+      },
+      {
+        "bytes": 1748,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/projection_followup_inputs_v1_20261019-24517.out",
+        "sha256": "138ba3a2994fd25c7bd2f69c0536ca5c436682bbc04eb2eed1313ff0005860cd"
+      }
+    ],
+    "jobs": [
+      {
+        "accounting": {
+          "ExitCode": "1:0",
+          "JobIDRaw": "24514",
+          "State": "FAILED"
+        },
+        "command": [
+          "sacct",
+          "-j",
+          "24514",
+          "-X",
+          "-P",
+          "-o",
+          "JobIDRaw,State,ExitCode"
+        ]
+      },
+      {
+        "accounting": {
+          "ExitCode": "1:0",
+          "JobIDRaw": "24515",
+          "State": "FAILED"
+        },
+        "command": [
+          "sacct",
+          "-j",
+          "24515",
+          "-X",
+          "-P",
+          "-o",
+          "JobIDRaw,State,ExitCode"
+        ]
+      },
+      {
+        "accounting": {
+          "ExitCode": "1:0",
+          "JobIDRaw": "24516",
+          "State": "FAILED"
+        },
+        "command": [
+          "sacct",
+          "-j",
+          "24516",
+          "-X",
+          "-P",
+          "-o",
+          "JobIDRaw,State,ExitCode"
+        ]
+      },
+      {
+        "accounting": {
+          "ExitCode": "1:0",
+          "JobIDRaw": "24517",
+          "State": "FAILED"
+        },
+        "command": [
+          "sacct",
+          "-j",
+          "24517",
+          "-X",
+          "-P",
+          "-o",
+          "JobIDRaw,State,ExitCode"
+        ]
+      }
+    ],
+    "scope": "Failed execution, never negative accuracy or inactivity."
+  },
+  "reader_provenance": {
+    "reader": {
+      "bytes": 236636436,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_campaign_plateau_v1_20261020/summary.json",
+      "sha256": "e7dd9655c2d720cb9df5d40182a290300762f8dae6ea042459fcb49299926bd4"
+    },
+    "revision": "fcd95d092cfa72fc109aa51fba637c2af5d401e5",
+    "scheduler": {
+      "AllocCPUS": "1",
+      "ExitCode": "0:0",
+      "JobIDRaw": "24547",
+      "NodeList": "bizon",
+      "ReqMem": "16G",
+      "State": "COMPLETED"
+    }
+  },
+  "recommendation": "Keep production defaults unchanged. Retain the three frozen standalone options as experimental and preserve the bounded negative results. Do not claim universal superiority to OrthoFinder, statistical equivalence/inferiority, independent confirmation or improvements across all metrics.",
+  "reporter_revision": "fcd95d092cfa72fc109aa51fba637c2af5d401e5",
+  "resource_scope": "Shared-host cached incremental phase costs; compatible cache reuse differs. Candidate/arm metadata not independently retimed; local nomination/joint-tree preparation excluded. No full-tool timing leaderboard, summed RSS or summation of arm totals with components.",
+  "schema_version": 1,
+  "scope": "Completed bounded development investigation, not independent biological confirmation or universal superiority. Original individual effects, failures and stopping gates are preserved; both fixed interactions fail the stronger-constituent gate. Functional means remain conditional, TreeFam supporting and Three Kingdoms supplementary. No mixed-endpoint average or default promotion.",
+  "scored_endpoint_observations": 125,
+  "source_records": 1239,
+  "source_report": {
+    "bytes": 236636436,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_campaign_plateau_v1_20261020/summary.json",
+    "sha256": "e7dd9655c2d720cb9df5d40182a290300762f8dae6ea042459fcb49299926bd4"
+  },
+  "status": "complete_bounded_hmm_campaign_science_and_consolidation_admitted_delivery_audit_pending",
+  "tables": [
+    {
+      "archive": {
+        "bytes": 4679,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hmm_campaign_final_20261020/scores.tsv",
+        "sha256": "4862010db93cf45cc6e9c1894e232d9cef709736ee6152b730a36fe1758eceb1"
+      },
+      "source": {
+        "bytes": 4679,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_campaign_plateau_v1_20261020/scores.tsv",
+        "sha256": "4862010db93cf45cc6e9c1894e232d9cef709736ee6152b730a36fe1758eceb1"
+      }
+    },
+    {
+      "archive": {
+        "bytes": 28394,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hmm_campaign_final_20261020/resources.tsv",
+        "sha256": "accb80811a99b004ec18a119252b28fdf9d55ae5ee0274a7365ebee4ce4d58dc"
+      },
+      "source": {
+        "bytes": 28394,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_campaign_plateau_v1_20261020/resources.tsv",
+        "sha256": "accb80811a99b004ec18a119252b28fdf9d55ae5ee0274a7365ebee4ce4d58dc"
+      }
+    },
+    {
+      "archive": {
+        "bytes": 147692,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hmm_campaign_final_20261020/endpoint_diagnostics.tsv",
+        "sha256": "2be9fa4bfbd1589798261d8d7e00659729e8e400a77ff3efc14bc0d993df2468"
+      },
+      "source": {
+        "bytes": 147692,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_campaign_plateau_v1_20261020/endpoint_diagnostics.tsv",
+        "sha256": "2be9fa4bfbd1589798261d8d7e00659729e8e400a77ff3efc14bc0d993df2468"
+      }
+    },
+    {
+      "archive": {
+        "bytes": 97621,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hmm_campaign_final_20261020/historical_cell_diagnostics.tsv",
+        "sha256": "50476b6b6f34afbf0ae071b917e8f92d927207e38444fa5fbbe6a4c178854129"
+      },
+      "source": {
+        "bytes": 97621,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_campaign_plateau_v1_20261020/historical_cell_diagnostics.tsv",
+        "sha256": "50476b6b6f34afbf0ae071b917e8f92d927207e38444fa5fbbe6a4c178854129"
+      }
+    },
+    {
+      "archive": {
+        "bytes": 456,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hmm_campaign_final_20261020/compiler.batch.sh",
+        "sha256": "0646bfed3f5497d00c7639d65ce8ce23b8a2233ee4d253c538cdfbfb2cb853f9"
+      },
+      "source": {
+        "bytes": 456,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_campaign_plateau_v1_20261020-24547.batch.sh",
+        "sha256": "0646bfed3f5497d00c7639d65ce8ce23b8a2233ee4d253c538cdfbfb2cb853f9"
+      }
+    }
+  ],
+  "test_scope": "The163 focused reporting tests overlap the1647 broad unit regressions; do not add them as independent coverage.",
+  "tests": [
+    {
+      "errors": 0,
+      "failures": 0,
+      "modules": 43,
+      "passed": 1647,
+      "report": {
+        "bytes": 263314,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/weighted_projection_completed_20261020/tests.xml",
+        "sha256": "4a2fd655552ef9e0bf2154757f5798a02f167b4230b461a3ab3d95ceb7c2b2a0"
+      },
+      "skipped": 0
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "modules": 4,
+      "passed": 163,
+      "report": {
+        "bytes": 28302,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hmm_campaign_plateau_tests_20261020.xml",
+        "sha256": "0b8ab93d8c07f9330de8911084fe3ab84639c47598570371bb7fbdafa70f3f53"
+      },
+      "skipped": 0
+    }
+  ],
+  "uncertainty": {
+    "local": {
+      "alpha": 0.05,
+      "baseline": "off",
+      "comparisons": {
+        "local_joint_v1": {
+          "family_f1_losses": 0,
+          "family_f1_ties": 70,
+          "family_f1_wins": 0,
+          "metrics": {
+            "f_score": {
+              "bonferroni_percentile_ci": [
+                0.0,
+                0.0
+              ],
+              "difference_percentage_points": 0.0,
+              "paired_percentile_ci": [
+                0.0,
+                0.0
+              ]
+            },
+            "precision": {
+              "bonferroni_percentile_ci": [
+                0.0,
+                0.0
+              ],
+              "difference_percentage_points": 0.0,
+              "paired_percentile_ci": [
+                0.0,
+                0.0
+              ]
+            },
+            "recall": {
+              "bonferroni_percentile_ci": [
+                0.0,
+                0.0
+              ],
+              "difference_percentage_points": 0.0,
+              "paired_percentile_ci": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "versus": "off"
+        }
+      },
+      "families": [
+        "RefOG001.txt",
+        "RefOG002.txt",
+        "RefOG003.txt",
+        "RefOG004.txt",
+        "RefOG005.txt",
+        "RefOG006.txt",
+        "RefOG007.txt",
+        "RefOG008.txt",
+        "RefOG009.txt",
+        "RefOG010.txt",
+        "RefOG011.txt",
+        "RefOG012.txt",
+        "RefOG013.txt",
+        "RefOG014.txt",
+        "RefOG015.txt",
+        "RefOG016.txt",
+        "RefOG017.txt",
+        "RefOG018.txt",
+        "RefOG019.txt",
+        "RefOG020.txt",
+        "RefOG021.txt",
+        "RefOG022.txt",
+        "RefOG023.txt",
+        "RefOG024.txt",
+        "RefOG025.txt",
+        "RefOG026.txt",
+        "RefOG027.txt",
+        "RefOG028.txt",
+        "RefOG029.txt",
+        "RefOG030.txt",
+        "RefOG031.txt",
+        "RefOG032.txt",
+        "RefOG033.txt",
+        "RefOG034.txt",
+        "RefOG035.txt",
+        "RefOG036.txt",
+        "RefOG037.txt",
+        "RefOG038.txt",
+        "RefOG039.txt",
+        "RefOG040.txt",
+        "RefOG041.txt",
+        "RefOG042.txt",
+        "RefOG043.txt",
+        "RefOG044.txt",
+        "RefOG045.txt",
+        "RefOG046.txt",
+        "RefOG047.txt",
+        "RefOG048.txt",
+        "RefOG049.txt",
+        "RefOG050.txt",
+        "RefOG051.txt",
+        "RefOG052.txt",
+        "RefOG053.txt",
+        "RefOG054.txt",
+        "RefOG055.txt",
+        "RefOG056.txt",
+        "RefOG057.txt",
+        "RefOG058.txt",
+        "RefOG059.txt",
+        "RefOG060.txt",
+        "RefOG061.txt",
+        "RefOG062.txt",
+        "RefOG063.txt",
+        "RefOG064.txt",
+        "RefOG065.txt",
+        "RefOG066.txt",
+        "RefOG067.txt",
+        "RefOG068.txt",
+        "RefOG069.txt",
+        "RefOG070.txt"
+      ],
+      "limitations": [
+        "Development-exposed benchmark; intervals do not correct for previous method selection.",
+        "RefOG resampling assumes exchangeable families; shared histories and fused predictions can violate independence.",
+        "Percentile intervals are approximate, not a guarantee of simultaneous coverage.",
+        "Family F1 wins are descriptive; the benchmark is not a mean of family F1 values.",
+        "No gene-pair independence assumption and no bootstrap-derived p-values are used."
+      ],
+      "multiplicity": "Bonferroni tail adjustment over 3 planned endpoints",
+      "numpy_version": "2.2.6",
+      "point_estimates_percent": {
+        "local_joint_v1": {
+          "f_score": 74.10607351873405,
+          "precision": 81.77045380181866,
+          "recall": 67.75533630827974
+        },
+        "off": {
+          "f_score": 74.10607351873405,
+          "precision": 81.77045380181866,
+          "recall": 67.75533630827974
+        }
+      },
+      "replicates": 100000,
+      "rng": "numpy.default_rng PCG64 multinomial",
+      "scope": "Post hoc descriptive uncertainty after observed development point results. Does not change the original point gates or provide independent confirmation.",
+      "seed": 20261018
+    },
+    "projection_recovery": {
+      "hmmer_versus_builtin": {
+        "alpha": 0.05,
+        "baseline": "projection_builtin_reselect",
+        "comparisons": {
+          "projection_hmmer_reselect": {
+            "family_f1_losses": 1,
+            "family_f1_ties": 63,
+            "family_f1_wins": 6,
+            "metrics": {
+              "f_score": {
+                "bonferroni_percentile_ci": [
+                  -0.5788070396104108,
+                  0.438272899230294
+                ],
+                "difference_percentage_points": -0.00841240100136531,
+                "paired_percentile_ci": [
+                  -0.3474530648236048,
+                  0.2723280289086982
+                ]
+              },
+              "precision": {
+                "bonferroni_percentile_ci": [
+                  -0.07701114291692387,
+                  0.6066378457973381
+                ],
+                "difference_percentage_points": 0.15416323458687486,
+                "paired_percentile_ci": [
+                  -0.020340326331060154,
+                  0.4007369839294084
+                ]
+              },
+              "recall": {
+                "bonferroni_percentile_ci": [
+                  -1.005683494541777,
+                  0.5884912362946666
+                ],
+                "difference_percentage_points": -0.11740571622299001,
+                "paired_percentile_ci": [
+                  -0.6602297866509753,
+                  0.3393665158371135
+                ]
+              }
+            },
+            "versus": "projection_builtin_reselect"
+          }
+        },
+        "families": [
+          "RefOG001.txt",
+          "RefOG002.txt",
+          "RefOG003.txt",
+          "RefOG004.txt",
+          "RefOG005.txt",
+          "RefOG006.txt",
+          "RefOG007.txt",
+          "RefOG008.txt",
+          "RefOG009.txt",
+          "RefOG010.txt",
+          "RefOG011.txt",
+          "RefOG012.txt",
+          "RefOG013.txt",
+          "RefOG014.txt",
+          "RefOG015.txt",
+          "RefOG016.txt",
+          "RefOG017.txt",
+          "RefOG018.txt",
+          "RefOG019.txt",
+          "RefOG020.txt",
+          "RefOG021.txt",
+          "RefOG022.txt",
+          "RefOG023.txt",
+          "RefOG024.txt",
+          "RefOG025.txt",
+          "RefOG026.txt",
+          "RefOG027.txt",
+          "RefOG028.txt",
+          "RefOG029.txt",
+          "RefOG030.txt",
+          "RefOG031.txt",
+          "RefOG032.txt",
+          "RefOG033.txt",
+          "RefOG034.txt",
+          "RefOG035.txt",
+          "RefOG036.txt",
+          "RefOG037.txt",
+          "RefOG038.txt",
+          "RefOG039.txt",
+          "RefOG040.txt",
+          "RefOG041.txt",
+          "RefOG042.txt",
+          "RefOG043.txt",
+          "RefOG044.txt",
+          "RefOG045.txt",
+          "RefOG046.txt",
+          "RefOG047.txt",
+          "RefOG048.txt",
+          "RefOG049.txt",
+          "RefOG050.txt",
+          "RefOG051.txt",
+          "RefOG052.txt",
+          "RefOG053.txt",
+          "RefOG054.txt",
+          "RefOG055.txt",
+          "RefOG056.txt",
+          "RefOG057.txt",
+          "RefOG058.txt",
+          "RefOG059.txt",
+          "RefOG060.txt",
+          "RefOG061.txt",
+          "RefOG062.txt",
+          "RefOG063.txt",
+          "RefOG064.txt",
+          "RefOG065.txt",
+          "RefOG066.txt",
+          "RefOG067.txt",
+          "RefOG068.txt",
+          "RefOG069.txt",
+          "RefOG070.txt"
+        ],
+        "limitations": [
+          "Development-exposed benchmark; intervals do not correct for previous method selection.",
+          "RefOG resampling assumes exchangeable families; shared histories and fused predictions can violate independence.",
+          "Percentile intervals are approximate, not a guarantee of simultaneous coverage.",
+          "Family F1 wins are descriptive; the benchmark is not a mean of family F1 values.",
+          "No gene-pair independence assumption and no bootstrap-derived p-values are used."
+        ],
+        "multiplicity": "Bonferroni tail adjustment over 24 planned endpoints",
+        "numpy_version": "2.2.6",
+        "point_estimates_percent": {
+          "projection_builtin_reselect": {
+            "f_score": 73.62120681761685,
+            "precision": 81.65797993283914,
+            "recall": 67.02464552996824
+          },
+          "projection_hmmer_reselect": {
+            "f_score": 73.61279441661549,
+            "precision": 81.81214316742602,
+            "recall": 66.90723981374525
+          }
+        },
+        "replicates": 100000,
+        "rng": "numpy.default_rng PCG64 multinomial",
+        "scope": "Post hoc descriptive uncertainty after observed development point results. Does not change the original point gates or provide independent confirmation.",
+        "seed": 20261018
+      },
+      "scope": "All24 prespecified metric contrasts; descriptive paired-family intervals on development-exposed data. No change to point gates, pair-independent inference or independent biological confirmation.",
+      "versus_legacy": {
+        "alpha": 0.05,
+        "baseline": "legacy_off",
+        "comparisons": {
+          "projection_builtin_reselect": {
+            "family_f1_losses": 4,
+            "family_f1_ties": 63,
+            "family_f1_wins": 3,
+            "metrics": {
+              "f_score": {
+                "bonferroni_percentile_ci": [
+                  -3.036357682420238,
+                  0.5684283814421188
+                ],
+                "difference_percentage_points": -0.4848667011171983,
+                "paired_percentile_ci": [
+                  -1.880860319988583,
+                  0.3273610776533309
+                ]
+              },
+              "precision": {
+                "bonferroni_percentile_ci": [
+                  -1.0502430861384238,
+                  0.5178367079454288
+                ],
+                "difference_percentage_points": -0.11247386897952083,
+                "paired_percentile_ci": [
+                  -0.62025401266694,
+                  0.27975449695429505
+                ]
+              },
+              "recall": {
+                "bonferroni_percentile_ci": [
+                  -4.3647589209280575,
+                  0.9245829809234675
+                ],
+                "difference_percentage_points": -0.730690778311498,
+                "paired_percentile_ci": [
+                  -2.773239457088346,
+                  0.5194429391590699
+                ]
+              }
+            },
+            "versus": "legacy_off"
+          },
+          "projection_hmmer_reselect": {
+            "family_f1_losses": 1,
+            "family_f1_ties": 65,
+            "family_f1_wins": 4,
+            "metrics": {
+              "f_score": {
+                "bonferroni_percentile_ci": [
+                  -2.830582885335026,
+                  0.2546139600016393
+                ],
+                "difference_percentage_points": -0.49327910211856363,
+                "paired_percentile_ci": [
+                  -1.7338854595385047,
+                  0.14309848292226265
+                ]
+              },
+              "precision": {
+                "bonferroni_percentile_ci": [
+                  -0.5944996987490078,
+                  0.6347405729230695
+                ],
+                "difference_percentage_points": 0.041689365607354034,
+                "paired_percentile_ci": [
+                  -0.29321913025391844,
+                  0.3845253067241286
+                ]
+              },
+              "recall": {
+                "bonferroni_percentile_ci": [
+                  -4.301393032957834,
+                  0.0
+                ],
+                "difference_percentage_points": -0.848096494534488,
+                "paired_percentile_ci": [
+                  -2.7301407539233087,
+                  0.0
+                ]
+              }
+            },
+            "versus": "legacy_off"
+          },
+          "projection_hmmer_score_only": {
+            "family_f1_losses": 3,
+            "family_f1_ties": 63,
+            "family_f1_wins": 4,
+            "metrics": {
+              "f_score": {
+                "bonferroni_percentile_ci": [
+                  -0.0680023879192174,
+                  0.25427500383422513
+                ],
+                "difference_percentage_points": 0.03634136400198429,
+                "paired_percentile_ci": [
+                  -0.03621550280883134,
+                  0.15418927062654106
+                ]
+              },
+              "precision": {
+                "bonferroni_percentile_ci": [
+                  -0.1666941286363552,
+                  0.6156237635411433
+                ],
+                "difference_percentage_points": 0.08854693561033855,
+                "paired_percentile_ci": [
+                  -0.08794897037967431,
+                  0.3775698877564533
+                ]
+              },
+              "recall": {
+                "bonferroni_percentile_ci": [
+                  0.0,
+                  0.0
+                ],
+                "difference_percentage_points": 0.0,
+                "paired_percentile_ci": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "versus": "legacy_off"
+          },
+          "projection_off": {
+            "family_f1_losses": 3,
+            "family_f1_ties": 63,
+            "family_f1_wins": 4,
+            "metrics": {
+              "f_score": {
+                "bonferroni_percentile_ci": [
+                  -0.0680023879192174,
+                  0.25427500383422513
+                ],
+                "difference_percentage_points": 0.03634136400198429,
+                "paired_percentile_ci": [
+                  -0.03621550280883134,
+                  0.15418927062654106
+                ]
+              },
+              "precision": {
+                "bonferroni_percentile_ci": [
+                  -0.1666941286363552,
+                  0.6156237635411433
+                ],
+                "difference_percentage_points": 0.08854693561033855,
+                "paired_percentile_ci": [
+                  -0.08794897037967431,
+                  0.3775698877564533
+                ]
+              },
+              "recall": {
+                "bonferroni_percentile_ci": [
+                  0.0,
+                  0.0
+                ],
+                "difference_percentage_points": 0.0,
+                "paired_percentile_ci": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "versus": "legacy_off"
+          }
+        },
+        "families": [
+          "RefOG001.txt",
+          "RefOG002.txt",
+          "RefOG003.txt",
+          "RefOG004.txt",
+          "RefOG005.txt",
+          "RefOG006.txt",
+          "RefOG007.txt",
+          "RefOG008.txt",
+          "RefOG009.txt",
+          "RefOG010.txt",
+          "RefOG011.txt",
+          "RefOG012.txt",
+          "RefOG013.txt",
+          "RefOG014.txt",
+          "RefOG015.txt",
+          "RefOG016.txt",
+          "RefOG017.txt",
+          "RefOG018.txt",
+          "RefOG019.txt",
+          "RefOG020.txt",
+          "RefOG021.txt",
+          "RefOG022.txt",
+          "RefOG023.txt",
+          "RefOG024.txt",
+          "RefOG025.txt",
+          "RefOG026.txt",
+          "RefOG027.txt",
+          "RefOG028.txt",
+          "RefOG029.txt",
+          "RefOG030.txt",
+          "RefOG031.txt",
+          "RefOG032.txt",
+          "RefOG033.txt",
+          "RefOG034.txt",
+          "RefOG035.txt",
+          "RefOG036.txt",
+          "RefOG037.txt",
+          "RefOG038.txt",
+          "RefOG039.txt",
+          "RefOG040.txt",
+          "RefOG041.txt",
+          "RefOG042.txt",
+          "RefOG043.txt",
+          "RefOG044.txt",
+          "RefOG045.txt",
+          "RefOG046.txt",
+          "RefOG047.txt",
+          "RefOG048.txt",
+          "RefOG049.txt",
+          "RefOG050.txt",
+          "RefOG051.txt",
+          "RefOG052.txt",
+          "RefOG053.txt",
+          "RefOG054.txt",
+          "RefOG055.txt",
+          "RefOG056.txt",
+          "RefOG057.txt",
+          "RefOG058.txt",
+          "RefOG059.txt",
+          "RefOG060.txt",
+          "RefOG061.txt",
+          "RefOG062.txt",
+          "RefOG063.txt",
+          "RefOG064.txt",
+          "RefOG065.txt",
+          "RefOG066.txt",
+          "RefOG067.txt",
+          "RefOG068.txt",
+          "RefOG069.txt",
+          "RefOG070.txt"
+        ],
+        "limitations": [
+          "Development-exposed benchmark; intervals do not correct for previous method selection.",
+          "RefOG resampling assumes exchangeable families; shared histories and fused predictions can violate independence.",
+          "Percentile intervals are approximate, not a guarantee of simultaneous coverage.",
+          "Family F1 wins are descriptive; the benchmark is not a mean of family F1 values.",
+          "No gene-pair independence assumption and no bootstrap-derived p-values are used."
+        ],
+        "multiplicity": "Bonferroni tail adjustment over 24 planned endpoints",
+        "numpy_version": "2.2.6",
+        "point_estimates_percent": {
+          "legacy_off": {
+            "f_score": 74.10607351873405,
+            "precision": 81.77045380181866,
+            "recall": 67.75533630827974
+          },
+          "projection_builtin_reselect": {
+            "f_score": 73.62120681761685,
+            "precision": 81.65797993283914,
+            "recall": 67.02464552996824
+          },
+          "projection_hmmer_reselect": {
+            "f_score": 73.61279441661549,
+            "precision": 81.81214316742602,
+            "recall": 66.90723981374525
+          },
+          "projection_hmmer_score_only": {
+            "f_score": 74.14241488273603,
+            "precision": 81.859000737429,
+            "recall": 67.75533630827974
+          },
+          "projection_off": {
+            "f_score": 74.14241488273603,
+            "precision": 81.859000737429,
+            "recall": 67.75533630827974
+          }
+        },
+        "replicates": 100000,
+        "rng": "numpy.default_rng PCG64 multinomial",
+        "scope": "Post hoc descriptive uncertainty after observed development point results. Does not change the original point gates or provide independent confirmation.",
+        "seed": 20261018
+      },
+      "versus_projection": {
+        "alpha": 0.05,
+        "baseline": "projection_off",
+        "comparisons": {
+          "projection_builtin_reselect": {
+            "family_f1_losses": 5,
+            "family_f1_ties": 62,
+            "family_f1_wins": 3,
+            "metrics": {
+              "f_score": {
+                "bonferroni_percentile_ci": [
+                  -3.0923794324753606,
+                  0.5567697107376509
+                ],
+                "difference_percentage_points": -0.5212080651191826,
+                "paired_percentile_ci": [
+                  -1.9238041709825566,
+                  0.30195737162763164
+                ]
+              },
+              "precision": {
+                "bonferroni_percentile_ci": [
+                  -1.106818331747018,
+                  0.18236578205629755
+                ],
+                "difference_percentage_points": -0.20102080458985938,
+                "paired_percentile_ci": [
+                  -0.6848861949851048,
+                  0.09425552979888926
+                ]
+              },
+              "recall": {
+                "bonferroni_percentile_ci": [
+                  -4.3647589209280575,
+                  0.9245829809234675
+                ],
+                "difference_percentage_points": -0.730690778311498,
+                "paired_percentile_ci": [
+                  -2.773239457088346,
+                  0.5194429391590699
+                ]
+              }
+            },
+            "versus": "projection_off"
+          },
+          "projection_hmmer_reselect": {
+            "family_f1_losses": 1,
+            "family_f1_ties": 66,
+            "family_f1_wins": 3,
+            "metrics": {
+              "f_score": {
+                "bonferroni_percentile_ci": [
+                  -2.866902819378124,
+                  0.07942004994975801
+                ],
+                "difference_percentage_points": -0.5296204661205479,
+                "paired_percentile_ci": [
+                  -1.7639987647646287,
+                  0.04716877148216088
+                ]
+              },
+              "precision": {
+                "bonferroni_percentile_ci": [
+                  -0.6482251912546276,
+                  0.19425664558198344
+                ],
+                "difference_percentage_points": -0.04685757000298452,
+                "paired_percentile_ci": [
+                  -0.3360223965492327,
+                  0.11602790201541231
+                ]
+              },
+              "recall": {
+                "bonferroni_percentile_ci": [
+                  -4.301393032957834,
+                  0.0
+                ],
+                "difference_percentage_points": -0.848096494534488,
+                "paired_percentile_ci": [
+                  -2.7301407539233087,
+                  0.0
+                ]
+              }
+            },
+            "versus": "projection_off"
+          },
+          "projection_hmmer_score_only": {
+            "family_f1_losses": 0,
+            "family_f1_ties": 70,
+            "family_f1_wins": 0,
+            "metrics": {
+              "f_score": {
+                "bonferroni_percentile_ci": [
+                  0.0,
+                  0.0
+                ],
+                "difference_percentage_points": 0.0,
+                "paired_percentile_ci": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "precision": {
+                "bonferroni_percentile_ci": [
+                  0.0,
+                  0.0
+                ],
+                "difference_percentage_points": 0.0,
+                "paired_percentile_ci": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "recall": {
+                "bonferroni_percentile_ci": [
+                  0.0,
+                  0.0
+                ],
+                "difference_percentage_points": 0.0,
+                "paired_percentile_ci": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "versus": "projection_off"
+          }
+        },
+        "families": [
+          "RefOG001.txt",
+          "RefOG002.txt",
+          "RefOG003.txt",
+          "RefOG004.txt",
+          "RefOG005.txt",
+          "RefOG006.txt",
+          "RefOG007.txt",
+          "RefOG008.txt",
+          "RefOG009.txt",
+          "RefOG010.txt",
+          "RefOG011.txt",
+          "RefOG012.txt",
+          "RefOG013.txt",
+          "RefOG014.txt",
+          "RefOG015.txt",
+          "RefOG016.txt",
+          "RefOG017.txt",
+          "RefOG018.txt",
+          "RefOG019.txt",
+          "RefOG020.txt",
+          "RefOG021.txt",
+          "RefOG022.txt",
+          "RefOG023.txt",
+          "RefOG024.txt",
+          "RefOG025.txt",
+          "RefOG026.txt",
+          "RefOG027.txt",
+          "RefOG028.txt",
+          "RefOG029.txt",
+          "RefOG030.txt",
+          "RefOG031.txt",
+          "RefOG032.txt",
+          "RefOG033.txt",
+          "RefOG034.txt",
+          "RefOG035.txt",
+          "RefOG036.txt",
+          "RefOG037.txt",
+          "RefOG038.txt",
+          "RefOG039.txt",
+          "RefOG040.txt",
+          "RefOG041.txt",
+          "RefOG042.txt",
+          "RefOG043.txt",
+          "RefOG044.txt",
+          "RefOG045.txt",
+          "RefOG046.txt",
+          "RefOG047.txt",
+          "RefOG048.txt",
+          "RefOG049.txt",
+          "RefOG050.txt",
+          "RefOG051.txt",
+          "RefOG052.txt",
+          "RefOG053.txt",
+          "RefOG054.txt",
+          "RefOG055.txt",
+          "RefOG056.txt",
+          "RefOG057.txt",
+          "RefOG058.txt",
+          "RefOG059.txt",
+          "RefOG060.txt",
+          "RefOG061.txt",
+          "RefOG062.txt",
+          "RefOG063.txt",
+          "RefOG064.txt",
+          "RefOG065.txt",
+          "RefOG066.txt",
+          "RefOG067.txt",
+          "RefOG068.txt",
+          "RefOG069.txt",
+          "RefOG070.txt"
+        ],
+        "limitations": [
+          "Development-exposed benchmark; intervals do not correct for previous method selection.",
+          "RefOG resampling assumes exchangeable families; shared histories and fused predictions can violate independence.",
+          "Percentile intervals are approximate, not a guarantee of simultaneous coverage.",
+          "Family F1 wins are descriptive; the benchmark is not a mean of family F1 values.",
+          "No gene-pair independence assumption and no bootstrap-derived p-values are used."
+        ],
+        "multiplicity": "Bonferroni tail adjustment over 24 planned endpoints",
+        "numpy_version": "2.2.6",
+        "point_estimates_percent": {
+          "projection_builtin_reselect": {
+            "f_score": 73.62120681761685,
+            "precision": 81.65797993283914,
+            "recall": 67.02464552996824
+          },
+          "projection_hmmer_reselect": {
+            "f_score": 73.61279441661549,
+            "precision": 81.81214316742602,
+            "recall": 66.90723981374525
+          },
+          "projection_hmmer_score_only": {
+            "f_score": 74.14241488273603,
+            "precision": 81.859000737429,
+            "recall": 67.75533630827974
+          },
+          "projection_off": {
+            "f_score": 74.14241488273603,
+            "precision": 81.859000737429,
+            "recall": 67.75533630827974
+          }
+        },
+        "replicates": 100000,
+        "rng": "numpy.default_rng PCG64 multinomial",
+        "scope": "Post hoc descriptive uncertainty after observed development point results. Does not change the original point gates or provide independent confirmation.",
+        "seed": 20261018
+      }
+    },
+    "weighting": {
+      "alpha": 0.05,
+      "baseline": "none",
+      "comparisons": {
+        "henikoff": {
+          "family_f1_losses": 4,
+          "family_f1_ties": 64,
+          "family_f1_wins": 2,
+          "metrics": {
+            "f_score": {
+              "bonferroni_percentile_ci": [
+                -0.0767943741476003,
+                0.46534043428476757
+              ],
+              "difference_percentage_points": 0.09037867205903183,
+              "paired_percentile_ci": [
+                -0.05012263147416966,
+                0.3317709215086232
+              ]
+            },
+            "precision": {
+              "bonferroni_percentile_ci": [
+                -0.19610706836822514,
+                0.47978221641637536
+              ],
+              "difference_percentage_points": 0.0808932451323443,
+              "paired_percentile_ci": [
+                -0.12625370915752115,
+                0.35086565577019074
+              ]
+            },
+            "recall": {
+              "bonferroni_percentile_ci": [
+                -0.008961881390571769,
+                0.46483379897706967
+              ],
+              "difference_percentage_points": 0.09556915700903801,
+              "paired_percentile_ci": [
+                -0.0059154096421139,
+                0.3235617679414844
+              ]
+            }
+          },
+          "versus": "none"
+        },
+        "henikoff_cluster": {
+          "family_f1_losses": 3,
+          "family_f1_ties": 65,
+          "family_f1_wins": 2,
+          "metrics": {
+            "f_score": {
+              "bonferroni_percentile_ci": [
+                -0.09910894997129667,
+                0.470803784713598
+              ],
+              "difference_percentage_points": 0.0886102621751661,
+              "paired_percentile_ci": [
+                -0.062644842094711,
+                0.33586564706968464
+              ]
+            },
+            "precision": {
+              "bonferroni_percentile_ci": [
+                -0.2539616032699015,
+                0.4938199488717064
+              ],
+              "difference_percentage_points": 0.07658911071328589,
+              "paired_percentile_ci": [
+                -0.15958930802415736,
+                0.3599713256570321
+              ]
+            },
+            "recall": {
+              "bonferroni_percentile_ci": [
+                -0.008961881390571769,
+                0.46483379897706967
+              ],
+              "difference_percentage_points": 0.09556915700903801,
+              "paired_percentile_ci": [
+                -0.0059154096421139,
+                0.3235617679414844
+              ]
+            }
+          },
+          "versus": "none"
+        },
+        "species_henikoff_cluster": {
+          "family_f1_losses": 5,
+          "family_f1_ties": 63,
+          "family_f1_wins": 2,
+          "metrics": {
+            "f_score": {
+              "bonferroni_percentile_ci": [
+                -2.354679104343493,
+                0.9451099510296757
+              ],
+              "difference_percentage_points": -0.30809782835120814,
+              "paired_percentile_ci": [
+                -1.6424287866193414,
+                0.6174039328075875
+              ]
+            },
+            "precision": {
+              "bonferroni_percentile_ci": [
+                -0.45712616538012474,
+                1.7693229351781041
+              ],
+              "difference_percentage_points": 0.34478100241283016,
+              "paired_percentile_ci": [
+                -0.2356195851999935,
+                1.2620015596841687
+              ]
+            },
+            "recall": {
+              "bonferroni_percentile_ci": [
+                -3.7325641704603942,
+                0.4682697218563833
+              ],
+              "difference_percentage_points": -0.7447094932959999,
+              "paired_percentile_ci": [
+                -2.6409603751502195,
+                0.3028040484486496
+              ]
+            }
+          },
+          "versus": "none"
+        }
+      },
+      "families": [
+        "RefOG001.txt",
+        "RefOG002.txt",
+        "RefOG003.txt",
+        "RefOG004.txt",
+        "RefOG005.txt",
+        "RefOG006.txt",
+        "RefOG007.txt",
+        "RefOG008.txt",
+        "RefOG009.txt",
+        "RefOG010.txt",
+        "RefOG011.txt",
+        "RefOG012.txt",
+        "RefOG013.txt",
+        "RefOG014.txt",
+        "RefOG015.txt",
+        "RefOG016.txt",
+        "RefOG017.txt",
+        "RefOG018.txt",
+        "RefOG019.txt",
+        "RefOG020.txt",
+        "RefOG021.txt",
+        "RefOG022.txt",
+        "RefOG023.txt",
+        "RefOG024.txt",
+        "RefOG025.txt",
+        "RefOG026.txt",
+        "RefOG027.txt",
+        "RefOG028.txt",
+        "RefOG029.txt",
+        "RefOG030.txt",
+        "RefOG031.txt",
+        "RefOG032.txt",
+        "RefOG033.txt",
+        "RefOG034.txt",
+        "RefOG035.txt",
+        "RefOG036.txt",
+        "RefOG037.txt",
+        "RefOG038.txt",
+        "RefOG039.txt",
+        "RefOG040.txt",
+        "RefOG041.txt",
+        "RefOG042.txt",
+        "RefOG043.txt",
+        "RefOG044.txt",
+        "RefOG045.txt",
+        "RefOG046.txt",
+        "RefOG047.txt",
+        "RefOG048.txt",
+        "RefOG049.txt",
+        "RefOG050.txt",
+        "RefOG051.txt",
+        "RefOG052.txt",
+        "RefOG053.txt",
+        "RefOG054.txt",
+        "RefOG055.txt",
+        "RefOG056.txt",
+        "RefOG057.txt",
+        "RefOG058.txt",
+        "RefOG059.txt",
+        "RefOG060.txt",
+        "RefOG061.txt",
+        "RefOG062.txt",
+        "RefOG063.txt",
+        "RefOG064.txt",
+        "RefOG065.txt",
+        "RefOG066.txt",
+        "RefOG067.txt",
+        "RefOG068.txt",
+        "RefOG069.txt",
+        "RefOG070.txt"
+      ],
+      "limitations": [
+        "Development-exposed benchmark; intervals do not correct for previous method selection.",
+        "RefOG resampling assumes exchangeable families; shared histories and fused predictions can violate independence.",
+        "Percentile intervals are approximate, not a guarantee of simultaneous coverage.",
+        "Family F1 wins are descriptive; the benchmark is not a mean of family F1 values.",
+        "No gene-pair independence assumption and no bootstrap-derived p-values are used."
+      ],
+      "multiplicity": "Bonferroni tail adjustment over 9 planned endpoints",
+      "numpy_version": "2.2.6",
+      "point_estimates_percent": {
+        "henikoff": {
+          "f_score": 74.19645219079308,
+          "precision": 81.851347046951,
+          "recall": 67.85090546528878
+        },
+        "henikoff_cluster": {
+          "f_score": 74.19468378090922,
+          "precision": 81.84704291253195,
+          "recall": 67.85090546528878
+        },
+        "none": {
+          "f_score": 74.10607351873405,
+          "precision": 81.77045380181866,
+          "recall": 67.75533630827974
+        },
+        "species_henikoff_cluster": {
+          "f_score": 73.79797569038284,
+          "precision": 82.11523480423149,
+          "recall": 67.01062681498374
+        }
+      },
+      "replicates": 100000,
+      "rng": "numpy.default_rng PCG64 multinomial",
+      "scope": "Post hoc descriptive uncertainty after observed development point results. Does not change the original point gates or provide independent confirmation.",
+      "seed": 20261018
+    }
+  },
+  "unrun_endpoint_slots": 107
+}

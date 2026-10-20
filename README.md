@@ -154,6 +154,12 @@ Local joint-tree rescue and selective HMMER validation currently use package
 helpers and explicit benchmark workflows, not main-CLI options. See the
 [HMM evidence campaign guide](benchmark_tools/README.md#hmm-evidence-campaign)
 for frozen protocols, controls, result validation and reproduction scope.
+The [completed campaign report](benchmark_tools/results/hmm_campaign_final_20261020/README.md)
+compares all eight endpoints against OrthoFinder 3.1.5 and the other retained
+tools, with precision/recall, coverage, uncertainty and resource limitations.
+All four mechanisms and the registered interaction are evaluated. The bounded
+result supports retaining experimental options, not changing defaults or
+claiming generalizable superiority over OrthoFinder.
 
 **Protected candidate union (experimental).** The development checkout also
 provides `--search-candidate-policy protected_union` for fresh built-in

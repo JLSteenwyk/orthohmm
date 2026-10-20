@@ -7,6 +7,13 @@ The [campaign protocol](hmm_evidence_campaign_20261018.json) and
 the bounded investigation of weighted profiles, alignment-aware recruitment,
 local joint-tree rescue and selective HMMER validation. This is development
 work, not a new validated default or a completed publication release.
+The [final campaign report](results/hmm_campaign_final_20261020/README.md),
+[complete score table](results/hmm_campaign_final_20261020/scores.tsv) and
+[requirement audit](results/hmm_campaign_final_20261020/completion_audit.json)
+consolidate all four mechanisms and the stopped interaction. Defaults remain
+unchanged: standalone effects are mixed and neither combination beats its
+weighting-only constituent. Missing independent confirmation is an explicit
+claim limitation, not an unfinished scientific execution.
 The [dated scheduler reconciliation](results/hmm_campaign_scheduler_reconciliation_20261020.json)
 records accounting for all48 unique campaign jobs and corrects15 stale scheduler
 states in the mutable ledger. Older submission/progress prose is historical;
@@ -130,9 +137,17 @@ matched follow-up, altered freezes and label-reading confirmation reviews.
 It preserves all old rows and all six interaction roles, verifies diagnostic
 source pointers and reparses saved phase-cost receipts; it does not run new
 inference, scoring or sampling. Its Slurm wrapper uses1CPU/16G/two hours.
-The tested actual-data preflight recovers29 configuration/control/history rows,
-232 endpoint slots,125 scored observations and106 phase-cost rows. Frozen final
-compilation, final documentation and the requirement/remote audit remain pending.
+The completed frozen compiler (job `24547`, exit `0:0`, 7m 16s)
+verified 715967 source/content records and recovered 29 configuration/control/history
+rows, 232 endpoint slots, 125 scored observations and 106 phase-cost rows. The
+[final archive](results/hmm_campaign_final_20261020/summary.json) retains the
+qualified scores, diagnostic populations, original uncertainty, failure history
+and large-artifact checksums without new inference or sampling. Its
+[resource audit](results/hmm_campaign_final_20261020/resource_audit.json)
+accounts for 53 recorded jobs and 13 sequential full-proteome allocations on the
+shared Threadripper. The requirement audit distinguishes completed local science
+from the mandatory post-commit remote verification; the live execution ledger
+records delivery rather than rewriting immutable launch evidence.
 
 `plan_weighted_projection_followup.py --repo <repo> --driver <frozen planner>
 --output <fresh directory>` authenticates the exact submitted pilot/reader

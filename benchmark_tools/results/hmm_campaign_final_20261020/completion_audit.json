@@ -1,0 +1,737 @@
+{
+  "alignment_admission": {
+    "bytes": 3019,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/aligned_profile_guard_admission_20261018.json",
+    "sha256": "78d872e8c3f612a3ea8cba47a95a59d94af07c09cff70407112558d65cea059b"
+  },
+  "audit_harness_note": "An earlier help-only parser-factory probe exited0 without producing an audit and was not accepted. Successful audit verifies parser default declarations via AST plus existing actual CLI regressions; artifact existence is required, not exit status alone.",
+  "candidate_freeze": {
+    "bytes": 6019,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hmm_campaign_candidate_freeze_20261020.json",
+    "sha256": "8a2f74c09a682a5ade50ceb736eef59bdd56947898964d296045892e8d4c48b4"
+  },
+  "confirmation_review": {
+    "bytes": 13620,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hmm_confirmation_review_20261020.json",
+    "sha256": "94489bb92ae208622254f471ee69f853659d1e1734af45dbb95ef0508f3786a1"
+  },
+  "defaults_promoted": false,
+  "deliverables": [
+    {
+      "bytes": 14012,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hmm_campaign_final_20261020/README.md",
+      "sha256": "4102f028c74b75b73834c7375d008d83dd50cbd2745e2adcd3e7695fd86ea29d"
+    },
+    {
+      "bytes": 109376,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hmm_campaign_final_20261020/summary.json",
+      "sha256": "d6b6a0d43d661db6c5822b625abc576cc8cb1f094c6a304729f7b5d69eedd47d"
+    },
+    {
+      "bytes": 4679,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hmm_campaign_final_20261020/scores.tsv",
+      "sha256": "4862010db93cf45cc6e9c1894e232d9cef709736ee6152b730a36fe1758eceb1"
+    },
+    {
+      "bytes": 28394,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hmm_campaign_final_20261020/resources.tsv",
+      "sha256": "accb80811a99b004ec18a119252b28fdf9d55ae5ee0274a7365ebee4ce4d58dc"
+    },
+    {
+      "bytes": 147692,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hmm_campaign_final_20261020/endpoint_diagnostics.tsv",
+      "sha256": "2be9fa4bfbd1589798261d8d7e00659729e8e400a77ff3efc14bc0d993df2468"
+    },
+    {
+      "bytes": 97621,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hmm_campaign_final_20261020/historical_cell_diagnostics.tsv",
+      "sha256": "50476b6b6f34afbf0ae071b917e8f92d927207e38444fa5fbbe6a4c178854129"
+    },
+    {
+      "bytes": 7361,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hmm_campaign_final_20261020/resource_audit.json",
+      "sha256": "fbe1f5d5c786b0f5e9d3ecc3eb3bf6fe8d8581fef7110f72c730698eed02b52f"
+    },
+    {
+      "bytes": 49568,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hmm_campaign_final_20261020/delivery_tests.xml",
+      "sha256": "268d2a8a641e7511aba242196f92ad8f32bfdde1741b0452ab1c29eea2704a63"
+    },
+    {
+      "bytes": 456,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hmm_campaign_final_20261020/compiler.batch.sh",
+      "sha256": "0646bfed3f5497d00c7639d65ce8ce23b8a2233ee4d253c538cdfbfb2cb853f9"
+    }
+  ],
+  "documentation_validation": {
+    "functional_population_rows": 4,
+    "headline_score_cells": 96,
+    "missing_relative_links": [],
+    "precision_recall_rows": 5,
+    "relative_links_checked": 16,
+    "uncertainty_rows": 3
+  },
+  "git_before_final_delivery": {
+    "head": "4eb5682e2bfd1896e2050f7460825c3f88fea90e",
+    "scope": "Pre-delivery snapshot, not a substitute for the mandatory final post-commit remote check.",
+    "verified_remote": "4eb5682e2bfd1896e2050f7460825c3f88fea90e\trefs/heads/main\n"
+  },
+  "goal_completed": false,
+  "independent_confirmation_established": false,
+  "local_proposal_recheck": {
+    "bytes": 40916253,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/local_joint_postrun_v1_20261018/proposal_recheck/summary.json",
+    "sha256": "699e8981bc6fe5e780f26fef44070e9c6e923c9fa54b8443536500f8f8b6c22b"
+  },
+  "objective": {
+    "bytes": 6051,
+    "path": "/home/bizon/.codex/attachments/be402858-3414-45ba-9a1b-323a1b394ab1/pasted-text-1.txt",
+    "sha256": "1631e4eeeb6ef6c6b16c52dfbb36708b08fe5a71f3d778f3e115cbb16ee5475a"
+  },
+  "observed_at_utc": "2026-10-20T06:44:24.950570+00:00",
+  "prespecified_protocols": [
+    {
+      "bytes": 7827,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hmm_aligned_profile_guard_20261018.json",
+      "sha256": "031f9d37fd7d5a379742dc3b9a9210077bf49406eb549eaf1906e63bf7e3f00d"
+    },
+    {
+      "bytes": 10575,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hmm_evidence_campaign_20261018.json",
+      "sha256": "46cf706fdb360853d6d49357d38020ab725dcb6c4ab4d3f1653814093cc697f5"
+    },
+    {
+      "bytes": 3723,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hmm_evidence_queue_priority_20261018.json",
+      "sha256": "c169f3922457cdfe2dde6bf439ec041eec6b8c6d6e0416c65356f75e32dac4bf"
+    },
+    {
+      "bytes": 3455,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hmm_local_joint_postrun_20261018.json",
+      "sha256": "9c12547dd5c6667ea714172527f3065569d31fb5a6ad2ddcbf5fcadf5f5b13c5"
+    },
+    {
+      "bytes": 5504,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hmm_local_joint_readback_20261018.json",
+      "sha256": "62461a98133ccdc8dbca46de6f195f4ce41a0c2a37d0ff7fa55b181754e326b0"
+    },
+    {
+      "bytes": 12013,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hmm_local_joint_rescue_20261018.json",
+      "sha256": "159a354427b1a85d11860140d36db1d92d716482714b62fb08adce067dbd4a60"
+    },
+    {
+      "bytes": 3287,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hmm_profile_evidence_readback_20261018.json",
+      "sha256": "27ee9ee2565b2fe7d85d1022b38678269e6a6c118a7b694e28a4e32b2bacc3bf"
+    },
+    {
+      "bytes": 5970,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hmm_profile_weighting_followup_20261018.json",
+      "sha256": "a305cb7177167a702ab30b3f0113d6eaddbaaa51e3d720c31eb4bddb7203294f"
+    },
+    {
+      "bytes": 4585,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hmm_profile_weighting_postrun_20261018.json",
+      "sha256": "a70a5ae15e243295a3eceb0d6ee04fe372ac6fbb9ce81d168a1747c55193dd38"
+    },
+    {
+      "bytes": 5487,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hmm_projection_followup_20261019.json",
+      "sha256": "66d466a8cc8e0b9292ee3d12904f5396eb7e74a13ce5eba3ba62b4095df31a3f"
+    },
+    {
+      "bytes": 3532,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hmm_projection_followup_readback_20261019.json",
+      "sha256": "94e31596fab8ef4a136affb6ee7bf404397a0e72be358b5c7c6bb002213cc618"
+    },
+    {
+      "bytes": 5335,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hmm_projection_integrity_recovery_20261018.json",
+      "sha256": "e9a13fe19e84a0367c1cfcc972da17c76a1b62a0d337fb4067e7b06a290aebbb"
+    },
+    {
+      "bytes": 4506,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hmm_projection_recovery_readback_20261019.json",
+      "sha256": "74269bb9b442772e69da91cd2b7727cb94c36a7d834f2a1fc1cfd6a30f62190f"
+    },
+    {
+      "bytes": 3104,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hmm_recovery_campaign_report_20261019.json",
+      "sha256": "95838dd507f05fef3ff68f42cafb4eb10490b1f994367ea9b7077d8948d3ca9d"
+    },
+    {
+      "bytes": 16191,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hmm_selective_hmmer_20261018.json",
+      "sha256": "73b7b38f31b274e52079991365ad3009fa04f02f8b25e87a0e3ee6b0004dc328"
+    },
+    {
+      "bytes": 3860,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hmm_selective_hmmer_readback_20261018.json",
+      "sha256": "992d6852e89480a180e088ad739ade82496bb02780917b27e9c1d3b32ecb303a"
+    },
+    {
+      "bytes": 3469,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hmm_stockholm_annotation_recovery_20261019.json",
+      "sha256": "2a8986c832f237a11201d38000c6db6bbff3494a180cbbb52ff3ed07d419ca91"
+    },
+    {
+      "bytes": 5124,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hmm_stockholm_projection_followup_20261019.json",
+      "sha256": "c20c80c2252b2fc51a7082d342a75213010c263eec904ca067aa8bfee13f8577"
+    },
+    {
+      "bytes": 3532,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hmm_stockholm_projection_followup_readback_20261019.json",
+      "sha256": "68cd99135363cd80d3ac94bcc4e8be935c126a979a141a0015b05d70025c76bc"
+    },
+    {
+      "bytes": 4707,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hmm_transfer_campaign_report_20261019.json",
+      "sha256": "08e8bcdc37b68bb27a5892331d1846a1c7a95b645a32444fbff8485075f34a86"
+    },
+    {
+      "bytes": 12699,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hmm_weighted_projection_ablation_20261019.json",
+      "sha256": "b43bca5ab83e405e3ca82948e81f4be93e813e45fb7ac0f1735936fc6b2b0843"
+    }
+  ],
+  "required_delivery_gate": {
+    "commands": [
+      "git diff --cached --check",
+      "git commit <task-owned final delivery>",
+      "git push origin main",
+      "git rev-parse HEAD",
+      "git ls-remote origin refs/heads/main",
+      "git status --short --untracked-files=no -- <task-owned source/docs/results>"
+    ],
+    "condition": "Before calling the goal complete, verify the actual final commit equals the intended remote branch, all intended code/docs/results are committed, preserved sample/library fingerprints still match and no required jobs remain live. Report the final hash and synchronization. Do not self-pin a future commit hash into this pre-commit artifact."
+  },
+  "requirement_count": 21,
+  "requirements": [
+    {
+      "evidence": [
+        "original objective",
+        "campaign protocol",
+        "source history",
+        "final report"
+      ],
+      "id": "starting_context",
+      "observed": {
+        "all_four_required_mechanisms_present": true,
+        "objective_sha256": "1631e4eeeb6ef6c6b16c52dfbb36708b08fe5a71f3d778f3e115cbb16ee5475a",
+        "starting_revision": "16941f805dc53daa8a84f94b12839ecf3bac8524"
+      },
+      "requirement": "Read code, previous ledger, protocols and failure modes; preserve the full original scope.",
+      "verdict": "verified"
+    },
+    {
+      "evidence": [
+        "prespecified protocols",
+        "scientific allocation history",
+        "runtime source review"
+      ],
+      "id": "no_rejected_global_sweeps",
+      "observed": "Only fixed weighting, alignment, local, HMMER/recovery and two registered interactions evaluated; stopped branches retained.",
+      "requirement": "Do not repeat global cap/clustering/union/support-cutoff sweeps.",
+      "verdict": "verified"
+    },
+    {
+      "evidence": [
+        "orthohmm/search/sequence_weights.py",
+        "test_sequence_weights.py",
+        "synthetic readback",
+        "individual admission"
+      ],
+      "id": "sequence_weighting",
+      "observed": {
+        "modes": [
+          "none",
+          "henikoff",
+          "henikoff_cluster",
+          "species_henikoff_cluster"
+        ],
+        "species_variant_stopped": true,
+        "synthetic_rows_recounted": 16,
+        "synthetic_seeds": [
+          18102026,
+          19102026
+        ],
+        "two_weighted_full_vectors_complete": true
+      },
+      "requirement": "Implement relative weighting, species normalization and effective-N ablations against unweighted control.",
+      "verdict": "verified"
+    },
+    {
+      "evidence": [
+        "orthohmm/search/profile_spans.py",
+        "test_profile_spans.py",
+        "test_profile_alignment_guard.py",
+        "alignment admission"
+      ],
+      "id": "alignment_recruitment",
+      "observed": {
+        "fixed_guard_f1": 0.7391503919942537,
+        "original_gate_failed": true,
+        "original_interval_retained": true
+      },
+      "requirement": "Distinguish known aligned residues from spans/hit counts; allow fragments and fusion/fission asymmetry.",
+      "verdict": "verified"
+    },
+    {
+      "evidence": [
+        "orthohmm/local_rescue.py",
+        "test_local_rescue_profiles.py",
+        "local proposal recheck",
+        "local native cell"
+      ],
+      "id": "local_joint_trees",
+      "observed": {
+        "contexts_rechecked": 128,
+        "final_native_evaluated": true,
+        "fixed_branch_stopped": true,
+        "provisional_admissions": 6,
+        "reference_family_ties": 70
+      },
+      "requirement": "Bound HMM-supported local joint trees; use reconciliation/duplication/competition and separate pair/membership effects.",
+      "verdict": "verified"
+    },
+    {
+      "evidence": [
+        "orthohmm/search/selective_hmmer.py",
+        "orthohmm/search/selective_profiles.py",
+        "test_selective_hmmer.py",
+        "five-arm recovery admission"
+      ],
+      "id": "selective_hmmer",
+      "observed": {
+        "both_reselection_policies_stopped": true,
+        "completely_measured_queries": 126,
+        "conservative_preservations": 2,
+        "hmmer_version": "3.4",
+        "measurement_only_changes": 0,
+        "reselected_anchor_changes": 66,
+        "selected_profiles": 128,
+        "selected_queries": 128
+      },
+      "requirement": "Use established HMMER for ambiguity; separate generation, measurement and decision effects; no homology-only orthology.",
+      "verdict": "verified"
+    },
+    {
+      "evidence": [
+        "parser.py",
+        "profile_expansion.py",
+        "CLI/API/replay tests"
+      ],
+      "id": "interfaces_and_defaults",
+      "observed": {
+        "cli_declarations": {
+          "--profile-alignment-policy": "off",
+          "--profile-projection-policy": "legacy",
+          "--profile-sequence-weighting": "none"
+        },
+        "expansion_defaults": {
+          "alignment_policy": "off",
+          "projection_policy": "legacy",
+          "selective_mode": "off",
+          "sequence_weighting": "none"
+        },
+        "local_hmmer_scope": "Explicit package/workflow integrations, not promoted main-CLI modes."
+      },
+      "requirement": "Deliver tested interfaces without ignored options or unsupported default promotion.",
+      "verdict": "verified"
+    },
+    {
+      "evidence": [
+        "protocol Git ancestry",
+        "frozen plans/commands"
+      ],
+      "id": "hypotheses_and_gates",
+      "observed": {
+        "chronology": [
+          {
+            "ancestor_verified": true,
+            "implementation_revision": "6b3b9afcc973dce40b1fe7382dae391aef036949",
+            "mechanism": "weighting",
+            "protocol_revision": "d2ccfd4408e59599a028e929a13d3a67e823c813"
+          },
+          {
+            "ancestor_verified": true,
+            "implementation_revision": "76fea95828c9ba9a28bf3ace37987012b0291b0f",
+            "mechanism": "alignment",
+            "protocol_revision": "a1dd29462714c98f6654d5c604bbbcfa8f1884a8"
+          },
+          {
+            "ancestor_verified": true,
+            "implementation_revision": "2217f43808377e57a10e2c2c6236461db21abc57",
+            "mechanism": "local",
+            "protocol_revision": "a7bddd1863f9e8cf151c3647311505810399f2fa"
+          },
+          {
+            "ancestor_verified": true,
+            "implementation_revision": "79e69e6c23abb9dee732dd613bf98e5d88e4deea",
+            "mechanism": "hmmer",
+            "protocol_revision": "8501d796087c1892e642573961dc020c16a0cdbb"
+          }
+        ],
+        "strengthened_local_and_interaction_ancestry_verified": true
+      },
+      "requirement": "Prespecify controls, parameters, resources, advancement and stopping before experiments.",
+      "verdict": "verified"
+    },
+    {
+      "evidence": [
+        "reviewed mechanism sources",
+        "nominate_queries call path",
+        "actual commands"
+      ],
+      "id": "runtime_label_separation",
+      "observed": "Manual data-flow review: sequences, unsupervised graph/profile/hit evidence, species mappings and inferred/reconciled trees. No benchmark imports or RefOG/VGNC/SwissTrees/TreeFam identifiers in the five mechanism modules. RF annotation describes alignment coordinates, not functional truth. Keyword absence alone is not treated as proof.",
+      "requirement": "Use benchmark labels only in evaluation; no GO/EC/FAS runtime leakage.",
+      "verdict": "verified"
+    },
+    {
+      "evidence": [
+        "individual admission",
+        "registered interaction",
+        "complete interaction admission"
+      ],
+      "id": "bounded_combinations",
+      "observed": {
+        "arms": 6,
+        "followup_execution_arms": [],
+        "four_controls_exactly_reproduced": true,
+        "joint_profiles_per_candidate": 15901,
+        "passing_combinations": 0,
+        "retuning": false
+      },
+      "requirement": "Understand individual effects before controlled combinations; stop fixed failures without retuning.",
+      "verdict": "verified"
+    },
+    {
+      "evidence": [
+        "scores.tsv",
+        "full source report"
+      ],
+      "id": "eight_endpoints_and_tools",
+      "observed": {
+        "configurations_controls_history": 29,
+        "context_scope": "Retained, not fresh reruns. Failed/stopped endpoints are NA, not zero.",
+        "endpoint_slots": 232,
+        "other_tools": [
+          "SonicParanoid2.0.9",
+          "ProteinOrtho6.3.6",
+          "FastOMA0.3.5",
+          "OrthoMCL1.4"
+        ],
+        "scored_observations": 125,
+        "unrun_slots": 107
+      },
+      "requirement": "Report eight endpoints versus matched OrthoHMM and OrthoFinder3.1.5 full; retain sequence-only/other tools as context.",
+      "verdict": "verified"
+    },
+    {
+      "evidence": [
+        "endpoint_diagnostics.tsv",
+        "historical_cell_diagnostics.tsv",
+        "README.md"
+      ],
+      "id": "precision_coverage_populations",
+      "observed": {
+        "current_and_historical_scored_pointers_verified": 250,
+        "diagnostic_rows": 232,
+        "fas_pool_vs_sample_distinct": true,
+        "functional_precision_recall": "NA, not fabricated",
+        "unknown_historical_numeric_counts": "NA"
+      },
+      "requirement": "Report P/R, coverage and assessed populations; distinguish conditional means and denominators.",
+      "verdict": "verified"
+    },
+    {
+      "evidence": [
+        "summary.json uncertainty",
+        "alignment admission",
+        "README.md"
+      ],
+      "id": "uncertainty",
+      "observed": {
+        "interaction_contrasts": 6,
+        "multiplicity": 18,
+        "paired_reference_families": 70,
+        "replicates": 100000,
+        "scope": "Phase-specific/post-hoc qualifications retained; no campaign-wide correction, IID pair uncertainty, equivalence or independent confirmation claim.",
+        "standalone_intervals_span_zero": true
+      },
+      "requirement": "Estimate defensible uncertainty, retaining exchangeability, exposure, selection and population qualifications.",
+      "verdict": "verified"
+    },
+    {
+      "evidence": [
+        "freeze9a1f10ca",
+        "postfreeze review",
+        "README.md"
+      ],
+      "id": "freeze_before_confirmation",
+      "observed": {
+        "independent_confirmation_established": false,
+        "limitations_nonblocking": true,
+        "logical_head_probes": 6,
+        "new_reference_labels_read": false,
+        "portfolio": [
+          "profile_weighting:henikoff",
+          "profile_weighting:henikoff_cluster",
+          "projection_recovery:projection_off"
+        ]
+      },
+      "requirement": "Freeze candidates before confirmation; missing admitted data limits claims rather than blocking completion.",
+      "verdict": "verified_with_explicit_claim_limitation"
+    },
+    {
+      "evidence": [
+        "resource_audit.json",
+        "resources.tsv",
+        "scheduler scripts"
+      ],
+      "id": "resource_execution",
+      "observed": {
+        "dgx_used": false,
+        "full_proteome_allocations": 13,
+        "full_proteome_resources": "16CPU/128G",
+        "other_jobs_interrupted": false,
+        "readers": "1CPU/16G",
+        "scientific_overlaps": 0,
+        "timing": "Approximate cached incremental phases, not isolated full-tool rankings."
+      },
+      "requirement": "Use the shared local Threadripper conservatively and leave unrelated jobs untouched.",
+      "verdict": "verified"
+    },
+    {
+      "evidence": [
+        "715967 content records checked",
+        "compiler.batch.sh",
+        "original failure histories",
+        "source manifests"
+      ],
+      "id": "reproducibility_and_failures",
+      "observed": {
+        "archive_only_failure_preserved_and_corrected": true,
+        "compiler_job": "24547",
+        "errors_distinct_from_negative_biology": true,
+        "exit": "0:0",
+        "large_raw_report_bytes": 236636436,
+        "source_revision": "fcd95d092cfa72fc109aa51fba637c2af5d401e5"
+      },
+      "requirement": "Retain commands, versions, seeds, failures/recoveries and locations/checksums for large artifacts.",
+      "verdict": "verified"
+    },
+    {
+      "evidence": [
+        "JUnit reports",
+        "reviewed assertions",
+        "fresh384-profile check"
+      ],
+      "id": "tests_and_compatibility",
+      "observed": {
+        "counts_overlap": true,
+        "dedicated_new_consolidation_cases": 36,
+        "fresh_384_profile_digest": "aa66538d3a2561d3f8899a3b67346b3f502c77a8626a641771872199df146743",
+        "production_source_unchanged_since86e39314": true,
+        "tests": [
+          {
+            "passed": 1647,
+            "report": {
+              "bytes": 263314,
+              "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/weighted_projection_completed_20261020/tests.xml",
+              "sha256": "4a2fd655552ef9e0bf2154757f5798a02f167b4230b461a3ab3d95ceb7c2b2a0"
+            }
+          },
+          {
+            "passed": 163,
+            "report": {
+              "bytes": 28302,
+              "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hmm_campaign_plateau_tests_20261020.xml",
+              "sha256": "0b8ab93d8c07f9330de8911084fe3ab84639c47598570371bb7fbdafa70f3f53"
+            }
+          },
+          {
+            "passed": 290,
+            "report": {
+              "bytes": 49568,
+              "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hmm_campaign_final_20261020/delivery_tests.xml",
+              "sha256": "268d2a8a641e7511aba242196f92ad8f32bfdde1741b0452ab1c29eea2704a63"
+            }
+          }
+        ]
+      },
+      "requirement": "Test mathematics, interfaces, parallel/native workflows, failures and exact default compatibility.",
+      "verdict": "verified"
+    },
+    {
+      "evidence": [
+        "sample status/diff hashes",
+        "CPU extension hashes",
+        "scoped delivery"
+      ],
+      "id": "preserve_user_work",
+      "observed": {
+        "cpu_libraries": {
+          "hmm_viterbi.so": "f21d902852d727d6270b65ba900db52e7216cd874ee2d2b89fa72b6f16dcd5c0",
+          "kmer_prefilter.so": "348b1c715e2e305dae7e889bae1d2498e609e48ce5d50cd668db71b548c60b88",
+          "pair_align.so": "81c26c6ce92b1da37285824ea1b8dcea007a7fc18a11ee5fa3d150628fa800c7"
+        },
+        "sample_diff_sha256": "91643349c94c9b543fdbb3f33297c5486b8eac916fc5b86e397bdfc07776bcca",
+        "sample_status_sha256": "5a72884464c7a52298571745329d080e86722b69658902b096d4f10c4574d0a7",
+        "samples_unchanged": true
+      },
+      "requirement": "Stage task-owned files only, preserve unrelated changes and original CPU libraries.",
+      "verdict": "verified"
+    },
+    {
+      "evidence": [
+        "README.md",
+        "frozen portfolio",
+        "all eight vectors"
+      ],
+      "id": "scientific_recommendation",
+      "observed": {
+        "defaults_promoted": false,
+        "generalizable_new_default_established": false,
+        "outcome": "Complete informative bounded development plateau; small mixed standalone gains retained as experimental.",
+        "universal_superiority_over_orthofinder_established": false
+      },
+      "requirement": "Promote only demonstrated generalizable gains; otherwise retain experimental options and document the bounded outcome.",
+      "verdict": "verified_informative_negative_outcome"
+    },
+    {
+      "evidence": [
+        "Git history",
+        "immutable launch/source bindings",
+        "verified remote milestones"
+      ],
+      "id": "version_control_milestones",
+      "observed": "Milestone pushes and exact remote heads verified. Final task-owned delivery commit/push/equality are mandatory post-audit execution gates.",
+      "requirement": "Commit and push tested code, protocols, manifests, results and recommendations throughout.",
+      "verdict": "verified"
+    },
+    {
+      "evidence": [
+        "four implementations",
+        "29-row scores",
+        "232-row diagnostics",
+        "106-row costs",
+        "README.md",
+        "this audit"
+      ],
+      "id": "complete_deliverables",
+      "observed": "All scientific/local deliverables verified; no further scientific inference or retuning remains. Final commit/push verification is required before marking the goal complete.",
+      "requirement": "Deliver tested changes, reproducible experiments, comparison, recommendation and requirement audit.",
+      "verdict": "verified"
+    }
+  ],
+  "schema_version": 1,
+  "scientific_source_report": {
+    "bytes": 236636436,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_campaign_plateau_v1_20261020/summary.json",
+    "sha256": "e7dd9655c2d720cb9df5d40182a290300762f8dae6ea042459fcb49299926bd4"
+  },
+  "scope": "Full original bounded objective, not only the final interaction. Informative negative completion is explicitly allowed; generalizable superiority and independent confirmation are not claimed.",
+  "source_files_reviewed": [
+    {
+      "bytes": 3887,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/orthohmm/search/sequence_weights.py",
+      "sha256": "b0f4360152af752b412b9d5255b5e6ceb264eb0c166a38c93c554b568c51402e"
+    },
+    {
+      "bytes": 8110,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/orthohmm/search/profile_spans.py",
+      "sha256": "8f43c702c5c050996ba46e4607a44a10670f2dc0c01994a171f0389fd755e16e"
+    },
+    {
+      "bytes": 35211,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/orthohmm/local_rescue.py",
+      "sha256": "df05c723699c9870dc3efa287ee8d31b17e008381869a561b6c43147d6e354f7"
+    },
+    {
+      "bytes": 21975,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/orthohmm/search/selective_hmmer.py",
+      "sha256": "2287ee15f5e2b509dd1d2116b7c6678a06d24f44c2e68218d5623dfe0a84f5fe"
+    },
+    {
+      "bytes": 24888,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/orthohmm/search/selective_profiles.py",
+      "sha256": "5b22cb06d094364b738732b1fe23709b07efaee73edf94a13c8e16776dbb2646"
+    },
+    {
+      "bytes": 35195,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/orthohmm/search/profile_expansion.py",
+      "sha256": "444ed300eea683e926da33a8c19a79873cd951f786250607bbb961596949a0b0"
+    },
+    {
+      "bytes": 9337,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/orthohmm/search/msa_profile.py",
+      "sha256": "6185859d001cec3ca8c4c65b2e661e92489f55697737a702cd8522594e92f8d4"
+    },
+    {
+      "bytes": 11543,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/orthohmm/search/msa_center_star.py",
+      "sha256": "db7373376f799d2994c410a4e37ccd2c0dd549f2f315e8b1fd540c6fea6569a5"
+    },
+    {
+      "bytes": 18365,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/orthohmm/parser.py",
+      "sha256": "1f04dad1175379b0c0e638bf1586b87d9576b3bbc87af326bb5347aeb16e34c6"
+    },
+    {
+      "bytes": 15660,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/orthohmm/args_processing.py",
+      "sha256": "e93ce1b1db4eda08a6189492486f2f7b1e2a069a44a40171b5b188517269dc73"
+    },
+    {
+      "bytes": 44442,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/orthohmm/phylogeny_pipeline.py",
+      "sha256": "dadb747b536dce2a0d706b3f9b52d32bdfb60090ed4d99fbe372e40c4d7701ea"
+    },
+    {
+      "bytes": 14297,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/report_hmm_campaign_plateau.py",
+      "sha256": "0f6061317b198cde4397052de1ba32cf12186ec39024fabbfe18ce2fe5629715"
+    },
+    {
+      "bytes": 10281,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_weighted_projection_policies.py",
+      "sha256": "688597352149f7004496e6079d962b0484c66a4cd1a5d21d85299fd71fd35c31"
+    },
+    {
+      "bytes": 13992,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_sequence_weights.py",
+      "sha256": "4fd1f384c649c2c973ffffc9f237a9fc61226721629934e521510e15f18a4a44"
+    },
+    {
+      "bytes": 7408,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_profile_spans.py",
+      "sha256": "3500aa039c549e7d6bd19b967ccbd537b2640ebc88f60da59e6a3283a554cb34"
+    },
+    {
+      "bytes": 23166,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_local_rescue_profiles.py",
+      "sha256": "28e632da96e262fe72f2243d8eebbb590f4e8c7f2d6832e966ae4a289d84dfdd"
+    },
+    {
+      "bytes": 16350,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_selective_hmmer.py",
+      "sha256": "37b3412d971764ec14bb2def06992985e35b00b0979e6179d2b8859832399a99"
+    },
+    {
+      "bytes": 9699,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_hmm_campaign_plateau.py",
+      "sha256": "fd5c642ec5e87942c0c12cd63eeb5a5f637c5158c6048b679640081a4a912135"
+    }
+  ],
+  "status": "all_scientific_and_local_goal_requirements_verified_before_final_delivery",
+  "synthetic_readback": {
+    "bytes": 27483,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hmm_evidence_weighting_synthetic_readback_20261018.json",
+    "sha256": "463925f484b48e5033003af47b67547a29a03efeb1d1527ccb78bdcc577af343"
+  },
+  "unmet_scientific_or_local_requirements": []
+}
