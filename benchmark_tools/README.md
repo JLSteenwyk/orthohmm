@@ -58,8 +58,23 @@ numeric-hit replay record actual per-profile policies/effective counts and
 reject mismatches before scoring. Defaults, other combination restrictions,
 all scoring/construction math and frozen sources are unchanged. Worker/spawn,
 jackknife, nonempty recruitment and small native workflows are tested, but the
-six-arm biological pilot still requires its runner, separate reader and frozen
-launch. This is computational readiness, not evidence of joint accuracy gains.
+six-arm runner is available through
+`run_profile_weighting_pilot.py prepare --experiment weighted_projection`.
+It authenticates the complete admitted archive and all four constituent
+graph/candidate/native/rooted-tree references, preserves the declared arm
+parameters, and blocks both candidates after any failed control. Each candidate
+must beat its three matched controls. Controls may use their exact caches;
+the two candidates use canonical caches. Actual joint construction records,
+complete ownership, native products and official score readback are required.
+`report_weighted_projection.py --repo <repo> --launch-revision <full commit>
+--output <fresh directory>` is the separate post-run reader. It reauthenticates
+the immutable launch, four reference controls, source/runtime/commands, raw
+native/score artifacts and original gates before admitting the complete panel.
+Its paired70-family intervals use the six contrasts and18-endpoint adjustment
+registered in the protocol. The read-only Slurm wrapper uses1CPU/16G/2h;
+scientific execution retains16CPU/128G/day, one new scientific job at a time.
+The tested runner and reader must be pushed and frozen before a new launch;
+code/unit-fixture readiness is not evidence of joint biological accuracy gains.
 
 `report_completed_hmm_resources.py --repo <repo> --output <fresh directory>`
 exports phase-specific costs from the immutable completed weighting/local

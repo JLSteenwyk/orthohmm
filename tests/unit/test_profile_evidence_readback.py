@@ -120,14 +120,26 @@ def arm_fixture(tmp_path, monkeypatch, mode="none", *, experiment="weighting", a
             "golden": {"product.tsv": record(phylo / "product.tsv")}, "expected": {"f1": .7, "precision": .8, "recall": .6}}
     plan = {"source_root": str(source), "output": str(root), "cpu": 16, "source_revision": "frozen", "case": case}
     if experiment != "weighting": plan.update(experiment=experiment, hmmer_tools={})
+    joint = experiment == "weighted_projection"
+    if joint:
+        from benchmark_tools.weighted_projection_experiment import configuration
+        arm = configuration(mode)
+        plan["constituent_controls"] = {mode: case} if arm["role"] != "candidate" else {}
+    weighting = arm["profile_sequence_weighting"] if joint else mode if experiment == "weighting" else "none"
     graph_command, native_command = pilot.arm_commands(source, plan, folder, mode)
     (folder / "preflight.json").write_text(json.dumps({"graph": graph_command, "native": native_command}))
-    graph = {"parameters": {"profile_sequence_weighting": mode if experiment == "weighting" else "none", "profile_iterations": 1, "profile_expansion": True,
+    graph = {"parameters": {"profile_sequence_weighting": weighting, "profile_iterations": 1, "profile_expansion": True,
         "matrix": "BLOSUM62", "cpm_resolution": .1, "leiden_seed": 4, "jackknife_profile_thresholds": False,
         "jackknife_single_copy_profiles": False, "profile_min_species": 1, "singleton_tie_policy": "first_hit"},
         "counts": {"profiles_built": 1, "strict_profile_edges": 1}, "profile_iterations": [{"profiles_built": 1,
-            "profile_effective_counts": [] if mode == "none" or experiment != "weighting" else [{"cluster_id": 0, "effective_sequence_count": 3.}]}],
+            "profile_effective_counts": [] if weighting == "none" else [{"cluster_id": 0, "effective_sequence_count": 3.}]}],
         "stages": [{"label": "fixture", "output": record(seed)}]}
+    if joint:
+        graph["parameters"]["profile_projection_policy"] = arm["profile_projection_policy"]
+        if arm["role"] == "candidate":
+            graph["profile_iterations"][0]["profile_construction_policies"] = [
+                {**r, "sequence_weighting": weighting, "projection_policy": arm["profile_projection_policy"]}
+                for r in graph["profile_iterations"][0]["profile_effective_counts"]]
     if experiment == "selective_hmmer": graph["parameters"]["selective_profile_mode"] = mode
     (folder / "graph_metrics.json").write_text(json.dumps(graph))
     details = {"precision": .8, "recall": .6, "family_details": {"fixture": True}}
@@ -141,6 +153,15 @@ def arm_fixture(tmp_path, monkeypatch, mode="none", *, experiment="weighting", a
         "golden_matches": {"product.tsv": True}, "candidate_resources": {}, "total_incremental_wall_s": 2.}
     native = {"genes": 251378, "species": 12, "groups": 1, "pairs": 1, "summary": row["native_summary"],
               "phylogeny": str(phylo), "products": {}, "checked": []}
+    if joint:
+        (phylo / "species_tree.rooted.nwk").write_text("(a,b);\n")
+        row.update(rooted_species_tree=record(phylo / "species_tree.rooted.nwk"), arm_parameters=arm,
+                   graph_control_matches=True)
+        case["coverage"] = {k: native[k] for k in ("genes", "species", "groups", "pairs")}
+        case["graph_stages"] = [{"label": "fixture", **{k: record(seed)[k] for k in ("bytes", "sha256")}}]
+        if mode != "legacy_none":
+            row["native_pair_turnover"] = {"files": [], "added_pairs": 0, "lost_pairs": 0}
+            monkeypatch.setattr(readback, "native_pair_turnover", lambda *a: row["native_pair_turnover"])
     monkeypatch.setattr(readback, "replay_native", lambda *args: native)
     monkeypatch.setattr(readback, "readback_scores", lambda *args: (row["scores"], details, []))
     return plan, row, native, details, folder

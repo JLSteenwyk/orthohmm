@@ -5,7 +5,8 @@
   "weighted_projection_ablation": {
     "protocol": "benchmark_tools/hmm_weighted_projection_ablation_20261019.json",
     "planning_revision": "0e9f87c31995082babbb751f0f85584c29d98995",
-    "state": "core_tested1472_pushed_frozen_verified_runner_and_reader_pending_no_joint_biological_job",
+    "state": "core_pushed_frozen_runner_and_reader_tested1599_ready_to_commit_freeze_and_launch_no_joint_biological_job",
+    "workflow_milestone": "benchmark_tools/results/weighted_projection_workflow_milestone_20261019.json",
     "scientific_core_commit": "e33fac1300552f0377b758ca135e7e5da22a1e4a",
     "scientific_core_source": "benchmarks/work/weighted_projection_core_v1_20261019",
     "core_readiness": "benchmark_tools/results/weighted_projection_core_readiness_20261019.json",
@@ -16,7 +17,7 @@
     "design": "One2x3 OrthoBench pilot with four exact constituent controls and two weighted/residue-preserving combinations. Both independently passing weighting modes retained; no per-endpoint winner selection.",
     "hypothesis": "Position-based weighting depends on actual MSA-column distributions; test it on residue-preserving geometry rather than assuming additive standalone gains.",
     "advancement": "Candidate F1 must strictly exceed canonical and both corresponding solo constituents; precision and recall may not decline by more than0.005 against any matched control. All six arms require actual activation/native/score admission. No retuning; original stopped branches stay stopped.",
-    "next": "Core support tested, pushed, remote-verified and frozen with unchanged native libraries and384-profile constituent digest. Implement/test/push/freeze the six-arm runner and separate reader before any biological submission. Full QfO/Three Kingdoms only after unchanged pilot gates, with registered matched controls.",
+    "next": "Final42-module1599-test workflow regression and315 focused tests pass, four actual constituent controls authenticated. Commit/push/freeze runner/science and separate reader, verify frozen inventories, prepare immutable six-arm plan, then submit one16CPU128G/day pilot and dependent1CPU16G/two-hour readback. No joint accuracy claim. Full QfO/Three Kingdoms only after unchanged admitted pilot gates with registered matched controls.",
     "defaults_promoted": false,
     "goal_completed": false
   },

@@ -102,6 +102,7 @@ def admit_arm(repo, plan, row, experiment, names, *, projection_control=None):
     graph = json.loads(graph_path.read_text())
     selective = experiment in ("selective_hmmer", "projection_recovery")
     recovery = experiment == "projection_recovery"
+    joint = experiment == "weighted_projection"
     if selective and not isinstance(names, (tuple, list)):
         raise ValueError("Selective readback requires ordered original gene IDs")
     options = {"folder": folder, "gene_names": names, "hmmer_tools": plan["hmmer_tools"]} if selective else {}
@@ -134,15 +135,20 @@ def admit_arm(repo, plan, row, experiment, names, *, projection_control=None):
     if scores != row["scores"] or details != row["details"] or endpoint_vector("OrthoBench", scores) != row["metric_vector"]:
         raise ValueError("Per-family/aggregate score readback differs")
     arms, _ = experiment_settings(experiment)
-    if recovery:
+    if recovery or joint:
         tree = record(Path(native["phylogeny"]) / "species_tree.rooted.nwk")
         if row.get("rooted_species_tree") != tree:
             raise ValueError("Recorded recovery species tree differs from actual product")
         checked.append(tree)
     measurement = (experiment == "selective_hmmer" and mode == "hmmer_score_only"
                    or recovery and mode == "projection_hmmer_score_only")
-    if mode == arms[0] or measurement:
-        control = plan["case"]
+    if mode == arms[0] or measurement or joint and mode in plan["constituent_controls"]:
+        control = plan["constituent_controls"][mode] if joint else plan["case"]
+        if joint:
+            from benchmark_tools.weighted_projection_experiment import validate_control_graph
+            if (validate_control_graph(graph, control) != row.get("graph_control_matches")
+                    or {k: native[k] for k in ("genes", "species", "groups", "pairs")} != control["coverage"]):
+                raise ValueError("Constituent graph or native coverage differs from its admitted control")
         if recovery and measurement:
             if projection_control is None or projection_control.get("label") != "projection_off":
                 raise ValueError("Recovery measurement requires the independently admitted repaired control")
@@ -159,7 +165,7 @@ def admit_arm(repo, plan, row, experiment, names, *, projection_control=None):
                 or normalized(row) != control["expected"]):
             raise ValueError("Unchanged off control differs from its required reference")
     turnover = None
-    if selective and mode != arms[0]:
+    if (selective or joint) and mode != arms[0]:
         turnover = native_pair_turnover(Path(plan["case"]["baseline_output"]) / "orthohmm_phylogeny/orthohmm_pairwise_orthologs_confidence.tsv",
             Path(native["phylogeny"]) / "orthohmm_pairwise_orthologs_confidence.tsv")
         if {k: v for k, v in turnover.items() if k != "wall_s"} != {k: v for k, v in row["native_pair_turnover"].items() if k != "wall_s"}:
@@ -174,11 +180,16 @@ def admit_arm(repo, plan, row, experiment, names, *, projection_control=None):
         "products": native["products"], "activation": activated, "source_revision": plan["source_revision"],
         "candidate": row["candidate"], "checked": list({pin["path"]: pin for pin in checked}.values()),
         "resources": {key: row[key] for key in ("graph_execution", "candidate_resources", "native_execution", "total_incremental_wall_s")}}
-    if selective:
+    if selective or joint:
         cell["graph_stages"] = [{"label": s["label"], "bytes": s["output"]["bytes"], "sha256": s["output"]["sha256"]} for s in graph["stages"]]
         if turnover is not None: cell["native_pair_turnover"] = turnover
-    if recovery:
+    if recovery or joint:
         cell["rooted_species_tree"] = tree
+    if joint:
+        from benchmark_tools.weighted_projection_experiment import configuration
+        if row.get("arm_parameters") != configuration(mode):
+            raise ValueError("Weighted projection row differs from structured prespecified arm")
+        cell["arm_parameters"] = configuration(mode)
     return cell
 
 

@@ -49,6 +49,9 @@ UNIVERSE = (251378, 12)
 
 
 def experiment_settings(experiment):
+    if experiment == "weighted_projection":
+        from benchmark_tools.weighted_projection_experiment import LABELS, PROTOCOL as joint_protocol
+        return LABELS, joint_protocol
     if experiment == "weighting":
         return ARMS, PROTOCOL
     if experiment == "alignment":
@@ -123,7 +126,8 @@ def prepare(repo, source, output, experiment="weighting"):
     arms, protocol_name = experiment_settings(experiment)
     protocol = source / "benchmark_tools" / protocol_name
     spec = json.loads(protocol.read_text())
-    declared = (tuple(arm["label"] for arm in spec["first_experiment"]["arms"])
+    declared = (tuple(arm["label"] for arm in spec["arms"]) if experiment == "weighted_projection" else
+                tuple(arm["label"] for arm in spec["first_experiment"]["arms"])
                 if experiment == "weighting" else tuple(spec["recovery_panel"]["ordered_arms"])
                 if experiment == "projection_recovery" else tuple(spec["arms"]))
     if declared != arms:
@@ -134,12 +138,23 @@ def prepare(repo, source, output, experiment="weighting"):
     inputs = [record(protocol), *case["evidence"], *case["fastas"], case["candidate"],
               case["constraints"], *case["golden"].values(), *scoring_records(repo, "OrthoBench"),
               *[record(path) for path in sorted(Path(case["checkpoint"]).iterdir()) if path.is_file()]]
+    constituent_controls = {}
+    if experiment == "weighted_projection":
+        from benchmark_tools.weighted_projection_experiment import control_references
+        constituent_controls, constituent_pins = control_references(repo, source)
+        inputs.extend(constituent_pins)
+        if case["checkpoint_manifest"]["sha256"] != spec["fixed_scientific_settings"]["checkpoint_manifest_sha256"]:
+            raise ValueError("Weighted projection requires the original canonical checkpoint")
     annotation_protocol = source / "benchmark_tools/hmm_stockholm_annotation_recovery_20261019.json"
     if experiment == "projection_recovery" and annotation_protocol.is_file():
         inputs.append(record(annotation_protocol))
     phylo = Path(case["baseline_output"]) / "orthohmm_phylogeny"
     for directory in ("alignments", "gene_trees", "checkpoints", "species_tree_inference"):
         inputs.extend(record(path) for path in sorted((phylo / directory).rglob("*")) if path.is_file())
+    for reference in constituent_controls.values():
+        phylo = Path(reference["baseline_output"]) / "orthohmm_phylogeny"
+        for directory in ("alignments", "gene_trees", "checkpoints", "species_tree_inference"):
+            inputs.extend(record(path) for path in sorted((phylo / directory).rglob("*")) if path.is_file())
     inputs.extend(record(shutil.which(case[key]) or case[key]) for key in ("aligner", "tree_builder"))
     hmmer_tools = {}
     if experiment in ("selective_hmmer", "projection_recovery"):
@@ -175,6 +190,9 @@ def prepare(repo, source, output, experiment="weighting"):
             "defaults_promoted": False}
     if experiment in ("selective_hmmer", "projection_recovery"):
         plan["hmmer_tools"] = hmmer_tools
+    if experiment == "weighted_projection":
+        plan["constituent_controls"] = constituent_controls
+        plan["arm_parameters"] = spec["arms"]
     output.mkdir(parents=True)
     write_json(output / "execution_plan.json", plan)
     return plan
@@ -186,8 +204,15 @@ def arm_commands(source, plan, folder, mode):
     if mode not in arms:
         raise ValueError("Unexpected weighting arm")
     case = plan["case"]
+    if experiment == "weighted_projection":
+        from benchmark_tools.weighted_projection_experiment import configuration
+        arm = configuration(mode)
+        case = {**case, "baseline_output": plan["constituent_controls"].get(mode, case)["baseline_output"]}
     graph, native = commands(source, plan, case, folder, Path(case["checkpoint"]), case["checkpoint_manifest"]["sha256"])
-    if experiment == "projection_recovery":
+    if experiment == "weighted_projection":
+        graph.extend(["--profile-sequence-weighting", arm["profile_sequence_weighting"],
+                      "--profile-projection-policy", arm["profile_projection_policy"]])
+    elif experiment == "projection_recovery":
         policy, selective = recovery_configuration(mode)
         if policy != "legacy":
             graph.extend(["--profile-projection-policy", policy])
@@ -247,6 +272,9 @@ def validate_alignment_evidence(iteration, strict_edges):
 
 def validate_activation(graph, mode, experiment="weighting", *, folder=None, gene_names=None, hmmer_tools=None,
                         projection_policy="legacy"):
+    if experiment == "weighted_projection":
+        from benchmark_tools.weighted_projection_experiment import validate_activation as validate_joint
+        return validate_joint(graph, mode, validate_activation)
     if experiment == "projection_recovery":
         policy, selective = recovery_configuration(mode)
         actual = validate_activation(graph, selective, "selective_hmmer", folder=folder,
@@ -318,6 +346,12 @@ def run(plan_path):
     if runtime() != plan["runtime"] or os.environ.get("CUDA_VISIBLE_DEVICES") != "":
         raise ValueError("Changed runtime or CUDA visibility")
     case = plan["case"]
+    joint_experiment = experiment == "weighted_projection"
+    if joint_experiment:
+        from benchmark_tools.weighted_projection_experiment import configuration, specification
+        if (plan.get("arm_parameters") != specification()["arms"]
+                or set(plan.get("constituent_controls", {})) != set(arms[:4])):
+            raise ValueError("Changed structured joint arms or constituent controls")
     owners = {}
     for pin in case["fastas"]:
         for sequence in SeqIO.parse(pin["path"], "fasta"):
@@ -342,10 +376,17 @@ def run(plan_path):
     selective_experiment = experiment in ("selective_hmmer", "projection_recovery")
     recovery = experiment == "projection_recovery"
     control, projection_control, measurement_control, candidate_digest, control_stages = None, None, False, None, None
+    joint_controls = {}
     for mode in arms:
         selective_mode = recovery_configuration(mode)[1] if recovery else mode
         row = {"dataset": "OrthoBench", "label": mode, "status": "running", "scores": {}}
         report["arms"].append(row)
+        if joint_experiment:
+            row["arm_parameters"] = configuration(mode)
+            if configuration(mode)["role"] == "candidate" and tuple(joint_controls) != arms[:4]:
+                row["status"] = "not_run_failed_constituent_control_gate"
+                write_json(output / "results.json", report)
+                continue
         if mode != arms[0] and control is None:
             row["status"] = "not_run_failed_control_gate"
             write_json(output / "results.json", report)
@@ -374,6 +415,9 @@ def run(plan_path):
             activation_options = ({"folder": folder, "gene_names": names, "hmmer_tools": plan["hmmer_tools"]}
                                   if selective_experiment else {})
             row["activation"] = validate_activation(graph_report, mode, experiment, **activation_options)
+            if joint_experiment and mode in plan["constituent_controls"]:
+                from benchmark_tools.weighted_projection_experiment import validate_control_graph
+                row["graph_control_matches"] = validate_control_graph(graph_report, plan["constituent_controls"][mode])
             stage_signature = [(stage["label"], stage["output"]["bytes"], stage["output"]["sha256"])
                                for stage in graph_report["stages"]] if selective_experiment else None
             if selective_experiment:
@@ -402,8 +446,8 @@ def run(plan_path):
             candidate = Path(row["candidate"]["candidate_partition"]["path"])
             constraints = Path(row["candidate"]["membership_constraints"]["path"])
             measurement_only = selective_experiment and selective_mode == "hmmer_score_only"
-            exact_control = mode == arms[0] or measurement_only
-            reference = case
+            exact_control = mode == arms[0] or measurement_only or joint_experiment and mode in plan["constituent_controls"]
+            reference = plan["constituent_controls"][mode] if joint_experiment and exact_control else case
             if recovery and measurement_only:
                 reference = {
                     "candidate": projection_control["candidate"]["candidate_partition"],
@@ -421,13 +465,13 @@ def run(plan_path):
             prediction = folder / "native/orthohmm_working_res/orthohmm_edges_clustered.txt"
             row["coverage"] = validate_partition(candidate, prediction)
             row["outputs"] = [record(phylo / name) for name in PRODUCTS]
-            if recovery:
+            if recovery or joint_experiment:
                 row["rooted_species_tree"] = record(phylo / "species_tree.rooted.nwk")
             native = replay_native(row, {"command": native_command})
             if (native["genes"], native["species"]) != UNIVERSE:
                 raise ValueError("Wrong native universe")
             row["native_summary"] = native["summary"]
-            if selective_experiment and mode != arms[0]:
+            if (selective_experiment or joint_experiment) and mode != arms[0]:
                 row["native_pair_turnover"] = native_pair_turnover(
                     Path(case["baseline_output"]) / "orthohmm_phylogeny/orthohmm_pairwise_orthologs_confidence.tsv",
                     phylo / "orthohmm_pairwise_orthologs_confidence.tsv")
@@ -442,7 +486,18 @@ def run(plan_path):
                 check(pin)
             if runtime() != plan["runtime"]:
                 raise ValueError("Runtime changed during evaluation")
-            if mode == arms[0]:
+            if joint_experiment:
+                from benchmark_tools.weighted_projection_experiment import matched_gate
+                if exact_control:
+                    if normalized(row) != reference["expected"] or {
+                        k: native[k] for k in ("genes", "species", "groups", "pairs")
+                    } != reference["coverage"]:
+                        raise ValueError("Replayed constituent control points or coverage differ")
+                    joint_controls[mode] = normalized(row)
+                    if mode == arms[0]: control = normalized(row)
+                else:
+                    row["advancement"] = matched_gate(mode, normalized(row), joint_controls, advancement)
+            elif mode == arms[0]:
                 if normalized(row) != case["expected"]:
                     raise ValueError("Replayed control scores differ from admitted canonical control")
                 control = normalized(row)
@@ -481,7 +536,7 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     commands_parser = parser.add_subparsers(dest="command", required=True)
     preparation = commands_parser.add_parser("prepare")
-    preparation.add_argument("--experiment", choices=("weighting", "alignment", "selective_hmmer", "projection_recovery"), default="weighting")
+    preparation.add_argument("--experiment", choices=("weighting", "alignment", "selective_hmmer", "projection_recovery", "weighted_projection"), default="weighting")
     for name in ("repo", "source", "output"):
         preparation.add_argument("--" + name, required=True, type=Path)
     execution = commands_parser.add_parser("run")
