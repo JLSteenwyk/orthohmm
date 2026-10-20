@@ -71,36 +71,37 @@
       "nonwhite_fraction": 0.04428867775243845
     }
   ],
+  "first_person_in_source_pdf_docx": false,
   "independent_array_dominance_agreed": true,
   "independent_confirmation_established": false,
   "main_figures": 5,
-  "observed_at_utc": "2026-10-20T18:11:18.027551+00:00",
+  "observed_at_utc": "2026-10-20T19:03:30.031832+00:00",
   "original_score_rows": 29,
   "page_review": [
     {
       "embedded_figures": 0,
       "page": 1,
-      "text_characters": 3129
+      "text_characters": 3358
     },
     {
       "embedded_figures": 0,
       "page": 2,
-      "text_characters": 3864
+      "text_characters": 4203
     },
     {
       "embedded_figures": 0,
       "page": 3,
-      "text_characters": 3762
+      "text_characters": 4180
     },
     {
       "embedded_figures": 0,
       "page": 4,
-      "text_characters": 4031
+      "text_characters": 4033
     },
     {
       "embedded_figures": 0,
       "page": 5,
-      "text_characters": 4462
+      "text_characters": 3667
     },
     {
       "embedded_figures": 1,
@@ -145,10 +146,10 @@
   "primary_frontier_members": 6,
   "production_code_changed": false,
   "remaining_author_actions": [
-    "Confirm author order, affiliations and contributions.",
     "Confirm funding and competing-interest declarations.",
     "Choose journal and approve submission; no archival DOI is asserted."
   ],
+  "sole_author": "Jacob L. Steenwyk",
   "standalone_replay": {
     "all_five_data_files_byte_identical": true,
     "all_seven_PNGs_byte_identical": true,
@@ -160,7 +161,12 @@
   "status": "manuscript_numerical_structural_visual_and_standalone_replay_checks_passed",
   "supplementary_figures": 2,
   "tests_failed": 0,
-  "tests_passed": 94,
+  "tests_passed": 100,
   "tests_skipped": 0,
-  "visual_review": "All seven original figures inspected; corrected intersecting labels. All twelve final PDF pages inspected via contact sheets, with detailed checks of title, references and Pareto pages. Figure headings/captions remain on their figure pages; no missing or clipped text blocks."
+  "visual_review": "All twelve revised PDF pages inspected via contact sheets, with a detailed title/byline check. Sole author is Jacob L. Steenwyk; all seven figures and their captions remain intact. No clipped text blocks or blank pages.",
+  "writing_style_review": {
+    "bytes": 2724,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/validation/STYLE_REVIEW.json",
+    "sha256": "361513dfd55a7e09b499fec01fc923525237125f6ea244edbe25ec68426914cd"
+  }
 }

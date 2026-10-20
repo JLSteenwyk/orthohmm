@@ -23,7 +23,7 @@ th, td { padding: 5px; border-bottom: 1px solid #d5d5d5; text-align: left; }
 @media print {
   @page { size: A4; margin: 17mm; }
   html, body { margin: 0; padding: 0; max-width: none; }
-  body { font-size: 10.5pt; }
+  body { font-size: 10pt; }
   h1, h2, h3 { break-after: avoid; }
   p { orphans: 3; widows: 3; }
   .figure-sheet img { max-height: 185mm; object-fit: contain; }

@@ -163,7 +163,8 @@ claiming generalizable superiority over OrthoFinder.
 The [concise comparative manuscript](manuscript/hmm_frontier_20261020/README.md)
 packages these results with original workflow, accuracy, Pareto-frontier,
 resource and QfO figures. Frontier membership is descriptive, not independent
-confirmation or statistical superiority; author declarations remain pending.
+confirmation or statistical superiority. Jacob L. Steenwyk is the sole author;
+funding and competing-interest disclosures remain for author review.
 
 **Protected candidate union (experimental).** The development checkout also
 provides `--search-candidate-policy protected_union` for fresh built-in

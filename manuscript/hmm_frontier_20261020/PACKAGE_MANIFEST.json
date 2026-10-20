@@ -1,15 +1,15 @@
 {
   "excluded": [
-    "Earlier figure/render attempts",
+    "Historical draft ZIP and superseded render attempts",
     "Raw proteomes and large scientific caches",
     "Browser profiles",
     "The ZIP itself and this manifest (no self-referential hashes)"
   ],
   "files": [
     {
-      "bytes": 5587,
+      "bytes": 6021,
       "path": "README.md",
-      "sha256": "78dc77e7108ec01a548b0020a1c2f2cbe05d911e379e2b53a364274e34995732"
+      "sha256": "42d6be1f6daf68e52089fe7c462483b67c6880aa1af228b17bea603d987365a5"
     },
     {
       "bytes": 4542,
@@ -17,14 +17,14 @@
       "sha256": "e08bddc8ffe1ce87dd065196d24cae33072d8addd9cb5663c10e30d16f34235c"
     },
     {
-      "bytes": 21743,
+      "bytes": 21950,
       "path": "manuscript.md",
-      "sha256": "c79efdaaa84026396f128103e6b2a6f19989d0666dbd6389d8345cb8bfd53b06"
+      "sha256": "502459a8da148c4c20274e89fbeeadf14aff35a6856b05c5ce6f78fceea5bb85"
     },
     {
-      "bytes": 1150,
+      "bytes": 1148,
       "path": "paper.css",
-      "sha256": "26a320a701090e3f8863a7de6f1f0ee5a1ea6165084dc54605d278810ff4164d"
+      "sha256": "866bd52124ddb751d9c655dc84659bee8b0e33bb3de8f7e5252160f2206783ba"
     },
     {
       "bytes": 14476,
@@ -37,29 +37,29 @@
       "sha256": "c5f93d5693a6a33a95b29e64acc20fbf588c73d7cc2dd2313c00806fedf9c517"
     },
     {
-      "bytes": 31683,
-      "path": "manuscript_final.html",
-      "sha256": "0b7b2931cffb569598d388de7a68abb9eddfb504543ae6bc9895fa1acaea50a6"
+      "bytes": 31949,
+      "path": "manuscript_author.html",
+      "sha256": "907ff4ff63d75ac14575b8f92627b9a7804fc1b21914c960498a07195722d8ee"
     },
     {
-      "bytes": 1187818,
-      "path": "manuscript_v2.docx",
-      "sha256": "951aaeaef4e3c6f632295a30180802318a2452d4d244ebde6bfe2b1a3708c8d8"
+      "bytes": 1187860,
+      "path": "manuscript_author.docx",
+      "sha256": "457a1e664ac4da67b9d39808d8eb37e3d39fc08b3b899ec27dd361507a3baa32"
     },
     {
-      "bytes": 1342039,
+      "bytes": 1353475,
       "path": "manuscript.pdf",
-      "sha256": "ee96acbe9b60e61349db4f33c9218f5970d8ca55c127ead20bcc72262e3d2cb9"
+      "sha256": "cd934b7bce37d6738de6477f97267a17eea1b7114fccefac4e443bf3c07cdebd"
     },
     {
-      "bytes": 7129,
-      "path": "render_receipt_final.json",
-      "sha256": "25e074959a0af82c3141ea5477207572135c0e5b555d9f7bf6577adf2528ae96"
+      "bytes": 6649,
+      "path": "render_receipt_author.json",
+      "sha256": "d9f77cd200efeebe5850db7433102a472ebd80ae8dc3237243dbe56fa748bea2"
     },
     {
-      "bytes": 5543,
+      "bytes": 6109,
       "path": "REPRODUCIBILITY.json",
-      "sha256": "aa1dc732ad4cebdf06583b48a3475a60f7f04f4a8ca89835d22ed276667923bf"
+      "sha256": "f6298623fb203a08f668ba0b85725e637ecef67957dd9b296e12f2a0d52cd0aa"
     },
     {
       "bytes": 32,
@@ -77,9 +77,19 @@
       "sha256": "33e9a354a624cbdc164e8ea07a34783e0c09d5ee6f5bc403ca24589a73233366"
     },
     {
-      "bytes": 4207,
+      "bytes": 4443,
       "path": "validation/verification.json",
-      "sha256": "9774a41a91f3b5fd9fcd65e841764351f3ff0e221428fb60e7403bc38fa834dc"
+      "sha256": "61eac79d2db72d975b39933ae459cfd1d933c442331ff1dcf07da5fa7814cd85"
+    },
+    {
+      "bytes": 15085,
+      "path": "validation/style_tests.xml",
+      "sha256": "4f6a6030c7add9d18fb64f49bc6686904a3ebd49a0c9412ffd3316c4c2eb2171"
+    },
+    {
+      "bytes": 2724,
+      "path": "validation/STYLE_REVIEW.json",
+      "sha256": "361513dfd55a7e09b499fec01fc923525237125f6ea244edbe25ec68426914cd"
     },
     {
       "bytes": 91594,
@@ -218,12 +228,13 @@
     }
   ],
   "main_figures": 5,
-  "manuscript_words": 2742,
-  "observed_at_utc": "2026-10-20T18:12:21.482170+00:00",
+  "manuscript_words": 2769,
+  "observed_at_utc": "2026-10-20T19:03:30.045275+00:00",
   "pdf_pages": 12,
   "schema_version": 1,
-  "scope": "Checksum integrity and reviewed manuscript/figure draft. This is not biological generalization, a submission approval or archival DOI.",
-  "status": "validated_manuscript_draft_package",
+  "scope": "Writing guides applied; complete numerical/figure preservation. Not a submission approval or archival DOI.",
+  "sole_author": "Jacob L. Steenwyk",
+  "status": "validated_style_revised_single_author_manuscript_draft",
   "supplementary_figures": 2,
-  "tests_passed": 94
+  "tests_passed": 100
 }

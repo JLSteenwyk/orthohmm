@@ -8,17 +8,24 @@ Published figures and published benchmark coordinates are not reused.
 ## Read The Manuscript
 
 - `manuscript.pdf`: formatted manuscript, references, figures and legends.
-- `manuscript_v2.docx`: editable version, with embedded figure images.
-- `manuscript_final.html`: local browser version; keep it beside `paper.css` and assets.
+- `manuscript_author.docx`: editable version, with embedded figure images.
+- `manuscript_author.html`: local browser version; keep it beside `paper.css` and assets.
 - `manuscript.md`: editable source.
 - `assets_v3/fig3_pareto.pdf`: vector Pareto figure.
 - `assets_v3/`: all seven figures in PDF, SVG and 220-dpi PNG, plus source data.
 
-The main text, methods and legends total approximately 2700 words, excluding
-references. Authorship, affiliations, funding, contributions and competing
-interests still require human confirmation. This is not an approved submission
+The main text, methods and legends total approximately 2800 words, excluding
+references. Jacob L. Steenwyk is the sole author; the byline contains no other
+names, affiliations or contact details. Funding and competing-interest
+disclosures still require confirmation. This is not an approved submission
 or public archival deposition. No independent biological validation or new
 default recommendation is claimed.
+
+The current revision follows all three files in the supplied `writing_guides`
+directory, including the explicit first-person and punctuation restrictions.
+`validation/STYLE_REVIEW.json` records the guide fingerprints and checks.
+The original ZIP remains an unchanged historical draft; the current download
+is `OrthoHMM_manuscript_revised_20261020.zip`.
 
 ## Scientific Interpretation
 
@@ -99,4 +106,4 @@ articles added from primary publication records.
 
 The portable code is a copy of the tested repository builder; it is not a
 standalone distribution of OrthoHMM or its full inference dependencies.
-Manuscript publication rights and author declarations require author approval.
+Manuscript publication rights and submission declarations require author approval.

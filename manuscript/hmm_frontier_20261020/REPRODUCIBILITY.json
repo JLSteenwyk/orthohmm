@@ -16,9 +16,9 @@
   },
   "builder_commit": "73ff345b88aa5d79967d8e86639130cec72c54a3",
   "docx": {
-    "bytes": 1187818,
-    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/manuscript_v2.docx",
-    "sha256": "951aaeaef4e3c6f632295a30180802318a2452d4d244ebde6bfe2b1a3708c8d8"
+    "bytes": 1187860,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/manuscript_author.docx",
+    "sha256": "457a1e664ac4da67b9d39808d8eb37e3d39fc08b3b899ec27dd361507a3baa32"
   },
   "docx_command": "pandoc --from=markdown --to=docx --standalone --citeproc --bibliography=references.csl.json --resource-path=. --output=<fresh DOCX> manuscript.md",
   "html_render_command": "python -m benchmark_tools.render_manuscript_review --repo . --manuscript manuscript/hmm_frontier_20261020/manuscript.md --output <fresh sibling HTML> --report <fresh receipt JSON> --bibliography manuscript/hmm_frontier_20261020/references.csl.json --stylesheet manuscript/hmm_frontier_20261020/paper.css",
@@ -29,9 +29,9 @@
   },
   "pandoc_version": "pandoc 3.1.3",
   "pdf": {
-    "bytes": 1342039,
+    "bytes": 1353475,
     "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/manuscript.pdf",
-    "sha256": "ee96acbe9b60e61349db4f33c9218f5970d8ca55c127ead20bcc72262e3d2cb9"
+    "sha256": "cd934b7bce37d6738de6477f97267a17eea1b7114fccefac4e443bf3c07cdebd"
   },
   "plotting_versions": {
     "matplotlib_version": "3.10.8",
@@ -42,29 +42,31 @@
     "--headless",
     "--disable-gpu",
     "--no-pdf-header-footer",
-    "--user-data-dir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_frontier_manuscript_print_20261020_final/browser_profile",
-    "--print-to-pdf=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_frontier_manuscript_print_20261020_final/document.pdf",
+    "--user-data-dir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_manuscript_style_print_20261020_author/browser_profile",
+    "--print-to-pdf=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_manuscript_style_print_20261020_author/document.pdf",
     "--no-sandbox",
-    "file:///mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/manuscript_final.html"
+    "file:///mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/manuscript_author.html"
   ],
   "print_report": {
-    "bytes": 5649,
-    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_frontier_manuscript_print_20261020_final/print.json",
-    "sha256": "099bca997784db9a0f126a5defaa1c413b06854466a340ec26a52f196f0c5e81"
+    "bytes": 5644,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm_manuscript_style_print_20261020_author/print.json",
+    "sha256": "365741e56020399a7741fe521cb12494458261aa87d765e710ca30c8d41a829c"
   },
   "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
   "render_receipt": {
-    "bytes": 7129,
-    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/render_receipt_final.json",
-    "sha256": "25e074959a0af82c3141ea5477207572135c0e5b555d9f7bf6577adf2528ae96"
+    "bytes": 6649,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/render_receipt_author.json",
+    "sha256": "d9f77cd200efeebe5850db7433102a472ebd80ae8dc3237243dbe56fa748bea2"
   },
   "retained_draft_history": [
     "First integration probe selected the older pre-abort timing reader; corrected to the existing final prepared-panel reader before plotting. No data or eligibility rule changed.",
     "Initial direct-script renderer invocation required module invocation; no output was admitted from the failed invocation.",
     "Initial HTML omitted CSS, splitting figure headings. Added checked stylesheet support with regressions; final PDF has complete figure pages.",
-    "Intermediate PDF/figure attempts remain outside the final package."
+    "Intermediate PDF/figure attempts remain outside the final package.",
+    "Original draft d3d572ab did not consult writing_guides. Current revision applies all three guides, records the sole author and removes first-person language. Original ZIP is preserved unchanged; all numerical tokens, figures and data are unchanged."
   ],
   "scope": "Original descriptive manuscript package; not an offline full inference distribution, independent biological confirmation, approved submission, or uncontended efficiency comparison.",
+  "sole_author": "Jacob L. Steenwyk",
   "sources": [
     {
       "bytes": 109376,
@@ -88,5 +90,10 @@
     }
   ],
   "standalone_plot_command": "python code/build_hmm_frontier_manuscript.py --snapshot assets_v3/analysis.json --output regenerated_assets",
-  "status": "complete_manuscript_and_figure_draft_rendered_and_reviewed"
+  "status": "style_revised_single_author_manuscript_rendered_and_reviewed",
+  "writing_style_review": {
+    "bytes": 2724,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/validation/STYLE_REVIEW.json",
+    "sha256": "361513dfd55a7e09b499fec01fc923525237125f6ea244edbe25ec68426914cd"
+  }
 }
