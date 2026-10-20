@@ -113,8 +113,26 @@ assumed an optional pair-turnover field existed for canonical. Its failed
 script/log and partial tables remain preserved; the corrected export leaves
 that diagnostic null and reproduces the same score/cost table bytes. No
 scientific rerun, gate change or statistical-inferiority claim is involved.
-Final candidate freezing, confirmation or documented data limits, the overall
-comparison/recommendation and requirement/remote audit remain unfinished.
+The [candidate freeze](hmm_campaign_candidate_freeze_20261020.json) now retains
+all three standalone full-vector passes as one unchanged experimental portfolio,
+not a different winner per benchmark or a recommended new default. It was pushed
+before the [post-freeze confirmation review](results/hmm_confirmation_review_20261020.json).
+The six metadata-only probes found four OrthoBench2 404 responses and two CGOB
+HTTPS connection failures; no response bodies or new reference assignments were
+read. Existing overlap/reference-semantics limitations remain nonblocking and
+do not establish that all public confirmation resources are unavailable.
+
+`report_hmm_campaign_plateau.py --repo <primary repo> --output <fresh directory>`
+consolidates the complete individual-effects admission and the original stopped
+interaction panel from a frozen committed checkout. It refuses partial science,
+changed controls, missing standalone endpoints, passing interactions without
+matched follow-up, altered freezes and label-reading confirmation reviews.
+It preserves all old rows and all six interaction roles, verifies diagnostic
+source pointers and reparses saved phase-cost receipts; it does not run new
+inference, scoring or sampling. Its Slurm wrapper uses1CPU/16G/two hours.
+The tested actual-data preflight recovers29 configuration/control/history rows,
+232 endpoint slots,125 scored observations and106 phase-cost rows. Frozen final
+compilation, final documentation and the requirement/remote audit remain pending.
 
 `plan_weighted_projection_followup.py --repo <repo> --driver <frozen planner>
 --output <fresh directory>` authenticates the exact submitted pilot/reader

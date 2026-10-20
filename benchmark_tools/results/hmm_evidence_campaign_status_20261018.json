@@ -1,8 +1,35 @@
 {
   "schema_version": 1,
-  "status": "active_individual_effects_and_negative_interaction_admitted_final_freeze_confirmation_limits_comparison_audit_pending",
+  "status": "active_science_admitted_portfolio_frozen_confirmation_limits_documented_final_consolidation_audit_pending",
   "latest_individual_effects_admission": "benchmark_tools/results/hmm_individual_effects_20261019/summary.json",
   "latest_interaction_admission": "benchmark_tools/results/weighted_projection_completed_20261020/summary.json",
+  "final_candidate_freeze": {
+    "protocol": "benchmark_tools/hmm_campaign_candidate_freeze_20261020.json",
+    "revision": "9a1f10ca8a403eb2c8811152167c0b255e67b0ef",
+    "state": "pushed_and_remotely_verified_before_postfreeze_metadata_requests",
+    "candidates": ["profile_weighting:henikoff", "profile_weighting:henikoff_cluster", "projection_recovery:projection_off"],
+    "scope": "All standalone full-vector passes retained as one experimental portfolio; no per-endpoint winners, retuning, stopped-branch revival or default promotion. Production sources unchanged from86e39314. Exact original per-dataset commands and source/runtime/input bindings retained."
+  },
+  "postfreeze_confirmation_review": {
+    "summary": "benchmark_tools/results/hmm_confirmation_review_20261020.json",
+    "state": "bounded_metadata_review_complete_no_independent_confirmation_established",
+    "logical_head_probes": 6,
+    "response_body_bytes_read": 0,
+    "new_reference_assignments_read": false,
+    "new_accuracy_evaluation": false,
+    "limitations_nonblocking": true,
+    "scope": "Four tested OrthoBench2 endpoints returned404; two CGOB HTTPS connections failed. Existing ParaBench/CGOB exposure and reference-semantics limits retained, not new overlap calculations. These observations do not prove all public benchmarks absent; missing admitted confirmation limits claims and does not stop final delivery."
+  },
+  "final_plateau_reporter": {
+    "implementation": "benchmark_tools/report_hmm_campaign_plateau.py",
+    "launcher": "benchmark_tools/report_hmm_campaign_plateau.slurm",
+    "tests": "benchmark_tools/results/hmm_campaign_plateau_tests_20261020.xml",
+    "preflight": "benchmark_tools/results/hmm_campaign_plateau_preflight_20261020.json",
+    "state": "tested163_actual_data_preflight_passed_frozen_compilation_and_final_audit_pending",
+    "scope": "Read-only collation of all individual mechanisms and the admitted negative interaction, preserving29 configuration/control/history rows,232 endpoint slots,125 scored observations and106 phase-cost rows. Existing generic diagnostic helpers and actual saved cost receipts verified on complete source admissions. No new inference, scores, functional resampling or scientific gate changes. Full frozen execution, final documentation and requirement/remote audit remain required.",
+    "defaults_promoted": false,
+    "goal_completed": false
+  },
   "scheduler_reconciliation": {
     "snapshot": "benchmark_tools/results/hmm_campaign_scheduler_reconciliation_20261020.json",
     "scope": "Historical read-only accounting for all48 unique jobs then recorded. Fifteen stale scheduler states and exit codes corrected without changing immutable launches or scientific decisions. Older submission/progress prose is historical, never an instruction to restart jobs. Later terminal science24538/reader24539/selection24540 and archive24546 are recorded in latest_interaction_admission; use Slurm for current handles."

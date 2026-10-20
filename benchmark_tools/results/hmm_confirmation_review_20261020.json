@@ -1,0 +1,243 @@
+{
+  "completed_at_utc": "2026-10-20T05:44:01.676207+00:00",
+  "decision": "No strictly independent, release-matched, semantically admitted confirmation panel is currently staged by this review. Retain development-only claims for the frozen three-candidate portfolio and unchanged defaults. Missing confirmation is a nonblocking claim limitation, not permission for unbounded archive hunting, favorable-remainder selection, new retuning or an assertion that no public benchmarks exist elsewhere.",
+  "defaults_promoted": false,
+  "evidence_scope": "Fresh bounded availability observations and current prior-audit/content fingerprints, not a repeat overlap computation or reference-semantics admission. Requests use HEAD, TLS verification and no response-body access; no assignment/prediction/archive body downloaded or read. A successful resource response would establish accessibility only, not complete backgrounds, reference semantics, licensing or independence.",
+  "freeze": {
+    "bytes": 6019,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hmm_campaign_candidate_freeze_20261020.json",
+    "sha256": "8a2f74c09a682a5ade50ceb736eef59bdd56947898964d296045892e8d4c48b4"
+  },
+  "freeze_revision": "9a1f10ca8a403eb2c8811152167c0b255e67b0ef",
+  "goal_completed": false,
+  "independent_confirmation_established": false,
+  "inherited_exposure": {
+    "CGOB": {
+      "candidate_proteins": 109204,
+      "independence_established": false,
+      "overlaps": {
+        "OrthoBench": {
+          "development_proteins": 251378,
+          "matching_candidate_fraction": 0.0,
+          "matching_candidate_proteins": 0,
+          "matching_development_records": 0
+        },
+        "QfO": {
+          "development_proteins": 984137,
+          "matching_candidate_fraction": 0.07490568111058203,
+          "matching_candidate_proteins": 8180,
+          "matching_development_records": 7304
+        },
+        "Simulation_fixed_exposed": {
+          "development_proteins": 50461,
+          "matching_candidate_fraction": 0.0,
+          "matching_candidate_proteins": 0,
+          "matching_development_records": 0
+        },
+        "Simulation_variable_exposed": {
+          "development_proteins": 51241,
+          "matching_candidate_fraction": 0.0,
+          "matching_candidate_proteins": 0,
+          "matching_development_records": 0
+        },
+        "ThreeKingdoms": {
+          "development_proteins": 443217,
+          "matching_candidate_fraction": 0.058248782095893924,
+          "matching_candidate_proteins": 6361,
+          "matching_development_records": 6357
+        },
+        "YGOB_complete_AA_release": {
+          "development_proteins": 114666,
+          "matching_candidate_fraction": 0.058514340134061024,
+          "matching_candidate_proteins": 6390,
+          "matching_development_records": 6627
+        }
+      },
+      "reference_semantics_admitted": false,
+      "union_matching_candidate_records": 8846
+    },
+    "ParaBench": {
+      "candidate_proteins": 305625,
+      "overlaps": {
+        "OrthoBench": {
+          "development_proteins": 251378,
+          "matching_candidate_fraction": 0.05276073619631902,
+          "matching_candidate_proteins": 16125,
+          "matching_candidate_records_by_member": {
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__2-4.zip::Homo_sapiens.fasta": 16124,
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__2-4.zip::Nematostella_vectensis.fasta": 1
+          },
+          "matching_development_records": 21828
+        },
+        "QfO": {
+          "development_proteins": 984137,
+          "matching_candidate_fraction": 0.9983836400817996,
+          "matching_candidate_proteins": 305131,
+          "matching_candidate_records_by_member": {
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__1-4.zip::Arabidopsis_thaliana.fasta": 27435,
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__1-4.zip::Batrachochytrium_dendrobatidis.fasta": 8610,
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__1-4.zip::Chlamydomonas_reinhardtii.fasta": 17610,
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__1-4.zip::Dictyostelium_discoideum.fasta": 12739,
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__1-4.zip::Giardia_intestinalis.fasta": 7154,
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__2-4.zip::Homo_sapiens.fasta": 20445,
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__2-4.zip::Leishmania_major.fasta": 8038,
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__2-4.zip::Monosiga_brevicollis.fasta": 9188,
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__2-4.zip::Nematostella_vectensis.fasta": 24428,
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__3-4.zip::Neurospora_crassa.fasta": 9759,
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__3-4.zip::Paramecium_tetraurelia.fasta": 39461,
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__3-4.zip::Physcomitrella_patens.fasta": 30792,
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__3-4.zip::Phytophthora_ramorum.fasta": 15349,
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__4-4.zip::Plasmodium_falciparum.fasta": 5428,
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__4-4.zip::Thalassiosira_pseudonana.fasta": 11717,
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__4-4.zip::Trichomonas_vaginalis.fasta": 50190,
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__4-4.zip::Ustilago_maydis.fasta": 6788
+          },
+          "matching_development_records": 311565
+        },
+        "ThreeKingdoms": {
+          "development_proteins": 443217,
+          "matching_candidate_fraction": 0.0882683026584867,
+          "matching_candidate_proteins": 26977,
+          "matching_candidate_records_by_member": {
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__1-4.zip::Arabidopsis_thaliana.fasta": 26906,
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__1-4.zip::Batrachochytrium_dendrobatidis.fasta": 1,
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__2-4.zip::Homo_sapiens.fasta": 64,
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__2-4.zip::Nematostella_vectensis.fasta": 2,
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__3-4.zip::Neurospora_crassa.fasta": 1,
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__3-4.zip::Physcomitrella_patens.fasta": 1,
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__3-4.zip::Phytophthora_ramorum.fasta": 2
+          },
+          "matching_development_records": 32624
+        }
+      },
+      "strict_sequence_disjoint_confirmation_ruled_out": true
+    }
+  },
+  "limitations_nonblocking": true,
+  "logical_probes": 6,
+  "new_accuracy_evaluation": false,
+  "new_reference_assignments_downloaded": false,
+  "new_reference_assignments_read": false,
+  "previous_evidence": [
+    {
+      "bytes": 9178,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/confirmation_candidate_review_20261016.json",
+      "sha256": "0fdd418e7eb9270bcb9d9d441e96cbff3575c409c90f2dd6bdfc0935439ad1b7"
+    },
+    {
+      "bytes": 42666,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/confirmation_parabench_overlap_v2_20261012.json",
+      "sha256": "e6367234a32e78f63efabaf2395990d80b051d210743512d4cc74085131e5f48"
+    },
+    {
+      "bytes": 330494,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/confirmation_cgob_overlap_readback_20261013.json",
+      "sha256": "a631f97c8fa6f9069b05c3e849d03dec89de7b4d940f609c467f580d175455be"
+    }
+  ],
+  "request_policy": {
+    "archive_or_reference_body_bytes": 0,
+    "connect_timeout_seconds": 5,
+    "maximum_redirects": 3,
+    "method": "HEAD",
+    "read_timeout_seconds": 10,
+    "tls_verification": true
+  },
+  "requests": [
+    {
+      "body_bytes_read": 0,
+      "content_length": null,
+      "content_type": "text/html; charset=iso-8859-1",
+      "elapsed_seconds": 1.170345104765147,
+      "final_url": "https://eggnog.embl.de/orthobench2/",
+      "last_modified": null,
+      "method": "HEAD",
+      "redirects": [],
+      "started_at_utc": "2026-10-20T05:43:57.596263+00:00",
+      "status_code": 404,
+      "url": "https://eggnog.embl.de/orthobench2/"
+    },
+    {
+      "body_bytes_read": 0,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "elapsed_seconds": 0.8595686848275363,
+      "final_url": "https://eggnogdb.org/orthobench2/",
+      "last_modified": null,
+      "method": "HEAD",
+      "redirects": [
+        {
+          "location": "https://eggnogdb.org/orthobench2/",
+          "status_code": 301,
+          "url": "http://eggnog.embl.de/orthobench2/"
+        }
+      ],
+      "started_at_utc": "2026-10-20T05:43:58.766665+00:00",
+      "status_code": 404,
+      "url": "http://eggnog.embl.de/orthobench2/"
+    },
+    {
+      "body_bytes_read": 0,
+      "content_length": null,
+      "content_type": "text/html; charset=iso-8859-1",
+      "elapsed_seconds": 0.6044554030522704,
+      "final_url": "https://eggnog.embl.de/orthobench2/orthobench2.all.data.tar.gz",
+      "last_modified": null,
+      "method": "HEAD",
+      "redirects": [],
+      "started_at_utc": "2026-10-20T05:43:59.626286+00:00",
+      "status_code": 404,
+      "url": "https://eggnog.embl.de/orthobench2/orthobench2.all.data.tar.gz"
+    },
+    {
+      "body_bytes_read": 0,
+      "content_length": null,
+      "content_type": "text/html; charset=utf-8",
+      "elapsed_seconds": 0.6767328912392259,
+      "final_url": "https://eggnogdb.org/orthobench2/orthobench2.all.data.tar.gz",
+      "last_modified": null,
+      "method": "HEAD",
+      "redirects": [
+        {
+          "location": "https://eggnogdb.org/orthobench2/orthobench2.all.data.tar.gz",
+          "status_code": 301,
+          "url": "http://eggnog.embl.de/orthobench2/orthobench2.all.data.tar.gz"
+        }
+      ],
+      "started_at_utc": "2026-10-20T05:44:00.230783+00:00",
+      "status_code": 404,
+      "url": "http://eggnog.embl.de/orthobench2/orthobench2.all.data.tar.gz"
+    },
+    {
+      "body_bytes_read": 0,
+      "elapsed_seconds": 0.6138295526616275,
+      "error": "HTTPSConnectionPool(host='cgob3.ucd.ie', port=443): Max retries exceeded with url: /info.html (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7325b8951810>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "error_type": "ConnectionError",
+      "method": "HEAD",
+      "started_at_utc": "2026-10-20T05:44:00.907569+00:00",
+      "url": "https://cgob3.ucd.ie/info.html"
+    },
+    {
+      "body_bytes_read": 0,
+      "elapsed_seconds": 0.15311371022835374,
+      "error": "HTTPSConnectionPool(host='cgob3.ucd.ie', port=443): Max retries exceeded with url: /Public_Data/Sequences/AA.fsa (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7325b8951d80>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "error_type": "ConnectionError",
+      "method": "HEAD",
+      "started_at_utc": "2026-10-20T05:44:01.521455+00:00",
+      "url": "https://cgob3.ucd.ie/Public_Data/Sequences/AA.fsa"
+    }
+  ],
+  "requests_version": "2.32.5",
+  "schema_version": 1,
+  "started_at_utc": "2026-10-20T05:43:57.596248+00:00",
+  "status": "bounded_postfreeze_confirmation_review_complete_no_independent_panel_admitted",
+  "verified_remote_before_requests": {
+    "command": [
+      "git",
+      "ls-remote",
+      "origin",
+      "refs/heads/main"
+    ],
+    "output": "9a1f10ca8a403eb2c8811152167c0b255e67b0ef\trefs/heads/main\n"
+  }
+}
