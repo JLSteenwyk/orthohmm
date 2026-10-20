@@ -577,6 +577,19 @@
     "verification": "Exact83ac596e remote science-launch revision verified before submission. Actual frozen84074667 launch() authenticates exact83ac596e ledger blob/entry, jobs24523/24524 and plan/source/selection/reader identities. scontrol confirms reader24525 pending afterany24524, correct frozen cwd,1CPU16G/two hours and zero restarts. Both scientific parents and complete original full-vector admission still required; no transferred score claim.",
     "scope": "Explicit new immutable-launch/campaign binding only. Original score/native/population/assessment/full-vector and sequential checks preserved; seven scientific/evaluation function ASTs unchanged. Old reader/default/frozen failures untouched. Complete new panel/preparation/original eligibility and actual two submitted transfer jobs/plans are still required; no accuracy admission or goal closure."
   },
+  "stockholm_qfo_transfer_terminal": {
+    "milestone": "benchmark_tools/results/stockholm_qfo_transfer_terminal_20261019.json",
+    "state": "qfo24523_completed0_two_arms_native_and_score_checked_tk24524_running_full_reader_pending",
+    "job": {"job_id":"24523","state":"COMPLETED","exit_code":"0:0","elapsed":"04:09:57","cpus":16,"memory_allocation":"128G","node":"bizon"},
+    "scientific_revision": "8f0cd5605842e470e64f40c31bc608c37945b8b3",
+    "driver_revision": "abe393ded90143880378136bf60691581ed24061",
+    "readback_helper_revision": "840746675e9dc1e953c0adee7dba158182922b19",
+    "next_jobs": {"24524":"RUNNING afterok24523","24525":"PENDING afterany24524","24527":"PENDING afterany24525","24528":"PENDING afterany24527"},
+    "scope": "Actual frozen reader helpers authenticate immutable83ac596e launch, source/plan/selection and four raw graph/native execution receipts, with10 content pins and1234 source/protocol records checked. Both arms preserve984137 genes; canonical native products/tree match. Driver completed its six-endpoint scoring checks, but full native/raw-score/population readback remains reader24525's responsibility after both datasets. No accuracy vector admitted here, no changed gates/settings, default promotion or goal closure. Total job elapsed includes assessment/verification and is not OrthoHMM-only inference time.",
+    "accuracy_result_admitted": false,
+    "defaults_promoted": false,
+    "goal_completed": false
+  },
   "complete_individual_effects_compilation": {
     "implementation": "benchmark_tools/report_hmm_transfer_campaign.py",
     "protocol": "benchmark_tools/hmm_transfer_campaign_report_20261019.json",
