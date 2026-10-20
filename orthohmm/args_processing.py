@@ -131,16 +131,13 @@ def process_args(args) -> dict:
             getattr(args, "profile_sequence_weighting", "none")
         )
         profile_alignment_policy = validate_profile_alignment_policy(getattr(args, "profile_alignment_policy", "off"))
-        from .search.msa_center_star import validate_profile_projection_policy
+        from .search.msa_center_star import validate_profile_projection_policy, validate_profile_projection_combination
         profile_projection_policy = validate_profile_projection_policy(getattr(args, "profile_projection_policy", "legacy"))
         if profile_projection_policy != "legacy" and (
             accuracy_profile != "high_sensitivity" or search_mode != "builtin" or args.start
         ):
             raise ValueError("Profile projection repair requires fresh built-in high_sensitivity inference")
-        if profile_projection_policy != "legacy" and (
-            profile_sequence_weighting != "none" or profile_alignment_policy != "off"
-        ):
-            raise ValueError("Combined projection repair and weighting/alignment guards require a separate experiment")
+        validate_profile_projection_combination(profile_projection_policy, profile_sequence_weighting, profile_alignment_policy)
         if profile_alignment_policy != "off" and (
             accuracy_profile != "high_sensitivity" or search_mode != "builtin" or args.start
         ):

@@ -52,8 +52,14 @@ columns. Its one bounded 2x3 OrthoBench panel has four exact constituent control
 and two new combinations. A candidate must improve F1 over both solo components
 and canonical while respecting every matched precision/recall decline bound.
 Only independently admitted passes can advance to unchanged QfO/Three Kingdoms.
-Joint implementation and biological evaluation are still pending; existing
-public guards and all frozen jobs remain unchanged at preregistration.
+The protocol was pushed before enabling the joint options. Shared guards now
+allow only the two registered weighting/repair combinations; production and
+numeric-hit replay record actual per-profile policies/effective counts and
+reject mismatches before scoring. Defaults, other combination restrictions,
+all scoring/construction math and frozen sources are unchanged. Worker/spawn,
+jackknife, nonempty recruitment and small native workflows are tested, but the
+six-arm biological pilot still requires its runner, separate reader and frozen
+launch. This is computational readiness, not evidence of joint accuracy gains.
 
 `report_completed_hmm_resources.py --repo <repo> --output <fresh directory>`
 exports phase-specific costs from the immutable completed weighting/local
@@ -80,7 +86,9 @@ The repair is also available as experimental API `profile_projection_policy`
 and CLI/harness/replay `--profile-projection-policy residue_preserving`.
 Production requires fresh built-in high-sensitivity inference; replay requires
 the original sequences. Worker and jackknife profiles retain the policy.
-Untested combinations with weighting or alignment guards are rejected. Metrics
+Only the separately registered Henikoff weighting/repair combinations are
+enabled for the bounded interaction experiment; other weighting/alignment-guard
+combinations remain rejected. Metrics
 identify the selected policy, and production records the repaired-profile count.
 The five-arm recovery runner is tested, including a complete small native
 fixture. Its [independent reader contract](hmm_projection_recovery_readback_20261019.json)

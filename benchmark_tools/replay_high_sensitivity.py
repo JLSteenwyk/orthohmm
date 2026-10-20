@@ -166,10 +166,12 @@ def main(argv=None) -> int:
     args = build_parser().parse_args(argv)
     if args.profile_projection_policy != "legacy" and not args.fasta_directory:
         raise SystemExit("--profile-projection-policy requires --fasta-directory")
-    if args.profile_projection_policy != "legacy" and (
-        args.profile_sequence_weighting != "none" or args.profile_alignment_policy != "off"
-    ):
-        raise SystemExit("Combined projection repair and weighting/alignment guards require a separate experiment")
+    from orthohmm.search.msa_center_star import validate_profile_projection_combination
+    try:
+        validate_profile_projection_combination(args.profile_projection_policy, args.profile_sequence_weighting,
+                                                args.profile_alignment_policy)
+    except ValueError as error:
+        raise SystemExit(str(error)) from error
     if args.selective_profile_mode != "off" and (
         not args.fasta_directory or args.matrix != "BLOSUM62" or not 1 <= args.cpu <= 16
         or args.profile_sequence_weighting != "none" or args.profile_alignment_policy != "off"
@@ -471,6 +473,8 @@ def main(argv=None) -> int:
                 "alignment_profiles": [{"cluster_id": cluster, "member_ids": list(members)}
                                        for cluster, members in item.alignment_profiles],
                 "alignment_evidence": list(item.alignment_evidence),
+                **({"profile_construction_policies": list(item.profile_construction_policies)}
+                   if args.profile_sequence_weighting != "none" and args.profile_projection_policy != "legacy" else {}),
             }
             for iteration, item in enumerate(profile_results, start=1)
         ]

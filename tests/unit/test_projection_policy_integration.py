@@ -43,14 +43,16 @@ def test_degenerate_msa_normalizes_only_in_opt_in_policy(sequences, expected):
     assert center_star_msa(sequences, get_matrix("BLOSUM62")) == sequences
 
 
-def test_real_worker_builds_preserve_policy_across_spawn_and_jackknife(monkeypatch):
+@pytest.mark.parametrize("weighting", ["none", "henikoff", "henikoff_cluster"])
+def test_real_worker_builds_preserve_policy_across_spawn_and_jackknife(monkeypatch, weighting):
     names, database = family()
     arguments = ([[0, 1, 2], [0, 1, 2]], names, database, "BLOSUM62")
-    serial = expansion.build_cluster_profiles(*arguments, cpu=1, projection_policy=POLICY)
-    parallel = expansion.build_cluster_profiles(*arguments, cpu=2, projection_policy=POLICY)
+    serial = expansion.build_cluster_profiles(*arguments, cpu=1, projection_policy=POLICY, sequence_weighting=weighting)
+    parallel = expansion.build_cluster_profiles(*arguments, cpu=2, projection_policy=POLICY, sequence_weighting=weighting)
     assert set(serial) == set(parallel) == {0, 1}
     for key in serial:
         assert serial[key].projection_policy == parallel[key].projection_policy == POLICY
+        assert serial[key].sequence_weighting == parallel[key].sequence_weighting == weighting
         for field in ("match_emissions", "insert_emissions", "transitions", "consensus"):
             np.testing.assert_array_equal(getattr(serial[key], field), getattr(parallel[key], field))
     original = expansion._build_profile_worker
@@ -66,6 +68,7 @@ def test_real_worker_builds_preserve_policy_across_spawn_and_jackknife(monkeypat
     calibrated = expansion.compute_profile_self_thresholds(
         serial, names, database, cpu=1, matrix_name="BLOSUM62", calibrate_weakest_member=True)
     assert len(observed) == 2 and all(p.projection_policy == POLICY for p in observed)
+    assert all(p.sequence_weighting == weighting for p in observed)
     assert all(np.isfinite(calibrated[k]) and calibrated[k] <= strict[k] for k in strict)
 
 
@@ -117,7 +120,7 @@ def test_api_rejects_inactive_scopes_before_search(tmp_path, accuracy, search, s
                        search_mode=search, profile_projection_policy=POLICY)
 
 
-@pytest.mark.parametrize("option,value,api_key", [("--profile-sequence-weighting", "henikoff", "sequence_weighting"),
+@pytest.mark.parametrize("option,value,api_key", [("--profile-sequence-weighting", "species_henikoff_cluster", "sequence_weighting"),
     ("--profile-alignment-policy", "strict_span_guard", "alignment_policy")])
 def test_unregistered_combinations_rejected_at_all_entry_points(tmp_path, capsys, option, value, api_key):
     from benchmark_tools.benchmark_production import parse_args
@@ -159,7 +162,8 @@ def test_replay_and_harness_reject_inactive_policy_before_outputs(tmp_path, caps
     assert not (tmp_path / "out").exists()
 
 
-def test_numeric_hit_replay_builds_repaired_profiles_and_records_policy(tmp_path, monkeypatch):
+@pytest.mark.parametrize("weighting", ["none", "henikoff", "henikoff_cluster"])
+def test_numeric_hit_replay_builds_repaired_profiles_and_records_policy(tmp_path, monkeypatch, weighting):
     from orthohmm.accuracy import write_accuracy_checkpoint
     from benchmark_tools.orthobench_stage_diagnostics import file_provenance
     from benchmark_tools.replay_high_sensitivity import main
@@ -186,12 +190,25 @@ def test_numeric_hit_replay_builds_repaired_profiles_and_records_policy(tmp_path
     result_json = tmp_path / "result.json"
     assert main(["--accuracy-checkpoint", str(checkpoint), "--checkpoint-sha256", checksum,
                  "--output-directory", str(output), "--json", str(result_json), "--fasta-directory", str(fasta),
-                 "--profile-projection-policy", POLICY, "--cpu", "1"]) == 0
+                 "--profile-projection-policy", POLICY, "--profile-sequence-weighting", weighting, "--cpu", "1"]) == 0
     assert observed and all(p.projection_policy == POLICY for p in observed)
-    assert json.loads(result_json.read_text())["parameters"]["profile_projection_policy"] == POLICY
+    assert all(p.sequence_weighting == weighting for p in observed)
+    result = json.loads(result_json.read_text())
+    assert result["parameters"]["profile_projection_policy"] == POLICY
+    assert result["parameters"]["profile_sequence_weighting"] == weighting
+    for iteration in result["profile_iterations"]:
+        if weighting == "none":
+            assert "profile_construction_policies" not in iteration
+        else:
+            records = iteration["profile_construction_policies"]
+            assert len(records) == iteration["profiles_built"] > 0
+            assert all(r["sequence_weighting"] == weighting and r["projection_policy"] == POLICY for r in records)
+            assert [(r["cluster_id"], r["effective_sequence_count"]) for r in records] == [
+                (r["cluster_id"], r["effective_sequence_count"]) for r in iteration["profile_effective_counts"]]
 
 
-def test_complete_native_pipeline_propagates_opt_in_through_harness_and_cli(tmp_path):
+@pytest.mark.parametrize("weighting", ["none", "henikoff", "henikoff_cluster"])
+def test_complete_native_pipeline_propagates_opt_in_through_harness_and_cli(tmp_path, weighting):
     from benchmark_tools.verify_frozen_phylogeny_install import fixture
     from benchmark_tools.run_full_search_hillclimb import native_command, validate_native, PRODUCTS
     from benchmark_tools.prepare_ob_candidate_neighborhood import record
@@ -206,7 +223,8 @@ def test_complete_native_pipeline_propagates_opt_in_through_harness_and_cli(tmp_
     folder = tmp_path / "native"
     folder.mkdir()
     command = native_command(source, fasta, folder, tools, 100, 2)
-    command.extend(["--search-result-order", "canonical", "--profile-projection-policy", POLICY])
+    command.extend(["--search-result-order", "canonical", "--profile-projection-policy", POLICY,
+                    "--profile-sequence-weighting", weighting])
     environment = {**os.environ, "CUDA_VISIBLE_DEVICES": "", "OMP_NUM_THREADS": "1", "NUMBA_NUM_THREADS": "2",
                    "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1", "PYTHONHASHSEED": "0", "PYTHONPATH": str(source)}
     child = subprocess.run(command, cwd=source, env=environment, capture_output=True, text=True, timeout=180)
@@ -219,3 +237,12 @@ def test_complete_native_pipeline_propagates_opt_in_through_harness_and_cli(tmp_
     assert actual["metrics"]["metadata"]["profile_projection_policy"] == POLICY
     counts = actual["metrics"]["counts"]
     assert counts["high_sensitivity_residue_preserving_profiles"] == counts["high_sensitivity_profiles"] > 0
+    if weighting == "none":
+        assert "high_sensitivity_weighted_residue_preserving_profiles" not in counts
+    else:
+        assert counts["high_sensitivity_weighted_residue_preserving_profiles"] == counts["high_sensitivity_profiles"]
+        diagnostics = json.loads(Path(actual["metrics"]["metadata"]["profile_sequence_weighting_diagnostics"]).read_text())
+        assert diagnostics["projection_policy"] == POLICY and diagnostics["mode"] == weighting
+        records = diagnostics["construction_policies"]
+        assert len(records) == counts["high_sensitivity_profiles"]
+        assert all(r["sequence_weighting"] == weighting and r["projection_policy"] == POLICY for r in records)

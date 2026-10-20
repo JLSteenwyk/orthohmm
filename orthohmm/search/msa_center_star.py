@@ -26,11 +26,22 @@ from .matrices import FULL_CHAR_TO_IDX
 
 _pa_lib = None
 PROFILE_PROJECTION_POLICIES = ("legacy", "residue_preserving")
+WEIGHTED_PROJECTION_MODES = ("henikoff", "henikoff_cluster")
 
 
 def validate_profile_projection_policy(policy):
     if policy not in PROFILE_PROJECTION_POLICIES:
         raise ValueError("Unknown center-star projection policy")
+    return policy
+
+
+def validate_profile_projection_combination(policy, sequence_weighting="none", alignment_policy="off"):
+    """Allow only the two preregistered weighting/repair combinations."""
+    validate_profile_projection_policy(policy)
+    if policy != "legacy" and (
+        sequence_weighting not in ("none", *WEIGHTED_PROJECTION_MODES) or alignment_policy != "off"
+    ):
+        raise ValueError("Combined projection repair and weighting/alignment guards require a separate experiment")
     return policy
 
 

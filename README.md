@@ -129,6 +129,15 @@ The output's `orthohmm_working_res/profile_sequence_weighting.json` records
 the mode and each built profile's effective count. Small development-panel
 gains do not establish generalization or make these modes recommended defaults.
 
+Experimental `--profile-projection-policy residue_preserving` repairs insertion
+coordinates while preserving normalized source residues in profile alignments.
+The default remains `legacy`. It can be paired with `henikoff` or
+`henikoff_cluster` weighting in fresh built-in high-sensitivity runs; species
+weighting and alignment guards remain unsupported with projection repair.
+Joint runs record both actual per-profile policies and effective counts in the
+weighting diagnostics. These joint settings are computationally tested but
+still await their registered biological pilot; they are not recommended defaults.
+
 The separate `--profile-alignment-policy strict_span_guard` experiment also
 requires fresh built-in high-sensitivity inference and cannot be combined
 with nondefault weighting. Its fixed OrthoBench pilot failed the advancement

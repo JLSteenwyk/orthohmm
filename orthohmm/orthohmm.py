@@ -469,16 +469,13 @@ def _execute(
     )
     from .search.profile_spans import validate_profile_alignment_policy
     profile_alignment_policy = validate_profile_alignment_policy(kwargs.pop("profile_alignment_policy", "off"))
-    from .search.msa_center_star import validate_profile_projection_policy
+    from .search.msa_center_star import validate_profile_projection_policy, validate_profile_projection_combination
     profile_projection_policy = validate_profile_projection_policy(kwargs.pop("profile_projection_policy", "legacy"))
     if profile_projection_policy != "legacy" and (
         accuracy_config.name != "high_sensitivity" or search_mode != "builtin" or start is not None
     ):
         raise ValueError("Profile projection repair requires fresh built-in high_sensitivity inference")
-    if profile_projection_policy != "legacy" and (
-        profile_sequence_weighting != "none" or profile_alignment_policy != "off"
-    ):
-        raise ValueError("Combined projection repair and weighting/alignment guards require a separate experiment")
+    validate_profile_projection_combination(profile_projection_policy, profile_sequence_weighting, profile_alignment_policy)
     if profile_alignment_policy != "off" and (
         accuracy_config.name != "high_sensitivity" or search_mode != "builtin" or start is not None
     ):
@@ -878,10 +875,16 @@ def _execute(
                             {"cluster_id": cluster, "effective_sequence_count": count}
                             for cluster, count in profile_result.profile_effective_counts
                         ],
+                        **({"projection_policy": profile_projection_policy,
+                            "construction_policies": list(profile_result.profile_construction_policies)}
+                           if profile_projection_policy != "legacy" else {}),
                     }, handle, indent=2)
                     handle.write("\n")
                 metrics.add_metadata(profile_sequence_weighting_diagnostics=diagnostics_path)
                 metrics.add_counts(high_sensitivity_weighted_profiles=profile_result.profiles_built)
+                if profile_projection_policy != "legacy":
+                    metrics.add_counts(high_sensitivity_weighted_residue_preserving_profiles=
+                                      len(profile_result.profile_construction_policies))
             profile_base_edges = combine_edges(
                 rbnh_edges,
                 profile_result.edges,

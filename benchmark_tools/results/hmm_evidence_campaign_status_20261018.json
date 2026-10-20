@@ -5,11 +5,15 @@
   "weighted_projection_ablation": {
     "protocol": "benchmark_tools/hmm_weighted_projection_ablation_20261019.json",
     "planning_revision": "0e9f87c31995082babbb751f0f85584c29d98995",
-    "state": "prespecified_before_joint_implementation_or_evaluation_no_joint_job_submitted",
+    "state": "core_optin_combinations_tested1472_ready_for_commit_freeze_runner_and_reader_pending_no_joint_biological_job",
+    "milestone": "benchmark_tools/results/weighted_projection_policy_milestone_20261019.json",
+    "protocol_commit": "7f51f99f7654c9532af20145072897fbe664b703",
+    "implementation": ["orthohmm/search/msa_center_star.py", "orthohmm/search/profile_expansion.py", "orthohmm/orthohmm.py", "orthohmm/args_processing.py", "benchmark_tools/replay_high_sensitivity.py", "benchmark_tools/benchmark_production.py"],
+    "activation": "Actual per-profile weighting/projection policies and finite effective counts, with mismatch rejection before scoring. Production weighting diagnostics and numeric replay export joint records only; constituent/default metadata remains unchanged.",
     "design": "One2x3 OrthoBench pilot with four exact constituent controls and two weighted/residue-preserving combinations. Both independently passing weighting modes retained; no per-endpoint winner selection.",
     "hypothesis": "Position-based weighting depends on actual MSA-column distributions; test it on residue-preserving geometry rather than assuming additive standalone gains.",
     "advancement": "Candidate F1 must strictly exceed canonical and both corresponding solo constituents; precision and recall may not decline by more than0.005 against any matched control. All six arms require actual activation/native/score admission. No retuning; original stopped branches stay stopped.",
-    "next": "Commit/push protocol before enabling the two opt-in combinations; test and push scoped compatibility/activation propagation, runner and separately frozen reader before any biological submission. Full QfO/Three Kingdoms only after pilot gates, with registered matched controls.",
+    "next": "Protocol already pushed before implementation. Complete regression tests and commit/push opt-in support; then implement/test/push/freeze the six-arm runner and separate reader before any biological submission. Full QfO/Three Kingdoms only after unchanged pilot gates, with registered matched controls.",
     "defaults_promoted": false,
     "goal_completed": false
   },

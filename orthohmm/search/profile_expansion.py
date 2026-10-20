@@ -20,7 +20,7 @@ from .matrices import (
     get_matrix,
 )
 from .msa_profile import MSAProfile, build_msa_profile
-from .msa_center_star import validate_profile_projection_policy
+from .msa_center_star import validate_profile_projection_policy, validate_profile_projection_combination
 from .sequence_weights import validate_profile_sequence_weighting
 from .prefilter import prefilter_candidates
 from .sequences import SequenceStore, SpeciesSequences
@@ -63,6 +63,7 @@ class ProfileExpansionResult:
     profile_effective_counts: tuple[tuple[int, float], ...] = ()
     alignment_evidence: tuple[dict, ...] = ()
     alignment_profiles: tuple[tuple[int, tuple[str, ...]], ...] = ()
+    profile_construction_policies: tuple[dict, ...] = ()
 
 
 def load_global_sequence_database(
@@ -831,9 +832,7 @@ def expand_profiles(
     """Run the complete strict profile-expansion stage."""
     from .profile_spans import validate_profile_alignment_policy
     validate_profile_alignment_policy(alignment_policy)
-    validate_profile_projection_policy(projection_policy)
-    if projection_policy != "legacy" and (sequence_weighting != "none" or alignment_policy != "off"):
-        raise ValueError("Combined projection repair and weighting/alignment guards require a separate experiment")
+    validate_profile_projection_combination(projection_policy, sequence_weighting, alignment_policy)
     if alignment_policy != "off" and sequence_weighting != "none":
         raise ValueError("Combined profile weighting and alignment guards require a separate experiment")
     if selective_mode not in ("off", "builtin_reselect", "hmmer_score_only", "hmmer_reselect"):
@@ -864,6 +863,17 @@ def expand_profiles(
         **({"sequence_weighting": sequence_weighting} if sequence_weighting != "none" else {}),
         **({"projection_policy": projection_policy} if projection_policy != "legacy" else {}),
     )
+    construction_policies = (
+        tuple({"cluster_id": int(cluster), "sequence_weighting": profile.sequence_weighting,
+               "projection_policy": profile.projection_policy,
+               "effective_sequence_count": float(profile.effective_sequence_count)}
+              for cluster, profile in sorted(profiles.items()))
+        if projection_policy != "legacy" and sequence_weighting != "none" else ()
+    )
+    if any(row["sequence_weighting"] != sequence_weighting or row["projection_policy"] != projection_policy
+           or not np.isfinite(row["effective_sequence_count"]) or row["effective_sequence_count"] <= 0
+           for row in construction_policies):
+        raise ValueError("Joint profile construction did not preserve both requested policies and finite effective counts")
     profile_hits = search_genes_against_profiles(
         profiles,
         sequence_database,
@@ -929,4 +939,5 @@ def expand_profiles(
             (cluster, tuple(profiles[cluster].member_ids))
             for cluster in sorted({row["profile_cluster_id"] for row in alignment_trace})
         ),
+        profile_construction_policies=construction_policies,
     )

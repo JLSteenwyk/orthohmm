@@ -108,17 +108,18 @@ def parse_args(argv=None):
     parser.add_argument("--profile-sequence-weighting", choices=PROFILE_SEQUENCE_WEIGHTING, default="none")
     from orthohmm.search.profile_spans import PROFILE_ALIGNMENT_POLICIES
     parser.add_argument("--profile-alignment-policy", choices=PROFILE_ALIGNMENT_POLICIES, default="off")
-    from orthohmm.search.msa_center_star import PROFILE_PROJECTION_POLICIES
+    from orthohmm.search.msa_center_star import PROFILE_PROJECTION_POLICIES, validate_profile_projection_combination
     parser.add_argument("--profile-projection-policy", choices=PROFILE_PROJECTION_POLICIES, default="legacy")
     parser.add_argument("--native-kernel-trace", type=Path,
                         help="Benchmark-only fail-closed CPU multipair route observation")
     args = parser.parse_args(argv)
     if args.profile_projection_policy != "legacy" and args.accuracy_profile != "high_sensitivity":
         parser.error("--profile-projection-policy requires --accuracy-profile high_sensitivity")
-    if args.profile_projection_policy != "legacy" and (
-        args.profile_sequence_weighting != "none" or args.profile_alignment_policy != "off"
-    ):
-        parser.error("Combined projection repair and weighting/alignment guards require a separate experiment")
+    try:
+        validate_profile_projection_combination(args.profile_projection_policy, args.profile_sequence_weighting,
+                                                args.profile_alignment_policy)
+    except ValueError as error:
+        parser.error(str(error))
     if args.profile_alignment_policy != "off" and args.accuracy_profile != "high_sensitivity":
         parser.error("--profile-alignment-policy requires --accuracy-profile high_sensitivity")
     if args.profile_alignment_policy != "off" and args.profile_sequence_weighting != "none":
