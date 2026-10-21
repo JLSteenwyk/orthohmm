@@ -108,6 +108,13 @@ def test_method_inventory_contains_all_fixed_configs_not_best_per_dataset():
             "projection_recovery:projection_off"}.issubset(keys)
 
 
+def test_manuscript_names_are_hmm2_without_renaming_historical_run_keys():
+    own = paper.METHODS[:6]
+    assert all(label.startswith("OrthoHMM2 ") for _, label, *_ in own)
+    assert own[4][0] == "orthohmm_high_sensitivity"
+    assert own[5][0] == "orthohmm_phylogeny_satellite_v2"
+
+
 def timing_panel():
     runs, cells = [], []
     for method in ("sensitive", "phylogeny", "finder"):

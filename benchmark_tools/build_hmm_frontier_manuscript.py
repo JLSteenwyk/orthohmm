@@ -38,12 +38,12 @@ ENDPOINTS = {
 PRIMARY = ("OB", "VGNC", "SwissTrees")
 ALL_F1 = (*PRIMARY, "TreeFam", "TK")
 METHODS = (
-    ("profile_weighting:none", "OrthoHMM canonical", "OH-C", "#0072B2", "o"),
-    ("profile_weighting:henikoff", "OrthoHMM Henikoff", "OH-W", "#117733", ">"),
-    ("profile_weighting:henikoff_cluster", "OrthoHMM clustered Henikoff", "OH-N", "#44AA99", "<"),
-    ("projection_recovery:projection_off", "OrthoHMM projection repair", "OH-R", "#882255", "h"),
-    ("orthohmm_high_sensitivity", "OrthoHMM sensitive (retained)", "OH-S", "#56B4E9", "D"),
-    ("orthohmm_phylogeny_satellite_v2", "OrthoHMM phylogeny (retained)", "OH-P", "#009E73", "s"),
+    ("profile_weighting:none", "OrthoHMM2 canonical", "OH-C", "#0072B2", "o"),
+    ("profile_weighting:henikoff", "OrthoHMM2 Henikoff", "OH-W", "#117733", ">"),
+    ("profile_weighting:henikoff_cluster", "OrthoHMM2 clustered Henikoff", "OH-N", "#44AA99", "<"),
+    ("projection_recovery:projection_off", "OrthoHMM2 projection repair", "OH-R", "#882255", "h"),
+    ("orthohmm_high_sensitivity", "OrthoHMM2 sensitive (retained)", "OH-S", "#56B4E9", "D"),
+    ("orthohmm_phylogeny_satellite_v2", "OrthoHMM2 phylogeny (retained)", "OH-P", "#009E73", "s"),
     ("orthofinder_3_1_5_full", "OrthoFinder 3.1.5 full", "OF-F", "#D55E00", "^"),
     ("orthofinder_3_1_5_sequence_only", "OrthoFinder sequence checkpoint", "OF-S", "#E69F00", "v"),
     ("sonicparanoid_2_0_9", "SonicParanoid 2.0.9", "SP", "#CC79A7", "P"),
