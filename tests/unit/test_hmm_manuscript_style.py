@@ -67,7 +67,7 @@ def test_original_orthohmm_preprint_is_credited_without_renaming_its_authors_or_
     assert "original OrthoHMM" in introduction
     assert "[@orthohmm2024preprint]" in introduction
     assert "OrthoHMM2 extends that framework" in introduction
-    assert 'title: "OrthoHMM2:' in manuscript()
+    assert 'title: "OrthoHMM2: HMM-centered orthology inference"' in manuscript()
 
 
 def test_all_citations_resolve_to_unique_bibliography_entries():

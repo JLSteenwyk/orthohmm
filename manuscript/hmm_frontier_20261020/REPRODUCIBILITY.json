@@ -16,9 +16,9 @@
   },
   "builder_commit": "a322adb48c680eb63cc71cd4ca1532897ae81f3c",
   "docx": {
-    "bytes": 1197145,
-    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/manuscript_hmm2.docx",
-    "sha256": "29e3ad5d258b7e9e8def4483421abb7333932aafce1d65a0d1864ac6740dd255"
+    "bytes": 1197108,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/manuscript_hmm2_title.docx",
+    "sha256": "02616c482102809fdf94e220b7e53adf7fd259688c1d0e8e7bd01ba70ffdfce3"
   },
   "docx_command": "pandoc --from=markdown --to=docx --standalone --citeproc --bibliography=references.csl.json --resource-path=. --output=<fresh DOCX> manuscript.md",
   "html_render_command": "python -m benchmark_tools.render_manuscript_review --repo . --manuscript manuscript/hmm_frontier_20261020/manuscript.md --output <fresh sibling HTML> --report <fresh receipt JSON> --bibliography manuscript/hmm_frontier_20261020/references.csl.json --stylesheet manuscript/hmm_frontier_20261020/paper.css",
@@ -28,15 +28,15 @@
     "sha256": "1cb1ba054df9a0e398e1b386e8ae1205a03dd38776aa338c423737aac42cbdfa"
   },
   "naming_and_citations_review": {
-    "bytes": 2152,
+    "bytes": 2147,
     "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/validation/ORTHOHMM2_REVIEW.json",
-    "sha256": "cc265b6644f2aab5c561dedf2503bc1ea2978d055aa861f61c1066e1606362d7"
+    "sha256": "6f42ea11758b4bdebdb4df0520d063d3e2e35b2acc74acf9c9320d1ca0e0a5d7"
   },
   "pandoc_version": "pandoc 3.1.3",
   "pdf": {
-    "bytes": 1366268,
+    "bytes": 1366219,
     "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/manuscript.pdf",
-    "sha256": "c3e128bcf8d07ffc06bc26414e86aa35a075d86058b13a5cc8d9314848493d5f"
+    "sha256": "621ad9571b4c4d853785ba4f6b3198b6593b00d5413a11666f32efc72db3b805"
   },
   "plotting_versions": {
     "matplotlib_version": "3.10.8",
@@ -47,21 +47,21 @@
     "--headless",
     "--disable-gpu",
     "--no-pdf-header-footer",
-    "--user-data-dir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm2_manuscript_print_20261021/browser_profile",
-    "--print-to-pdf=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm2_manuscript_print_20261021/document.pdf",
+    "--user-data-dir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm2_title_print_20261021/browser_profile",
+    "--print-to-pdf=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm2_title_print_20261021/document.pdf",
     "--no-sandbox",
-    "file:///mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/manuscript_hmm2.html"
+    "file:///mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/manuscript_hmm2_title.html"
   ],
   "print_report": {
-    "bytes": 5589,
-    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm2_manuscript_print_20261021/print.json",
-    "sha256": "dade1cbd3346e5ff30dbeb8854236e4045792d5bba2d3b9cabb4a3e28716c597"
+    "bytes": 5587,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hmm2_title_print_20261021/print.json",
+    "sha256": "c718fdb56bf49f73925f494803efd12f787743815878954423714dfd45d2c0ac"
   },
   "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
   "render_receipt": {
-    "bytes": 7184,
-    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/render_receipt_hmm2.json",
-    "sha256": "0435d629cd5d5772e5c13739d7f06f55c41a0faf5e9230e245df4d096e61b693"
+    "bytes": 6709,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/render_receipt_hmm2_title.json",
+    "sha256": "4d6609d277f61b258154692b424e5340a40f79c3e9610879a99cc3afb150e7d0"
   },
   "retained_draft_history": [
     "First integration probe selected the older pre-abort timing reader; corrected to the existing final prepared-panel reader before plotting. No data or eligibility rule changed.",
@@ -69,7 +69,8 @@
     "Initial HTML omitted CSS, splitting figure headings. Added checked stylesheet support with regressions; final PDF has complete figure pages.",
     "Intermediate PDF/figure attempts remain outside the final package.",
     "Original draft d3d572ab did not consult writing_guides. Current revision applies all three guides, records the sole author and removes first-person language. Original ZIP is preserved unchanged; all numerical tokens, figures and data are unchanged.",
-    "21 October revision uses OrthoHMM2 display names, adds direct QfO/Schlicker/FAS citations, and preserves all scientific values and historical run identifiers. Original assets_v3 and previous ZIPs remain in the repository but outside the current ZIP."
+    "21 October revision uses OrthoHMM2 display names, adds direct QfO/Schlicker/FAS citations, and preserves all scientific values and historical run identifiers. Original assets_v3 and previous ZIPs remain in the repository but outside the current ZIP.",
+    "Title shortened at the author's request. Manuscript body, figures, bibliography and scientific results unchanged; prior title render and ZIP preserved separately."
   ],
   "scope": "Original descriptive manuscript package; not an offline full inference distribution, independent biological confirmation, approved submission, or uncontended efficiency comparison.",
   "sole_author": "Jacob L. Steenwyk",
@@ -98,8 +99,8 @@
   "standalone_plot_command": "python code/build_hmm_frontier_manuscript.py --snapshot assets_v4/analysis.json --output regenerated_assets",
   "status": "orthohmm2_single_author_manuscript_rendered_and_reviewed",
   "writing_style_review": {
-    "bytes": 3250,
+    "bytes": 3391,
     "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/validation/STYLE_REVIEW.json",
-    "sha256": "671a99f7d57fecf7a5e48a6f391ce15689af18d2e6e87e51af1bd2552cc18d63"
+    "sha256": "6ba76bed7dea762cad2b1a4daacdd9a9760c09a5e5081f4ceba7a81e4401e70d"
   }
 }

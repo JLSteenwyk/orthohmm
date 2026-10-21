@@ -8,8 +8,8 @@ Published figures and published benchmark coordinates are not reused.
 ## Read The Manuscript
 
 - `manuscript.pdf`: formatted manuscript, references, figures and legends.
-- `manuscript_hmm2.docx`: editable version, with embedded figure images.
-- `manuscript_hmm2.html`: local browser version; keep it beside `paper.css` and assets.
+- `manuscript_hmm2_title.docx`: editable version, with embedded figure images.
+- `manuscript_hmm2_title.html`: local browser version; keep it beside `paper.css` and assets.
 - `manuscript.md`: editable source.
 - `assets_v4/fig3_pareto.pdf`: vector Pareto figure.
 - `assets_v4/`: all seven figures in PDF, SVG and 220-dpi PNG, plus source data.
@@ -25,7 +25,7 @@ The current revision follows all three files in the supplied `writing_guides`
 directory, including the explicit first-person and punctuation restrictions.
 `validation/STYLE_REVIEW.json` records the guide fingerprints and checks.
 The original ZIP remains an unchanged historical draft; the current download
-is `OrthoHMM2_manuscript_20261021.zip`.
+is `OrthoHMM2_manuscript_20261021_title.zip`.
 
 OrthoHMM2 is the manuscript name for the extended development framework.
 The original OrthoHMM preprint is cited with its original title and full author

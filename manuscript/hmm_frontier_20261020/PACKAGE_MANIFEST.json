@@ -8,9 +8,9 @@
   ],
   "files": [
     {
-      "bytes": 6823,
+      "bytes": 6841,
       "path": "README.md",
-      "sha256": "756550e8aaea76015722a451946ad285dbd2376528a15cd7804ea428dac59801"
+      "sha256": "6ea7a655a4f3bc2f220b1d3e44e40302907aabc254a83cdf11bd5d670436ce75"
     },
     {
       "bytes": 4766,
@@ -18,9 +18,9 @@
       "sha256": "68bc6c22dbb8827310fe2d212f9b020439a0f78721b09351f4f9eee066bcb1a9"
     },
     {
-      "bytes": 22517,
+      "bytes": 22483,
       "path": "manuscript.md",
-      "sha256": "cf2e86865b512af2af5b4205f227130184b86dfd54238c6207938d1ad1a446e8"
+      "sha256": "0b8903ba9b408217f5109ae06124f178709c11691fa1ef62ca0d3f7500a9e2d9"
     },
     {
       "bytes": 1148,
@@ -38,29 +38,29 @@
       "sha256": "b2e079ffc5ab73a95c7666b2ecf87fcf832c49a7637ed3bd35515cd1d83dfb3b"
     },
     {
-      "bytes": 33955,
-      "path": "manuscript_hmm2.html",
-      "sha256": "3058c4be615a5466c0e5e402d9f1709cb9367c8132f83429880052275a0b774f"
+      "bytes": 33921,
+      "path": "manuscript_hmm2_title.html",
+      "sha256": "382abda5ebf9ac76df526e4f75d830c7455ee26623c2f28bdc0c90af8489404d"
     },
     {
-      "bytes": 1197145,
-      "path": "manuscript_hmm2.docx",
-      "sha256": "29e3ad5d258b7e9e8def4483421abb7333932aafce1d65a0d1864ac6740dd255"
+      "bytes": 1197108,
+      "path": "manuscript_hmm2_title.docx",
+      "sha256": "02616c482102809fdf94e220b7e53adf7fd259688c1d0e8e7bd01ba70ffdfce3"
     },
     {
-      "bytes": 1366268,
+      "bytes": 1366219,
       "path": "manuscript.pdf",
-      "sha256": "c3e128bcf8d07ffc06bc26414e86aa35a075d86058b13a5cc8d9314848493d5f"
+      "sha256": "621ad9571b4c4d853785ba4f6b3198b6593b00d5413a11666f32efc72db3b805"
     },
     {
-      "bytes": 7184,
-      "path": "render_receipt_hmm2.json",
-      "sha256": "0435d629cd5d5772e5c13739d7f06f55c41a0faf5e9230e245df4d096e61b693"
+      "bytes": 6709,
+      "path": "render_receipt_hmm2_title.json",
+      "sha256": "4d6609d277f61b258154692b424e5340a40f79c3e9610879a99cc3afb150e7d0"
     },
     {
-      "bytes": 6602,
+      "bytes": 6775,
       "path": "REPRODUCIBILITY.json",
-      "sha256": "4866bb378f317e741b803e36a371f056776243c13a3b7f5b8951d3ab2bded052"
+      "sha256": "1d0c9555721ddaa141afa4626dbd0b7216293de9b98b88fb76819dd234b9c35c"
     },
     {
       "bytes": 32,
@@ -78,19 +78,19 @@
       "sha256": "33e9a354a624cbdc164e8ea07a34783e0c09d5ee6f5bc403ca24589a73233366"
     },
     {
-      "bytes": 4680,
+      "bytes": 4663,
       "path": "validation/verification.json",
-      "sha256": "4cd88a2b3d06ba6cf36744f906e55231408e1ab43d77dbb97a710b49688b5dd7"
+      "sha256": "9a23ef27874a1ce0cd89baf07d204e32e07327c8f8c50136e2e0550d198af2f1"
     },
     {
       "bytes": 15684,
       "path": "validation/style_tests.xml",
-      "sha256": "34cbbc784791fc75974782df64cef05cb6a590b4cec4c9f2d3cd4370a014c9cb"
+      "sha256": "fd7f013655220549114b270626902a429d5ee397b9c345c57e6b51b64145076c"
     },
     {
-      "bytes": 3250,
+      "bytes": 3391,
       "path": "validation/STYLE_REVIEW.json",
-      "sha256": "671a99f7d57fecf7a5e48a6f391ce15689af18d2e6e87e51af1bd2552cc18d63"
+      "sha256": "6ba76bed7dea762cad2b1a4daacdd9a9760c09a5e5081f4ceba7a81e4401e70d"
     },
     {
       "bytes": 91600,
@@ -228,14 +228,14 @@
       "sha256": "86ff8be75f7de7c5fa33ddc5548ca7479eda95b0c484ad60450c96eb3ab838e7"
     },
     {
-      "bytes": 2152,
+      "bytes": 2147,
       "path": "validation/ORTHOHMM2_REVIEW.json",
-      "sha256": "cc265b6644f2aab5c561dedf2503bc1ea2978d055aa861f61c1066e1606362d7"
+      "sha256": "6f42ea11758b4bdebdb4df0520d063d3e2e35b2acc74acf9c9320d1ca0e0a5d7"
     }
   ],
   "main_figures": 5,
-  "manuscript_words": 2834,
-  "observed_at_utc": "2026-10-21T22:47:18.746879+00:00",
+  "manuscript_words": 2830,
+  "observed_at_utc": "2026-10-21T22:58:42.471672+00:00",
   "pdf_pages": 12,
   "schema_version": 1,
   "scope": "Editorial OrthoHMM2 naming and citation revision; scientific values and historical run identities unchanged. Not a software release, submission approval or archival DOI.",
@@ -243,5 +243,5 @@
   "status": "validated_orthohmm2_single_author_manuscript_draft",
   "supplementary_figures": 2,
   "tests_passed": 104,
-  "title": "OrthoHMM2: HMM-centered orthology inference with explicit accuracy trade-offs"
+  "title": "OrthoHMM2: HMM-centered orthology inference"
 }

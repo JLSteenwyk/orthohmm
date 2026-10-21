@@ -1,5 +1,5 @@
 ---
-title: "OrthoHMM2: HMM-centered orthology inference with explicit accuracy trade-offs"
+title: "OrthoHMM2: HMM-centered orthology inference"
 author: "Jacob L. Steenwyk"
 lang: en
 ---

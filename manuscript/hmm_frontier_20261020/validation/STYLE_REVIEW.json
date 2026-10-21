@@ -2,9 +2,9 @@
   "DOCX_first_person_occurrences": 0,
   "PDF_first_person_occurrences": 0,
   "citation_revision": {
-    "bytes": 2152,
+    "bytes": 2147,
     "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/validation/ORTHOHMM2_REVIEW.json",
-    "sha256": "cc265b6644f2aab5c561dedf2503bc1ea2978d055aa861f61c1066e1606362d7"
+    "sha256": "6f42ea11758b4bdebdb4df0520d063d3e2e35b2acc74acf9c9320d1ca0e0a5d7"
   },
   "current_revision_used_all_three_guides": true,
   "editorial_review": [
@@ -14,7 +14,8 @@
     "Reworked prose colons, reduced vague promotional language and empty framing, and changed the data-availability heading to sentence case.",
     "Preserved all benchmark values, uncertainty, source references and limitations.",
     "Reviewed all twelve revised PDF pages; author byline is visible and figure headings/captions remain complete.",
-    "21 October revision names the development study OrthoHMM2, retains original preprint attribution, and adds three direct references. Numerical checks ignore the editorial name suffix and asset-directory revision, not scientific values."
+    "21 October revision names the development study OrthoHMM2, retains original preprint attribution, and adds three direct references. Numerical checks ignore the editorial name suffix and asset-directory revision, not scientific values.",
+    "Shortened the title exactly to OrthoHMM2: HMM-centered orthology inference. The manuscript body, figures and citations are unchanged."
   ],
   "figures_changed_only_for_method_display_names": true,
   "first_draft_used_these_guides": false,
@@ -36,7 +37,7 @@
     }
   ],
   "inferred_affiliations_or_contact_details": false,
-  "observed_at_utc": "2026-10-21T22:47:18.746879+00:00",
+  "observed_at_utc": "2026-10-21T22:58:42.471672+00:00",
   "original_TSVs_byte_identical": true,
   "original_draft_zip": {
     "bytes": 3630098,
@@ -54,6 +55,6 @@
   "tests_report": {
     "bytes": 15684,
     "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/validation/style_tests.xml",
-    "sha256": "34cbbc784791fc75974782df64cef05cb6a590b4cec4c9f2d3cd4370a014c9cb"
+    "sha256": "fd7f013655220549114b270626902a429d5ee397b9c345c57e6b51b64145076c"
   }
 }
