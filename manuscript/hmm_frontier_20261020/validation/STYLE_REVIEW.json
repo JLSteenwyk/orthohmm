@@ -2,9 +2,9 @@
   "DOCX_first_person_occurrences": 0,
   "PDF_first_person_occurrences": 0,
   "citation_revision": {
-    "bytes": 2147,
+    "bytes": 2434,
     "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/validation/ORTHOHMM2_REVIEW.json",
-    "sha256": "6f42ea11758b4bdebdb4df0520d063d3e2e35b2acc74acf9c9320d1ca0e0a5d7"
+    "sha256": "2bceb7a301bbf328ed29d72fb068a2bdb67e144abf1f063d9ee0e0485274b33b"
   },
   "current_revision_used_all_three_guides": true,
   "editorial_review": [
@@ -15,7 +15,8 @@
     "Preserved all benchmark values, uncertainty, source references and limitations.",
     "Reviewed all twelve revised PDF pages; author byline is visible and figure headings/captions remain complete.",
     "21 October revision names the development study OrthoHMM2, retains original preprint attribution, and adds three direct references. Numerical checks ignore the editorial name suffix and asset-directory revision, not scientific values.",
-    "Shortened the title exactly to OrthoHMM2: HMM-centered orthology inference. The manuscript body, figures and citations are unchanged."
+    "Shortened the title exactly to OrthoHMM2: HMM-centered orthology inference. The manuscript body, figures and citations are unchanged.",
+    "Reviewed all seventeen citations, corrected bibliography ordering/locators and clarified the QfO adaptation of Schlicker similarity. Scientific values, figures and citation identities are unchanged."
   ],
   "figures_changed_only_for_method_display_names": true,
   "first_draft_used_these_guides": false,
@@ -37,7 +38,7 @@
     }
   ],
   "inferred_affiliations_or_contact_details": false,
-  "observed_at_utc": "2026-10-21T22:58:42.471672+00:00",
+  "observed_at_utc": "2026-10-21T23:06:22.057472+00:00",
   "original_TSVs_byte_identical": true,
   "original_draft_zip": {
     "bytes": 3630098,
@@ -51,10 +52,10 @@
   "sole_author": "Jacob L. Steenwyk",
   "source_first_person_occurrences": 0,
   "status": "writing_guides_applied_sole_author_and_impersonal_prose_verified",
-  "tests_passed": 104,
+  "tests_passed": 109,
   "tests_report": {
-    "bytes": 15684,
+    "bytes": 16407,
     "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/validation/style_tests.xml",
-    "sha256": "fd7f013655220549114b270626902a429d5ee397b9c345c57e6b51b64145076c"
+    "sha256": "683d4d36a2be2d352d7804d3e46bfbc791f543799699e6f443036326ada338c8"
   }
 }

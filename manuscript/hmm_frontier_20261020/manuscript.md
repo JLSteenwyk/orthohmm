@@ -221,7 +221,7 @@ groups [@orthobench2020]. Evaluation retains its recorded weighted
 group-recovery precision, recall, and F1. The corrected QfO panel comprises 78 proteomes and
 984137 proteins, with versioned references and identifier mappings
 [@qfo2016; @qfo2020; @qfo2024]. VGNC, SwissTrees, and TreeFam-A supply reference-pair
-F1; EC and GO retain the QfO conditional Schlicker similarity means
+F1; EC and GO retain the QfO adaptation of Schlicker similarity as conditional means
 [@qfo2016; @schlicker2006], and feature architecture similarity (FAS) is reported
 separately [@Dosch2023FAS; @qfo2024]. Their arithmetic mean is not an accuracy endpoint. Three Kingdoms
 contains 443217 proteins from 12 proteomes; its reference comprises 2035

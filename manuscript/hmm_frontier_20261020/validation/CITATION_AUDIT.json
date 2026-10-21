@@ -1,0 +1,1140 @@
+{
+  "benchmark_results_unchanged": true,
+  "citation_groups": 14,
+  "citation_mentions": 20,
+  "corrections": [
+    {
+      "change": "Moved the consortium from first author to its publisher-listed position after Matthieu Muffato; first author is Adrian M Altenhoff.",
+      "id": "qfo2016"
+    },
+    {
+      "change": "Article 238 moved from number to the renderable CSL page field.",
+      "id": "orthofinder2019"
+    },
+    {
+      "change": "Article 1322477 moved from number to the renderable CSL page field.",
+      "id": "proteinortho2023"
+    },
+    {
+      "change": "Article 195 moved from number to the renderable CSL page field.",
+      "id": "sonicparanoid2024"
+    },
+    {
+      "change": "Article btad226 moved from number to the renderable CSL page field, in both bibliography copies.",
+      "id": "Dosch2023FAS"
+    },
+    {
+      "change": "Added finalized volume 23, issue 10 and page 2110, verified against the publisher's correction PDF.",
+      "id": "orthofinder2026correction"
+    },
+    {
+      "change": "Clarified that GO/EC means use QfO's adaptation of Schlicker similarity.",
+      "id": "schlicker2006"
+    }
+  ],
+  "duplicate_DOIs": [],
+  "limitations": [
+    "Metadata and the scope of each actual citation were checked using registry records and available primary text, abstracts and publisher records; this is not a reproduction of the cited studies.",
+    "Some publisher full texts, including the original OrthoHMM preprint, were unavailable. Its narrow HMM-method attribution was verified against the publisher-deposited abstract.",
+    "Method papers do not independently establish the precise executable versions, local input counts or newly reported results; those depend on the retained project run records."
+  ],
+  "observed_at_utc": "2026-10-21T23:04:01.195235+00:00",
+  "original_orthohmm_title_and_author_metadata_unchanged": true,
+  "references": [
+    {
+      "DOI": "10.1093/molbev/msab199",
+      "claim_fit_reviewed": true,
+      "claim_scope": "BUSCO marker/completeness framework. Does not independently validate the custom Three Kingdoms counts or establish that its restricted markers are genome-wide orthology truth.",
+      "doi_and_title_verified": true,
+      "id": "busco2021",
+      "primary_record_url": "https://academic.oup.com/mbe/article/38/10/4647/6329644",
+      "registry_metadata": {
+        "author": [
+          {
+            "family": "Manni",
+            "given": "Mos\u00e8"
+          },
+          {
+            "family": "Berkeley",
+            "given": "Matthew R"
+          },
+          {
+            "family": "Seppey",
+            "given": "Mathieu"
+          },
+          {
+            "family": "Sim\u00e3o",
+            "given": "Felipe A"
+          },
+          {
+            "family": "Zdobnov",
+            "given": "Evgeny M"
+          }
+        ],
+        "container-title": [
+          "Molecular Biology and Evolution"
+        ],
+        "issue": "10",
+        "page": "4647-4654",
+        "published-online": {
+          "date-parts": [
+            [
+              2021,
+              7,
+              28
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2021,
+              9,
+              27
+            ]
+          ]
+        },
+        "volume": "38"
+      },
+      "registry_observed_at_utc": "2026-10-21T23:00:41.798687+00:00",
+      "registry_record_url": "https://api.crossref.org/works/10.1093/molbev/msab199",
+      "title": "BUSCO Update: Novel and Streamlined Workflows along with Broader and Deeper Phylogenetic Coverage for Scoring of Eukaryotic, Prokaryotic, and Viral Genomes"
+    },
+    {
+      "DOI": "10.1371/journal.pcbi.1002195",
+      "claim_fit_reviewed": true,
+      "claim_scope": "Profile HMM homology searches and HMMER3 methodology. Does not validate the custom built-in significance approximation or establish the recorded HMMER 3.4 executable version.",
+      "doi_and_title_verified": true,
+      "id": "eddy2011",
+      "primary_record_url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1002195",
+      "registry_metadata": {
+        "author": [
+          {
+            "family": "Eddy",
+            "given": "Sean R."
+          }
+        ],
+        "container-title": [
+          "PLoS Computational Biology"
+        ],
+        "issue": "10",
+        "page": "e1002195",
+        "published-online": {
+          "date-parts": [
+            [
+              2011,
+              10,
+              20
+            ]
+          ]
+        },
+        "volume": "7"
+      },
+      "registry_observed_at_utc": "2026-10-21T23:00:41.890972+00:00",
+      "registry_record_url": "https://api.crossref.org/works/10.1371/journal.pcbi.1002195",
+      "title": "Accelerated Profile HMM Searches"
+    },
+    {
+      "DOI": "10.1038/s41592-024-02552-8",
+      "claim_fit_reviewed": true,
+      "claim_scope": "Attribution of the FastOMA inference method. Version 0.3.5, supplied species tree and this study's scores come from run records, not this publication.",
+      "doi_and_title_verified": true,
+      "id": "fastoma2025",
+      "primary_record_url": "https://www.nature.com/articles/s41592-024-02552-8",
+      "registry_metadata": {
+        "author": [
+          {
+            "family": "Majidian",
+            "given": "Sina"
+          },
+          {
+            "family": "Nevers",
+            "given": "Yannis"
+          },
+          {
+            "family": "Yazdizadeh Kharrazi",
+            "given": "Ali"
+          },
+          {
+            "family": "Warwick Vesztrocy",
+            "given": "Alex"
+          },
+          {
+            "family": "Pascarelli",
+            "given": "Stefano"
+          },
+          {
+            "family": "Moi",
+            "given": "David"
+          },
+          {
+            "family": "Glover",
+            "given": "Natasha"
+          },
+          {
+            "family": "Altenhoff",
+            "given": "Adrian M."
+          },
+          {
+            "family": "Dessimoz",
+            "given": "Christophe"
+          }
+        ],
+        "container-title": [
+          "Nature Methods"
+        ],
+        "issue": "2",
+        "page": "269-272",
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              3
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              2
+            ]
+          ]
+        },
+        "volume": "22"
+      },
+      "registry_observed_at_utc": "2026-10-21T23:00:42.008623+00:00",
+      "registry_record_url": "https://api.crossref.org/works/10.1038/s41592-024-02552-8",
+      "title": "Orthology inference at scale with FastOMA"
+    },
+    {
+      "DOI": "10.1016/0022-2836(94)90032-9",
+      "claim_fit_reviewed": true,
+      "claim_scope": "Original position-based sequence-weighting method. Cluster normalization and missing-position handling are implementation variants, not claimed as literal original-paper behavior.",
+      "doi_and_title_verified": true,
+      "id": "henikoff1994",
+      "primary_record_url": "https://www.sciencedirect.com/science/article/pii/0022283694900329",
+      "registry_metadata": {
+        "author": [
+          {
+            "family": "Henikoff",
+            "given": "Steven"
+          },
+          {
+            "family": "Henikoff",
+            "given": "Jorja G."
+          }
+        ],
+        "container-title": [
+          "Journal of Molecular Biology"
+        ],
+        "issue": "4",
+        "page": "574-578",
+        "published-print": {
+          "date-parts": [
+            [
+              1994,
+              11
+            ]
+          ]
+        },
+        "volume": "243"
+      },
+      "registry_observed_at_utc": "2026-10-21T23:00:42.106503+00:00",
+      "registry_record_url": "https://api.crossref.org/works/10.1016/0022-2836(94)90032-9",
+      "title": "Position-based sequence weights"
+    },
+    {
+      "DOI": "10.1093/gbe/evaa211",
+      "claim_fit_reviewed": true,
+      "claim_scope": "Revised curated OrthoBench benchmark and 12 input proteomes. This study's precise input inventory and weighted scores remain bound to its own retained records.",
+      "doi_and_title_verified": true,
+      "id": "orthobench2020",
+      "primary_record_url": "https://academic.oup.com/gbe/article/12/12/2258/5918455",
+      "registry_metadata": {
+        "author": [
+          {
+            "family": "Emms",
+            "given": "David M"
+          },
+          {
+            "family": "Kelly",
+            "given": "Steven"
+          }
+        ],
+        "container-title": [
+          "Genome Biology and Evolution"
+        ],
+        "issue": "12",
+        "page": "2258-2266",
+        "published-online": {
+          "date-parts": [
+            [
+              2020,
+              10,
+              6
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2020,
+              12,
+              6
+            ]
+          ]
+        },
+        "volume": "12"
+      },
+      "registry_observed_at_utc": "2026-10-21T23:00:42.200968+00:00",
+      "registry_record_url": "https://api.crossref.org/works/10.1093/gbe/evaa211",
+      "title": "Benchmarking Orthogroup Inference Accuracy: Revisiting Orthobench"
+    },
+    {
+      "DOI": "10.1186/s13059-019-1832-y",
+      "claim_fit_reviewed": true,
+      "claim_scope": "OrthoFinder's integration of sequence-based groups and phylogenetic orthology inference. No current-run performance number is attributed to this paper.",
+      "doi_and_title_verified": true,
+      "id": "orthofinder2019",
+      "primary_record_url": "https://link.springer.com/article/10.1186/s13059-019-1832-y",
+      "registry_metadata": {
+        "article-number": "238",
+        "author": [
+          {
+            "family": "Emms",
+            "given": "David M."
+          },
+          {
+            "family": "Kelly",
+            "given": "Steven"
+          }
+        ],
+        "container-title": [
+          "Genome Biology"
+        ],
+        "issue": "1",
+        "published-online": {
+          "date-parts": [
+            [
+              2019,
+              11,
+              14
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2019,
+              12
+            ]
+          ]
+        },
+        "volume": "20"
+      },
+      "registry_observed_at_utc": "2026-10-21T23:00:42.292210+00:00",
+      "registry_record_url": "https://api.crossref.org/works/10.1186/s13059-019-1832-y",
+      "title": "OrthoFinder: phylogenetic orthology inference for comparative genomics"
+    },
+    {
+      "DOI": "10.1038/s41592-026-03126-6",
+      "claim_fit_reviewed": true,
+      "claim_scope": "Updated phylogenetic delineation and scalability of OrthoFinder. This study uses its own comparison coordinates, not the paper's published scores or plots.",
+      "doi_and_title_verified": true,
+      "id": "orthofinder2026",
+      "primary_record_url": "https://www.nature.com/articles/s41592-026-03126-6",
+      "registry_metadata": {
+        "author": [
+          {
+            "family": "Emms",
+            "given": "David M."
+          },
+          {
+            "family": "Liu",
+            "given": "Yi"
+          },
+          {
+            "family": "Belcher",
+            "given": "Laurence"
+          },
+          {
+            "family": "Holmes",
+            "given": "Jonathan"
+          },
+          {
+            "family": "Kelly",
+            "given": "Steven"
+          }
+        ],
+        "container-title": [
+          "Nature Methods"
+        ],
+        "issue": "7",
+        "page": "1327-1333",
+        "published-online": {
+          "date-parts": [
+            [
+              2026,
+              6,
+              9
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2026,
+              7
+            ]
+          ]
+        },
+        "volume": "23"
+      },
+      "registry_observed_at_utc": "2026-10-21T23:00:42.397831+00:00",
+      "registry_record_url": "https://api.crossref.org/works/10.1038/s41592-026-03126-6",
+      "title": "OrthoFinder: improved phylogenetic orthology inference with enhanced accuracy and scalability"
+    },
+    {
+      "DOI": "10.1038/s41592-026-03238-z",
+      "claim_fit_reviewed": true,
+      "claim_scope": "The correction replaces an incorrect Figure 2 in the original article. It is retained alongside the main paper, not treated as a separate inference method or independent performance study.",
+      "doi_and_title_verified": true,
+      "id": "orthofinder2026correction",
+      "primary_record_url": "https://www.nature.com/articles/s41592-026-03238-z.pdf",
+      "registry_metadata": {
+        "author": [
+          {
+            "family": "Emms",
+            "given": "David M."
+          },
+          {
+            "family": "Liu",
+            "given": "Yi"
+          },
+          {
+            "family": "Belcher",
+            "given": "Laurence"
+          },
+          {
+            "family": "Holmes",
+            "given": "Jonathan"
+          },
+          {
+            "family": "Kelly",
+            "given": "Steven"
+          }
+        ],
+        "container-title": [
+          "Nature Methods"
+        ],
+        "issue": "10",
+        "page": "2110-2110",
+        "published-online": {
+          "date-parts": [
+            [
+              2026,
+              8,
+              26
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2026,
+              10
+            ]
+          ]
+        },
+        "volume": "23"
+      },
+      "registry_observed_at_utc": "2026-10-21T23:00:42.488244+00:00",
+      "registry_record_url": "https://api.crossref.org/works/10.1038/s41592-026-03238-z",
+      "title": "Author Correction: OrthoFinder: improved phylogenetic orthology inference with enhanced accuracy and scalability"
+    },
+    {
+      "DOI": "10.1101/2024.12.07.627370",
+      "claim_fit_reviewed": true,
+      "claim_scope": "The depositor-supplied abstract explicitly introduces HMM-based orthogroup inference, supporting the narrow attribution in the Introduction. The full preprint was not accessible; its reported superiority is not imported into this manuscript.",
+      "doi_and_title_verified": true,
+      "id": "orthohmm2024preprint",
+      "primary_record_url": "https://api.crossref.org/works/10.1101/2024.12.07.627370",
+      "registry_metadata": {
+        "author": [
+          {
+            "family": "Steenwyk",
+            "given": "Jacob L"
+          },
+          {
+            "family": "Buida",
+            "given": "Thomas J."
+          },
+          {
+            "family": "Rokas",
+            "given": "Antonis"
+          },
+          {
+            "family": "King",
+            "given": "Nicole"
+          }
+        ],
+        "container-title": []
+      },
+      "registry_observed_at_utc": "2026-10-21T23:00:42.583758+00:00",
+      "registry_record_url": "https://api.crossref.org/works/10.1101/2024.12.07.627370",
+      "title": "OrthoHMM: Improved Inference of Ortholog Groups using Hidden Markov Models"
+    },
+    {
+      "DOI": "10.1101/gr.1224503",
+      "claim_fit_reviewed": true,
+      "claim_scope": "Original OrthoMCL group-inference method. The historical 1.4 executable and this study's scores require run receipts and are not authenticated by the method paper alone.",
+      "doi_and_title_verified": true,
+      "id": "orthomcl2003",
+      "primary_record_url": "https://genome.cshlp.org/content/13/9/2178.full.pdf",
+      "registry_metadata": {
+        "author": [
+          {
+            "family": "Li",
+            "given": "Li"
+          },
+          {
+            "family": "Stoeckert",
+            "given": "Christian J.",
+            "suffix": "Jr."
+          },
+          {
+            "family": "Roos",
+            "given": "David S."
+          }
+        ],
+        "container-title": [
+          "Genome Research"
+        ],
+        "issue": "9",
+        "page": "2178-2189",
+        "published-online": {
+          "date-parts": [
+            [
+              2003,
+              9,
+              2
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2003,
+              9
+            ]
+          ]
+        },
+        "volume": "13"
+      },
+      "registry_observed_at_utc": "2026-10-21T23:00:42.672412+00:00",
+      "registry_record_url": "https://api.crossref.org/works/10.1101/gr.1224503",
+      "title": "OrthoMCL: Identification of Ortholog Groups for Eukaryotic Genomes"
+    },
+    {
+      "DOI": "10.3389/fbinf.2023.1322477",
+      "claim_fit_reviewed": true,
+      "claim_scope": "Proteinortho6 pseudo-reciprocal comparisons and graph-based inference. Version 6.3.6 and current benchmark values come from retained runs.",
+      "doi_and_title_verified": true,
+      "id": "proteinortho2023",
+      "primary_record_url": "https://www.frontiersin.org/journals/bioinformatics/articles/10.3389/fbinf.2023.1322477/full",
+      "registry_metadata": {
+        "article-number": "1322477",
+        "author": [
+          {
+            "family": "Klemm",
+            "given": "Paul"
+          },
+          {
+            "family": "Stadler",
+            "given": "Peter F."
+          },
+          {
+            "family": "Lechner",
+            "given": "Marcus"
+          }
+        ],
+        "container-title": [
+          "Frontiers in Bioinformatics"
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2023,
+              12,
+              13
+            ]
+          ]
+        },
+        "volume": "3"
+      },
+      "registry_observed_at_utc": "2026-10-21T23:00:42.773111+00:00",
+      "registry_record_url": "https://api.crossref.org/works/10.3389/fbinf.2023.1322477",
+      "title": "Proteinortho6: pseudo-reciprocal best alignment heuristic for graph-based detection of (co-)orthologs"
+    },
+    {
+      "DOI": "10.1038/nmeth.3830",
+      "claim_fit_reviewed": true,
+      "claim_scope": "Standardized pairwise benchmarking and conditional GO/EC conservation tests. Publisher/PubMed author ordering overrides the erroneous consortium-first Crossref deposit.",
+      "doi_and_title_verified": true,
+      "id": "qfo2016",
+      "primary_record_url": "https://www.nature.com/articles/nmeth.3830",
+      "registry_metadata": {
+        "author": [
+          {
+            "name": "Quest for Orthologs consortium"
+          },
+          {
+            "family": "Altenhoff",
+            "given": "Adrian M"
+          },
+          {
+            "family": "Boeckmann",
+            "given": "Brigitte"
+          },
+          {
+            "family": "Capella-Gutierrez",
+            "given": "Salvador"
+          },
+          {
+            "family": "Dalquen",
+            "given": "Daniel A"
+          },
+          {
+            "family": "DeLuca",
+            "given": "Todd"
+          },
+          {
+            "family": "Forslund",
+            "given": "Kristoffer"
+          },
+          {
+            "family": "Huerta-Cepas",
+            "given": "Jaime"
+          },
+          {
+            "family": "Linard",
+            "given": "Benjamin"
+          },
+          {
+            "family": "Pereira",
+            "given": "C\u00e9cile"
+          },
+          {
+            "family": "Pryszcz",
+            "given": "Leszek P"
+          },
+          {
+            "family": "Schreiber",
+            "given": "Fabian"
+          },
+          {
+            "family": "da Silva",
+            "given": "Alan Sousa"
+          },
+          {
+            "family": "Szklarczyk",
+            "given": "Damian"
+          },
+          {
+            "family": "Train",
+            "given": "Cl\u00e9ment-Marie"
+          },
+          {
+            "family": "Bork",
+            "given": "Peer"
+          },
+          {
+            "family": "Lecompte",
+            "given": "Odile"
+          },
+          {
+            "family": "von Mering",
+            "given": "Christian"
+          },
+          {
+            "family": "Xenarios",
+            "given": "Ioannis"
+          },
+          {
+            "family": "Sj\u00f6lander",
+            "given": "Kimmen"
+          },
+          {
+            "family": "Jensen",
+            "given": "Lars Juhl"
+          },
+          {
+            "family": "Martin",
+            "given": "Maria J"
+          },
+          {
+            "family": "Muffato",
+            "given": "Matthieu"
+          },
+          {
+            "family": "Gabald\u00f3n",
+            "given": "Toni"
+          },
+          {
+            "family": "Lewis",
+            "given": "Suzanna E"
+          },
+          {
+            "family": "Thomas",
+            "given": "Paul D"
+          },
+          {
+            "family": "Sonnhammer",
+            "given": "Erik"
+          },
+          {
+            "family": "Dessimoz",
+            "given": "Christophe"
+          }
+        ],
+        "container-title": [
+          "Nature Methods"
+        ],
+        "issue": "5",
+        "page": "425-430",
+        "published-online": {
+          "date-parts": [
+            [
+              2016,
+              4,
+              4
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2016,
+              5
+            ]
+          ]
+        },
+        "volume": "13"
+      },
+      "registry_observed_at_utc": "2026-10-21T23:00:42.865579+00:00",
+      "registry_record_url": "https://api.crossref.org/works/10.1038/nmeth.3830",
+      "title": "Standardized benchmarking in the quest for orthologs"
+    },
+    {
+      "DOI": "10.1093/nar/gkaa308",
+      "claim_fit_reviewed": true,
+      "claim_scope": "QfO benchmark service and reference-proteome release. Exact input counts and corrected identifier mappings are properties of the retained local panel, not inferred from publication metadata.",
+      "doi_and_title_verified": true,
+      "id": "qfo2020",
+      "primary_record_url": "https://academic.oup.com/nar/article/48/W1/W538/5831173",
+      "registry_metadata": {
+        "author": [
+          {
+            "family": "Altenhoff",
+            "given": "Adrian M"
+          },
+          {
+            "family": "Garrayo-Ventas",
+            "given": "Javier"
+          },
+          {
+            "family": "Cosentino",
+            "given": "Salvatore"
+          },
+          {
+            "family": "Emms",
+            "given": "David"
+          },
+          {
+            "family": "Glover",
+            "given": "Natasha M"
+          },
+          {
+            "family": "Hern\u00e1ndez-Plaza",
+            "given": "Ana"
+          },
+          {
+            "family": "Nevers",
+            "given": "Yannis"
+          },
+          {
+            "family": "Sundesha",
+            "given": "Vicky"
+          },
+          {
+            "family": "Szklarczyk",
+            "given": "Damian"
+          },
+          {
+            "family": "Fern\u00e1ndez",
+            "given": "Jos\u00e9 M"
+          },
+          {
+            "family": "Cod\u00f3",
+            "given": "Laia"
+          },
+          {
+            "family": "for\u00a0Orthologs\u00a0Consortium",
+            "given": "the Quest"
+          },
+          {
+            "family": "Gelpi",
+            "given": "Josep Ll"
+          },
+          {
+            "family": "Huerta-Cepas",
+            "given": "Jaime"
+          },
+          {
+            "family": "Iwasaki",
+            "given": "Wataru"
+          },
+          {
+            "family": "Kelly",
+            "given": "Steven"
+          },
+          {
+            "family": "Lecompte",
+            "given": "Odile"
+          },
+          {
+            "family": "Muffato",
+            "given": "Matthieu"
+          },
+          {
+            "family": "Martin",
+            "given": "Maria J"
+          },
+          {
+            "family": "Capella-Gutierrez",
+            "given": "Salvador"
+          },
+          {
+            "family": "Thomas",
+            "given": "Paul D"
+          },
+          {
+            "family": "Sonnhammer",
+            "given": "Erik"
+          },
+          {
+            "family": "Dessimoz",
+            "given": "Christophe"
+          }
+        ],
+        "container-title": [
+          "Nucleic Acids Research"
+        ],
+        "issue": "W1",
+        "page": "W538-W545",
+        "published-online": {
+          "date-parts": [
+            [
+              2020,
+              5,
+              6
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2020,
+              7,
+              2
+            ]
+          ]
+        },
+        "volume": "48"
+      },
+      "registry_observed_at_utc": "2026-10-21T23:00:42.968786+00:00",
+      "registry_record_url": "https://api.crossref.org/works/10.1093/nar/gkaa308",
+      "title": "The Quest for Orthologs benchmark service and consensus calls in 2020"
+    },
+    {
+      "DOI": "10.1186/s13059-024-03298-4",
+      "claim_fit_reviewed": true,
+      "claim_scope": "SonicParanoid2 method attribution. Does not independently establish the executable version, options or scores used in this study.",
+      "doi_and_title_verified": true,
+      "id": "sonicparanoid2024",
+      "primary_record_url": "https://link.springer.com/article/10.1186/s13059-024-03298-4",
+      "registry_metadata": {
+        "article-number": "195",
+        "author": [
+          {
+            "family": "Cosentino",
+            "given": "Salvatore"
+          },
+          {
+            "family": "Sriswasdi",
+            "given": "Sira"
+          },
+          {
+            "family": "Iwasaki",
+            "given": "Wataru"
+          }
+        ],
+        "container-title": [
+          "Genome Biology"
+        ],
+        "issue": "1",
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              7,
+              25
+            ]
+          ]
+        },
+        "volume": "25"
+      },
+      "registry_observed_at_utc": "2026-10-21T23:00:43.067932+00:00",
+      "registry_record_url": "https://api.crossref.org/works/10.1186/s13059-024-03298-4",
+      "title": "SonicParanoid2: fast, accurate, and comprehensive orthology inference with machine learning and language models"
+    },
+    {
+      "DOI": "10.1093/nargab/lqae167",
+      "claim_fit_reviewed": true,
+      "claim_scope": "QfO updates and integration of the FAS conservation benchmark. The publisher's online date, 11 December 2024, is preferred over Crossref's inconsistent generic issued date.",
+      "doi_and_title_verified": true,
+      "id": "qfo2024",
+      "primary_record_url": "https://academic.oup.com/nargab/article/6/4/lqae167/7921053",
+      "registry_metadata": {
+        "article-number": "lqae167",
+        "author": [
+          {
+            "family": "Altenhoff",
+            "given": "Adrian"
+          },
+          {
+            "family": "Nevers",
+            "given": "Yannis"
+          },
+          {
+            "family": "Tran",
+            "given": "Vinh"
+          },
+          {
+            "family": "Jyothi",
+            "given": "Dushyanth"
+          },
+          {
+            "family": "Martin",
+            "given": "Maria"
+          },
+          {
+            "family": "Cosentino",
+            "given": "Salvatore"
+          },
+          {
+            "family": "Majidian",
+            "given": "Sina"
+          },
+          {
+            "family": "Marcet-Houben",
+            "given": "Marina"
+          },
+          {
+            "family": "Fuentes-Palacios",
+            "given": "Diego"
+          },
+          {
+            "family": "Persson",
+            "given": "Emma"
+          },
+          {
+            "family": "Walsh",
+            "given": "Thomas"
+          },
+          {
+            "family": "Lecompte",
+            "given": "Odile"
+          },
+          {
+            "family": "Gabald\u00f3n",
+            "given": "Toni"
+          },
+          {
+            "family": "Kelly",
+            "given": "Steven"
+          },
+          {
+            "family": "Hu",
+            "given": "Yanhui"
+          },
+          {
+            "family": "Iwasaki",
+            "given": "Wataru"
+          },
+          {
+            "family": "Capella-Gutierrez",
+            "given": "Salvador"
+          },
+          {
+            "family": "Dessimoz",
+            "given": "Christophe"
+          },
+          {
+            "family": "Thomas",
+            "given": "Paul\u00a0D"
+          },
+          {
+            "family": "Ebersberger",
+            "given": "Ingo"
+          },
+          {
+            "family": "Sonnhammer",
+            "given": "Erik"
+          }
+        ],
+        "container-title": [
+          "NAR Genomics and Bioinformatics"
+        ],
+        "issue": "4",
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              12,
+              11
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              9,
+              28
+            ]
+          ]
+        },
+        "volume": "6"
+      },
+      "registry_observed_at_utc": "2026-10-21T23:00:43.173036+00:00",
+      "registry_record_url": "https://api.crossref.org/works/10.1093/nargab/lqae167",
+      "title": "New developments for the Quest for Orthologs benchmark service"
+    },
+    {
+      "DOI": "10.1186/1471-2105-7-302",
+      "claim_fit_reviewed": true,
+      "claim_scope": "Original GO-based functional semantic similarity. Manuscript now explicitly calls the GO/EC benchmark scoring a QfO adaptation rather than implying that the original article introduced EC benchmarking.",
+      "doi_and_title_verified": true,
+      "id": "schlicker2006",
+      "primary_record_url": "https://link.springer.com/article/10.1186/1471-2105-7-302",
+      "registry_metadata": {
+        "article-number": "302",
+        "author": [
+          {
+            "family": "Schlicker",
+            "given": "Andreas"
+          },
+          {
+            "family": "Domingues",
+            "given": "Francisco S"
+          },
+          {
+            "family": "Rahnenf\u00fchrer",
+            "given": "J\u00f6rg"
+          },
+          {
+            "family": "Lengauer",
+            "given": "Thomas"
+          }
+        ],
+        "container-title": [
+          "BMC Bioinformatics"
+        ],
+        "issue": "1",
+        "published-online": {
+          "date-parts": [
+            [
+              2006,
+              6,
+              15
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2006,
+              12
+            ]
+          ]
+        },
+        "volume": "7"
+      },
+      "registry_observed_at_utc": "2026-10-21T23:00:43.270692+00:00",
+      "registry_record_url": "https://api.crossref.org/works/10.1186/1471-2105-7-302",
+      "title": "A new measure for functional similarity of gene products based on Gene Ontology"
+    },
+    {
+      "DOI": "10.1093/bioinformatics/btad226",
+      "claim_fit_reviewed": true,
+      "claim_scope": "Feature architecture similarity and its application to orthology evaluation. A conditional mean is not presented as matched-population orthology accuracy or as F1.",
+      "doi_and_title_verified": true,
+      "id": "Dosch2023FAS",
+      "primary_record_url": "https://academic.oup.com/bioinformatics/article/39/5/btad226/7135831",
+      "registry_metadata": {
+        "article-number": "btad226",
+        "author": [
+          {
+            "family": "Dosch",
+            "given": "Julian"
+          },
+          {
+            "family": "Bergmann",
+            "given": "Holger"
+          },
+          {
+            "family": "Tran",
+            "given": "Vinh"
+          },
+          {
+            "family": "Ebersberger",
+            "given": "Ingo"
+          }
+        ],
+        "container-title": [
+          "Bioinformatics"
+        ],
+        "issue": "5",
+        "published-online": {
+          "date-parts": [
+            [
+              2023,
+              4,
+              21
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2023,
+              5,
+              4
+            ]
+          ]
+        },
+        "volume": "39"
+      },
+      "registry_observed_at_utc": "2026-10-21T23:00:43.364724+00:00",
+      "registry_record_url": "https://api.crossref.org/works/10.1093/bioinformatics/btad226",
+      "title": "FAS: assessing the similarity between proteins using multi-layered feature architectures"
+    }
+  ],
+  "status": "all_seventeen_reference_identities_and_cited_claim_scopes_reviewed",
+  "unique_references": 17,
+  "unresolved_citations": [],
+  "unused_references": []
+}

@@ -3,6 +3,11 @@
   "PDF_pages": 12,
   "VGNC_SwissTrees_frontier_members": 1,
   "all_five_frontier_members": 9,
+  "citation_audit": {
+    "bytes": 32942,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/validation/CITATION_AUDIT.json",
+    "sha256": "7e70c5c15a0383f334f9557b5663eca49d31c48c35d6c5d0575b62b94afa92ed"
+  },
   "citations_resolved": 17,
   "configurations": 12,
   "defaults_promoted": false,
@@ -76,11 +81,11 @@
   "independent_confirmation_established": false,
   "main_figures": 5,
   "naming_and_citations_review": {
-    "bytes": 2147,
+    "bytes": 2434,
     "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/validation/ORTHOHMM2_REVIEW.json",
-    "sha256": "6f42ea11758b4bdebdb4df0520d063d3e2e35b2acc74acf9c9320d1ca0e0a5d7"
+    "sha256": "2bceb7a301bbf328ed29d72fb068a2bdb67e144abf1f063d9ee0e0485274b33b"
   },
-  "observed_at_utc": "2026-10-21T22:58:42.471672+00:00",
+  "observed_at_utc": "2026-10-21T23:06:22.057472+00:00",
   "original_score_rows": 29,
   "page_review": [
     {
@@ -101,12 +106,12 @@
     {
       "embedded_figures": 0,
       "page": 4,
-      "text_characters": 4594
+      "text_characters": 4559
     },
     {
       "embedded_figures": 0,
       "page": 5,
-      "text_characters": 5192
+      "text_characters": 5216
     },
     {
       "embedded_figures": 1,
@@ -166,12 +171,12 @@
   "status": "manuscript_numerical_structural_visual_and_standalone_replay_checks_passed",
   "supplementary_figures": 2,
   "tests_failed": 0,
-  "tests_passed": 104,
+  "tests_passed": 109,
   "tests_skipped": 0,
-  "visual_review": "Shortened title checked on the new first page. All twelve pages checked for image counts and text bounds; figures, manuscript body and citations are unchanged.",
+  "visual_review": "Rebuilt PDF retains twelve pages with seven complete figure/caption pages; bibliography checked for corrected author order and visible article locators. Text blocks lie inside page bounds.",
   "writing_style_review": {
-    "bytes": 3391,
+    "bytes": 3597,
     "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/validation/STYLE_REVIEW.json",
-    "sha256": "6ba76bed7dea762cad2b1a4daacdd9a9760c09a5e5081f4ceba7a81e4401e70d"
+    "sha256": "1d1af7a78c5640967f134c6111bc174a52e2af1a4421ec39a6c431550d873160"
   }
 }

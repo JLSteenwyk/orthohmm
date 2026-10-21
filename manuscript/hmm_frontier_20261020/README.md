@@ -8,8 +8,8 @@ Published figures and published benchmark coordinates are not reused.
 ## Read The Manuscript
 
 - `manuscript.pdf`: formatted manuscript, references, figures and legends.
-- `manuscript_hmm2_title.docx`: editable version, with embedded figure images.
-- `manuscript_hmm2_title.html`: local browser version; keep it beside `paper.css` and assets.
+- `manuscript_citations.docx`: editable version, with embedded figure images.
+- `manuscript_citations_final.html`: local browser version; keep it beside `paper.css` and assets.
 - `manuscript.md`: editable source.
 - `assets_v4/fig3_pareto.pdf`: vector Pareto figure.
 - `assets_v4/`: all seven figures in PDF, SVG and 220-dpi PNG, plus source data.
@@ -25,7 +25,7 @@ The current revision follows all three files in the supplied `writing_guides`
 directory, including the explicit first-person and punctuation restrictions.
 `validation/STYLE_REVIEW.json` records the guide fingerprints and checks.
 The original ZIP remains an unchanged historical draft; the current download
-is `OrthoHMM2_manuscript_20261021_title.zip`.
+is `OrthoHMM2_manuscript_20261021_citations.zip`.
 
 OrthoHMM2 is the manuscript name for the extended development framework.
 The original OrthoHMM preprint is cited with its original title and full author
@@ -33,11 +33,18 @@ list. Original run identifiers, archived scores, software version numbers and
 source revisions are unchanged; this editorial naming is not a software release.
 
 The bibliography has 17 cited entries with no unresolved keys, duplicate DOIs,
-or unused entries. The citation revision adds the 2024 QfO developments paper,
-the original Schlicker similarity paper, and the FAS method paper. Existing
-references, including the original OrthoHMM preprint, retain their metadata.
+or unused entries. There are 20 reference mentions in 14 citation groups.
+The initial citation revision added the 2024 QfO developments paper,
+the original Schlicker similarity paper, and the FAS method paper. The original
+OrthoHMM preprint retains its title and complete author metadata.
 `validation/ORTHOHMM2_REVIEW.json` records naming, citation and data-preservation
-checks. This is not an exhaustive full-text audit of every literature claim.
+checks. `validation/CITATION_AUDIT.json` records the subsequent review of all
+17 DOI identities, bibliographic records and actual claim scopes. This review
+corrects the 2016 QfO consortium ordering, restores four article locators lost
+by citation rendering, adds finalized pagination for the OrthoFinder correction,
+and clarifies the QfO adaptation of Schlicker similarity. Some original full
+texts were unavailable; the report states the evidence and limits for each
+reference. No biological results or benchmark scores changed.
 
 ## Scientific Interpretation
 

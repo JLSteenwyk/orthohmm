@@ -8,9 +8,9 @@
   ],
   "files": [
     {
-      "bytes": 6841,
+      "bytes": 7359,
       "path": "README.md",
-      "sha256": "6ea7a655a4f3bc2f220b1d3e44e40302907aabc254a83cdf11bd5d670436ce75"
+      "sha256": "44985e08d7eb553d7e1791f59f9d386949d64e14f521bb9ede5252fd81cf5723"
     },
     {
       "bytes": 4766,
@@ -18,49 +18,49 @@
       "sha256": "68bc6c22dbb8827310fe2d212f9b020439a0f78721b09351f4f9eee066bcb1a9"
     },
     {
-      "bytes": 22483,
+      "bytes": 22500,
       "path": "manuscript.md",
-      "sha256": "0b8903ba9b408217f5109ae06124f178709c11691fa1ef62ca0d3f7500a9e2d9"
+      "sha256": "73d0faea7d11efdab7c8e568ad40b8da183f9106d9e150230e4997bebd4fed79"
     },
     {
       "bytes": 1148,
       "path": "paper.css",
-      "sha256": "866bd52124ddb751d9c655dc84659bee8b0e33bb3de8f7e5252160f2206783ba"
+      "sha256": "bc59489155aea8eedfff45ae2eeb004dbc83295d4510c823e45c7c51ea7de392"
     },
     {
-      "bytes": 18159,
+      "bytes": 18210,
       "path": "references.csl.json",
-      "sha256": "c0c413c6ddf1630a81ea0d2e4883f0a9571c3e8451c021109eba86bb425dc4a8"
+      "sha256": "585e3955bad4b60abbc52a683be58ac5aeefecc2da7f39de8150936e67456ae8"
     },
     {
-      "bytes": 4834,
+      "bytes": 4832,
       "path": "additional_references.csl.json",
-      "sha256": "b2e079ffc5ab73a95c7666b2ecf87fcf832c49a7637ed3bd35515cd1d83dfb3b"
+      "sha256": "6aa581906b7643bad6e1d576de3db9d3ad3c284020c5a0af5c141b9b97270029"
     },
     {
-      "bytes": 33921,
-      "path": "manuscript_hmm2_title.html",
-      "sha256": "382abda5ebf9ac76df526e4f75d830c7455ee26623c2f28bdc0c90af8489404d"
+      "bytes": 33908,
+      "path": "manuscript_citations_final.html",
+      "sha256": "216e1bae792c871de460ff5a93d05847a52daae47dc15c7447f1e9c8f81407ac"
     },
     {
-      "bytes": 1197108,
-      "path": "manuscript_hmm2_title.docx",
-      "sha256": "02616c482102809fdf94e220b7e53adf7fd259688c1d0e8e7bd01ba70ffdfce3"
+      "bytes": 1197130,
+      "path": "manuscript_citations.docx",
+      "sha256": "e69d9d7d55daad9324c572bd5d4b75b851cbe74c6a420f39740acc2dd4423556"
     },
     {
-      "bytes": 1366219,
+      "bytes": 1366441,
       "path": "manuscript.pdf",
-      "sha256": "621ad9571b4c4d853785ba4f6b3198b6593b00d5413a11666f32efc72db3b805"
+      "sha256": "2a71cde4bb600441b34681f1669a891aedd1665e8e459664fed9de6ef6ca9d2a"
     },
     {
-      "bytes": 6709,
-      "path": "render_receipt_hmm2_title.json",
-      "sha256": "4d6609d277f61b258154692b424e5340a40f79c3e9610879a99cc3afb150e7d0"
+      "bytes": 6714,
+      "path": "render_receipt_citations_final.json",
+      "sha256": "6de3f2bf00d6e5e1708f8a6c80e32d53f781e0bd61b7a6274e1d30f9ca58ba76"
     },
     {
-      "bytes": 6775,
+      "bytes": 7310,
       "path": "REPRODUCIBILITY.json",
-      "sha256": "1d0c9555721ddaa141afa4626dbd0b7216293de9b98b88fb76819dd234b9c35c"
+      "sha256": "c76d8a58c2228dde06003662ed1935265c6531133487a6d0bfcf537c7ba06f20"
     },
     {
       "bytes": 32,
@@ -78,19 +78,19 @@
       "sha256": "33e9a354a624cbdc164e8ea07a34783e0c09d5ee6f5bc403ca24589a73233366"
     },
     {
-      "bytes": 4663,
+      "bytes": 4959,
       "path": "validation/verification.json",
-      "sha256": "9a23ef27874a1ce0cd89baf07d204e32e07327c8f8c50136e2e0550d198af2f1"
+      "sha256": "e7e276d7daf52dae19a364cdce2c38845faa86b35e172c23d1eb2c3c95f0420c"
     },
     {
-      "bytes": 15684,
+      "bytes": 16407,
       "path": "validation/style_tests.xml",
-      "sha256": "fd7f013655220549114b270626902a429d5ee397b9c345c57e6b51b64145076c"
+      "sha256": "683d4d36a2be2d352d7804d3e46bfbc791f543799699e6f443036326ada338c8"
     },
     {
-      "bytes": 3391,
+      "bytes": 3597,
       "path": "validation/STYLE_REVIEW.json",
-      "sha256": "6ba76bed7dea762cad2b1a4daacdd9a9760c09a5e5081f4ceba7a81e4401e70d"
+      "sha256": "1d1af7a78c5640967f134c6111bc174a52e2af1a4421ec39a6c431550d873160"
     },
     {
       "bytes": 91600,
@@ -228,20 +228,25 @@
       "sha256": "86ff8be75f7de7c5fa33ddc5548ca7479eda95b0c484ad60450c96eb3ab838e7"
     },
     {
-      "bytes": 2147,
+      "bytes": 2434,
       "path": "validation/ORTHOHMM2_REVIEW.json",
-      "sha256": "6f42ea11758b4bdebdb4df0520d063d3e2e35b2acc74acf9c9320d1ca0e0a5d7"
+      "sha256": "2bceb7a301bbf328ed29d72fb068a2bdb67e144abf1f063d9ee0e0485274b33b"
+    },
+    {
+      "bytes": 32942,
+      "path": "validation/CITATION_AUDIT.json",
+      "sha256": "7e70c5c15a0383f334f9557b5663eca49d31c48c35d6c5d0575b62b94afa92ed"
     }
   ],
   "main_figures": 5,
-  "manuscript_words": 2830,
-  "observed_at_utc": "2026-10-21T22:58:42.471672+00:00",
+  "manuscript_words": 2833,
+  "observed_at_utc": "2026-10-21T23:06:22.057472+00:00",
   "pdf_pages": 12,
   "schema_version": 1,
   "scope": "Editorial OrthoHMM2 naming and citation revision; scientific values and historical run identities unchanged. Not a software release, submission approval or archival DOI.",
   "sole_author": "Jacob L. Steenwyk",
   "status": "validated_orthohmm2_single_author_manuscript_draft",
   "supplementary_figures": 2,
-  "tests_passed": 104,
+  "tests_passed": 109,
   "title": "OrthoHMM2: HMM-centered orthology inference"
 }

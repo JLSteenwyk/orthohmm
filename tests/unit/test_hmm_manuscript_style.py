@@ -79,6 +79,47 @@ def test_all_citations_resolve_to_unique_bibliography_entries():
     assert set(re.findall(r"@([a-zA-Z0-9_-]+)", manuscript())) == set(ids)
 
 
+def test_citation_counts_include_repeated_mentions_and_grouped_citations():
+    mentions = re.findall(r"@([a-zA-Z0-9_-]+)", manuscript())
+    groups = re.findall(r"\[[^\]]*?@[^\]]*\]", manuscript())
+    assert len(set(mentions)) == 17
+    assert len(mentions) == 20
+    assert len(groups) == 14
+
+
+def test_journal_references_include_renderable_pages_or_article_locators():
+    references = json.loads((ROOT / "references.csl.json").read_text())
+    for entry in references:
+        if entry["type"] == "article-journal":
+            assert entry.get("volume") and entry.get("page"), entry["id"]
+    by_id = {r["id"]: r for r in references}
+    for key, locator in {"orthofinder2019": "238", "orthofinder2026correction": "2110",
+                         "proteinortho2023": "1322477", "sonicparanoid2024": "195",
+                         "Dosch2023FAS": "btad226"}.items():
+        assert by_id[key]["page"] == locator
+
+
+def test_qfo_consortium_order_matches_publisher_not_crossref_order():
+    references = json.loads((ROOT / "references.csl.json").read_text())
+    entry = next(r for r in references if r["id"] == "qfo2016")
+    assert entry["author"][0]["family"] == "Altenhoff"
+    assert entry["author"][21]["family"] == "Muffato"
+    assert entry["author"][22] == {"literal": "Quest for Orthologs consortium"}
+    assert entry["author"][23]["family"] == "Gabald\u00f3n"
+
+
+def test_functional_similarity_attribution_identifies_qfo_adaptation():
+    assert "QfO adaptation of Schlicker similarity" in manuscript()
+
+
+def test_citation_audit_covers_every_bibliography_entry():
+    report = json.loads((ROOT / "validation/CITATION_AUDIT.json").read_text())
+    references = json.loads((ROOT / "references.csl.json").read_text())
+    assert {r["id"] for r in report["references"]} == {r["id"] for r in references}
+    assert all(r["doi_and_title_verified"] and r["claim_fit_reviewed"] for r in report["references"])
+    assert all(r["registry_record_url"] and r["claim_scope"] for r in report["references"])
+
+
 def test_hmm2_figure_labels_preserve_all_scientific_snapshot_values():
     old = json.loads((ROOT / "assets_v3/analysis.json").read_text())
     new = json.loads((ROOT / "assets_v4/analysis.json").read_text())
