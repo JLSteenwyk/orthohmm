@@ -1,0 +1,38 @@
+{
+  "added_primary_sources": [
+    "https://academic.oup.com/nargab/article/6/4/lqae167/7921053",
+    "https://link.springer.com/article/10.1186/1471-2105-7-302",
+    "https://academic.oup.com/bioinformatics/article/39/5/btad226/7135831"
+  ],
+  "all_four_original_TSVs_byte_identical": true,
+  "all_original_reference_metadata_preserved": true,
+  "all_scientific_numbers_and_historical_identifiers_preserved": true,
+  "bibliography_entries": 17,
+  "duplicate_DOIs": [],
+  "first_person_in_source_pdf_docx": false,
+  "metadata_note": "QfO publication date uses the publisher's 11 December 2024 record rather than Crossref's earlier issued date. Original OrthoHMM metadata is unchanged; bioRxiv full text was not available in this session.",
+  "metadata_sources": [
+    "https://api.crossref.org/works/10.1093/nargab/lqae167",
+    "https://api.crossref.org/works/10.1186/1471-2105-7-302",
+    "benchmark_tools/results/publication_bibliography_20261007_v1.csl.json"
+  ],
+  "observed_at_utc": "2026-10-21T22:47:18.746879+00:00",
+  "original_preprint": {
+    "DOI": "10.1101/2024.12.07.627370",
+    "id": "orthohmm2024preprint",
+    "original_title_and_all_authors_preserved": true
+  },
+  "pdf_pages": 12,
+  "resolved_citations": 17,
+  "scope": "Citation placement, key resolution, retained metadata and added primary records checked; not an exhaustive claim-by-claim full-text audit. Naming does not declare a software release or a new benchmark run.",
+  "snapshot_changes": "Only six method display labels replace OrthoHMM with OrthoHMM2.",
+  "sole_author": "Jacob L. Steenwyk",
+  "standalone_replay": "Five data files and seven PNGs reproduced byte-for-byte from /tmp without repository imports or network.",
+  "status": "orthohmm2_naming_and_citations_verified",
+  "tests_failed": 0,
+  "tests_passed": 104,
+  "title": "OrthoHMM2: HMM-centered orthology inference with explicit accuracy trade-offs",
+  "unresolved_citations": [],
+  "unused_entries": [],
+  "visual_review": "All twelve PDF pages inspected through contact sheets; revised title and legends fit. All seven figures remain with their complete captions; text blocks lie inside page bounds."
+}

@@ -1,5 +1,5 @@
 ---
-title: "OrthoHMM: HMM-centered orthology inference with explicit accuracy trade-offs"
+title: "OrthoHMM2: HMM-centered orthology inference with explicit accuracy trade-offs"
 author: "Jacob L. Steenwyk"
 lang: en
 ---
@@ -8,21 +8,21 @@ lang: en
 
 Orthology inference balances recovery of divergent homologs against separation
 of paralogs, and different benchmarks emphasize different aspects of this
-trade-off. OrthoHMM, an HMM-centered inference workflow with phylogenetic
+trade-off. OrthoHMM2, an HMM-centered inference workflow with phylogenetic
 refinement, was evaluated against six comparator configurations using
 OrthoBench, Quest for Orthologs (QfO), and a supplementary Three Kingdoms marker
 reference. Controlled experiments tested sequence-weighted family profiles,
 alignment-aware recruitment, local joint-tree rescue, and selective HMMER
 validation. Canonical
-OrthoHMM achieved OrthoBench F1 of 0.741061, compared with 0.727365 for full
+OrthoHMM2 achieved OrthoBench F1 of 0.741061, compared with 0.727365 for full
 OrthoFinder 3.1.5, through higher precision but lower recall. OrthoFinder had
 higher VGNC, SwissTrees, and TreeFam-A F1. Among 12 complete-vector
-configurations, five OrthoHMM configurations and full OrthoFinder were
+configurations, five OrthoHMM2 configurations and full OrthoFinder were
 nondominated on the three primary F1 objectives. This descriptive frontier
-did not imply statistical superiority. Small standalone OrthoHMM improvements
+did not imply statistical superiority. Small standalone OrthoHMM2 improvements
 had paired uncertainty intervals spanning zero, and both tested combinations
 failed to improve on their weighting-only constituents. These results locate
-OrthoHMM on a benchmark-dependent accuracy frontier while supporting unchanged
+OrthoHMM2 on a benchmark-dependent accuracy frontier while supporting unchanged
 defaults rather than a universal accuracy or efficiency advantage.
 
 ## Introduction
@@ -32,15 +32,17 @@ duplication. Similarity is therefore evidence for homology, not sufficient
 evidence for orthology. OrthoFinder integrates sequence comparison with
 phylogenetic inference [@orthofinder2019; @orthofinder2026;
 @orthofinder2026correction], while profile HMMs offer a complementary way to
-represent family-level sequence conservation [@eddy2011]. The OrthoHMM
+represent family-level sequence conservation [@eddy2011]. The original OrthoHMM
 preprint introduced an HMM-based orthogroup inference framework
-[@orthohmm2024preprint]; the present development study evaluates its extended
-implementation and controlled alternatives.
+[@orthohmm2024preprint]. OrthoHMM2 extends that framework with built-in HMM
+search, family-profile recruitment, and optional phylogenetic refinement.
+The present study evaluates this development implementation and controlled
+alternatives, rather than reanalyzing the original preprint's implementation.
 
 Group recovery, ortholog-pair recovery, and functional conservation measure
 different properties of orthology predictions, which complicates comparisons
 based on a single summary score. To distinguish these properties, the present
-analysis locates OrthoHMM among the observed trade-offs using Pareto dominance.
+analysis locates OrthoHMM2 among the observed trade-offs using Pareto dominance.
 A configuration is dominated
 when another is at least as good on every specified objective and strictly
 better on at least one. This definition makes both the chosen objectives and
@@ -61,11 +63,11 @@ weighting and projection repair. The controls separate profile construction, can
 score measurement, and decision-rule changes. An HMM match alone never
 establishes orthology.
 
-### OrthoHMM trades recall for precision on OrthoBench
+### OrthoHMM2 trades recall for precision on OrthoBench
 
-Canonical OrthoHMM achieved weighted group F1 of 0.741061, precision 0.817705,
+Canonical OrthoHMM2 achieved weighted group F1 of 0.741061, precision 0.817705,
 and recall 0.677553. Full OrthoFinder 3.1.5 achieved F1 of 0.727365, precision
-0.660651, and recall 0.809066 (Fig. 2). Thus, the higher OrthoHMM F1 reflects
+0.660651, and recall 0.809066 (Fig. 2). Thus, the higher OrthoHMM2 F1 reflects
 a precision-recall trade-off rather than uniform superiority. Henikoff
 weighting reached the highest observed OrthoBench F1, 0.741965, but its
 improvement over canonical was only 0.090379 percentage points. Clustered
@@ -76,17 +78,17 @@ defaults.
 ### The frontier depends on the evaluation objective
 
 On the three primary objectives, OrthoBench, VGNC, and SwissTrees F1, six of
-12 configurations were nondominated, comprising canonical OrthoHMM, both retained
-weighting variants, projection repair, retained phylogenetic OrthoHMM, and full
-OrthoFinder (Fig. 3; Supplementary Table S2). Five points represent OrthoHMM
+12 configurations were nondominated, comprising canonical OrthoHMM2, both retained
+weighting variants, projection repair, retained phylogenetic OrthoHMM2, and full
+OrthoFinder (Fig. 3; Supplementary Table S2). Five points represent OrthoHMM2
 configurations, not five independent tools. Their frontier membership arises
 from different compromises among benchmarks; it does not establish a single
 best configuration.
 
 The pairwise projections clarify this distinction. Full OrthoFinder was the
 only nondominated configuration when VGNC and SwissTrees F1 were considered
-together, exceeding every evaluated OrthoHMM configuration on both. Adding
-OrthoBench introduces a competing objective and places OrthoHMM configurations
+together, exceeding every evaluated OrthoHMM2 configuration on both. Adding
+OrthoBench introduces a competing objective and places OrthoHMM2 configurations
 on the frontier. When supporting TreeFam-A and supplementary Three Kingdoms
 F1 were added, nine configurations became nondominated, including the
 sequence-only OrthoFinder checkpoint, SonicParanoid, and OrthoMCL. Frontier
@@ -100,7 +102,7 @@ The retained matched-resource panel reviewed 27 sequential attempts on nested
 24 were eligible under the original review rules, and six of nine method/size
 cells contained all three eligible repeats (Fig. 4). At eight proteomes,
 median native elapsed times were 20.6 minutes for retained high-sensitivity
-OrthoHMM, 33.3 minutes for retained phylogenetic OrthoHMM, and 19.0 minutes for
+OrthoHMM2, 33.3 minutes for retained phylogenetic OrthoHMM2, and 19.0 minutes for
 full OrthoFinder. These are shared-host observations with unknown,
 potentially method-dependent contention. They do not establish isolated
 speedups, asymptotic scaling, or costs of the new weighted configurations.
@@ -110,9 +112,9 @@ configurations and cannot be inferred from cached incremental campaign costs.
 ### QfO separates orthology recovery from functional conservation
 
 Full OrthoFinder had higher VGNC, SwissTrees, and TreeFam-A F1 than canonical
-OrthoHMM, with values of 0.988546 versus 0.902068, 0.848413 versus 0.831348, and 0.791918
+OrthoHMM2, with values of 0.988546 versus 0.902068, 0.848413 versus 0.831348, and 0.791918
 versus 0.615778, respectively (Fig. 5; Supplementary Fig. S1). Canonical
-OrthoHMM had higher EC, GO, and FAS conditional means of 0.965382, 0.490236,
+OrthoHMM2 had higher EC, GO, and FAS conditional means of 0.965382, 0.490236,
 and 0.763725, compared with 0.936130, 0.469548, and 0.691422 for full
 OrthoFinder. These means summarize different assessed pair populations,
 not matched-population accuracy effects. FAS eligibility counts are not its
@@ -140,7 +142,7 @@ are not treated as negative biological results or zero scores.
 
 ## Discussion
 
-OrthoHMM achieved higher precision and F1 but lower recall than full
+OrthoHMM2 achieved higher precision and F1 but lower recall than full
 OrthoFinder on OrthoBench, whereas full OrthoFinder had higher F1 on the
 principal QfO reference-pair tests. These differences place both methods on
 the frontier when OrthoBench and the primary QfO objectives are considered
@@ -167,6 +169,11 @@ without invalidating the controlled negative results.
 ## Methods
 
 ### Implementation and configurations
+
+OrthoHMM2 names the development framework evaluated here. Historical run
+identifiers retain their original OrthoHMM names and source revisions; this
+naming does not designate a new released package version or a rerun of those
+configurations.
 
 Initial built-in search uses local maximum-path match/insert/delete scoring
 with BLOSUM62 emissions and fixed transition costs. Its approximate
@@ -213,9 +220,10 @@ OrthoBench comprises 12 proteomes, 251378 proteins, and 70 curated reference
 groups [@orthobench2020]. Evaluation retains its recorded weighted
 group-recovery precision, recall, and F1. The corrected QfO panel comprises 78 proteomes and
 984137 proteins, with versioned references and identifier mappings
-[@qfo2016; @qfo2020]. VGNC, SwissTrees, and TreeFam-A supply reference-pair
-F1; EC and GO are conditional Schlicker similarity means, and FAS is reported
-separately. Their arithmetic mean is not an accuracy endpoint. Three Kingdoms
+[@qfo2016; @qfo2020; @qfo2024]. VGNC, SwissTrees, and TreeFam-A supply reference-pair
+F1; EC and GO retain the QfO conditional Schlicker similarity means
+[@qfo2016; @schlicker2006], and feature architecture similarity (FAS) is reported
+separately [@Dosch2023FAS; @qfo2024]. Their arithmetic mean is not an accuracy endpoint. Three Kingdoms
 contains 443217 proteins from 12 proteomes; its reference comprises 2035
 genes in 255 BUSCO-derived families [@busco2021]. Its group co-membership
 scorer includes within-species pairs and does not evaluate false positives
@@ -258,7 +266,7 @@ the accuracy or costs of the new weighted experiments.
 
 ## Data and code availability
 
-OrthoHMM is available at <https://github.com/JLSteenwyk/orthohmm>. The companion
+OrthoHMM2 is available at <https://github.com/JLSteenwyk/orthohmm>. The companion
 package includes the manuscript, original vector figures, full-precision score
 table, plotted coordinates, exact frontier membership and dominators, all
 timing attempts, references, executable plotting code, and SHA256 manifests.
@@ -281,7 +289,7 @@ organisms or participant data were generated for this reporting analysis.
 ::: {.figure-sheet}
 ## Figure 1. HMM-centered workflow and experimental interventions
 
-![](assets_v3/fig1_workflow.png){width=100%}
+![](assets_v4/fig1_workflow.png){width=100%}
 
 **A,** Sequence-supported search and family-profile recruitment precede
 candidate expansion and phylogenetic refinement. This conceptual diagram
@@ -296,16 +304,16 @@ accuracy or are enabled by default.
 ::: {.figure-sheet}
 ## Figure 2. OrthoBench group recovery and precision-recall trade-off
 
-![](assets_v3/fig2_orthobench.png){width=100%}
+![](assets_v4/fig2_orthobench.png){width=100%}
 
 **A,** Weighted group F1 for all 12 complete-vector configurations. Bars start
 at zero. **B,** Their corresponding weighted precision and recall. Dashed
-segments mark the observed point-estimate frontier. The canonical OrthoHMM
+segments mark the observed point-estimate frontier. The canonical OrthoHMM2
 configuration has higher precision but lower recall than full OrthoFinder.
 Symbols retain the same meanings across figures. Small development differences
 are not independent accuracy gains; paired contrasts appear in Supplementary
 Fig. S2. Some points coincide; OH-C/P labels the identical canonical and
-retained-phylogeny OrthoBench coordinates. OB, OrthoBench; OH, OrthoHMM;
+retained-phylogeny OrthoBench coordinates. OB, OrthoBench; OH, OrthoHMM2;
 OF, OrthoFinder; SP, SonicParanoid;
 PO, ProteinOrtho; FA, FastOMA; OM, OrthoMCL. OH-C/W/N/R denote canonical,
 Henikoff, clustered Henikoff, and projection repair; OH-S/P denote retained
@@ -313,15 +321,15 @@ sensitive/phylogenetic configurations. OF-S is a sequence-only checkpoint.
 :::
 
 ::: {.figure-sheet}
-## Figure 3. Where OrthoHMM lies on the accuracy frontier
+## Figure 3. Where OrthoHMM2 lies on the accuracy frontier
 
-![](assets_v3/fig3_pareto.png){width=100%}
+![](assets_v4/fig3_pareto.png){width=100%}
 
 **A-C,** Pairwise projections of the primary objectives. All axes maximize F1;
 the top right is favorable. Dashed steps mark boundaries among observed
 nondominated points, not attainable interpolations. Full OrthoFinder is the
 sole nondominated configuration in the VGNC-SwissTrees projection. **D,**
-Magnification of the small differences among OrthoHMM development
+Magnification of the small differences among OrthoHMM2 development
 configurations; its truncated axes do not depict uncertainty. Primary
 three-objective membership is calculated independently of these projections
 and exported in Supplementary Table S2. Membership is descriptive and depends
@@ -331,7 +339,7 @@ on the comparison set, objectives, and point estimates.
 ::: {.figure-sheet}
 ## Figure 4. Shared-host resource measurements
 
-![](assets_v3/fig4_resources.png){width=100%}
+![](assets_v4/fig4_resources.png){width=100%}
 
 **A-C,** Native elapsed time, native-task-subtree CPU use, and native-step peak
 memory on nested 4-, 8-, and 12-proteome datasets. Symbols show measured
@@ -342,13 +350,13 @@ bars appear only for complete three-repeat cells; ranges are not confidence
 intervals. All 27 attempts were reviewed, 25 produced measurements, and 24
 were eligible. Contention is unknown and potentially method dependent. The
 panel does not establish isolated comparative efficiency, and no costs for
-weighted OrthoHMM configurations are inferred from it.
+weighted OrthoHMM2 configurations are inferred from it.
 :::
 
 ::: {.figure-sheet}
 ## Figure 5. QfO orthology and conditional functional conservation
 
-![](assets_v3/fig5_qfo.png){width=100%}
+![](assets_v4/fig5_qfo.png){width=100%}
 
 **A-C,** VGNC, SwissTrees, and supporting TreeFam-A precision versus recall,
 with observed point-estimate frontiers. These frontiers are not the F1-F1
@@ -367,7 +375,7 @@ the exported coordinate table preserves their distinct identities and values.
 ::: {.figure-sheet}
 ## Supplementary Figure S1. All eight reported endpoints
 
-![](assets_v3/figS1_all_scores.png){width=100%}
+![](assets_v4/figS1_all_scores.png){width=100%}
 
 All 12 complete-vector configurations, shown on a common numerical 0-1 range
 for compact display. Colors are not a shared biological accuracy scale, and
@@ -380,7 +388,7 @@ configuration/control/history rows, including explicit NA endpoints.
 ::: {.figure-sheet}
 ## Supplementary Figure S2. Original paired OrthoBench uncertainty
 
-![](assets_v3/figS2_uncertainty.png){width=100%}
+![](assets_v4/figS2_uncertainty.png){width=100%}
 
 **A,** The three standalone candidates relative to canonical. **B,** The six
 registered interaction contrasts. Points are F1 differences in percentage

@@ -1,17 +1,21 @@
-# OrthoHMM Comparative Manuscript Figure Plan
+# OrthoHMM2 Comparative Manuscript Figure Plan
 
 Reporting analysis dated 20 October 2026. This is a post hoc presentation of
 development-exposed results, not a preregistered hypothesis test or new accuracy
 experiment. Preserve the completed campaign and its original stopping rules.
+
+Editorial revision on 21 October 2026 uses OrthoHMM2 for the extended framework.
+Only display names change; historical run identifiers, plotted values, method
+inventory, endpoints and reporting decisions are unchanged.
 
 ## Evidence And Comparison Set
 
 Use the final campaign archive delivered at
 `02426dce9922e03e00773af20a23afc371fc1125`. Its 29 rows include repeated controls,
 historical configurations and failed attempts, not 29 tools. The main figures
-include all 12 distinct complete-vector configurations: four current OrthoHMM
+include all 12 distinct complete-vector configurations: four current OrthoHMM2
 configurations (unweighted canonical, Henikoff, clustered Henikoff, projection
-repair), retained sensitive and phylogenetic OrthoHMM, full and sequence-only
+repair), retained sensitive and phylogenetic OrthoHMM2, full and sequence-only
 OrthoFinder 3.1.5, SonicParanoid 2.0.9, ProteinOrtho 6.3.6, FastOMA 0.3.5 and
 OrthoMCL 1.4. Collapse only documented repeated canonical controls. Retain all
 29 original rows, including explicit NA, in Supplementary Table S1.
@@ -30,7 +34,7 @@ membership does not establish statistically distinguishable superiority.
 1. HMM-centered workflow and four controlled experimental interventions.
 2. OrthoBench F1 and precision-recall comparison of all 12 configurations.
    Do not invent missing fusion, fission, entropy or missing-group metrics.
-3. Pairwise primary-benchmark frontiers and a magnified OrthoHMM development
+3. Pairwise primary-benchmark frontiers and a magnified OrthoHMM2 development
    view. Export exact three- and five-objective membership and dominators.
 4. Shared-host runtime, native CPU use and native-step peak memory over 4, 8
    and 12 proteomes. Reuse the final reviewed panel, not cached campaign costs:

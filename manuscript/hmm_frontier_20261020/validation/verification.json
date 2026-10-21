@@ -3,7 +3,7 @@
   "PDF_pages": 12,
   "VGNC_SwissTrees_frontier_members": 1,
   "all_five_frontier_members": 9,
-  "citations_resolved": 14,
+  "citations_resolved": 17,
   "configurations": 12,
   "defaults_promoted": false,
   "figure_checks": [
@@ -23,7 +23,7 @@
       ],
       "editable_svg_text_nodes": 64,
       "name": "fig2_orthobench",
-      "nonwhite_fraction": 0.15698419168735292
+      "nonwhite_fraction": 0.15714821180428581
     },
     {
       "dimensions": [
@@ -32,7 +32,7 @@
       ],
       "editable_svg_text_nodes": 87,
       "name": "fig3_pareto",
-      "nonwhite_fraction": 0.040793900387625245
+      "nonwhite_fraction": 0.04091782669819677
     },
     {
       "dimensions": [
@@ -41,7 +41,7 @@
       ],
       "editable_svg_text_nodes": 74,
       "name": "fig4_resources",
-      "nonwhite_fraction": 0.040608914624089255
+      "nonwhite_fraction": 0.04067543131820325
     },
     {
       "dimensions": [
@@ -50,7 +50,7 @@
       ],
       "editable_svg_text_nodes": 89,
       "name": "fig5_qfo",
-      "nonwhite_fraction": 0.0399069886501831
+      "nonwhite_fraction": 0.04003667897519981
     },
     {
       "dimensions": [
@@ -59,7 +59,7 @@
       ],
       "editable_svg_text_nodes": 123,
       "name": "figS1_all_scores",
-      "nonwhite_fraction": 0.49968691806986254
+      "nonwhite_fraction": 0.49985147595767065
     },
     {
       "dimensions": [
@@ -75,33 +75,38 @@
   "independent_array_dominance_agreed": true,
   "independent_confirmation_established": false,
   "main_figures": 5,
-  "observed_at_utc": "2026-10-20T19:03:30.031832+00:00",
+  "naming_and_citations_review": {
+    "bytes": 2152,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/validation/ORTHOHMM2_REVIEW.json",
+    "sha256": "cc265b6644f2aab5c561dedf2503bc1ea2978d055aa861f61c1066e1606362d7"
+  },
+  "observed_at_utc": "2026-10-21T22:47:18.746879+00:00",
   "original_score_rows": 29,
   "page_review": [
     {
       "embedded_figures": 0,
       "page": 1,
-      "text_characters": 3358
+      "text_characters": 3306
     },
     {
       "embedded_figures": 0,
       "page": 2,
-      "text_characters": 4203
+      "text_characters": 3828
     },
     {
       "embedded_figures": 0,
       "page": 3,
-      "text_characters": 4180
+      "text_characters": 3924
     },
     {
       "embedded_figures": 0,
       "page": 4,
-      "text_characters": 4033
+      "text_characters": 4594
     },
     {
       "embedded_figures": 0,
       "page": 5,
-      "text_characters": 3667
+      "text_characters": 5192
     },
     {
       "embedded_figures": 1,
@@ -111,17 +116,17 @@
     {
       "embedded_figures": 1,
       "page": 7,
-      "text_characters": 926
+      "text_characters": 928
     },
     {
       "embedded_figures": 1,
       "page": 8,
-      "text_characters": 694
+      "text_characters": 696
     },
     {
       "embedded_figures": 1,
       "page": 9,
-      "text_characters": 779
+      "text_characters": 780
     },
     {
       "embedded_figures": 1,
@@ -161,12 +166,12 @@
   "status": "manuscript_numerical_structural_visual_and_standalone_replay_checks_passed",
   "supplementary_figures": 2,
   "tests_failed": 0,
-  "tests_passed": 100,
+  "tests_passed": 104,
   "tests_skipped": 0,
-  "visual_review": "All twelve revised PDF pages inspected via contact sheets, with a detailed title/byline check. Sole author is Jacob L. Steenwyk; all seven figures and their captions remain intact. No clipped text blocks or blank pages.",
+  "visual_review": "All twelve PDF pages inspected through contact sheets; revised title and legends fit. All seven figures remain with their complete captions; text blocks lie inside page bounds.",
   "writing_style_review": {
-    "bytes": 2724,
+    "bytes": 3250,
     "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/validation/STYLE_REVIEW.json",
-    "sha256": "361513dfd55a7e09b499fec01fc923525237125f6ea244edbe25ec68426914cd"
+    "sha256": "671a99f7d57fecf7a5e48a6f391ce15689af18d2e6e87e51af1bd2552cc18d63"
   }
 }

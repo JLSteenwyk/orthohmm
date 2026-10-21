@@ -43,9 +43,50 @@ def test_byline_has_only_confirmed_author_and_no_inferred_affiliation():
 def test_every_numerical_token_and_figure_link_matches_original_draft():
     with zipfile.ZipFile(ROOT / "OrthoHMM_manuscript_20261020.zip") as archive:
         original = archive.read("OrthoHMM_manuscript_20261020/manuscript.md").decode()
-    assert re.findall(r"[-+]?\d+(?:\.\d+)?", manuscript()) == re.findall(r"[-+]?\d+(?:\.\d+)?", original)
-    assert re.findall(r"!\[[^\]]*\]\(([^)]+)\)", manuscript()) == re.findall(r"!\[[^\]]*\]\(([^)]+)\)", original)
-    assert set(re.findall(r"@([a-zA-Z0-9_-]+)", manuscript())) == set(re.findall(r"@([a-zA-Z0-9_-]+)", original))
+    def scientific_numbers(text):
+        text = re.sub(r"@([a-zA-Z0-9_-]+)", "", text)
+        text = re.sub(r"assets_v\d+/", "assets/", text)
+        text = text.replace("OrthoHMM2", "OrthoHMM")
+        return re.findall(r"[-+]?\d+(?:\.\d+)?", text)
+
+    assert scientific_numbers(manuscript()) == scientific_numbers(original)
+    links = lambda text: [Path(p).name for p in re.findall(r"!\[[^\]]*\]\(([^)]+)\)", text)]
+    assert links(manuscript()) == links(original)
+    original_citations = set(re.findall(r"@([a-zA-Z0-9_-]+)", original))
+    assert set(re.findall(r"@([a-zA-Z0-9_-]+)", manuscript())) == original_citations | {
+        "qfo2024", "schlicker2006", "Dosch2023FAS"}
+
+
+def test_original_orthohmm_preprint_is_credited_without_renaming_its_authors_or_title():
+    references = json.loads((ROOT / "references.csl.json").read_text())
+    preprint = next(r for r in references if r["id"] == "orthohmm2024preprint")
+    with zipfile.ZipFile(ROOT / "OrthoHMM_manuscript_20261020.zip") as archive:
+        original = json.loads(archive.read("OrthoHMM_manuscript_20261020/references.csl.json"))
+    assert preprint == next(r for r in original if r["id"] == preprint["id"])
+    introduction = manuscript().split("## Introduction")[1].split("## Results")[0]
+    assert "original OrthoHMM" in introduction
+    assert "[@orthohmm2024preprint]" in introduction
+    assert "OrthoHMM2 extends that framework" in introduction
+    assert 'title: "OrthoHMM2:' in manuscript()
+
+
+def test_all_citations_resolve_to_unique_bibliography_entries():
+    references = json.loads((ROOT / "references.csl.json").read_text())
+    ids = [r["id"] for r in references]
+    dois = [r["DOI"].lower() for r in references]
+    assert len(ids) == len(set(ids))
+    assert len(dois) == len(set(dois))
+    assert set(re.findall(r"@([a-zA-Z0-9_-]+)", manuscript())) == set(ids)
+
+
+def test_hmm2_figure_labels_preserve_all_scientific_snapshot_values():
+    old = json.loads((ROOT / "assets_v3/analysis.json").read_text())
+    new = json.loads((ROOT / "assets_v4/analysis.json").read_text())
+    for method in old["methods"]:
+        method["label"] = method["label"].replace("OrthoHMM ", "OrthoHMM2 ")
+    assert old == new
+    for name in ("scores_all_29.tsv", "plot_coordinates.tsv", "pareto_membership.tsv", "timing_attempts.tsv"):
+        assert (ROOT / "assets_v3" / name).read_bytes() == (ROOT / "assets_v4" / name).read_bytes()
 
 
 @pytest.mark.skipif(shutil.which("pandoc") is None, reason="pandoc required")

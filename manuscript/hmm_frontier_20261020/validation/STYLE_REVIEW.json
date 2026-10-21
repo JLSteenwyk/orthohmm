@@ -1,8 +1,11 @@
 {
   "DOCX_first_person_occurrences": 0,
   "PDF_first_person_occurrences": 0,
-  "all_figure_and_data_bytes_unchanged": true,
-  "citations_and_figure_links_unchanged": true,
+  "citation_revision": {
+    "bytes": 2152,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/validation/ORTHOHMM2_REVIEW.json",
+    "sha256": "cc265b6644f2aab5c561dedf2503bc1ea2978d055aa861f61c1066e1606362d7"
+  },
   "current_revision_used_all_three_guides": true,
   "editorial_review": [
     "Read all three supplied guides in full; explicit first-person/punctuation overrides take precedence over illustrative examples.",
@@ -10,8 +13,10 @@
     "Removed generic authorship placeholders; byline contains only the confirmed author name.",
     "Reworked prose colons, reduced vague promotional language and empty framing, and changed the data-availability heading to sentence case.",
     "Preserved all benchmark values, uncertainty, source references and limitations.",
-    "Reviewed all twelve revised PDF pages; author byline is visible and figure headings/captions remain complete."
+    "Reviewed all twelve revised PDF pages; author byline is visible and figure headings/captions remain complete.",
+    "21 October revision names the development study OrthoHMM2, retains original preprint attribution, and adds three direct references. Numerical checks ignore the editorial name suffix and asset-directory revision, not scientific values."
   ],
+  "figures_changed_only_for_method_display_names": true,
   "first_draft_used_these_guides": false,
   "guides": [
     {
@@ -31,8 +36,8 @@
     }
   ],
   "inferred_affiliations_or_contact_details": false,
-  "numerical_tokens_unchanged": true,
-  "observed_at_utc": "2026-10-20T19:03:30.026397+00:00",
+  "observed_at_utc": "2026-10-21T22:47:18.746879+00:00",
+  "original_TSVs_byte_identical": true,
   "original_draft_zip": {
     "bytes": 3630098,
     "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/OrthoHMM_manuscript_20261020.zip",
@@ -40,14 +45,15 @@
   },
   "parenthetical_em_or_en_dashes": 0,
   "running_prose_colons": 0,
+  "scientific_numerical_tokens_unchanged": true,
   "scope": "Author list follows the user instruction. Funding/disclosure statements are not invented; bibliography authors remain correctly attributed to their cited publications.",
   "sole_author": "Jacob L. Steenwyk",
   "source_first_person_occurrences": 0,
   "status": "writing_guides_applied_sole_author_and_impersonal_prose_verified",
-  "tests_passed": 100,
+  "tests_passed": 104,
   "tests_report": {
-    "bytes": 15085,
+    "bytes": 15684,
     "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/validation/style_tests.xml",
-    "sha256": "4f6a6030c7add9d18fb64f49bc6686904a3ebd49a0c9412ffd3316c4c2eb2171"
+    "sha256": "34cbbc784791fc75974782df64cef05cb6a590b4cec4c9f2d3cd4370a014c9cb"
   }
 }

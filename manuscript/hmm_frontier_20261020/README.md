@@ -1,6 +1,6 @@
-# OrthoHMM Comparative Manuscript Package
+# OrthoHMM2 Comparative Manuscript Package
 
-Concise working manuscript dated 20 October 2026. Five original main figures
+Concise working manuscript drafted 20 October and revised 21 October 2026. Five original main figures
 follow the workflow, accuracy, resource and QfO panel types of the OrthoFinder
 papers; two supplementary figures retain all endpoints and original uncertainty.
 Published figures and published benchmark coordinates are not reused.
@@ -8,11 +8,11 @@ Published figures and published benchmark coordinates are not reused.
 ## Read The Manuscript
 
 - `manuscript.pdf`: formatted manuscript, references, figures and legends.
-- `manuscript_author.docx`: editable version, with embedded figure images.
-- `manuscript_author.html`: local browser version; keep it beside `paper.css` and assets.
+- `manuscript_hmm2.docx`: editable version, with embedded figure images.
+- `manuscript_hmm2.html`: local browser version; keep it beside `paper.css` and assets.
 - `manuscript.md`: editable source.
-- `assets_v3/fig3_pareto.pdf`: vector Pareto figure.
-- `assets_v3/`: all seven figures in PDF, SVG and 220-dpi PNG, plus source data.
+- `assets_v4/fig3_pareto.pdf`: vector Pareto figure.
+- `assets_v4/`: all seven figures in PDF, SVG and 220-dpi PNG, plus source data.
 
 The main text, methods and legends total approximately 2800 words, excluding
 references. Jacob L. Steenwyk is the sole author; the byline contains no other
@@ -25,12 +25,24 @@ The current revision follows all three files in the supplied `writing_guides`
 directory, including the explicit first-person and punctuation restrictions.
 `validation/STYLE_REVIEW.json` records the guide fingerprints and checks.
 The original ZIP remains an unchanged historical draft; the current download
-is `OrthoHMM_manuscript_revised_20261020.zip`.
+is `OrthoHMM2_manuscript_20261021.zip`.
+
+OrthoHMM2 is the manuscript name for the extended development framework.
+The original OrthoHMM preprint is cited with its original title and full author
+list. Original run identifiers, archived scores, software version numbers and
+source revisions are unchanged; this editorial naming is not a software release.
+
+The bibliography has 17 cited entries with no unresolved keys, duplicate DOIs,
+or unused entries. The citation revision adds the 2024 QfO developments paper,
+the original Schlicker similarity paper, and the FAS method paper. Existing
+references, including the original OrthoHMM preprint, retain their metadata.
+`validation/ORTHOHMM2_REVIEW.json` records naming, citation and data-preservation
+checks. This is not an exhaustive full-text audit of every literature claim.
 
 ## Scientific Interpretation
 
 The three-objective frontier maximizes OrthoBench, VGNC and SwissTrees F1.
-It contains five OrthoHMM configurations and full OrthoFinder among 12
+It contains five OrthoHMM2 configurations and full OrthoFinder among 12
 complete-vector configurations. They are configurations, not six independent
 tools. In the VGNC-SwissTrees F1 projection alone, full OrthoFinder is the sole
 nondominated configuration. Point-estimate membership is not statistical
@@ -44,16 +56,16 @@ for the current weighted configurations or an accuracy-runtime frontier.
 
 ## Supplementary Tables
 
-1. `assets_v3/scores_all_29.tsv`: exact original full-precision 29-row table,
+1. `assets_v4/scores_all_29.tsv`: exact original full-precision 29-row table,
    including repeated controls, failures and NA endpoints.
-2. `assets_v3/pareto_membership.tsv`: primary, five-F1 and pairwise membership,
+2. `assets_v4/pareto_membership.tsv`: primary, five-F1 and pairwise membership,
    with every dominator and explicit objective lists.
-3. `assets_v3/timing_attempts.tsv`: all 27 resource attempts, eligibility,
+3. `assets_v4/timing_attempts.tsv`: all 27 resource attempts, eligibility,
    exclusions and missing pre-native measurements.
-4. `assets_v3/plot_coordinates.tsv`: all 96 endpoint observations used in the
+4. `assets_v4/plot_coordinates.tsv`: all 96 endpoint observations used in the
    main comparison, including precision, recall, populations and output semantics.
 
-`assets_v3/analysis.json` is the complete plotting snapshot. It preserves the
+`assets_v4/analysis.json` is the complete plotting snapshot. It preserves the
 12 fixed configurations, original intervals and all resource attempts. The
 figure plan was recorded before plotting but after the biological results were
 known; it is a post hoc reporting plan, not a preregistration.
@@ -64,7 +76,7 @@ From the extracted package, with NumPy and Matplotlib installed:
 
 ```sh
 python code/build_hmm_frontier_manuscript.py \
-  --snapshot assets_v3/analysis.json --output regenerated_assets
+  --snapshot assets_v4/analysis.json --output regenerated_assets
 ```
 
 The output must be new; existing attempts are not overwritten. This mode needs
@@ -83,7 +95,7 @@ this final package, not older figure attempts, raw proteomes or browser profiles
 
 The completed campaign was delivered at
 `02426dce9922e03e00773af20a23afc371fc1125`. Its central archive is
-`benchmark_tools/results/hmm_campaign_final_20261020/` in the OrthoHMM repository.
+`benchmark_tools/results/hmm_campaign_final_20261020/` in the OrthoHMM2 repository.
 Current HMM experiment implementation is unchanged from scientific source
 `86e39314ba462698b726f569a5d98a144c8d0086`; historical comparisons retain their
 own source and conversion semantics. Some historical transitive provenance is
@@ -105,5 +117,5 @@ reviewed project bibliography, with the original Henikoff weighting and HMMER
 articles added from primary publication records.
 
 The portable code is a copy of the tested repository builder; it is not a
-standalone distribution of OrthoHMM or its full inference dependencies.
+standalone distribution of OrthoHMM2 or its full inference dependencies.
 Manuscript publication rights and submission declarations require author approval.
