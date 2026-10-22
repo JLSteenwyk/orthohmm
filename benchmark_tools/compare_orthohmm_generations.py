@@ -92,7 +92,7 @@ def snapshot(repo, revision, destination):
         archive.extractall(destination)
 
 
-def prepare(repo, output, python):
+def prepare(repo, output, python, *, mcl=None, modern_revision="HEAD"):
     repo, output = repo.resolve(), output.resolve()
     output.mkdir(parents=True, exist_ok=False)
     for name in ("input", "sources", "runs"):
@@ -100,15 +100,20 @@ def prepare(repo, output, python):
     selected = sorted(sequences(repo / "bacterial_scaling/subsets/n005"), key=lambda v:(len(v[1]), v[0].name))[:3]
     for path, _ in selected:
         shutil.copyfile(path, output / "input" / path.name)
-    current = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=repo, text=True).strip()
+    current = subprocess.check_output(["git", "rev-parse", modern_revision], cwd=repo, text=True).strip()
     snapshot(repo, ORIGINAL, output / "sources/original")
     snapshot(repo, current, output / "sources/current")
     for name in KERNELS:
         shutil.copyfile(repo / "orthohmm/search/csrc" / name, output / "sources/current/orthohmm/search/csrc" / name)
     shutil.copyfile(repo / "benchmark_tools/time_original_orthohmm.py", output / "sources/observe_original.py")
     executables = {name: shutil.which(name) for name in ("phmmer", "mcl", "mafft", "FastTree", "taskset")}
+    if mcl is not None:
+        executables["mcl"] = str(mcl.resolve())
     if not all(executables.values()):
         raise ValueError("Required external executable is unavailable")
+    mcl_help = subprocess.run([executables["mcl"], "-h"], capture_output=True, text=True, check=False)
+    if "--abc" not in mcl_help.stdout + mcl_help.stderr:
+        raise ValueError("The original CLI requires an MCL build supporting --abc; pass --mcl explicitly")
     cpus = list(range(64, 80))
     if not set(cpus).issubset(os.sched_getaffinity(0)):
         raise ValueError("Planned sixteen-core CPU set is unavailable")
@@ -117,6 +122,7 @@ def prepare(repo, output, python):
     plan = dict(schema_version=1, created_at_utc=now(), original_revision=ORIGINAL, modern_revision=current,
         cpu_set=cpus, cpu_budget=16, original_cli_cpu=4, modern_cli_cpu=16, modern_threads_per_worker=4,
         python=record(python), executables={k:record(v) for k,v in executables.items()},
+        mcl_version=subprocess.check_output([executables["mcl"], "--version"], text=True),
         environment=environment, platform=platform.platform(),
         lscpu=subprocess.check_output(["lscpu", "-p=CPU,CORE,SOCKET,NODE"], text=True),
         source_selection="Three smallest complete proteomes by protein count from the existing n005 set, chosen before timing.",
@@ -240,9 +246,11 @@ if __name__ == "__main__":
     parser.add_argument("--repo", type=Path, default=Path.cwd())
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--python", type=Path, default=Path(sys.executable))
+    parser.add_argument("--mcl", type=Path)
+    parser.add_argument("--modern-revision", default="HEAD")
     args = parser.parse_args()
     if args.action == "prepare":
-        prepare(args.repo, args.output, args.python)
+        prepare(args.repo, args.output, args.python, mcl=args.mcl, modern_revision=args.modern_revision)
     elif args.action == "run":
         run_panel(args.output)
     else:

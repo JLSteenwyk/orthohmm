@@ -1,6 +1,7 @@
 from copy import deepcopy
 import math
 from pathlib import Path
+from types import SimpleNamespace
 
 import pytest
 
@@ -82,3 +83,28 @@ def test_fasta_identifier_compatibility_is_checked_for_both_methods(tmp_path):
     assert timing.sequences(tmp_path)[0][1] == ["one", "two"]
     path.write_text(">" + "a"*51 + "\nACD\n")
     with pytest.raises(ValueError): timing.sequences(tmp_path)
+
+
+def test_prepare_rejects_obsolete_mcl_before_a_timing_plan_is_admitted(tmp_path, monkeypatch):
+    repo = tmp_path / "repo"
+    inputs = repo / "bacterial_scaling/subsets/n005"
+    inputs.mkdir(parents=True)
+    for index in range(3):
+        (inputs / f"{index}.faa").write_text(f">protein{index}\nACDE\n")
+    kernels = repo / "orthohmm/search/csrc"
+    kernels.mkdir(parents=True)
+    for name in timing.KERNELS:
+        (kernels / name).write_bytes(b"test kernel")
+    observer = repo / "benchmark_tools/time_original_orthohmm.py"
+    observer.parent.mkdir()
+    observer.write_text("test observer")
+    def fake_snapshot(repo, revision, destination):
+        (destination / "orthohmm/search/csrc").mkdir(parents=True)
+    monkeypatch.setattr(timing, "snapshot", fake_snapshot)
+    monkeypatch.setattr(timing.subprocess, "check_output", lambda *a,**k:"fixed-revision\n")
+    monkeypatch.setattr(timing.subprocess, "run", lambda *a,**k:SimpleNamespace(stdout="mcl 02-063",stderr=""))
+    monkeypatch.setattr(timing.shutil, "which", lambda name:"/tools/"+name)
+    output = tmp_path / "attempt"
+    with pytest.raises(ValueError, match="MCL build supporting --abc"):
+        timing.prepare(repo, output, Path("/python"))
+    assert not (output / "plan.json").exists()

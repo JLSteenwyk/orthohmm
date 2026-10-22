@@ -47,7 +47,8 @@ From a checkout carrying the harness, with the recorded scientific source
 revision and tools available:
 
 ```sh
-python -m benchmark_tools.compare_orthohmm_generations prepare --output NEW_RUN
+python -m benchmark_tools.compare_orthohmm_generations prepare --output NEW_RUN \
+  --modern-revision RECORDED_MODERN_COMMIT --mcl /path/to/compatible/mcl
 python -m benchmark_tools.compare_orthohmm_generations run --output NEW_RUN
 python -m benchmark_tools.compare_orthohmm_generations summarize --output NEW_RUN
 ```
@@ -55,3 +56,12 @@ python -m benchmark_tools.compare_orthohmm_generations summarize --output NEW_RU
 Preparation and execution refuse existing attempt directories. Retain failed
 attempts and use a new plan directory for any protocol change. No score or
 accuracy-frontier coordinates are updated by this experiment.
+
+The first 22 October pilot found that the shell's default MCL 02-063 rejects
+the original CLI's `--abc` option. That failed original run is not a completed
+runtime. The pilot controller was stopped before continuing with the invalid
+dependency. Its completed and interrupted attempts remain separately recorded.
+A compatible MCL 22-282 build was checked using the pilot search tables only
+for an explicitly untimed dependency smoke test, then the entire nine-attempt
+panel was restarted with new searches and new output directories. The revised
+preflight rejects MCL builds without `--abc` support.
