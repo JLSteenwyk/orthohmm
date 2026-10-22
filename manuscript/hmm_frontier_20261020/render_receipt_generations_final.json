@@ -1,0 +1,181 @@
+{
+  "citation_ids": [
+    "Dosch2023FAS",
+    "busco2021",
+    "eddy2011",
+    "fastoma2025",
+    "henikoff1994",
+    "orthobench2020",
+    "orthofinder2019",
+    "orthofinder2026",
+    "orthofinder2026correction",
+    "orthohmm2024preprint",
+    "orthomcl2003",
+    "proteinortho2023",
+    "qfo2016",
+    "qfo2020",
+    "qfo2024",
+    "schlicker2006",
+    "sonicparanoid2024"
+  ],
+  "html": {
+    "bytes": 38014,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/manuscript_generations_final.html",
+    "sha256": "4464d16d76bb4891469092f17539d3c3365f76deb2103583ed8eb201e17d6de7"
+  },
+  "limitations": [
+    "Presence and hashes do not validate scientific contents, anchors, transitive provenance or rights.",
+    "Review requires repository-relative assets; not a standalone archive or inference reproduction.",
+    "No browser, PDF or visual review is implied by this render receipt.",
+    "External URLs and embedded raw HTML are not audited."
+  ],
+  "local_occurrences": 8,
+  "occurrences": [
+    {
+      "kind": "Image",
+      "path": "manuscript/hmm_frontier_20261020/assets_v4/fig1_workflow.png",
+      "url": "assets_v4/fig1_workflow.png"
+    },
+    {
+      "kind": "Image",
+      "path": "manuscript/hmm_frontier_20261020/assets_v4/fig2_orthobench.png",
+      "url": "assets_v4/fig2_orthobench.png"
+    },
+    {
+      "kind": "Image",
+      "path": "manuscript/hmm_frontier_20261020/assets_v4/fig3_pareto.png",
+      "url": "assets_v4/fig3_pareto.png"
+    },
+    {
+      "kind": "Image",
+      "path": "manuscript/hmm_frontier_20261020/assets_v4/fig4_resources.png",
+      "url": "assets_v4/fig4_resources.png"
+    },
+    {
+      "kind": "Image",
+      "path": "manuscript/hmm_frontier_20261020/assets_v4/fig5_qfo.png",
+      "url": "assets_v4/fig5_qfo.png"
+    },
+    {
+      "kind": "Image",
+      "path": "manuscript/hmm_frontier_20261020/assets_speed/fig6_generations.png",
+      "url": "assets_speed/fig6_generations.png"
+    },
+    {
+      "kind": "Image",
+      "path": "manuscript/hmm_frontier_20261020/assets_v4/figS1_all_scores.png",
+      "url": "assets_v4/figS1_all_scores.png"
+    },
+    {
+      "kind": "Image",
+      "path": "manuscript/hmm_frontier_20261020/assets_v4/figS2_uncertainty.png",
+      "url": "assets_v4/figS2_uncertainty.png"
+    }
+  ],
+  "pandoc_version": "pandoc 3.1.3\nFeatures: -server +lua\nScripting engine: Lua 5.4\nUser data directory: /home/bizon/.local/share/pandoc\nCopyright (C) 2006-2023 John MacFarlane. Web: https://pandoc.org\nThis is free software; see the source for copying conditions. There is no\nwarranty, not even for merchantability or fitness for a particular purpose.\n",
+  "parse_command": [
+    "/usr/bin/pandoc",
+    "--from=markdown",
+    "--to=json",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/manuscript.md"
+  ],
+  "publication_ready": false,
+  "render_command": [
+    "/usr/bin/pandoc",
+    "--from=markdown",
+    "--to=html5",
+    "--standalone",
+    "--metadata=pagetitle:OrthoHMM publication working draft",
+    "--include-in-header",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/manuscript_review_print.html",
+    "--css",
+    "paper.css",
+    "--citeproc",
+    "--bibliography",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/references.csl.json",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/manuscript.md"
+  ],
+  "sources": [
+    {
+      "bytes": 26361,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/manuscript.md",
+      "sha256": "dc6af2afd6751f854fb295102cee290bb9d9f86f93b05f372b13271b9c36f256"
+    },
+    {
+      "bytes": 199114624,
+      "path": "/usr/bin/pandoc",
+      "sha256": "3dd273647f0265cb439f22976d5366a54b071a3783f6fec50838b47fb53d701b"
+    },
+    {
+      "bytes": 6455,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/render_manuscript_review.py",
+      "sha256": "10deb28641adf5c6ebdaf4e1aba2ebd7fc2fc5fdbded1d330662e105aa9f6137"
+    },
+    {
+      "bytes": 200,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/manuscript_review_print.html",
+      "sha256": "64d9754f1843288705c6e8ffa9662c299a0f3e263cf541886a3b3829252707f8"
+    },
+    {
+      "bytes": 1148,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/paper.css",
+      "sha256": "bc59489155aea8eedfff45ae2eeb004dbc83295d4510c823e45c7c51ea7de392"
+    },
+    {
+      "bytes": 18210,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/references.csl.json",
+      "sha256": "585e3955bad4b60abbc52a683be58ac5aeefecc2da7f39de8150936e67456ae8"
+    }
+  ],
+  "status": "manuscript_review_rendered",
+  "stderr": {
+    "parse": "",
+    "render": ""
+  },
+  "targets": [
+    {
+      "bytes": 182364,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/assets_v4/fig1_workflow.png",
+      "sha256": "1f574b212cf15852a1238a51613db6dc3577c6214055b9fcdf3b915f5ab2ca63"
+    },
+    {
+      "bytes": 176595,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/assets_v4/fig2_orthobench.png",
+      "sha256": "def7aea07a84fe9b72192b3e43585ee021c994d99fe03ad95706c32a43974aa0"
+    },
+    {
+      "bytes": 240790,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/assets_v4/fig3_pareto.png",
+      "sha256": "bf0630b2b75b35b3e8b3117fd3fca7688f5d6e4f889381f1d2f8794f0a99c218"
+    },
+    {
+      "bytes": 143106,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/assets_v4/fig4_resources.png",
+      "sha256": "ec1a5e41c77f56c31659b219eeea72bc3286fd94a742386b632286d5938082d7"
+    },
+    {
+      "bytes": 195596,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/assets_v4/fig5_qfo.png",
+      "sha256": "54e8821d0d7391f52924309f41f917264f708e0994480cea003e750cdb360f74"
+    },
+    {
+      "bytes": 130792,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/assets_speed/fig6_generations.png",
+      "sha256": "2dc10022012318a3b812674caf808d7eca733257f1bcd5d9893a56de35f4ca32"
+    },
+    {
+      "bytes": 345763,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/assets_v4/figS1_all_scores.png",
+      "sha256": "072a7d5437f0bee26b707b3b390f5c2aa1a9ffb32f1e78b32a1fdaccc3aea72c"
+    },
+    {
+      "bytes": 115455,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/assets_v4/figS2_uncertainty.png",
+      "sha256": "01b6667facc21476ad89eb43009d7e4486c3cf82d916d85fa48b9d2bdb623492"
+    }
+  ],
+  "unique_targets": 8,
+  "untracked_targets": [
+    "manuscript/hmm_frontier_20261020/assets_speed/fig6_generations.png"
+  ]
+}

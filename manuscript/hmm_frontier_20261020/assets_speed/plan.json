@@ -1,0 +1,463 @@
+{
+  "cpu_budget": 16,
+  "cpu_set": [
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79
+  ],
+  "created_at_utc": "2026-10-22T16:35:43.866335+00:00",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "LC_ALL": "C",
+    "MKL_NUM_THREADS": "1",
+    "NUMBA_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONHASHSEED": "0",
+    "PYTHONUNBUFFERED": "1"
+  },
+  "executables": {
+    "FastTree": {
+      "bytes": 1496928,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220/FastTree",
+      "sha256": "55a9d997813aae2208bd4c2081bfa690e0ecdba2d6c491805d8689415c43e38e"
+    },
+    "mafft": {
+      "bytes": 109858,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin/mafft",
+      "sha256": "49ed001a2598e43c2ea37f24f01696b84ffaf7d49b68151a32713dee0cc05326"
+    },
+    "mcl": {
+      "bytes": 260456,
+      "path": "/home/bizon/anaconda3/envs/mcl_env/bin/mcl",
+      "sha256": "991813a1183ef3d4836e92cb439124c93dde06225dbe2a079120ccc756b7bad7"
+    },
+    "phmmer": {
+      "bytes": 1151488,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/hmmer-3.4/src/phmmer",
+      "sha256": "90de06fbee03705bfbda89b1d5857d337eeb9073d6be431340023b90f8ea515e"
+    },
+    "taskset": {
+      "bytes": 31104,
+      "path": "/usr/bin/taskset",
+      "sha256": "0bbb564550e3d78e14dac9451f80e5e5d12b920861a1f7c0c9b1c16aba02b4f9"
+    }
+  },
+  "harness": {
+    "bytes": 14344,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/compare_orthohmm_generations.py",
+    "sha256": "921012e08f25826085aeb836e6daa308dd452f87c5f8e4e38dc14f1d012ec770"
+  },
+  "input": [
+    {
+      "bytes": 346819,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/input/008931845.1.faa",
+      "proteins": 985,
+      "sha256": "f30d350ed8fcf082a2d969ce80c5ae1e8fd4e2a099a09670f04c1f7900849077"
+    },
+    {
+      "bytes": 850876,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/input/025152405.1.faa",
+      "proteins": 2408,
+      "sha256": "082ba30cee71272d73d71d5ff6cd5615c9cc0fdc85b5cdd540cd850f229e7dfb"
+    },
+    {
+      "bytes": 1114705,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/input/900607225.1.faa",
+      "proteins": 3039,
+      "sha256": "89b60eafa4f4ac6f47f2ea64305ce34bf75051b8d45ba627677a40998de142bb"
+    }
+  ],
+  "limitations": [
+    "Shared Threadripper host; no process isolation, exclusive CPUs or contention correction. OS affinity limits eligible CPUs only.",
+    "Original --cpu 4 creates up to four phmmer processes each with four compute threads. Modern --cpu 16 and four threads per worker use the same maximum sixteen eligible physical cores. Original graph/MCL phases retain its four-worker setting.",
+    "Three technical repeats on one small bacterial dataset do not establish general scalability or accuracy. Native process startup/import costs are included, and OS caches are not flushed.",
+    "This frozen v0.1.0 tag is the explicitly identified original implementation, not a claimed version 1.0 release."
+  ],
+  "lscpu": "# The following is the parsable format, which can be fed to other\n# programs. Each different item in every column has an unique ID\n# starting usually from zero.\n# CPU,Core,Socket,Node\n0,0,0,0\n1,1,0,0\n2,2,0,0\n3,3,0,0\n4,4,0,0\n5,5,0,0\n6,6,0,0\n7,7,0,0\n8,8,0,0\n9,9,0,0\n10,10,0,0\n11,11,0,0\n12,12,0,0\n13,13,0,0\n14,14,0,0\n15,15,0,0\n16,16,0,0\n17,17,0,0\n18,18,0,0\n19,19,0,0\n20,20,0,0\n21,21,0,0\n22,22,0,0\n23,23,0,0\n24,24,0,0\n25,25,0,0\n26,26,0,0\n27,27,0,0\n28,28,0,0\n29,29,0,0\n30,30,0,0\n31,31,0,0\n32,32,0,0\n33,33,0,0\n34,34,0,0\n35,35,0,0\n36,36,0,0\n37,37,0,0\n38,38,0,0\n39,39,0,0\n40,40,0,0\n41,41,0,0\n42,42,0,0\n43,43,0,0\n44,44,0,0\n45,45,0,0\n46,46,0,0\n47,47,0,0\n48,48,0,0\n49,49,0,0\n50,50,0,0\n51,51,0,0\n52,52,0,0\n53,53,0,0\n54,54,0,0\n55,55,0,0\n56,56,0,0\n57,57,0,0\n58,58,0,0\n59,59,0,0\n60,60,0,0\n61,61,0,0\n62,62,0,0\n63,63,0,0\n64,64,0,0\n65,65,0,0\n66,66,0,0\n67,67,0,0\n68,68,0,0\n69,69,0,0\n70,70,0,0\n71,71,0,0\n72,72,0,0\n73,73,0,0\n74,74,0,0\n75,75,0,0\n76,76,0,0\n77,77,0,0\n78,78,0,0\n79,79,0,0\n80,80,0,0\n81,81,0,0\n82,82,0,0\n83,83,0,0\n84,84,0,0\n85,85,0,0\n86,86,0,0\n87,87,0,0\n88,88,0,0\n89,89,0,0\n90,90,0,0\n91,91,0,0\n92,92,0,0\n93,93,0,0\n94,94,0,0\n95,95,0,0\n96,0,0,0\n97,1,0,0\n98,2,0,0\n99,3,0,0\n100,4,0,0\n101,5,0,0\n102,6,0,0\n103,7,0,0\n104,8,0,0\n105,9,0,0\n106,10,0,0\n107,11,0,0\n108,12,0,0\n109,13,0,0\n110,14,0,0\n111,15,0,0\n112,16,0,0\n113,17,0,0\n114,18,0,0\n115,19,0,0\n116,20,0,0\n117,21,0,0\n118,22,0,0\n119,23,0,0\n120,24,0,0\n121,25,0,0\n122,26,0,0\n123,27,0,0\n124,28,0,0\n125,29,0,0\n126,30,0,0\n127,31,0,0\n128,32,0,0\n129,33,0,0\n130,34,0,0\n131,35,0,0\n132,36,0,0\n133,37,0,0\n134,38,0,0\n135,39,0,0\n136,40,0,0\n137,41,0,0\n138,42,0,0\n139,43,0,0\n140,44,0,0\n141,45,0,0\n142,46,0,0\n143,47,0,0\n144,48,0,0\n145,49,0,0\n146,50,0,0\n147,51,0,0\n148,52,0,0\n149,53,0,0\n150,54,0,0\n151,55,0,0\n152,56,0,0\n153,57,0,0\n154,58,0,0\n155,59,0,0\n156,60,0,0\n157,61,0,0\n158,62,0,0\n159,63,0,0\n160,64,0,0\n161,65,0,0\n162,66,0,0\n163,67,0,0\n164,68,0,0\n165,69,0,0\n166,70,0,0\n167,71,0,0\n168,72,0,0\n169,73,0,0\n170,74,0,0\n171,75,0,0\n172,76,0,0\n173,77,0,0\n174,78,0,0\n175,79,0,0\n176,80,0,0\n177,81,0,0\n178,82,0,0\n179,83,0,0\n180,84,0,0\n181,85,0,0\n182,86,0,0\n183,87,0,0\n184,88,0,0\n185,89,0,0\n186,90,0,0\n187,91,0,0\n188,92,0,0\n189,93,0,0\n190,94,0,0\n191,95,0,0\n",
+  "mcl_version": "mcl 22-282\nCopyright (c) 1999-2022, Stijn van Dongen. mcl comes with NO WARRANTY\nto the extent permitted by law. You may redistribute copies of mcl under\nthe terms of the GNU General Public License.\n",
+  "modern_cli_cpu": 16,
+  "modern_revision": "c40d166813a6507c9826b8825fba64ba09f69b89",
+  "modern_threads_per_worker": 4,
+  "original_cli_cpu": 4,
+  "original_revision": "7d1540c624ab19a9d6083d9bcbdfe55c7fcd26c2",
+  "per_run_timeout_seconds": 1200,
+  "platform": "Linux-6.8.0-55-generic-x86_64-with-glibc2.39",
+  "python": {
+    "bytes": 17157264,
+    "path": "/home/bizon/anaconda3/bin/python3.10",
+    "sha256": "ddd8126d3a409c6ad46c718225d853214d0c9dba3657123514172951fa79058b"
+  },
+  "runs": [
+    {
+      "index": 0,
+      "method": "original",
+      "repeat": 1
+    },
+    {
+      "index": 1,
+      "method": "sensitive",
+      "repeat": 1
+    },
+    {
+      "index": 2,
+      "method": "phylogeny",
+      "repeat": 1
+    },
+    {
+      "index": 3,
+      "method": "sensitive",
+      "repeat": 2
+    },
+    {
+      "index": 4,
+      "method": "phylogeny",
+      "repeat": 2
+    },
+    {
+      "index": 5,
+      "method": "original",
+      "repeat": 2
+    },
+    {
+      "index": 6,
+      "method": "phylogeny",
+      "repeat": 3
+    },
+    {
+      "index": 7,
+      "method": "original",
+      "repeat": 3
+    },
+    {
+      "index": 8,
+      "method": "sensitive",
+      "repeat": 3
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Sequential fresh end-to-end orthogroup inference to --stop infer; sequence FASTA exports excluded. Original uses MCL, modern uses high-sensitivity Leiden with and without inferred phylogeny. Different methods/outputs, not an equal-accuracy comparison.",
+  "source_input": [
+    {
+      "bytes": 346819,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/bacterial_scaling/proteomes/008931845.1.faa",
+      "sha256": "f30d350ed8fcf082a2d969ce80c5ae1e8fd4e2a099a09670f04c1f7900849077"
+    },
+    {
+      "bytes": 850876,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/bacterial_scaling/proteomes/025152405.1.faa",
+      "sha256": "082ba30cee71272d73d71d5ff6cd5615c9cc0fdc85b5cdd540cd850f229e7dfb"
+    },
+    {
+      "bytes": 1114705,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/bacterial_scaling/proteomes/900607225.1.faa",
+      "sha256": "89b60eafa4f4ac6f47f2ea64305ce34bf75051b8d45ba627677a40998de142bb"
+    }
+  ],
+  "source_selection": "Three smallest complete proteomes by protein count from the existing n005 set, chosen before timing.",
+  "sources": [
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 127,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/__main__.py",
+      "sha256": "59690e02073880a5ec60087a93d77e3448a3370bb78fb17ee9ce9d5300d0d45a"
+    },
+    {
+      "bytes": 17751,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/accuracy.py",
+      "sha256": "ff6d00ea9e3a4edab977f95fa95042654b7a91b4f126205d30cb1d026a88a939"
+    },
+    {
+      "bytes": 15660,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/args_processing.py",
+      "sha256": "e93ce1b1db4eda08a6189492486f2f7b1e2a069a44a40171b5b188517269dc73"
+    },
+    {
+      "bytes": 10166,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/externals.py",
+      "sha256": "5304b4190b01a53c7c4e3235f9d1df9e7eff1f01d09633d07750103487268115"
+    },
+    {
+      "bytes": 2943,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/files.py",
+      "sha256": "c54ca3f46a6cef17da3c0623ab7675e8fe4b3e484765b4eaa76642ffba981e5a"
+    },
+    {
+      "bytes": 32303,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/helpers.py",
+      "sha256": "ca0f4b572480bfb046399a4e87de605dd22ca7b211aa3e9f14da580567f40bc6"
+    },
+    {
+      "bytes": 1411,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/leiden_worker.py",
+      "sha256": "7d6d9fa5827bd99dcce28d2248688bbeb762b4b547bbc4e7491c16f0e2090c41"
+    },
+    {
+      "bytes": 35211,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/local_rescue.py",
+      "sha256": "df05c723699c9870dc3efa287ee8d31b17e008381869a561b6c43147d6e354f7"
+    },
+    {
+      "bytes": 6812,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/metrics.py",
+      "sha256": "d19bc9c9777b2dd01943f6421930f9fab02b7153519ab76e6a40272328195a1a"
+    },
+    {
+      "bytes": 42657,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/orthohmm.py",
+      "sha256": "aeeec846bb5e9ed044e8df3346303db5097ea680e7ca04452f4f1060493fca5b"
+    },
+    {
+      "bytes": 18365,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/parser.py",
+      "sha256": "1f04dad1175379b0c0e638bf1586b87d9576b3bbc87af326bb5347aeb16e34c6"
+    },
+    {
+      "bytes": 33604,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/phylogeny.py",
+      "sha256": "9cbe5c0067efa9d9cb32b9492a133532593060e2d366a44e7bf9f419272e88d5"
+    },
+    {
+      "bytes": 44442,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/phylogeny_pipeline.py",
+      "sha256": "dadb747b536dce2a0d706b3f9b52d32bdfb60090ed4d99fbe372e40c4d7701ea"
+    },
+    {
+      "bytes": 68431,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/refinement.py",
+      "sha256": "738f7c328d17c08911b2a2face38dd59b13e6c9a3dabafcc7c5241149c80e3eb"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1800,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/_experimental/README.md",
+      "sha256": "2faa6f273dcfc3ffa5be98bda74f27aca5056adbf61a590bb22afd31752bed71"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/_experimental/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 7759,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/_experimental/csrc/hmm_forward.c",
+      "sha256": "f29e0ce42978e43ca2b3a8576e327e536a1ec8537757feff01d756d96045c026"
+    },
+    {
+      "bytes": 15413,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/_experimental/csrc/hmm_viterbi_striped.c",
+      "sha256": "261c1a298663b9c9c46050c9b5a521e8be9cc5997e07b06204e08f4a45a19917"
+    },
+    {
+      "bytes": 7506,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/_experimental/csrc/kmer_merge.c",
+      "sha256": "8dce3c7e882c0ec68195b6dacc96c31d246bfa38c2515a473cd03542a8f28c2a"
+    },
+    {
+      "bytes": 8599,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/_experimental/viterbi_cuda_numba.py",
+      "sha256": "be998cf737f5c468417a84cc42d6f9c288133b6da09989ba1630d2c7d07fbdd2"
+    },
+    {
+      "bytes": 48624,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/csrc/hmm_viterbi.c",
+      "sha256": "14654de9d4cfb4078df3997e76c0a11b03e1f745f70064c2284cad32563fd339"
+    },
+    {
+      "bytes": 58856,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/csrc/hmm_viterbi.so",
+      "sha256": "f21d902852d727d6270b65ba900db52e7216cd874ee2d2b89fa72b6f16dcd5c0"
+    },
+    {
+      "bytes": 13696,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/csrc/hmm_viterbi_cuda.cu",
+      "sha256": "aa0a7a6fa53da025f28607a055364c08c365e561033a48dcf2c4381d350301d2"
+    },
+    {
+      "bytes": 10657,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/csrc/kmer_prefilter.c",
+      "sha256": "8124e2652cb382549f2a282c3122aaa9f5c393da2b304b5d4f6cb92fae243f01"
+    },
+    {
+      "bytes": 20632,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/csrc/kmer_prefilter.so",
+      "sha256": "348b1c715e2e305dae7e889bae1d2498e609e48ce5d50cd668db71b548c60b88"
+    },
+    {
+      "bytes": 9098,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/csrc/pair_align.c",
+      "sha256": "c5a3c2bc869ec59ca8261c976d6e77e5938faf5bfd8571566315b81cf5b08e9a"
+    },
+    {
+      "bytes": 20784,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/csrc/pair_align.so",
+      "sha256": "81c26c6ce92b1da37285824ea1b8dcea007a7fc18a11ee5fa3d150628fa800c7"
+    },
+    {
+      "bytes": 23947,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/engine.py",
+      "sha256": "231ab0e4289a73c9a1b1ec7bf9fd84d4499265e7e5cd12dfe97f548fd53376a5"
+    },
+    {
+      "bytes": 2211,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/evalue.py",
+      "sha256": "3730b937654e97138521a301e9b28fbf4f446ac3952414b6c2834eb718d25397"
+    },
+    {
+      "bytes": 28063,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/matrices.py",
+      "sha256": "e5aaa051973b5cdb763b7eddec2c4a87c900d22db11037898b243d53e12fc6f9"
+    },
+    {
+      "bytes": 11543,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/msa_center_star.py",
+      "sha256": "db7373376f799d2994c410a4e37ccd2c0dd549f2f315e8b1fd540c6fea6569a5"
+    },
+    {
+      "bytes": 9337,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/msa_profile.py",
+      "sha256": "6185859d001cec3ca8c4c65b2e661e92489f55697737a702cd8522594e92f8d4"
+    },
+    {
+      "bytes": 25882,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/prefilter.py",
+      "sha256": "db3267d5330212d775c2f479d0dd88795ca65c3ff4d818869f0fdab74be5175d"
+    },
+    {
+      "bytes": 5409,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/profile.py",
+      "sha256": "271490863df46ff67c6f7d2bf9dcb490dd43315ac3d250636b3adf98150b953a"
+    },
+    {
+      "bytes": 35195,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/profile_expansion.py",
+      "sha256": "444ed300eea683e926da33a8c19a79873cd951f786250607bbb961596949a0b0"
+    },
+    {
+      "bytes": 8110,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/profile_spans.py",
+      "sha256": "8f43c702c5c050996ba46e4607a44a10670f2dc0c01994a171f0389fd755e16e"
+    },
+    {
+      "bytes": 21975,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/selective_hmmer.py",
+      "sha256": "2287ee15f5e2b509dd1d2116b7c6678a06d24f44c2e68218d5623dfe0a84f5fe"
+    },
+    {
+      "bytes": 24888,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/selective_profiles.py",
+      "sha256": "5b22cb06d094364b738732b1fe23709b07efaee73edf94a13c8e16776dbb2646"
+    },
+    {
+      "bytes": 3887,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/sequence_weights.py",
+      "sha256": "b0f4360152af752b412b9d5255b5e6ceb264eb0c166a38c93c554b568c51402e"
+    },
+    {
+      "bytes": 4509,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/sequences.py",
+      "sha256": "e083679cb9ea780664943355d260f398a96d93a2db336bb615af1032766f5980"
+    },
+    {
+      "bytes": 5324,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/species_prune.py",
+      "sha256": "d729b9aa8ddf311c52e1d46c51d89dc5a6ef5d64ccd979deca90b7d980905b9e"
+    },
+    {
+      "bytes": 18435,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/viterbi.py",
+      "sha256": "5b39251aba481d854c74b74d0d8b52f921906042470ee3d96c803423a931bddb"
+    },
+    {
+      "bytes": 4420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/search/viterbi_cuda_ctypes.py",
+      "sha256": "fba688e77941c92c5e4080ef5de3dc23e4dfee6c5c2dad5d7ccdf876f81f9d20"
+    },
+    {
+      "bytes": 22,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/version.py",
+      "sha256": "2c12b8ea17aeb6f9f72a6b02aca218bbc4508a46df9e365a8f6c45ad769e0b34"
+    },
+    {
+      "bytes": 2949,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/writer.py",
+      "sha256": "d3dc7a318166272762395dfcb772d8779286bbf60023b2934a7d7bef0e0003fe"
+    },
+    {
+      "bytes": 2236,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/observe_original.py",
+      "sha256": "2b713e12f80cf388a830928e7846d283c48790976b3609095a16ef44a01ef5a4"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/original/orthohmm/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 127,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/original/orthohmm/__main__.py",
+      "sha256": "59690e02073880a5ec60087a93d77e3448a3370bb78fb17ee9ce9d5300d0d45a"
+    },
+    {
+      "bytes": 2768,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/original/orthohmm/args_processing.py",
+      "sha256": "aa31e693e8b0f37bcba2c4411035502b65f670800cf86937f05aba716dd3fae6"
+    },
+    {
+      "bytes": 2656,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/original/orthohmm/externals.py",
+      "sha256": "d402c8acba0b4d88aef18587b33a31f2ae173b136999908af7c8398a7308b02e"
+    },
+    {
+      "bytes": 2977,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/original/orthohmm/files.py",
+      "sha256": "f1ec2acaea2566615b06b0a37e17b77f76bbd87fe6f2c76560a318343f6871a1"
+    },
+    {
+      "bytes": 17810,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/original/orthohmm/helpers.py",
+      "sha256": "b12de3e924ba2fe958d7761f8641e4c69a2f0f8633b997a4538819970e408fa8"
+    },
+    {
+      "bytes": 4465,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/original/orthohmm/orthohmm.py",
+      "sha256": "d98b7c65317c710c4df2684c27f9781086ffe0053f1bb93dd0aa80778edd455c"
+    },
+    {
+      "bytes": 11209,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/original/orthohmm/parser.py",
+      "sha256": "10059fe4ee26e0d6ad71bcef453c4f8f34a3d4d16f666b823ce5ac409e5b32f3"
+    },
+    {
+      "bytes": 22,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/original/orthohmm/version.py",
+      "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+    },
+    {
+      "bytes": 2485,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/original/orthohmm/writer.py",
+      "sha256": "075c46421551b02e27b3125df60f4d90e40e9cbbe74f8c4533343cb3428db546"
+    }
+  ]
+}

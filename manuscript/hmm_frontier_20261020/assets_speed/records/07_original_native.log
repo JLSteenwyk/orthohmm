@@ -1,0 +1,38 @@
+  ____       _   _           _    _ __  __ __  __ 
+ / __ \     | | | |         | |  | |  \/  |  \/  |
+| |  | |_ __| |_| |__   ___ | |__| | \  / | \  / |
+| |  | | '__| __| '_ \ / _ \|  __  | |\/| | |\/| |
+| |__| | |  | |_| | | | (_) | |  | | |  | | |  | |
+ \____/|_|   \__|_| |_|\___/|_|  |_|_|  |_|_|  |_|
+
+Version: 0.1.0
+
+-------------
+| Arguments |
+-------------
+Directory of FASTA files: /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/input
+Number of FASTA files: 3
+Directory for output files: /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/runs/07_original/output
+Step to start analysis: NA
+Step to stop analysis: infer
+Path to phmmer: /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/hmmer-3.4/src/phmmer
+E-value threshold: 0.0001
+Substitution matrix: BLOSUM62
+Path to mcl: /home/bizon/anaconda3/envs/mcl_env/bin/mcl
+Inflation value: 1.5
+Single-copy threshold: 0.5
+CPUs: 4
+
+
+Step 1/4: Conducting all-to-all comparisons.
+          11.1% complete          22.2% complete          33.3% complete          44.4% complete          55.6% complete          66.7% complete          77.8% complete          88.9% complete          100.0% complete          Completed!      
+
+Step 2/4: Determining edge thresholds
+          11.11% complete          22.22% complete          33.33% complete          44.44% complete          55.56% complete          66.67% complete          77.78% complete          88.89% complete          100.00% complete          Completed!      
+
+Step 3/4: Identifying network edges
+          11.11% complete          22.22% complete          33.33% complete          44.44% complete          55.56% complete          66.67% complete          77.78% complete          88.89% complete          100.00% complete          Completed!      
+
+Step 4/4: Conducting clustering
+          Completed!
+

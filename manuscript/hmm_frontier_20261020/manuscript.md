@@ -122,6 +122,20 @@ numerical sample sizes. The supplementary Three Kingdoms result also favored
 full OrthoFinder, 0.988582 versus 0.872133, but evaluates a restricted marker
 reference rather than a genome-scale assessment of orthology.
 
+### Small-dataset generation timing
+
+On three complete bacterial proteome files containing 6432 proteins, median
+elapsed time was 275.3 seconds for the original v0.1.0 implementation,
+20.6 seconds for OrthoHMM2 sensitive, and 41.4 seconds for OrthoHMM2 with
+inferred phylogenetic refinement (Fig. 6). Observed ranges were 274.3-275.3,
+20.5-21.0, and 41.1-41.4 seconds, respectively. Ratios of original to modern
+elapsed-time medians were 13.38 for sensitive mode and 6.65 with phylogeny.
+Initial homology search accounted for most of the original runtime, with a
+median of 272.9 seconds compared with 13.5 and 13.3 seconds in the two
+OrthoHMM2 configurations. These shared-host measurements describe three
+technical repeats per configuration, not an isolated or equal-accuracy
+speedup. The small bacterial dataset does not establish general scalability.
+
 ### Profile refinement did not support a new default
 
 The unadjusted paired OrthoBench F1 intervals for Henikoff, clustered
@@ -264,6 +278,34 @@ composition changes with dataset size, and contention is neither removed nor
 quantified as a correction. These historical configurations are not assigned
 the accuracy or costs of the new weighted experiments.
 
+### Generation timing protocol
+
+A separate comparison used the three smallest proteome files in the retained
+five-proteome bacterial set, comprising 6432 proteins without sequence
+subsampling. File selection preceded timing. OrthoHMM1 denotes the unchanged
+original v0.1.0 tag; OrthoHMM2 denotes the frozen development implementation,
+evaluated in high-sensitivity mode with and without inferred phylogenetic
+refinement. The timing archive identifies both source revisions and all inputs.
+
+Three fresh executions per configuration followed a balanced sequential order
+on the same 16 eligible physical cores. The original CLI used four concurrent
+phmmer searches with four compute threads each; its subsequent graph and MCL
+stages retained four workers. OrthoHMM2 used 16 CPUs with four threads per
+search worker. Both used BLOSUM62 and the nominal 0.0001 significance threshold,
+without assuming equivalent score calibration or accuracy. Native elapsed time
+included startup and orthogroup inference but excluded optional sequence-file
+exports and post-run validation. Initial search time was measured separately.
+
+Admission required a successful native exit, complete metrics, and exactly
+one assignment of every input protein. All nine directional phmmer tables
+also required completion markers. An initial pilot failed with an obsolete
+MCL dependency; the final panel used compatible MCL 22-282 and repeated every
+search in fresh output directories. The failed and interrupted pilot attempts
+remain recorded but contribute no timing observations. Other host jobs were
+not stopped, and eligible cores were not exclusively reserved. Medians and
+observed ranges describe technical repeats on one small dataset, not
+confidence intervals, isolated speedups, or an equal-accuracy comparison.
+
 ## Data and code availability
 
 OrthoHMM2 is available at <https://github.com/JLSteenwyk/orthohmm>. The companion
@@ -370,6 +412,27 @@ are not pooled. Published OrthoFinder figures guide the types of panels,
 not their numerical inputs; unrun species-tree discordance tests are absent.
 Some configurations have coincident or visually overlapping coordinates;
 the exported coordinate table preserves their distinct identities and values.
+:::
+
+::: {.figure-sheet}
+## Figure 6. Small-dataset runtime across OrthoHMM generations
+
+![](assets_speed/fig6_generations.png){width=100%}
+
+**A,** Native elapsed time through completed orthogroup inference, including
+startup but excluding optional sequence-file exports. **B,** Initial homology
+search time. Each configuration has three fresh sequential runs on the same
+6432 proteins from three complete bacterial proteome files. Points show every
+repeat, ticks medians, and lines observed ranges, not confidence intervals.
+Original/modern ratios divide their elapsed-time medians. OrthoHMM1 is the
+unchanged v0.1.0 tag using phmmer and MCL; the OrthoHMM2 configurations use
+built-in high-sensitivity search and Leiden, with optional inferred phylogeny.
+All runs have the same 16-core affinity limit. Original nested search uses
+four workers with four compute threads each, while its later graph/MCL stages
+retain four workers. OrthoHMM2 uses 16 CPUs and four threads per search worker.
+This shared-host comparison does not assume equal outputs or accuracy, and
+does not establish general scalability. Supplementary Table S5 retains all
+nine admitted attempts; the separate failed pilot is not included in ratios.
 :::
 
 ::: {.figure-sheet}

@@ -1,0 +1,143 @@
+{
+  "command": [
+    "/home/bizon/anaconda3/bin/python3.10",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current/orthohmm/__main__.py",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/input",
+    "-o",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/runs/08_sensitive/output",
+    "-x",
+    "BLOSUM62",
+    "-e",
+    "0.0001",
+    "--stop",
+    "infer",
+    "-c",
+    "16",
+    "--threads_per_worker",
+    "4",
+    "--accuracy_profile",
+    "high_sensitivity",
+    "--search_result_order",
+    "canonical",
+    "--clustering",
+    "leiden",
+    "--cpm_resolution",
+    "0.1",
+    "--metrics_json",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/runs/08_sensitive/metrics.json"
+  ],
+  "counts": {
+    "genes": 6432,
+    "high_sensitivity_final_singleton_edges": 775,
+    "high_sensitivity_profile_candidates": 111317,
+    "high_sensitivity_profile_edges": 93,
+    "high_sensitivity_profile_hits": 2801,
+    "high_sensitivity_profiles": 445,
+    "high_sensitivity_rbnh_edges": 2010,
+    "high_sensitivity_singleton_edges": 790,
+    "network_edges": 2832,
+    "orthogroups": 4644,
+    "search_candidates": 1458013,
+    "significant_hits": 20495,
+    "single_copy_orthogroups": 346,
+    "singletons": 0,
+    "species": 3,
+    "species_pairs": 9
+  },
+  "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current",
+  "finished_at_epoch_s": 1792687963.1793978,
+  "metadata": {
+    "accuracy_profile": "high_sensitivity",
+    "clustering": "leiden",
+    "cpm_resolution": 0.1,
+    "cpu_budget": 16,
+    "evalue_threshold": 0.0001,
+    "fasta_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/input",
+    "high_sensitivity_checkpoint": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/runs/08_sensitive/output/orthohmm_working_res/high_sensitivity_checkpoint",
+    "leiden_seed": 4,
+    "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/runs/08_sensitive/output",
+    "profile_alignment_policy": "off",
+    "profile_projection_policy": "legacy",
+    "profile_sequence_weighting": "none",
+    "refinement_substages_s": {
+      "cluster_write": 0.00355,
+      "hit_and_edge_collection": 0.000851,
+      "numeric_refinement": 0.069482,
+      "setup_and_cluster_read": 0.008863
+    },
+    "search_candidate_policy": "single",
+    "search_kmer_k": 4,
+    "search_max_candidates_per_query": 100,
+    "search_min_total_hits": 4,
+    "search_mode": "builtin",
+    "search_result_order": "canonical",
+    "search_threads_per_worker": 4,
+    "search_total_threads": 16,
+    "search_workers": 4,
+    "singleton_tie_policy": "first_hit",
+    "substitution_matrix": "BLOSUM62"
+  },
+  "peak_process_tree_rss_bytes": 1911533568,
+  "peak_process_tree_rss_gib": 1.780254,
+  "pid": 2582254,
+  "platform": "Linux-6.8.0-55-generic-x86_64-with-glibc2.39",
+  "python": "3.10.13",
+  "rss_measurement": "sampled_sum_of_linux_proc_tree_rss",
+  "schema_version": 1,
+  "stages": {
+    "clustering": {
+      "peak_process_tree_rss_bytes": 146276352,
+      "peak_process_tree_rss_gib": 0.13623,
+      "system_cpu_s": 0.047665,
+      "user_cpu_s": 0.630048,
+      "wall_s": 0.675374
+    },
+    "edge_thresholds": {
+      "peak_process_tree_rss_bytes": 105381888,
+      "peak_process_tree_rss_gib": 0.098145,
+      "system_cpu_s": 0.000938,
+      "user_cpu_s": 0.017068,
+      "wall_s": 0.018027
+    },
+    "network_edges": {
+      "peak_process_tree_rss_bytes": 106954752,
+      "peak_process_tree_rss_gib": 0.099609,
+      "system_cpu_s": 0.004718,
+      "user_cpu_s": 0.012136,
+      "wall_s": 0.016697
+    },
+    "orthogroup_materialization": {
+      "peak_process_tree_rss_bytes": 230686720,
+      "peak_process_tree_rss_gib": 0.214844,
+      "system_cpu_s": 0.002008,
+      "user_cpu_s": 0.163749,
+      "wall_s": 0.165193
+    },
+    "profile_expansion": {
+      "peak_process_tree_rss_bytes": 1911533568,
+      "peak_process_tree_rss_gib": 1.780254,
+      "system_cpu_s": 1.510963,
+      "user_cpu_s": 68.277573,
+      "wall_s": 5.770322
+    },
+    "refinement": {
+      "peak_process_tree_rss_bytes": 221249536,
+      "peak_process_tree_rss_gib": 0.206055,
+      "system_cpu_s": 0.003001,
+      "user_cpu_s": 0.080784,
+      "wall_s": 0.083353
+    },
+    "search": {
+      "peak_process_tree_rss_bytes": 819695616,
+      "peak_process_tree_rss_gib": 0.763401,
+      "system_cpu_s": 0.502016,
+      "user_cpu_s": 154.282033,
+      "wall_s": 13.276293
+    }
+  },
+  "started_at_epoch_s": 1792687943.1611686,
+  "status": "complete",
+  "system_cpu_s": 2.13347,
+  "user_cpu_s": 223.728766,
+  "wall_s": 20.018232
+}

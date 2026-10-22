@@ -8,6 +8,11 @@ Editorial revision on 21 October 2026 uses OrthoHMM2 for the extended framework.
 Only display names change; historical run identifiers, plotted values, method
 inventory, endpoints and reporting decisions are unchanged.
 
+The 22 October extension adds main Figure 6 from a separate fresh generation
+timing experiment. It does not change the original accuracy comparison set,
+frontiers or figures. Its plan fixes the small dataset and balanced repeat
+order before timing, rather than selecting fastest runs after observing them.
+
 ## Evidence And Comparison Set
 
 Use the final campaign archive delivered at
@@ -64,7 +69,7 @@ not reproduce unrun species-tree discordance tests from those publications.
 
 ## Delivery And Review
 
-Deliver a concise manuscript, PDF and editable DOCX, five main figures and two
+Deliver a concise manuscript, PDF and editable DOCX, six main figures and two
 supplementary figures in PNG/PDF/SVG, full source tables, exact frontier
 membership, references, executable figure code, an input/output hash manifest
 and a portable ZIP. Keep older manuscripts and unrelated user files unchanged.

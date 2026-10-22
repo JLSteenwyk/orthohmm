@@ -16,6 +16,12 @@ def manuscript():
     return (ROOT / "manuscript.md").read_text()
 
 
+def without_generation_timing(text):
+    for heading in ("Small-dataset generation timing", "Generation timing protocol"):
+        text = re.sub(r"### " + heading + r"\n.*?(?=\n### |\n## )", "", text, flags=re.S)
+    return re.sub(r"::: \{\.figure-sheet\}\n## Figure 6\..*?\n:::\n", "", text, flags=re.S)
+
+
 def test_manuscript_and_captions_have_no_first_person():
     assert FIRST_PERSON.findall(manuscript()) == []
 
@@ -49,9 +55,10 @@ def test_every_numerical_token_and_figure_link_matches_original_draft():
         text = text.replace("OrthoHMM2", "OrthoHMM")
         return re.findall(r"[-+]?\d+(?:\.\d+)?", text)
 
-    assert scientific_numbers(manuscript()) == scientific_numbers(original)
+    retained = without_generation_timing(manuscript())
+    assert scientific_numbers(retained) == scientific_numbers(original)
     links = lambda text: [Path(p).name for p in re.findall(r"!\[[^\]]*\]\(([^)]+)\)", text)]
-    assert links(manuscript()) == links(original)
+    assert links(retained) == links(original)
     original_citations = set(re.findall(r"@([a-zA-Z0-9_-]+)", original))
     assert set(re.findall(r"@([a-zA-Z0-9_-]+)", manuscript())) == original_citations | {
         "qfo2024", "schlicker2006", "Dosch2023FAS"}
@@ -128,6 +135,49 @@ def test_hmm2_figure_labels_preserve_all_scientific_snapshot_values():
     assert old == new
     for name in ("scores_all_29.tsv", "plot_coordinates.tsv", "pareto_membership.tsv", "timing_attempts.tsv"):
         assert (ROOT / "assets_v3" / name).read_bytes() == (ROOT / "assets_v4" / name).read_bytes()
+
+
+def test_generation_timing_claims_match_all_nine_fresh_observations():
+    from benchmark_tools.plot_orthohmm_generations import summarize
+    data = json.loads((ROOT / "assets_speed/timing.json").read_text())
+    assert data["summary"] == summarize(data)
+    assert len(data["runs"]) == 9
+    assert data["cpu_budget"] == 16
+    assert sum(r["proteins"] for r in data["input"]) == 6432
+    section = manuscript().split("### Small-dataset generation timing\n")[1].split("\n### ")[0]
+    for row in data["summary"]:
+        assert f'{row["elapsed_s"]["median"]:.1f}' in section
+    for row in data["summary"][1:]:
+        assert f'{row["original_to_modern_elapsed_ratio"]:.2f}' in section
+    assert "assets_speed/fig6_generations.png" in manuscript()
+
+
+def test_generation_timing_outputs_cover_the_same_unchanged_proteins():
+    import hashlib
+    from benchmark_tools.compare_orthohmm_generations import partition, sequences
+    assets = ROOT / "assets_speed"
+    data = json.loads((assets / "timing.json").read_text())
+    expected = [name for _, ids in sequences(assets / "input") for name in ids]
+    for ref in data["input"]:
+        path = assets / "input" / Path(ref["path"]).name
+        assert hashlib.sha256(path.read_bytes()).hexdigest() == ref["sha256"]
+    for row in data["runs"]:
+        path = assets / "records" / f'{row["index"]:02d}_{row["method"]}_groups.txt'
+        assert partition(path, expected) == row["partition"]
+    assert all(r["all_sequences_retained"] for r in data["input_source_integrity"])
+
+
+def test_generation_phylogeny_really_infers_and_reconciles_without_checkpoint_reuse():
+    assets = ROOT / "assets_speed"
+    data = json.loads((assets / "timing.json").read_text())
+    for row in data["runs"]:
+        if row["method"] != "phylogeny":
+            continue
+        counts = json.loads((assets / "records" / f'{row["index"]:02d}_phylogeny_metrics.json').read_text())["counts"]
+        assert counts["phylogeny_reconciled_families"] > 0
+        assert counts["phylogeny_species_tree_families"] > 0
+        assert counts["phylogeny_checkpoint_hits"] == 0
+        assert counts["phylogeny_species_tree_checkpoint_hit"] is False
 
 
 @pytest.mark.skipif(shutil.which("pandoc") is None, reason="pandoc required")

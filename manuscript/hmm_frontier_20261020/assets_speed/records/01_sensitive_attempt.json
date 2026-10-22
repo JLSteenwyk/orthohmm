@@ -1,0 +1,100 @@
+{
+  "artifacts": [
+    {
+      "bytes": 5066,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/runs/01_sensitive/metrics.json",
+      "sha256": "6a96ef5035c9b6c67832a7895dfa686a39ef6a450674f48dd46efe2d513e834b"
+    },
+    {
+      "bytes": 1493,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/runs/01_sensitive/native.log",
+      "sha256": "746cf4053841740825451b5a9e2106abaf027b44b3f70b12f463d8630c9b8481"
+    }
+  ],
+  "command": [
+    "/usr/bin/taskset",
+    "-c",
+    "64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79",
+    "/home/bizon/anaconda3/bin/python3.10",
+    "-m",
+    "orthohmm",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/input",
+    "-o",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/runs/01_sensitive/output",
+    "-x",
+    "BLOSUM62",
+    "-e",
+    "0.0001",
+    "--stop",
+    "infer",
+    "-c",
+    "16",
+    "--threads_per_worker",
+    "4",
+    "--accuracy_profile",
+    "high_sensitivity",
+    "--search_result_order",
+    "canonical",
+    "--clustering",
+    "leiden",
+    "--cpm_resolution",
+    "0.1",
+    "--metrics_json",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/runs/01_sensitive/metrics.json"
+  ],
+  "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/sources/current",
+  "elapsed_s": 20.571549961998244,
+  "finished_at_utc": "2026-10-22T16:40:47.149048+00:00",
+  "host_after": {
+    "available_memory_bytes": 699367452672,
+    "cpu_times": {
+      "guest": 0.0,
+      "guest_nice": 0.0,
+      "idle": 10891668.75,
+      "iowait": 1081.83,
+      "irq": 0.0,
+      "nice": 511940.49,
+      "softirq": 151.41,
+      "steal": 0.0,
+      "system": 202039.37,
+      "user": 1379994.76
+    },
+    "load_average": [
+      43.1474609375,
+      38.39453125,
+      37.6201171875
+    ]
+  },
+  "host_before": {
+    "available_memory_bytes": 698619478016,
+    "cpu_times": {
+      "guest": 0.0,
+      "guest_nice": 0.0,
+      "idle": 10888603.61,
+      "iowait": 1081.74,
+      "irq": 0.0,
+      "nice": 511789.72,
+      "softirq": 151.36,
+      "steal": 0.0,
+      "system": 201964.81,
+      "user": 1379339.59
+    },
+    "load_average": [
+      37.033203125,
+      37.01318359375,
+      37.169921875
+    ]
+  },
+  "index": 1,
+  "method": "sensitive",
+  "partition": {
+    "orthogroups": 4644,
+    "proteins": 6432,
+    "sha256": "1f32d245cd4cf14d059f5ab2baf7e4c197e3f8778e019cc17c751b231db6a14b"
+  },
+  "repeat": 1,
+  "returncode": 0,
+  "search_s": 13.500635,
+  "started_at_utc": "2026-10-22T16:40:26.575938+00:00",
+  "status": "validated"
+}

@@ -2,25 +2,25 @@
   "citations_resolved": 17,
   "excluded": [
     "Historical draft ZIP and superseded render attempts",
-    "Raw proteomes and large scientific caches",
+    "Large legacy proteome collections and scientific caches; the three small timing inputs are included",
     "Browser profiles",
     "The ZIP itself and this manifest (no self-referential hashes)"
   ],
   "files": [
     {
-      "bytes": 7359,
+      "bytes": 9055,
       "path": "README.md",
-      "sha256": "44985e08d7eb553d7e1791f59f9d386949d64e14f521bb9ede5252fd81cf5723"
+      "sha256": "bfab0797186f1557afe61ce13f434b1920423c8565480933af27621639b83511"
     },
     {
-      "bytes": 4766,
+      "bytes": 5072,
       "path": "FIGURE_PLAN.md",
-      "sha256": "68bc6c22dbb8827310fe2d212f9b020439a0f78721b09351f4f9eee066bcb1a9"
+      "sha256": "11b9051559a45880b2db4a531822c88f8961c913016f24783a70a2c5639c6ece"
     },
     {
-      "bytes": 22500,
+      "bytes": 26361,
       "path": "manuscript.md",
-      "sha256": "73d0faea7d11efdab7c8e568ad40b8da183f9106d9e150230e4997bebd4fed79"
+      "sha256": "dc6af2afd6751f854fb295102cee290bb9d9f86f93b05f372b13271b9c36f256"
     },
     {
       "bytes": 1148,
@@ -38,29 +38,29 @@
       "sha256": "6aa581906b7643bad6e1d576de3db9d3ad3c284020c5a0af5c141b9b97270029"
     },
     {
-      "bytes": 33908,
-      "path": "manuscript_citations_final.html",
-      "sha256": "216e1bae792c871de460ff5a93d05847a52daae47dc15c7447f1e9c8f81407ac"
+      "bytes": 38014,
+      "path": "manuscript_generations_final.html",
+      "sha256": "4464d16d76bb4891469092f17539d3c3365f76deb2103583ed8eb201e17d6de7"
     },
     {
-      "bytes": 1197130,
-      "path": "manuscript_citations.docx",
-      "sha256": "e69d9d7d55daad9324c572bd5d4b75b851cbe74c6a420f39740acc2dd4423556"
+      "bytes": 1305436,
+      "path": "manuscript_generations_final.docx",
+      "sha256": "5b893cb93d557532aebd8a7363925e04a1c34cb0e97ba1ababb37bd1a43db8c7"
     },
     {
-      "bytes": 1366441,
+      "bytes": 1496473,
       "path": "manuscript.pdf",
-      "sha256": "2a71cde4bb600441b34681f1669a891aedd1665e8e459664fed9de6ef6ca9d2a"
+      "sha256": "fae4616c6489adfd6d467e3abeceac5b2be35d9d9083494dbefcc6d3f6a33e91"
     },
     {
-      "bytes": 6714,
-      "path": "render_receipt_citations_final.json",
-      "sha256": "6de3f2bf00d6e5e1708f8a6c80e32d53f781e0bd61b7a6274e1d30f9ca58ba76"
+      "bytes": 7224,
+      "path": "render_receipt_generations_final.json",
+      "sha256": "ce231e8b9cdafadde1344e7fecabdbcf2f896d0f1d964b0c14af13852cf008c2"
     },
     {
-      "bytes": 7310,
+      "bytes": 8061,
       "path": "REPRODUCIBILITY.json",
-      "sha256": "c76d8a58c2228dde06003662ed1935265c6531133487a6d0bfcf537c7ba06f20"
+      "sha256": "4f8d8dc74588ae20d246c5f5dce62e0d128f1223a49ccf2e3cc5c431bc3c04e4"
     },
     {
       "bytes": 32,
@@ -78,19 +78,19 @@
       "sha256": "33e9a354a624cbdc164e8ea07a34783e0c09d5ee6f5bc403ca24589a73233366"
     },
     {
-      "bytes": 4959,
+      "bytes": 5651,
       "path": "validation/verification.json",
-      "sha256": "e7e276d7daf52dae19a364cdce2c38845faa86b35e172c23d1eb2c3c95f0420c"
+      "sha256": "4b48ff963f6043f175dac7832cb93dc1a0fec5f0722dd7e7305bafef8eb6e4d3"
     },
     {
-      "bytes": 16407,
+      "bytes": 20475,
       "path": "validation/style_tests.xml",
-      "sha256": "683d4d36a2be2d352d7804d3e46bfbc791f543799699e6f443036326ada338c8"
+      "sha256": "82c2b8278c2d74cd633733a92f2621fcac372bc024430aa337107a9c49eaf62e"
     },
     {
-      "bytes": 3597,
+      "bytes": 4193,
       "path": "validation/STYLE_REVIEW.json",
-      "sha256": "1d1af7a78c5640967f134c6111bc174a52e2af1a4421ec39a6c431550d873160"
+      "sha256": "216e0bde99b74dcb5bdd7f58c706ccdf09ce9e347cf41e3b0cf41f1db4b2c88e"
     },
     {
       "bytes": 91600,
@@ -228,25 +228,295 @@
       "sha256": "86ff8be75f7de7c5fa33ddc5548ca7479eda95b0c484ad60450c96eb3ab838e7"
     },
     {
-      "bytes": 2434,
+      "bytes": 2723,
       "path": "validation/ORTHOHMM2_REVIEW.json",
-      "sha256": "2bceb7a301bbf328ed29d72fb068a2bdb67e144abf1f063d9ee0e0485274b33b"
+      "sha256": "b4e8845d47e0ebf0350ce9f62f74097c650150ec13f717ade9f42c9ae39f002b"
     },
     {
       "bytes": 32942,
       "path": "validation/CITATION_AUDIT.json",
       "sha256": "7e70c5c15a0383f334f9557b5663eca49d31c48c35d6c5d0575b62b94afa92ed"
+    },
+    {
+      "bytes": 4074,
+      "path": "assets_speed/PROTOCOL.md",
+      "sha256": "57e8b66c28acdb53448e790963d3b828fc93e89aefbeb1a33530d424a391f1e6"
+    },
+    {
+      "bytes": 1247,
+      "path": "assets_speed/dependency_recovery.json",
+      "sha256": "4f68097ca0060b4e2ac6231203c5f2ac01f479ec4c7f4c2c3707907ce3802ed4"
+    },
+    {
+      "bytes": 17293,
+      "path": "assets_speed/fig6_generations.pdf",
+      "sha256": "6e0ccc02da037ca085c5dd179df721f948ed3227fb90ac53dde0ff4a10ab8160"
+    },
+    {
+      "bytes": 130792,
+      "path": "assets_speed/fig6_generations.png",
+      "sha256": "2dc10022012318a3b812674caf808d7eca733257f1bcd5d9893a56de35f4ca32"
+    },
+    {
+      "bytes": 22689,
+      "path": "assets_speed/fig6_generations.svg",
+      "sha256": "3fb10f0a306088845fcf45fea0b418a3afb493676c14c3f6e4b0fcc457a4bc57"
+    },
+    {
+      "bytes": 346819,
+      "path": "assets_speed/input/008931845.1.faa",
+      "sha256": "f30d350ed8fcf082a2d969ce80c5ae1e8fd4e2a099a09670f04c1f7900849077"
+    },
+    {
+      "bytes": 850876,
+      "path": "assets_speed/input/025152405.1.faa",
+      "sha256": "082ba30cee71272d73d71d5ff6cd5615c9cc0fdc85b5cdd540cd850f229e7dfb"
+    },
+    {
+      "bytes": 1114705,
+      "path": "assets_speed/input/900607225.1.faa",
+      "sha256": "89b60eafa4f4ac6f47f2ea64305ce34bf75051b8d45ba627677a40998de142bb"
+    },
+    {
+      "bytes": 9542,
+      "path": "assets_speed/manifest.json",
+      "sha256": "a77b5958f800d8a26c326e7d5d9eb7c1c404e15a1067c3e36d2d807f452f9148"
+    },
+    {
+      "bytes": 3471,
+      "path": "assets_speed/pilot_history.json",
+      "sha256": "cca32ae2e5940a50f8f4b69f12dbbfbe718b69d0f7eca8a00da6ec1f2b664650"
+    },
+    {
+      "bytes": 1883,
+      "path": "assets_speed/pilot_termination.json",
+      "sha256": "3fcdf5aec004969db5bab1e66ef25a7871b16116d123433815d445d461469b87"
+    },
+    {
+      "bytes": 25262,
+      "path": "assets_speed/plan.json",
+      "sha256": "c40fcd2aca072ad07cc63d8b32c6d667dcb068b3dbefaff4d27832c9cde9a8f1"
+    },
+    {
+      "bytes": 3155,
+      "path": "assets_speed/records/00_original_attempt.json",
+      "sha256": "89f8b51efdb42731bb79ffe592362e67d6e786be6682f35e3d1d770d744456cb"
+    },
+    {
+      "bytes": 213376,
+      "path": "assets_speed/records/00_original_groups.txt",
+      "sha256": "6e9a91e85494179f52599eda0ecb98fe214be10f5e588055382e6849e0053987"
+    },
+    {
+      "bytes": 785,
+      "path": "assets_speed/records/00_original_metrics.json",
+      "sha256": "942ae9607b3d1aa1271789909c2f2642861bc8372a10de08a2acdfb055aaa123"
+    },
+    {
+      "bytes": 1968,
+      "path": "assets_speed/records/00_original_native.log",
+      "sha256": "e4ef1b9e7a87ce0cfcd7a50a2e70c127f6a578b2ebc27670ec19d37555e33df9"
+    },
+    {
+      "bytes": 2903,
+      "path": "assets_speed/records/01_sensitive_attempt.json",
+      "sha256": "2aa7242bf598ceb0f49d9702f1f38853f47ef2d85d986fe450372d311fba9bb2"
+    },
+    {
+      "bytes": 210816,
+      "path": "assets_speed/records/01_sensitive_groups.txt",
+      "sha256": "1f32d245cd4cf14d059f5ab2baf7e4c197e3f8778e019cc17c751b231db6a14b"
+    },
+    {
+      "bytes": 5066,
+      "path": "assets_speed/records/01_sensitive_metrics.json",
+      "sha256": "6a96ef5035c9b6c67832a7895dfa686a39ef6a450674f48dd46efe2d513e834b"
+    },
+    {
+      "bytes": 1493,
+      "path": "assets_speed/records/01_sensitive_native.log",
+      "sha256": "746cf4053841740825451b5a9e2106abaf027b44b3f70b12f463d8630c9b8481"
+    },
+    {
+      "bytes": 3396,
+      "path": "assets_speed/records/02_phylogeny_attempt.json",
+      "sha256": "fdcd1b78a55648f72ad8579b5f7ab88001051d0a22e39c932587f23b706e2595"
+    },
+    {
+      "bytes": 210888,
+      "path": "assets_speed/records/02_phylogeny_groups.txt",
+      "sha256": "d4691b3b5269bbf113600e6f72df15daafbc9c7c4824b27b348f513093f89d81"
+    },
+    {
+      "bytes": 8497,
+      "path": "assets_speed/records/02_phylogeny_metrics.json",
+      "sha256": "6732dc3719a021ce9ce59e9586222caf6a093fa8b8e4300a521f43f34a8b69ea"
+    },
+    {
+      "bytes": 1556,
+      "path": "assets_speed/records/02_phylogeny_native.log",
+      "sha256": "c2dd2e13092b38e14bd575ffcc0d4759932746cacf59119786e37874736a94c6"
+    },
+    {
+      "bytes": 2903,
+      "path": "assets_speed/records/03_sensitive_attempt.json",
+      "sha256": "a5255a569a617f6e606429c391e0f8e142ff858844516ca5fb1df1be3edc6e77"
+    },
+    {
+      "bytes": 210816,
+      "path": "assets_speed/records/03_sensitive_groups.txt",
+      "sha256": "1f32d245cd4cf14d059f5ab2baf7e4c197e3f8778e019cc17c751b231db6a14b"
+    },
+    {
+      "bytes": 5061,
+      "path": "assets_speed/records/03_sensitive_metrics.json",
+      "sha256": "2b98d3da69ecccd2568775c0894da80886f84c13c152dce3e3c49fc9741df12a"
+    },
+    {
+      "bytes": 1493,
+      "path": "assets_speed/records/03_sensitive_native.log",
+      "sha256": "fb4e8116ef5a200b9e219c3e300d29cadf1e2b0720758dc555d02182e4b64607"
+    },
+    {
+      "bytes": 3399,
+      "path": "assets_speed/records/04_phylogeny_attempt.json",
+      "sha256": "93f96a7bbbdd07c54a353992250b506a4db61a289f04721d7f88e80c62581999"
+    },
+    {
+      "bytes": 210888,
+      "path": "assets_speed/records/04_phylogeny_groups.txt",
+      "sha256": "d4691b3b5269bbf113600e6f72df15daafbc9c7c4824b27b348f513093f89d81"
+    },
+    {
+      "bytes": 8498,
+      "path": "assets_speed/records/04_phylogeny_metrics.json",
+      "sha256": "e517645cd07f446e392604c16f0f0311c20582d7172ca705ab616a080f1f4a29"
+    },
+    {
+      "bytes": 1556,
+      "path": "assets_speed/records/04_phylogeny_native.log",
+      "sha256": "2c5a1006f4525b55fba7cb9df2155d8be1f13e7cc78d328a5680642f89e3b659"
+    },
+    {
+      "bytes": 3146,
+      "path": "assets_speed/records/05_original_attempt.json",
+      "sha256": "bdea1cace4ae6592da07bc9277696fdb72e0eac55e92ce01f712c483af12aaee"
+    },
+    {
+      "bytes": 213376,
+      "path": "assets_speed/records/05_original_groups.txt",
+      "sha256": "6e9a91e85494179f52599eda0ecb98fe214be10f5e588055382e6849e0053987"
+    },
+    {
+      "bytes": 787,
+      "path": "assets_speed/records/05_original_metrics.json",
+      "sha256": "b68a5b8ce57b93baf255e05bed5e73603df2bba1d8d592cd63e97963fd74339b"
+    },
+    {
+      "bytes": 1968,
+      "path": "assets_speed/records/05_original_native.log",
+      "sha256": "880c3d7a2b0f69224e8150c71c07d5af9885ea294059c9168f2a3d59ddb4e065"
+    },
+    {
+      "bytes": 3399,
+      "path": "assets_speed/records/06_phylogeny_attempt.json",
+      "sha256": "b837cf6dffe192c96835112fb932f1c9c291814288dd56f3c06e3c38ddfd60ca"
+    },
+    {
+      "bytes": 210888,
+      "path": "assets_speed/records/06_phylogeny_groups.txt",
+      "sha256": "d4691b3b5269bbf113600e6f72df15daafbc9c7c4824b27b348f513093f89d81"
+    },
+    {
+      "bytes": 8496,
+      "path": "assets_speed/records/06_phylogeny_metrics.json",
+      "sha256": "d63de507aedb646d7b28273077c56abdc5b5336787ff52c36e513d8c8ea16071"
+    },
+    {
+      "bytes": 1556,
+      "path": "assets_speed/records/06_phylogeny_native.log",
+      "sha256": "0dfb03b1c370324c707c0ee8aee6097d92460d57063a2526f76893842c5275ed"
+    },
+    {
+      "bytes": 3153,
+      "path": "assets_speed/records/07_original_attempt.json",
+      "sha256": "d8064093b5151201bb3b36b7c0dbe1788315c29420a0d8bb32fcc31980a9ef21"
+    },
+    {
+      "bytes": 213376,
+      "path": "assets_speed/records/07_original_groups.txt",
+      "sha256": "6e9a91e85494179f52599eda0ecb98fe214be10f5e588055382e6849e0053987"
+    },
+    {
+      "bytes": 785,
+      "path": "assets_speed/records/07_original_metrics.json",
+      "sha256": "c5f810943652addfbaa10d4c7d3233a14bd67b683510ad059ea14d3dfbf3af8f"
+    },
+    {
+      "bytes": 1968,
+      "path": "assets_speed/records/07_original_native.log",
+      "sha256": "b470c669bad7f90f51a1605f00478dcf7d02c993290d9b98a6b8852f54735107"
+    },
+    {
+      "bytes": 2903,
+      "path": "assets_speed/records/08_sensitive_attempt.json",
+      "sha256": "dd567a1add4851300115e3fd19c9795d9190c788584dc7103969a86d8e301695"
+    },
+    {
+      "bytes": 210816,
+      "path": "assets_speed/records/08_sensitive_groups.txt",
+      "sha256": "1f32d245cd4cf14d059f5ab2baf7e4c197e3f8778e019cc17c751b231db6a14b"
+    },
+    {
+      "bytes": 5064,
+      "path": "assets_speed/records/08_sensitive_metrics.json",
+      "sha256": "a87aa94810ccc5b4944f0debb36ec060f1f5b708bb51f68786f5c78a03e9e4fe"
+    },
+    {
+      "bytes": 1493,
+      "path": "assets_speed/records/08_sensitive_native.log",
+      "sha256": "ac926bdbf5acbce0a16953e326a932af0f7534f22a24e2079feb1406e06818f3"
+    },
+    {
+      "bytes": 542,
+      "path": "assets_speed/runs.tsv",
+      "sha256": "96d468933138520bb3845dc3adeaed2bf775e3ab6d67fad473f697e8e2bcba8d"
+    },
+    {
+      "bytes": 42024,
+      "path": "assets_speed/timing.json",
+      "sha256": "1600aa44631769fceed5859e4a87fe5c1469559cac5fa2b1a17ed582d95b3802"
+    },
+    {
+      "bytes": 4764,
+      "path": "validation/GENERATION_TIMING_REVIEW.json",
+      "sha256": "04e0108582f5901394d80f44ff4b9d0b4a4e2aec712091ced8d0ff3ec31375ec"
+    },
+    {
+      "bytes": 14344,
+      "path": "code/compare_orthohmm_generations.py",
+      "sha256": "921012e08f25826085aeb836e6daa308dd452f87c5f8e4e38dc14f1d012ec770"
+    },
+    {
+      "bytes": 2236,
+      "path": "code/time_original_orthohmm.py",
+      "sha256": "2b713e12f80cf388a830928e7846d283c48790976b3609095a16ef44a01ef5a4"
+    },
+    {
+      "bytes": 5346,
+      "path": "code/plot_orthohmm_generations.py",
+      "sha256": "95ee39cfa68912ca68e04429ac06fff3f893230ba6cb3e72a4b762782aa207df"
     }
   ],
-  "main_figures": 5,
-  "manuscript_words": 2833,
-  "observed_at_utc": "2026-10-21T23:06:22.057472+00:00",
-  "pdf_pages": 12,
+  "main_figures": 6,
+  "manuscript_words": 3355,
+  "observed_at_utc": "2026-10-22T16:56:57.385283+00:00",
+  "pdf_pages": 14,
   "schema_version": 1,
-  "scope": "Editorial OrthoHMM2 naming and citation revision; scientific values and historical run identities unchanged. Not a software release, submission approval or archival DOI.",
+  "scope": "Complete descriptive generation timing added; original accuracy numbers/frontiers and citations preserved. No isolated or equal-accuracy speedup claim, default promotion or submission approval.",
   "sole_author": "Jacob L. Steenwyk",
   "status": "validated_orthohmm2_single_author_manuscript_draft",
   "supplementary_figures": 2,
-  "tests_passed": 109,
+  "tests_passed": 135,
   "title": "OrthoHMM2: HMM-centered orthology inference"
 }

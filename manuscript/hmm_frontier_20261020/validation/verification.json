@@ -1,6 +1,7 @@
 {
+  "DOCX_embedded_new_generation_figure": 1,
   "DOCX_embedded_original_figures": 7,
-  "PDF_pages": 12,
+  "PDF_pages": 14,
   "VGNC_SwissTrees_frontier_members": 1,
   "all_five_frontier_members": 9,
   "citation_audit": {
@@ -74,18 +75,32 @@
       "editable_svg_text_nodes": 26,
       "name": "figS2_uncertainty",
       "nonwhite_fraction": 0.04428867775243845
+    },
+    {
+      "dimensions": [
+        1034,
+        2486
+      ],
+      "editable_svg_text_nodes": 32,
+      "name": "fig6_generations",
+      "nonwhite_fraction": 0.03376548905981815
     }
   ],
   "first_person_in_source_pdf_docx": false,
+  "generation_timing_review": {
+    "bytes": 4764,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/validation/GENERATION_TIMING_REVIEW.json",
+    "sha256": "04e0108582f5901394d80f44ff4b9d0b4a4e2aec712091ced8d0ff3ec31375ec"
+  },
   "independent_array_dominance_agreed": true,
   "independent_confirmation_established": false,
-  "main_figures": 5,
+  "main_figures": 6,
   "naming_and_citations_review": {
-    "bytes": 2434,
+    "bytes": 2723,
     "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/validation/ORTHOHMM2_REVIEW.json",
-    "sha256": "2bceb7a301bbf328ed29d72fb068a2bdb67e144abf1f063d9ee0e0485274b33b"
+    "sha256": "b4e8845d47e0ebf0350ce9f62f74097c650150ec13f717ade9f42c9ae39f002b"
   },
-  "observed_at_utc": "2026-10-21T23:06:22.057472+00:00",
+  "observed_at_utc": "2026-10-22T16:56:57.385283+00:00",
   "original_score_rows": 29,
   "page_review": [
     {
@@ -101,51 +116,61 @@
     {
       "embedded_figures": 0,
       "page": 3,
-      "text_characters": 3924
+      "text_characters": 3752
     },
     {
       "embedded_figures": 0,
       "page": 4,
-      "text_characters": 4559
+      "text_characters": 4505
     },
     {
       "embedded_figures": 0,
       "page": 5,
-      "text_characters": 5216
+      "text_characters": 3997
     },
     {
-      "embedded_figures": 1,
+      "embedded_figures": 0,
       "page": 6,
-      "text_characters": 624
+      "text_characters": 4077
     },
     {
       "embedded_figures": 1,
       "page": 7,
-      "text_characters": 928
+      "text_characters": 624
     },
     {
       "embedded_figures": 1,
       "page": 8,
-      "text_characters": 696
+      "text_characters": 928
     },
     {
       "embedded_figures": 1,
       "page": 9,
-      "text_characters": 780
+      "text_characters": 696
     },
     {
       "embedded_figures": 1,
       "page": 10,
-      "text_characters": 963
+      "text_characters": 780
     },
     {
       "embedded_figures": 1,
       "page": 11,
-      "text_characters": 496
+      "text_characters": 963
     },
     {
       "embedded_figures": 1,
       "page": 12,
+      "text_characters": 1127
+    },
+    {
+      "embedded_figures": 1,
+      "page": 13,
+      "text_characters": 496
+    },
+    {
+      "embedded_figures": 1,
+      "page": 14,
       "text_characters": 717
     }
   ],
@@ -171,12 +196,12 @@
   "status": "manuscript_numerical_structural_visual_and_standalone_replay_checks_passed",
   "supplementary_figures": 2,
   "tests_failed": 0,
-  "tests_passed": 109,
+  "tests_passed": 135,
   "tests_skipped": 0,
-  "visual_review": "Rebuilt PDF retains twelve pages with seven complete figure/caption pages; bibliography checked for corrected author order and visible article locators. Text blocks lie inside page bounds.",
+  "visual_review": "All revised PDF pages reviewed through contact sheets and detailed new-figure view. Eight complete figure/caption pages; text bounds checked. Title and sole author remain unchanged.",
   "writing_style_review": {
-    "bytes": 3597,
+    "bytes": 4193,
     "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/manuscript/hmm_frontier_20261020/validation/STYLE_REVIEW.json",
-    "sha256": "1d1af7a78c5640967f134c6111bc174a52e2af1a4421ec39a6c431550d873160"
+    "sha256": "216e0bde99b74dcb5bdd7f58c706ccdf09ce9e347cf41e3b0cf41f1db4b2c88e"
   }
 }

@@ -73,7 +73,7 @@ def export(snapshot, output):
     ratios = summaries[1:]
     figure.text(.225,.12,"Original/modern elapsed-median ratios: " + "; ".join(
         f'{"sensitive" if r["method"] == "sensitive" else "phylogeny"} {r["original_to_modern_elapsed_ratio"]:.2f}x' for r in ratios), fontsize=9)
-    figure.text(.225,.065,"Three fresh technical repeats; ticks are medians, lines observed ranges. Shared host, not equal accuracy.", fontsize=8, color="#555555")
+    figure.text(.225,.065,"Three fresh technical repeats; ticks are medians, lines observed ranges. Shared host; accuracy not assessed.", fontsize=8, color="#555555")
     try:
         for extension in ("png", "pdf", "svg"):
             figure.savefig(output / ("fig6_generations."+extension), dpi=220)
