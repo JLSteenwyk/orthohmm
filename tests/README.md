@@ -5,7 +5,7 @@
 `make test.public.fast` runs portable unit and integration tests, excluding slow
 tests and the two external-evidence markers below. `make test.public.coverage`
 includes slow tests. GitHub runs the fast profile on Python 3.10-3.13/macOS and
-the coverage profile on Python 3.11/macOS and Linux, plus separate documentation,
+the coverage profile on Python 3.11/Linux, plus separate documentation,
 Linux native-diagnostic and CPU-wheel checks.
 
 `python -m benchmark_tools.audit_public_test_profile --root "$PWD" --output /tmp/public-selection.json`
