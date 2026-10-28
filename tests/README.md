@@ -50,7 +50,9 @@ Coverage configuration enables Python subprocess tracing and saves data on
 `os._exit`, including the isolated Leiden worker. Absolute stage-data paths keep
 child processes that change working directory in the same measurement. Tests
 exercise normal and abrupt child exits and verify that combination preserves
-both stage inputs. The coverage tool versions are pinned in the test manifest.
+both stage inputs. The coverage tool versions are pinned in the test manifest:
+coverage.py 7.16.2 for Python 3.10 and 7.17.0 for Python 3.11 and newer. Tests
+check marker selection for every Python version in the CI matrix.
 
 The terminal application report enforces at least 85% line coverage for
 `orthohmm/`. Codecov retains the repository-wide total and exposes separate

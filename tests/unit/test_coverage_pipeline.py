@@ -1,6 +1,7 @@
 """Exercise coverage collection and combination, not just config spelling."""
 
 import configparser
+from importlib import metadata
 import json
 import os
 from pathlib import Path
@@ -9,10 +10,31 @@ import subprocess
 import sys
 
 from coverage import CoverageData
+from packaging.markers import default_environment
+from packaging.requirements import Requirement
 import pytest
 
 
 ROOT = Path(__file__).resolve().parents[2]
+
+
+@pytest.mark.parametrize("version,expected", [("3.10", "7.16.2"), ("3.11", "7.17.0"),
+                                            ("3.12", "7.17.0"), ("3.13", "7.17.0")])
+def test_coverage_pins_select_one_supported_version(version, expected):
+    environment = dict(default_environment(), python_version=version, python_full_version=version + ".0")
+    requirements = [Requirement(line) for line in (ROOT / "tests/requirements.txt").read_text().splitlines()
+                    if line.strip() and not line.lstrip().startswith("#")]
+    selected = [r for r in requirements if r.name == "coverage"
+                and (r.marker is None or r.marker.evaluate(environment))]
+    assert len(selected) == 1 and str(selected[0].specifier) == "==" + expected
+
+
+def test_current_interpreter_uses_its_declared_coverage_pin():
+    requirements = [Requirement(line) for line in (ROOT / "tests/requirements.txt").read_text().splitlines()
+                    if line.strip() and not line.lstrip().startswith("#")]
+    selected = [r for r in requirements if r.name == "coverage"
+                and (r.marker is None or r.marker.evaluate())]
+    assert len(selected) == 1 and selected[0].specifier.contains(metadata.version("coverage"))
 
 
 def clean_environment():
