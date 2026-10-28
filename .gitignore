@@ -43,9 +43,13 @@ htmlcov/
 .nox/
 .coverage
 .coverage.*
+.coverage-*
 .cache
 nosetests.xml
 coverage.xml
+coverage.json
+unit.coverage.xml
+integration.coverage.xml
 *.cover
 *.py,cover
 .hypothesis/

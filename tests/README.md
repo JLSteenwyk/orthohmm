@@ -37,6 +37,41 @@ do not admit those differences as scientific reproduction. PDF preservation
 tests compare original and assembled pages exactly within the current renderer;
 the original machine-specific raster hashes remain in the retained profile.
 
+## Code Coverage
+
+`make test.public.coverage` measures maintained Python sources across the
+repository, not just `orthohmm/`. Both unit and integration stages have their own
+XML report and data file. The combined `coverage.xml`, `coverage.json` and
+`.coverage` contain the union of their executed lines. Stage data is preserved
+in `.coverage-unit` and `.coverage-integration`; these names deliberately do not
+match coverage.py's `.coverage.*` parallel-fragment pattern.
+
+Coverage configuration enables Python subprocess tracing and saves data on
+`os._exit`, including the isolated Leiden worker. Absolute stage-data paths keep
+child processes that change working directory in the same measurement. Tests
+exercise normal and abrupt child exits and verify that combination preserves
+both stage inputs. The coverage tool versions are pinned in the test manifest.
+
+The terminal application report enforces at least 85% line coverage for
+`orthohmm/`. Codecov retains the repository-wide total and exposes separate
+application and benchmarking components. Benchmark workflows are not removed
+to increase the application's apparent coverage. Test code and packaging/runner
+boilerplate are omitted consistently with the previous Codecov scope; the module
+entry point is now included. XML, JSON and data files are retained as CI artifacts.
+
+The repaired-CI baseline at `29c6bf5a` had 65.98% repository line coverage and
+83.40% application coverage on Codecov. Benchmark scripts accounted for
+129,155 of the 135,756 measured lines, with 65.12% coverage. A test count alone
+does not establish that every branch or runtime backend is covered.
+
+Python line coverage does not measure native C/CUDA instruction execution.
+Numba-compiled functions also bypass ordinary Python line tracing. Numerical
+reference tests explicitly execute their Python bodies and the compiled kernels
+against independent mathematical oracles; compiler-visited lines are not treated
+as executed test paths. Optional CUDA and unused experimental code remain in the
+application denominator. Historical replay prerequisites and failures remain
+separate from these public software checks.
+
 ## Setup And Historical Checks
 
 After installing OrthoHMM and its dependencies in a development environment,

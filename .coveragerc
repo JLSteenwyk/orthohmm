@@ -1,0 +1,13 @@
+[run]
+source = .
+relative_files = True
+patch =
+    subprocess
+    _exit
+omit =
+    tests/*
+    setup.py
+    orthohmm-runner.py
+
+[report]
+show_missing = True

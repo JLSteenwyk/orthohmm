@@ -159,21 +159,31 @@ jobs:
           ${{ runner.temp }}/public-test-selection.json
           ${{ runner.temp }}/public-unit.xml
           ${{ runner.temp }}/public-integration.xml
+          unit.coverage.xml
+          integration.coverage.xml
+          coverage.xml
+          coverage.json
+          .coverage-unit
+          .coverage-integration
+          .coverage
+        include-hidden-files: true
         if-no-files-found: warn
     - name: Upload unit test coverage to Codecov
-      uses: codecov/codecov-action@v1.0.7
+      uses: codecov/codecov-action@v5
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        file: ./unit.coverage.xml
+        files: ./unit.coverage.xml
+        disable_search: true
         flags: unit
         env_vars: PYTHON
         name: codecov-unit
         fail_ci_if_error: false
     - name: Upload integration test coverage to Codecov
-      uses: codecov/codecov-action@v1.0.7
+      uses: codecov/codecov-action@v5
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        file: ./integration.coverage.xml
+        files: ./integration.coverage.xml
+        disable_search: true
         flags: integration
         env_vars: PYTHON
         name: codecov-integration

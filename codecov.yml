@@ -7,4 +7,13 @@ ignore:
   - "tests"
   - "orthohmm-runner.py"
   - "setup.py"
-  - "orthohmm/__main__.py" 
+component_management:
+  individual_components:
+    - component_id: application
+      name: OrthoHMM Application
+      paths:
+        - "orthohmm/**"
+    - component_id: benchmarking
+      name: Benchmarking Workflows
+      paths:
+        - "benchmark_tools/**"
