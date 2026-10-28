@@ -3,6 +3,9 @@ import runpy
 import subprocess
 import ctypes
 import shutil
+import os
+import platform
+import shlex
 
 import setuptools
 from setuptools.command.build_py import build_py
@@ -11,7 +14,8 @@ import pytest
 
 @pytest.mark.parametrize("target", [None, "native", "baseline"])
 @pytest.mark.parametrize("avx2", [False, True])
-def test_cpu_target_controls_flags(tmp_path, monkeypatch, target, avx2):
+@pytest.mark.parametrize("generic_x86", [False, True])
+def test_cpu_target_controls_flags(tmp_path, monkeypatch, target, avx2, generic_x86):
     monkeypatch.delenv("ORTHOHMM_CPU_TARGET", raising=False)
     if target is not None:
         monkeypatch.setenv("ORTHOHMM_CPU_TARGET", target)
@@ -22,6 +26,8 @@ def test_cpu_target_controls_flags(tmp_path, monkeypatch, target, avx2):
 
     def supports(flag, cc):
         probes.append(flag)
+        if flag == "-march=x86-64":
+            return generic_x86
         return avx2 if flag == "-mavx2" else True
 
     monkeypatch.setitem(builder.__globals__, "_have_gcc", lambda: True)
@@ -34,7 +40,37 @@ def test_cpu_target_controls_flags(tmp_path, monkeypatch, target, avx2):
     assert all(("-march=native" in cmd) == (not baseline) for cmd in commands)
     assert sum("-mavx2" in cmd for cmd in commands) == int(not baseline and avx2)
     if baseline:
-        assert probes == ["-fopenmp"]
+        assert probes == ["-fopenmp", "-march=x86-64"]
+    assert all(("-march=x86-64" in cmd) == (baseline and generic_x86) for cmd in commands)
+
+
+@pytest.mark.skipif(platform.machine().lower() not in {"x86_64", "amd64"}, reason="x86 compiler-default regression")
+def test_baseline_overrides_a_real_avx2_compiler_default(tmp_path, monkeypatch):
+    compiler = shutil.which("gcc")
+    if compiler is None:
+        pytest.skip("Native GCC required")
+    tools = tmp_path / "tools"
+    tools.mkdir()
+    wrapper = tools / "gcc"
+    wrapper.write_text("#!/bin/sh\nexec " + shlex.quote(compiler) + ' -march=x86-64-v3 "$@"\n')
+    wrapper.chmod(0o755)
+    monkeypatch.setenv("PATH", str(tools) + os.pathsep + os.defpath)
+    monkeypatch.setenv("ORTHOHMM_CPU_TARGET", "baseline")
+    monkeypatch.setattr(setuptools, "setup", lambda **kwargs: None)
+    root = Path(__file__).resolve().parents[2]
+    namespace = runpy.run_path(str(root / "setup.py"))
+    if not namespace["_gcc_supports"]("-fopenmp", cc="gcc"):
+        pytest.skip("GCC with OpenMP required")
+    macros = subprocess.check_output([str(wrapper), "-dM", "-E", "-"], input="", text=True)
+    assert "#define __AVX2__ 1" in macros
+    source = tmp_path / "csrc"
+    source.mkdir()
+    for name, _, _ in namespace["CPU_KERNELS"]:
+        shutil.copyfile(root / "orthohmm/search/csrc" / name, source / name)
+    assert len(namespace["build_cpu_kernels"](source)) == 3
+    library = ctypes.CDLL(str(source / "hmm_viterbi.so"))
+    library.hmm_have_avx2.restype = ctypes.c_int32
+    assert library.hmm_have_avx2() == 0
 
 
 @pytest.mark.parametrize("target", ["", "generic", "NATIVE", "baseline "])

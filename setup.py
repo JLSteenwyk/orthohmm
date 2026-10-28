@@ -99,7 +99,9 @@ def build_cpu_kernels(csrc_dir: Path) -> list[str]:
         return []
 
     base = [cc, "-O3", "-fopenmp", "-shared", "-fPIC"]
-    # Baseline uses the compiler's default ISA and the scalar Viterbi path.
+    # Some x86 compilers default to an AVX2 ISA; baseline must stay scalar.
+    if target == "baseline" and _gcc_supports("-march=x86-64", cc=cc):
+        base.append("-march=x86-64")
     march_native = target == "native" and _gcc_supports("-march=native", cc=cc)
     mavx2 = target == "native" and _gcc_supports("-mavx2", cc=cc)
     if march_native:
