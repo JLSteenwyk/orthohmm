@@ -1,4 +1,6 @@
 import json
+from pathlib import Path
+import sys
 
 import pytest
 
@@ -41,7 +43,8 @@ def test_fixture_command_is_isolated_engineering_work():
 
 
 @pytest.mark.parametrize("change", ["schema", "root", "command", "inference", "retry", "sources", "plan", "digest"])
-def test_unprepared_fixture_refused_before_output(tmp_path, change):
+def test_unprepared_fixture_refused_before_output(tmp_path, change, monkeypatch):
+    monkeypatch.setattr(fixture, "PYTHON", Path(sys.executable))
     output = tmp_path / "unused"
     value = dict(schema="allocated_threadripper_fixture_prepared_v1", root=str(fixture.ROOT),
         command=fixture.command(), new_sources=fixture.sources(), historical_plan=fixture.record(fixture.PLAN),

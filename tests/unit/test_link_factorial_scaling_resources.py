@@ -174,6 +174,7 @@ def test_incomplete_or_duplicate_repeats_rejected():
         summaries(points)
 
 
+@pytest.mark.retained_benchmark
 def test_actual_report_readback_when_available():
     root = Path(__file__).resolve().parents[2]
     path = root / "benchmark_tools/results/factorial_native_resource_linkage_20261004/linkage.json"

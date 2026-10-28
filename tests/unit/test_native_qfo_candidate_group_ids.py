@@ -74,6 +74,7 @@ def test_mapping_must_explain_failure(retained, tmp_path):
         diagnosis.collect(ref)
 
 
+@pytest.mark.retained_benchmark
 def test_actual_retained_diagnosis_contract_without_scientific_reexecution():
     root = Path(__file__).resolve().parents[2]
     path = root / "benchmark_tools/results/native_qfo_candidate_group_id_diagnosis_20261006_v1/report.json"

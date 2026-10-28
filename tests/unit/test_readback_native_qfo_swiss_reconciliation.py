@@ -14,6 +14,7 @@ REPORT = RESULTS / "native_qfo_swiss_reconciliation_trace_20261006_v1.json"
 REPORT_SHA = "53c692cf7dab9affac7b0240cf5191d2530bd4369b66f4165e8acb811391dacb"
 
 
+@pytest.mark.retained_benchmark
 def test_actual_independent_newick_readback():
     result = reader.verify(REPORT, REPORT_SHA)
     assert (result["source_families_checked"], result["tree_leaves_checked"],
@@ -24,6 +25,7 @@ def test_actual_independent_newick_readback():
 
 @pytest.mark.parametrize("fault", ("source", "scope", "admission_scope", "summary", "inventory", "lca", "endpoint",
                                  "root_marker", "pair_event", "label", "missing_pair"))
+@pytest.mark.retained_benchmark
 def test_corrupt_localization_refuses(tmp_path, fault):
     report = copy.deepcopy(json.loads(REPORT.read_text()))
     if fault == "source":

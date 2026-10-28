@@ -5,7 +5,7 @@ import sys
 
 import pytest
 
-from benchmark_tools.audit_public_test_profile import CollectionAudit, RAW_NODES, audit, evaluate
+from benchmark_tools.audit_public_test_profile import CollectionAudit, RAW_NODES, RETAINED_CASES, audit, evaluate
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -15,21 +15,26 @@ SOURCE_TESTS = ["tests/test_export_swiss_duplication_strata.py",
 
 def complete_collection():
     result = CollectionAudit()
-    result.marked = result.deselected = sorted(RAW_NODES)
+    result.marked = sorted(RAW_NODES)
+    result.retained = sorted(RETAINED_CASES)
+    result.deselected = result.marked + result.retained
     result.selected = ["tests/public.py::test_public"]
-    result.collected = result.selected + result.marked
+    result.collected = result.selected + result.deselected
     return result
 
 
 def test_explicit_public_boundary_is_not_execution_or_full_regression():
     result = evaluate(complete_collection(), 0)
-    assert result["passed"] is True and result["deselected_count"] == 4
+    assert result["passed"] is True and result["deselected_count"] == 4 + len(RETAINED_CASES)
     assert result["tests_executed"] is result["complete_raw_benchmark_gate"] is False
-    assert result["declared_private_nodes"] == result["deselected_nodes"] == sorted(RAW_NODES)
+    assert result["declared_private_nodes"] == sorted(RAW_NODES)
+    assert result["retained_marked_nodes"] == sorted(RETAINED_CASES)
+    assert result["complete_retained_benchmark_gate"] is False
 
 
 @pytest.mark.parametrize("problem", ["unmarked", "extra_mark", "wrong_exclusion", "empty", "missing_public",
-                                   "private_selected", "duplicate", "error", "skip", "exit"])
+                                   "private_selected", "duplicate", "error", "skip", "exit",
+                                   "retained_unmarked", "retained_extra", "retained_missing"])
 def test_changed_inventory_fails_closed(problem):
     collection = complete_collection()
     # Keep lists independent when testing mutations.
@@ -52,6 +57,12 @@ def test_changed_inventory_fails_closed(problem):
         collection.errors.append("import failed")
     elif problem == "skip":
         collection.skipped.append(dict(nodeid="tests/missing.py", reason="dependency missing"))
+    elif problem == "retained_unmarked":
+        collection.retained = collection.retained[1:]
+    elif problem == "retained_extra":
+        collection.retained = collection.retained + [collection.selected[0]]
+    elif problem == "retained_missing":
+        collection.collected = collection.collected[:-1]
     report = evaluate(collection, 1 if problem == "exit" else 0)
     assert report["passed"] is False and report["problems"]
 
@@ -107,9 +118,9 @@ def test_wrong_working_directory_before_collection(tmp_path, monkeypatch):
 
 
 @pytest.mark.parametrize("target,expression", [
-    ("test.public.fast", 'not slow and not raw_benchmark'),
-    ("coverage.public.unit", 'not raw_benchmark'),
-    ("coverage.public.integration", 'not raw_benchmark'),
+    ("test.public.fast", 'not slow and not raw_benchmark and not retained_benchmark'),
+    ("coverage.public.unit", 'not raw_benchmark and not retained_benchmark'),
+    ("coverage.public.integration", 'not raw_benchmark and not retained_benchmark'),
 ])
 def test_public_make_targets_are_named_and_record_execution(target, expression):
     text = (ROOT / "Makefile").read_text()
@@ -133,4 +144,4 @@ def test_workflow_declares_profile_and_retains_selection_and_execution():
     assert text.count("${{ runner.temp }}/public-test-selection.json") == 2
     assert text.count("${{ runner.temp }}/public-unit.xml") == 2
     assert text.count("${{ runner.temp }}/public-integration.xml") == 2
-    assert "public-coverage (includes slow; excludes four raw-source cases)" in text
+    assert "public-coverage (${{ matrix.os }}; includes slow; excludes declared external evidence)" in text

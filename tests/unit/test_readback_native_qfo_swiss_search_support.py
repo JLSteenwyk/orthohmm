@@ -2,6 +2,8 @@
 
 import csv
 import json
+
+from tests.recorded_paths import loads as relocated_loads
 from pathlib import Path
 
 import numpy as np
@@ -12,8 +14,8 @@ from benchmark_tools import readback_native_qfo_swiss_search_support as reader
 
 def test_retained_actual_readback_receipt_without_repeating_large_scan():
     results = Path(reader.__file__).parent / "results"
-    retained = json.loads((results / "native_qfo_swiss_search_support_code_readback_20261006.json").read_text())
-    primary = json.loads(Path(retained["report"]["path"]).read_text())
+    retained = relocated_loads((results / "native_qfo_swiss_search_support_code_readback_20261006.json").read_text())
+    primary = relocated_loads(Path(retained["report"]["path"]).read_text())
     assert retained["source"] == reader.record(reader.__file__)
     assert retained["report"] == reader.record(retained["report"]["path"])
     assert retained["summary"] == primary["summary"]

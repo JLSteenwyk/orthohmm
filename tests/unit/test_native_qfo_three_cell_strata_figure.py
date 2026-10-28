@@ -2,6 +2,8 @@
 
 from copy import deepcopy
 import json
+
+from tests.recorded_paths import loads as relocated_loads
 from pathlib import Path
 
 import pytest
@@ -13,7 +15,7 @@ RESULTS = ROOT / "benchmark_tools/results"
 
 
 def inputs():
-    return (json.loads((RESULTS / name).read_text()) for name, _ in plot.PINS.values())
+    return (relocated_loads((RESULTS / name).read_text()) for name, _ in plot.PINS.values())
 
 
 def test_all_nonempty_nonredundant_bins_and_exact_values_are_selected():
@@ -82,7 +84,7 @@ def test_existing_namespace_refused_before_loading(tmp_path):
 def test_actual_figure_current_sources_inputs_outputs_and_plotted_tsv():
     import csv
     root = RESULTS / "native_qfo_three_cell_strata_figure_20261007_v1"
-    manifest = json.loads((root / "manifest.json").read_text())
+    manifest = relocated_loads((root / "manifest.json").read_text())
     assert plot.record(root / "manifest.json")["sha256"] == (
         "e0157657d24ed39da8f8e39a41590311ec480537ac5aa35e06483d758ef85b02"
     )
@@ -140,7 +142,7 @@ def test_actual_png_pdf_svg_labels_pixels_and_text_bounds():
 
 def test_manual_review_and_source_commit_are_bound():
     import subprocess
-    review = json.loads((RESULTS / "native_qfo_three_cell_strata_figure_review_20261007_v1.json").read_text())
+    review = relocated_loads((RESULTS / "native_qfo_three_cell_strata_figure_review_20261007_v1.json").read_text())
     assert plot.record(ROOT / review["manifest_path"])["sha256"] == review["manifest_sha256"]
     ref = review["pdf_rasterization"]
     current = plot.record(ROOT / ref["path"])

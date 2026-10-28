@@ -1,5 +1,6 @@
 from argparse import Namespace
 import json
+import shutil
 from types import SimpleNamespace
 
 import numpy as np
@@ -161,7 +162,7 @@ def cli_args(tmp_path):
     return Namespace(fasta_directory=str(tmp_path), output_directory=str(tmp_path), phmmer=None,
         cpu=1, single_copy_threshold=.5, mcl="mcl", inflation_value=1.5, start=None, stop=None,
         substitution_matrix="BLOSUM62", evalue=1e-4, search_mode="builtin", clustering="leiden",
-        cpm_resolution=.1, aligner="/bin/true", tree_builder="/bin/true", **api_kwargs())
+        cpm_resolution=.1, aligner=shutil.which("true"), tree_builder=shutil.which("true"), **api_kwargs())
 
 
 @pytest.mark.parametrize("field,value", [

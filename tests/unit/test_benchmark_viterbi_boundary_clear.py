@@ -7,6 +7,9 @@ from benchmark_tools import benchmark_viterbi_boundary_clear as benchmark
 
 
 def test_balanced_arms_use_division_only_and_preserve_arrays(monkeypatch):
+    # Fast stubs can finish within a single CPU-clock tick on macOS.
+    monkeypatch.setattr(benchmark.time, "monotonic", iter(range(36)).__next__)
+    monkeypatch.setattr(benchmark.time, "process_time", iter(range(36)).__next__)
     libraries = {name: object() for name in benchmark.ARMS}
     calls = []
     def score(data, library, mode):

@@ -5,6 +5,7 @@ import shutil
 import subprocess
 import sys
 import tarfile
+from tests.archive_runtime import extract_regular_files
 
 import pytest
 
@@ -35,7 +36,7 @@ def test_section_archive_replays_outside_checkout(tmp_path, monkeypatch):
     with tarfile.open(result['archive']['path']) as handle:
         assert len(handle.getmembers()) == len(component.EXPECTED | component.SECTION_MEMBERS) + 1
         assert all(member.isfile() for member in handle.getmembers())
-        handle.extractall(restored, filter='data')
+        extract_regular_files(handle, restored)
     manifest, payloads = component.verify(restored, result['manifest']['sha256'])
     assert manifest['schema_version'] == 3 and manifest['reviewed_attempts'] == 24
     assert payloads['manuscript/resource_section.md'] == (SECTION / 'resource_section.md').read_bytes()

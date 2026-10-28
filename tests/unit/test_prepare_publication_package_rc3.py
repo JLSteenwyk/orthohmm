@@ -62,6 +62,7 @@ def test_extension_refuses_changed_inheritance_or_unsafe_new_payload(tmp_path, c
         prepare.compose(tmp_path, baseline, revision, additions)
 
 
+@pytest.mark.retained_benchmark
 def test_actual_parent_manifest_and_sources_still_match_the_retained_rc2():
     path = ROOT / "benchmark_tools/results/publication_package_rc2_selection_20261004_v2.json"
     assert identity(path)["sha256"] == prepare.BASELINE_SHA

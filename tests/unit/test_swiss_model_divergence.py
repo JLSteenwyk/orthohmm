@@ -140,6 +140,8 @@ def test_batch_syntax_and_scoped_resources():
 
 @pytest.mark.skipif(not writer.BINARY.exists(), reason="Optional trusted local binary")
 def test_one_failed_family_retained_no_subset_cutoff_and_other_families_continue(tmp_path, monkeypatch):
+    for key in ("PYTHONPATH", "PYTHONHOME", "PYTHONUSERBASE", "LD_PRELOAD", "LD_LIBRARY_PATH", "LD_AUDIT"):
+        monkeypatch.delenv(key, raising=False)
     repo = tmp_path / "repo"
     output = repo / "benchmarks/results/fresh"
     output.parent.mkdir(parents=True)

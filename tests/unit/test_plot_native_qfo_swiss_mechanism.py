@@ -8,6 +8,7 @@ from pathlib import Path
 import pytest
 
 from benchmark_tools import plot_native_qfo_swiss_mechanism as plotter
+from tests.recorded_paths import load_json
 
 RESULTS = Path(plotter.__file__).parent / "results"
 FILES = {
@@ -15,6 +16,26 @@ FILES = {
     "reconciliation": ("native_qfo_swiss_reconciliation_trace_20261006_v1.json", "native_qfo_swiss_reconciliation_newick_readback_20261006.json"),
     "strata": ("native_qfo_swiss_sequence_strata_20261006_v1/report.json", "native_qfo_swiss_sequence_strata_readback_20261006.json"),
 }
+
+
+@pytest.fixture
+def bound_reports(tmp_path):
+    """Bind presentation-only copies; leave retained diagnostic bytes alone."""
+    inputs = {}
+    for kind in ("reconciliation", "search", "strata"):
+        report_name, reader_name = FILES[kind]
+        report = load_json(RESULTS / report_name)
+        if kind == "search":
+            report["localization"] = inputs["reconciliation"][0]
+        report_path = tmp_path / (kind + ".json")
+        report_path.write_text(json.dumps(report))
+        report_ref = plotter.record(report_path)
+        readback = load_json(RESULTS / reader_name)
+        readback["report"] = report_ref
+        reader_path = tmp_path / (kind + "_reader.json")
+        reader_path.write_text(json.dumps(readback))
+        inputs[kind] = [report_ref, plotter.record(reader_path)]
+    return inputs
 
 
 @pytest.fixture
@@ -83,16 +104,16 @@ def test_corrupted_cohort_or_statistics_refuse(reports, fault):
 
 
 @pytest.mark.parametrize("kind", plotter.KINDS)
-def test_actual_report_readback_source_bindings(kind):
-    refs = [plotter.record(RESULTS / path) for path in FILES[kind]]
+def test_relocated_report_readback_source_bindings(kind, bound_reports):
+    refs = bound_reports[kind]
     evidence = []
     assert plotter.paired_reports(kind, *refs, evidence)["schema"] == plotter.KINDS[kind][0]
     assert len(evidence) == 4
 
 
 @pytest.mark.parametrize("fault", ("report", "source", "scope", "schema", "new_inference"))
-def test_changed_readback_binding_refuses(tmp_path, fault):
-    refs = [plotter.record(RESULTS / path) for path in FILES["strata"]]
+def test_changed_readback_binding_refuses(tmp_path, fault, bound_reports):
+    refs = bound_reports["strata"]
     readback = json.loads(Path(refs[1]["path"]).read_text())
     if fault == "report":
         readback["report"]["sha256"] = "0" * 64
@@ -110,8 +131,8 @@ def test_changed_readback_binding_refuses(tmp_path, fault):
         plotter.paired_reports("strata", refs[0], plotter.record(path), [])
 
 
-def test_real_join_and_generated_tables_with_render_stub(tmp_path, monkeypatch):
-    inputs = {kind: [plotter.record(RESULTS / path) for path in files] for kind, files in FILES.items()}
+def test_real_join_and_generated_tables_with_render_stub(tmp_path, monkeypatch, bound_reports):
+    inputs = bound_reports
     calls = []
     monkeypatch.setattr(plotter, "render", lambda *args: calls.append(args))
     result = plotter.run(inputs, tmp_path / "figure")

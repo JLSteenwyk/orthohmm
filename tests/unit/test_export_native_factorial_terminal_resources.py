@@ -7,6 +7,7 @@ from pathlib import Path
 import pytest
 
 from benchmark_tools import export_native_factorial_terminal_resources as current
+from benchmark_tools.prepare_ob_candidate_neighborhood import record
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -14,13 +15,11 @@ ROOT = Path(__file__).resolve().parents[2]
 
 @pytest.fixture(scope="module")
 def actual():
-    values = {}
-    for key, (path, _) in current.SOURCES.items():
-        value = json.loads((ROOT / path).read_text())
-        if isinstance(key, int):
-            value = {k: v for k, v in value.items() if k != "evidence"}
-        values[key] = value
-    return values
+    path = ROOT / "tests/fixtures/native_factorial_terminal_projection.json"
+    fixture = json.loads(path.read_text())
+    assert fixture["sources"] == {str(key): dict(path=name, sha256=digest)
+                                 for key, (name, digest) in current.SOURCES.items()}
+    return {key: fixture["documents"][str(key)] for key in current.SOURCES}
 
 
 def projected(actual):
@@ -68,6 +67,7 @@ def test_inconsistent_or_unsafe_projection_refused(actual, change):
     with pytest.raises(ValueError): projected(values)
 
 
+@pytest.mark.retained_benchmark
 def test_actual_export_is_fresh_and_preserves_original_snapshot(tmp_path, actual):
     output = tmp_path / "export"
     result = current.run(ROOT, output)
@@ -79,3 +79,21 @@ def test_actual_export_is_fresh_and_preserves_original_snapshot(tmp_path, actual
     assert "NA" in (output / "resources.tsv").read_text()
     assert "unknown and potentially tool-dependent" in (output / "resources.md").read_text()
     with pytest.raises(FileExistsError): current.run(ROOT, output)
+
+
+def test_projected_fixture_export_preserves_all_rows_without_raw_accounting(tmp_path, actual, monkeypatch):
+    sources = {}
+    for key, doc in actual.items():
+        path = tmp_path / (str(key) + ".json")
+        path.write_text(json.dumps(doc))
+        sources[key] = (path.name, record(path)["sha256"])
+    monkeypatch.setattr(current, "SOURCES", sources)
+    output = tmp_path / "projection"
+    result = current.run(tmp_path, output)
+    report = json.loads((output / "report.json").read_text())
+    assert result["rows"] == 13 and result["measured_rows"] == 11
+    assert report["rows"] == projected(actual)
+    assert report["baseline_rows_preserved"] == actual["baseline"]["rows"]
+    assert report["new_scientific_admission"] is report["scoring_repeated"] is False
+    with pytest.raises(FileExistsError):
+        current.run(tmp_path, output)

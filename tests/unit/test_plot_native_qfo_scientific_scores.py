@@ -1,5 +1,6 @@
 import copy
 import json
+import sys
 from pathlib import Path
 from types import SimpleNamespace
 import xml.etree.ElementTree as ET
@@ -11,14 +12,15 @@ import pytest
 from benchmark_tools import plot_native_qfo_scientific_scores as module
 from benchmark_tools.prepare_ob_candidate_neighborhood import record
 from tests.unit.test_export_native_qfo_factorial_scores import write
+from tests.recorded_paths import loads as relocated_loads
 
 ROOT = Path(__file__).resolve().parents[2] / "benchmark_tools/results"
 VALIDATOR = ROOT.parents[1] / "benchmarks/work/native_factorial_review_py310_20261004/bin/python"
 
 
 def inputs():
-    snapshot = json.loads((ROOT / "native_qfo_scientific_scores_20261006_v1/report.json").read_text())
-    binding = json.loads((ROOT / "native_qfo_swiss_uncertainty_binding_22449_20261006.json").read_text())
+    snapshot = relocated_loads((ROOT / "native_qfo_scientific_scores_20261006_v1/report.json").read_text())
+    binding = relocated_loads((ROOT / "native_qfo_swiss_uncertainty_binding_22449_20261006.json").read_text())
     return snapshot, binding
 
 
@@ -92,12 +94,15 @@ def test_cross_snapshot_binding_rejected_before_output_creation(tmp_path):
 
 def test_render_fixture_exports_pixels_vector_labels_and_bound_endpoints(tmp_path, monkeypatch):
     snapshot, binding = inputs()
+    snapshot["evidence"], snapshot["outputs"] = [], []
+    binding["evidence"], binding["helpers"] = [], []
     snapshot_ref = write(tmp_path / "snapshot.json", snapshot)
     binding["snapshot"] = snapshot_ref
     binding_ref = write(tmp_path / "binding.json", binding)
-    monkeypatch.setattr(module, "replay_binding", lambda *args: dict(python=record(VALIDATOR), fixture=True))
+    fixture_python = Path(sys.executable)
+    monkeypatch.setattr(module, "replay_binding", lambda *args: dict(python=record(fixture_python), fixture=True))
     result = module.run(Path(snapshot_ref["path"]), snapshot_ref["sha256"],
-        Path(binding_ref["path"]), binding_ref["sha256"], tmp_path / "plot", VALIDATOR)
+        Path(binding_ref["path"]), binding_ref["sha256"], tmp_path / "plot", fixture_python)
     assert result["new_bootstrap_draws"] == 0
     assert result["new_scoring_or_admission"] is result["scientific_timings_admitted"] is False
     assert result["publication_ready"] is result["visual_review_complete"] is False
@@ -171,9 +176,9 @@ def test_changed_worker_identity_or_exact_replay_refused(tmp_path, monkeypatch, 
     if change == "binary": assert not calls
 
 
+@pytest.mark.retained_benchmark
 def test_actual_retained_binding_replays_exactly_in_original_environment():
-    if not VALIDATOR.exists():
-        pytest.skip("Original scientific environment not installed on this host")
+    assert VALIDATOR.exists(), "Original scientific environment is required"
     snapshot_path = ROOT / "native_qfo_scientific_scores_20261006_v1/report.json"
     snapshot, binding = inputs()
     values = [snapshot["rows"][1]["scores"][name] for name in module.reporter.original.ENDPOINTS]

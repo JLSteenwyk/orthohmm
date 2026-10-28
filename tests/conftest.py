@@ -90,6 +90,29 @@ def synthetic_linux_boot_id(monkeypatch):
 
 
 @pytest.fixture
+def synthetic_linux_memory(monkeypatch):
+    """Supply Linux counters only to explicitly synthetic controller tests."""
+    read_text = Path.read_text
+    counters = {
+        Path("/proc/meminfo"): "MemTotal: 536870912 kB\nMemAvailable: 268435456 kB\n",
+        Path("/proc/self/status"): "VmRSS: 512 kB\nVmHWM: 1024 kB\n",
+    }
+
+    def read(path, *args, **kwargs):
+        if path in counters:
+            return counters[path]
+        return read_text(path, *args, **kwargs)
+
+    monkeypatch.setattr(Path, "read_text", read)
+
+
+@pytest.fixture
+def synthetic_affinity(monkeypatch):
+    """An explicit affinity stub for synthetic graph and file-audit fixtures."""
+    monkeypatch.setattr(os, "sched_getaffinity", lambda pid: {0, 1}, raising=False)
+
+
+@pytest.fixture
 def stage_historical_qfo_batch():
     """Relocate only ROOT and Python in a temporary handoff-test copy."""
     def stage(source, destination, root, *, python_calls=1):
@@ -112,3 +135,4 @@ def pytest_configure(config):
     config.addinivalue_line("markers", "integration: mark as integration test")
     config.addinivalue_line("markers", "slow: mark as slow test")
     config.addinivalue_line("markers", "raw_benchmark: requires separately supplied checksum-bound benchmark sources")
+    config.addinivalue_line("markers", "retained_benchmark: requires original local benchmark artifacts or a frozen historical runtime; inventoried in tests/retained_benchmark_cases.json")

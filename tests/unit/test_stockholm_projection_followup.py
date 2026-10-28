@@ -177,6 +177,7 @@ def test_standalone_run_reauthenticates_new_campaign_before_any_science(tmp_path
         assert result["source_revision"] == binding["science"]
 
 
+@pytest.mark.retained_benchmark
 def test_standalone_api_uses_corrected_science_without_importing_driver_science():
     root = Path(followup.__file__).resolve().parents[1]
     source = root / "benchmarks/work/stockholm_annotation_recovery_pilot_v1_20261019"

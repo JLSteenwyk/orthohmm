@@ -9,7 +9,7 @@ from benchmark_tools import recheck_benchmark_files as audit
 
 
 @pytest.fixture
-def sample(tmp_path):
+def sample(tmp_path, synthetic_affinity):
     path = tmp_path / "input.bin"
     path.write_bytes(b"retained input")
     ref = {"path": str(path), "bytes": path.stat().st_size,

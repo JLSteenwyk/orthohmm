@@ -8,14 +8,28 @@ import pytest
 from PIL import Image
 
 from benchmark_tools import review_native_qfo_swiss_mechanism as reviewer
+from tests.recorded_paths import loads as relocated_loads
+from tests.unit.test_plot_native_qfo_swiss_mechanism import bound_reports
 
 RESULTS = Path(reviewer.__file__).parent / "results"
 ROOT = RESULTS / "native_qfo_swiss_mechanism_figure_20261006_v3"
 PREVIEW = RESULTS / "native_qfo_swiss_mechanism_pdf_preview_20261006_v3.png"
 
 
-def test_actual_complete_figure_readback():
-    result = reviewer.review(ROOT, PREVIEW)
+@pytest.fixture
+def relocated_figure(tmp_path, bound_reports):
+    root = tmp_path / "figure"
+    shutil.copytree(ROOT, root)
+    manifest = relocated_loads((root / "manifest.json").read_text())
+    manifest["inputs"] = bound_reports
+    manifest["evidence"] = [manifest["source"], *[r for pair in bound_reports.values() for r in pair]]
+    manifest["outputs"] = [reviewer.record(root / Path(r["path"]).name) for r in manifest["outputs"]]
+    (root / "manifest.json").write_text(json.dumps(manifest))
+    return root
+
+
+def test_relocated_complete_figure_readback(relocated_figure):
+    result = reviewer.review(relocated_figure, PREVIEW)
     assert result["plotted_table_rows_checked"] == 30 and result["panels_checked"] == 4
     assert result["original_raster"]["size"] == [2640, 1760]
     assert all(value > 100 for value in result["original_raster"]["colors"].values())
@@ -24,7 +38,7 @@ def test_actual_complete_figure_readback():
 
 
 def test_actual_readback_receipt_matches_current_sources():
-    receipt = json.loads((RESULTS / "native_qfo_swiss_mechanism_figure_readback_20261006_v3.json").read_text())
+    receipt = relocated_loads((RESULTS / "native_qfo_swiss_mechanism_figure_readback_20261006_v3.json").read_text())
     assert receipt["source"] == reviewer.record(reviewer.__file__)
     assert receipt["manifest"] == reviewer.record(ROOT / "manifest.json")
     assert receipt["pdf_preview"] == reviewer.record(PREVIEW)
@@ -40,9 +54,8 @@ def test_layout_corrections_preserve_original_plotted_bytes():
 
 @pytest.mark.parametrize("fault", ("scope", "source", "count", "stage_value", "stratum_value", "difference",
                                  "table_header", "svg_label", "png_blank"))
-def test_corrupted_actual_figure_refuses(tmp_path, fault):
-    directory = tmp_path / "figure"
-    shutil.copytree(ROOT, directory)
+def test_corrupted_actual_figure_refuses(tmp_path, fault, relocated_figure):
+    directory = relocated_figure
     manifest = json.loads((directory / "manifest.json").read_text())
     manifest["outputs"] = [reviewer.record(directory / Path(r["path"]).name) for r in manifest["outputs"]]
     if fault == "scope":

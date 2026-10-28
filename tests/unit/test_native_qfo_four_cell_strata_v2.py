@@ -143,6 +143,7 @@ def test_existing_output_rejected_before_loading(tmp_path, monkeypatch):
     with pytest.raises(FileExistsError): independent.readback(tmp_path / "absent.json", "0"*64, tmp_path)
 
 
+@pytest.mark.retained_benchmark
 def test_real_compatibility_metadata_only_without_projection():
     docs, _, _, _ = current.legacy.prepare(ROOT)
     before = copy.deepcopy(docs)

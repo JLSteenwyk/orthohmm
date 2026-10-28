@@ -2,9 +2,11 @@
 
 from contextlib import nullcontext
 import json
+import hashlib
 import os
 from pathlib import Path
 import subprocess
+import shlex
 import sys
 from types import SimpleNamespace
 
@@ -55,7 +57,7 @@ def test_duplicate_fields_and_old_job_rejected():
 
 
 @pytest.fixture
-def fixture(tmp_path, monkeypatch):
+def fixture(tmp_path, monkeypatch, synthetic_linux_memory, synthetic_linux_boot_id):
     monkeypatch.setattr(module, "REQUEST", tmp_path / "request.json")
     core = tmp_path / "core"
     core.mkdir()
@@ -196,6 +198,9 @@ def execution_stubs(fixture, monkeypatch, phase_failure=None):
     monkeypatch.setenv("SLURM_JOB_ID", "25000")
     monkeypatch.setenv("PYTHONHASHSEED", "0")
     monkeypatch.setenv("PYTHONNOUSERSITE", "1")
+    uname = os.uname()
+    monkeypatch.setattr(module.os, "uname", lambda: os.uname_result((
+        uname.sysname, "bizon", uname.release, uname.version, uname.machine)))
     monkeypatch.setattr(module.sys, "dont_write_bytecode", True)
     monkeypatch.setattr(module.sys, "pycache_prefix", str(fixture.tmp / "absent_python_cache"))
     monkeypatch.setattr(module.sys, "executable", str(Path(sys.executable).resolve()))
@@ -383,7 +388,7 @@ def test_release_gate_rejects_unsafe_or_unbound_launch(fixture, monkeypatch, fai
         assert not any(isinstance(call, tuple) and call[0] == "budget" for call in calls)
 
 
-def test_batch_fixed_envelope_and_unscheduled_guard(tmp_path):
+def test_batch_fixed_envelope_and_unscheduled_guard(tmp_path, stage_historical_qfo_batch):
     raw = module.SCRIPT.read_text()
     for value in ("--cpus-per-task=64", "--mem=128G", "--time=1-02:00:00", "--no-requeue",
                   "PYTHONHASHSEED=0", "PYTHONDONTWRITEBYTECODE=1", "scheduler-comment"):
@@ -393,7 +398,14 @@ def test_batch_fixed_envelope_and_unscheduled_guard(tmp_path):
     assert result.returncode == 0
     env = dict(os.environ)
     env.pop("SLURM_JOB_ID", None)
-    result = subprocess.run(["bash", str(module.SCRIPT)], env=env, cwd=tmp_path,
+    staged = stage_historical_qfo_batch(module.SCRIPT, tmp_path / "native12.sh", module.ROOT, python_calls=0)
+    text = staged.read_text()
+    historical = 'PYTHON="$ROOT/benchmarks/work/threadripper_private_controller_20260928/venv/bin/python"'
+    digest = "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+    assert text.count(historical) == text.count(digest) == 1
+    staged.write_text(text.replace(historical, "PYTHON=" + shlex.quote(sys.executable), 1).replace(
+        digest, hashlib.sha256(Path(sys.executable).read_bytes()).hexdigest(), 1))
+    result = subprocess.run(["bash", str(staged)], env=env, cwd=tmp_path,
                             capture_output=True, text=True)
     assert result.returncode != 0
     assert "SLURM_JOB_ID" in result.stderr

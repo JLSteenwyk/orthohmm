@@ -3,6 +3,8 @@
 from copy import deepcopy
 import csv
 import json
+
+from tests.recorded_paths import loads as relocated_loads
 from pathlib import Path
 
 import pytest
@@ -17,12 +19,15 @@ from tests.unit.test_export_native_qfo_factorial_scores import write
 @pytest.fixture(scope="module")
 def evidence(tmp_path_factory, rendered):
     root = tmp_path_factory.mktemp("synthetic_composed_manuscript")
-    plot = json.loads((rendered / "manifest.json").read_text())
-    snapshot = json.loads(Path(plot["snapshot"]["path"]).read_text())
+    plot = relocated_loads((rendered / "manifest.json").read_text())
+    snapshot = relocated_loads(Path(plot["snapshot"]["path"]).read_text())
     failed = ROOT / "benchmark_tools/results/native11_qfo_scoring_failure_addendum_20261008_v1/report.json"
+    assert record(failed)["sha256"] == main.FAILURE_SHA
+    failure_ref = write(root / "failure.json", relocated_loads(failed.read_text()))
+    failed = Path(failure_ref["path"])
     snapshot["failure_addendum"] = record(failed)
     snapshot_ref = write(root / "snapshot.json", snapshot)
-    uncertainty = json.loads(Path(plot["native_intervals"]["path"]).read_text())
+    uncertainty = relocated_loads(Path(plot["native_intervals"]["path"]).read_text())
     uncertainty["snapshot"] = snapshot_ref
     intervals_ref = write(root / "intervals.json", uncertainty)
     plot.update(snapshot=snapshot_ref, native_intervals=intervals_ref)
@@ -33,8 +38,10 @@ def evidence(tmp_path_factory, rendered):
     refs = dict(parent=record(parent), snapshot=snapshot_ref, intervals=intervals_ref,
         figure=plot_ref, reader=reader_ref, failure=record(failed))
     specifications = {key: (ref["path"], ref["sha256"]) for key, ref in refs.items()}
-    docs, refs, _ = main.inputs(specifications)
-    return root, docs, refs, specifications
+    with pytest.MonkeyPatch.context() as patch:
+        patch.setattr(main, "FAILURE_SHA", failure_ref["sha256"])
+        docs, refs, _ = main.inputs(specifications)
+        yield root, docs, refs, specifications
 
 
 def test_generated_native_scope_and_unrelated_sections_preserved(evidence):

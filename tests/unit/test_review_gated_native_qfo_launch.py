@@ -2,6 +2,8 @@
 
 import hashlib
 import json
+
+from tests.recorded_paths import loads as relocated_loads
 from pathlib import Path
 import subprocess
 
@@ -15,7 +17,7 @@ RESULTS = Path(gate.__file__).parent / "results"
 
 
 def load(name):
-    return json.loads((RESULTS / name).read_text())
+    return relocated_loads((RESULTS / name).read_text())
 
 
 @pytest.fixture
@@ -40,6 +42,7 @@ def test_exact_launch_chain_and_no_repeated_release(receipts):
     assert all(o["command"][:3] == ["scontrol", "show", "job"] for o in verified["scheduler_observations"])
 
 
+@pytest.mark.retained_benchmark
 def test_launch_pins_match_preflight_and_prepared_git_milestone(receipts):
     preflight, sub = receipts["preflight"], receipts["submission"]
     assert sub["source_commit"].startswith("b8192281")

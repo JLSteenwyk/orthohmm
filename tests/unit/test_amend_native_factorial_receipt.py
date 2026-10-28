@@ -2,6 +2,8 @@
 
 from copy import deepcopy
 import json
+
+from tests.recorded_paths import loads as relocated_loads
 from pathlib import Path
 
 import pytest
@@ -13,7 +15,7 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import record
 
 @pytest.fixture
 def plans(monkeypatch):
-    old = json.loads((amend.ROOT / "benchmark_tools/results/native_factorial_cost_plan_repaired_20261004.json").read_text())
+    old = relocated_loads((amend.ROOT / "benchmark_tools/results/native_factorial_cost_plan_repaired_20261004.json").read_text())
     new = deepcopy(old)
     new["source_commit"] = "prospective"
     new["helper_sources"] = [record(amend.EXECUTOR) if r["path"] == str(amend.EXECUTOR) else deepcopy(r)
@@ -71,9 +73,12 @@ def test_no_unrelated_helper_or_evidence_change(plans):
 def adoption(plans, monkeypatch):
     old, new = plans
     recovery_ref = record(amend.ROOT / "benchmark_tools/results/native_factorial_recovery_22427.json")
-    recovery = json.loads(Path(recovery_ref["path"]).read_text())
+    recovery = relocated_loads(Path(recovery_ref["path"]).read_text())
     prior_ref = recovery["terminal_review"]
-    prior = json.loads(Path(prior_ref["path"]).read_text())
+    fixture = Path(__file__).resolve().parents[1] / "fixtures/native_factorial_prior_review.json"
+    projected = relocated_loads(fixture.read_text())
+    assert projected["original_sha256"] == prior_ref["sha256"]
+    prior = projected["review"]
     new["history_adoption"] = dict(schema="native_factorial_receipt_history_adoption_v1",
         prior_plan=prior["plan"], prior_review=prior_ref, recovery=recovery_ref, executed_source=record(amend.ARCHIVE))
     values = {prior_ref["path"]: prior, prior["plan"]["path"]: old, recovery_ref["path"]: recovery,

@@ -4,6 +4,8 @@ import copy
 import csv
 import itertools
 import json
+
+from tests.recorded_paths import loads as relocated_loads
 from pathlib import Path
 
 import pytest
@@ -173,8 +175,8 @@ def test_primary_source_bound_refusals(synthetic, fault):
     search_ref, verified_ref, plan_ref, output = synthetic
     search_path = Path(search_ref["path"])
     verified_path = Path(verified_ref["path"])
-    search = json.loads(search_path.read_text())
-    verified = json.loads(verified_path.read_text())
+    search = relocated_loads(search_path.read_text())
+    verified = relocated_loads(verified_path.read_text())
     if fault == "source":
         search["source"] = trace.record(__file__)
     elif fault == "scope":
@@ -185,7 +187,7 @@ def test_primary_source_bound_refusals(synthetic, fault):
         search["checkpoints"].pop()
     elif fault in ("candidate_hash", "case_family"):
         loc_path = Path(search["localization"]["path"])
-        localized = json.loads(loc_path.read_text())
+        localized = relocated_loads(loc_path.read_text())
         if fault == "candidate_hash":
             localized["reconstruction"]["reconstructed_candidate_sha256"] = "0" * 64
         else:
@@ -210,7 +212,7 @@ def test_primary_source_bound_refusals(synthetic, fault):
 def test_independent_readback_refuses_synthetic_corruption(synthetic, fault):
     run_fixture(synthetic)
     path = synthetic[-1] / "report.json"
-    report = json.loads(path.read_text())
+    report = relocated_loads(path.read_text())
     view = report["cases"][0]["views"][trace.CELLS[0]]
     if fault == "scope":
         report["graph_original_admission_established"] = True
@@ -242,8 +244,8 @@ def test_independent_readback_refuses_synthetic_corruption(synthetic, fault):
 def test_actual_retained_result_and_reader_receipt_without_repeating_graph_scan():
     results = Path(trace.__file__).parent / "results"
     report_path = results / "native_qfo_swiss_graph_support_20261006_v1/report.json"
-    result = json.loads(report_path.read_text())
-    verified = json.loads((results / "native_qfo_swiss_graph_floyd_readback_20261006.json").read_text())
+    result = relocated_loads(report_path.read_text())
+    verified = relocated_loads((results / "native_qfo_swiss_graph_floyd_readback_20261006.json").read_text())
     assert result["source"] == trace.record(trace.__file__)
     assert verified["source"] == trace.record(reader.__file__) and verified["report"] == trace.record(report_path)
     assert verified["changed_pairs_checked"] == result["changed_pairs"] == 2023

@@ -3,7 +3,11 @@
 import csv
 import hashlib
 import json
+
+from tests.recorded_paths import loads as relocated_loads, check_record
 from pathlib import Path
+
+import pytest
 import subprocess
 
 import fitz
@@ -18,7 +22,7 @@ REVIEW = OUT.parent / "native_qfo_support_supplement_pdf_review_20261006_v1"
 
 
 def load(path):
-    return json.loads(path.read_text())
+    return relocated_loads(path.read_text())
 
 
 def digest(path):
@@ -94,13 +98,16 @@ def test_actual_figure_pixels_and_pdf_text_nonblank():
         assert "40,241" in text and "33,699" in text and "6,542" in text
 
 
+@pytest.mark.retained_benchmark
 def test_actual_local_asset_bindings_and_three_page_pdf():
     render = load(OUT / "render.json")
     printing = load(PRINT / "print.json")
     review = load(REVIEW / "report.json")
     assert render["local_occurrences"] == render["unique_targets"] == 11 and render["citation_ids"] == []
     for ref in [render["html"], *render["sources"], *render["targets"], printing["pdf"], *review["rendered_pages"]]:
-        assert digest(Path(ref["path"])) == ref["sha256"]
+        revision = ("47b7f14ba0c2e8c5b7f070f5b11620dd356a1eb9"
+                    if Path(ref["path"]).name == "render_manuscript_review.py" else None)
+        check_record(ref, revision=revision)
     assert printing["status"] == "verified_html_printed" and printing["returncode"] == 0
     assert review["page_count"] == printing["page_count"] == 3 and review["bounds_violations"] == []
     assert review["phrase_matches"] == {"Methods": [1], "Interpretation": [2], "Machine-readable": [3]}

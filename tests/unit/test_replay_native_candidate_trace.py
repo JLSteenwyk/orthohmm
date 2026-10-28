@@ -138,6 +138,7 @@ def test_changed_trace_checksum_rejected(retained):
         collect(write("preparation.json", prep), write("score.json", score))
 
 
+@pytest.mark.retained_benchmark
 def test_actual_retained_report_reproduces_at_json_boundary():
     root = Path(__file__).resolve().parents[2]
     directory = root / "benchmark_tools/results/native_candidate_trace_replay_22429"

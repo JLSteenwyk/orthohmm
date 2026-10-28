@@ -55,6 +55,7 @@ def test_extension_refuses_changed_inheritance_or_unsafe_payload(tmp_path, chang
     with pytest.raises(ValueError): prepare.compose(tmp_path, baseline, revision, additions)
 
 
+@pytest.mark.retained_benchmark
 def test_actual_rc3_sources_and_reader_still_match_the_prior_payloads():
     path = ROOT / "benchmark_tools/results/publication_package_rc3_selection_20261004.json"
     assert identity(path)["sha256"] == prepare.BASELINE_SHA

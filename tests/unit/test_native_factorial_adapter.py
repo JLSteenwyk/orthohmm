@@ -14,6 +14,18 @@ from benchmark_tools import native_factorial_adapter as adapter
 from orthohmm import orthohmm as pipeline
 
 
+@pytest.fixture(autouse=True)
+def frozen_pipeline(monkeypatch):
+    import importlib.util
+
+    path = Path(__file__).resolve().parents[1] / "fixtures/native_factorial_pipeline.py"
+    spec = importlib.util.spec_from_file_location("orthohmm._factorial_test_fixture", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == adapter.CORE_SHA
+    monkeypatch.setattr(__import__(__name__, fromlist=["pipeline"]), "pipeline", module)
+
+
 CELLS = tuple("p%d_c%d_r%d" % v for v in itertools.product(range(2), repeat=3))
 
 

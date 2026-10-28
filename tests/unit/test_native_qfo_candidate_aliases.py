@@ -6,6 +6,8 @@ import copy
 import csv
 import gzip
 import json
+
+from tests.recorded_paths import loads as relocated_loads
 from pathlib import Path
 import sqlite3
 
@@ -90,12 +92,23 @@ def test_join_rejects_collapsed_or_unmapped_pairs(which, mode):
 
 
 @pytest.fixture
-def bound_aliases(retained, tmp_path):
+def bound_aliases(retained, tmp_path, monkeypatch):
+    # These files are provenance inputs, never executed by this synthetic join.
+    source_root = tmp_path / "sources"
+    source_root.mkdir()
+    (source_root / "benchmark_tools").symlink_to(ROOT / "benchmark_tools", target_is_directory=True)
+    scorer = source_root / "qfo_benchmark/benchmark-webservice"
+    scorer.mkdir(parents=True)
+    for name in ("map_relations.py", "vgnc_benchmark.py"):
+        (scorer / name).write_text("# Synthetic provenance-only source; never executed.\n")
+    (scorer.parent / "og_to_pairwise.py").symlink_to(ROOT / "qfo_benchmark/og_to_pairwise.py")
+    monkeypatch.setattr(primary, "ROOT", source_root)
+    monkeypatch.setattr(reader, "ROOT", source_root)
     write, build = retained
     def prepare(mode=None):
         refs = build("identifier")
-        decomposition = json.loads(Path(refs[0]["path"]).read_text())
-        readback = json.loads(Path(refs[1]["path"]).read_text())
+        decomposition = relocated_loads(Path(refs[0]["path"]).read_text())
+        readback = relocated_loads(Path(refs[1]["path"]).read_text())
         mapping_path = tmp_path / "mapping.json.gz"
         mapping = dict(mapping={"a": 1, "b": 2, "s": 3, "x": 4, "t": 5, "u": 6, "z": 4}, Goff=[0, 100], species=["TEST"])
         if mode == "bridge": mapping["mapping"]["z"] = 99
@@ -110,8 +123,8 @@ def bound_aliases(retained, tmp_path):
                          exit_code=0, outputs=[database_ref] if mode != "unbound_db" else [])
         execution_ref = write("execution.json", execution)
         for name in ("baseline", "candidate"):
-            admission = json.loads(Path(decomposition[name]["admission"]["path"]).read_text())
-            conversion = json.loads(Path(admission["pairs_manifest"]["path"]).read_text())
+            admission = relocated_loads(Path(decomposition[name]["admission"]["path"]).read_text())
+            conversion = relocated_loads(Path(admission["pairs_manifest"]["path"]).read_text())
             conversion["mapping"] = mapping_ref
             conversion["checked_records"] = [mapping_ref] if mode != "unbound_mapping" else []
             conversion_ref = write(name + "/conversion.json", conversion)
@@ -119,8 +132,8 @@ def bound_aliases(retained, tmp_path):
             if name == "candidate":
                 admission["execution_report"] = execution_ref
                 admission["checked_records"].extend([execution_ref, database_ref,
-                    record(ROOT / "qfo_benchmark/benchmark-webservice/map_relations.py"),
-                    record(ROOT / "qfo_benchmark/benchmark-webservice/vgnc_benchmark.py")])
+                    record(scorer / "map_relations.py"),
+                    record(scorer / "vgnc_benchmark.py")])
                 if mode == "unbound_scorer": admission["checked_records"].pop()
                 decomposition[name]["execution"] = execution_ref; decomposition[name]["database"] = database_ref
             decomposition[name]["admission"] = write(name + "/admission.json", admission)
@@ -155,7 +168,7 @@ def test_complete_original_provenance_and_both_algorithms(bound_aliases, tmp_pat
 def test_provenance_failure_retained_before_new_join(bound_aliases, tmp_path, mode):
     _, prepare = bound_aliases
     with pytest.raises(ValueError): primary.execute(prepare(mode), tmp_path / "new_join")
-    result = json.loads((tmp_path / "new_join/failure.json").read_text())
+    result = relocated_loads((tmp_path / "new_join/failure.json").read_text())
     assert result["automatic_retry"] is result["original_failed_export_retried"] is False
     assert not (tmp_path / "new_join/report.json").exists()
 
@@ -188,15 +201,16 @@ def test_reader_import_boundary():
     assert not set(names) & {"join_native_qfo_candidate_aliases", "trace_native_qfo_candidate_groups", "replay_native_candidate_trace", "numpy"}
 
 
+@pytest.mark.retained_benchmark
 def test_actual_full_ledger_readback_and_failure_identities_without_rerun():
     directory = ROOT / "benchmark_tools/results"
     path = directory / "native_qfo_candidate_alias_group_20261006_v1/report.json"
     if not path.is_file(): pytest.skip("Selected alias result not installed")
     assert record(path)["sha256"] == "3b3ab8f1132e70362e1450ac990caf7a9dad536e528bc54d6af39db16183cd53"
-    report = json.loads(path.read_text())
+    report = relocated_loads(path.read_text())
     rb_path = directory / "native_qfo_candidate_alias_group_readback_20261006_v1.json"
     assert record(rb_path)["sha256"] == "4afc4aa6853a69027b9dc710602309f44923315b1e68dbae4cd1e61866f4b92d"
-    readback = json.loads(rb_path.read_text())
+    readback = relocated_loads(rb_path.read_text())
     assert readback["report"] == record(path) and readback["bridges"] == report["bridges"]
     assert readback["localized_summary"] == report["localized_summary"]
     assert (report["genes"], report["baseline_groups"], report["candidate_groups"], report["accepted_merges"],
@@ -225,7 +239,7 @@ def test_actual_full_ledger_readback_and_failure_identities_without_rerun():
 
 def test_manuscript_result_table_matches_exact_retained_summary():
     directory = ROOT / "benchmark_tools/results"
-    report = json.loads((directory / "native_qfo_candidate_alias_group_20261006_v1/report.json").read_text())
+    report = relocated_loads((directory / "native_qfo_candidate_alias_group_20261006_v1/report.json").read_text())
     counts = {(r["candidate_state"], r["iteration"], r["connection_path"]): r["pairs"] for r in report["localized_summary"]}
     for name in ("PUBLICATION_MANUSCRIPT_DRAFT_20260916.md", "NATIVE_QFO_CANDIDATE_ALIAS_GROUP_RESULT_20261006.md"):
         text = (directory / name).read_text()

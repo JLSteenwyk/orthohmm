@@ -1,4 +1,6 @@
 import json
+
+from tests.recorded_paths import loads as relocated_loads
 from pathlib import Path
 from statistics import median
 
@@ -14,13 +16,13 @@ RESULTS = Path(__file__).resolve().parents[2] / 'benchmark_tools/results'
 def checkpoint():
     candidates = []
     for path in RESULTS.glob('threadripper_shared_resource_figure_20261004_v*/manifest.json'):
-        manifest = json.loads(path.read_text())
+        manifest = relocated_loads(path.read_text())
         table = Path(manifest['source_results']['path'])
         if table.parent.name.startswith('threadripper_shared_panel_snapshot_20261004_'):
             candidates.append((manifest['reviewed_attempts'], path, table, manifest))
     assert candidates
     _, path, table, manifest = max(candidates, key=lambda item: item[0])
-    return json.loads(table.read_text()), path.parent, table, manifest
+    return relocated_loads(table.read_text()), path.parent, table, manifest
 
 
 def test_latest_arithmetic_preserves_failure_endpoints_and_complete_cells(checkpoint):
@@ -52,11 +54,12 @@ def test_latest_arithmetic_preserves_failure_endpoints_and_complete_cells(checkp
                 assert summary is None
 
 
+@pytest.mark.retained_benchmark
 def test_latest_terminal_row_and_handoff_remain_bound(checkpoint):
     report, _, _, _ = checkpoint
     row = report['runs'][report['reviewed_attempts'] - 1]
     summary_path = RESULTS / f"threadripper_shared_attempt_{row['job_id']}.json"
-    summary = json.loads(summary_path.read_text())
+    summary = relocated_loads(summary_path.read_text())
     assert summary['index'] == row['index']
     assert summary['resources'] == row['resources']
     assert summary['native_outputs']['input_genes'] == {4: 73266, 8: 165168, 12: 251378}[row['proteomes']]

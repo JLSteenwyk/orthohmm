@@ -139,6 +139,7 @@ def test_no_abort_symbol_or_layout_clipping(count):
 
 @pytest.mark.parametrize('version,reviewed_count,resource_count,eligible_count', [
     ('v18', 18, 17, 16), ('v19', 19, 18, 17), ('v20', 20, 19, 18)])
+@pytest.mark.retained_benchmark
 def test_retained_actual_snapshot_and_pdf_pixels(tmp_path, version, reviewed_count, resource_count, eligible_count):
     import fitz
     import numpy as np

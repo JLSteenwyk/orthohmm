@@ -109,6 +109,7 @@ def test_existing_output_refused_without_reading_or_writing_inputs(tmp_path):
     assert list(tmp_path.iterdir()) == [marker]
 
 
+@pytest.mark.retained_benchmark
 def test_actual_sixteen_cell_export_agrees_with_independent_direct_readback():
     root = Path(__file__).resolve().parents[2]
     base = root / "benchmark_tools/results/factorial_retained_resources_20261004"

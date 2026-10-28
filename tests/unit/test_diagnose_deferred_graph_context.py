@@ -129,7 +129,7 @@ def setup_driver(tmp_path, monkeypatch):
     return Path(diagnostic.__file__).resolve().parent.parent, graph_receipt, pair_receipt
 
 
-def test_driver_rechecks_inputs_writes_new_receipt_and_never_overwrites(tmp_path, monkeypatch):
+def test_driver_rechecks_inputs_writes_new_receipt_and_never_overwrites(tmp_path, monkeypatch, synthetic_linux_memory):
     source, graph, pair = setup_driver(tmp_path, monkeypatch)
     before = {p: p.read_bytes() for p in tmp_path.iterdir()}
     output = tmp_path / "result.json"
@@ -143,7 +143,7 @@ def test_driver_rechecks_inputs_writes_new_receipt_and_never_overwrites(tmp_path
 
 
 @pytest.mark.parametrize("mutation", ["graph_receipt", "paired_receipt", "producer", "order", "native_counts", "control_hash", "file_changed", "full_cohort", "source_root", "memory", "wall"])
-def test_driver_rejects_unadmitted_changed_or_incomplete_inputs_before_output(tmp_path, monkeypatch, mutation):
+def test_driver_rejects_unadmitted_changed_or_incomplete_inputs_before_output(tmp_path, monkeypatch, mutation, synthetic_linux_memory):
     source, graph, pair = setup_driver(tmp_path, monkeypatch)
     receipt = json.loads(pair.read_text())
     if mutation == "graph_receipt":

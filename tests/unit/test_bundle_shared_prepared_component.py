@@ -5,6 +5,7 @@ from pathlib import Path
 import subprocess
 import sys
 import tarfile
+from tests.archive_runtime import extract_regular_files
 
 import pytest
 
@@ -57,7 +58,7 @@ def test_actual_prepared_arithmetic_and_archive(bundle, tmp_path):
     with tarfile.open(archive) as handle:
         assert len(handle.getmembers()) == len(component.EXPECTED) + 1
         assert all(m.isfile() for m in handle.getmembers())
-        handle.extractall(restored, filter='data')
+        extract_regular_files(handle, restored)
     command = [sys.executable, '-I', '-S', '-B', str(restored / 'component.py'),
                'verify', '--directory', str(restored), '--manifest-sha256', digest]
     run = subprocess.run(command, capture_output=True, text=True, check=True, cwd=tmp_path)

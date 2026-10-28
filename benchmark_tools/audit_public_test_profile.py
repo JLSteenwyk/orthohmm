@@ -17,12 +17,15 @@ RAW_NODES = frozenset({
     "tests/unit/test_swiss_strata_count_selection.py::test_explicit_counts_preserve_previous_rows_and_reject_wrong_hash[fragment]",
     "tests/unit/test_swiss_strata_count_selection.py::test_explicit_counts_preserve_previous_rows_and_reject_wrong_hash[duplication]",
 })
+RETAINED_INVENTORY = Path(__file__).resolve().parents[1] / "tests/retained_benchmark_cases.json"
+RETAINED_CASES = json.loads(RETAINED_INVENTORY.read_text())["cases"]
 
 
 class CollectionAudit:
     def __init__(self):
         self.collected = []
         self.marked = []
+        self.retained = []
         self.selected = []
         self.deselected = []
         self.errors = []
@@ -32,6 +35,7 @@ class CollectionAudit:
     def pytest_collection_modifyitems(self, items):
         self.collected = [item.nodeid for item in items]
         self.marked = [item.nodeid for item in items if item.get_closest_marker("raw_benchmark")]
+        self.retained = [item.nodeid for item in items if item.get_closest_marker("retained_benchmark")]
 
     def pytest_deselected(self, items):
         self.deselected.extend(item.nodeid for item in items)
@@ -48,7 +52,8 @@ class CollectionAudit:
 
 def evaluate(collection, exit_code):
     problems = []
-    lists = (collection.collected, collection.marked, collection.selected, collection.deselected)
+    lists = (collection.collected, collection.marked, collection.retained,
+             collection.selected, collection.deselected)
     if exit_code != 0 or collection.errors:
         problems.append("collection did not complete successfully")
     if collection.skipped:
@@ -57,16 +62,23 @@ def evaluate(collection, exit_code):
         problems.append("duplicate node identifiers")
     if set(collection.marked) != RAW_NODES:
         problems.append("raw marker inventory differs from the four declared private cases")
-    if set(collection.deselected) != RAW_NODES:
-        problems.append("deselection differs from the declared private cases")
-    if not collection.selected or set(collection.selected) != set(collection.collected) - RAW_NODES:
-        problems.append("public selection is not the complete collected inventory minus private cases")
-    if set(collection.selected) & RAW_NODES:
-        problems.append("private cases were selected")
+    retained = {node for node in collection.collected if node.split("[", 1)[0] in RETAINED_CASES}
+    if {node.split("[", 1)[0] for node in retained} != set(RETAINED_CASES):
+        problems.append("declared retained test case is missing from collection")
+    if set(collection.retained) != retained:
+        problems.append("retained marker inventory differs from the declared artifact-dependent cases")
+    excluded = RAW_NODES | retained
+    if set(collection.deselected) != excluded:
+        problems.append("deselection differs from the declared raw and retained cases")
+    if not collection.selected or set(collection.selected) != set(collection.collected) - excluded:
+        problems.append("public selection is not the complete inventory minus declared external-evidence cases")
+    if set(collection.selected) & excluded:
+        problems.append("external-evidence cases were selected")
     return dict(
-        schema="orthohmm-public-test-profile-v1",
-        profile="public (not raw_benchmark); collection only, no slow filtering",
+        schema="orthohmm-public-test-profile-v2",
+        profile="public (not raw_benchmark and not retained_benchmark); collection only, no slow filtering",
         complete_raw_benchmark_gate=False,
+        complete_retained_benchmark_gate=False,
         tests_executed=False,
         pytest_exit_code=int(exit_code),
         collected_count=len(collection.collected),
@@ -74,6 +86,8 @@ def evaluate(collection, exit_code):
         deselected_count=len(collection.deselected),
         declared_private_nodes=sorted(RAW_NODES),
         raw_marked_nodes=sorted(collection.marked),
+        retained_marked_nodes=sorted(collection.retained),
+        declared_retained_cases=RETAINED_CASES,
         selected_nodes=sorted(collection.selected),
         deselected_nodes=sorted(collection.deselected),
         collection_errors=collection.errors,
@@ -91,7 +105,7 @@ def audit(root, output):
         raise ValueError("Run from the checkout root so collected node IDs remain relative")
     collection = CollectionAudit()
     log = io.StringIO()
-    arguments = ["tests", "--collect-only", "-q", "-m", "not raw_benchmark"]
+    arguments = ["tests", "--collect-only", "-q", "-m", "not raw_benchmark and not retained_benchmark"]
     with redirect_stdout(log), redirect_stderr(log):
         status = pytest.main(arguments, plugins=[collection])
     report = evaluate(collection, status)

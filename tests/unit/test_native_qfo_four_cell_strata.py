@@ -204,6 +204,7 @@ def test_table_tampering_detected(tmp_path,monkeypatch,name):
     with pytest.raises(ValueError): independent.check_tables(output,result,*independent.verify(result,docs))
 
 
+@pytest.mark.retained_benchmark
 def test_prepare_real_metadata_only_without_selected_subgroups():
     docs,refs,checked,protocol = current.prepare(ROOT)
     assert len(refs) == 7 and protocol["sha256"] == current.PROTOCOL_SHA

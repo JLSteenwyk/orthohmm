@@ -131,6 +131,7 @@ def test_existing_output_refused_before_collection(tmp_path, monkeypatch):
         cost.main()
 
 
+@pytest.mark.retained_benchmark
 def test_actual_association_against_raw_retained_inputs_partitions_and_metrics():
     root = Path(__file__).resolve().parents[2]
     report = json.loads((root / "benchmark_tools/results/qfo_native_configuration_cost_20261004/association.json").read_text())

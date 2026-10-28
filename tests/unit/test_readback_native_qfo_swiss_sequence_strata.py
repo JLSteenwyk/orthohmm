@@ -4,6 +4,8 @@ from collections import Counter
 import csv
 import gzip
 import json
+
+from tests.recorded_paths import loads as relocated_loads
 from pathlib import Path
 
 import pytest
@@ -11,9 +13,10 @@ import pytest
 from benchmark_tools import readback_native_qfo_swiss_sequence_strata as reader
 
 
+@pytest.mark.retained_benchmark
 def test_actual_retained_projection_and_independent_receipt():
     results = Path(reader.__file__).parent / "results"
-    receipt = json.loads((results / "native_qfo_swiss_sequence_strata_readback_20261006.json").read_text())
+    receipt = relocated_loads((results / "native_qfo_swiss_sequence_strata_readback_20261006.json").read_text())
     assert receipt["source"] == reader.record(reader.__file__)
     verified = reader.verify(Path(receipt["report"]["path"]), receipt["report"]["sha256"])
     assert verified == receipt

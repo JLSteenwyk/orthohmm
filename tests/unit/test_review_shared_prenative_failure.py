@@ -98,6 +98,7 @@ def test_shared_initial_copy_survives_append_while_old_stream_pin_fails(tmp_path
     assert Path(pins[1]['path']).name == 'preflight_initial_process_sample.json'
 
 
+@pytest.mark.retained_benchmark
 def test_actual_receipt_preserves_failure_and_null_resources():
     root = Path(__file__).resolve().parents[2]
     report = json.loads((root / 'benchmark_tools/results/threadripper_shared_prenative_failure_22413.json').read_text())

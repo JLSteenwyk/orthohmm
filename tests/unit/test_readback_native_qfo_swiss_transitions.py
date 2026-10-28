@@ -13,6 +13,7 @@ REPORT = RESULTS / "native_qfo_swiss_pair_transitions_20261006_v2.json"
 REPORT_SHA = "fe003f2cbc4285ea56cd80a92b71703b5c9e135ad1c8f244504dcfeab0911b46"
 
 
+@pytest.mark.retained_benchmark
 def test_actual_artifact_independent_sql_readback():
     result = sql.verify(REPORT, REPORT_SHA)
     assert (result["families_checked"], result["raw_rows_checked"], result["paired_relations_checked"],
@@ -25,6 +26,7 @@ def test_actual_artifact_independent_sql_readback():
 @pytest.mark.parametrize("fault", ("family_marginal", "family_table", "pooled_table", "family_summary", "pooled_summary",
     "subset", "macro", "native_endpoint", "timing", "scope", "source", "missing_ledger_row", "duplicate_ledger_row",
     "unrecorded_raw", "raw_hash", "family_inventory", "reference_count", "changed_count", "cell_order"))
+@pytest.mark.retained_benchmark
 def test_corrupt_actual_report_refuses_before_success(tmp_path, fault):
     report = copy.deepcopy(json.loads(REPORT.read_text()))
     c = report["comparison"]

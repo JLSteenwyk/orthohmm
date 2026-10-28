@@ -1,5 +1,6 @@
 from argparse import Namespace
 import json
+import shutil
 from types import SimpleNamespace
 
 import numpy as np
@@ -83,7 +84,7 @@ def cli_args(tmp_path):
         cpm_resolution=.1, refinement_profile="phylogeny_deferred", accuracy_profile="high_sensitivity",
         phylogeny="reconcile", phylogeny_candidates="satellite_v2", phylogeny_root_rule="species_overlap",
         phylogeny_pair_rule="positive_paralogy", species_tree_mode="infer", species_tree_rooting="min_variance",
-        aligner="/bin/true", tree_builder="/bin/true")
+        aligner=shutil.which("true"), tree_builder=shutil.which("true"))
 
 
 def test_native_cli_accepts_explicit_deferred_profile_in_required_context(tmp_path):

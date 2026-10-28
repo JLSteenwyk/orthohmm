@@ -255,6 +255,10 @@ def test_changed_or_ambiguous_control_refused(tmp_path, admitted_control, change
 
 def test_real_small_guarded_full_pipeline_validates_actual_policy_and_routes(tmp_path):
     from benchmark_tools.verify_frozen_phylogeny_install import fixture
+    from orthohmm.search import viterbi
+    library, available = viterbi._load_c_hmm()
+    if not available or library is None or not hasattr(library, "batch_hmm_viterbi_multipair_avx2_c"):
+        pytest.skip("Requires the optional AVX2 multipair build, not the scalar baseline wheel")
     from benchmark_tools.run_full_search_hillclimb import validate_native
     source = Path(__file__).resolve().parents[2]
     tools = [shutil.which("mafft"), shutil.which("FastTree")]

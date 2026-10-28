@@ -2,6 +2,8 @@
 
 import hashlib
 import json
+
+from tests.recorded_paths import loads as relocated_loads
 from pathlib import Path
 import subprocess
 
@@ -20,7 +22,7 @@ def receipts():
         submission="conversion_gated_native_qfo_assessment_submission_22451.json",
         release="conversion_gated_native_qfo_assessment_released_22451.json",
         verified="conversion_gated_native_qfo_assessment_verified_22451.json")
-    return {key: json.loads((RESULTS / name).read_text()) for key, name in names.items()}
+    return {key: relocated_loads((RESULTS / name).read_text()) for key, name in names.items()}
 
 
 def test_actual_held_release_and_repoll_chain(receipts):
@@ -35,6 +37,7 @@ def test_actual_held_release_and_repoll_chain(receipts):
     assert release["release"]["returncode"] == 0
 
 
+@pytest.mark.retained_benchmark
 def test_current_and_committed_source_pins_match_launch(receipts):
     preflight, sub = receipts["preflight"], receipts["submission"]
     assert sub["source_commit"].startswith("4d532428")

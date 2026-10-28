@@ -2,7 +2,12 @@
 
 import hashlib
 import json
+
+from tests.recorded_paths import loads as relocated_loads
+from tests.recorded_paths import check_record
 from pathlib import Path
+
+import pytest
 
 import fitz
 
@@ -11,17 +16,30 @@ BASE = ROOT / "benchmark_tools/results"
 
 
 def load(name):
-    return json.loads((BASE / name).read_text())
+    return relocated_loads((BASE / name).read_text())
 
 
 def check(ref):
     path = Path(ref["path"])
     if not path.is_absolute():
         path = ROOT / path
-    assert path.stat().st_size == ref["bytes"]
-    assert hashlib.sha256(path.read_bytes()).hexdigest() == ref["sha256"]
+    revision = ("47b7f14ba0c2e8c5b7f070f5b11620dd356a1eb9"
+                if path == ROOT / "benchmark_tools/render_manuscript_review.py" else None)
+    check_record(ref, revision=revision)
 
 
+def test_frozen_render_repository_inputs_match_recorded_bytes():
+    render = load("publication_main_render_20261007_v3.json")
+    external = []
+    for ref in [render["html"], *render["sources"], *render["targets"]]:
+        if Path(ref["path"]).is_relative_to(ROOT):
+            check(ref)
+        else:
+            external.append(ref)
+    assert len(external) == 1 and external[0]["path"] == "/usr/bin/pandoc"
+
+
+@pytest.mark.retained_benchmark
 def test_new_render_and_review_use_stable_assets_and_preserve_frozen_sources():
     render = load("publication_main_render_20261007_v3.json")
     assert render["status"] == "manuscript_review_rendered"

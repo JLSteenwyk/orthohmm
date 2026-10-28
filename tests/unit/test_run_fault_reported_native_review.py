@@ -94,7 +94,7 @@ def test_multiple_controller_records_refused():
 
 
 @pytest.fixture
-def attempt(tmp_path, monkeypatch):
+def attempt(tmp_path, monkeypatch, synthetic_linux_memory):
     monkeypatch.setattr(module, "ROOT", tmp_path)
     paths = dict(REQUEST="request.json", REVIEWER="reviewer.py", VALIDATOR="validator.py",
         DIAGNOSTIC="diagnostic/outputs.json", PYTHON="python", BATCH="batch.sh",

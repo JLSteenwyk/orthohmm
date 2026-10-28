@@ -81,6 +81,7 @@ def test_direct_component_modes_cannot_be_silently_normalized(tmp_path):
     with pytest.raises(ValueError): current.direct_items(tmp_path, component, index)
 
 
+@pytest.mark.retained_benchmark
 def test_actual_immutable_parent_and_direct_indices_are_bound():
     for path, sha in ((ROOT / current.PARENT / "PACKAGE_INDEX.json", current.PARENT_INDEX_SHA),
                       (ROOT / current.PARENT / "PACKAGE_SELECTION.json", current.PARENT_SELECTION_SHA),
@@ -88,6 +89,7 @@ def test_actual_immutable_parent_and_direct_indices_are_bound():
         assert identity(path)["sha256"] == sha
 
 
+@pytest.mark.retained_benchmark
 def test_new_selected_inventory_uses_parent_package_and_preserves_all_counts(tmp_path):
     output = tmp_path / "selection.json"
     result = current.run(ROOT, output, "c" * 40)

@@ -2,6 +2,8 @@
 
 import gzip
 import json
+
+from tests.recorded_paths import loads as relocated_loads
 from pathlib import Path
 
 import pytest
@@ -17,9 +19,9 @@ def inputs(historical_inputs, tmp_path):
     baseline_ref = exporter.old.record(historical_inputs["output"] / "report.json")
     readback = reader.independent.review(baseline_ref["path"], baseline_ref["sha256"])
     readback_ref = dump(tmp_path / "baseline_readback.json", readback)
-    snapshot = json.loads(Path(historical_inputs["snapshot"]["path"]).read_text())
+    snapshot = relocated_loads(Path(historical_inputs["snapshot"]["path"]).read_text())
     baseline = snapshot["rows"][0]
-    admission = json.loads(Path(baseline["admission"]["path"]).read_text())
+    admission = relocated_loads(Path(baseline["admission"]["path"]).read_text())
     root = tmp_path / "candidate"
     (root / "other").mkdir(parents=True)
     vg = root / "results/VGNC"
@@ -86,7 +88,7 @@ def test_export_refuses_changed_bound_evidence(inputs, fault):
     if fault.endswith("_hash"):
         inputs[fault.removesuffix("_hash")]["sha256"] = "0" * 64
     else:
-        snapshot = json.loads(Path(inputs["snapshot"]["path"]).read_text())
+        snapshot = relocated_loads(Path(inputs["snapshot"]["path"]).read_text())
         row = snapshot["rows"][2]
         if fault in ("scope", "cohort", "duplicate_identity", "timing", "baseline_admission", "baseline_metrics", "candidate_semantics"):
             if fault == "scope": snapshot["publication_ready"] = True
@@ -98,12 +100,12 @@ def test_export_refuses_changed_bound_evidence(inputs, fault):
             else: row["prediction_semantics"] = "tree-derived pairs"
             inputs["snapshot"] = dump(Path(inputs["snapshot"]["path"]), snapshot)
         elif fault in ("readback_link", "readback_scope"):
-            value = json.loads(Path(inputs["readback"]["path"]).read_text())
+            value = relocated_loads(Path(inputs["readback"]["path"]).read_text())
             if fault == "readback_link": value["report"] = inputs["snapshot"]
             else: value["uncertainty_admitted"] = True
             inputs["readback"] = dump(Path(inputs["readback"]["path"]), value)
         else:
-            admission = json.loads(Path(row["admission"]["path"]).read_text())
+            admission = relocated_loads(Path(row["admission"]["path"]).read_text())
             if fault.endswith("_identity"):
                 suffix = {"raw_identity": "raw.txt.gz", "database_identity": ".db", "aggregate_identity": "VGNC.json"}[fault]
                 ref = exporter.old.unique_record(admission["checked_records"], suffix)
@@ -112,7 +114,7 @@ def test_export_refuses_changed_bound_evidence(inputs, fault):
                 if fault == "admission": admission["native_index"] = 9
                 elif fault == "inventory": admission["checked_records"] = []
                 else:
-                    value = json.loads(Path(admission["execution_report"]["path"]).read_text())
+                    value = relocated_loads(Path(admission["execution_report"]["path"]).read_text())
                     value["exit_code"] = 1
                     old_ref = admission["execution_report"]
                     admission["execution_report"] = dump(Path(old_ref["path"]), value)
@@ -165,9 +167,9 @@ def test_preserves_historical_kernels_and_frozen_route():
 
 @pytest.mark.parametrize("fault", ("duplicate", "annotation", "unasserted", "ineligible", "missing_truth"))
 def test_rebound_raw_still_requires_native_semantics(inputs, fault):
-    snapshot = json.loads(Path(inputs["snapshot"]["path"]).read_text())
+    snapshot = relocated_loads(Path(inputs["snapshot"]["path"]).read_text())
     row = snapshot["rows"][2]
-    admission = json.loads(Path(row["admission"]["path"]).read_text())
+    admission = relocated_loads(Path(row["admission"]["path"]).read_text())
     ref = exporter.old.unique_record(admission["checked_records"], "raw.txt.gz")
     with gzip.open(ref["path"], "rt") as stream:
         lines = stream.read().splitlines()
@@ -177,7 +179,7 @@ def test_rebound_raw_still_requires_native_semantics(inputs, fault):
     elif fault == "ineligible": lines[-1] = "g1\tg3\tFP\tB\tB\ts1\ts2"
     else: lines = [line for line in lines if not line.startswith("g4\tg5\t")]
     raw_ref = compressed(Path(ref["path"]), "\n".join(lines) + "\n")
-    execution = json.loads(Path(admission["execution_report"]["path"]).read_text())
+    execution = relocated_loads(Path(admission["execution_report"]["path"]).read_text())
     execution["outputs"] = [raw_ref if r == ref else r for r in execution["outputs"]]
     old_execution = admission["execution_report"]
     admission["execution_report"] = dump(Path(old_execution["path"]), execution)
@@ -206,8 +208,8 @@ def test_database_mutation_during_mapping_is_retained_as_failure(inputs, monkeyp
 def test_actual_derived_outputs_and_sources_remain_bound():
     root = Path(__file__).resolve().parents[2]
     path = root / "benchmark_tools/results/native_qfo_candidate_vgnc_20261006_v1/report.json"
-    report = json.loads(path.read_text())
-    readback = json.loads((root / "benchmark_tools/results/native_qfo_candidate_vgnc_readback_20261006_v1.json").read_text())
+    report = relocated_loads(path.read_text())
+    readback = relocated_loads((root / "benchmark_tools/results/native_qfo_candidate_vgnc_readback_20261006_v1.json").read_text())
     assert readback["report"] == exporter.old.record(path)
     assert readback["source"] == exporter.old.record(reader.__file__)
     assert report["source"] == exporter.old.record(exporter.__file__)
@@ -227,7 +229,7 @@ def test_actual_derived_outputs_and_sources_remain_bound():
 
 def test_manuscript_and_result_transition_tables_match_actual_report():
     root = Path(__file__).resolve().parents[2] / "benchmark_tools/results"
-    report = json.loads((root / "native_qfo_candidate_vgnc_20261006_v1/report.json").read_text())
+    report = relocated_loads((root / "native_qfo_candidate_vgnc_20261006_v1/report.json").read_text())
     manuscript = (root / "PUBLICATION_MANUSCRIPT_DRAFT_20260916.md").read_text().split(
         "### Native Candidate VGNC Error Decomposition\n", 1)[1].split("### Native Functional-Pair Composition", 1)[0]
     result = (root / "NATIVE_QFO_CANDIDATE_VGNC_RESULT_20261006.md").read_text()

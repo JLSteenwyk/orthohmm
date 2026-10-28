@@ -4,6 +4,10 @@ jobs:
   test-fast:
     name: public-fast (${{ matrix.python-version }})
     runs-on: macos-latest
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
     strategy:
       fail-fast: false
       matrix:
@@ -57,7 +61,7 @@ jobs:
         cd ..
     - name: Audit declared public/private test selection
       run: python -m benchmark_tools.audit_public_test_profile --root "$GITHUB_WORKSPACE" --output "$RUNNER_TEMP/public-test-selection.json"
-    - name: Run public fast tests (excludes slow and four raw-source cases)
+    - name: Run public fast tests (excludes slow and declared external evidence)
       run: |
         PATH=$PATH:$HOME/local/bin
         make test.public.fast TEST_RECEIPT_DIR="$RUNNER_TEMP"
@@ -72,10 +76,17 @@ jobs:
           ${{ runner.temp }}/public-integration.xml
         if-no-files-found: warn
   test-full:
-    name: public-coverage (includes slow; excludes four raw-source cases)
-    runs-on: macos-latest
+    name: public-coverage (${{ matrix.os }}; includes slow; excludes declared external evidence)
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, ubuntu-latest]
     env:
       PYTHON: '3.11'
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
     steps:
     - uses: actions/checkout@master
       with:
@@ -85,19 +96,27 @@ jobs:
       with:
         python-version: '3.11'
     - name: Install test Bash runtime
+      if: runner.os == 'macOS'
       run: |
         brew install bash
         printf '%s\n' "$(brew --prefix bash)/bin" >> "$GITHUB_PATH"
         "$(brew --prefix bash)/bin/bash" --version
         /bin/bash --version
     - name: Install test OpenMP compiler
+      if: runner.os == 'macOS'
       run: bash benchmark_tools/install_ci_test_compiler.sh
     - name: Install test native utilities
+      if: runner.os == 'macOS'
       run: |
         brew install gnu-time pandoc
         printf 'ORTHOHMM_TEST_GNU_TIME=%s\n' "$(brew --prefix gnu-time)/bin/gtime" >> "$GITHUB_ENV"
         "$(brew --prefix gnu-time)/bin/gtime" --version
         pandoc --version
+    - name: Install Linux test utilities
+      if: runner.os == 'Linux'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential hmmer mcl time pandoc
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
@@ -111,9 +130,11 @@ jobs:
         gcc --version
         python benchmark_tools/build_ci_checkout_kernels.py --root "$GITHUB_WORKSPACE" --output "$RUNNER_TEMP/orthohmm-ci-package"
     - name: Install HMMER
+      if: runner.os == 'macOS'
       run: |
         brew install hmmer
     - name: Install MCL
+      if: runner.os == 'macOS'
       run: |
         mkdir installmcl
         cd installmcl
@@ -133,7 +154,7 @@ jobs:
       if: always()
       uses: actions/upload-artifact@v4
       with:
-        name: public-coverage
+        name: public-coverage-${{ runner.os }}
         path: |
           ${{ runner.temp }}/public-test-selection.json
           ${{ runner.temp }}/public-unit.xml

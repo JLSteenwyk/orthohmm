@@ -1,4 +1,6 @@
 import json
+
+from tests.recorded_paths import loads as relocated_loads
 from pathlib import Path
 from statistics import median
 
@@ -10,8 +12,8 @@ PROSE = RESULTS / 'threadripper_shared_resource_section_20261004_v27'
 
 
 def test_final_panel_retains_previous_rows_and_missing_repeats():
-    report = json.loads(TABLE.read_text())
-    previous = json.loads((RESULTS / 'threadripper_shared_panel_snapshot_20261004_v26/panel.json').read_text())
+    report = relocated_loads(TABLE.read_text())
+    previous = relocated_loads((RESULTS / 'threadripper_shared_panel_snapshot_20261004_v26/panel.json').read_text())
     assert report['runs'][:26] == previous['runs'][:26]
     assert (report['reviewed_attempts'], report['resource_reviewed_attempts'],
             report['eligible_attempts']) == (27, 25, 24)
@@ -25,8 +27,8 @@ def test_final_panel_retains_previous_rows_and_missing_repeats():
 
 
 def test_final_prose_values_match_eligible_raw_rows_and_pinned_sources():
-    report = json.loads(TABLE.read_text())
-    receipt = json.loads((PROSE / 'manifest.json').read_text())
+    report = relocated_loads(TABLE.read_text())
+    receipt = relocated_loads((PROSE / 'manifest.json').read_text())
     text = (PROSE / 'resource_section.md').read_text()
     assert receipt['table'] == section.executor.record(TABLE)
     for pin in [receipt['table'], receipt['section'], *receipt['sources']]:

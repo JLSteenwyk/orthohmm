@@ -1,5 +1,36 @@
 # Tests
 
+## Public And Retained Profiles
+
+`make test.public.fast` runs portable unit and integration tests, excluding slow
+tests and the two external-evidence markers below. `make test.public.coverage`
+includes slow tests. GitHub runs the fast profile on Python 3.10-3.13/macOS and
+the coverage profile on Python 3.11/macOS and Linux, plus separate documentation,
+Linux native-diagnostic and CPU-wheel checks.
+
+`python -m benchmark_tools.audit_public_test_profile --root "$PWD" --output /tmp/public-selection.json`
+checks the complete collected inventory before CI execution. Collection errors,
+unexpected markers, missing declared cases or extra exclusions fail the audit.
+
+`raw_benchmark` identifies four checksum-bound SwissTrees source cases.
+`retained_benchmark` identifies the individual cases and prerequisites listed in
+`retained_benchmark_cases.json`. They need local native working directories,
+historical package archives/checkouts or an exact original tool binary. These
+checks are not portable unit fixtures. Public CI does not claim to validate them.
+
+`make test.retained` selects both external-evidence profiles. It does not convert
+failures or missing inputs into public passes. `make test` and the original
+unit/integration/coverage targets still select all tests; external inputs must be
+supplied to satisfy their full scientific evidence gate.
+
+Path relocation applies only to test copies. Recorded hashes, source artifacts,
+scientific scores and production admission checks are not rewritten. Synthetic
+Linux counter/affinity stubs are requested explicitly by controller fixtures.
+The three native CPU kernels are built fresh for public CI. Tests requiring the
+optional AVX2 multipair route are not applicable to scalar baseline builds.
+
+## Setup And Historical Checks
+
 After installing OrthoHMM and its dependencies in a development environment,
 install the test-only dependencies with:
 

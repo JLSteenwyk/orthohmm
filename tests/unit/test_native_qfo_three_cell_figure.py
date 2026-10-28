@@ -1,6 +1,8 @@
 import copy
 import csv
 import json
+
+from tests.recorded_paths import loads as relocated_loads
 from pathlib import Path
 import shutil
 import sys
@@ -16,7 +18,7 @@ RESULTS = Path(__file__).resolve().parents[2] / "benchmark_tools/results"
 
 
 def inputs():
-    return [json.loads((RESULTS / name).read_text()) for name in (
+    return [relocated_loads((RESULTS / name).read_text()) for name in (
         "native_qfo_scientific_scores_20261006_v2/report.json",
         "native_qfo_candidate_swiss_uncertainty_20261006_v1.json",
         "native_qfo_candidate_swiss_readback_20261006_v1.json")]
@@ -101,6 +103,9 @@ def test_cross_input_binding_refused_before_render(tmp_path, change):
 def rendered(tmp_path_factory):
     root = tmp_path_factory.mktemp("three_cell_figure")
     snapshot, binding, readback = inputs()
+    # Synthetic rendering checks tables and assets, not unavailable native files.
+    snapshot["evidence"], snapshot["outputs"] = [], []
+    binding["evidence"], binding["helpers"], readback["checked_inputs"] = [], [], []
     s = write(root / "snapshot.json", snapshot)
     binding["snapshot"] = s
     b = write(root / "binding.json", binding)
@@ -195,8 +200,8 @@ def test_existing_preview_refused_before_input_reads(tmp_path):
 
 def test_actual_three_cell_manifest_and_review_remain_bound():
     root = RESULTS / "native_qfo_three_cell_figure_20261006_v1"
-    manifest = json.loads((root / "manifest.json").read_text())
-    readback = json.loads((RESULTS / "native_qfo_three_cell_figure_readback_20261006_v1.json").read_text())
+    manifest = relocated_loads((root / "manifest.json").read_text())
+    readback = relocated_loads((RESULTS / "native_qfo_three_cell_figure_readback_20261006_v1.json").read_text())
     assert manifest["source"] == record(plot.__file__)
     assert readback["source"] == record(reviewer.__file__)
     assert readback["manifest"] == record(root / "manifest.json")

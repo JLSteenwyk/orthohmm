@@ -138,12 +138,13 @@ def preparing_owner(tmp_path, monkeypatch, *, delay=.1):
         status='prepared_waiting_for_release_request', request=worker.request_ref,
         policy=worker.policy_ref, job_id=42, index=21, job_scope='/synthetic/job_42',
         native_release_authorized=False, scientific_timings_admitted=False)
+    boot_id = '00000000-0000-4000-8000-000000000042'
     code = f"""
 import json, os, pathlib, time
 time.sleep({delay!r})
 data = json.loads({json.dumps(payload)!r})
 data.update(pid=os.getpid(), prepared_unix_ns=time.time_ns(),
-            boot_id=pathlib.Path('/proc/sys/kernel/random/boot_id').read_text().strip())
+            boot_id={boot_id!r})
 path = pathlib.Path('environment_worker_prepared.json')
 pending = path.with_suffix('.pending')
 pending.write_text(json.dumps(data))
@@ -158,6 +159,8 @@ pathlib.Path('response.json').write_text('{{"synthetic":true}}')
     worker.popen = launch
     original_read = Path.read_text
     def read(path, *args, **kwargs):
+        if path == Path('/proc/sys/kernel/random/boot_id'):
+            return boot_id + '\n'
         if worker.process is not None and path == Path(f'/proc/{worker.process.pid}/cgroup'):
             return '0::/synthetic/job_42/step_batch/task_0\n'
         return original_read(path, *args, **kwargs)

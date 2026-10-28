@@ -1,5 +1,9 @@
 import json
+
+from tests.recorded_paths import loads as relocated_loads
 from pathlib import Path
+
+import pytest
 from statistics import median
 
 import matplotlib.pyplot as plt
@@ -12,9 +16,9 @@ FIGURE = RESULTS / 'threadripper_shared_resource_figure_20261004_v21'
 
 
 def test_actual_repeat21_preserves_prefix_and_completes_only_high8_cell():
-    value = json.loads(TABLE.read_text())
-    prior = json.loads((RESULTS / 'threadripper_shared_panel_snapshot_20261004_v21/panel.json').read_text())
-    summary = json.loads((RESULTS / 'threadripper_shared_attempt_22417.json').read_text())
+    value = relocated_loads(TABLE.read_text())
+    prior = relocated_loads((RESULTS / 'threadripper_shared_panel_snapshot_20261004_v21/panel.json').read_text())
+    summary = relocated_loads((RESULTS / 'threadripper_shared_attempt_22417.json').read_text())
     assert value['runs'][:21] == prior['runs'][:21]
     assert (value['reviewed_attempts'], value['resource_reviewed_attempts'], value['eligible_attempts']) == (22, 20, 19)
     assert value['excluded_attempts'] == [0, 17, 20]
@@ -40,8 +44,9 @@ def test_actual_repeat21_preserves_prefix_and_completes_only_high8_cell():
             assert cell == next(old for old in prior['cells'] if (old['method'], old['proteomes']) == (cell['method'], cell['proteomes']))
 
 
+@pytest.mark.retained_benchmark
 def test_actual_terminal_handoff_and_four_review_pins_remain_bound():
-    summary = json.loads((RESULTS / 'threadripper_shared_attempt_22417.json').read_text())
+    summary = relocated_loads((RESULTS / 'threadripper_shared_attempt_22417.json').read_text())
     executor = plotter.executor
     assert summary['original_environment_failures'] == dict(processes={}, pressure={})
     assert summary['shared_host_resources_reviewed'] is True
@@ -63,8 +68,8 @@ def test_actual_repeat21_figure_provenance_bounds_pixels_and_complete_cells():
     import fitz
     import numpy as np
 
-    value = json.loads(TABLE.read_text())
-    manifest = json.loads((FIGURE / 'manifest.json').read_text())
+    value = relocated_loads(TABLE.read_text())
+    manifest = relocated_loads((FIGURE / 'manifest.json').read_text())
     assert manifest['source_results'] == plotter.executor.record(TABLE)
     assert manifest['plotter'] == plotter.executor.record(plotter.__file__)
     assert manifest['eligible_attempts'] == 19 and manifest['excluded_indices'] == [0, 17, 20]

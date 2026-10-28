@@ -1,6 +1,8 @@
 import copy
 import gzip
 import json
+
+from tests.recorded_paths import loads as relocated_loads
 from pathlib import Path
 
 import pytest
@@ -14,7 +16,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def fixture(tmp_path, monkeypatch):
-    snapshot = json.loads((ROOT / "benchmark_tools/results/native_qfo_scientific_scores_20261006_v1/report.json").read_text())
+    snapshot = relocated_loads((ROOT / "benchmark_tools/results/native_qfo_scientific_scores_20261006_v1/report.json").read_text())
     for row in snapshot["rows"][:2]:
         cell = row["cell"]
         references = []
@@ -79,9 +81,9 @@ def test_raw_binding_requires_admission_and_original_execution_pins(tmp_path, mo
     snapshot, _ = fixture(tmp_path, monkeypatch)
     row = snapshot["rows"][0]
     admission_path = Path(row["admission"]["path"])
-    admission = json.loads(admission_path.read_text())
+    admission = relocated_loads(admission_path.read_text())
     execution_path = Path(admission["execution_report"]["path"])
-    execution = json.loads(execution_path.read_text())
+    execution = relocated_loads(execution_path.read_text())
     if change == "admission_identity": admission["native_job_id"] = 99
     elif change == "execution_unpinned": admission["checked_records"].remove(admission["execution_report"])
     elif change in ("execution_failed", "execution_duplicate_raw"):

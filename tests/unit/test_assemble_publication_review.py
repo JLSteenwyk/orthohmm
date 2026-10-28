@@ -2,6 +2,8 @@
 
 import hashlib
 import json
+
+from tests.recorded_paths import loads as relocated_loads
 from pathlib import Path
 import shutil
 import subprocess
@@ -72,7 +74,7 @@ def test_relocated_cli_preserves_sources_and_actions(selection, tmp_path, optimi
     completed = subprocess.run(command, cwd=tmp_path, capture_output=True, text=True)
     assert completed.returncode == 0, completed.stderr
     assert completed.stderr == ""
-    report = json.loads((tmp_path / "assembled/assembly.json").read_text())
+    report = relocated_loads((tmp_path / "assembled/assembly.json").read_text())
     assert (report["main_pages"], report["guide_pages"], report["figure_pages"], report["total_pages"]) == (2, 1, 2, 5)
     assert report["publication_ready"] is report["visual_review_complete"] is False
     assert report["redirected_main_figure_links"] == [{"main_page": 1,
@@ -143,8 +145,8 @@ def test_symlink_escape_rejected(selection, tmp_path):
 
 
 def test_actual_final_inventory_and_closed_artifacts():
-    chosen = json.loads((RESULTS / "publication_figure_selection_20261004.json").read_text())
-    report = json.loads((RESULTS / "publication_main_with_figures_20261004/assembly.json").read_text())
+    chosen = relocated_loads((RESULTS / "publication_figure_selection_20261004.json").read_text())
+    report = relocated_loads((RESULTS / "publication_main_with_figures_20261004/assembly.json").read_text())
     assert report["main_pages"] == 12
     assert report["guide_pages"] == 4
     assert report["figure_pages"] == 16
@@ -174,7 +176,7 @@ def test_actual_final_inventory_and_closed_artifacts():
 
 def test_actual_inventory_replays_without_checkout(tmp_path):
     selection_path = RESULTS / "publication_figure_selection_20261004.json"
-    chosen = json.loads(selection_path.read_text())
+    chosen = relocated_loads(selection_path.read_text())
     root = tmp_path / "copied"
     references = [chosen["main"], *chosen["provenance"],
                   *[item["pdf"] for item in chosen["figures"]]]
@@ -192,7 +194,7 @@ def test_actual_inventory_replays_without_checkout(tmp_path):
         "--output", str(tmp_path / "replayed")], cwd=tmp_path, text=True, capture_output=True)
     assert completed.returncode == 0, completed.stderr
     assert completed.stderr == ""
-    replayed = json.loads((tmp_path / "replayed/assembly.json").read_text())
+    replayed = relocated_loads((tmp_path / "replayed/assembly.json").read_text())
     assert all(Path(reference["path"]).is_relative_to(root) for reference in replayed["inputs"])
     assert len(replayed["redirected_main_figure_links"]) == 7
     assert len(replayed["preserved_source_pages"]) == 28

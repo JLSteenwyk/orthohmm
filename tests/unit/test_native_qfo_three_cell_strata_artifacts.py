@@ -1,6 +1,8 @@
 """Bindings and numeric claims of the actual retained three-cell projection."""
 
 import json
+
+from tests.recorded_paths import loads as relocated_loads
 from pathlib import Path
 import subprocess
 
@@ -18,7 +20,7 @@ READBACK = RESULTS / "native_qfo_three_cell_strata_readback_20261007_v2.json"
 def test_actual_report_reader_and_every_direct_byte_binding():
     assert exporter.record(REPORT)["sha256"] == "55ed72ce771c756424877cfa412da329ff104efb7dca4b35113b0d80703a59e5"
     assert exporter.record(READBACK)["sha256"] == "6f3eef63c0e96e1d85805fcfb70ed9b66fbb1db76a08ca2a105483422a0f6969"
-    report, readback = (json.loads(p.read_text()) for p in (REPORT, READBACK))
+    report, readback = (relocated_loads(p.read_text()) for p in (REPORT, READBACK))
     assert readback["report"] == exporter.record(REPORT)
     assert readback["source"] == exporter.record(reader.__file__)
     assert report["source"] == exporter.record(exporter.__file__)
@@ -37,7 +39,7 @@ def test_actual_report_reader_and_every_direct_byte_binding():
 
 
 def test_actual_tsv_and_human_table_match_verified_json_without_scoring_replay():
-    report = json.loads(REPORT.read_text())
+    report = relocated_loads(REPORT.read_text())
     outputs = {Path(r["path"]).name: r for r in report["outputs"]}
     reader.tsv(outputs["scores.tsv"]["path"], report["rows"], reader.SCORE_FIELDS)
     reader.tsv(outputs["differences.tsv"]["path"], report["differences"], reader.DIFF_FIELDS)
@@ -48,7 +50,7 @@ def test_actual_tsv_and_human_table_match_verified_json_without_scoring_replay()
 
 
 def test_execution_receipt_matches_observed_sources_commits_and_outputs():
-    receipt = json.loads((RESULTS / "native_qfo_three_cell_strata_execution_20261007_v1.json").read_text())
+    receipt = relocated_loads((RESULTS / "native_qfo_three_cell_strata_execution_20261007_v1.json").read_text())
     for name in ("export", "v2_readback"):
         item = receipt[name]
         current = exporter.record(ROOT / item["source_path"])
@@ -58,7 +60,7 @@ def test_execution_receipt_matches_observed_sources_commits_and_outputs():
     for name, sha in receipt["outputs"].items():
         assert exporter.record(RESULTS / name)["sha256"] == sha
     assert receipt["export_reexecuted"] is False
-    failure = json.loads((ROOT / receipt["failed_v1_readback"]["receipt_path"]).read_text())
+    failure = relocated_loads((ROOT / receipt["failed_v1_readback"]["receipt_path"]).read_text())
     assert failure["report"] == exporter.record(REPORT)
     assert exporter.record(failure["source"]["path"]) == failure["source"]
     assert failure["execution_exit_code"] == 1 and failure["output_written"] is False
@@ -79,7 +81,7 @@ def test_execution_receipt_matches_observed_sources_commits_and_outputs():
     ("duplication", "upper_duplication_fraction", "-0.273"),
 ])
 def test_every_reported_distinct_bin_change_is_bound(suite, bin_name, rounded_change):
-    report = json.loads(REPORT.read_text())
+    report = relocated_loads(REPORT.read_text())
     row = [r for r in report["differences"] if r["contrast"] == "C_at_P0_R0"
            and r["suite"] == suite and r["stratum"] == bin_name]
     assert len(row) == 1
@@ -88,7 +90,7 @@ def test_every_reported_distinct_bin_change_is_bound(suite, bin_name, rounded_ch
 
 
 def test_summary_tradeoffs_match_all_nonempty_bins():
-    report = json.loads(REPORT.read_text())
+    report = relocated_loads(REPORT.read_text())
     candidate = [r for r in report["differences"] if r["contrast"] == "C_at_P0_R0" and r["families"]]
     assert len(candidate) == 15
     assert all(r["PPV"] < 0 and r["TPR"] > 0 for r in candidate)

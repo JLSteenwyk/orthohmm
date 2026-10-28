@@ -4,6 +4,8 @@ import hashlib
 import json
 from pathlib import Path
 
+import pytest
+
 ROOT = Path(__file__).resolve().parents[2]
 RESULTS = ROOT / "benchmark_tools/results"
 PINS = {
@@ -21,6 +23,7 @@ def document(name):
     return json.loads((RESULTS / name).read_text())
 
 
+@pytest.mark.retained_benchmark
 def test_selected_bytes_bindings_complete_universe_and_scope():
     for name, sha in PINS.items():
         assert hashlib.sha256((RESULTS / name).read_bytes()).hexdigest() == sha

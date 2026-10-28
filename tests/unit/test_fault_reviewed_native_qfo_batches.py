@@ -17,6 +17,14 @@ BATCHES = {
 DIGEST = "0" * 64
 
 
+@pytest.fixture(autouse=True)
+def staged_batches(tmp_path, monkeypatch, stage_historical_qfo_batch):
+    staged = {name: stage_historical_qfo_batch(path, tmp_path / (name + ".sh"),
+                                             ROOT, python_calls=0)
+              for name, path in BATCHES.items()}
+    monkeypatch.setattr(__import__(__name__, fromlist=["BATCHES"]), "BATCHES", staged)
+
+
 def run_batch(stage, args, **slurm):
     env = {k: v for k, v in os.environ.items() if not k.startswith("SLURM_")}
     env.update(slurm)

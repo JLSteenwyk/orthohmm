@@ -3,6 +3,8 @@
 from copy import deepcopy
 import csv
 import json
+
+from tests.recorded_paths import loads as relocated_loads
 from pathlib import Path
 import shutil
 import sys
@@ -18,7 +20,7 @@ RESULTS = Path(__file__).resolve().parents[2] / "benchmark_tools/results"
 
 
 def inputs():
-    return [json.loads((RESULTS / name).read_text()) for name in (
+    return [relocated_loads((RESULTS / name).read_text()) for name in (
         "native_qfo_scientific_scores_20261007_v3/report.json",
         "native_qfo_four_cell_swiss_uncertainty_20261007_v1.json",
         "native_qfo_profile_swiss_readback_20261007_v1.json")]

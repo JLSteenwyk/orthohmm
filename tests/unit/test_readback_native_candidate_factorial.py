@@ -64,6 +64,7 @@ def test_tampered_accepted_membership_rejected(executed):
         collect(plan, report)
 
 
+@pytest.mark.retained_benchmark
 def test_actual_readback_reproduces_and_order_only_differences():
     root = Path(__file__).resolve().parents[2]
     path = root / "benchmark_tools/results/native_candidate_factorial_readback_22429.json"

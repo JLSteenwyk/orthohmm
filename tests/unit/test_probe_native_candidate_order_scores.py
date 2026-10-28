@@ -49,7 +49,7 @@ def test_malformed_trusted_cache_rejected(tmp_path, payload):
 
 
 @pytest.fixture
-def prepared(tmp_path, monkeypatch):
+def prepared(tmp_path, monkeypatch, synthetic_affinity):
     for name in ("OPENBLAS_NUM_THREADS", "OMP_NUM_THREADS", "MKL_NUM_THREADS"):
         monkeypatch.setenv(name, "1")
 

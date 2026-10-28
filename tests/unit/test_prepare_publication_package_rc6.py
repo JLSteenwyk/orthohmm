@@ -121,6 +121,7 @@ def test_composed_fixture_builds_archives_and_restores_with_unchanged_kernel(tmp
     assert restored["native_inference_repeated"] is restored["nested_component_execution_repeated"] is False
 
 
+@pytest.mark.retained_benchmark
 def test_actual_indices_and_reader_are_bound():
     for path, sha in ((ROOT / current.PARENT / "PACKAGE_INDEX.json", current.PARENT_INDEX_SHA),
                       (ROOT / current.PARENT / "PACKAGE_SELECTION.json", current.PARENT_SELECTION_SHA),
@@ -129,6 +130,7 @@ def test_actual_indices_and_reader_are_bound():
         assert identity(path)["sha256"] == sha
 
 
+@pytest.mark.retained_benchmark
 def test_actual_selection_preserves_parent_and_separate_evidence(tmp_path):
     output = tmp_path / "selection.json"
     result = current.run(ROOT, output, "c" * 40)

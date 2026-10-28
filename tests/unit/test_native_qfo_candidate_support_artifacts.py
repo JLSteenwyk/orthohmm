@@ -4,7 +4,11 @@ from collections import Counter
 import csv
 import hashlib
 import json
+
+from tests.recorded_paths import loads as relocated_loads
 from pathlib import Path
+
+import pytest
 import subprocess
 
 
@@ -14,7 +18,7 @@ OUT = RESULTS / "native_qfo_candidate_support_20261006_v1"
 
 
 def data(path):
-    return json.loads(path.read_text())
+    return relocated_loads(path.read_text())
 
 
 def table(path):
@@ -56,6 +60,7 @@ def test_actual_readback_scope_counts_and_summaries():
         assert report[field] is False and reader[field] is False
 
 
+@pytest.mark.retained_benchmark
 def test_full_original_pair_identity_and_transitive_blank_features():
     report = data(OUT / "report.json")
     original = table(Path(report["ledger"]["path"]))

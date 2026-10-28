@@ -1,5 +1,7 @@
 import copy
 import json
+
+from tests.recorded_paths import loads as relocated_loads
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -11,18 +13,18 @@ RESULTS = Path(__file__).resolve().parents[2] / 'benchmark_tools/results'
 
 
 def snapshot():
-    return json.loads((RESULTS / 'threadripper_shared_panel_snapshot_20261004_v21/panel.json').read_text())
+    return relocated_loads((RESULTS / 'threadripper_shared_panel_snapshot_20261004_v21/panel.json').read_text())
 
 
 def test_both_actual_aborts_remain_missing_with_unchanged_measured_prefix():
     value = snapshot()
-    prior = json.loads((RESULTS / 'threadripper_shared_panel_snapshot_20261004_v20/panel.json').read_text())
+    prior = relocated_loads((RESULTS / 'threadripper_shared_panel_snapshot_20261004_v20/panel.json').read_text())
     assert value['runs'][:20] == prior['runs'][:20]
     assert (value['reviewed_attempts'], value['resource_reviewed_attempts'], value['eligible_attempts']) == (21, 19, 18)
     assert value['excluded_attempts'] == [0, 17, 20]
     assert value['pre_native_aborted_indices'] == [17, 20]
     assert len(plotter.validate(value)) == 19
-    failure = json.loads((RESULTS / 'threadripper_shared_prenative_failure_22416.json').read_text())
+    failure = relocated_loads((RESULTS / 'threadripper_shared_prenative_failure_22416.json').read_text())
     assert value['runs'][20]['job_id'] == failure['job_id'] == 22416
     assert value['runs'][20]['resources'] is None and failure['resources'] is None
     assert value['runs'][20]['status'] == 'reviewed_pre_native_abort'
@@ -61,7 +63,7 @@ def test_actual_two_abort_figure_bounds_pixels_and_source_identity():
 
     value = snapshot()
     directory = RESULTS / 'threadripper_shared_resource_figure_20261004_v20'
-    manifest = json.loads((directory / 'manifest.json').read_text())
+    manifest = relocated_loads((directory / 'manifest.json').read_text())
     assert manifest['source_results'] == plotter.executor.record(RESULTS / 'threadripper_shared_panel_snapshot_20261004_v21/panel.json')
     assert manifest['plotter'] == plotter.executor.record(plotter.__file__)
     assert manifest['pre_native_aborted_indices'] == [17, 20]

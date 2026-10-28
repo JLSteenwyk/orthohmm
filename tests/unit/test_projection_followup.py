@@ -183,6 +183,7 @@ def test_no_followup_receipt_and_primary_preparation_are_not_executable(tmp_path
     with pytest.raises(ValueError, match="frozen"): followup.prepare(tmp_path, tmp_path, tmp_path / "out", "QfO")
 
 
+@pytest.mark.retained_benchmark
 def test_standalone_scientific_api_is_bound_to_original_recovery_checkout():
     root = Path(followup.__file__).resolve().parents[1]
     source = root / "benchmarks/work/projection_recovery_pilot_v1_20261019"

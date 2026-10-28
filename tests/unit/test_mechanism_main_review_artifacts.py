@@ -2,6 +2,8 @@
 
 import hashlib
 import json
+
+from tests.recorded_paths import loads as relocated_loads
 from pathlib import Path
 import subprocess
 
@@ -14,7 +16,7 @@ REVISION = "45af9c000485ea7003a046f74ef582cf7200237e"
 
 
 def read(name):
-    return json.loads((RESULTS / name).read_text())
+    return relocated_loads((RESULTS / name).read_text())
 
 
 def identity(data):

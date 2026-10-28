@@ -2,6 +2,8 @@
 
 from copy import deepcopy
 import json
+
+from tests.recorded_paths import loads as relocated_loads, check_record
 from pathlib import Path
 from types import SimpleNamespace
 
@@ -187,7 +189,7 @@ def test_enumeration_mismatch_does_not_recopy_or_infer(tmp_path):
     (cost.MEMORY - 1024, "request_sha", True, False),
     (cost.MEMORY, "other_request", True, False),
     (cost.MEMORY, "request_sha", False, False)])
-def test_release_capacity_attribution_and_scheduler_request(tmp_path, monkeypatch, memory, comment, matched, success):
+def test_release_capacity_attribution_and_scheduler_request(tmp_path, monkeypatch, memory, comment, matched, success, synthetic_linux_boot_id):
     from benchmark_tools import probe_host_counters, observe_threadripper_process_identity
     from benchmark_tools import review_threadripper_process_policy, slurm_resource_snapshot, verify_threadripper_controller
     plan_ref = dict(path="/plan.json", bytes=1, sha256="plan_sha")
@@ -220,7 +222,7 @@ def test_release_capacity_attribution_and_scheduler_request(tmp_path, monkeypatc
     guard = cost.ReleaseGuard(request_ref, plan_ref, plan, dict(index=0), {}, policy_ref)
     if success:
         guard(tmp_path)
-        preflight = json.loads((tmp_path / "environment_preflight.json").read_text())
+        preflight = relocated_loads((tmp_path / "environment_preflight.json").read_text())
         assert preflight["background_competition_recorded"] is True
         assert preflight["uncontended_timing"] is False
         assert preflight["plan_sha256"] == "plan_sha"
@@ -255,23 +257,31 @@ def test_launch_bootstrap_uses_separate_request_scope():
     assert "run_native_factorial_cost.py" in script and "run_threadripper_scaling.py" not in script
 
 
+@pytest.mark.parametrize("name", ["native_factorial_cost_plan_20261004.json",
+                                  "native_factorial_cost_plan_repaired_20261004.json"])
+def test_frozen_plan_sources_and_scientific_identities_without_raw_assets(name):
+    plan = relocated_loads((cost.ROOT / "benchmark_tools/results" / name).read_text())
+    runs = cost.validate_plan(plan)
+    assert len(runs) == 13 and plan["scientific_execution_authorized"] is False
+    assert [(row["dataset"], row["cell"]) for row in runs] == list(cost.IDENTITIES)
+    for ref in plan["helper_sources"]:
+        check_record(ref, revision=plan["source_commit"])
+
+
+@pytest.mark.retained_benchmark
 def test_actual_prepared_plan_and_policy_bytes():
     import hashlib
     import subprocess
     path = cost.ROOT / "benchmark_tools/results/native_factorial_cost_plan_20261004.json"
     assert hashlib.sha256(path.read_bytes()).hexdigest() == "c697d9c9b08df1c0ad40807e6db6044ffd597dc3dc997debf60fbcf492d45784"
-    plan = json.loads(path.read_text())
+    plan = relocated_loads(path.read_text())
     assert len(cost.validate_plan(plan)) == 13
     assert plan["scientific_execution_authorized"] is False
     assert plan["source_commit"] == "3c275a025b6e3743beffe08db6d48a54454e4732"
-    for ref in plan["helper_sources"] + plan["evidence"]:
-        raw = Path(ref["path"]).read_bytes()
-        if Path(ref["path"]).name in {"prepare_native_factorial_cost.py", "run_native_factorial_cost.py"}:
-            # The failed attempt keeps its historical generator, not a rewritten pin.
-            relative = Path(ref["path"]).relative_to(cost.ROOT).as_posix()
-            raw = subprocess.check_output(["git", "-C", str(cost.ROOT), "show", plan["source_commit"] + ":" + relative])
-        assert len(raw) == ref["bytes"]
-        assert hashlib.sha256(raw).hexdigest() == ref["sha256"]
+    for ref in plan["helper_sources"]:
+        check_record(ref, revision=plan["source_commit"])
+    for ref in plan["evidence"]:
+        check_record(ref)
     for index in (0, 6):
         run = plan["runs"][index]
         names = {Path(ref["path"]).name for ref in run["inputs"]}
@@ -279,7 +289,7 @@ def test_actual_prepared_plan_and_policy_bytes():
         assert run["native_order"] == plan["filename_enumeration_probes"][run["dataset"]]["datasets"][0]["native_order"]
     policy_path = cost.ROOT / "benchmark_tools/results/native_factorial_cost_policy_20261004.json"
     assert hashlib.sha256(policy_path.read_bytes()).hexdigest() == "5a7ef6f0b0b4f201ca41376a1bc3c2c652ac916e5b6fbf72f803765151954c31"
-    policy = json.loads(policy_path.read_text())
+    policy = relocated_loads(policy_path.read_text())
     assert policy["plan_sha256"] == "c697d9c9b08df1c0ad40807e6db6044ffd597dc3dc997debf60fbcf492d45784"
     assert policy["foreign_cpu_role"] == policy["native_pressure_role"] == policy["preflight_pressure_role"] == "diagnostic_only"
     assert policy["minimum_available_memory_bytes"] == cost.MEMORY
@@ -308,11 +318,12 @@ def test_exact_packaging_only_runtime_delta():
             delta(before, wrong)
 
 
+@pytest.mark.retained_benchmark
 def test_actual_22426_failed_before_materialization_or_inference():
     import hashlib
     root = cost.ROOT / "benchmarks/results/native_factorial_cost_v1_20261004"
     report = root / "sessions/run_00/result.json"
-    result = json.loads(report.read_text())
+    result = relocated_loads(report.read_text())
     assert result["job_id"] == 22426 and result["index"] == 0
     assert result["status"] == "factorial_attempt_failed_retained"
     assert result["wrapper"]["status"] == "verified_wrapper_failed"
@@ -346,34 +357,32 @@ def test_transient_controller_error_does_not_imply_terminal(monkeypatch):
     assert len(calls) == 1
 
 
+@pytest.mark.retained_benchmark
 def test_actual_repaired_plan_preserves_factors_and_failed_attempt():
     import hashlib
     path = cost.ROOT / "benchmark_tools/results/native_factorial_cost_plan_repaired_20261004.json"
     assert hashlib.sha256(path.read_bytes()).hexdigest() == "61756d74d1778fd268c9c4fe4f85b32cc130121f9bf02793f470b202bc4c2b1a"
-    plan = json.loads(path.read_text())
+    plan = relocated_loads(path.read_text())
     cost.validate_plan(plan)
-    old = json.loads(Path(plan["supersedes_plan"]["path"]).read_text())
+    old = relocated_loads(Path(plan["supersedes_plan"]["path"]).read_text())
     for i, run in enumerate(plan["runs"]):
         for key in ("index", "dataset", "cell", "repeat", "inputs", "genes", "proteomes", "native_order", "input_creation_order"):
             assert run[key] == old["runs"][i][key]
         assert run["output_root"] != old["runs"][i]["output_root"]
-    for ref in plan["helper_sources"] + plan["evidence"]:
-        source = Path(ref["path"])
-        if source == cost.ROOT / "benchmark_tools/run_native_factorial_cost.py":
-            # Verify the historical executor, not the repaired current source.
-            source = cost.ROOT / "benchmark_tools/results/native_factorial_failed_source_22427/run_native_factorial_cost.py"
-        raw = source.read_bytes()
-        assert len(raw) == ref["bytes"] and hashlib.sha256(raw).hexdigest() == ref["sha256"]
-    failure = json.loads(Path(plan["retained_preflight_failure"]["path"]).read_text())
+    for ref in plan["helper_sources"]:
+        check_record(ref, revision=plan["source_commit"])
+    for ref in plan["evidence"]:
+        check_record(ref)
+    failure = relocated_loads(Path(plan["retained_preflight_failure"]["path"]).read_text())
     assert failure["job_id"] == 22426 and failure["status"] == "factorial_attempt_failed_retained"
-    lookup = json.loads(Path(plan["runtime_lookup"]["path"]).read_text())
-    prior = json.loads(Path(old["runtime_lookup"]["path"]).read_text())
+    lookup = relocated_loads(Path(plan["runtime_lookup"]["path"]).read_text())
+    prior = relocated_loads(Path(old["runtime_lookup"]["path"]).read_text())
     assert lookup["baseline"] == prior["baseline"] == plan["baseline"]
-    a, b = (json.loads(Path(r["binding"]["path"]).read_text()) for r in (prior, lookup))
+    a, b = (relocated_loads(Path(r["binding"]["path"]).read_text()) for r in (prior, lookup))
     for key in ("baseline", "controller_python", "command_plan", "baseline_paths", "retired_roots"):
         assert a[key] == b[key]
     assert a["runtime_specs"][1:] == b["runtime_specs"][1:]
-    delta = json.loads(Path(lookup["current_validation"]["delta"]["path"]).read_text())
+    delta = relocated_loads(Path(lookup["current_validation"]["delta"]["path"]).read_text())
     assert len(delta["changed"]) == 3 and delta["added"] == delta["removed"] == []
     for side in ("before", "after"):
         assert all(row["status"] == "runtime_tree_identity_matches" for row in lookup["current_validation"]["runtime_checks"][side])
@@ -386,7 +395,7 @@ def test_terminal_native_receipt_updates_owned_running_file(tmp_path, status):
     cost.save(path, initial)
     terminal = dict(initial, status=status, counts=dict(genes=2))
     cost.update_native_receipt(path, initial, terminal)
-    assert json.loads(path.read_text()) == terminal
+    assert relocated_loads(path.read_text()) == terminal
     assert not path.with_name(path.name + ".terminal.pending").exists()
     with pytest.raises(ValueError, match="changed"):
         cost.update_native_receipt(path, initial, terminal)
@@ -400,7 +409,7 @@ def test_receipt_update_does_not_overwrite_collision_or_foreign_change(tmp_path)
     pending.write_text("foreign evidence")
     with pytest.raises(FileExistsError):
         cost.update_native_receipt(path, initial, dict(status="complete"))
-    assert json.loads(path.read_text()) == initial
+    assert relocated_loads(path.read_text()) == initial
     assert pending.read_text() == "foreign evidence"
     path.write_text(json.dumps(dict(status="externally_changed")))
     with pytest.raises(ValueError, match="changed"):
@@ -415,4 +424,4 @@ def test_receipt_update_rejects_symlink(tmp_path):
     link.symlink_to(actual)
     with pytest.raises(ValueError, match="changed"):
         cost.update_native_receipt(link, initial, dict(status="complete"))
-    assert json.loads(actual.read_text()) == initial
+    assert relocated_loads(actual.read_text()) == initial

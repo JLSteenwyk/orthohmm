@@ -2,6 +2,8 @@
 
 import hashlib
 import json
+
+from tests.recorded_paths import loads as relocated_loads
 from pathlib import Path
 import subprocess
 
@@ -20,7 +22,7 @@ def receipts():
         submission="assessment_gated_native_qfo_admission_submission_22452.json",
         release="assessment_gated_native_qfo_admission_released_22452.json",
         verified="assessment_gated_native_qfo_admission_verified_22452.json")
-    return {k: json.loads((RESULTS / name).read_text()) for k, name in names.items()}
+    return {k: relocated_loads((RESULTS / name).read_text()) for k, name in names.items()}
 
 
 def test_actual_held_release_repoll_chain(receipts):
@@ -35,6 +37,7 @@ def test_actual_held_release_repoll_chain(receipts):
     assert release["release"]["returncode"] == 0
 
 
+@pytest.mark.retained_benchmark
 def test_launch_source_protocol_and_prepared_git_milestone_match(receipts):
     preflight, sub = receipts["preflight"], receipts["submission"]
     assert sub["source_commit"].startswith("1b0915a8")
@@ -85,7 +88,7 @@ def test_all_five_job_identities_and_fixed_admission_limits(receipts):
 
 def test_dated_environment_reuse_and_actual_runtime_are_not_conflated(receipts):
     preflight = receipts["preflight"]
-    retained = json.loads(Path(preflight["retained_scorer_preflight"]["path"]).read_text())
+    retained = relocated_loads(Path(preflight["retained_scorer_preflight"]["path"]).read_text())
     assert preflight["scorer_runtime_bytes_freshly_rechecked"] is False
     assert preflight["scorer_environment"] == retained["scorer_environment"]
     assert retained["scorer_runtime_records_checked"] == 704

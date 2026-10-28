@@ -54,7 +54,7 @@ def test_actual_selection_binds_only_own_worker(monkeypatch):
     monkeypatch.setattr(placement, "inspect", lambda: next(snapshots))
     monkeypatch.setattr(placement, "host_topology", lambda cpus: value["allocated_topology"])
     calls = []
-    monkeypatch.setattr(placement.os, "sched_setaffinity", lambda pid, cpus: calls.append((pid, cpus)))
+    monkeypatch.setattr(placement.os, "sched_setaffinity", lambda pid, cpus: calls.append((pid, cpus)), raising=False)
     result = placement.bind(42)
     assert calls == [(0, ALLOWED)]
     assert placement.validate(result, 42) == ALLOWED
@@ -67,7 +67,7 @@ def test_incompatible_allocation_never_binds(monkeypatch):
     value["allocated"]["affinity"] = list(range(32))
     monkeypatch.setattr(placement, "inspect", lambda: value["allocated"])
     monkeypatch.setattr(placement, "host_topology", lambda cpus: value["allocated_topology"])
-    monkeypatch.setattr(placement.os, "sched_setaffinity", lambda *a: pytest.fail("must not bind"))
+    monkeypatch.setattr(placement.os, "sched_setaffinity", lambda *a: pytest.fail("must not bind"), raising=False)
     with pytest.raises(ValueError):
         placement.bind(42)
 

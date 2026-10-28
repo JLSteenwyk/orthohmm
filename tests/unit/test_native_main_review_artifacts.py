@@ -2,6 +2,8 @@
 
 import hashlib
 import json
+
+from tests.recorded_paths import loads as relocated_loads
 from pathlib import Path
 import subprocess
 
@@ -13,7 +15,7 @@ BASE = ROOT / "benchmark_tools/results"
 
 
 def read(name):
-    return json.loads((BASE / name).read_text())
+    return relocated_loads((BASE / name).read_text())
 
 
 def identity(data):

@@ -2,6 +2,8 @@
 
 from copy import deepcopy
 import json
+
+from tests.recorded_paths import loads as relocated_loads, relocate
 from pathlib import Path
 import subprocess
 
@@ -14,13 +16,14 @@ RESULTS = Path(main.__file__).parent / "results"
 
 
 def inputs():
-    return main.inputs(RESULTS)
+    docs, refs = main.inputs(RESULTS)
+    return relocate(docs), refs
 
 
 def test_new_section_parses_and_all_tables_match_machine_readable_evidence():
     docs, refs = inputs()
     section = main.section(docs, refs)
-    ast = json.loads(subprocess.check_output(["pandoc", "--from=markdown", "--to=json"], input=section, text=True))
+    ast = relocated_loads(subprocess.check_output(["pandoc", "--from=markdown", "--to=json"], input=section, text=True))
     tables = [table_rows(block) for block in ast["blocks"] if block["t"] == "Table"]
     assert [len(rows) for rows in tables] == [6, 4, 9]
     cells = {r["cell"]: r for r in docs["snapshot"]["rows"]}

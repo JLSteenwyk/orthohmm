@@ -25,7 +25,7 @@ def held(job):
 
 
 @pytest.fixture
-def setup(tmp_path, monkeypatch):
+def setup(tmp_path, monkeypatch, synthetic_linux_memory):
     monkeypatch.setattr(handoff, "ROOT", tmp_path)
     runs = [{"output_root": str(tmp_path / f"run_{i:02d}")} for i in range(13)]
     plan = {"runs": runs, "helper_sources": [], "evidence": [], "panel_root": str(tmp_path)}

@@ -88,6 +88,7 @@ def test_no_overwrite_or_bad_pin_creates_output(tmp_path, report):
     assert not fresh.exists()
 
 
+@pytest.mark.retained_benchmark
 def test_real_build_binds_section_and_table(tmp_path, report):
     table = RESULTS / 'threadripper_shared_panel_snapshot_20261004_v24/panel.json'
     pin = section.executor.record(table)

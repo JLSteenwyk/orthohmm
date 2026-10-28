@@ -72,7 +72,9 @@ def test_reproduction_guide_distinguishes_completed_runs_from_open_release_work(
     assert "RECONSTRUCTED_FULL_OB_RESULT_22376.md" in section
     assert "have not yet been validated" not in section
     assert "Remaining\nintegration work includes packaging" not in section
-    gates = text.split("### Remaining Publication Gates", 1)[1]
+    gates = text.split("### Historical Publication Gate Assessment (2026-10-04)", 1)[1]
+    assert "preserved as chronology" in gates
+    assert "not the current completion decision" in gates
     assert "locally supplied assets" in gates
     assert "cross-host execution" in gates
     panel = json.loads((BASE / "threadripper_shared_panel_snapshot_20261004_v27/panel.json").read_text())

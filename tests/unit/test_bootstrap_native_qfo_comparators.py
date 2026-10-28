@@ -117,6 +117,7 @@ def test_missing_endpoint_table_never_imputes_or_shrinks_correction():
     assert result["comparisons"][8]["missing_reason"].startswith("not_in_supplied_fresh_cell_snapshot")
 
 
+@pytest.mark.retained_benchmark
 def test_real_provenance_and_counts_prepare_without_production_bootstrap():
     native, legacy, provenance = current.prepare(ROOT)
     matrices = current.native_values(native, legacy)

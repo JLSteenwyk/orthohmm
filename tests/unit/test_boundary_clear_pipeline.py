@@ -91,6 +91,10 @@ def test_native_equivalence_requires_inventory_and_content(tmp_path):
 
 def test_real_guarded_cli_and_full_native_reader_on_small_fixture(tmp_path):
     from benchmark_tools.verify_frozen_phylogeny_install import fixture
+    from orthohmm.search import viterbi
+    library, available = viterbi._load_c_hmm()
+    if not available or library is None or not hasattr(library, "batch_hmm_viterbi_multipair_avx2_c"):
+        pytest.skip("Requires the optional AVX2 multipair build, not the scalar baseline wheel")
     source = Path(__file__).resolve().parents[2]
     tools = [shutil.which("mafft"), shutil.which("FastTree")]
     if not all(tools):

@@ -238,6 +238,7 @@ def test_sources_are_stdlib_only_and_reader_does_not_import_exporter():
     assert readback.PINS == export.PINS
 
 
+@pytest.mark.retained_benchmark
 def test_frozen_direct_inputs_and_sources_match_without_selected_projection():
     docs, refs, checked = export.load_inputs(ROOT)
     assert len(refs) == 10 and len(checked) == 19
