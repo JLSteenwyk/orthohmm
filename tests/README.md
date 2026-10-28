@@ -29,6 +29,14 @@ Linux counter/affinity stubs are requested explicitly by controller fixtures.
 The three native CPU kernels are built fresh for public CI. Tests requiring the
 optional AVX2 multipair route are not applicable to scalar baseline builds.
 
+Historical bit-exact BLAS arithmetic, Pandoc binaries and raster fingerprints
+are separate retained-environment checks. Portable replay diagnostics check
+every statistic and engine field and bound floating-only roundoff, but still
+require the production replay guard to reject even a one-ULP difference. They
+do not admit those differences as scientific reproduction. PDF preservation
+tests compare original and assembled pages exactly within the current renderer;
+the original machine-specific raster hashes remain in the retained profile.
+
 ## Setup And Historical Checks
 
 After installing OrthoHMM and its dependencies in a development environment,

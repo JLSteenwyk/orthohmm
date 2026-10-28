@@ -8,6 +8,7 @@ from pathlib import Path
 import subprocess
 
 import fitz
+import pytest
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -34,11 +35,12 @@ def pdf_text():
         return " ".join(" ".join(page.get_text() for page in document).split())
 
 
-def test_actual_render_sources_match_source_commit_before_later_ledger_updates():
+def check_render_sources(*, check_external):
     review = read("publication_main_native_visual_review_20261006.json")
     render = read("publication_main_render_20261006_v1.json")
     revision = review["source_revision"]
     assert revision == "47b7f14ba0c2e8c5b7f070f5b11620dd356a1eb9"
+    external = []
     for reference in [*render["sources"], *render["targets"]]:
         path = Path(reference["path"])
         if path.is_relative_to(ROOT):
@@ -46,11 +48,23 @@ def test_actual_render_sources_match_source_commit_before_later_ledger_updates()
                 "git", "show", revision + ":" + str(path.relative_to(ROOT))], cwd=ROOT)
             assert identity(data) == (reference["bytes"], reference["sha256"])
         else:
-            retained(reference)
+            external.append(str(path))
+            if check_external:
+                retained(reference)
+    assert external == ["/usr/bin/pandoc"]
     assert len(render["citation_ids"]) == 18
     assert render["unique_targets"] == 85 and render["local_occurrences"] == 88
     assert render["untracked_targets"] == []
     assert render["stderr"] == {"parse": "", "render": ""}
+
+
+def test_render_repository_sources_match_the_recorded_commit():
+    check_render_sources(check_external=False)
+
+
+@pytest.mark.retained_benchmark
+def test_actual_render_sources_match_source_commit_before_later_ledger_updates():
+    check_render_sources(check_external=True)
 
 
 def test_print_bounds_and_manual_scope_remain_distinct():

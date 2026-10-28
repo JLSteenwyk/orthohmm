@@ -8,6 +8,7 @@ from pathlib import Path
 import subprocess
 
 import fitz
+import pytest
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -71,7 +72,7 @@ def test_actual_render_print_bounds_and_review_scope_are_bound():
     assert review["original_failed_bounds_selector"]["output_created"] is False
 
 
-def test_all_thirty_actual_source_pages_retain_text_geometry_and_pixels():
+def check_preserved_source_pages(*, frozen_pixels):
     assembly = read("publication_main_with_figures_20261004_v2/assembly.json")
     assert [assembly[k] for k in ("main_pages", "guide_pages", "figure_pages", "total_pages")] == [14, 4, 16, 34]
     assert len(assembly["preserved_source_pages"]) == 30 and assembly["mupdf_warnings"] == ""
@@ -84,7 +85,17 @@ def test_all_thirty_actual_source_pages_retain_text_geometry_and_pixels():
                 assert before.rect == after.rect and before.get_text("words") == after.get_text("words")
                 a, b = before.get_pixmap(alpha=False), after.get_pixmap(alpha=False)
                 assert (a.width, a.height, a.n, a.samples) == (b.width, b.height, b.n, b.samples)
-                assert hashlib.sha256(a.samples).hexdigest() == ref["pixel_sha256"]
+                if frozen_pixels:
+                    assert hashlib.sha256(a.samples).hexdigest() == ref["pixel_sha256"]
+
+
+def test_source_pages_preserve_text_geometry_and_host_rendered_pixels():
+    check_preserved_source_pages(frozen_pixels=False)
+
+
+@pytest.mark.retained_benchmark
+def test_all_thirty_actual_source_pages_retain_text_geometry_and_pixels():
+    check_preserved_source_pages(frozen_pixels=True)
 
 
 def test_figures_captions_and_existing_review_pdf_are_not_replaced():

@@ -1,11 +1,14 @@
 import io
 import json
+from pathlib import Path
 import subprocess
 import sys
 
 import pytest
 
 from benchmark_tools import audit_three_kingdoms_provider_checksums as module
+
+SUM = str(Path("/usr/bin/sum").resolve())
 
 
 def test_parse():
@@ -53,7 +56,7 @@ def test_offline_audit_matches_and_skips_moving(tmp_path, offline_source):
     assert [r["status"] for r in result["rows"]] == ["matched", "unresolved_moving_release"]
     assert len(calls) == 1
     assert result["redistribution_cleared"] is False
-    assert result["rows"][0]["command"] == ["/usr/bin/sum", str(compressed)]
+    assert result["rows"][0]["command"] == [SUM, str(compressed)]
     assert result["rows"][0]["observed"] == dict(bsd_checksum=16556, blocks_1024=1)
     with pytest.raises(FileExistsError):
         module.audit(source, module.record(source)["sha256"], output)
@@ -88,7 +91,7 @@ def test_native_command_output_validation(tmp_path, monkeypatch, offline_source,
     assert [r["status"] for r in result["rows"]] == [status, "unresolved_moving_release"]
     assert result["rows"][0]["command_stdout"] == stdout.format(path=compressed)
     assert result["rows"][0]["expected"] == dict(bsd_checksum=16556, blocks_1024=1)
-    assert commands == [["/usr/bin/sum", str(compressed)]] and len(calls) == 1
+    assert commands == [[SUM, str(compressed)]] and len(calls) == 1
     assert compressed.read_bytes() == b"abc"
 
 
@@ -104,7 +107,7 @@ def test_checksum_command_failure_is_retained_without_retry(tmp_path, monkeypatc
     result = module.audit(source, module.record(source)["sha256"], tmp_path / "out")
     row = result["rows"][0]
     assert row["status"] == "unresolved" and row["error_type"] == type(error).__name__
-    assert commands == [["/usr/bin/sum", str(compressed)]] and len(calls) == 1
+    assert commands == [[SUM, str(compressed)]] and len(calls) == 1
     if isinstance(error, subprocess.CalledProcessError):
         assert (row["command_returncode"], row["command_stdout"], row["command_stderr"]) == (1, "partial", "failure")
     assert json.loads((tmp_path / "out/report.json").read_text()) == result
