@@ -58,8 +58,10 @@ The terminal application report enforces at least 85% line coverage for
 `orthohmm/`. Codecov retains the repository-wide total and exposes separate
 application and benchmarking components. Benchmark workflows are not removed
 to increase the application's apparent coverage. Test code and packaging/runner
-boilerplate are omitted consistently with the previous Codecov scope; the module
-entry point is now included. XML, JSON and data files are retained as CI artifacts.
+boilerplate are omitted consistently with the previous Codecov scope; exclusion
+patterns also work when a child changes directory. A regression check rejects
+test-harness lines leaking into the child data. The module entry point is now
+included. XML, JSON and data files are retained as CI artifacts.
 
 The repaired-CI baseline at `29c6bf5a` had 65.98% repository line coverage and
 83.40% application coverage on Codecov. Benchmark scripts accounted for

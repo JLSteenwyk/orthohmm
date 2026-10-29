@@ -56,7 +56,7 @@ def test_current_config_keeps_product_and_benchmark_sources_visible():
     assert set(config.get("run", "patch").split()) == {"subprocess", "_exit"}
     assert config.getboolean("run", "relative_files")
     omissions = config.get("run", "omit").split()
-    assert omissions == ["tests/*", "setup.py", "orthohmm-runner.py"]
+    assert omissions == ["*/tests/*", "*/setup.py", "*/orthohmm-runner.py"]
     assert "orthohmm/__main__.py" not in (ROOT / "codecov.yml").read_text()
     workflow = (ROOT / ".github/workflows/ci.yml").read_text()
     assert "coverage.json" in workflow and "coverage.xml" in workflow
@@ -69,6 +69,10 @@ def test_subprocess_coverage_survives_changed_cwd_and_abrupt_exit(tmp_path, flus
     elsewhere = tmp_path / "different working directory"
     app.mkdir()
     elsewhere.mkdir()
+    harness = tmp_path / "tests"
+    harness.mkdir()
+    helper = harness / "harness_only.py"
+    helper.write_text("not_application_code = 1\n")
     worker = app / "worker.py"
     worker.write_text("import os, sys\n"
                       "def run():\n"
@@ -80,10 +84,11 @@ def test_subprocess_coverage_survives_changed_cwd_and_abrupt_exit(tmp_path, flus
     driver = app / "driver.py"
     driver.write_text("import subprocess, sys\n"
                       "for mode in ['normal', 'abrupt']:\n"
-                      "    subprocess.run([sys.executable, sys.argv[1], mode], cwd=sys.argv[2], check=True)\n")
+                      "    subprocess.run([sys.executable, sys.argv[1], mode], cwd=sys.argv[2], check=True)\n"
+                      "subprocess.run([sys.executable, sys.argv[3]], cwd=sys.argv[2], check=True)\n")
     config = configparser.ConfigParser()
     config.read(ROOT / ".coveragerc")
-    config.set("run", "source", str(app))
+    config.set("run", "source", str(tmp_path))
     config.set("run", "patch", "subprocess\n_exit" if flush_abrupt_exit else "subprocess")
     config_path = tmp_path / "coverage.ini"
     with config_path.open("w") as handle:
@@ -92,11 +97,12 @@ def test_subprocess_coverage_survives_changed_cwd_and_abrupt_exit(tmp_path, flus
     environment = clean_environment()
     environment["COVERAGE_FILE"] = str(data_path)
     command = [sys.executable, "-m", "coverage"]
-    checked([*command, "run", "--rcfile", str(config_path), str(driver), str(worker), str(elsewhere)],
+    checked([*command, "run", "--rcfile", str(config_path), str(driver), str(worker), str(elsewhere), str(helper)],
             tmp_path, environment)
     checked([*command, "combine", "--rcfile", str(config_path)], tmp_path, environment)
     data = CoverageData(basename=str(data_path))
     data.read()
+    assert not any(Path(name).name == "harness_only.py" for name in data.measured_files())
     filename = next(name for name in data.measured_files() if Path(name).name == "worker.py")
     lines = data.lines(filename)
     assert 3 in lines and 6 in lines

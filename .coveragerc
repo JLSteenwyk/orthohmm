@@ -5,9 +5,9 @@ patch =
     subprocess
     _exit
 omit =
-    tests/*
-    setup.py
-    orthohmm-runner.py
+    */tests/*
+    */setup.py
+    */orthohmm-runner.py
 
 [report]
 show_missing = True
