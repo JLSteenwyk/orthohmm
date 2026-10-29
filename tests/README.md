@@ -63,6 +63,11 @@ patterns also work when a child changes directory. A regression check rejects
 test-harness lines leaking into the child data. The module entry point is now
 included. XML, JSON and data files are retained as CI artifacts.
 
+Reporting also omits the same harness paths and four explicitly named virtual
+source identities used by historical-copy tests. These are not current
+application files. Other missing sources remain errors, including a missing
+real `orthohmm/accuracy.py`; no blanket `ignore_errors` setting is enabled.
+
 The repaired-CI baseline at `29c6bf5a` had 65.98% repository line coverage and
 83.40% application coverage on Codecov. Benchmark scripts accounted for
 129,155 of the 135,756 measured lines, with 65.12% coverage. A test count alone

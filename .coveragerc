@@ -8,6 +8,18 @@ omit =
     */tests/*
     */setup.py
     */orthohmm-runner.py
+    */694a77fe56167754ca949751bca88aa7d11353dc:orthohmm/accuracy.py
+    */7f3a9e40dd7e79f842cc2c11fb8b548f9a802806:orthohmm/accuracy.py
+    */factorial-gate
+    */frozen-copy-guard
 
 [report]
 show_missing = True
+omit =
+    */tests/*
+    */setup.py
+    */orthohmm-runner.py
+    */694a77fe56167754ca949751bca88aa7d11353dc:orthohmm/accuracy.py
+    */7f3a9e40dd7e79f842cc2c11fb8b548f9a802806:orthohmm/accuracy.py
+    */factorial-gate
+    */frozen-copy-guard

@@ -56,7 +56,12 @@ def test_current_config_keeps_product_and_benchmark_sources_visible():
     assert set(config.get("run", "patch").split()) == {"subprocess", "_exit"}
     assert config.getboolean("run", "relative_files")
     omissions = config.get("run", "omit").split()
-    assert omissions == ["*/tests/*", "*/setup.py", "*/orthohmm-runner.py"]
+    assert omissions == ["*/tests/*", "*/setup.py", "*/orthohmm-runner.py",
+        "*/694a77fe56167754ca949751bca88aa7d11353dc:orthohmm/accuracy.py",
+        "*/7f3a9e40dd7e79f842cc2c11fb8b548f9a802806:orthohmm/accuracy.py",
+        "*/factorial-gate", "*/frozen-copy-guard"]
+    assert config.get("report", "omit").split() == omissions
+    assert not config.getboolean("report", "ignore_errors", fallback=False)
     assert "orthohmm/__main__.py" not in (ROOT / "codecov.yml").read_text()
     workflow = (ROOT / ".github/workflows/ci.yml").read_text()
     assert "coverage.json" in workflow and "coverage.xml" in workflow
@@ -117,11 +122,18 @@ def test_make_combines_unit_and_integration_without_discarding_either(tmp_path, 
     app.mkdir()
     source = app / "tiny.py"
     source.write_text("first = 1\nsecond = 2\n" + ("untested = 3\n" if missing_application_line else ""))
+    harness = tmp_path / "tests"
+    harness.mkdir()
+    (harness / "__init__.py").touch()
+    (harness / "harness_only.py").write_text("not_application_code = 1\n")
     shutil.copyfile(ROOT / "Makefile", tmp_path / "Makefile")
     shutil.copyfile(ROOT / ".coveragerc", tmp_path / ".coveragerc")
     for label, line in (("unit", 1), ("integration", 2)):
         data = CoverageData(basename=str(tmp_path / (".coverage-" + label)))
-        data.add_lines({"orthohmm/tiny.py": {line}})
+        data.add_lines({"orthohmm/tiny.py": {line}, "tests/harness_only.py": {1},
+            "694a77fe56167754ca949751bca88aa7d11353dc:orthohmm/accuracy.py": {1},
+            "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806:orthohmm/accuracy.py": {1},
+            "factorial-gate": {1}, "frozen-copy-guard": {1}})
         data.write()
     environment = clean_environment()
     environment["PATH"] = str(Path(sys.executable).parent) + os.pathsep + os.environ.get("PATH", "")
@@ -138,7 +150,28 @@ def test_make_combines_unit_and_integration_without_discarding_either(tmp_path, 
         original.read()
         assert original.lines("orthohmm/tiny.py") == [line]
     report = json.loads((tmp_path / "coverage.json").read_text())
+    assert set(report["files"]) == {"orthohmm/tiny.py"}
     summary = report["files"]["orthohmm/tiny.py"]["summary"]
     assert summary["covered_lines"] == 2
     assert summary["num_statements"] == (3 if missing_application_line else 2)
     assert (tmp_path / "coverage.xml").is_file()
+
+
+@pytest.mark.parametrize("missing", ["orthohmm/accuracy.py", "benchmark_tools/missing.py", "unclassified-source"])
+def test_missing_real_or_unclassified_source_still_fails_reporting(tmp_path, missing):
+    if shutil.which("make") is None:
+        pytest.skip("GNU/BSD make required")
+    shutil.copyfile(ROOT / "Makefile", tmp_path / "Makefile")
+    shutil.copyfile(ROOT / ".coveragerc", tmp_path / ".coveragerc")
+    for label in ("unit", "integration"):
+        data = CoverageData(basename=str(tmp_path / (".coverage-" + label)))
+        data.add_lines({missing: {1}})
+        data.write()
+    environment = clean_environment()
+    environment["PATH"] = str(Path(sys.executable).parent) + os.pathsep + os.environ.get("PATH", "")
+    result = subprocess.run(["make", "coverage.combine"], cwd=tmp_path, env=environment,
+                            capture_output=True, text=True, timeout=90)
+    assert result.returncode != 0
+    assert "No source for code" in result.stdout + result.stderr
+    assert not (tmp_path / "coverage.json").exists()
+    assert all((tmp_path / (".coverage-" + label)).is_file() for label in ("unit", "integration"))
