@@ -5,7 +5,7 @@ import sys
 
 import pytest
 
-from benchmark_tools import run_ci_cpu_wheel as module
+from scripts import run_ci_cpu_wheel as module
 
 
 @pytest.fixture
@@ -13,14 +13,11 @@ def source(tmp_path, monkeypatch):
     root = tmp_path / "repo"
     names = sorted(module.REQUIRED | {"orthohmm/search/csrc/pair_align.c"})
     content = {name: (name + "\n").encode() for name in names}
+    content["requirements.txt"] = b"# synthetic runtime requirements\n"
     for name, raw in content.items():
         path = root / name
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_bytes(raw)
-    for name in ("requirements.txt", "tests/requirements.txt"):
-        path = root / name
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text("# synthetic test requirements\n")
 
     def git(argv, **kwargs):
         if "rev-parse" in argv:
@@ -78,6 +75,10 @@ def test_isolated_workflow_and_failure_receipt(source, tmp_path, monkeypatch, pr
     def execute(argv, log, *, cwd, env):
         assert cwd == output
         commands.append((argv, env))
+        if log.name == "install_wheel.log":
+            assert "--no-deps" not in argv
+        if log.name == "install_dependencies.log":
+            assert not any("tests/requirements" in arg for arg in argv)
         log.write_text("synthetic command log\n")
         if problem == "pip_failure" and "install_dependencies" in log.name:
             raise subprocess.CalledProcessError(1, argv)

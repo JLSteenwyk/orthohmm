@@ -230,23 +230,6 @@ def test_pipeline_records_actual_component_policy_before_search(tmp_path, monkey
     assert "defer_copy_split_max_size" not in metadata
 
 
-def test_benchmark_wrapper_forwards_component_profile(tmp_path, monkeypatch):
-    from benchmark_tools import benchmark_production
-    fasta = tmp_path / "fasta"
-    fasta.mkdir()
-    (fasta / "A.faa").write_text(">a\nACDE\n")
-    captured = {}
-    def fake_run(command, **kwargs):
-        captured["command"] = command
-        with open(command[command.index("--metrics_json") + 1], "w") as stream:
-            json.dump({"schema_version": 1, "status": "complete"}, stream)
-        return SimpleNamespace(returncode=0)
-    monkeypatch.setattr(benchmark_production.subprocess, "run", fake_run)
-    monkeypatch.setattr(benchmark_production, "git_value", lambda *args: "")
-    assert benchmark_production.main([str(fasta), str(tmp_path / "out"), str(tmp_path / "result.json"),
-        "--cpu", "1", "--refinement-profile", "phylogeny_components"]) == 0
-    command = captured["command"]
-    assert command[command.index("--refinement_profile") + 1] == "phylogeny_components"
 
 
 @pytest.mark.parametrize("numeric", [False, True])

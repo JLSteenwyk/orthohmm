@@ -1,0 +1,8 @@
+include README.md LICENSE.md CITATION.cff requirements.txt
+recursive-include orthohmm *.py *.c *.cu
+prune tests
+prune docs
+prune scripts
+prune build
+prune dist
+global-exclude *.so *.dylib *.dll *.py[cod]

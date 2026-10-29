@@ -107,34 +107,3 @@ def test_worker_forwards_nondefault_and_preserves_default_pair_call(monkeypatch,
     engine._search_pair_worker(("A", "A", "/input", "BLOSUM62", 64, 4, 100, 1e-4, 1) + extra)
     assert captured.get("min_total_hits", 4) == (extra[0] if extra else 4)
     assert ("min_total_hits" in captured) == (extra == (1,))
-
-
-def test_real_fresh_native_pipeline_records_the_nondefault_threshold(tmp_path):
-    from benchmark_tools.verify_frozen_phylogeny_install import fixture
-    from benchmark_tools.run_full_search_hillclimb import native_command, validate_native, PRODUCTS
-    from benchmark_tools.prepare_ob_candidate_neighborhood import record
-    source = Path(__file__).resolve().parents[2]
-    tools = [shutil.which("mafft"), shutil.which("FastTree")]
-    if not all(tools): pytest.skip("Requires MAFFT and FastTree")
-    fasta = tmp_path / "input"
-    fasta.mkdir()
-    for taxon, genes in fixture().items():
-        (fasta / f"{taxon}.faa").write_text("".join(f">{gene}\n{seq}\n" for gene, seq in genes.items()))
-    folder = tmp_path / "native"
-    folder.mkdir()
-    command = native_command(source, fasta, folder, tools, 100, 2)
-    command.extend(["--search-result-order", "canonical", "--search-min-total-hits", "1"])
-    env = {**os.environ, "CUDA_VISIBLE_DEVICES": "", "OMP_NUM_THREADS": "1", "NUMBA_NUM_THREADS": "2",
-           "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1", "PYTHONHASHSEED": "0", "PYTHONPATH": str(source)}
-    child = subprocess.run(command, cwd=source, env=env, capture_output=True, text=True, timeout=180)
-    assert child.returncode == 0, child.stdout + child.stderr + (folder / "output/benchmark.log").read_text()
-    phylo = folder / "output/orthohmm_phylogeny"
-    case = {"fasta": str(fasta), "output": str(folder), "search_max_candidates_per_query": 100,
-            "search_min_total_hits": 1, "inputs": [record(p) for p in sorted(fasta.iterdir())],
-            "golden": {name: record(phylo / name) for name in (*PRODUCTS, "species_tree.rooted.nwk")}}
-    actual = validate_native(case, 2)
-    assert actual["metrics"]["metadata"]["search_min_total_hits"] == 1
-    assert (actual["genes"], actual["species"]) == (16, 4)
-    case["search_min_total_hits"] = 4
-    with pytest.raises(ValueError, match="shared-hit threshold"):
-        validate_native(case, 2)

@@ -220,18 +220,8 @@ def test_api_rejects_inactive_scope_before_search(tmp_path, accuracy, search, st
             accuracy_profile=accuracy, search_mode=search, profile_sequence_weighting="henikoff")
 
 
-def test_replay_rejects_weighting_without_sequences_before_creating_outputs(tmp_path):
-    from benchmark_tools.replay_high_sensitivity import main
-    with pytest.raises(SystemExit, match="requires --fasta-directory"):
-        main(["--hits-pickle", str(tmp_path / "missing"), "--output-directory", str(tmp_path / "out"),
-              "--json", str(tmp_path / "result.json"), "--profile-sequence-weighting", "henikoff"])
-    assert not (tmp_path / "out").exists()
 
 
-def test_benchmark_harness_rejects_inactive_weighting():
-    from benchmark_tools.benchmark_production import parse_args
-    with pytest.raises(SystemExit):
-        parse_args(["in", "out", "metrics.json", "--profile-sequence-weighting", "henikoff"])
 
 
 def test_expand_profiles_reports_effective_counts_for_real_scoring(tmp_path):
@@ -244,37 +234,3 @@ def test_expand_profiles_reports_effective_counts_for_real_scoring(tmp_path):
     assert result.profiles_built == 1 and result.profile_candidates > 0
     assert result.profile_effective_counts == ((0, 1.),)
     json.dumps(result.profile_effective_counts)
-
-
-@pytest.mark.parametrize("mode", PROFILE_SEQUENCE_WEIGHTING[1:])
-def test_complete_native_phylogeny_fixture_records_active_weighting(tmp_path, mode):
-    from benchmark_tools.verify_frozen_phylogeny_install import fixture
-    from benchmark_tools.run_full_search_hillclimb import native_command, validate_native, PRODUCTS
-    from benchmark_tools.prepare_ob_candidate_neighborhood import record
-    source = Path(__file__).resolve().parents[2]
-    tools = [shutil.which("mafft"), shutil.which("FastTree")]
-    if not all(tools):
-        pytest.skip("Requires MAFFT and FastTree")
-    fasta = tmp_path / "input"
-    fasta.mkdir()
-    for taxon, genes in fixture().items():
-        (fasta / f"{taxon}.faa").write_text("".join(f">{gene}\n{seq}\n" for gene, seq in genes.items()))
-    folder = tmp_path / "native"
-    folder.mkdir()
-    command = native_command(source, fasta, folder, tools, 100, 2)
-    command.extend(["--search-result-order", "canonical", "--profile-sequence-weighting", mode])
-    env = {**os.environ, "CUDA_VISIBLE_DEVICES": "", "OMP_NUM_THREADS": "1", "NUMBA_NUM_THREADS": "2",
-           "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1", "PYTHONHASHSEED": "0", "PYTHONPATH": str(source)}
-    child = subprocess.run(command, cwd=source, env=env, capture_output=True, text=True, timeout=180)
-    assert child.returncode == 0, child.stdout + child.stderr
-    phylo = folder / "output/orthohmm_phylogeny"
-    case = {"fasta": str(fasta), "output": str(folder), "search_max_candidates_per_query": 100,
-            "inputs": [record(path) for path in sorted(fasta.iterdir())],
-            "golden": {name: record(phylo / name) for name in (*PRODUCTS, "species_tree.rooted.nwk")}}
-    actual = validate_native(case, 2)
-    assert actual["metrics"]["metadata"]["profile_sequence_weighting"] == mode
-    counts = actual["metrics"]["counts"]
-    assert counts["high_sensitivity_weighted_profiles"] == counts["high_sensitivity_profiles"] > 0
-    diagnostics = json.loads((folder / "output/orthohmm_working_res/profile_sequence_weighting.json").read_text())
-    assert diagnostics["mode"] == mode and len(diagnostics["profiles"]) == counts["high_sensitivity_profiles"]
-    assert all(row["effective_sequence_count"] > 0 for row in diagnostics["profiles"])

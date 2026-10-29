@@ -1,239 +1,46 @@
-# Tests
+# Application Tests
 
-## Public And Retained Profiles
+This suite tests OrthoHMM, its CLI, installation, and native search kernels.
+The benchmark, manuscript, and historical replay suites are preserved on
+[research-archive-20261029](https://github.com/JLSteenwyk/orthohmm/tree/research-archive-20261029),
+at pre-split commit `ebfa635ca786796287c9ff2a3caba1c2618f016e`.
+No research checkout, archived dataset, or old Git revision is needed here.
 
-`make test.public.fast` runs portable unit and integration tests, excluding slow
-tests and the two external-evidence markers below. `make test.public.coverage`
-includes slow tests. GitHub runs the fast profile on Python 3.10-3.13/macOS and
-the coverage profile on Python 3.11/Linux, plus separate documentation,
-Linux native-diagnostic and CPU-wheel checks.
+## Run Tests
 
-`python -m benchmark_tools.audit_public_test_profile --root "$PWD" --output /tmp/public-selection.json`
-checks the complete collected inventory before CI execution. Collection errors,
-unexpected markers, missing declared cases or extra exclusions fail the audit.
-
-`raw_benchmark` identifies four checksum-bound SwissTrees source cases.
-`retained_benchmark` identifies the individual cases and prerequisites listed in
-`retained_benchmark_cases.json`. They need local native working directories,
-historical package archives/checkouts or an exact original tool binary. These
-checks are not portable unit fixtures. Public CI does not claim to validate them.
-
-`make test.retained` selects both external-evidence profiles. It does not convert
-failures or missing inputs into public passes. `make test` and the original
-unit/integration/coverage targets still select all tests; external inputs must be
-supplied to satisfy their full scientific evidence gate.
-
-Path relocation applies only to test copies. Recorded hashes, source artifacts,
-scientific scores and production admission checks are not rewritten. Synthetic
-Linux counter/affinity stubs are requested explicitly by controller fixtures.
-The three native CPU kernels are built fresh for public CI. Tests requiring the
-optional AVX2 multipair route are not applicable to scalar baseline builds.
-
-Historical bit-exact BLAS arithmetic, Pandoc binaries and raster fingerprints
-are separate retained-environment checks. Portable replay diagnostics check
-every statistic and engine field and bound floating-only roundoff, but still
-require the production replay guard to reject even a one-ULP difference. They
-do not admit those differences as scientific reproduction. PDF preservation
-tests compare original and assembled pages exactly within the current renderer;
-the original machine-specific raster hashes remain in the retained profile.
-
-## Code Coverage
-
-`make test.public.coverage` measures maintained Python sources across the
-repository, not just `orthohmm/`. Both unit and integration stages have their own
-XML report and data file. The combined `coverage.xml`, `coverage.json` and
-`.coverage` contain the union of their executed lines. Stage data is preserved
-in `.coverage-unit` and `.coverage-integration`; these names deliberately do not
-match coverage.py's `.coverage.*` parallel-fragment pattern.
-
-Coverage configuration enables Python subprocess tracing and saves data on
-`os._exit`, including the isolated Leiden worker. Absolute stage-data paths keep
-child processes that change working directory in the same measurement. Tests
-exercise normal and abrupt child exits and verify that combination preserves
-both stage inputs. The coverage tool versions are pinned in the test manifest:
-coverage.py 7.16.2 for Python 3.10 and 7.17.0 for Python 3.11 and newer. Tests
-check marker selection for every Python version in the CI matrix.
-
-The terminal application report enforces at least 85% line coverage for
-`orthohmm/`. Codecov retains the repository-wide total and exposes separate
-application and benchmarking components. Benchmark workflows are not removed
-to increase the application's apparent coverage. Test code and packaging/runner
-boilerplate are omitted consistently with the previous Codecov scope; exclusion
-patterns also work when a child changes directory. A regression check rejects
-test-harness lines leaking into the child data. The module entry point is now
-included. XML, JSON and data files are retained as CI artifacts.
-
-Reporting also omits the same harness paths and four explicitly named virtual
-source identities used by historical-copy tests. These are not current
-application files. Other missing sources remain errors, including a missing
-real `orthohmm/accuracy.py`; no blanket `ignore_errors` setting is enabled.
-
-The repaired-CI baseline at `29c6bf5a` had 65.98% repository line coverage and
-83.40% application coverage on Codecov. Benchmark scripts accounted for
-129,155 of the 135,756 measured lines, with 65.12% coverage. A test count alone
-does not establish that every branch or runtime backend is covered.
-
-Python line coverage does not measure native C/CUDA instruction execution.
-Numba-compiled functions also bypass ordinary Python line tracing. Numerical
-reference tests explicitly execute their Python bodies and the compiled kernels
-against independent mathematical oracles; compiler-visited lines are not treated
-as executed test paths. Optional CUDA and unused experimental code remain in the
-application denominator. Historical replay prerequisites and failures remain
-separate from these public software checks.
-
-## Setup And Historical Checks
-
-After installing OrthoHMM and its dependencies in a development environment,
-install the test-only dependencies with:
+From a fresh checkout in an activated Python 3.10+ environment:
 
 ```sh
-python -m pip install -r tests/requirements.txt
+python -m pip install . -r tests/requirements.txt
+make kernels
+make test
+make test.coverage
 ```
 
-This includes the pinned SQL parser used to inspect historical TreeFam and
-Selectome archives without executing their SQL. Without `sqlglot`, two unit
-modules are skipped during collection, hiding 13 test cases from the run.
-Both CI test jobs install this file and check that the parser imports before
-running tests. These are test dependencies, not application runtime
-requirements or a complete lock for the publication benchmark environments.
-The file also pins libraries used by workflow, biology, plotting, PDF and
-packaging tests. Biopython, Pillow and setuptools have subsequent test-only
-security updates; other pins retain the recorded local choices. They are not
-substituted into historical scientific environments. A clean
-test environment needs these packages even when optional application features
-or publication workflows are not being executed.
-NumPy is pinned to 2.2.6 because retained factorial, sequence-control and
-matched-graph numerical replay compares the engine version as well as the
-statistics. This preserves exact provenance comparisons; it does not loosen
-their equality checks or change the application's broader runtime requirement.
-The [security follow-up](../benchmark_tools/results/TEST_DEPENDENCY_SECURITY_20261001.md)
-retains fifteen test-manifest advisory ranges, regression checks against old
-and current pins, and fresh private-environment validation. Range exclusion
-does not establish complete security or clear historical benchmark locks.
+The checkout-kernel helper requires a fresh output directory and refuses
+inherited shared libraries. For another fresh build, use a fresh worktree or
+remove only your generated `orthohmm/search/csrc/*.so` and kernel build directory.
+Normal installed-package inference does not require this test-only build step.
 
-Actual affinity/cgroup observations require Linux facilities. Importing the
-observer and testing it with injected readers does not require those facilities;
-requesting native observation without the affinity API fails explicitly.
-Native calibration fixtures report capability skips on unsupported platforms.
-Synthetic release-guard and environmental-review cases inject a fixed test-only
-boot identity rather than reading the host's Linux boot file. Other file reads
-and real native identity tests remain unchanged. Short assessment fixtures
-resolve the temporary root (including macOS's `/tmp` symlink); the production
-admission gate still rejects indirect destinations and mismatched boot identities.
-Synthetic measurement, evidence-replay, cgroup-frontier and service-reply tests
-also explicitly request that fixture. Missing boot data and reboot rejection
-remain tested; production collectors still require real Linux capabilities.
-See the [scoped validation](../benchmark_tools/results/CI_SYNTHETIC_CLOCK_FIXTURES_20261001.md).
-Historical QfO handoff tests explicitly relocate only root/interpreter bindings
-in fresh temporary copies, exercising dummy executors and synthetic scheduler
-rows with shell-special paths. Archived batches and their provenance checks
-stay unchanged. See [validation and production boundaries](../benchmark_tools/results/CI_QFO_BATCH_FIXTURES_20261001.md);
-test portability does not make historical native workflows portable.
-Batch handoff checks require a Bash runtime that stops after failed standalone
-guards under `set -e`; direct semantic tests do not skip unsupported behavior.
-The macOS test jobs prepare an explicit Homebrew Bash on PATH and log its version
-alongside the system version. The [observed failure and amendment](../benchmark_tools/results/CI_BASH_GUARD_RUNTIME_20261001.md)
-distinguish the new setup from unverified remote execution and historical runtime
-claims. Archived scripts must not be assumed safe under an arbitrary shell.
-Synthetic affinity cases install their injected APIs explicitly on unsupported
-hosts; genuine native workload/resource/library-worker cases retain capability
-skips rather than mocked native results. Fake-service capture hashes its own
-temporary declared file. The [capability validation](../benchmark_tools/results/CI_AFFINITY_FIXTURES_20261001.md)
-distinguishes actual Linux execution from a deliberate API-absence simulation.
+The default suite collects every application test, including installation and
+CLI checks. No private benchmark markers or research-specific exclusions are
+used. Tests of optional HMMER/MCL or MAFFT/FastTree workflows report capability
+skips if those executables are unavailable. Linux CI installs these tools;
+macOS CI exercises the portable core and legacy HMMER/MCL workflow.
 
-Pipeline metrics export is tested with and without Linux `/proc`: absent RSS
-retains the explicit `unavailable` convention and zero sentinels, not measured
-zero memory. Only the positive native RSS observation requires `/proc`;
-synthetic readers, export and rejection cases still run. Both OrthoBench resource
-readers reject unavailable memory. See the
-[capability checks and sampling limits](../benchmark_tools/results/CI_RSS_CAPABILITY_TESTS_20261001.md).
-The [subsequent inspected macOS logs](../benchmark_tools/results/CI_NATIVE_CHECKOUT_SETUP_20261001.md)
-confirm the scoped Bash/affinity/RSS corrections, not broader CI success.
-MacOS test jobs now prepare a job-local GNU GCC driver and explicitly build
-all three baseline CPU libraries for checkout imports as well as installation.
-The checkout helper rejects inherited, incomplete, unloadable or nonbaseline
-libraries before exposing them. This prospective native setup still requires
-remote verification; it does not change scientific defaults or benchmark builds.
-Synthetic long-worker tests explicitly inject cgroup identity and resource
-snapshots; their short subprocess checks do not poll host counters. Actual
-`/dev/shm` copy cases skip when unavailable, without substituting disk storage.
-Portable path guards still test all three layouts and reject unsafe input/output
-bindings and pre-phylogeny commands. The
-[scope and tmpfs validation](../benchmark_tools/results/CI_CGROUP_TMPFS_FIXTURES_20261001.md)
-distinguishes fixture evidence from real preparation or memory charging.
+## Coverage
 
-Unit, fast and unit-coverage targets include top-level `tests/test_*.py` as
-well as `tests/unit`; integration remains a separate target. Fast tests exclude
-the `slow` marker, not the top-level regression cases. CI keeps every Python
-matrix job's outcome rather than cancelling siblings after the first failure.
-The two test jobs fetch full Git history because frozen-source archive tests
-read an actual historical scientific commit, not HEAD. Matched-graph rendering
-still requires exact replay and now reports differing JSON paths/values on
-rejection; one-ULP and engine-metadata changes are not silently tolerated.
-An explicit `count-level` rendering policy reuses the pre-existing independent
-1e-12 count-reproduction contract and records all accepted differences; it
-does not replace the default strict guard or relax metadata. The retained
-plot test chooses that portable mode; strict behavior has a separate
-current-runtime fixture and one-ULP rejection tests. See the
-[policy and evidence](../benchmark_tools/results/PORTABLE_MATCHED_GRAPH_RENDERING_20261001.md).
-The [subsequent macOS log inspection](../benchmark_tools/results/CI_SYNTHETIC_CLOCK_FIXTURES_20261001.md)
-confirms those 61 rendering and seven count-reproduction cases pass. The broader
-CI suite still fails; this is not native scientific or full-suite confirmation.
+Coverage measures `orthohmm/`, including Python child processes and workers
+that end with `os._exit`. The application gate is 85% line coverage. Unit and
+integration data are retained separately and combined into `coverage.xml`,
+`coverage.json`, and `.coverage`. Tests verify that combination preserves both
+inputs, missing application source is an error, and child working-directory
+changes do not include test-harness code in reports.
 
-A separate Linux CPU-wheel job builds committed package sources in a clean
-directory, installs into a fresh private venv and runs the existing isolated
-installed-package verifier. It exercises builtin/Leiden standard and
-high-sensitivity fixtures, not the full phylogenetic pipeline or benchmark
-accuracy. Existing macOS test jobs are retained. Result and command logs are
-uploaded even after normal failures; this is not a replacement for the full
-suite or proof of a hermetic runtime. The [execution report](../benchmark_tools/results/CI_CPU_WHEEL_INSTALLATION_20261001.md)
-distinguishes the local installation attempt. The [inspected remote result](../benchmark_tools/results/CI_REMOTE_CPU_WHEEL_RESULT_20261001.md)
-confirms the separate Linux job passed; it does not clear the macOS matrix.
+Python coverage does not measure C/CUDA instructions. Independent numerical
+oracles compare Python reference bodies and compiled search kernels. GPU and
+native capability skips are not counted as successful native execution.
 
-Run unit tests with`make test.unit` and native integration tests with
-`make test.integration`. Pytest discovery is limited to`tests/` so retained
-benchmark worktrees are not collected. Integration outputs and copied input
-FASTAs live under pytest temporary directories; the commands do not remove
-or overwrite`tests/samples` output files.
-
-Integration tests require working`phmmer` and`mcl` executables. The MCL build
-must support the application's ABC-input and threading options. A legacy
-OrthoMCL-specific installation should not replace the integration dependency.
-Select executables for tests without changing the global PATH:
-
-```sh
-ORTHOHMM_TEST_MCL=/absolute/path/to/mcl \
-ORTHOHMM_TEST_PHMMER=/absolute/path/to/phmmer \
-make test.integration
-```
-
-For a complete default-discovery regression run, use the same explicit
-dependency selection and retain a machine-readable report:
-
-```sh
-ORTHOHMM_TEST_MCL=/absolute/path/to/compatible/mcl \
-python -m pytest -q --junitxml=/absolute/path/to/regression.xml
-```
-
-Ten installed-runtime OrthoMCL checks are opt-in through
-`ORTHOHMM_LEGACY_BLAST_SMOKE=1`. They require the retained native installations
-and, for staged inference, the dedicated Python environment under
-`benchmarks/work/orthomcl_python_env_20260918`. They use temporary fixtures,
-not the full benchmark datasets. Enable them only where those prerequisites
-are available; report skips and separately executed native checks explicitly.
-The compatible MCL selected for OrthoHMM integration tests does not replace
-the legacy MCL used by the frozen OrthoMCL benchmark workflow.
-
-The simple and long-name fixtures run with both forward and reversed input
-creation orders. Checks cover complete reference group memberships, every
-species count, every output FASTA sequence, single-copy occupancy, exact
-file inventories and species-qualified single-copy headers. Group numbering,
-species-column order and FASTA record order are not biological invariants.
-Deliberate corruption tests verify that semantic errors still fail.
-
-Historical single-copy text fixtures list all groups and are not a valid
-oracle for single-copy selection. The current test independently derives
-that selection from the unchanged expected memberships, input species and
-the configured occupancy threshold; the emitted ID list must agree with the
-single-copy FASTA directory. The historical files remain unchanged to retain
-the evidence of the old output bug.
+Coverage now describes the application repository only. Removing research
+workflows changes the repository-wide denominator; any resulting percentage
+change is not itself additional test coverage.

@@ -4,28 +4,11 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-from benchmark_tools.run_search_recovery import (
-    assert_control_fixture, link_changes, resolve_settings,
-)
 from orthohmm.search import engine, prefilter, sequences
 
 
-def test_prespecified_arms_change_one_mechanism():
-    plan = json.loads((Path(__file__).parents[2] /
-        "benchmark_tools/hillclimb_search_recovery_20261012.json").read_text())
-    assert resolve_settings(plan, "control") == plan["base_settings"]
-    for arm in plan["arms"][1:]:
-        settings = resolve_settings(plan, arm["label"])
-        assert sum(settings[key] != value for key, value in plan["base_settings"].items()) == 1
-    with pytest.raises(ValueError, match="Unknown"):
-        resolve_settings(plan, "missing")
 
 
-def test_duplicate_arms_and_unrecognized_overrides_rejected():
-    with pytest.raises(ValueError, match="duplicate"):
-        resolve_settings({"arms": [{"label": "a"}, {"label": "a"}]}, "a")
-    with pytest.raises(ValueError, match="parameter"):
-        resolve_settings({"base_settings": {}, "arms": [{"label": "a", "overrides": {"bad": 1}}]}, "a")
 
 
 def rows(decisions):
@@ -33,17 +16,8 @@ def rows(decisions):
             for i, value in enumerate(decisions)]
 
 
-def test_link_gains_do_not_hide_control_losses():
-    control = rows(["accepted", "scored_not_significant", "not_selected_by_prefilter", "accepted"])
-    observed = rows(["not_selected_by_prefilter", "accepted", "not_selected_by_prefilter", "accepted"])
-    assert link_changes(control, observed) == {"gained": 1, "lost": 1, "retained": 1, "absent_both": 1}
 
 
-def test_link_comparison_rejects_missing_duplicate_or_unknown_decisions():
-    control = rows(["accepted"])
-    for observed in ([], control * 2, rows(["error"])):
-        with pytest.raises(ValueError):
-            link_changes(control, observed)
 
 
 @pytest.mark.parametrize("value", [0, -1, 2**31, 1.2, "20", True, np.bool_(True)])
@@ -59,9 +33,6 @@ def test_shortlist_change_cannot_silently_use_different_ranking(monkeypatch, ava
         prefilter.prefilter_candidates(None, None, sub_matrix=matrix, phase_a_topk=20000)
 
 
-def test_default_preserves_real_cpu_scoring_and_order(monkeypatch):
-    monkeypatch.setattr(engine, "is_cuda_available", lambda: False)
-    assert assert_control_fixture(engine, sequences)
 
 
 def test_shortlist_reaches_native_ranker_and_changes_candidates(tmp_path):

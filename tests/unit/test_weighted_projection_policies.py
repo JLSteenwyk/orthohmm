@@ -47,15 +47,6 @@ def test_384_constituent_profiles_match_frozen_precombination_source():
     assert constituent_digest(msa_profile.build_msa_profile) == "aa66538d3a2561d3f8899a3b67346b3f502c77a8626a641771872199df146743"
 
 
-@pytest.mark.parametrize("mode", WEIGHTED_PROJECTION_MODES)
-def test_registered_combinations_pass_cli_and_production_harness(tmp_path, mode):
-    from benchmark_tools.benchmark_production import parse_args
-    args = process_args(create_parser().parse_args([str(tmp_path), "--accuracy_profile", "high_sensitivity",
-        "--profile-projection-policy", "residue_preserving", "--profile-sequence-weighting", mode]))
-    assert args["profile_sequence_weighting"] == mode and args["profile_projection_policy"] == "residue_preserving"
-    parsed = parse_args(["in", "out", "metrics.json", "--cpu", "1", "--accuracy-profile", "high_sensitivity",
-        "--profile-projection-policy", "residue_preserving", "--profile-sequence-weighting", mode])
-    assert parsed.profile_sequence_weighting == mode and parsed.profile_projection_policy == "residue_preserving"
 
 
 @pytest.mark.parametrize("mode", ("none", *WEIGHTED_PROJECTION_MODES))
@@ -139,20 +130,6 @@ def test_unknown_residues_survive_real_alignment_before_existing_missing_value_w
         assert np.isfinite(msa_profile.profile_sequence_weights(encoded, mode)).all()
 
 
-@pytest.mark.parametrize("weighting", WEIGHTED_PROJECTION_MODES)
-@pytest.mark.parametrize("mode", ["builtin_reselect", "hmmer_score_only", "hmmer_reselect"])
-def test_joint_constructor_never_enables_unregistered_selective_reselection(tmp_path, weighting, mode):
-    from benchmark_tools.replay_high_sensitivity import main
-    with pytest.raises(ValueError, match="Selective pilot requires"):
-        expansion.expand_profiles([], [], "missing", [], "BLOSUM62", 1, 1e-4, [], [], [],
-            sequence_weighting=weighting, projection_policy="residue_preserving", selective_mode=mode,
-            selective_output_directory=tmp_path / "evidence", selective_evidence=[])
-    with pytest.raises(SystemExit, match="Selective profile pilot requires"):
-        main(["--hits-pickle", "missing", "--fasta-directory", str(tmp_path),
-              "--output-directory", str(tmp_path / "out"), "--json", str(tmp_path / "out.json"),
-              "--profile-projection-policy", "residue_preserving", "--profile-sequence-weighting", weighting,
-              "--selective-profile-mode", mode])
-    assert not (tmp_path / "out").exists() and not (tmp_path / "evidence").exists()
 
 
 @pytest.mark.parametrize("weighting", WEIGHTED_PROJECTION_MODES)

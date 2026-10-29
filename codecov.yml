@@ -5,15 +5,6 @@ coverage:
   range: "70...95"
 ignore:
   - "tests"
-  - "orthohmm-runner.py"
+  - "scripts"
   - "setup.py"
-component_management:
-  individual_components:
-    - component_id: application
-      name: OrthoHMM Application
-      paths:
-        - "orthohmm/**"
-    - component_id: benchmarking
-      name: Benchmarking Workflows
-      paths:
-        - "benchmark_tools/**"
+  - "orthohmm-runner.py"

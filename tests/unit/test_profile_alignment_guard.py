@@ -9,7 +9,7 @@ import subprocess
 import numpy as np
 import pytest
 
-from benchmark_tools.hmm_generalization_holdout import species_sequences
+from tests.support import species_sequences
 from orthohmm.args_processing import process_args
 from orthohmm.helpers import StartStep, SubstitutionMatrix
 from orthohmm.parser import create_parser
@@ -193,12 +193,6 @@ def test_api_rejects_inactive_scope_before_search(tmp_path, accuracy, search, st
             search_mode=search, profile_alignment_policy="strict_span_guard")
 
 
-def test_replay_rejects_missing_sequences_before_outputs(tmp_path):
-    from benchmark_tools.replay_high_sensitivity import main
-    with pytest.raises(SystemExit, match="requires --fasta-directory"):
-        main(["--hits-pickle", str(tmp_path / "missing"), "--output-directory", str(tmp_path / "out"),
-              "--json", str(tmp_path / "result.json"), "--profile-alignment-policy", "strict_span_guard"])
-    assert not (tmp_path / "out").exists()
 
 
 def test_unvalidated_weighting_guard_combination_fails_before_loading_sequences():
@@ -209,7 +203,7 @@ def test_unvalidated_weighting_guard_combination_fails_before_loading_sequences(
 
 @pytest.mark.parametrize("policy", ["off", "strict_span_guard"])
 def test_production_passes_policy_only_when_requested(tmp_path, monkeypatch, policy):
-    from benchmark_tools.verify_frozen_phylogeny_install import fixture as native_fixture
+    from tests.support import fixture as native_fixture
     engine = importlib.import_module("orthohmm.search.engine")
     pipeline = importlib.import_module("orthohmm.orthohmm")
     fasta = tmp_path / "input"
@@ -233,38 +227,3 @@ def test_production_passes_policy_only_when_requested(tmp_path, monkeypatch, pol
         pipeline.execute(str(fasta), str(tmp_path / "output"), None, 2, .5, "mcl", 1.5, None, None,
             SubstitutionMatrix.blosum62, 1e-4, accuracy_profile="high_sensitivity", profile_alignment_policy=policy)
     assert captured == ([{}] if policy == "off" else [{"alignment_policy": policy}])
-
-
-def test_complete_native_pipeline_exposes_policy_and_evidence(tmp_path):
-    from benchmark_tools.verify_frozen_phylogeny_install import fixture as native_fixture
-    from benchmark_tools.run_full_search_hillclimb import native_command, validate_native, PRODUCTS
-    from benchmark_tools.prepare_ob_candidate_neighborhood import record
-    source = Path(__file__).resolve().parents[2]
-    tools = [shutil.which("mafft"), shutil.which("FastTree")]
-    if not all(tools):
-        pytest.skip("Requires MAFFT and FastTree")
-    fasta = tmp_path / "input"
-    fasta.mkdir()
-    for taxon, genes in native_fixture().items():
-        (fasta / f"{taxon}.faa").write_text("".join(f">{gene}\n{seq}\n" for gene, seq in genes.items()))
-    folder = tmp_path / "native"
-    folder.mkdir()
-    command = native_command(source, fasta, folder, tools, 100, 2)
-    command.extend(["--search-result-order", "canonical", "--profile-alignment-policy", "strict_span_guard"])
-    env = {**os.environ, "CUDA_VISIBLE_DEVICES": "", "OMP_NUM_THREADS": "1", "NUMBA_NUM_THREADS": "2",
-           "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1", "PYTHONHASHSEED": "0", "PYTHONPATH": str(source)}
-    child = subprocess.run(command, cwd=source, env=env, capture_output=True, text=True, timeout=180)
-    assert child.returncode == 0, child.stdout + child.stderr
-    phylo = folder / "output/orthohmm_phylogeny"
-    case = {"fasta": str(fasta), "output": str(folder), "search_max_candidates_per_query": 100,
-            "inputs": [record(path) for path in sorted(fasta.iterdir())],
-            "golden": {name: record(phylo / name) for name in (*PRODUCTS, "species_tree.rooted.nwk")}}
-    actual = validate_native(case, 2)
-    assert actual["metrics"]["metadata"]["profile_alignment_policy"] == "strict_span_guard"
-    evidence = json.loads((folder / "output/orthohmm_working_res/profile_alignment_evidence.json").read_text())
-    assert evidence["policy"] == "strict_span_guard"
-    counts = actual["metrics"]["counts"]
-    assert counts["high_sensitivity_alignment_traced"] == len(evidence["anchors"])
-    assert counts["high_sensitivity_alignment_rejected"] == sum(not row["passes_guard"] for row in evidence["anchors"])
-    # This complete workflow fixture need not recruit an external profile link;
-    # the real profile-expansion fixture above independently requires three.

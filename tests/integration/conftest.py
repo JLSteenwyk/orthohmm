@@ -11,6 +11,10 @@ from orthohmm.orthohmm import execute
 @pytest.fixture
 def native_case(tmp_path):
     def run(suffix, reverse=False):
+        phmmer = os.environ.get("ORTHOHMM_TEST_PHMMER", "phmmer")
+        mcl = os.environ.get("ORTHOHMM_TEST_MCL", "mcl")
+        if not shutil.which(phmmer) or not shutil.which(mcl):
+            pytest.skip("Legacy integration tests require HMMER and MCL executables")
         base = Path(__file__).resolve().parents[1]
         source = base / "samples" / suffix
         inputs = tmp_path / "input"
@@ -23,8 +27,8 @@ def native_case(tmp_path):
         for path in files:
             shutil.copyfile(path, inputs / path.name)
         execute(fasta_directory=str(inputs), output_directory=str(output),
-                phmmer=os.environ.get("ORTHOHMM_TEST_PHMMER", "phmmer"), cpu=8,
-                single_copy_threshold=.5, mcl=os.environ.get("ORTHOHMM_TEST_MCL", "mcl"),
+                phmmer=phmmer, cpu=8,
+                single_copy_threshold=.5, mcl=mcl,
                 inflation_value=1.5, start=None, stop=None,
                 substitution_matrix=SubstitutionMatrix.blosum62, evalue_threshold=.0001,
                 search_mode="phmmer", clustering="mcl")

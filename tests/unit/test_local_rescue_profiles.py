@@ -8,7 +8,7 @@ import shutil
 import numpy as np
 import pytest
 
-from benchmark_tools.hmm_generalization_holdout import species_sequences
+from tests.support import species_sequences
 from orthohmm.local_rescue import evaluate_local_context, validate_local_profiles, write_effective_candidates
 from orthohmm.phylogeny import PhylogenyConfig
 
@@ -374,7 +374,7 @@ def test_fresh_real_mafft_fasttree_joint_reconciliation_and_exact_cache_reuse(tm
 
 @pytest.mark.skipif(not shutil.which("mafft") or not shutil.which("FastTree"), reason="Requires real tree tools")
 def test_admitted_context_runs_through_ordinary_final_inferred_species_pipeline(tmp_path):
-    from benchmark_tools.verify_frozen_phylogeny_install import fixture
+    from tests.support import fixture
     from orthohmm.phylogeny_pipeline import _load_sequence_data, run_phylogeny_stage
     from orthohmm.search.profile_expansion import load_global_sequence_database
     fasta = tmp_path / "input"

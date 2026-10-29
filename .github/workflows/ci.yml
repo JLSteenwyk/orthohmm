@@ -1,164 +1,86 @@
 name: CI
-on: push
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
 jobs:
-  test-fast:
-    name: public-fast (${{ matrix.python-version }})
-    runs-on: macos-latest
-    env:
-      OMP_NUM_THREADS: '1'
-      OPENBLAS_NUM_THREADS: '1'
-      MKL_NUM_THREADS: '1'
-    strategy:
-      fail-fast: false
-      matrix:
-        python-version: ["3.10", "3.11", "3.12", "3.13"]
-    steps:
-    - uses: actions/checkout@master
-      with:
-        fetch-depth: 0
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@master
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: Install test Bash runtime
-      run: |
-        brew install bash
-        printf '%s\n' "$(brew --prefix bash)/bin" >> "$GITHUB_PATH"
-        "$(brew --prefix bash)/bin/bash" --version
-        /bin/bash --version
-    - name: Install test OpenMP compiler
-      run: bash benchmark_tools/install_ci_test_compiler.sh
-    - name: Install test native utilities
-      run: |
-        brew install gnu-time pandoc
-        printf 'ORTHOHMM_TEST_GNU_TIME=%s\n' "$(brew --prefix gnu-time)/bin/gtime" >> "$GITHUB_ENV"
-        "$(brew --prefix gnu-time)/bin/gtime" --version
-        pandoc --version
-    - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
-        # make orthohmm CLI available for tests 
-        ORTHOHMM_CPU_TARGET=baseline make install
-        # install deps for tests
-        pip install -r tests/requirements.txt
-        python -c "import Bio, psutil, dendropy, ijson, openpyxl, matplotlib, PIL, fitz, scipy, setuptools, sqlglot"
-    - name: Build checkout CPU kernels
-      run: |
-        gcc --version
-        python benchmark_tools/build_ci_checkout_kernels.py --root "$GITHUB_WORKSPACE" --output "$RUNNER_TEMP/orthohmm-ci-package"
-    - name: Install HMMER
-      run: |
-        brew install hmmer
-    - name: Install MCL
-      run: |
-        mkdir installmcl
-        cd installmcl
-        wget https://raw.githubusercontent.com/micans/mcl/main/install-this-mcl.sh -o install-this-mcl
-        chmod u+x install-this-mcl.sh
-        ./install-this-mcl.sh
-        PATH=$PATH:$HOME/local/bin
-        mcl --version
-        cd ..
-    - name: Audit declared public/private test selection
-      run: python -m benchmark_tools.audit_public_test_profile --root "$GITHUB_WORKSPACE" --output "$RUNNER_TEMP/public-test-selection.json"
-    - name: Run public fast tests (excludes slow and declared external evidence)
-      run: |
-        PATH=$PATH:$HOME/local/bin
-        make test.public.fast TEST_RECEIPT_DIR="$RUNNER_TEMP"
-    - name: Retain public selection and execution receipts
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: public-fast-${{ matrix.python-version }}
-        path: |
-          ${{ runner.temp }}/public-test-selection.json
-          ${{ runner.temp }}/public-unit.xml
-          ${{ runner.temp }}/public-integration.xml
-        if-no-files-found: warn
-  test-full:
-    name: public-coverage (${{ matrix.os }}; includes slow; excludes declared external evidence)
+  tests:
+    name: tests (${{ matrix.os }}, Python ${{ matrix.python-version }})
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest]
+        include:
+        - os: ubuntu-latest
+          python-version: '3.11'
+          coverage: true
+        - os: macos-latest
+          python-version: '3.10'
+          coverage: false
+        - os: macos-latest
+          python-version: '3.11'
+          coverage: false
+        - os: macos-latest
+          python-version: '3.12'
+          coverage: false
+        - os: macos-latest
+          python-version: '3.13'
+          coverage: false
     env:
-      PYTHON: '3.11'
       OMP_NUM_THREADS: '1'
       OPENBLAS_NUM_THREADS: '1'
       MKL_NUM_THREADS: '1'
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
       with:
-        fetch-depth: 0
-    - name: Setup Python
-      uses: actions/setup-python@master
-      with:
-        python-version: '3.11'
-    - name: Install test Bash runtime
-      if: runner.os == 'macOS'
-      run: |
-        brew install bash
-        printf '%s\n' "$(brew --prefix bash)/bin" >> "$GITHUB_PATH"
-        "$(brew --prefix bash)/bin/bash" --version
-        /bin/bash --version
-    - name: Install test OpenMP compiler
-      if: runner.os == 'macOS'
-      run: bash benchmark_tools/install_ci_test_compiler.sh
-    - name: Install test native utilities
-      if: runner.os == 'macOS'
-      run: |
-        brew install gnu-time pandoc
-        printf 'ORTHOHMM_TEST_GNU_TIME=%s\n' "$(brew --prefix gnu-time)/bin/gtime" >> "$GITHUB_ENV"
-        "$(brew --prefix gnu-time)/bin/gtime" --version
-        pandoc --version
-    - name: Install Linux test utilities
+        python-version: ${{ matrix.python-version }}
+    - name: Install Linux native tools
       if: runner.os == 'Linux'
       run: |
         sudo apt-get update
-        sudo apt-get install -y build-essential hmmer mcl time pandoc
-    - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
-        # make orthohmm CLI available for tests 
-        ORTHOHMM_CPU_TARGET=baseline make install
-        # install test dependencies
-        pip install -r tests/requirements.txt
-        python -c "import Bio, psutil, dendropy, ijson, openpyxl, matplotlib, PIL, fitz, scipy, setuptools, sqlglot"
-    - name: Build checkout CPU kernels
-      run: |
-        gcc --version
-        python benchmark_tools/build_ci_checkout_kernels.py --root "$GITHUB_WORKSPACE" --output "$RUNNER_TEMP/orthohmm-ci-package"
-    - name: Install HMMER
+        sudo apt-get install -y build-essential hmmer mcl mafft fasttree
+    - name: Configure macOS OpenMP compiler
+      if: runner.os == 'macOS'
+      run: bash scripts/install_ci_test_compiler.sh
+    - name: Install macOS legacy inference tools
       if: runner.os == 'macOS'
       run: |
         brew install hmmer
-    - name: Install MCL
-      if: runner.os == 'macOS'
+        cd "$RUNNER_TEMP"
+        curl -fsSLo install-this-mcl.sh https://raw.githubusercontent.com/micans/mcl/main/install-this-mcl.sh
+        bash install-this-mcl.sh
+        printf '%s\n' "$HOME/local/bin" >> "$GITHUB_PATH"
+    - name: Install application and test dependencies
       run: |
-        mkdir installmcl
-        cd installmcl
-        wget https://raw.githubusercontent.com/micans/mcl/main/install-this-mcl.sh -o install-this-mcl
-        chmod u+x install-this-mcl.sh
-        ./install-this-mcl.sh
-        PATH=$PATH:$HOME/local/bin
-        mcl --version
-        cd ..
-    - name: Audit declared public/private test selection
-      run: python -m benchmark_tools.audit_public_test_profile --root "$GITHUB_WORKSPACE" --output "$RUNNER_TEMP/public-test-selection.json"
-    - name: Generate public-profile coverage report
-      run: |
-        PATH=$PATH:$HOME/local/bin
-        make test.public.coverage TEST_RECEIPT_DIR="$RUNNER_TEMP"
-    - name: Retain public selection and execution receipts
+        python -m pip install -r tests/requirements.txt
+        ORTHOHMM_CPU_TARGET=baseline python -m pip install '.[phylogeny,hmmer]'
+    - name: Build checkout CPU kernels
+      run: python scripts/build_ci_checkout_kernels.py --root "$GITHUB_WORKSPACE" --output "$RUNNER_TEMP/checkout-kernels"
+    - name: Run application tests
+      if: ${{ !matrix.coverage }}
+      run: make test TEST_RECEIPT_DIR="$RUNNER_TEMP" PYTEST_ARGS="-q --tb=short"
+    - name: Run application coverage
+      if: matrix.coverage
+      run: make test.coverage TEST_RECEIPT_DIR="$RUNNER_TEMP" PYTEST_ARGS="-q --tb=short"
+    - name: Retain test results
       if: always()
       uses: actions/upload-artifact@v4
       with:
-        name: public-coverage-${{ runner.os }}
+        name: tests-${{ matrix.os }}-${{ matrix.python-version }}
         path: |
-          ${{ runner.temp }}/public-test-selection.json
-          ${{ runner.temp }}/public-unit.xml
-          ${{ runner.temp }}/public-integration.xml
+          ${{ runner.temp }}/unit.xml
+          ${{ runner.temp }}/integration.xml
+        if-no-files-found: error
+    - name: Retain coverage reports and data
+      if: ${{ always() && matrix.coverage }}
+      uses: actions/upload-artifact@v4
+      with:
+        name: application-coverage
+        path: |
           unit.coverage.xml
           integration.coverage.xml
           coverage.xml
@@ -168,113 +90,65 @@ jobs:
           .coverage
         include-hidden-files: true
         if-no-files-found: warn
-    - name: Upload unit test coverage to Codecov
+    - name: Upload unit coverage
+      if: matrix.coverage
       uses: codecov/codecov-action@v5
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         files: ./unit.coverage.xml
         disable_search: true
         flags: unit
-        env_vars: PYTHON
-        name: codecov-unit
         fail_ci_if_error: false
-    - name: Upload integration test coverage to Codecov
+    - name: Upload integration coverage
+      if: matrix.coverage
       uses: codecov/codecov-action@v5
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         files: ./integration.coverage.xml
         disable_search: true
         flags: integration
-        env_vars: PYTHON
-        name: codecov-integration
         fail_ci_if_error: false
-  docs:
-    runs-on: macos-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@master
-        with:
-          persist-credentials: false
-      - name: Install uv
-        uses: astral-sh/setup-uv@v4
-        with:
-          version: "0.12.15"
-          enable-cache: true
-          cache-dependency-glob: "docs/uv.lock"
-      - name: Build docs
-        run: |
-          cd docs
-          uv python install
-          uv sync --locked --all-extras --dev
-          uv run --locked python -m sphinx.cmd.build -W --keep-going -b html . ./_build/html
-          cd ..
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: docs/_build/html
-  linux-native-diagnostics:
+  native-kernels:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
     env:
       OMP_NUM_THREADS: '1'
       OPENBLAS_NUM_THREADS: '1'
       MKL_NUM_THREADS: '1'
     steps:
-    - uses: actions/checkout@master
-    - uses: actions/setup-python@master
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
       with:
         python-version: '3.12'
-    - name: Install diagnostic dependencies
-      run: python -m pip install -r requirements.txt -r tests/requirements.txt
-    - name: Execute native Linux graph, parser and host-reader checks
+    - name: Install dependencies
       run: |
-        python -m pytest -q tests/unit/test_probe_qfo_construction.py tests/unit/test_probe_qfo_direct_graph.py tests/unit/test_probe_cpm_high_constructor.py tests/unit/test_probe_cpm_partition_parser.py tests/unit/test_repeat_qfo_saved_graph.py tests/unit/test_probe_host_counters.py --junitxml="$RUNNER_TEMP/linux-native-diagnostics.xml"
-        python - "$RUNNER_TEMP/linux-native-diagnostics.xml" <<'PY'
-        import sys
-        import xml.etree.ElementTree as ET
-        root = ET.parse(sys.argv[1]).getroot()
-        cases = list(root.iter('testcase'))
-        native_names = ('test_fresh_worker_constructs_without_optimization[',
-                        'test_fresh_worker_before_after_weights[',
-                        'test_fresh_native_worker_on_small_graph[')
-        assert len([c for c in cases if c.attrib['name'].startswith(native_names)]) == 8
-        assert len([c for c in cases if c.attrib['name'].startswith('test_instrumented_real_worker_exits_and_preserves_isolate[')]) == 12
-        host_cases = [c for c in cases if c.attrib.get('classname') == 'tests.unit.test_probe_host_counters']
-        assert len(host_cases) == 35
-        assert len([c for c in host_cases if c.attrib['name'] == 'test_live_read_only_probe_and_no_overwrite']) == 1
-        assert not any(c.find(tag) is not None for c in cases for tag in ('skipped', 'failure', 'error'))
-        print('All selected checks executed; 20 native workers and one real Linux host reader, no skipped/failed/error cases')
-        PY
-    - name: Retain diagnostic test receipt
+        python -m pip install -r tests/requirements.txt
+        ORTHOHMM_CPU_TARGET=baseline python -m pip install .
+    - name: Build verified CPU kernels
+      run: python scripts/build_ci_checkout_kernels.py --root "$GITHUB_WORKSPACE" --output "$RUNNER_TEMP/native-kernels"
+    - name: Compare native kernels with numerical references
+      run: python -m pytest tests/unit/test_kernels.py tests/unit/test_native_viterbi_banding.py tests/unit/test_search_reference_kernels.py -q --tb=short --junitxml="$RUNNER_TEMP/native-kernels.xml"
+    - uses: actions/upload-artifact@v4
       if: always()
-      uses: actions/upload-artifact@v4
       with:
-        name: linux-native-diagnostics
-        path: ${{ runner.temp }}/linux-native-diagnostics.xml
-        if-no-files-found: error
+        name: native-kernel-tests
+        path: ${{ runner.temp }}/native-kernels.xml
   cpu-wheel:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-    - uses: actions/checkout@master
-    - uses: actions/setup-python@master
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
       with:
         python-version: '3.12'
-    - name: Install native build and linkage tools
+    - name: Install build and verification tools
       run: |
         sudo apt-get update
         sudo apt-get install -y build-essential binutils
-    - name: Install verification dependencies
-      run: |
-        python -m pip install -r requirements.txt -r tests/requirements.txt
-    - name: Verify freshly built CPU wheel
-      run: |
-        python -m benchmark_tools.run_ci_cpu_wheel --root "$GITHUB_WORKSPACE" --output "$RUNNER_TEMP/orthohmm-cpu-wheel"
-    - name: Retain wheel verification and failure logs
+        python -m pip install -r tests/requirements.txt
+    - name: Verify runtime-only wheel installation
+      run: python -m scripts.run_ci_cpu_wheel --root "$GITHUB_WORKSPACE" --output "$RUNNER_TEMP/orthohmm-cpu-wheel"
+    - uses: actions/upload-artifact@v4
       if: always()
-      uses: actions/upload-artifact@v4
       with:
         name: cpu-wheel-verification
         path: |
@@ -282,4 +156,29 @@ jobs:
           ${{ runner.temp }}/orthohmm-cpu-wheel/*.log
           ${{ runner.temp }}/orthohmm-cpu-wheel/verification/*.log
           ${{ runner.temp }}/orthohmm-cpu-wheel/verification/verification.json
-        if-no-files-found: warn
+  docs:
+    runs-on: macos-latest
+    permissions:
+      contents: write
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+    - uses: astral-sh/setup-uv@v4
+      with:
+        version: "0.12.15"
+        enable-cache: true
+        cache-dependency-glob: docs/uv.lock
+    - name: Build documentation
+      working-directory: docs
+      run: |
+        uv python install
+        uv sync --locked --all-extras --dev
+        uv run --locked python -m sphinx.cmd.build -W --keep-going -b html . ./_build/html
+    - name: Deploy documentation
+      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: docs/_build/html

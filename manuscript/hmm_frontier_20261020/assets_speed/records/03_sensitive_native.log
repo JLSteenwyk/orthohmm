@@ -1,39 +1,0 @@
-  ____       _   _           _    _ __  __ __  __
- / __ \     | | | |         | |  | |  \/  |  \/  |
-| |  | |_ __| |_| |__   ___ | |__| | \  / | \  / |
-| |  | | '__| __| '_ \ / _ \|  __  | |\/| | |\/| |
-| |__| | |  | |_| | | | (_) | |  | | |  | | |  | |
- \____/|_|   \__|_| |_|\___/|_|  |_|_|  |_|_|  |_|
-
-Version: 0.5.0
-
--------------
-| Arguments |
--------------
-Directory of FASTA files: /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/input
-Number of FASTA files: 3
-Directory for output files: /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/orthohmm_generations_20261022_v2/runs/03_sensitive/output
-Step to start analysis: NA
-Step to stop analysis: infer
-Search engine: built-in (profile HMM + k-mer prefilter)
-Accuracy profile: high_sensitivity
-E-value threshold: 0.0001
-Substitution matrix: BLOSUM62
-Clustering: Leiden CPM (resolution=0.1)
-Single-copy threshold: 0.5
-CPUs: 16
-
-
-Step 1/4: Conducting all-to-all comparisons (built-in search).
-          11.11% complete          22.22% complete          33.33% complete          44.44% complete          55.56% complete          66.67% complete          77.78% complete          88.89% complete          100.00% complete
-          Completed!      
-
-Step 2/4: Determining edge thresholds
-          Completed!      
-
-Step 3/4: Identifying network edges
-          Completed!      
-
-Step 4/4: Conducting clustering
-          Completed!
-

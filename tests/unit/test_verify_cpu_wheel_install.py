@@ -1,6 +1,6 @@
 import pytest
 
-from benchmark_tools.verify_cpu_wheel_install import partition
+from scripts.verify_cpu_wheel_install import partition
 
 
 @pytest.mark.parametrize("text,genes", [("OG0: a b\nOG1: c\n", ["a", "b", "c"]),

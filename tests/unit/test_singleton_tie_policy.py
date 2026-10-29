@@ -132,19 +132,11 @@ def test_policy_metadata_does_not_change_hmm_search_configuration(tmp_path, monk
     assert json.loads(metrics.read_text())["metadata"]["singleton_tie_policy"] == policy
 
 
-def test_cached_replay_parser_and_production_wrapper_share_policy_names():
-    from benchmark_tools.replay_high_sensitivity import build_parser
-    from benchmark_tools.benchmark_production import parse_args
-    replay = build_parser().parse_args(["--accuracy-checkpoint", "input", "--checkpoint-sha256", "hash",
-        "--output-directory", "out", "--json", "result.json", "--singleton-tie-policy", "defer_ambiguous"])
-    assert replay.singleton_tie_policy == "defer_ambiguous"
-    with pytest.raises(SystemExit):
-        parse_args(["inputs", "output", "metrics.json", "--singleton-tie-policy", "defer_ambiguous"])
 
 
 @pytest.mark.parametrize("policy", ["first_hit", "defer_ambiguous"])
 def test_pipeline_passes_policy_to_both_graph_attachment_stages(tmp_path, monkeypatch, policy):
-    from benchmark_tools.verify_frozen_phylogeny_install import fixture
+    from tests.support import fixture
     import orthohmm.orthohmm as pipeline
     import orthohmm.search.engine as engine
     import orthohmm.search.profile_expansion as expansion
@@ -177,32 +169,3 @@ def test_pipeline_passes_policy_to_both_graph_attachment_stages(tmp_path, monkey
             SubstitutionMatrix.blosum62, 1e-4, accuracy_profile="high_sensitivity", singleton_tie_policy=policy)
     expected = {} if policy == "first_hit" else {"tie_policy": policy}
     assert captured == [expected, expected]
-
-
-def test_real_native_phylogeny_pipeline_records_opt_in_policy(tmp_path):
-    from benchmark_tools.verify_frozen_phylogeny_install import fixture
-    from benchmark_tools.run_full_search_hillclimb import native_command, validate_native, PRODUCTS
-    from benchmark_tools.prepare_ob_candidate_neighborhood import record
-    source = Path(__file__).resolve().parents[2]
-    tools = [shutil.which("mafft"), shutil.which("FastTree")]
-    if not all(tools):
-        pytest.skip("Requires MAFFT and FastTree")
-    fasta = tmp_path / "input"
-    fasta.mkdir()
-    for taxon, genes in fixture().items():
-        (fasta / f"{taxon}.faa").write_text("".join(f">{gene}\n{seq}\n" for gene, seq in genes.items()))
-    folder = tmp_path / "native"
-    folder.mkdir()
-    command = native_command(source, fasta, folder, tools, 100, 2)
-    command.extend(["--search-result-order", "canonical", "--singleton-tie-policy", "defer_ambiguous"])
-    env = {**os.environ, "CUDA_VISIBLE_DEVICES": "", "OMP_NUM_THREADS": "1", "NUMBA_NUM_THREADS": "2",
-           "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1", "PYTHONHASHSEED": "0", "PYTHONPATH": str(source)}
-    child = subprocess.run(command, cwd=source, env=env, capture_output=True, text=True, timeout=180)
-    assert child.returncode == 0, child.stdout + child.stderr + (folder / "output/benchmark.log").read_text()
-    phylo = folder / "output/orthohmm_phylogeny"
-    case = {"fasta": str(fasta), "output": str(folder), "search_max_candidates_per_query": 100,
-            "inputs": [record(p) for p in sorted(fasta.iterdir())],
-            "golden": {name: record(phylo / name) for name in (*PRODUCTS, "species_tree.rooted.nwk")}}
-    actual = validate_native(case, 2)
-    assert actual["metrics"]["metadata"]["singleton_tie_policy"] == "defer_ambiguous"
-    assert (actual["genes"], actual["species"]) == (16, 4)

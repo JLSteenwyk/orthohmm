@@ -8,7 +8,7 @@ import subprocess
 import numpy as np
 import pytest
 
-from benchmark_tools.hmm_generalization_holdout import species_sequences
+from tests.support import species_sequences
 from orthohmm.args_processing import process_args
 from orthohmm.helpers import StartStep, SubstitutionMatrix
 from orthohmm.parser import create_parser
@@ -120,22 +120,14 @@ def test_api_rejects_inactive_scopes_before_search(tmp_path, accuracy, search, s
                        search_mode=search, profile_projection_policy=POLICY)
 
 
-@pytest.mark.parametrize("option,value,api_key", [("--profile-sequence-weighting", "species_henikoff_cluster", "sequence_weighting"),
-    ("--profile-alignment-policy", "strict_span_guard", "alignment_policy")])
-def test_unregistered_combinations_rejected_at_all_entry_points(tmp_path, capsys, option, value, api_key):
-    from benchmark_tools.benchmark_production import parse_args
-    from benchmark_tools.replay_high_sensitivity import main
+@pytest.mark.parametrize("option,value,api_key", [
+    ("--profile-sequence-weighting", "species_henikoff_cluster", "sequence_weighting"),
+    ("--profile-alignment-policy", "strict_span_guard", "alignment_policy"),
+])
+def test_unregistered_combinations_rejected_at_application_entry_points(tmp_path, option, value, api_key):
     with pytest.raises(SystemExit):
         process_args(create_parser().parse_args([str(tmp_path), "--accuracy_profile", "high_sensitivity",
             "--profile-projection-policy", POLICY, option, value]))
-    with pytest.raises(SystemExit):
-        parse_args(["in", "out", "metrics.json", "--cpu", "1", "--accuracy-profile", "high_sensitivity",
-                    "--profile-projection-policy", POLICY, option, value])
-    assert "separate experiment" in capsys.readouterr().err
-    with pytest.raises(SystemExit, match="separate experiment"):
-        main(["--hits-pickle", "missing", "--output-directory", str(tmp_path / "out"),
-              "--json", str(tmp_path / "out.json"), "--fasta-directory", str(tmp_path),
-              "--profile-projection-policy", POLICY, option, value])
     with pytest.raises(ValueError, match="separate experiment"):
         expansion.expand_profiles([], [], "missing", [], "BLOSUM62", 1, 1e-4, [], [], [],
                                   projection_policy=POLICY, **{api_key: value})
@@ -145,104 +137,4 @@ def test_unregistered_combinations_rejected_at_all_entry_points(tmp_path, capsys
         module.execute(str(tmp_path), str(tmp_path / "out"), "phmmer", 1, .5, "mcl", 1.5,
                        None, None, SubstitutionMatrix.blosum62, 1e-4, accuracy_profile="high_sensitivity",
                        profile_projection_policy=POLICY, **{"profile_" + api_key: value})
-    # The production API creates output/working directories before validation,
-    # but must not run inference or write biological products for this rejection.
-    assert not [p for p in (tmp_path / "out").rglob("*") if p.is_file()]
-
-
-def test_replay_and_harness_reject_inactive_policy_before_outputs(tmp_path, capsys):
-    from benchmark_tools.benchmark_production import parse_args
-    from benchmark_tools.replay_high_sensitivity import main
-    with pytest.raises(SystemExit):
-        parse_args(["in", "out", "metrics.json", "--cpu", "1", "--profile-projection-policy", POLICY])
-    assert "requires --accuracy-profile high_sensitivity" in capsys.readouterr().err
-    with pytest.raises(SystemExit, match="requires --fasta-directory"):
-        main(["--hits-pickle", "missing", "--output-directory", str(tmp_path / "out"),
-              "--json", str(tmp_path / "out.json"), "--profile-projection-policy", POLICY])
-    assert not (tmp_path / "out").exists()
-
-
-@pytest.mark.parametrize("weighting", ["none", "henikoff", "henikoff_cluster"])
-def test_numeric_hit_replay_builds_repaired_profiles_and_records_policy(tmp_path, monkeypatch, weighting):
-    from orthohmm.accuracy import write_accuracy_checkpoint
-    from benchmark_tools.orthobench_stage_diagnostics import file_provenance
-    from benchmark_tools.replay_high_sensitivity import main
-    names = [f"gene{i}" for i in range(6)]
-    fasta = tmp_path / "input"
-    fasta.mkdir()
-    sequences = [BASE, BASE, "GGG" + BASE, BASE[::-1], BASE[::-1], "GGG" + BASE[::-1]]
-    for i in range(3):
-        (fasta / f"taxon{i}.fa").write_text("".join(f">{names[j]}\n{sequences[j]}\n" for j in (i, i + 3)))
-    pairs = [(q, t) for q in range(6) for t in range(6) if q // 3 == t // 3]
-    checkpoint = write_accuracy_checkpoint(str(tmp_path / "checkpoint"), names, [0, 1, 2, 0, 1, 2],
-                                          [p[0] for p in pairs], [p[1] for p in pairs], [100.] * len(pairs))
-    checksum = file_provenance(checkpoint / "manifest.json")["sha256"]
-    observed = []
-    original = expansion.build_cluster_profiles
-
-    def capture(*args, **kwargs):
-        result = original(*args, **kwargs)
-        observed.extend(result.values())
-        return result
-
-    monkeypatch.setattr(expansion, "build_cluster_profiles", capture)
-    output = tmp_path / "graph"
-    result_json = tmp_path / "result.json"
-    assert main(["--accuracy-checkpoint", str(checkpoint), "--checkpoint-sha256", checksum,
-                 "--output-directory", str(output), "--json", str(result_json), "--fasta-directory", str(fasta),
-                 "--profile-projection-policy", POLICY, "--profile-sequence-weighting", weighting, "--cpu", "1"]) == 0
-    assert observed and all(p.projection_policy == POLICY for p in observed)
-    assert all(p.sequence_weighting == weighting for p in observed)
-    result = json.loads(result_json.read_text())
-    assert result["parameters"]["profile_projection_policy"] == POLICY
-    assert result["parameters"]["profile_sequence_weighting"] == weighting
-    for iteration in result["profile_iterations"]:
-        if weighting == "none":
-            assert "profile_construction_policies" not in iteration
-        else:
-            records = iteration["profile_construction_policies"]
-            assert len(records) == iteration["profiles_built"] > 0
-            assert all(r["sequence_weighting"] == weighting and r["projection_policy"] == POLICY for r in records)
-            assert [(r["cluster_id"], r["effective_sequence_count"]) for r in records] == [
-                (r["cluster_id"], r["effective_sequence_count"]) for r in iteration["profile_effective_counts"]]
-
-
-@pytest.mark.parametrize("weighting", ["none", "henikoff", "henikoff_cluster"])
-def test_complete_native_pipeline_propagates_opt_in_through_harness_and_cli(tmp_path, weighting):
-    from benchmark_tools.verify_frozen_phylogeny_install import fixture
-    from benchmark_tools.run_full_search_hillclimb import native_command, validate_native, PRODUCTS
-    from benchmark_tools.prepare_ob_candidate_neighborhood import record
-    source = Path(__file__).resolve().parents[2]
-    tools = [shutil.which("mafft"), shutil.which("FastTree")]
-    if not all(tools):
-        pytest.skip("Requires MAFFT and FastTree")
-    fasta = tmp_path / "input"
-    fasta.mkdir()
-    for taxon, genes in fixture().items():
-        (fasta / f"{taxon}.faa").write_text("".join(f">{gene}\n{seq}\n" for gene, seq in genes.items()))
-    folder = tmp_path / "native"
-    folder.mkdir()
-    command = native_command(source, fasta, folder, tools, 100, 2)
-    command.extend(["--search-result-order", "canonical", "--profile-projection-policy", POLICY,
-                    "--profile-sequence-weighting", weighting])
-    environment = {**os.environ, "CUDA_VISIBLE_DEVICES": "", "OMP_NUM_THREADS": "1", "NUMBA_NUM_THREADS": "2",
-                   "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1", "PYTHONHASHSEED": "0", "PYTHONPATH": str(source)}
-    child = subprocess.run(command, cwd=source, env=environment, capture_output=True, text=True, timeout=180)
-    assert child.returncode == 0, child.stdout + child.stderr
-    phylo = folder / "output/orthohmm_phylogeny"
-    case = {"fasta": str(fasta), "output": str(folder), "search_max_candidates_per_query": 100,
-            "inputs": [record(path) for path in sorted(fasta.iterdir())],
-            "golden": {name: record(phylo / name) for name in (*PRODUCTS, "species_tree.rooted.nwk")}}
-    actual = validate_native(case, 2)
-    assert actual["metrics"]["metadata"]["profile_projection_policy"] == POLICY
-    counts = actual["metrics"]["counts"]
-    assert counts["high_sensitivity_residue_preserving_profiles"] == counts["high_sensitivity_profiles"] > 0
-    if weighting == "none":
-        assert "high_sensitivity_weighted_residue_preserving_profiles" not in counts
-    else:
-        assert counts["high_sensitivity_weighted_residue_preserving_profiles"] == counts["high_sensitivity_profiles"]
-        diagnostics = json.loads(Path(actual["metrics"]["metadata"]["profile_sequence_weighting_diagnostics"]).read_text())
-        assert diagnostics["projection_policy"] == POLICY and diagnostics["mode"] == weighting
-        records = diagnostics["construction_policies"]
-        assert len(records) == counts["high_sensitivity_profiles"]
-        assert all(r["sequence_weighting"] == weighting and r["projection_policy"] == POLICY for r in records)
+    assert not [path for path in (tmp_path / "out").rglob("*") if path.is_file()]

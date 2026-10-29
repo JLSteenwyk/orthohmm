@@ -27,10 +27,8 @@ CSRC = HERE / "orthohmm" / "search" / "csrc"
 # ─── Kernel build configuration ────────────────────────────────────────
 
 # (source filename, needs_avx2, needs_math_lib)
-# Production kernels only. Experimental kernels under
-# orthohmm/search/_experimental/csrc/ are intentionally not built —
-# they are retained as reference implementations for the paper's
-# methods section and are not loaded at runtime.
+# Production kernels only. Research reference implementations are maintained
+# on the research-archive-20261029 branch, not in the installable application.
 CPU_KERNELS = [
     ("hmm_viterbi.c",     True,  False),  # scalar + multipair AVX2 + xdrop
     ("kmer_prefilter.c",  False, False),  # CSR k-mer prefilter
@@ -230,7 +228,7 @@ setup(
     version=__version__,
     include_package_data=True,
     install_requires=REQUIRES,
-    extras_require={"phylogeny": ["dendropy>=5.0"]},
+    extras_require={"phylogeny": ["dendropy>=5.0"], "hmmer": ["biopython>=1.85"]},
     python_requires=">=3.10",
     cmdclass={
         "build_py": CustomBuildPy,

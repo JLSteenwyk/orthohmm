@@ -5,7 +5,7 @@ import subprocess
 
 import pytest
 
-SCRIPT = Path(__file__).resolve().parents[2] / "benchmark_tools/install_ci_test_compiler.sh"
+SCRIPT = Path(__file__).resolve().parents[2] / "scripts/install_ci_test_compiler.sh"
 
 
 @pytest.fixture

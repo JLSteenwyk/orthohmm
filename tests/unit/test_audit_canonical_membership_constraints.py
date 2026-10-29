@@ -2,32 +2,13 @@ from itertools import permutations
 
 import pytest
 
-from benchmark_tools.audit_canonical_membership_constraints import semantic_constraints,compare_constraints
 from orthohmm.phylogeny_pipeline import FamilyOutcome,apply_satellite_membership_constraints
 
 
-def test_ignore_unused_metadata_and_gene_order_not_direction():
-    a=[dict(source_genes=["a","b"],target_genes=["c"],support=1,iteration=0)]
-    b=[dict(source_genes=["b","a"],target_genes=["c"],support=2,iteration=1)]
-    assert compare_constraints(a,b)["semantic_sequence_equal"]
-    assert not compare_constraints(a,[dict(source_genes=["c"],target_genes=["a","b"])])["semantic_multiset_equal"]
 
 
-def test_counter_preserves_multiplicity_and_detects_order_changes():
-    a=dict(source_genes=["a"],target_genes=["c"])
-    b=dict(source_genes=["b"],target_genes=["c"])
-    assert not compare_constraints([a,a],[a])["semantic_multiset_equal"]
-    result=compare_constraints([a,b],[b,a])
-    assert result["semantic_multiset_equal"] and not result["semantic_sequence_equal"]
-    assert result["positions_changed"]==2
-    assert result["historical_semantic_sha256"]==result["current_semantic_sha256"]
 
 
-@pytest.mark.parametrize("source,target", [([], ["b"]),(["a","a"],["b"]),(["a"],["a"]),
-    ([None],["b"]),(["a"],[""]),(["a"],[])])
-def test_invalid_gene_sets_rejected(source,target):
-    with pytest.raises(ValueError):
-        semantic_constraints([dict(source_genes=source,target_genes=target)])
 
 
 def test_actual_consumer_preserves_memberships_not_group_order():

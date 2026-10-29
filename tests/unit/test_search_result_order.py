@@ -148,10 +148,6 @@ def test_pipeline_uses_canonical_collector_before_writing_checkpoint(tmp_path,mo
     assert captured['queries']==['s']*4
 
 
-def test_benchmark_wrapper_rejects_inactive_canonical_mode():
-    from benchmark_tools.benchmark_production import parse_args
-    with pytest.raises(SystemExit):
-        parse_args(['inputs','output','metrics.json','--cpu','1','--search-result-order','canonical'])
 
 
 def test_refinement_recollection_uses_the_same_policy_without_forwarding_it_to_graph_rules(tmp_path,monkeypatch):

@@ -1,75 +1,27 @@
 .. _performance:
 
+Research and Evaluation
+=======================
 
-Performance Assessment
-======================
+Manuscripts, benchmark datasets, evaluation drivers, and historical results
+are maintained separately from the application checkout. The complete
+pre-separation source snapshot is preserved at commit
+``ebfa635ca786796287c9ff2a3caba1c2618f016e`` on the
+`research-archive-20261029 branch <https://github.com/JLSteenwyk/orthohmm/tree/research-archive-20261029>`_.
 
-OrthoHMM is evaluated against other orthology-inference tools using OrthoBench
-and Quest for Orthologs (QfO) as primary benchmarks. Three Kingdoms is a
-supplementary conserved-family benchmark. Results depend on the dataset,
-configuration, reference universe and type of prediction being evaluated.
-The current publication analyses do not establish general superiority over
-full OrthoFinder or the other comparators.
+* `Publication reproduction guide <https://github.com/JLSteenwyk/orthohmm/blob/ebfa635ca786796287c9ff2a3caba1c2618f016e/benchmark_tools/PUBLICATION_REPRODUCTION.md>`_
+* `Manuscript and figures <https://github.com/JLSteenwyk/orthohmm/tree/ebfa635ca786796287c9ff2a3caba1c2618f016e/manuscript>`_
+* `Evaluation scripts and evidence <https://github.com/JLSteenwyk/orthohmm/tree/ebfa635ca786796287c9ff2a3caba1c2618f016e/benchmark_tools>`_
 
-Current evidence
-----------------
+OrthoBench and Quest for Orthologs are the primary benchmarks; Three
+Kingdoms provides supplementary conserved-family evidence. These datasets
+were inspected during development, so they do not independently validate
+settings selected using their scores. Orthogroups, root hierarchical
+orthogroups, and native pairwise ortholog predictions have different
+semantics and must not be treated as interchangeable outputs.
 
-* On OrthoBench, phylogenetic OrthoHMM has a higher observed aggregate F1 than
-  full OrthoFinder, but the paired difference interval includes zero. The
-  results show a precision-recall trade-off, not established F1 superiority.
-* QfO challenges measure different properties. Their individual endpoints
-  must remain visible; the project's six-metric mean is a secondary summary,
-  not an official overall accuracy score.
-* Three Kingdoms scoring is restricted to the available BUSCO reference
-  universe. It does not establish proteome-wide orthology accuracy.
-* Frozen YGOB evaluation provides bounded transfer evidence on novel taxa,
-  but substantial family overlap prevents a family-disjoint validation claim.
-* The prespecified biological application shows improved homolog-supported
-  paralog separation with phylogenetic OrthoHMM relative to high sensitivity,
-  alongside lower homolog coverage. Full OrthoFinder and SonicParanoid perform
-  better on supported separation and coverage in this application.
-* The 27-attempt matched-resource panel is running on the local Threadripper,
-  not the DGX, with 32 native CPUs and a 128-GiB limit per run. A quiet window
-  is not required. Background workload monitoring, resource accounting and
-  output checks remain required. Competing analyses may distort timing by an
-  unknown, potentially method-dependent amount; matching resource limits does
-  not isolate tool speed. Exclusions and missing repeats are explicit.
-  Historical resource measurements are not pooled with this panel.
-
-OrthoBench and QfO were inspected during development. Their scores are not
-independent confirmation of settings selected using those datasets. The
-repository retains neutral and negative results, native failures, exclusions,
-paired uncertainty and output-conversion audits.
-
-Prediction semantics
---------------------
-
-Orthogroups, root hierarchical orthogroups and native pairwise orthologs are
-different outputs. Pre-clustering graph edges are not final ortholog predictions.
-The retained OrthoFinder MCL checkpoint is a diagnostic comparison, not a
-separately executed sequence-only OrthoFinder pipeline. Comparisons must use
-the output and scoring protocol specified for each benchmark.
-
-Reports and reproducibility
----------------------------
-
-The `corrected eight-method QfO comparison <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/qfo_corrected_comparison_20260926_v7/scores.md>`_
-contains current observed endpoints and prediction semantics. The
-`main scientific draft <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261004.md>`_
-links OrthoBench, uncertainty and transfer evidence. The
-`final resource table <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v27/attempts.tsv>`_
-and `final resource figure <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/threadripper_shared_resource_figure_20261004_v26/shared_threadripper_resources.pdf>`_
-retain all 27 reviewed attempts, 25 measured runs and 24 eligible observations.
-Six cells have three eligible repeats; three retain unavailable summaries.
-Excluded raw values and both pre-native aborts remain explicit, without causal
-speed rankings. The
-`claim-to-evidence checklist <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/PUBLICATION_CLAIMS_20260916.md>`_
-links uncertainty, ablations, simulations, transfer evaluation and the
-biological application. The
-`progress ledger <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/PUBLICATION_PROGRESS.md>`_
-records completed analyses, running jobs and unresolved requirements.
-
-The new publication package remains in preparation; its release and archival
-deposition are not complete. Earlier desirability rankings and the historical
-performance illustration remain in the repository and its history, and are
-not substituted for the current audited endpoints.
+Shared-host timing measurements may be distorted by competing analyses in
+method-dependent ways. Matching CPU and memory limits does not establish
+isolated speedups. Historical reproduction instructions and limitations
+remain in the archived evidence; separating the application does not
+establish new biological accuracy, timing, or reproducibility claims.

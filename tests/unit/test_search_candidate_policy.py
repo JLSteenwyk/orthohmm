@@ -220,28 +220,10 @@ def test_worker_handoff_uses_explicit_eleven_fields_only_for_union(tmp_path, mon
     assert options["candidate_policy"] == "protected_union" and "min_total_hits" not in options
 
 
-def test_checkpoint_policy_isolated_and_default_manifest_unchanged(tmp_path):
-    checkpoints = []
-    for label, options in (("implicit", {}), ("single", {"search_candidate_policy": "single"}),
-                            ("union", {"search_candidate_policy": "protected_union"})):
-        checkpoints.append(write_accuracy_checkpoint(str(tmp_path / label), ["a", "b"], [0, 1], [0], [1], [1.], **options))
-    assert (checkpoints[0] / "manifest.json").read_bytes() == (checkpoints[1] / "manifest.json").read_bytes()
-    assert "search_candidate_policy" not in json.loads((checkpoints[0] / "manifest.json").read_text())
-    with pytest.raises(ValueError, match="candidate policy mismatch"):
-        load_accuracy_checkpoint(checkpoints[2])
-    with pytest.raises(ValueError, match="candidate policy mismatch"):
-        load_accuracy_checkpoint(checkpoints[0], expected_candidate_policy="protected_union")
-    assert load_accuracy_checkpoint(checkpoints[2], expected_candidate_policy="protected_union")[0] == ["a", "b"]
-    from benchmark_tools.audit_accuracy_checkpoint import audit
-    from benchmark_tools.prepare_ob_candidate_neighborhood import record
-    pin = record(checkpoints[2] / "manifest.json")
-    with pytest.raises(ValueError, match="candidate policy mismatch"):
-        audit(checkpoints[2], pin["sha256"])
-    assert audit(checkpoints[2], pin["sha256"], expected_candidate_policy="protected_union")["summary"]["genes"] == 2
 
 
 def test_real_cpu_union_scores_match_independent_single_searches(tmp_path, monkeypatch):
-    from benchmark_tools.verify_frozen_phylogeny_install import fixture
+    from tests.support import fixture
     from orthohmm.search.prefilter import is_c_prefilter_available
     if not engine.is_c_available() or not is_c_prefilter_available():
         pytest.skip("Requires compiled CPU HMM and prefilter")
@@ -264,32 +246,16 @@ def test_real_cpu_union_scores_match_independent_single_searches(tmp_path, monke
         assert union.candidate_count == len(a.keys() | b.keys())
 
 
-def test_real_native_pipeline_records_and_validates_union_without_losing_gene_universe(tmp_path):
-    from benchmark_tools.verify_frozen_phylogeny_install import fixture
-    from benchmark_tools.run_full_search_hillclimb import native_command, validate_native, PRODUCTS
-    from benchmark_tools.prepare_ob_candidate_neighborhood import record
-    source = Path(__file__).resolve().parents[2]
-    tools = [shutil.which("mafft"), shutil.which("FastTree")]
-    if not all(tools): pytest.skip("Requires MAFFT and FastTree")
-    fasta = tmp_path / "input"
-    fasta.mkdir()
-    for taxon, genes in fixture().items():
-        (fasta / f"{taxon}.faa").write_text("".join(f">{gene}\n{seq}\n" for gene, seq in genes.items()))
-    folder = tmp_path / "native"
-    folder.mkdir()
-    command = native_command(source, fasta, folder, tools, 3, 2)
-    command.extend(["--search-result-order", "canonical", "--search-candidate-policy", "protected_union"])
-    env = {**os.environ, "CUDA_VISIBLE_DEVICES": "", "OMP_NUM_THREADS": "1", "NUMBA_NUM_THREADS": "2",
-        "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1", "PYTHONHASHSEED": "0", "PYTHONPATH": str(source)}
-    child = subprocess.run(command, cwd=source, env=env, capture_output=True, text=True, timeout=180)
-    assert child.returncode == 0, child.stdout + child.stderr + (folder / "output/benchmark.log").read_text()
-    phylo = folder / "output/orthohmm_phylogeny"
-    case = {"fasta": str(fasta), "output": str(folder), "search_max_candidates_per_query": 3,
-        "search_candidate_policy": "protected_union", "inputs": [record(p) for p in sorted(fasta.iterdir())],
-        "golden": {name: record(phylo / name) for name in (*PRODUCTS, "species_tree.rooted.nwk")}}
-    native = validate_native(case, 2)
-    assert (native["genes"], native["species"]) == (16, 4)
-    assert native["metrics"]["metadata"]["search_candidate_policy"] == "protected_union"
-    case.pop("search_candidate_policy")
-    with pytest.raises(ValueError, match="search candidate policy"):
-        validate_native(case, 2)
+def test_checkpoint_policy_isolated_and_default_manifest_unchanged(tmp_path):
+    checkpoints = []
+    for label, options in (("implicit", {}), ("single", {"search_candidate_policy": "single"}),
+                            ("union", {"search_candidate_policy": "protected_union"})):
+        checkpoints.append(write_accuracy_checkpoint(str(tmp_path / label), ["a", "b"], [0, 1],
+                                                     [0], [1], [1.], **options))
+    assert (checkpoints[0] / "manifest.json").read_bytes() == (checkpoints[1] / "manifest.json").read_bytes()
+    assert "search_candidate_policy" not in json.loads((checkpoints[0] / "manifest.json").read_text())
+    with pytest.raises(ValueError, match="candidate policy mismatch"):
+        load_accuracy_checkpoint(checkpoints[2])
+    with pytest.raises(ValueError, match="candidate policy mismatch"):
+        load_accuracy_checkpoint(checkpoints[0], expected_candidate_policy="protected_union")
+    assert load_accuracy_checkpoint(checkpoints[2], expected_candidate_policy="protected_union")[0] == ["a", "b"]

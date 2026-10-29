@@ -145,23 +145,6 @@ def test_pipeline_records_experimental_policy_and_accepts_case_normalization(tmp
     assert metadata["defer_copy_split_max_size"] == 500
 
 
-def test_benchmark_wrapper_forwards_deferred_profile(tmp_path, monkeypatch):
-    from benchmark_tools import benchmark_production
-    fasta = tmp_path / "fasta"
-    fasta.mkdir()
-    (fasta / "A.faa").write_text(">a\nACDE\n")
-    captured = {}
-    def fake_run(command, **kwargs):
-        captured["command"] = command
-        with open(command[command.index("--metrics_json") + 1], "w") as stream:
-            json.dump({"schema_version": 1, "status": "complete"}, stream)
-        return SimpleNamespace(returncode=0)
-    monkeypatch.setattr(benchmark_production.subprocess, "run", fake_run)
-    monkeypatch.setattr(benchmark_production, "git_value", lambda *args: "")
-    assert benchmark_production.main([str(fasta), str(tmp_path / "out"), str(tmp_path / "result.json"),
-        "--cpu", "1", "--refinement-profile", "phylogeny_deferred"]) == 0
-    command = captured["command"]
-    assert command[command.index("--refinement_profile") + 1] == "phylogeny_deferred"
 
 
 @pytest.mark.parametrize("size,branch", [(70, "medium"), (149, "medium"), (150, "large"), (500, "large")])
@@ -282,25 +265,6 @@ def test_scope_is_forwarded_after_reciprocal_merge_paths(monkeypatch, dataset_sp
     assert observed[0].get("broad_mode", False) is (dataset_species >= 50)
 
 
-@pytest.mark.parametrize("branch", ["large", "medium"])
-def test_benchmark_wrapper_forwards_scoped_profile(tmp_path, monkeypatch, branch):
-    from benchmark_tools import benchmark_production
-    fasta = tmp_path / "fasta"
-    fasta.mkdir()
-    (fasta / "A.faa").write_text(">a\nACDE\n")
-    captured = {}
-    def fake_run(command, **kwargs):
-        captured["command"] = command
-        with open(command[command.index("--metrics_json") + 1], "w") as stream:
-            json.dump({"schema_version": 1, "status": "complete"}, stream)
-        return SimpleNamespace(returncode=0)
-    monkeypatch.setattr(benchmark_production.subprocess, "run", fake_run)
-    monkeypatch.setattr(benchmark_production, "git_value", lambda *args: "")
-    profile = "phylogeny_deferred_" + branch
-    assert benchmark_production.main([str(fasta), str(tmp_path / "out"), str(tmp_path / "result.json"),
-        "--cpu", "1", "--refinement-profile", profile]) == 0
-    command = captured["command"]
-    assert command[command.index("--refinement_profile") + 1] == profile
 
 
 @pytest.mark.parametrize("size,branch", [(70, "medium"), (149, "medium"), (150, "large"), (500, "large"), (501, "large")])

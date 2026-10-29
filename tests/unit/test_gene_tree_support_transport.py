@@ -141,22 +141,6 @@ def test_opt_in_requires_enabled_phylogeny_and_does_not_invalidate_raw_tree_inpu
         "f", ("a","b"), sequences, replace(config, gene_tree_support_mode="bipartition"))
 
 
-def test_production_and_replay_parser_modes_are_opt_in():
-    from orthohmm.parser import create_parser
-    from benchmark_tools.replay_phylogeny import build_parser
-    from benchmark_tools.benchmark_production import parse_args
-    parser = create_parser()
-    assert parser.parse_args(["inputs"]).gene_tree_support_mode == "legacy"
-    assert parser.parse_args(["inputs", "--gene_tree_support_mode", "bipartition"]).gene_tree_support_mode == "bipartition"
-    replay = build_parser().parse_args(["--fasta-directory", "inputs", "--candidate-clusters", "groups",
-                                       "--output-directory", "output", "--json", "result.json",
-                                       "--gene-tree-support-mode", "bipartition"])
-    assert replay.gene_tree_support_mode == "bipartition"
-    args = ["inputs", "output", "result.json", "--cpu", "1"]
-    assert parse_args(args).gene_tree_support_mode == "legacy"
-    assert parse_args(args + ["--phylogeny", "reconcile", "--gene-tree-support-mode", "bipartition"]).gene_tree_support_mode == "bipartition"
-    with pytest.raises(SystemExit):
-        parse_args(args + ["--gene-tree-support-mode", "bipartition"])
 
 
 def test_enabled_validation_preserves_opt_in_support_mode(tmp_path):

@@ -1,4 +1,0 @@
-paramfile := getenv('ALF_SMOKE_PARAMS'):
-ReadProgram('/alfroot/simulator/evolstart.drw'):
-printf('ORTHOHMM_ALF_SMOKE_RETURNED\n'):
-quit:

@@ -49,17 +49,14 @@ def checked(command, directory, environment):
     return result
 
 
-def test_current_config_keeps_product_and_benchmark_sources_visible():
+def test_current_config_measures_application_without_hiding_source_errors():
     config = configparser.ConfigParser()
     config.read(ROOT / ".coveragerc")
-    assert config.get("run", "source").strip() == "."
+    assert config.get("run", "source").strip() == "orthohmm"
     assert set(config.get("run", "patch").split()) == {"subprocess", "_exit"}
     assert config.getboolean("run", "relative_files")
     omissions = config.get("run", "omit").split()
-    assert omissions == ["*/tests/*", "*/setup.py", "*/orthohmm-runner.py",
-        "*/694a77fe56167754ca949751bca88aa7d11353dc:orthohmm/accuracy.py",
-        "*/7f3a9e40dd7e79f842cc2c11fb8b548f9a802806:orthohmm/accuracy.py",
-        "*/factorial-gate", "*/frozen-copy-guard"]
+    assert omissions == ["*/tests/*", "*/setup.py", "*/orthohmm-runner.py"]
     assert config.get("report", "omit").split() == omissions
     assert not config.getboolean("report", "ignore_errors", fallback=False)
     assert "orthohmm/__main__.py" not in (ROOT / "codecov.yml").read_text()
@@ -130,10 +127,7 @@ def test_make_combines_unit_and_integration_without_discarding_either(tmp_path, 
     shutil.copyfile(ROOT / ".coveragerc", tmp_path / ".coveragerc")
     for label, line in (("unit", 1), ("integration", 2)):
         data = CoverageData(basename=str(tmp_path / (".coverage-" + label)))
-        data.add_lines({"orthohmm/tiny.py": {line}, "tests/harness_only.py": {1},
-            "694a77fe56167754ca949751bca88aa7d11353dc:orthohmm/accuracy.py": {1},
-            "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806:orthohmm/accuracy.py": {1},
-            "factorial-gate": {1}, "frozen-copy-guard": {1}})
+        data.add_lines({"orthohmm/tiny.py": {line}, "tests/harness_only.py": {1}})
         data.write()
     environment = clean_environment()
     environment["PATH"] = str(Path(sys.executable).parent) + os.pathsep + os.environ.get("PATH", "")
@@ -157,15 +151,15 @@ def test_make_combines_unit_and_integration_without_discarding_either(tmp_path, 
     assert (tmp_path / "coverage.xml").is_file()
 
 
-@pytest.mark.parametrize("missing", ["orthohmm/accuracy.py", "benchmark_tools/missing.py", "unclassified-source"])
-def test_missing_real_or_unclassified_source_still_fails_reporting(tmp_path, missing):
+@pytest.mark.parametrize("missing_source", ["orthohmm/accuracy.py", "scripts/missing.py", "unclassified-source"])
+def test_missing_source_is_an_error_not_silently_omitted(tmp_path, missing_source):
     if shutil.which("make") is None:
         pytest.skip("GNU/BSD make required")
     shutil.copyfile(ROOT / "Makefile", tmp_path / "Makefile")
     shutil.copyfile(ROOT / ".coveragerc", tmp_path / ".coveragerc")
     for label in ("unit", "integration"):
         data = CoverageData(basename=str(tmp_path / (".coverage-" + label)))
-        data.add_lines({missing: {1}})
+        data.add_lines({missing_source: {1}})
         data.write()
     environment = clean_environment()
     environment["PATH"] = str(Path(sys.executable).parent) + os.pathsep + os.environ.get("PATH", "")

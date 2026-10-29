@@ -1,403 +1,128 @@
 <p align="center">
-  <a href="https://github.com/jlsteenwyk/orthohmm">
-    <img src="https://raw.githubusercontent.com/JLSteenwyk/orthohmm/master/docs/_static/img/logo.png" alt="Logo" width="400">
-  </a>
-  <p align="center">
-    <a href="https://jlsteenwyk.com/orthohmm/">Docs</a>
-    ·
-    <a href="https://github.com/jlsteenwyk/orthohmm/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/jlsteenwyk/orthohmm/issues">Request Feature</a>
-  </p>
-    <p align="center">
-        <a href="https://github.com/JLSteenwyk/orthohmm/actions" alt="Build">
-            <img src="https://img.shields.io/github/actions/workflow/status/JLSteenwyk/orthohmm/ci.yml?branch=main">
-        </a>
-        <a href="https://codecov.io/gh/JLSteenwyk/orthohmm" >
-          <img src="https://codecov.io/gh/JLSteenwyk/orthohmm/graph/badge.svg?token=YEXCJN8D4E"/>
-        </a>
-        <a href="https://github.com/jlsteenwyk/orthohmm/graphs/contributors" alt="Contributors">
-            <img src="https://img.shields.io/github/contributors/jlsteenwyk/orthohmm">
-        </a>
-        <a href="https://bsky.app/profile/jlsteenwyk.bsky.social" target="_blank" rel="noopener noreferrer">
-          <img src="https://img.shields.io/badge/Bluesky-0285FF?logo=bluesky&logoColor=fff">
-        </a>
-        <br />
-        <a href="https://pepy.tech/badge/orthohmm">
-          <img src="https://static.pepy.tech/personalized-badge/orthohmm?period=total&units=international_system&left_color=grey&right_color=blue&left_text=PyPi%20Downloads">
-        </a>
-        <a href="https://lbesson.mit-license.org/" alt="License">
-            <img src="https://img.shields.io/badge/License-MIT-blue.svg">
-        </a>
-        <a href="https://pypi.org/project/orthohmm/" alt="PyPI - Python Version">
-            <img src="https://img.shields.io/pypi/pyversions/orthohmm">
-        </a>
-        <a href="https://www.biorxiv.org/content/10.1101/2024.12.07.627370">
-          <img src="https://zenodo.org/badge/DOI/10.1101/2024.12.07.627370.svg">  
-        </a>   
-    </p>
+  <img src="https://raw.githubusercontent.com/JLSteenwyk/orthohmm/main/docs/_static/img/logo.png" alt="OrthoHMM" width="400">
 </p>
 
+# OrthoHMM
 
-OrthoHMM infers gene orthology using Hidden Markov Models.<br /><br />
-If you found orthohmm useful, please cite *OrthoHMM: Improved Inference of Ortholog Groups using Hidden Markov Models*. Steenwyk et al. 2024, bioRxiv. doi: [10.1101/2024.12.07.627370](https://www.biorxiv.org/content/10.1101/2024.12.07.627370v1).
-Machine-readable metadata is available in [CITATION.cff](CITATION.cff).
-Also report the exact software revision and inference configuration; the
-preprint DOI does not identify the development checkout or its benchmark results.
+HMM-centered orthology inference from protein FASTA files.
 
----
+[Documentation](https://jlsteenwyk.com/orthohmm/) |
+[Report an issue](https://github.com/JLSteenwyk/orthohmm/issues) |
+[CI](https://github.com/JLSteenwyk/orthohmm/actions) |
+[Coverage](https://codecov.io/gh/JLSteenwyk/orthohmm)
 
-**Release Scope**
+OrthoHMM combines a built-in k-mer prefilter and profile-HMM scoring with
+Leiden clustering. High-sensitivity inference and phylogenetic reconciliation
+are optional. The default built-in search does not require HMMER or MCL.
 
-This checkout documents development features. As checked on 30 September 2026,
-the latest [PyPI release](https://pypi.org/project/orthohmm/) is 0.2.0;
-`pip install orthohmm` does not install this checkout's high-sensitivity or
-phylogeny pipeline. That published release requires MCL. The development
-checkout uses Leiden by default and offers optional phylogenetic inference.
-Use an isolated source installation for the development examples below.
-For exact benchmark reproduction, use the frozen revision and dependencies
-in the [publication reproduction guide](benchmark_tools/PUBLICATION_REPRODUCTION.md),
-not an unpinned installation from `main` or PyPI.
+## Install From Source
 
-**Performance**
+Python 3.10 or newer is required. A C compiler with OpenMP support builds the
+native CPU kernels during installation. Without it, standard search can use
+the slower Numba fallback; high-sensitivity profile expansion requires the
+native alignment kernel. Linux users can install GCC and its development
+runtime through their system package manager. On macOS, GNU GCC/OpenMP must
+be configured before installation for native kernels.
 
-As of v0.2.0, OrthoHMM ships a built-in profile HMM + k-mer prefilter
-search engine that replaces the `phmmer` subprocess. The production CLI was
-rebenchmarked with summed process-tree memory on a single 32-core node:
-
-| proteomes | proteins | wall time | peak process-tree RSS | orthogroups |
-|----------:|---------:|----------:|----------------------:|------------:|
-|         5 |   15,932 |      7.0s |             1.36 GiB |      12,995 |
-
-The output includes singleton orthogroups. The previous 20-100 proteome table
-came from a separate experimental driver and was removed pending a production
-harness rerun. See `PERFORMANCE_OPTIMIZATION.md` for commands, checksums,
-stage timings, and rejected experiments. The legacy `phmmer` path is still available via
-`--search_mode phmmer` but is no longer the default.
-This historical local measurement is not a matched-resource comparison with
-other tools. All 27 attempts in the matched-resource panel are now reviewed on the local
-Threadripper with 32 native CPUs and a 128-GiB limit per run. These are shared-host
-observations: competing analyses can distort timing by an unknown, potentially
-method-dependent amount. The [final resource report](benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v27/panel.json)
-retains 25 measured attempts, 24 eligible observations and three exclusions.
-Six cells have three eligible repeats; three retain unavailable summaries.
-These observations do not establish isolated speedups.
-Historical measurements are not pooled with this panel. See the
-[progress ledger](benchmark_tools/results/PUBLICATION_PROGRESS.md) for dated checkpoints.
-
-**Clustering step.** OrthoHMM uses **Leiden CPM with resolution=0.1** as
-the development default. This setting was selected using development-exposed
-benchmarks; it is not established as optimal for arbitrary datasets.
-MCL@1.5 remains available as an alternative. Dataset divergence, grouping
-granularity and configuration affect the accuracy/coverage trade-off.
-
-Power users can opt into MCL via `--clustering mcl --inflation_value 1.5`,
-or use adaptive Leiden via `--clustering leiden --cpm_resolution auto`.
-
-For divergent datasets where recall is more important than runtime, use
-`--accuracy_profile high_sensitivity`. This profile broadens the built-in
-k-mer candidate search and runs reciprocal-best normalized-hit clustering
-followed by singleton reassignment and strict center-star MSA-profile
-expansion. Profile candidates must score at least as well as the weakest
-existing group member and receive a sequence-supported anchor before they can
-change a cluster. The profile currently requires the built-in search and
-Leiden clustering. The default `standard` profile is unchanged.
-
-**Profile evidence experiments.** Fresh built-in high-sensitivity runs can
-opt into `--profile-sequence-weighting`:
-
-| Mode | Relative weights | Effective sequence count |
-| --- | --- | --- |
-| `none` (default) | Uniform | Actual number of sequences |
-| `henikoff` | Position-based, adjusted for nonmissing sequence length | Actual number of sequences |
-| `henikoff_cluster` | Same position-based weights | Experimental single-linkage cluster count at aligned identity 0.62 |
-| `species_henikoff_cluster` | Position-based, then equal total weight per species with usable residues | Same experimental cluster count |
-
-For example, to request the experimental actual-count weighting mode:
-
-```shell
-orthohmm proteomes/ --accuracy_profile high_sensitivity \
-  --profile-sequence-weighting henikoff
-```
-
-Nondefault weighting is unsupported when restarting from existing search
-results. It changes profile residue counts, not the initial search; each
-weighted profile gets its own weakest-member threshold and still requires a
-sequence-supported recruitment anchor. These simplified profiles and cluster
-counts are not HMMER's standard profile construction or entropy weighting.
-The output's `orthohmm_working_res/profile_sequence_weighting.json` records
-the mode and each built profile's effective count. Small development-panel
-gains do not establish generalization or make these modes recommended defaults.
-
-Experimental `--profile-projection-policy residue_preserving` repairs insertion
-coordinates while preserving normalized source residues in profile alignments.
-The default remains `legacy`. It can be paired with `henikoff` or
-`henikoff_cluster` weighting in fresh built-in high-sensitivity runs; species
-weighting and alignment guards remain unsupported with projection repair.
-Joint runs record both actual per-profile policies and effective counts in the
-weighting diagnostics. The registered six-arm biological pilot is now fully
-admitted by its separate frozen reader. OrthoBench F1 is 0.741784 for `henikoff`
-plus repair and 0.741628 for `henikoff_cluster` plus repair. Both exceed canonical
-(0.741061) but score below their weighting-only controls (0.741965 and 0.741947).
-Both therefore fail the fixed stronger-constituent advancement gate: no retuning
-or QfO/Three Kingdoms extension is planned. See the
-[complete interaction admission](benchmark_tools/results/weighted_projection_completed_20261020/summary.json)
-for precision, recall, uncertainty, provenance and qualified phase costs.
-Neither joint setting is a recommended default; these point comparisons do not
-establish statistical inferiority or independent generalization.
-
-The separate `--profile-alignment-policy strict_span_guard` experiment also
-requires fresh built-in high-sensitivity inference and cannot be combined
-with nondefault weighting. Its fixed OrthoBench pilot failed the advancement
-gate; retain it as an experimental option, not a recommended default.
-Local joint-tree rescue and selective HMMER validation currently use package
-helpers and explicit benchmark workflows, not main-CLI options. See the
-[HMM evidence campaign guide](benchmark_tools/README.md#hmm-evidence-campaign)
-for frozen protocols, controls, result validation and reproduction scope.
-The [completed campaign report](benchmark_tools/results/hmm_campaign_final_20261020/README.md)
-compares all eight endpoints against OrthoFinder 3.1.5 and the other retained
-tools, with precision/recall, coverage, uncertainty and resource limitations.
-All four mechanisms and the registered interaction are evaluated. The bounded
-result supports retaining experimental options, not changing defaults or
-claiming generalizable superiority over OrthoFinder.
-The [concise comparative manuscript](manuscript/hmm_frontier_20261020/README.md)
-packages these results with original workflow, accuracy, Pareto-frontier,
-resource and QfO figures. Frontier membership is descriptive, not independent
-confirmation or statistical superiority. Jacob L. Steenwyk is the sole author;
-funding and competing-interest disclosures remain for author review.
-
-**Protected candidate union (experimental).** The development checkout also
-provides `--search-candidate-policy protected_union` for fresh built-in
-high-sensitivity searches with canonical result collection and a fixed
-positive candidate cap. The default policy remains `single`.
-
-```shell
-orthohmm proteomes/ --accuracy_profile high_sensitivity \
-  --search_result_order canonical --search-candidate-policy protected_union \
-  --search_max_candidates_per_query 100
-```
-
-The policy unions candidates from two initial-search prefilters using minimum
-shared-hit thresholds of 4 and 1, removes duplicate query/target pairs, and
-scores each distinct candidate once with the unchanged HMM scorer. Leave
-`--search_min_total_hits` at 4; the second threshold is applied internally.
-The cap applies separately to each prefilter: this example can retain up to
-200 candidates per query, with no truncation after union. Profile-expansion
-filters are unchanged. Starting from existing search results is unsupported,
-and checkpoints from different candidate policies are not interchangeable.
-
-Preserving initial candidates does not guarantee preservation of downstream
-orthogroups or ortholog assignments. End-to-end accuracy and resource benefits
-are not established, and this policy is not a recommended replacement for the
-default. The committed [pilot protocol](benchmark_tools/hillclimb_protected_union_fresh_pilot_20261016.json)
-records the fixed evaluation settings and advancement criteria.
-
-High-sensitivity profile expansion also requires the compiled `pair_align.so`
-kernel and its OpenMP runtime. Source installation therefore needs a C
-compiler with OpenMP support. The Numba fallback for standard sequence search
-does not replace this alignment kernel. If it cannot be loaded, rebuild
-OrthoHMM from source on the target machine after installing the compiler and
-OpenMP support; profile expansion is not silently disabled. Locally built
-wheels may use host-specific instructions and are not validated as portable
-across CPU models merely because the operating system matches.
-
-For a source build using the compiler's default CPU instruction set, run
-`ORTHOHMM_CPU_TARGET=baseline pip install --no-cache-dir --no-binary=orthohmm .`
-from the checkout. This omits `-march=native` and `-mavx2` and builds scalar
-Viterbi plus the native prefilter and alignment kernels. The default target
-is `native`; this option affects compilation, not inference settings. A
-baseline build may be slower and is still platform-specific: compiler
-defaults, OpenMP, system-library versions and dependency wheels must also be
-compatible with the deployment host. It is not a manylinux or cross-platform
-portability guarantee, and does not disable optional CUDA compilation.
-
-**Phylogeny-aware mode (experimental).** OrthoHMM can reconcile ambiguous
-multi-copy families against a validated rooted species tree. This mode is
-opt-in; `--phylogeny off` remains the default and does not load tree libraries
-or require external phylogenetic programs.
-
-From the development checkout, install the optional parser dependency in an
-isolated environment and provide MAFFT, FastTree, and a
-rooted Newick tree whose leaf names match input proteome filenames without
-their FASTA extensions:
-
-```shell
-git clone https://github.com/JLSteenwyk/orthohmm.git
+```sh
+git clone --depth 1 https://github.com/JLSteenwyk/orthohmm.git
 cd orthohmm
-python -m venv venv
-source venv/bin/activate
-pip install '.[phylogeny]'
-orthohmm proteomes/ --accuracy_profile high_sensitivity \
-  --phylogeny reconcile --species_tree_mode supplied \
-  --species_tree species_tree.nwk --aligner mafft --tree_builder FastTree
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install .
+orthohmm --help
 ```
 
-To infer the species tree from OrthoHMM's own occupancy-ranked, single-copy
-families instead, omit `--species_tree` and use
-`--species_tree_mode infer`. Inference uses a high-occupancy marker core and,
-when necessary, connected lower-occupancy single-copy markers to place taxa
-that are absent from the core. Supplied-tree and inferred-tree results should
-be reported separately because they use different external information budgets.
+This installs the checked-out revision, which may differ from the published
+PyPI release. For a generic-CPU source build rather than a host-optimized
+build, use `ORTHOHMM_CPU_TARGET=baseline python -m pip install .`.
+Built wheels remain platform-specific. CUDA compilation is optional when
+`nvcc` is available; GPU hardware is not required for CPU inference.
 
-Only multi-copy, multi-species candidate families receive alignments and gene
-trees. Results and restart checkpoints are written under
-`orthohmm_phylogeny/`, including root-level HOGs, hierarchical node records,
-native pairwise orthologs, rooted and annotated gene trees, a reconciliation
-summary, and a provenance manifest. The conventional
-`orthohmm_orthogroups.txt` remains available and contains the reconciled
-root-level groups when this mode is enabled.
+## Run
 
-Experimental reconciliation policies are independently configurable. The
-legacy defaults are `--phylogeny_root_rule supported_children` and
-`--phylogeny_pair_rule lca`. The alternative
-`--phylogeny_pair_rule positive_paralogy` preserves medium-confidence pairs at
-species-tree mapping conflicts and removes pairs only when the two gene-tree
-children share an observed species. Pair confidence is written to
-`orthohmm_pairwise_orthologs_confidence.tsv`; the original pair file and its
-schema are unchanged.
-The `--phylogeny_root_rule confidence` policy additionally permits a
-root-level split supported by repeated species overlap or a gene-tree branch
-support of at least 0.9; missing and weak support remain conservative.
-Use `--phylogeny_candidates satellite_v1` with
-`--accuracy_profile high_sensitivity` to opt into bounded HMM-backed candidate
-expansion. The original groups are retained as seed provenance in
-`orthohmm_working_res/phylogeny_candidate_seeds.tsv`.
-The `satellite_v2` profile adds seed-bounded iterative expansion and requires
-each attachment to receive a high-confidence cross-seed ortholog pair from the
-reconciled gene tree before it can remain in the final root HOG. Candidate
-evidence is recorded in
-`orthohmm_working_res/phylogeny_candidate_merges.json`. A complete v2 run that
-infers its own species tree can be requested with:
+Place one protein FASTA file per species in a directory. Accepted extensions
+are `.fa`, `.faa`, `.fas`, `.fasta`, `.pep`, and `.prot`. Sequence identifiers
+must be unique within each file. Create the output directory before running.
 
-```shell
-orthohmm proteomes/ --accuracy_profile high_sensitivity \
-  --phylogeny reconcile --phylogeny_candidates satellite_v2 \
-  --species_tree_mode infer --species_tree_rooting min_variance \
-  --phylogeny_root_rule species_overlap \
-  --phylogeny_pair_rule positive_paralogy \
+```sh
+mkdir results
+orthohmm proteomes/ -o results/ -c 8
+```
+
+Outputs include `orthohmm_orthogroups.txt`, per-group FASTA files, gene counts,
+and working files. Input FASTA files are not modified. To increase search
+sensitivity at additional computational cost:
+
+```sh
+mkdir results-sensitive
+orthohmm proteomes/ -o results-sensitive/ -c 8 --accuracy_profile high_sensitivity
+```
+
+MCL clustering and legacy sequence search remain available when their external
+programs are installed:
+
+```sh
+mkdir results-mcl results-phmmer
+orthohmm proteomes/ -o results-mcl/ --clustering mcl --inflation_value 1.5
+orthohmm proteomes/ -o results-phmmer/ --search_mode phmmer
+```
+
+## Optional Phylogeny
+
+Install the tree-parser dependency and provide MAFFT and FastTree on PATH.
+Species-tree leaf names must match proteome filenames without FASTA extensions.
+
+```sh
+python -m pip install '.[phylogeny]'
+mkdir results-phylogeny
+orthohmm proteomes/ -o results-phylogeny/ -c 8 \
+  --accuracy_profile high_sensitivity --phylogeny reconcile \
+  --species_tree_mode supplied --species_tree species_tree.nwk \
   --aligner mafft --tree_builder FastTree
 ```
 
-For internally inferred species trees,
-`--species_tree_rooting min_variance` minimizes root-to-tip distance variance
-over internal edges and avoids placing the root on a single long terminal
-branch when no explicit outgroup is available. The backward-compatible default
-remains `midpoint` while this policy is under evaluation.
+To infer the species tree instead, use `--species_tree_mode infer` and omit
+`--species_tree`. Supplied and inferred trees use different information and
+should be reported separately. Phylogenetic inference is not enabled by default.
 
-**Benchmark Evidence**
+Optional HMMER profile-control Python helpers require
+`python -m pip install '.[hmmer]'` and the corresponding HMMER executables.
+See the [advanced documentation](https://jlsteenwyk.com/orthohmm/advanced/)
+and `orthohmm --help` for supported options and experimental-mode restrictions.
 
-The [corrected eight-method QfO table](benchmark_tools/results/qfo_corrected_comparison_20260926_v7/scores.md)
-reports individual endpoints and prediction semantics. The
-[main scientific draft](benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261004.md)
-links OrthoBench uncertainty, ablations, transfer evaluation and limitations.
-QfO and OrthoBench are development-exposed, not independent confirmation.
-Three Kingdoms evaluates the BUSCO reference subset, not proteome-wide
-orthology. GO/EC similarity and FAS are not F1; the six-metric mean is a
-project-defined secondary summary. These results do not establish overall
-superiority to full OrthoFinder or matched efficiency. The new publication
-release and archival deposition are not complete; see the
-[progress ledger](benchmark_tools/results/PUBLICATION_PROGRESS.md).
+## Development
 
----
-
-<br />
-
-This documentation covers downloading and installing OrthoHMM. Details about each function as well as tutorials for using OrthoHMM are available in the [online documentation](https://jlsteenwyk.com/orthohmm/).
-
-<br />
-
-**Quick Start**
-
-1\. Install external dependencies
-
-This development checkout's default pipeline does not require external bioinformatics
-binaries. [MCL](https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions)
-is required for the published 0.2.0 release; in this checkout it is
-only required if you opt into `--clustering mcl`. Install it
-via your package manager (`apt install mcl`, `brew install mcl`,
-`conda install -c bioconda mcl`) or from source.
-
-[HMMER](http://hmmer.org/download.html) is optional and only required if you opt into the legacy `--search_mode phmmer` pipeline; the default built-in search engine has no HMMER dependency.
-
-<br>
-
-2\. Install OrthoHMM
-
-```shell
-# install
-pip install orthohmm 
-# run
-orthohmm <path_to_directory_of_FASTA_files>
+```sh
+python -m pip install . -r tests/requirements.txt
+make kernels
+make test
+make test.coverage
 ```
 
-<br />
+The [test guide](tests/README.md) explains optional external tools, native
+kernel preparation, and coverage. CI checks Linux/macOS, Python 3.10-3.13,
+source installation, native CPU kernels, and built-wheel inference.
 
-**Installation**
+## Research Materials
 
-The pip commands below install the published release, not development features.
+The application branch does not include manuscripts, benchmark datasets,
+analysis outputs, or historical reproduction workflows. Those materials and
+their tests remain on
+[research-archive-20261029](https://github.com/JLSteenwyk/orthohmm/tree/research-archive-20261029),
+preserved at commit `ebfa635ca786796287c9ff2a3caba1c2618f016e`.
+The repository's published history has not been rewritten. A normal clone also
+checks out only the application, but downloads historical objects; the shallow
+clone above avoids downloading that research history.
 
-**If you are having trouble installing OrthoHMM, please contact the lead developer, Jacob L. Steenwyk, via [email](https://jlsteenwyk.com/contact.html) or [Bluesky](https://bsky.app/profile/jlsteenwyk.bsky.social) to get help.**
+## Citation And License
 
-1\. Install external dependencies
+Please cite the original method: Steenwyk et al. (2024), *OrthoHMM: Improved
+Inference of Ortholog Groups using Hidden Markov Models*, bioRxiv,
+[doi:10.1101/2024.12.07.627370](https://www.biorxiv.org/content/10.1101/2024.12.07.627370).
+Machine-readable metadata is in [CITATION.cff](CITATION.cff). Report the exact
+software revision and inference settings; a paper citation does not identify
+a development configuration or establish superiority on arbitrary datasets.
 
-This development checkout's default pipeline does not require external bioinformatics
-binaries. [MCL](https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions)
-is required for the published 0.2.0 release; in this checkout it is
-only required if you opt into `--clustering mcl`. Install it
-via your package manager (`apt install mcl`, `brew install mcl`,
-`conda install -c bioconda mcl`) or from source.
-
-[HMMER](http://hmmer.org/download.html) is optional and only required if you opt into the legacy `--search_mode phmmer` pipeline; the default built-in search engine has no HMMER dependency.
-
-<br>
-
-2a\. Install OrthoHMM from pip
-
-To install using *pip*, we recommend building a virtual environment to avoid software dependency issues. To do so, execute the following commands:
-```shell
-# create virtual environment
-python -m venv venv
-# activate virtual environment
-source venv/bin/activate
-# install orthohmm
-pip install orthohmm
-```
-**Note, the virtual environment must be activated to use *orthohmm*.**
-
-After using OrthoHMM, you may wish to deactivate your virtual environment and can do so using the following command:
-```shell
-# deactivate virtual environment
-deactivate
-```
-
-<br />
-
-2b\. Install OrthoHMM from source
-
-Similarly, to install from source, we recommend using a virtual environment. To do so, use the following commands:
-```shell
-# download
-git clone https://github.com/JLSteenwyk/orthohmm.git
-cd orthohmm/
-# create virtual environment
-python -m venv venv
-# activate virtual environment
-source venv/bin/activate
-# install
-make install
-```
-To deactivate your virtual environment, use the following command:
-```shell
-# deactivate virtual environment
-deactivate
-```
-**Note, the virtual environment must be activated to use *orthohmm*.**
-
-<!-- <br />
-
-To install via anaconda, execute the following command:
-
-``` shell
-conda install bioconda::orthohmm
-```
-Visit here for more information: https://anaconda.org/bioconda/orthohmm -->
+OrthoHMM is distributed under the [MIT license](LICENSE.md).

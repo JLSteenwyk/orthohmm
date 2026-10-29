@@ -4,7 +4,7 @@ import zipfile
 
 import pytest
 
-from benchmark_tools.audit_wheel_contents import audit
+from scripts.audit_wheel_contents import audit
 
 
 def fixture_wheel(tmp_path, *, corrupt=False, extra=False):

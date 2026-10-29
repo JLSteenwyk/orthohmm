@@ -2,7 +2,6 @@ from dataclasses import replace
 
 import pytest
 
-from benchmark_tools.replay_phylogeny import build_parser, main
 from orthohmm.phylogeny import PhylogenyConfig, PhylogenyConfigurationError
 from orthohmm.phylogeny_pipeline import (
     FamilyOutcome,
@@ -115,23 +114,8 @@ def test_membership_policy_does_not_invalidate_raw_tree_checkpoint():
     )
 
 
-def test_replay_parser_defaults_to_direct_support_and_accepts_path():
-    argv = ['--fasta-directory', 'in', '--candidate-clusters', 'groups',
-            '--output-directory', 'out', '--json', 'report']
-    assert build_parser().parse_args(argv).satellite_membership_rule == 'high_confidence_pair'
-    assert build_parser().parse_args(argv + [
-        '--satellite-membership-rule', 'high_confidence_path'
-    ]).satellite_membership_rule == 'high_confidence_path'
 
 
-def test_replay_rejects_path_policy_without_constraints_before_writing(tmp_path):
-    with pytest.raises(SystemExit, match='requires --membership-constraints'):
-        main(['--fasta-directory', str(tmp_path),
-              '--candidate-clusters', str(tmp_path / 'groups.txt'),
-              '--output-directory', str(tmp_path / 'out'),
-              '--json', str(tmp_path / 'report.json'),
-              '--satellite-membership-rule', 'high_confidence_path'])
-    assert not (tmp_path / 'out').exists()
 
 
 @pytest.mark.parametrize('extra', [[], ['--phylogeny', 'reconcile', '--species_tree_mode', 'infer']])
