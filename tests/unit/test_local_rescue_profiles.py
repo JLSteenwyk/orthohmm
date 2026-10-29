@@ -10,7 +10,7 @@ import pytest
 
 from tests.support import species_sequences
 from orthohmm.local_rescue import evaluate_local_context, validate_local_profiles, write_effective_candidates
-from orthohmm.phylogeny import PhylogenyConfig
+from orthohmm.phylogeny import PhylogenyConfig, validate_phylogeny_config
 
 
 def sequence_fixture(unrelated=False):
@@ -395,6 +395,13 @@ def test_admitted_context_runs_through_ordinary_final_inferred_species_pipeline(
     config = PhylogenyConfig(mode="reconcile", species_tree_mode="infer", species_tree_rooting="min_variance",
         root_duplication_rule="species_overlap", pair_orthology_rule="positive_paralogy",
         aligner=shutil.which("mafft"), tree_builder=shutil.which("FastTree"))
+    # Both stages must fingerprint the same validated executable paths, including symlinks.
+    tools = tmp_path / "tools"
+    tools.mkdir()
+    for name, executable in (("mafft", config.aligner), ("FastTree", config.tree_builder)):
+        (tools / name).symlink_to(executable)
+    config = validate_phylogeny_config(replace(config, aligner=str(tools / "mafft"),
+                                               tree_builder=str(tools / "FastTree")), files)
     control = run_phylogeny_stage(str(fasta), str(baseline), files, config, 1)
     assert control.species_tree_families > 0 and not control.species_tree_checkpoint_hit
     phylo = baseline / "orthohmm_phylogeny"
