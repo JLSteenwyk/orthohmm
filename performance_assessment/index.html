@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Performance Assessment &mdash; orthohmm  documentation</title>
+  <title>Research and Evaluation &mdash; orthohmm  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=b745eb55" />
@@ -48,12 +48,7 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../about/index.html">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">Advanced Usage</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Performance Assessment</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#current-evidence">Current evidence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#prediction-semantics">Prediction semantics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#reports-and-reproducibility">Reports and reproducibility</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Research and Evaluation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../change_log/index.html">Change log</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../other_software/index.html">Other software</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../frequently_asked_questions/index.html">FAQ</a></li>
@@ -73,7 +68,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Performance Assessment</li>
+      <li class="breadcrumb-item active">Research and Evaluation</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -82,74 +77,29 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="performance-assessment">
-<span id="performance"></span><h1>Performance Assessment<a class="headerlink" href="#performance-assessment" title="Link to this heading"></a></h1>
-<p>OrthoHMM is evaluated against other orthology-inference tools using OrthoBench
-and Quest for Orthologs (QfO) as primary benchmarks. Three Kingdoms is a
-supplementary conserved-family benchmark. Results depend on the dataset,
-configuration, reference universe and type of prediction being evaluated.
-The current publication analyses do not establish general superiority over
-full OrthoFinder or the other comparators.</p>
-<section id="current-evidence">
-<h2>Current evidence<a class="headerlink" href="#current-evidence" title="Link to this heading"></a></h2>
+  <section id="research-and-evaluation">
+<span id="performance"></span><h1>Research and Evaluation<a class="headerlink" href="#research-and-evaluation" title="Link to this heading"></a></h1>
+<p>Manuscripts, benchmark datasets, evaluation drivers, and historical results
+are maintained separately from the application checkout. The complete
+pre-separation source snapshot is preserved at commit
+<code class="docutils literal notranslate"><span class="pre">ebfa635ca786796287c9ff2a3caba1c2618f016e</span></code> on the
+<a class="reference external" href="https://github.com/JLSteenwyk/orthohmm/tree/research-archive-20261029">research-archive-20261029 branch</a>.</p>
 <ul class="simple">
-<li><p>On OrthoBench, phylogenetic OrthoHMM has a higher observed aggregate F1 than
-full OrthoFinder, but the paired difference interval includes zero. The
-results show a precision-recall trade-off, not established F1 superiority.</p></li>
-<li><p>QfO challenges measure different properties. Their individual endpoints
-must remain visible; the project’s six-metric mean is a secondary summary,
-not an official overall accuracy score.</p></li>
-<li><p>Three Kingdoms scoring is restricted to the available BUSCO reference
-universe. It does not establish proteome-wide orthology accuracy.</p></li>
-<li><p>Frozen YGOB evaluation provides bounded transfer evidence on novel taxa,
-but substantial family overlap prevents a family-disjoint validation claim.</p></li>
-<li><p>The prespecified biological application shows improved homolog-supported
-paralog separation with phylogenetic OrthoHMM relative to high sensitivity,
-alongside lower homolog coverage. Full OrthoFinder and SonicParanoid perform
-better on supported separation and coverage in this application.</p></li>
-<li><p>The 27-attempt matched-resource panel is running on the local Threadripper,
-not the DGX, with 32 native CPUs and a 128-GiB limit per run. A quiet window
-is not required. Background workload monitoring, resource accounting and
-output checks remain required. Competing analyses may distort timing by an
-unknown, potentially method-dependent amount; matching resource limits does
-not isolate tool speed. Exclusions and missing repeats are explicit.
-Historical resource measurements are not pooled with this panel.</p></li>
+<li><p><a class="reference external" href="https://github.com/JLSteenwyk/orthohmm/blob/ebfa635ca786796287c9ff2a3caba1c2618f016e/benchmark_tools/PUBLICATION_REPRODUCTION.md">Publication reproduction guide</a></p></li>
+<li><p><a class="reference external" href="https://github.com/JLSteenwyk/orthohmm/tree/ebfa635ca786796287c9ff2a3caba1c2618f016e/manuscript">Manuscript and figures</a></p></li>
+<li><p><a class="reference external" href="https://github.com/JLSteenwyk/orthohmm/tree/ebfa635ca786796287c9ff2a3caba1c2618f016e/benchmark_tools">Evaluation scripts and evidence</a></p></li>
 </ul>
-<p>OrthoBench and QfO were inspected during development. Their scores are not
-independent confirmation of settings selected using those datasets. The
-repository retains neutral and negative results, native failures, exclusions,
-paired uncertainty and output-conversion audits.</p>
-</section>
-<section id="prediction-semantics">
-<h2>Prediction semantics<a class="headerlink" href="#prediction-semantics" title="Link to this heading"></a></h2>
-<p>Orthogroups, root hierarchical orthogroups and native pairwise orthologs are
-different outputs. Pre-clustering graph edges are not final ortholog predictions.
-The retained OrthoFinder MCL checkpoint is a diagnostic comparison, not a
-separately executed sequence-only OrthoFinder pipeline. Comparisons must use
-the output and scoring protocol specified for each benchmark.</p>
-</section>
-<section id="reports-and-reproducibility">
-<h2>Reports and reproducibility<a class="headerlink" href="#reports-and-reproducibility" title="Link to this heading"></a></h2>
-<p>The <a class="reference external" href="https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/qfo_corrected_comparison_20260926_v7/scores.md">corrected eight-method QfO comparison</a>
-contains current observed endpoints and prediction semantics. The
-<a class="reference external" href="https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261004.md">main scientific draft</a>
-links OrthoBench, uncertainty and transfer evidence. The
-<a class="reference external" href="https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v27/attempts.tsv">final resource table</a>
-and <a class="reference external" href="https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/threadripper_shared_resource_figure_20261004_v26/shared_threadripper_resources.pdf">final resource figure</a>
-retain all 27 reviewed attempts, 25 measured runs and 24 eligible observations.
-Six cells have three eligible repeats; three retain unavailable summaries.
-Excluded raw values and both pre-native aborts remain explicit, without causal
-speed rankings. The
-<a class="reference external" href="https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/PUBLICATION_CLAIMS_20260916.md">claim-to-evidence checklist</a>
-links uncertainty, ablations, simulations, transfer evaluation and the
-biological application. The
-<a class="reference external" href="https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/PUBLICATION_PROGRESS.md">progress ledger</a>
-records completed analyses, running jobs and unresolved requirements.</p>
-<p>The new publication package remains in preparation; its release and archival
-deposition are not complete. Earlier desirability rankings and the historical
-performance illustration remain in the repository and its history, and are
-not substituted for the current audited endpoints.</p>
-</section>
+<p>OrthoBench and Quest for Orthologs are the primary benchmarks; Three
+Kingdoms provides supplementary conserved-family evidence. These datasets
+were inspected during development, so they do not independently validate
+settings selected using their scores. Orthogroups, root hierarchical
+orthogroups, and native pairwise ortholog predictions have different
+semantics and must not be treated as interchangeable outputs.</p>
+<p>Shared-host timing measurements may be distorted by competing analyses in
+method-dependent ways. Matching CPU and memory limits does not establish
+isolated speedups. Historical reproduction instructions and limitations
+remain in the archived evidence; separating the application does not
+establish new biological accuracy, timing, or reproducibility claims.</p>
 </section>
 
 

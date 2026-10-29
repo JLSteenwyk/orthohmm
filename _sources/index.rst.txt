@@ -3,209 +3,81 @@
    :align: center
    :target: https://jlsteenwyk.com/orthohmm
 
-^^^^^
+OrthoHMM
+========
 
+OrthoHMM infers orthogroups using a built-in profile-HMM search engine and
+Leiden clustering. The standard pipeline does not require external
+bioinformatics executables. Optional modes support high-sensitivity profile
+expansion, phylogenetic reconciliation, and legacy HMMER/MCL inference.
 
-OrthoHMM using high sensitivity and specificity Hidden Markov Models for orthology inference.
+Installation
+------------
 
-If you found OrthoHMM useful, please cite *OrthoHMM: Improved Inference of Ortholog Groups using Hidden Markov Models*. Steenwyk et al. 2024, bioRxiv. doi: |doiLink|_.
-
-.. _doiLink: https://www.biorxiv.org/content/10.1101/2024.12.07.627370v1
-.. |doiLink| replace:: 10.1101/2024.12.07.627370
-
-|
-
-Performance
------------
-
-As of v0.2.0, OrthoHMM ships a built-in profile HMM + k-mer prefilter
-search engine that replaces the ``phmmer`` subprocess. A historical production
-CLI measurement used five bacterial proteomes (15,932 proteins) and a
-32-CPU budget:
-
-============  ============  =====================  ====================
-proteomes     wall time     peak process-tree RSS  orthogroups
-============  ============  =====================  ====================
-5             7.0 s         1.36 GiB               12,995
-============  ============  =====================  ====================
-
-Groups include singletons. The former 20-100 proteome table used a separate
-experimental driver and is not production-CLI scaling evidence. The
-`historical optimization report <https://github.com/JLSteenwyk/orthohmm/blob/main/PERFORMANCE_OPTIMIZATION.md>`_
-retains commands, checksums and rejected experiments. This local measurement
-does not establish comparative speed or memory advantages. The 27-attempt
-matched-resource panel is now running on the local Threadripper, with 32 native
-CPUs and a 128-GiB limit per run. Competing analyses may distort shared-host
-timing by an unknown, potentially method-dependent amount; matching limits
-does not establish isolated speedups. Exclusions and missing repeats remain
-explicit, and historical measurements are not pooled with the new panel.
-See :ref:`performance` for current benchmark scope and limitations.
-The legacy ``phmmer`` path is still available via
-``--search_mode phmmer`` but is no longer the default.
-
-|
-
-Quick Start
------------
-
-This documentation describes the development checkout. As checked on
-30 September 2026, the latest `PyPI release <https://pypi.org/project/orthohmm/>`_
-is 0.2.0 and requires MCL. Installing from PyPI does not provide this checkout's
-high-sensitivity or phylogeny pipeline. Use an isolated source installation
-for development features; use the
-`publication reproduction guide <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/PUBLICATION_REPRODUCTION.md>`_
-for exact
-benchmark reproduction rather than an unpinned checkout. The pip commands
-below install the published release.
-
-1\. Install external dependencies
-
-The development pipeline uses the built-in search engine and Leiden
-CPM clustering, so it has no required external bioinformatics binary.
-|mclLink|_ is required for published v0.2.0; in the development checkout it is
-only required if you opt into ``--clustering mcl``.
-
-|hmmerLink|_ is optional and only required if you opt into the legacy
-``--search_mode phmmer`` pipeline.
-
-.. _hmmerLink: http://hmmer.org/download.html
-.. |hmmerLink| replace:: HMMER
-.. _mclLink: https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions
-.. |mclLink| replace:: mcl
-
-|
-
-2\. Install OrthoHMM
+Use Python 3.10 or newer and an isolated environment. These commands install
+the development application from source, not a potentially older PyPI release.
 
 .. code-block:: shell
 
-	# install
-	pip install orthohmm
-	# run
-	orthohmm <path_to_directory_of_FASTA_files>
+   git clone --depth 1 https://github.com/JLSteenwyk/orthohmm.git
+   cd orthohmm
+   python3 -m venv .venv
+   source .venv/bin/activate
+   python -m pip install .
+   orthohmm --help
 
-Below are more detailed instructions, including alternative installation methods.
+A C compiler with OpenMP support builds the native CPU kernels during
+installation. On Linux, install GCC and its development tools. On macOS,
+install Homebrew GCC and ensure ``gcc`` resolves to that compiler when
+installing. Standard search can fall back to Numba when compilation is
+unavailable; high-sensitivity MSA profile expansion requires native kernels.
+Set ``ORTHOHMM_CPU_TARGET=baseline`` during installation when building for
+compatible machines other than the build host.
 
-|
+Usage
+-----
 
-**1) Installation**
-
-**If you are having trouble installing OrthoHMM, please contact the lead developer, Jacob L. Steenwyk, via |contactSteenwyk|_ or |blueskySteenwyk|_ to get help.**
-
-.. _contactSteenwyk: https://jlsteenwyk.com/contact.html
-.. |contactSteenwyk| replace:: email
-.. _blueskySteenwyk: https://bsky.app/profile/jlsteenwyk.bsky.social
-.. |blueskySteenwyk| replace:: Bluesky
-
-1\. Install external dependencies
-
-The development pipeline uses the built-in search engine and Leiden
-CPM clustering, so it has no required external bioinformatics binary.
-|mclLink|_ is required for published v0.2.0; in the development checkout it is
-only required if you opt into ``--clustering mcl``.
-
-|hmmerLink|_ is optional and only required if you opt into the legacy
-``--search_mode phmmer`` pipeline.
-
-2a\. Install OrthoHMM from pip
-
-To install using *pip*, we recommend building a virtual environment to avoid software dependency issues. To do so, execute the following commands:
+Place one protein FASTA file per species in an input directory and create the
+output directories before running.
 
 .. code-block:: shell
 
-	# create virtual environment
-	python -m venv venv
-	# activate virtual environment
-	source venv/bin/activate
-	# install orthohmm
-	pip install orthohmm
+   mkdir results sensitive_results
+   orthohmm proteomes/ -o results/ -c 8
+   orthohmm proteomes/ -o sensitive_results/ -c 8 --accuracy_profile high_sensitivity
 
-**Note, the virtual environment must be activated to use orthohmm.**
+See :doc:`advanced/index` for options and output files.
 
-|
+Optional dependencies
+---------------------
 
-**Install from source**
+* Phylogenetic reconciliation: install ``'.[phylogeny]'`` and provide MAFFT
+  and FastTree executables. A supplied or inferred species tree can be used.
+* Legacy sequence search: install HMMER and select ``--search_mode phmmer``.
+* Legacy clustering: install MCL and select ``--clustering mcl``.
+* Python HMMER control helpers: install ``'.[hmmer]'`` for their Biopython
+  dependency. This extra is not needed by the built-in search engine.
 
-Similarly, to install from source, we strongly recommend using a virtual environment. To do so, use the following commands:
+Research and citation
+---------------------
 
-.. code-block:: shell
+The application repository keeps source, tests, and user documentation.
+Manuscripts, benchmark datasets, campaign scripts, and historical results
+are preserved on the
+`research-archive-20261029 branch <https://github.com/JLSteenwyk/orthohmm/tree/research-archive-20261029>`_.
+See :ref:`performance` for the research snapshot and evaluation limitations.
 
-	# download
-	git clone https://github.com/JLSteenwyk/orthohmm.git
-	cd orthohmm/
-	# create virtual environment
-	python -m venv venv
-	# activate virtual environment
-	source venv/bin/activate
-	# install
-	make install
-
-To deactivate your virtual environment, use the following command:
-
-.. code-block:: shell
-
-	# deactivate virtual environment
-	deactivate
-
-Note, the virtual environment must be activated to use orthohmm.
-
-|
-
-2b\. Install OrthoHMM from source
-
-Similarly, to install from source, we recommend using a virtual environment. To do so, use the following commands:
-
-.. code-block:: shell
-
-	git clone https://github.com/JLSteenwyk/orthohmm.git
-	cd orthohmm/
-	make install
-
-If you run into permission errors when executing *make install*, create a 
-virtual environemnt for your installation:
-
-.. code-block:: shell
-
-	git clone https://github.com/JLSteenwyk/orthohmm.git
-	cd orthohmm/
-	python -m venv venv 
-	source venv/bin/activate
-	make install
-
-Note, the virtual environment must be activated to use orthohmm.
-
-|
-
-.. **Install from anaconda**
-
-.. To install via anaconda, execute the following command:
-
-.. .. code-block:: shell
-
-.. 	conda install bioconda::orthohmm
-
-.. Visit here for more information: https://anaconda.org/bioconda/orthohmm
-
-.. |
-
-**2) Usage**
-
-To use OrthoHMM in its simpliest form, execute the following command:
-
-.. code-block:: shell
-
-	orthohmm <path_to_directory_of_FASTA_files>
-
-|
-
-^^^^
+Please cite *OrthoHMM: Improved Inference of Ortholog Groups using Hidden
+Markov Models*, Steenwyk et al. (2024), bioRxiv,
+`doi:10.1101/2024.12.07.627370 <https://doi.org/10.1101/2024.12.07.627370>`_.
+Citation metadata are also available in ``CITATION.cff``.
 
 .. toctree::
-	:maxdepth: 4
+   :maxdepth: 4
 
-	about/index
-	advanced/index
-	performance_assessment/index
-	change_log/index
-	other_software/index
-	frequently_asked_questions/index
+   about/index
+   advanced/index
+   performance_assessment/index
+   change_log/index
+   other_software/index
+   frequently_asked_questions/index
