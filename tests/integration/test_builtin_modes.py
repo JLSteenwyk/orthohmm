@@ -45,7 +45,8 @@ def run_fixture(tmp_path, options):
     assert report["status"] == "complete"
     for name, value in options.items():
         if name in report["metadata"]:
-            assert report["metadata"][name] == value
+            expected = str(Path(value).resolve()) if name in {"aligner", "tree_builder"} else value
+            assert report["metadata"][name] == expected
     return output, report
 
 
@@ -78,10 +79,14 @@ def test_phylogeny_cli(tmp_path, native_alignment, tree_mode):
     tree_builder = shutil.which("FastTree") or shutil.which("fasttree")
     if not aligner or not tree_builder:
         pytest.skip("Phylogeny integration requires MAFFT and FastTree")
+    tools = tmp_path / "tools"
+    tools.mkdir()
+    (tools / "mafft").symlink_to(aligner)
+    (tools / "FastTree").symlink_to(tree_builder)
     options = dict(accuracy_profile="high_sensitivity", phylogeny="reconcile",
                    species_tree_mode=tree_mode, phylogeny_candidates="satellite_v2",
                    phylogeny_root_rule="species_overlap", phylogeny_pair_rule="positive_paralogy",
-                   aligner=aligner, tree_builder=tree_builder)
+                   aligner=str(tools / "mafft"), tree_builder=str(tools / "FastTree"))
     if tree_mode == "supplied":
         tree = tmp_path / "species.nwk"
         tree.write_text("[&R] ((S1:1,S2:1):1,(S3:1,S4:1):1);\n")
